@@ -2,9 +2,9 @@
 
 #__author__ = 'Leidinice Silva'
 #__email__  = 'leidinicesilva@gmail.br'
-#__date__   = '05/04/2018'
+#__date__   = '04/26/2018'
 
-# Download via ftp -----------------> ein15
+# Download -----------------> ein15
 
 for YEAR in `seq 1979 2014`; do
 	    

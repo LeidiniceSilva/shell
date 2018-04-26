@@ -2,20 +2,20 @@
 
 #__author__ = 'Leidinice Silva'
 #__email__  = 'leidinicesilva@gmail.br'
-#__date__   = '05/04/2018'
+#__date__   = '04/26/2018'
 
-# Download via ftp -----------------> ein15
+# Download -----------------> ein15
 
 for YEAR in `seq 1979 2017`; do
 	    
     echo ${YEAR} 
 
-    PATH="/home/xxxx/Documentos/ein15_sst/" #coloca o nome do seu usuario onde tem xxxx e cria a pasta 'ein15_precip'
+    PATH="/home/nice/Documentos/ein15_sst/" 
 
     echo
     cd ${PATH}
 
-    /usr/bin/wget -N http://clima-dods.ictp.it/regcm4/EIN15/SST/sst_${YEAR}.nc
+    /usr/bin/wget -N http://clima-dods.ictp.it/regcm4/EIN15/SST/sst.${YEAR}.nc
 
 done	
 

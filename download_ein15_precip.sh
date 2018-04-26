@@ -2,15 +2,15 @@
 
 #__author__ = 'Leidinice Silva'
 #__email__  = 'leidinicesilva@gmail.br'
-#__date__   = '05/04/2018'
+#__date__   = '04/26/2018'
 
-# Download via ftp -----------------> ein15
+# Download -----------------> ein15
 
 for YEAR in `seq 1979 2014`; do
 	    
     echo ${YEAR} 
 
-    PATH="/home/xxxx/Documentos/ein15_precip/" #coloca o nome do seu usuario onde tem xxxx e cria a pasta 'ein15_sst'
+    PATH="/home/nice/Documentos/ein15_precip/" 
 
     echo
     cd ${PATH}
