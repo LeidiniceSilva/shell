@@ -10,7 +10,7 @@ for YEAR in `seq 1979 2017`; do
 	    
     echo ${YEAR} 
 
-    PATH="/home/nice/Documentos/ein15_sst/" 
+    PATH="/vol3/DADOS_CONTORNO_REGCM46/EIN15/SST/"
 
     echo
     cd ${PATH}
