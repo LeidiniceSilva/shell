@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#__author__ = 'Leidinice Silva'
-#__email__  = 'leidinicesilva@gmail.br'
-#__date__   = '04/26/2018'
+#__author__      = 'Leidinice Silva'
+#__email__       = 'leidinicesilva@gmail.br'
+#__date__        = '04/26/2018'
+#__description__ = 'Download EIN15 contour data'
 
-# Download -----------------> ein15
 
 for YEAR in `seq 1979 2017`; do
     for VAR in air hgt qas rhum uwnd vwnd; do
