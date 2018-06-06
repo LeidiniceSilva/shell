@@ -18,10 +18,11 @@ echo "1. Select variable (PR and T2M)"
 for YEAR in `seq 2001 2005`; do
     for MON in `seq -w 01 12`; do
 
-        echo "Data: ${YEAR}${MON}"
+        echo "Data: ${YEAR}${MON} - Variable: Precipitation"
+        cdo selname,pr amz_neb_STS.${YEAR}${MON}0100.nc pre_amz_neb_regcm_exp1_${YEAR}${MON}0100.nc
 
-        cdo selname,pr amz_neb_STS.${YEAR}${MON}0100.nc pr_amz_neb_regcm_exp1_${YEAR}${MON}0100.nc
-        #cdo selname,s01tas amz_neb_SRF.${YEAR}${MON}0100.nc t2m_amz_neb_regcm_exp1_${YEAR}${MON}0100.nc
+        echo "Data: ${YEAR}${MON} - Variable: Temperature 2 m"
+        cdo selname,tas amz_neb_SRF.${YEAR}${MON}0100.nc t2m_amz_neb_regcm_exp1_${YEAR}${MON}0100.nc
 
     done
 done	
@@ -29,22 +30,24 @@ done
 
 echo 
 echo "2. Concatenate data (2001-2005)"
-	
-cdo cat pr_amz_neb_regcm_exp1_*.nc pr_flux_amz_neb_regcm_exp1_2001-2005.nc
-#cdo cat t2m_amz_neb_regcm_exp1_*.nc t2m_K_amz_neb_regcm_exp1_2001-2005.nc
+
+cdo cat pre_amz_neb_regcm_exp1_*0100.nc pre_flux_amz_neb_regcm_exp1_2001-2005.nc
+cdo cat t2m_amz_neb_regcm_exp1_*0100.nc t2m_K_amz_neb_regcm_exp1_2001-2005.nc
 
 
 echo 
 echo "3. Unit convention (mm and celsius)"
-cdo mulc,86400 pr_flux_amz_neb_regcm_exp1_2001-2005.nc pr_amz_neb_regcm_exp1_2001-2005.nc
-#cdo addc,-273.15 t2m_K_amz_neb_regcm_exp1_2001-2005.nc t2m_amz_neb_regcm_exp1_2001-2005.nc
+
+cdo mulc,86400 pre_flux_amz_neb_regcm_exp1_2001-2005.nc pre_amz_neb_regcm_exp1_2001-2005.nc
+cdo addc,-273.15 t2m_K_amz_neb_regcm_exp1_2001-2005.nc t2m_amz_neb_regcm_exp1_2001-2005.nc
 
 
 echo 
 echo "4. Creating new areas (A1, A2, A3, A4, A5, A6, A7, A8)"
 
-for VAR in pr; do
+for VAR in pre t2m; do
 
+    echo
     echo "Variable: ${VAR}"
 	
     cdo sellonlatbox,-63,-55,-9,-1 ${VAR}_amz_neb_regcm_exp1_2001-2005.nc ${VAR}_amz_neb_regcm_exp1_2001-2005_A1.nc
@@ -56,45 +59,41 @@ for VAR in pr; do
     cdo sellonlatbox,-48,-38,-11,-5 ${VAR}_amz_neb_regcm_exp1_2001-2005.nc ${VAR}_amz_neb_regcm_exp1_2001-2005_A7.nc
     cdo sellonlatbox,-38,-34,-11,-5 ${VAR}_amz_neb_regcm_exp1_2001-2005.nc ${VAR}_amz_neb_regcm_exp1_2001-2005_A8.nc
 
+    echo 
+    echo "5. Variable: ${VAR} - Statistics index (mean and sum)"
+
+    cdo monsum ${VAR}_amz_neb_regcm_exp1_2001-2005.nc ${VAR}_amz_neb_regcm_exp1_2001-2005_monsum.nc
+    cdo monmean ${VAR}_amz_neb_regcm_exp1_2001-2005.nc ${VAR}_amz_neb_regcm_exp1_2001-2005_monmean.nc
+    cdo ymonmean ${VAR}_amz_neb_regcm_exp1_2001-2005_monmean.nc ${VAR}_amz_neb_regcm_exp1_2001-2005_clim.nc
+    cdo -b 32 -ymonsub ${VAR}_*_monmean.nc -ymonmean ${VAR}_*_monmean.nc ${VAR}_amz_neb_regcm_exp1_2001-2005_monanom.nc
+
+    echo 
+    echo "6. Variable: ${VAR} - Grads NC prepare (./GrADSNcPrepare)"
+   
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_A1.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_A2.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_A3.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_A4.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_A5.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_A6.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_A7.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_A8.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_monsum.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_monmean.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_clim.nc
+    ./GrADSNcPrepare ${VAR}_amz_neb_regcm_exp1_2001-2005_monanom.nc
+
 done
-
-
-echo 
-echo "5. Statistics index (mean and sum)"
-
-cdo monmean pr_amz_neb_regcm_exp1_2001-2005.nc pr_amz_neb_regcm_exp1_2001-2005_monmean.nc
-cdo ymonmean pr_amz_neb_regcm_exp1_2001-2005_monmean.nc pr_amz_neb_regcm_exp1_2001-2005_clim.nc
-cdo -b 32 -ymonsub pr_amz_neb_regcm_exp1_2001-2005_monmean.nc -ymonmean pr_amz_neb_regcm_exp1_2001-2005_monmean.nc pr_amz_neb_regcm_exp1_2001-2005_monanom.nc
-
-# cdo monsum t2m_amz_neb_regcm_exp1_2001-2005.nc t2m_amz_neb_regcm_exp1_2001-2005_monsum.nc
-# cdo monmean t2m_amz_neb_regcm_exp1_2001-2005.nc t2m_amz_neb_regcm_exp1_2001-2005_monmean.nc
-# cdo ymonmean t2m_amz_neb_regcm_exp1_2001-2005_monmean.nc t2m_amz_neb_regcm_exp1_2001-2005_clim.nc
-# cdo -b 32 -ymonsub pr_amz_neb_regcm_exp1_2001-2005_monmean.nc -ymonmean pr_amz_neb_regcm_exp1_2001-2005_monmean.nc pr_amz_neb_regcm_exp1_2001-2005_monanom.nc
-
-
-echo 
-echo "6. Grads NC prepare (./GrADSNcPrepare)"
-
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_A1.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_A2.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_A3.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_A4.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_A5.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_A6.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_A7.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_A8.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_monmean.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_clim.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_yseasmean.nc
-./GrADSNcPrepare *_amz_neb_regcm_exp1_2001-2005_monanom.nc
 
 
 echo 
 echo "7. Deleted files"
 
-rm *_amz_neb_regcm_exp1_*0100.nc
-rm *_flux_amz_neb_regcm_exp1_2001-2005.nc
+rm pre_amz_neb_regcm_exp1_*0100.nc
+rm t2m_amz_neb_regcm_exp1_*0100.nc
+rm pre_flux_amz_neb_regcm_exp1_2001-2005.nc
+rm t2m_K_amz_neb_regcm_exp1_2001-2005.nc
 
 
 echo
