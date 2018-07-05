@@ -14,41 +14,65 @@ cd /vol3/nice/obs
 
 
 echo 
-echo "1. Select data (1979010100-2010123100)"
+echo "1. Select data (1981010100-2010123100 / 2001010100-2005123100)"
 
-cdo seldate,1981-01-00T00:00:00,2010-12-31T00:00:00 pre_cru_ts4.01_observation_1901-2016.nc pre_cru_ts4.01_observation_1981-2010.nc
-cdo seldate,1981-01-00T00:00:00,2010-12-31T00:00:00 t2m_cru_ts4.01_observation_1901-2016.nc t2m_cru_ts4.01_observation_1981-2010.nc
+echo
+echo "Precipitation"
+cdo seldate,1981-01-00T00:00:00,2010-12-31T00:00:00 pre_mon_cmap_observation_1979-2018.nc pre_mon_cmap_observation_1981-2010.nc
+cdo seldate,2001-01-00T00:00:00,2005-12-31T00:00:00 pre_mon_cmap_observation_1979-2018.nc pre_mon_cmap_observation_2001-2005.nc
+
+echo
+echo "Temperature 2m"
+cdo seldate,1981-01-00T00:00:00,2010-12-31T00:00:00 t2m_mon_ncep_ncar_reanalysis_1948-2018.nc t2m_mon_ncep_ncar_reanalysis_1981-2010.nc
+cdo seldate,2001-01-00T00:00:00,2005-12-31T00:00:00 t2m_mon_ncep_ncar_reanalysis_1948-2018.nc t2m_mon_ncep_ncar_reanalysis_2001-2005.nc
 
 
 echo 
-echo "2. Grid inperpolation (obs ---> model)"
+echo "2. Creating new areas (A0, A1, A2, A3, A4, A5, A6, A7, A8)"
 
-cdo remapbil,pre_cru_ts4.01_observation_1981-2010.nc pre_amz_neb_regcm_${SIM}_2001-2005.nc pre_amz_neb_regcm_${SIM}_2001-2005_interp.nc
-cdo remapbil,tmp_cru_ts4.01_observation_1981-2010.nc t2m_amz_neb_regcm_${SIM}_2001-2005.nc t2m_amz_neb_regcm_${SIM}_2001-2005_interp.nc
+echo
+echo "Precipitation"
+cdo sellonlatbox,-85.27,-14.65,-22.59,11 pre_mon_cmap_observation_2001-2005.nc pre_amz_neb_cmap_observation_2001-2005_A0.nc
+cdo sellonlatbox,-63,-55,-9,-1 pre_mon_cmap_observation_2001-2005.nc pre_amz_neb_cmap_observation_2001-2005_A1.nc
+cdo sellonlatbox,-53.5,-47.5,-3.55,3.5 pre_mon_cmap_observation_2001-2005.nc pre_amz_neb_cmap_observation_2001-2005_A2.nc
+cdo sellonlatbox,-75,-71,-15,-11 pre_mon_cmap_observation_2001-2005.nc pre_amz_neb_cmap_observation_2001-2005_A3.nc
+cdo sellonlatbox,-70,-66,-1,3 pre_mon_cmap_observation_2001-2005.nc pre_amz_neb_cmap_observation_2001-2005_A4.nc
+cdo sellonlatbox,-73,-65,-10,-3 pre_mon_cmap_observation_2001-2005.nc pre_amz_neb_cmap_observation_2001-2005_A5.nc
+cdo sellonlatbox,-47,-38,-5.5,-1 pre_mon_cmap_observation_2001-2005.nc pre_amz_neb_cmap_observation_2001-2005_A6.nc
+cdo sellonlatbox,-48,-38,-11,-6 pre_mon_cmap_observation_2001-2005.nc pre_amz_neb_cmap_observation_2001-2005_A7.nc
+cdo sellonlatbox,-37.5,-34,-11,-5 pre_mon_cmap_observation_2001-2005.nc pre_amz_neb_cmap_observation_2001-2005_A8.nc
+
+echo
+echo "Temperature 2m"
+cdo sellonlatbox,-85.27,-14.65,-22.59,11 t2m_mon_ncep_ncar_reanalysis_2001-2005.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A0.nc
+cdo sellonlatbox,-63,-55,-9,-1 t2m_mon_ncep_ncar_reanalysis_2001-2005.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A1.nc
+cdo sellonlatbox,-53.5,-47.5,-3.55,3.5 t2m_mon_ncep_ncar_reanalysis_2001-2005.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A2.nc
+cdo sellonlatbox,-75,-71,-15,-11 t2m_mon_ncep_ncar_reanalysis_2001-2005.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A3.nc
+cdo sellonlatbox,-70,-66,1,3 t2m_mon_ncep_ncar_reanalysis_2001-2005.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A4.nc
+cdo sellonlatbox,-73,-65,-10,-3 t2m_mon_ncep_ncar_reanalysis_2001-2005.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A5.nc
+cdo sellonlatbox,-47,-38,-5.5,-1 t2m_mon_ncep_ncar_reanalysis_2001-2005.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A6.nc
+cdo sellonlatbox,-48,-38,-11,-6 t2m_mon_ncep_ncar_reanalysis_2001-2005.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A7.nc
+cdo sellonlatbox,-37.5,-34,-11,-5 t2m_mon_ncep_ncar_reanalysis_2001-2005.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A8.nc
 
 
 echo 
-echo "3. Creating new areas (A1, A2, A3, A4, A5, A6, A7, A8)"
+echo "3. Statistics index (mean and sum)"
+
+echo
+echo "Precipitation"
+cdo monsum pre_amz_neb_cmap_observation_2001-2005_A0.nc pre_amz_neb_cmap_observation_2001-2005_A0_monsum.nc
+cdo monmean pre_amz_neb_cmap_observation_2001-2005_A0.nc pre_amz_neb_cmap_observation_2001-2005_A0_monmean.nc
+cdo ymonmean pre_amz_neb_cmap_observation_2001-2005_A0_monmean.nc pre_amz_neb_cmap_observation_2001-2005_A0_clim.nc
+
+echo
+echo "Temperature 2m"
+cdo monsum t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A0.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A0_monsum.nc
+cdo monmean t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A0.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A0_monmean.nc
+cdo ymonmean t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A0_monmean.nc t2m_amz_neb_ncep_ncar_reanalysis_2001-2005_A0_clim.nc
 
 
-for VAR in pre t2m; do
-
-    echo
-    echo "Variable: ${VAR}"
-
-    cdo sellonlatbox,-63,-55,-9,-1 ${VAR}_cru_ts4.01_observation_1979-2010.nc ${VAR}_cru_ts4.01_observation_1979-2010_amz_neb.nc
-    cdo sellonlatbox,-63,-55,-9,-1 ${VAR}_cru_ts4.01_observation_1979-2010.nc ${VAR}_cru_ts4.01_observation_1979-2010_A1.nc
-    cdo sellonlatbox,-52.5,-45.5,-3.55,3.5 ${VAR}_cru_ts4.01_observation_1979-2010.nc ${VAR}_cru_ts4.01_observation_1979-2010_A2.nc
-    cdo sellonlatbox,-75,-71,-15,-11 ${VAR}_cru_ts4.01_observation_1979-2010.nc ${VAR}_cru_ts4.01_observation_1979-2010_A3.nc
-    cdo sellonlatbox,-78,-72,0,8 ${VAR}_cru_ts4.01_observation_1979-2010.nc ${VAR}_cru_ts4.01_observation_1979-2010_A4.nc
-    cdo sellonlatbox,-73,-65,-10,-3 ${VAR}_cru_ts4.01_observation_1979-2010.nc ${VAR}_cru_ts4.01_observation_1979-2010_A5.nc
-    cdo sellonlatbox,-48,-38,-5,-1 ${VAR}_cru_ts4.01_observation_1979-2010.nc ${VAR}_cru_ts4.01_observation_1979-2010_A6.nc
-    cdo sellonlatbox,-48,-38,-11,-5 ${VAR}_cru_ts4.01_observation_1979-2010.nc ${VAR}_cru_ts4.01_observation_1979-2010_A7.nc
-    cdo sellonlatbox,-38,-34,-11,-5 ${VAR}_cru_ts4.01_observation_1979-2010.nc ${VAR}_cru_ts4.01_observation_1979-2010_A8.nc
-
-done
-
-
+echo
+echo "--------------- END PREPROCESSING OBS ----------------"
 
 
 
