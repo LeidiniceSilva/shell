@@ -9,9 +9,9 @@
 echo
 echo "--------------- INIT PREPROCESSING MODEL ----------------"
 
-
-DIR='/vol3/claudio/SIM30ANOS1/SRF'
-SIM=sim30anos1
+SIM='SIM30ANOS1'
+VAR='SRF'
+DIR='/vol3/claudio/${SIM}/${VAR}'
 
 echo
 cd ${DIR}
@@ -26,8 +26,8 @@ for YEAR in `seq 1981 2010`; do
 
 	echo
         echo "Data: ${YEAR}${MON}"
-        cdo selname,tpr SRF.${YEAR}${MON}.nc pre_srf_${YEAR}${MON}.nc
-        cdo selname,t2m SRF.${YEAR}${MON}.nc t2m_srf_${YEAR}${MON}.nc
+        cdo selname,tpr SRF.${YEAR}${MON}.nc pre_${YEAR}${MON}.nc
+        cdo selname,t2m SRF.${YEAR}${MON}.nc t2m_${YEAR}${MON}.nc
 
     done
 done	
@@ -36,22 +36,14 @@ done
 echo 
 echo "2. Concatenate data (1981-2010)"
 
-cdo cat pre_srf_*.nc pre_mon_${SIM}_1981_2010.nc
-cdo cat t2m_srf_*.nc t2m_K_srf_${SIM}_1981_2010.nc
-
-
-echo 
-echo "3. Unit convention (Celsius)"
-
-cdo addc,-273.15 t2m_K_srf_${SIM}_1981_2010.nc t2m_mon_${SIM}_1981_2010.nc
-
+cdo cat pre_*.nc pre_mon_1981_2010.nc
+cdo cat t2m_*.nc t2m_mon_1981_2010.nc
 
 echo 
-echo "4. Deleted files"
+echo "3. Deleted files"
 
-rm pre_srf_*.nc
-rm t2m_srf_*.nc
-rm t2m_K_srf_sim30anos1_1981_2010.nc
+rm  pre_*.nc
+rm  t2m_*.nc
 
 echo
 echo "--------------- THE END PREPROCESSING MODEL ----------------"

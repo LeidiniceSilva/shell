@@ -37,7 +37,7 @@ echo
 echo "2. Concatenate data (2001-2005)"
 
 cdo cat pre_amz_neb_regcm_${SIM}_*0100.nc pre_flux_amz_neb_regcm_${SIM}_2001-2005.nc
-cdo cat t2m_amz_neb_regcm_${SIM}_*0100.nc t2m_K_amz_neb_regcm_${SIM}_2001-2005.nc
+cdo cat t2m_amz_neb_regcm_${SIM}_*0100.nc t2m_Kelv_amz_neb_regcm_${SIM}_2001-2005.nc
 
 
 echo 
@@ -57,8 +57,8 @@ cdo remapbil,r720x360 t2m_amz_neb_regcm_${SIM}_2001-2005.nc t2m_amz_neb_regcm_${
 echo 
 echo "5. Sellonlatbox (Precipitation and Temperature 2m: -85,-15,-20,10)"
 
-cdo sellonlatbox,-85,-15,-20,10 pre_amz_neb_regcm_${SIM}_2001-2005_newgrid.nc pre_amz_neb_regcm_${SIM}_mon_2001-2005.nc
-cdo sellonlatbox,-85,-15,-20,10 t2m_amz_neb_regcm_${SIM}_2001-2005_newgrid.nc t2m_amz_neb_regcm_${SIM}_mon_2001-2005.nc 
+cdo sellonlatbox,-85,-15,-20,10 pre_amz_neb_regcm_${SIM}_2001-2005_newgrid.nc pre_amz_neb_regcm_${SIM}_mon_2001-2005_newarea.nc
+cdo sellonlatbox,-85,-15,-20,10 t2m_amz_neb_regcm_${SIM}_2001-2005_newgrid.nc t2m_amz_neb_regcm_${SIM}_mon_2001-2005_newarea.nc 
 
 
 echo 
@@ -68,6 +68,7 @@ for VAR in pre t2m; do
 
     cdo monsum ${VAR}_amz_neb_regcm_${SIM}_mon_2001-2005.nc ${VAR}_amz_neb_regcm_${SIM}_2001-2005_monsum.nc
     cdo monmean ${VAR}_amz_neb_regcm_${SIM}_mon_2001-2005.nc ${VAR}_amz_neb_regcm_${SIM}_2001-2005_monmean.nc
+    cdo yearavg ${VAR}_amz_neb_regcm_${SIM}_mon_2001-2005.nc ${VAR}_amz_neb_regcm_${SIM}_2001-2005_monmean.nc
     cdo ymonmean ${VAR}_amz_neb_regcm_${SIM}_2001-2005_monmean.nc ${VAR}_amz_neb_regcm_${SIM}_2001-2005_clim.nc
 
 done

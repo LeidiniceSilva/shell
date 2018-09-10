@@ -37,21 +37,20 @@ echo
 echo "2. Concatenate data (1981-2010)"
 
 cdo cat pre_srf_*.nc pre_mon_${SIM}_1981_2010.nc
-cdo cat t2m_srf_*.nc t2m_K_srf_${SIM}_1981_2010.nc
+cdo cat t2m_srf_*.nc t2m_K_mon_${SIM}_1981_2010.nc
 
 
 echo 
 echo "3. Unit convention (Celsius)"
 
-cdo addc,-273.15 t2m_K_srf_${SIM}_1981_2010.nc t2m_mon_${SIM}_1981_2010.nc
+cdo addc,-273.15 t2m_K_mon_${SIM}_1981_2010.nc t2m_mon_${SIM}_1981_2010.nc
 
 
 echo 
 echo "4. Deleted files"
 
-rm pre_srf_*.nc
-rm t2m_srf_*.nc
-rm t2m_K_srf_sim30anos1_1981_2010.nc
+rm  pre_srf_*.nc
+rm  t2m_srf_*.nc
 
 echo
 echo "--------------- THE END PREPROCESSING MODEL ----------------"
