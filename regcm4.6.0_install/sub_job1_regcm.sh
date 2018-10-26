@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -N <nice_t1>
+#PBS -N <nice_exp1>
 #PBS -l nodes=1:ppn=2
 #PBS -l walltime=100:00:00
 #PBS -j oe

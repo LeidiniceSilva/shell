@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ## esses comandos devem ser executados na pasta "bin"
 
 ## processamento serial para gerar as condicoes de contorno
@@ -9,6 +11,7 @@
 
 qsub submeter_job1.sh
 
+# mpirun -np 8 ./regcmMPI regcm.in
 
 ## para ver se deu certo
 
