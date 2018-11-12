@@ -1,23 +1,25 @@
-#!/bin/sh
+#!/bin/bash
 
-## esses comandos devem ser executados na pasta "bin"
+#__author__      = 'Leidinice Silva'
+#__email__       = 'leidinicesilva@gmail.br'
+#__date__        = '12/11/18'
+#__description__ = 'Instructions to run default RegCM'
 
-## processamento serial para gerar as condicoes de contorno
+# Run inside bin folder
+
+# Processing to generate the contour conditions
 ./terrain regcm.in
 ./sst regcm.in
 ./icbc regcm.in
 
-## processamento paralelo para o modelo 
-
+# Submit job  
 qsub submeter_job1.sh
 
 # mpirun -np 8 ./regcmMPI regcm.in
 
-## para ver se deu certo
+## To see the experiment execute: tail -f teste.log
 
-### tail -f teste.log
-
-### qstat e olhar a "fila" (Queue) - se tiver C, deu errado, se der Q esta na fila, se der R esta rodando
+### To see the experiment in queue run: qstat - C (Wrong), Q (Queue) and R (Run)
 
 
 

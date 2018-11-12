@@ -6,12 +6,12 @@
 #__description__ = 'Creatin subareas domain'
  
 
-echo "--------------- INIT PREPROCESSING ----------------"
+echo "--------------- INIT POSPROCESSING ----------------"
 echo
 
 for DATA in regcm_exp1 regcm_exp2 cmap_obs trmm_obs; do
 
-    echo "1. Preprosseing database: ${DATA}"
+    echo "1. Posprosseing database: ${DATA}"
     echo
 
     cdo sellonlatbox,-72,-62,-10,-4 pre_amz_neb_${DATA}_2005_monmean.nc pre_amz_neb_${DATA}_2005_monmean_A1.nc
@@ -29,5 +29,5 @@ for DATA in regcm_exp1 regcm_exp2 cmap_obs trmm_obs; do
     
 done
 
-echo "--------------- THE END PREPROCESSING ----------------"
+echo "--------------- THE END POSPROCESSING ----------------"
 echo

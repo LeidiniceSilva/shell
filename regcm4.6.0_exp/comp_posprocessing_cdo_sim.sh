@@ -3,11 +3,11 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.br'
 #__date__        = '05/26/18'
-#__description__ = 'Preprocessing the RegCM4.6.0 model data with CDO'
+#__description__ = 'Posprocessing the RegCM4.6.0 model data with CDO'
  
 
 echo
-echo "--------------- INIT PREPROCESSING MODEL ----------------"
+echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 
 SIM='bats_exp6'
@@ -98,5 +98,5 @@ rm t2m_kelv_amz_neb_regcm_${SIM}_2011.nc
 
 
 echo
-echo "--------------- THE END PREPROCESSING MODEL ----------------"
+echo "--------------- THE END POSPROCESSING MODEL ----------------"
 
