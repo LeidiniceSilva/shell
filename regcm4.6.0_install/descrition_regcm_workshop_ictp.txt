@@ -1,0 +1,161 @@
+
+
+  This is RegCM trunk
+   SVN Revision: tag-4.7.1 compiled at: data : Nov  5 2018  time: 15:58:10
+ : this run start at  : 2018-11-07 12:12:45-0200
+ : it is submitted by : rcm14
+ : it is running on   : n014
+ : it is using        :           24   processors
+ : in directory       : /data1/rcm14/dados
+ CPUS DIM1 =            4
+ CPUS DIM2 =            6
+
+ Reading model namelist file
+ Will set cftotmax == 0.99
+ Initial date of the global simulation:  2010-02-01 00:00:00 UTC
+ Initial date of this run             :  2010-02-01 00:00:00 UTC
+ Final date of this run               :  2010-09-01 00:00:00 UTC
+ Total simulation lenght              :         5088  hours
+ Timestep in seconds =   90.000000
+ Reading Domain file : /home/rcm14/dados/input/NEB_RCM_exp14_DOMAIN000.nc
+ Setting IPCC scenario to RCP4.5
+
+
+
+
+  This is RegCM trunk
+   SVN Revision: tag-4.7.1 compiled at: data : Nov  5 2018  time: 10:31:28
+ : this run start at  : 2018-11-07 08:17:19-0200
+ : it is submitted by : rcm13
+ : it is running on   : n007
+ : it is using        :           24   processors
+ : in directory       : /data1/rcm13/dados
+ CPUS DIM1 =            4
+ CPUS DIM2 =            6
+
+ Reading model namelist file
+ Will set cftotmax == 0.99
+ Initial date of the global simulation:  2010-02-01 00:00:00 UTC
+ Initial date of this run             :  2010-02-01 00:00:00 UTC
+ Final date of this run               :  2010-08-31 00:00:00 UTC
+ Total simulation lenght              :         5064  hours
+ Timestep in seconds =   90.000000
+ Reading Domain file : /home/rcm13/dados/input/NEB_RCM_exp13_DOMAIN000.nc
+ Setting IPCC scenario to RCP4.5
+
+
+
+Domínio: Nordeste do Brasil
+Nome do domínio:
+ domname = 'NEB_RCM_exp13'
+
+Pontos
+ iy=120
+ jx=150
+
+Latitude central:
+  clat = -5.0
+
+Longitude central:
+  clon = -36.0
+
+Limites da grade:
+Longitudes: -60.05 a -11.73
+Latitudes: -23.5 a 13.94
+
+
+Resolução espacial
+ds=36.0 km
+
+
+
+Número de níveis na vertical
+ kz=23
+
+LON set to -60.05 -11.73 
+LAT set to -23.5 13.94 
+
+
+
+
+
+Execução da simulação
+
+Não-hidrostático
+
+
+Parâmetros globais:
+&globdatparam
+ibdyfrq = 6,
+
+Dados de SST:
+ssttyp = 'EIN15',
+
+Dados atmosféricos:
+ dattyp = 'EIN15'
+
+
+
+ gdate1 = 2010020100,
+ gdate2 = 2010083100,
+
+
+&restartparam
+ ifrest  = .FALSE.,
+ mdate0  = 2010020100,
+ mdate1  = 2010020100,
+ mdate2  = 2010083100,
+/
+
+&timeparam
+ dt     =   90.,
+ dtrad  =     0.,
+ dtabem =     0.,
+ dtsrf  =     0.,
+ dtcum  =     0.,
+ dtche  =     0.,
+
+
+
+
+&physicsparam
+ iboudy  =          5,
+ isladvec =         0,
+ iqmsl =            1,
+ ibltyp  =          1,
+ icup_lnd =         6,
+ icup_ocn =         4,
+ ipptls  =          2,
+ iocncpl =          0,
+ iwavcpl =          0,
+ iocnflx =          2,
+ iocnrough =        1,
+ iocnzoq =          1,
+ ipgf    =          0,
+ iemiss  =          0,
+ lakemod =          0,
+ ichem   =          0,
+ scenario =   'RCP4.5',
+ ghg_year_const = 1950,
+ idcsst   =          0,
+ ipcpcool =          0,
+ iwhitecap =         0,
+ iseaice  =          0,
+ idesseas =          0,
+ iconvlwp =          1,
+ icldfrac =          0,
+ icldmstrat =        1,
+ icumcloud =         1,
+ irrtm    =          0,
+ iclimao3 =          0,
+ iclimaaer =         0,
+ isolconst =         0,
+ islab_ocean =       0,
+ itweak =            0,
+ ifixsolar =         0,
+ fixedsolarval =  343.,
+
+
+
+
+
