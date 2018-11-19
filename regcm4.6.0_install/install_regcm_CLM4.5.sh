@@ -14,8 +14,13 @@ cd RegCM-4.6.0/
 # Run
 export FCFLAGS="-fconvert=big-endian -fno-range-check"
 
+# Configuration stage
+# Deafault
+./configure FC="/usr/bin/gfortran" CC="/usr/bin/gcc" --with-netcdf=/usr
+
+# CLM4.5
 ./configure --prefix=`pwd` FC="/usr/bin/gfortran" CC="/usr/bin/gcc" --with-netcdf=/usr --enable-clm45
 
-make check
+make install
 
 make install

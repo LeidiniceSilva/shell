@@ -1,10 +1,10 @@
 ! Codif.: UTF-8
 !-----------------------------------------------------------------------
 !
-! This README details namelist parameters for RegCM V4.7
+! This README details namelist parameters for RegCM Version 4.7
 !
 !-----------------------------------------------------------------------
-! Definição dos parâmetros no namelist do RegCM.
+! Definicao dos parametros no namelist do RegCM.
 ! Este arquivo serve para fazer o processamento das variáveis que
 !     foram definidas no script run.sh
 ! Autor: Gerson Camillo (gerson.camillo@gmail.com)
@@ -16,7 +16,7 @@
 !               regcm.in.var (versões até 4.6.1 e
 !               regcm.in.var.v4.7: versões a partir 4.7
 
-! ATENÇÃO: parâmetro a seguir para indicar versão regcm.in
+! ATENCAO: parametro a seguir para indicar versao regcm.in
 !  VERSAO=4.7
 
 
