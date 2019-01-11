@@ -11,7 +11,7 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 
 SIM='bats_exp6'
-DIR='/vol3/disco1/nice/PNT_2018/output_exp6/BATS/'
+DIR="/vol3/disco1/nice/PNT_2018/output_exp6/BATS/"
 
 echo
 cd ${DIR}

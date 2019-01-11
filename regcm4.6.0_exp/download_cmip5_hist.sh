@@ -6,6 +6,9 @@
 #__description__ = 'Download CMIP5 monthly historical data'
 
 
+echo
+echo "--------------- INIT DOWNLOAD CMIP5 MODELS ----------------"
+
 # Variables list
 var_list=('hfls hfss pr ps psl rlds rlus rsds rsus tas tasmax tasmin uas vas')
 
@@ -50,3 +53,6 @@ for var in ${var_list[@]}; do
     
     done
 done
+
+echo
+echo "--------------- THE END DOWNLOAD CMIP5 MODELS ----------------"
