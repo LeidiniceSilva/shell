@@ -10,17 +10,15 @@ echo
 echo "--------------- INIT POSPROCESSING CMIP5 MODELS ----------------"
 
 # Variables list
-var_list=('pr')     
+var_list=('tas')     
 
 # Models list
-model_list=('BCC-CSM1.1M' 'BNU-ESM')
-
-# model_list=( 'BCC-CSM1.1' 'BCC-CSM1.1M' 'BNU-ESM' 'CanESM2' 'CMCC-CM' 'CMCC-CMS' 'CNRM-CM5' 'CSIRO-ACCESS-1' 'CSIRO-ACCESS-3' 'CSIRO-MK36' 'EC-EARTH' 'FIO-ESM' 'GFDL-ESM2G' 'GFDL-ESM2M' 'GISS-E2-H-CC' 'GISS-E2-H' 'GISS-E2-R-CC' 'GISS-E2-R' 'HadGEM2-AO' 'HadGEM2-CC' 'HadGEM2-ES' 'INMCM4' 'IPSL-CM5A-LR' 'IPSL-CM5A-MR' 'IPSL-CM5B-LR' 'LASG-FGOALS-G2' 'LASG-FGOALS-S2' 'MIROC5' 'MIROC-ESM-CHEM' 'MIROC-ESM' 'MPI-ESM-LR' 'MPI-ESM-MR' 'MRI-CGCM3' 'NCAR-CCSM4' 'NCAR-CESM1-BGC' 'NCAR-CESM1-CAM5' 'NorESM1-ME' 'NorESM1-M')    
+model_list=( 'BCC-CSM1.1' 'BCC-CSM1.1M' 'BNU-ESM' 'CanESM2' 'CMCC-CM' 'CMCC-CMS' 'CNRM-CM5' 'CSIRO-ACCESS-1' 'CSIRO-ACCESS-3' 'CSIRO-MK36' 'EC-EARTH' 'FIO-ESM' 'GFDL-ESM2G' 'GFDL-ESM2M' 'GISS-E2-H-CC' 'GISS-E2-H' 'GISS-E2-R-CC' 'GISS-E2-R' 'HadGEM2-AO' 'HadGEM2-CC' 'HadGEM2-ES' 'INMCM4' 'IPSL-CM5A-LR' 'IPSL-CM5A-MR' 'IPSL-CM5B-LR' 'LASG-FGOALS-G2' 'LASG-FGOALS-S2' 'MIROC5' 'MIROC-ESM-CHEM' 'MIROC-ESM' 'MPI-ESM-LR' 'MPI-ESM-MR' 'MRI-CGCM3' 'NCAR-CCSM4' 'NCAR-CESM1-BGC' 'NCAR-CESM1-CAM5' 'NorESM1-ME' 'NorESM1-M')    
 
 for var in ${var_list[@]}; do
     for model in ${model_list[@]}; do
 
-	path="/home/nice/Documentos/cmip_data/cmip5_hist"
+	path="/vol3/disco1/nice/cmip_data/cmip5_hist/cmip5_hist_pr-tas"
 	cd ${path}
 	
 	echo
@@ -38,26 +36,39 @@ for var in ${var_list[@]}; do
 
 	echo
 	echo "1. Select date: 197512-200511"
-	cdo seldate,1975-12-00T00:00:00,2005-12-31T00:00:00 ${var}_Amon_${model}_${exp}_${ini_date}-${end_date} ${var}_Amon_${model}_${exp}_197512-200511.nc
+	cdo seldate,1975-12-00T00:00:00,2005-11-30T00:00:00 ${var}_Amon_${model}_${exp}_${ini_date}-${end_date} ${var}_Amon_${model}_${exp}_197512-200511.nc
 	
 	echo
-	echo "2. Convert unit: mm and ÂºC"
-	cdo mulc,86400 ${var}_Amon_${model}_${exp}_197512-200511.nc ${var}_Amon_${model}_${exp}_197512-200511_mm.nc
+	echo "2. Convert unit: mm and ºC"
+	# cdo mulc,86400 ${var}_Amon_${model}_${exp}_197512-200511.nc ${var}_Amon_${model}_${exp}_197512-200511_unit.nc
+	cdo addc,-273.15 ${var}_Amon_${model}_${exp}_197512-200511.nc ${var}_Amon_${model}_${exp}_197512-200511_unit.nc
 	
 	echo
 	echo "3. Interpolate area: r720x360"
-	cdo remapbil,r720x360 ${var}_Amon_${model}_${exp}_197512-200511_mm.nc ${var}_Amon_${model}_${exp}_197512-200511_mm_newgrid.nc
+	cdo remapbil,r720x360 ${var}_Amon_${model}_${exp}_197512-200511_unit.nc ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid.nc
 	
 	echo
-	echo "4. Select new area: amz_neb (-85,-15,-20,10)"
-	cdo sellonlatbox,-85,-15,-20,10 ${var}_Amon_${model}_${exp}_197512-200511_mm_newgrid.nc pre_amz_neb_Amon_${model}_${exp}_197512-200511.nc
-
+	echo "4. Convert calendar: standard"
+	cdo setcalendar,standard ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid.nc ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc
+	
+	echo
+	echo "5. Creating sea mask"
+	cdo -f nc -remapnn,${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc -gtc,0 -topo ${var}_${model}_seamask.nc
+	cdo ifthen ${var}_${model}_seamask.nc ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate_seamask.nc
+	
+	echo
+	echo "6. Select new area: amz_neb (-85,-15,-20,10)"
+	cdo sellonlatbox,-85,-15,-20,10 ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate_seamask.nc ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc
+	
 	echo 
-	echo "5. Deleting file"
+	echo "7. Deleting file"
 
 	rm ${var}_Amon_${model}_${exp}_197512-200511.nc
-	rm ${var}_Amon_${model}_${exp}_197512-200511_mm.nc
-	rm ${var}_Amon_${model}_${exp}_197512-200511_mm_newgrid.nc
+	rm ${var}_Amon_${model}_${exp}_197512-200511_unit.nc
+	rm ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid.nc
+	rm ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc
+	rm ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate_seamask.nc
+	rm ${var}_${model}_seamask.nc
 
     done
 done
