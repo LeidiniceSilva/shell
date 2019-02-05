@@ -39,8 +39,8 @@ for var in ${var_list[@]}; do
 	cdo seldate,1975-12-00T00:00:00,2005-11-30T00:00:00 ${var}_Amon_${model}_${exp}_${ini_date}-${end_date} ${var}_Amon_${model}_${exp}_197512-200511.nc
 	
 	echo
-	echo "2. Convert unit: mm and ºC"
-	# cdo mulc,86400 ${var}_Amon_${model}_${exp}_197512-200511.nc ${var}_Amon_${model}_${exp}_197512-200511_unit.nc
+	echo "2. Convert unit: mm and DegC"
+	#cdo mulc,86400 ${var}_Amon_${model}_${exp}_197512-200511.nc ${var}_Amon_${model}_${exp}_197512-200511_unit.nc
 	cdo addc,-273.15 ${var}_Amon_${model}_${exp}_197512-200511.nc ${var}_Amon_${model}_${exp}_197512-200511_unit.nc
 	
 	echo
@@ -50,15 +50,15 @@ for var in ${var_list[@]}; do
 	echo
 	echo "4. Convert calendar: standard"
 	cdo setcalendar,standard ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid.nc ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc
+
+	echo
+	echo "5. Select new area: amz_neb (-85,-15,-20,10)"
+	cdo sellonlatbox,-85,-15,-20,10 ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc ${var}_amz_neb_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc
 	
 	echo
-	echo "5. Creating sea mask"
-	cdo -f nc -remapnn,${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc -gtc,0 -topo ${var}_${model}_seamask.nc
-	cdo ifthen ${var}_${model}_seamask.nc ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate_seamask.nc
-	
-	echo
-	echo "6. Select new area: amz_neb (-85,-15,-20,10)"
-	cdo sellonlatbox,-85,-15,-20,10 ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate_seamask.nc ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc
+	echo "6. Creating sea mask"
+	cdo -f nc -remapnn,${var}_amz_neb_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc -gtc,0 -topo ${var}_${model}_seamask.nc
+	cdo ifthen ${var}_${model}_seamask.nc ${var}_amz_neb_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc
 	
 	echo 
 	echo "7. Deleting file"
@@ -67,7 +67,7 @@ for var in ${var_list[@]}; do
 	rm ${var}_Amon_${model}_${exp}_197512-200511_unit.nc
 	rm ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid.nc
 	rm ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc
-	rm ${var}_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate_seamask.nc
+	rm ${var}_amz_neb_Amon_${model}_${exp}_197512-200511_unit_newgrid_stddate.nc
 	rm ${var}_${model}_seamask.nc
 
     done
