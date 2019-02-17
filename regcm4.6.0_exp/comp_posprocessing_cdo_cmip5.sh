@@ -3,7 +3,7 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.br'
 #__date__        = '01/26/19'
-#__description__ = 'Posprocessing the RegCM4.6.0 model data with CDO'
+#__description__ = 'Posprocessing from CMIP5 models and obs database with CDO'
  
 
 echo
