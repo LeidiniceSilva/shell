@@ -39,7 +39,6 @@ for var in ${var_list[@]}; do
 	
 	# Creating path model
 	model_path=${path}/${model}
-test
 
 	if [ ! -d ${model} ]
 	then
