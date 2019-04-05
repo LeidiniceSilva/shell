@@ -2,60 +2,64 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.br'
-#__date__        = '11/19/2018'
-#__description__ = 'Download CMIP5 monthly historical data'
+#__date__        = '04/05/2018'
+#__description__ = 'Download HadGEM2-ES CMIP5 model to downscaling with RegCM4.7'
 
 
 echo
-echo "--------------- INIT DOWNLOAD CMIP5 MODELS ----------------"
+echo "--------------- INIT DOWNLOAD HadGEM2-ES CMIP5 MODEL ----------------"
 
 # Variables list
-var_list=('evspsbl hfls hfss huss pr ps psl rsds rsus tas tasmax tasmin')
+var_list=('hus ps ta ua va')
 
 for var in ${var_list[@]}; do
-    for year in $(/usr/bin/seq -w 1900 10 2010) ; do
+    for year in $(/usr/bin/seq -w 1949 2005); do
+	for mon in $(/usr/bin/seq -w 03 3 12); do
+	    
+            path="/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling"
+	    cd ${path}
 
-	path="/home/nice/Downloads"
-	cd ${path}
+	    # Model time
+	    time=('6hrLev')
 
-	# Model name
-	model=('LASG-FGOALS-G2')
+	    # Model name
+	    model=('HadGEM2-ES')
 
-	# Experiment name
-	exp=('historical_r1i1p1')
+	    # Experiment name
+	    exp=('historical_r1i1p1')
 
-	# Date
-	in_date=${year}
+	    # Date
+	    in_date=${year}${mon}
 
-	if [ ${year} == '2010' ]
-	then
-	fi_date=$(date -I -d "${year}-12-28 + 4 years" | sed -n '1p' | cut -d '-' -f 1 )
-	else
-	fi_date=$(date -I -d "${year}-12-28 + 9 years" | sed -n '1p' | cut -d '-' -f 1 )
-	fi
+	    if [ ${mon} == '12' ]
+	    then
+	    fi_date=$(date -I -d "${year}${mon}-12-28 - 9 months" | sed -n '1p' | cut -d '-' -f 1 )
+	    else
+	    fi_date=$(date -I -d "${year}${mon}-12-28 + 3 months" | sed -n '1p' | cut -d '-' -f 1 )
+	    fi
 
-	echo "Starting download:" ${var}"_Amon_"${model}"_"${exp}"_"${in_date}"-"${fi_date}".nc"
-	echo 
+	    echo "Starting download: ${var}_${time}_${model}_${exp}_${in_date}_${fi_date}.nc"
+	    echo 
 	
-	# Creating path model
-	model_path=${path}/${model}
+	    # Creating path model
+	    var_path=${path}/${var}
 
-	if [ ! -d ${model} ]
-	then
-	mkdir ${model}
-	else
-	echo "Directory already exists"
-	echo
-	fi
+	    if [ ! -d ${var} ]
+	    then
+	    mkdir ${var}
+	    else
+	    echo "Directory already exists"
+	    echo
+	    fi
 
-	cd ${model}
+	    cd ${var}
 
-	/usr/bin/wget -N -c http://clima-dods.ictp.it/Data/CMIP5/monthly/hist/${model}/${var}_Amon_FGOALS-g2_${exp}_${in_date}01-${fi_date}12.nc
-	mv ${var}_Amon_FGOALS-g2_${exp}_${in_date}01-${fi_date}12.nc ${var}_Amon_${model}_${exp}_${in_date}01-${fi_date}12.nc
+	    /usr/bin/wget -N -c http://clima-dods.ictp.it/Data/RegCM_Data/HadGEM2/RF/${var}/${var}_${time}_${model}_${exp}_${in_date}0106_${fi_date}0100.nc
 
-	echo "Ending download:" ${var}_Amon_${model}_${exp}_${in_date}01-${fi_date}12.nc
-	echo
-    
+	    echo "Ending download: ${var}_${time}_${model}_${exp}_${in_date}_${fi_date}.nc"
+	    echo
+
+	done    
     done
 done
 
