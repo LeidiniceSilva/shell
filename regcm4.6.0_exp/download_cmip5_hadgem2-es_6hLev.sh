@@ -56,7 +56,7 @@ for var in ${var_list[@]}; do
 	    echo "Starting download: ${var}_${time}_${model}_${exp}_${in_date}-${fi_date}.nc"
 	    echo 
 	
-	    /usr/bin/wget -N -cb http://clima-dods.ictp.it/Data/RegCM_Data/HadGEM2/RCP85/${var}/${var}_${time}_${model}_${exp}_${in_date}-${fi_date}.nc
+	    /usr/bin/wget -N -c http://clima-dods.ictp.it/Data/RegCM_Data/HadGEM2/RCP85/${var}/${var}_${time}_${model}_${exp}_${in_date}-${fi_date}.nc
 
 	    echo "Ending download: ${var}_${time}_${model}_${exp}_${in_date}-${fi_date}.nc"s
 	    echo

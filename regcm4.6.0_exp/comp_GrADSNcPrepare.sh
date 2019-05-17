@@ -6,18 +6,16 @@
 #__description__ = 'Creating .ctl with GrADSNcPrepare'
 
 
-cd /vol3/disco1/nice/PNT_2018/output_exp6/BATS
+cd /vol3/disco1/nice/data_file/regcm_data/exp_pbl/output_exp1
 
-for VAR in ATM RAD SRF STS; do 
-    for YEAR in `seq 2011 2013`; do       
+for VAR in STS; do 
+    for YEAR in `seq 2006 2010`; do       
         for MON in `seq -w 1 12`; do
     
     	    echo ${VAR} - ${YEAR} - ${MON} 
 	
-	    /users/nice/RegCM-4.6.0/bin/GrADSNcPrepare amz_neb_exp6_${VAR}.${YEAR}${MON}0100.nc
+	    /users/nice/RegCM-4.6.0/bin/GrADSNcPrepare amz_neb_${VAR}.${YEAR}${MON}0100.nc
 
         done
     done
 done	
-
-
