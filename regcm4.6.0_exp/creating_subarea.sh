@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #__author__      = 'Leidinice Silva'
-#__email__       = 'leidinicesilva@gmail.br'
+#__email__       = 'leidinicesilva@gmail.com'
 #__date__        = '09/23/18'
 #__description__ = 'Creatin subareas domain'
  

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #__author__      = 'Leidinice Silva'
-#__email__       = 'leidinicesilva@gmail.br'
+#__email__       = 'leidinicesilva@gmail.com'
 #__date__        = '07/03/18'
 #__description__ = 'Creating an Image Frame with ImageMagick'
  

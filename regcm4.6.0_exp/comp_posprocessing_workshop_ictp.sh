@@ -1,7 +1,7 @@
  #!/bin/bash
 
 #__author__      = 'Leidinice Silva'
-#__email__       = 'leidinicesilva@gmail.br'
+#__email__       = 'leidinicesilva@gmail.com'
 #__date__        = '11/08/18'
 #__description__ = 'Posprocessing the RegCM4.7 model data with CDO'
  
