@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #__author__      = 'Leidinice Silva'
-#__email__       = 'leidinicesilva@gmail.br'
+#__email__       = 'leidinicesilva@gmail.com'
 #__date__        = '11/19/2018'
 #__description__ = 'Download RegCM4.7 simulation data DCA/IAG USP'
 

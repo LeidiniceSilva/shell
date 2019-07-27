@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #__author__      = 'Leidinice Silva'
-#__email__       = 'leidinicesilva@gmail.br'
+#__email__       = 'leidinicesilva@gmail.com'
 #__date__        = '01/26/19'
 #__description__ = 'Creating new areas from CMIP5 models and obs database with CDO'
  

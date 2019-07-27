@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #__author__      = 'Leidinice Silva'
-#__email__       = 'leidinicesilva@gmail.br'
+#__email__       = 'leidinicesilva@gmail.com'
 #__date__        = '05/26/18'
 #__description__ = 'Preprocessing the observation data with CDO'
  

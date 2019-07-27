@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #__author__      = 'Leidinice Silva'
-#__email__       = 'leidinicesilva@gmail.br'
+#__email__       = 'leidinicesilva@gmail.com'
 #__date__        = '04/05/2019'
 #__description__ = 'Download HadGEM2-ES CMIP5 model to downscaling with RegCM4.7'
 
