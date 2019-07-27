@@ -10,11 +10,12 @@ echo
 echo "--------------- INIT DOWNLOAD HadGEM2-ES CMIP5 MODEL ----------------"
 
 # Variables list
-var_list=('va')
+var_list=('ua')
 
 for var in ${var_list[@]}; do
 
-    path="/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling/RCP85"
+    path="/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling/HadGEM2/RCP85"
+    
     cd ${path}
 	    
     # Creating path model
