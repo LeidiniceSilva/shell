@@ -10,7 +10,7 @@ echo
 echo "--------------- INIT DOWNLOAD HadGEM2-ES CMIP5 MODEL ----------------"
 
 # Variables list
-var_list=('va')
+var_list=('hus')
 
 for var in ${var_list[@]}; do
 
