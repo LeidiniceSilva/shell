@@ -10,7 +10,7 @@ echo
 echo "--------------- INIT DOWNLOAD HadGEM2-ES CMIP5 MODEL ----------------"
 
 # Variables list
-var_list=('hus')
+var_list=('va')
 
 for var in ${var_list[@]}; do
 
@@ -58,7 +58,7 @@ for var in ${var_list[@]}; do
 	echo "Starting download: ${var}_${time}_${model}_${exp}_${in_date}-${fi_date}.nc"
 	echo 
 	
-	/usr/bin/wget -N -c http://clima-dods.ictp.it/Data/RegCM_Data/HadGEM2/RCP26/${var}/${var}_${time}_${model}_${exp}_${in_date}-${fi_date}.nc
+	/usr/bin/wget -N -c http://clima-dods.ictp.it/Data/RegCM_Data/HadGEM2/RCP26/${var}/${var}_${time}_${model}_${exp}_${in_date}-${fi_date}.nc.sha256	
 
 	    echo "Ending download: ${var}_${time}_${model}_${exp}_${in_date}-${fi_date}.nc"
 	    echo
