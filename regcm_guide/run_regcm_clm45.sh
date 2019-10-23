@@ -14,7 +14,7 @@
 ./icbcCLM45 regcm.in
 
 # Submit job 
-qsub submeter_job1.sh
+qsub sub_exp_regcm_clm45.sh
 
 # mpirun -np 8 ./regcmMPICLM45 regcm.in
 

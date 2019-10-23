@@ -13,7 +13,7 @@
 ./icbc regcm.in
 
 # Submit job  
-qsub submeter_job1.sh
+qsub sub_exp_regcm.sh
 
 # mpirun -np 8 ./regcmMPI regcm.in
 
