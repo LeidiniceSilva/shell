@@ -7,7 +7,7 @@
 
 
 # Download RegCM4.7.1
-wget http://clima-dods.ictp.it/Users/ggiulian/
+wget http://clima-dods.ictp.it/Users/ggiulian/RegCM-4.7.1.tar.gz
 
 # Unzip the folder
 tar -zxvf RegCM-4.7.1.tar.gz

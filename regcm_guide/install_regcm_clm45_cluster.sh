@@ -16,11 +16,11 @@ tar -zxvf RegCM-4.7.1.tar.gz
 cd RegCM4.7.1/
 export FCFLAGS="fconvert=big-endian -fno-range-check"
 
-# Loading libraries
-nedit .bashrc &
-module load netcdf-fortran/4.4.4
-module load netcdf/4.6.1
-module load openmpi3/3.1.0
+# Loading libraries if necessary
+# nedit .bashrc &
+# module load netcdf-fortran/4.4.4
+# module load netcdf/4.6.1
+# module load openmpi3/3.1.0
 
 # Configuration RegCM4.7.1 with CLM4.5
 ./configure --prefix=`pwd` --enable-clm45
