@@ -3,18 +3,19 @@
 ! South American domain 
 ! Adaptar para a grade que estamos trabalhando na disciplina de PNT
 !
+
  &dimparam
- iy     = 80,
- jx     = 160,
+ iy     = 160,
+ jx     = 320,
  kz     = 18,
  nsg    = 1,
  /
  
- !
- ! aqui voce escolhe se quer o modelo hidrostatico ou nao hidrostatico
- !
+!
+! aqui voce escolhe se quer o modelo hidrostatico ou nao hidrostatico
+!
  &coreparam
- idynamic = 1,  ! Choice of dynamical core
+ idynamic = 2,  ! Choice of dynamical core
                 ! 1 = MM4 hydrostatical core
                 ! 2 = MM5 NON hydrostatical core
  /
@@ -24,10 +25,10 @@
 !
 ! Dynamical core parameters
 !
- &dynparam
- gnu = 0.0625,   
- diffu_hgtf = 1, 
- /
+! &dynparam
+! gnu = 0.0625,   
+! diffu_hgtf = 1, 
+! /
 
 
 !
@@ -35,7 +36,7 @@
 !
  &geoparam
  iproj = 'NORMER',
- ds = 50.0,
+ ds = 25.0,
  ptop = 5.0,
  clat = -6.00,
  clon = -50.00,
@@ -48,71 +49,73 @@
 
 ! informacoes do terreno e indicacao das condicoes de contorno "inpter" global
 ! bem  arquivo as condicoes de contorno de sua simulacao "dirter"
-!
+
  &terrainparam
- domname = 'amz_neb',
+ domname = 'exp1_Kain_neb',
  lakedpth = .false.,
  fudge_lnd   = .false.,
  fudge_lnd_s = .false.,
  fudge_tex   = .false.,
  fudge_tex_s = .false.,
- dirter ='/vol3/nice/input',     
- inpter ='/vol3/DADOS_CONTORNO_REGCM46',       
+ dirter ='/users/nice/RegCM_CLM/input',     
+ inpter ='/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling' ,       
  /
  
  &debugparam
- debug_level = 1,
+ debug_level = 100,
  dbgfrq = 3,
  /
+ 
  &boundaryparam
  nspgx  = 12,
  nspgd  = 12,
  /
  
- regcm.in
+! regcm.in
 ! Informacoes sobre SST, dados atmosfericos globais e o periodo das simulacoes
-!
  
  &globdatparam
- ibdyfrq = 6,
- ssttyp = 'EIN15',
- dattyp = 'EIN15',
- gdate1 = 2002100100,
- gdate2 = 2005123100,
- dirglob = '/vol3/nice/input',
- inpglob = '/vol3/DADOS_CONTORNO_REGCM46',
+ ibdyfrq = 12,
+ ssttyp = 'HA_85',
+ dattyp = 'HA_85',
+ gdate1 = 2004030100,
+ gdate2 = 2004050100,
+ calendar = '360_day', 
+ dirglob = '/users/nice/RegCM_CLM/input',
+ inpglob = '/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling',
  /
+ 
  &globwindow
  lat0 = 0.0
  lat1 = 0.0
  lon0 = 0.0
  lon1 = 0.0
  /
+ 
  &restartparam
  ifrest  = .false. ,
- mdate0  = 2002100100,
- mdate1  = 2002100100,
- mdate2  = 2005123100,
+ mdate0  = 2004030100,
+ mdate1  = 2004030100,
+ mdate2  = 2004050100,
  /
  
  
- ! parametros de integracao do modelo
- ! o dt e o passo de tempo que o nucleo dinamico do modelo "roda"
- ! o dtrad, o codigo de radiacao, dtsrf o modelo de superficie, 
- ! eles devem ser multiplos. Alem disso, uma das formas de se corrigir
- ! eventuais problemas de CFL e aqui.
+! parametros de integracao do modelo
+! o dt e o passo de tempo que o nucleo dinamico do modelo "roda"
+! o dtrad, o codigo de radiacao, dtsrf o modelo de superficie, 
+! eles devem ser multiplos. Alem disso, uma das formas de se corrigir
+! eventuais problemas de CFL e aqui.
  
  &timeparam
  dtrad   =    30.,
  dtabem  =    18.,
  dtsrf   =   300.,
  dt      =    60.,
-  /
+ /
  
- ! controle das saidas das simulacoes, 
- ! por exemplo: ifatm = .true. (vamos salvar dados atmosfericos), atmfrq = 6 (a cada 6 horas)
- ! e ao final vamos colocar na pasta indicada por "dirout"
- 
+! controle das saidas das simulacoes, 
+! por exemplo: ifatm = .true. (vamos salvar dados atmosfericos), atmfrq = 6 (a cada 6 horas)
+! e ao final vamos colocar na pasta indicada por "dirout"
  
  &outparam
  ifsave  = .false. ,
@@ -126,59 +129,63 @@
    srffrq  =     6.,
  ifchem  = .false.,
    chemfrq =     6.,
- dirout = '/vol3/nice/output',
+ ifsts   = .true.,
+ dirout = '/users/nice/RegCM_CLM/output',
  /
  
- !
- ! aqui sao as opcoes da fisica do modelo quando voce quiser outras opcoes 
- ! deve ir ao arquivo original "README.namelist" e ver as opcoes para 
- ! esses parametros. Para isso va a parte "Model Physics" e veja as opcoes para as suas simulacoes
- !
+!
+! aqui sao as opcoes da fisica do modelo quando voce quiser outras opcoes 
+! deve ir ao arquivo original "README.namelist" e ver as opcoes para 
+! esses parametros. Para isso va a parte "Model Physics" e veja as opcoes para as suas simulacoes
+!
  
  &physicsparam
  iboudy  =          5,
  ibltyp  =          1,
- icup_lnd =         5,
+ icup_lnd =         6,
  icup_ocn =         4,
  ipptls  =          1,
- iocnflx =          1,
+ iocnflx =          2,
  ipgf    =          0,
  iemiss  =          0,
  lakemod =          0,
  ichem   =          0,
- scenario = 'A1B',
+ scenario = 'RCP85',
  idcsst = 0,
  iseaice = 0,
  idesseas = 0,
  iconvlwp = 0,
  /
  
- 
- &subexparam
- qck1land =   .250E-03,
- qck1oce  =   .250E-03,
- cevaplnd =   .100E-02,
- caccrlnd =      3.000,
- cftotmax =      0.75,
- /
- 
+! &subexparam
+! qck1land =   .250E-03,
+! qck1oce  =   .250E-03,
+! cevaplnd =   .100E-02,
+! caccrlnd =      3.000,
+! cftotmax =      0.75,
+! /
  
  &grellparam
  /
+ 
  &emanparam
  elcrit_ocn  = 0.0011D0,
  elcrit_lnd  = 0.0011D0,
  coeffr  = 1.0D0,
  /
+ 
  &holtslagparam
  /
+ 
  &clm_inparm
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
  /
+ 
  &clm_soilhydrology_inparm
  /
+ 
  &clm_hydrology1_inparm
  /
 
