@@ -3,10 +3,6 @@
 ! This README details namelist parameters for RegCM V4.7
 !
 !-----------------------------------------------------------------------
-!
-! Choice of the dynamical core
-!
-!-----------------------------------------------------------------------
 
  &dimparam
  iy     = 44,

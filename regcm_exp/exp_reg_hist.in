@@ -1,7 +1,24 @@
+!---------------------------------------------------------------------------------
+!
+! This README details namelist parameters for RegCM Version 4.7
+!
+!---------------------------------------------------------------------------------
+!
+! Author: Leidinice Silva (leidinicesilva@gmail.com)
+! Data: June 1, 2020
+!
+! In 17out2015: Inclusion of parameterization of variables &dimparam e &geoparam;
+! In 29dez2016: Inclusion of the variable idyamic (hydros/non-hydros);
+! In 10jan2017: Start of global data testing using CFS;
+! In 03out2018: Version 4.7 included new parameters. 
+!
+! RegCM4.7 downscaling for reference period
+! Domain simulation: Amazon basin and Northeast from Brazil 
+!
+!---------------------------------------------------------------------------------
+
 !
 ! comentarios em portugues por Claudio Moises
-! South American domain 
-! Adaptar para a grade que estamos trabalhando na disciplina de PNT
 !
 
  &dimparam
@@ -11,11 +28,11 @@
  nsg    = 1,
  /
  
-!
-! aqui voce escolhe se quer o modelo hidrostatico ou nao hidrostatico
-!
+ !
+ ! aqui voce escolhe se quer o modelo hidrostatico ou nao hidrostatico
+ !
  &coreparam
- idynamic = 2,  ! Choice of dynamical core
+ idynamic = 1,  ! Choice of dynamical core
                 ! 1 = MM4 hydrostatical core
                 ! 2 = MM5 NON hydrostatical core
  /
@@ -29,7 +46,6 @@
 ! gnu = 0.0625,   
 ! diffu_hgtf = 1, 
 ! /
-
 
 !
 ! localizacao geografica da simulacao
@@ -49,15 +65,15 @@
 
 ! informacoes do terreno e indicacao das condicoes de contorno "inpter" global
 ! bem  arquivo as condicoes de contorno de sua simulacao "dirter"
-
+!
  &terrainparam
- domname = 'exp1_Kain_neb',
+ domname = 'reg_hist',
  lakedpth = .false.,
  fudge_lnd   = .false.,
  fudge_lnd_s = .false.,
  fudge_tex   = .false.,
  fudge_tex_s = .false.,
- dirter ='/users/nice/RegCM_CLM/input',     
+ dirter ='/vol1/nice/exp_downscaling/historical/input',     
  inpter ='/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling' ,       
  /
  
@@ -65,57 +81,57 @@
  debug_level = 100,
  dbgfrq = 3,
  /
- 
+
  &boundaryparam
  nspgx  = 12,
  nspgd  = 12,
  /
  
-! regcm.in
+ regcm.in
 ! Informacoes sobre SST, dados atmosfericos globais e o periodo das simulacoes
+!
  
  &globdatparam
  ibdyfrq = 12,
  ssttyp = 'HA_85',
  dattyp = 'HA_85',
- gdate1 = 2004030100,
- gdate2 = 2004050100,
+ gdate1 = 1985010100,
+ gdate2 = 2005120100,
  calendar = '360_day', 
- dirglob = '/users/nice/RegCM_CLM/input',
+ dirglob = '/vol1/nice/exp_downscaling/historical/input',
  inpglob = '/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling',
  /
- 
+
  &globwindow
  lat0 = 0.0
  lat1 = 0.0
  lon0 = 0.0
  lon1 = 0.0
  /
- 
+
  &restartparam
  ifrest  = .false. ,
- mdate0  = 2004030100,
- mdate1  = 2004030100,
- mdate2  = 2004050100,
+ mdate0  = 1985010100,
+ mdate1  = 1985010100,
+ mdate2  = 2005120100,
  /
  
- 
-! parametros de integracao do modelo
-! o dt e o passo de tempo que o nucleo dinamico do modelo "roda"
-! o dtrad, o codigo de radiacao, dtsrf o modelo de superficie, 
-! eles devem ser multiplos. Alem disso, uma das formas de se corrigir
-! eventuais problemas de CFL e aqui.
+ ! parametros de integracao do modelo
+ ! o dt e o passo de tempo que o nucleo dinamico do modelo "roda"
+ ! o dtrad, o codigo de radiacao, dtsrf o modelo de superficie, 
+ ! eles devem ser multiplos. Alem disso, uma das formas de se corrigir
+ ! eventuais problemas de CFL e aqui.
  
  &timeparam
  dtrad   =    30.,
  dtabem  =    18.,
  dtsrf   =   300.,
  dt      =    60.,
- /
+  /
  
-! controle das saidas das simulacoes, 
-! por exemplo: ifatm = .true. (vamos salvar dados atmosfericos), atmfrq = 6 (a cada 6 horas)
-! e ao final vamos colocar na pasta indicada por "dirout"
+ ! controle das saidas das simulacoes, 
+ ! por exemplo: ifatm = .true. (vamos salvar dados atmosfericos), atmfrq = 6 (a cada 6 horas)
+ ! e ao final vamos colocar na pasta indicada por "dirout"
  
  &outparam
  ifsave  = .false. ,
@@ -130,15 +146,16 @@
  ifchem  = .false.,
    chemfrq =     6.,
  ifsts   = .true.,
- dirout = '/users/nice/RegCM_CLM/output',
+
+ dirout = '/vol1/nice/exp_downscaling/historical/output',
  /
  
-!
-! aqui sao as opcoes da fisica do modelo quando voce quiser outras opcoes 
-! deve ir ao arquivo original "README.namelist" e ver as opcoes para 
-! esses parametros. Para isso va a parte "Model Physics" e veja as opcoes para as suas simulacoes
-!
- 
+ !
+ ! aqui sao as opcoes da fisica do modelo quando voce quiser outras opcoes 
+ ! deve ir ao arquivo original "README.namelist" e ver as opcoes para 
+ ! esses parametros. Para isso va a parte "Model Physics" e veja as opcoes para as suas simulacoes
+ !
+
  &physicsparam
  iboudy  =          5,
  ibltyp  =          1,
@@ -167,25 +184,24 @@
  
  &grellparam
  /
- 
+
  &emanparam
  elcrit_ocn  = 0.0011D0,
  elcrit_lnd  = 0.0011D0,
  coeffr  = 1.0D0,
  /
- 
+
  &holtslagparam
  /
- 
+
  &clm_inparm
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
  /
- 
+
  &clm_soilhydrology_inparm
  /
- 
+
  &clm_hydrology1_inparm
  /
-
