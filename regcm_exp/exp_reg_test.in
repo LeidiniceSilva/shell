@@ -87,6 +87,7 @@
  dattyp = 'HA_85',
  gdate1 = 2005010100,
  gdate2 = 2005080100,
+ calendar = '360_day', 
  dirglob = '/vol1/nice/exp_test/input',
  inpglob = '/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling',
  /
