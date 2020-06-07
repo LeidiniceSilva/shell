@@ -31,10 +31,10 @@ for var in ${var_list[@]}; do
 	echo "Posprocessing file:" ${var}"_amz_neb_Amon_"${model}"_"${exp}"_197512-200511.nc"
 
 	echo
-	echo "1. Select new area: amz (-74,-48,4,-16), neb (-46,-34,-2,-15) and matopiba (-51,-42,-15,-5)"
-	#cdo sellonlatbox,-74,-48,4,-16 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_amz_Amon_${model}_${exp}_197512-200511.nc
-	#cdo sellonlatbox,-46,-34,-2,-15 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_neb_Amon_${model}_${exp}_197512-200511.nc
-	cdo sellonlatbox,-51,-42,-15,-5 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_matopiba_Amon_${model}_${exp}_197512-200511.nc
+	echo "1. Select new area: amz (-68,-52,-15,-5), neb (-40,-35,-13,-3) and matopiba (-50.5,-42.5,-15,-2.5)"
+	cdo sellonlatbox,-68,-52,-15,-5 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_amz_Amon_${model}_${exp}_197512-200511.nc
+	#cdo sellonlatbox,-40,-35,-13,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_neb_Amon_${model}_${exp}_197512-200511.nc
+	#cdo sellonlatbox,-50.5,-42.5,-15,-2.5 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_matopiba_Amon_${model}_${exp}_197512-200511.nc
     done
 done
 
