@@ -13,7 +13,7 @@ echo "--------------- INIT POSPROCESSING CMIP5 MODELS ----------------"
 var_list=('pr' 'tas')     
 
 # Models list
-model_list=( 'BCC-CSM1.1' 'BCC-CSM1.1M' 'BNU-ESM' 'CanESM2' 'CMCC-CM' 'CMCC-CMS' 'CNRM-CM5' 'CSIRO-ACCESS-1' 'CSIRO-ACCESS-3' 'CSIRO-MK36' 'EC-EARTH' 'ensmean_cmip5' 'FIO-ESM' 'GFDL-ESM2G' 'GFDL-ESM2M' 'GISS-E2-H-CC' 'GISS-E2-H' 'GISS-E2-R-CC' 'GISS-E2-R' 'HadGEM2-AO' 'HadGEM2-CC' 'HadGEM2-ES' 'INMCM4' 'IPSL-CM5A-LR' 'IPSL-CM5A-MR' 'IPSL-CM5B-LR' 'LASG-FGOALS-G2' 'LASG-FGOALS-S2' 'MIROC5' 'MIROC-ESM-CHEM' 'MIROC-ESM' 'MPI-ESM-LR' 'MPI-ESM-MR' 'MRI-CGCM3' 'NCAR-CCSM4' 'NCAR-CESM1-BGC' 'NCAR-CESM1-CAM5' 'NorESM1-ME' 'NorESM1-M')    
+model_list=( 'BCC-CSM1.1' 'BCC-CSM1.1M' 'BNU-ESM' 'CanESM2' 'CNRM-CM5' 'CSIRO-ACCESS-1' 'CSIRO-ACCESS-3' 'CSIRO-MK36' 'ensmean_cmip5' 'FIO-ESM' 'GISS-E2-H-CC' 'GISS-E2-H' 'HadGEM2-AO' 'HadGEM2-CC' 'HadGEM2-ES' 'INMCM4' 'IPSL-CM5A-LR' 'IPSL-CM5A-MR' 'LASG-FGOALS-G2' 'LASG-FGOALS-S2' 'MIROC5' 'MIROC-ESM-CHEM' 'MIROC-ESM' 'MPI-ESM-LR' 'MPI-ESM-MR' 'MRI-CGCM3' 'NCAR-CCSM4' 'NCAR-CESM1-BGC' 'NCAR-CESM1-CAM5' 'NorESM1-ME' 'NorESM1-M')    
 
 for var in ${var_list[@]}; do
     for model in ${model_list[@]}; do
@@ -31,10 +31,10 @@ for var in ${var_list[@]}; do
 	echo "Posprocessing file:" ${var}"_amz_neb_Amon_"${model}"_"${exp}"_197512-200511.nc"
 
 	echo
-	echo "1. Select new area: amz (-68,-52,-15,-5), neb (-40,-35,-13,-3) and matopiba (-50.5,-42.5,-15,-2.5)"
-	cdo sellonlatbox,-68,-52,-15,-5 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_amz_Amon_${model}_${exp}_197512-200511.nc
-	#cdo sellonlatbox,-40,-35,-13,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_neb_Amon_${model}_${exp}_197512-200511.nc
-	#cdo sellonlatbox,-50.5,-42.5,-15,-2.5 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_matopiba_Amon_${model}_${exp}_197512-200511.nc
+	echo "1. Select new area: amz (-68,-52,-12,-3), neb (-40,-35,-16,-3) and matopiba (-50.5,-42.5,-15,-2.5)"
+	#cdo sellonlatbox,-68,-52,-12,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_amz_Amon_${model}_${exp}_197512-200511.nc
+	#cdo sellonlatbox,-40,-35,-16,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_neb_Amon_${model}_${exp}_197512-200511.nc
+	cdo sellonlatbox,-50.5,-42.5,-15,-2.5 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_matopiba_Amon_${model}_${exp}_197512-200511.nc
     done
 done
 
