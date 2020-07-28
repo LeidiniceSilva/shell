@@ -14,21 +14,6 @@ var_list=('hus')
 
 for var in ${var_list[@]}; do
 
-    path="/vol1/nice/NorESM1-M"
-    
-    cd ${path}
-	    
-    # Creating path model
-    var_path=${path}/${var}
-    if [ ! -d ${var} ]
-    then
-    mkdir ${var}
-    else
-    echo "Directory already exists"
-    echo
-    fi
-    cd ${var}
-
     for year in $(/usr/bin/seq -w 1995 2005); do
 	
 	for mon in 01 07; do
