@@ -2,9 +2,9 @@
 
 #SBATCH -J exp_reg_hist # Job name
 #SBATCH -o exp_reg_hist.%j.out # Name of stdout output file (%j expands to %jobId)
-#SBATCH -p normal
-#SBATCH -N 8 # Total number of nodes requested
-#SBATCH -n 300 # Total number of mpi tasks #requested
+#SBATCH -p partition2
+#SBATCH -N 12 # Total number of nodes requested
+#SBATCH -n 96 # Total number of mpi tasks #requested
 #SBATCH -t 5000:00:00 # Run time (hh:mm:ss) - 1.5 hours
 
 module load netcdf-fortran/4.4.4

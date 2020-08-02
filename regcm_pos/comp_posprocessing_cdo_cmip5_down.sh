@@ -46,13 +46,13 @@ cdo addc,-273.15 t2m_kelv_amz_neb_regcm_${SIM}_2001-2010.nc t2m_amz_neb_regcm_${
 
 
 echo 
-echo "4. Standard calendar (mm and celsius)"
+echo "4. Standard calendar"
 cdo setcalendar,standard pre_amz_neb_regcm_${SIM}_1985-2005.nc pre_amz_neb_regcm_${SIM}_1985-2005_standard.nc
 cdo setcalendar,standard t2m_amz_neb_regcm_${SIM}_1985-2005.nc t2m_amz_neb_regcm_${SIM}_1985-2005_standard.nc
 
 
 echo 
-echo "5. Remapbil (Precipitation and Temperature 2m: r720x360)"
+echo "5. Remapbil (Precipitation and Temperature 2m: r1440x720)"
 cdo remapbil,r1440x720 pre_amz_neb_regcm_${SIM}_1985-2005_standard.nc pre_amz_neb_regcm_${SIM}_1985-2005_newgrid.nc
 cdo remapbil,r1440x720 t2m_amz_neb_regcm_${SIM}_1985-2005_standard.nc t2m_amz_neb_regcm_${SIM}_1985-2005_newgrid.nc 
 

@@ -5,7 +5,7 @@
 !---------------------------------------------------------------------------------
 !
 ! Author: Leidinice Silva (leidinicesilva@gmail.com)
-! Data: June 1, 2020
+! Data: August 2, 2020
 !
 ! In 17out2015: Inclusion of parameterization of variables &dimparam e &geoparam;
 ! In 29dez2016: Inclusion of the variable idyamic (hydros/non-hydros);
@@ -18,8 +18,8 @@
 !---------------------------------------------------------------------------------
 
  &dimparam
- iy     = 44,
- jx     = 38,
+ iy     = 115,
+ jx     = 132,
  kz     = 18,
  nsg    = 1,
  /
@@ -43,12 +43,12 @@
  !
  &geoparam
  iproj = 'NORMER',
- ds = 50.0,
+ ds = 25.0,
  ptop = 5.0,
- clat = -10.00,
- clon = -42.00,
- plat = -10.00,
- plon = -42.00,
+ clat = -8.00,
+ clon = -35.00,
+ plat = -8.00,
+ plon = -35.00,
  truelatl = 30.0,
  truelath = 60.0,
  i_band = 0,
@@ -64,7 +64,7 @@
  fudge_lnd_s = .false.,
  fudge_tex   = .false.,
  fudge_tex_s = .false.,
- dirter ='/vol1/nice/exp_test/input',     
+ dirter ='/vol1/nice/exp_neb/input',     
  inpter ='/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling',       
  /
  
@@ -85,10 +85,10 @@
  ibdyfrq = 12,
  ssttyp = 'HA_85',
  dattyp = 'HA_85',
- gdate1 = 2005010100,
- gdate2 = 2005080100,
+ gdate1 = 2017040100,
+ gdate2 = 2017060100,
  calendar = '360_day', 
- dirglob = '/vol1/nice/exp_test/input',
+ dirglob = '/vol1/nice/exp_neb/input',
  inpglob = '/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling',
  /
  
@@ -101,9 +101,9 @@
  
  &restartparam
  ifrest  = .false. ,
- mdate0  = 2005010100,
- mdate1  = 2005010100,
- mdate2  = 2005080100,
+ mdate0  = 2017040100,
+ mdate1  = 2017040100,
+ mdate2  = 2017060100,
  /
  
  ! parametros de integracao do modelo
@@ -138,7 +138,7 @@
    chemfrq =     6.,
  ifsts   = .true.,
  
- dirout = '/vol1/nice/exp_test/output',
+ dirout = '/vol1/nice/exp_neb/output',
  /
  
  !
@@ -197,3 +197,4 @@
 
  &clm_hydrology1_inparm
  /
+
