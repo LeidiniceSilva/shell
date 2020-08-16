@@ -1,16 +1,16 @@
 #!/bin/bash
 
-#SBATCH -J reg_hist # Job name
-#SBATCH -o reg_hist.%j.out # Name of stdout output file (%j expands to %jobId)
+#SBATCH -J reg_neb_had # Job name
+#SBATCH -o reg_neb_had.%j.out # Name of stdout output file (%j expands to %jobId)
 #SBATCH -p partition2
-#SBATCH -N 12 # Total number of nodes requested
-#SBATCH -n 96 # Total number of mpi tasks #requested
+#SBATCH -N 4 # Total number of nodes requested
+#SBATCH -n 32 # Total number of mpi tasks #requested
 #SBATCH -t 5000:00:00 # Run time (hh:mm:ss) - 1.5 hours
 
 module load netcdf-fortran/4.4.4
 module swap hdf5 phdf5/1.10.2
 
-prun ./regcmMPICLM45 exp_reg_hist.in > exp_reg_hist.log
+prun ./regcmMPICLM45 exp_reg_neb_had.in > exp_reg_neb_had.log
 
 # To see in terminal: ps -aux | grep prun
 # To see in queue terminal: squeue C (Wrong), Q (Queue) and R (Run)

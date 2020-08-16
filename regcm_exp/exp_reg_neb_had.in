@@ -25,18 +25,20 @@
  /
  
  &coreparam
- idynamic = 2,  ! Choice of dynamical core
+ idynamic = 1,  ! Choice of dynamical core
                 ! 1 = MM4 hydrostatical core
                 ! 2 = MM5 NON hydrostatical core
  /
  
- ! 
- ! Dynamical core parameters
- !
- &dynparam
- gnu = 0.0625,   
- diffu_hgtf = 1, 
- /
+! 
+! Nao altere esses valores
+!
+! Dynamical core parameters
+!
+! &dynparam
+! gnu = 0.0625,   
+! diffu_hgtf = 1, 
+! /
 
  !
  !localizacao geografica da simulacao
@@ -123,7 +125,6 @@
  ! por exemplo: ifatm = .true. (vamos salvar dados atmosfericos), atmfrq = 6 (a cada 6 horas)
  ! e ao final vamos colocar na pasta indicada por "dirout"
  
- 
  &outparam
  ifsave  = .false. ,
    savfrq  =    0.,
@@ -164,8 +165,7 @@
  idesseas = 0,
  iconvlwp = 0,
  /
- 
- 
+  
 ! &subexparam
 ! qck1land =   .250E-03,
 ! qck1oce  =   .250E-03,
@@ -197,4 +197,3 @@
 
  &clm_hydrology1_inparm
  /
-
