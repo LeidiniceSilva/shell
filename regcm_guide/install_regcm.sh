@@ -22,6 +22,9 @@ export FCFLAGS="fconvert=big-endian -fno-range-check"
 # module load netcdf/4.6.1
 # module load openmpi3/3.1.0
 
+# Execute to version RegCM4.7.3.3
+./bootstrap.sh 
+
 # Configuration RegCM4.7.1 default
 ./configure --prefix=`pwd` 
 

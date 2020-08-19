@@ -9,9 +9,9 @@
 # Run inside RegCM/bin folder
 # Processing to generate the contour conditions
 
-./terrainCLM45 exp_reg_hist.in
-./mksurfdataCLM45 exp_reg_hist.in
-./sstCLM45 exp_reg_hist.in
-./icbcCLM45 exp_reg_hist.in
+./terrainCLM45 exp_reg.in
+./mksurfdataCLM45 exp_reg.in
+./sstCLM45 exp_reg.in
+./icbcCLM45 exp_reg.in
 
 # Next step to submit expetiment
