@@ -42,27 +42,19 @@ cdo cat tas_kelv_reg_had_${EXP}_*0100.nc tas_kelv_reg_had_${EXP}_${DATA}.nc
 echo
 echo "3. Convert calendar: standard"
 cdo setcalendar,standard pr_flux_reg_had_${EXP}_${DATA}.nc pr_flux_reg_had_${EXP}_${DATA}_stand.nc
-cdo setcalendar,standard tas_flux_reg_had_${EXP}_${DATA}.nc tas_flux_reg_had_${EXP}_${DATA}_stand.nc
+cdo setcalendar,standard tas_kelv_reg_had_${EXP}_${DATA}.nc tas_kelv_reg_had_${EXP}_${DATA}_stand.nc
 
 echo 
-echo "4. Unit convention (mm and celsius)"
+echo "4. Unit convention (mm/d and celsius)"
 
 cdo mulc,86400 pr_flux_reg_had_${EXP}_${DATA}_stand.nc pr_reg_had_${EXP}_${DATA}.nc
-cdo addc,-273.15 tas_flux_reg_had_${EXP}_${DATA}_stand.nc tas_reg_had_${EXP}_${DATA}.nc
+cdo addc,-273.15 tas_kelv_reg_had_${EXP}_${DATA}_stand.nc tas_reg_had_${EXP}_${DATA}.nc
 
 echo 
 echo "5. Remapbil (Precipitation and Temperature 2m: AMZ_NEB)"
 
 ./regrid pr_reg_had_${EXP}_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
 ./regrid tas_reg_had_${EXP}_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil 
-
-echo 
-echo "6. Deleted files"
-
-rm pr_flux_*.nc
-rm tas_kelv_*.nc
-rm pr_reg_had_${EXP}_${DATA}.nc
-rm tas_reg_had_${EXP}_${DATA}.nc
 
 
 echo
