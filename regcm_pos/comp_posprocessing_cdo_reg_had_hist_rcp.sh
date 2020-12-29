@@ -12,7 +12,7 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 EXP="hist"
 DATA="1985-2005"
-DIR="/vol1/nice/exp_downscaling/historical/output"
+DIR="/home/nice/Documents/exp_downscaling/hist"
 
 echo
 cd ${DIR}
@@ -53,8 +53,8 @@ cdo addc,-273.15 tas_flux_reg_had_${EXP}_${DATA}_stand.nc tas_reg_had_${EXP}_${D
 echo 
 echo "5. Remapbil (Precipitation and Temperature 2m: AMZ_NEB)"
 
-/users/nice/RegCM_CLM/RegCM-4.7.1/bin/./regrid pr_reg_had_${EXP}_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/users/nice/RegCM_CLM/RegCM-4.7.1/bin/./regrid tas_reg_had_${EXP}_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil 
+./regrid pr_reg_had_${EXP}_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+./regrid tas_reg_had_${EXP}_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil 
 
 echo 
 echo "6. Deleted files"
