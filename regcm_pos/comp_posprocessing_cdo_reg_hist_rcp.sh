@@ -11,7 +11,7 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 EXP="rcp85"
 DATA="2080-2099"
-DIR="/home/nice/Documents/exp_downscaling/rcp85"
+DIR="/home/nice/Documents/dataset/rcm/${EXP}"
 
 echo
 cd ${DIR}
@@ -71,7 +71,7 @@ cdo -f nc -remapnn,pr_amz_neb_reg_had_${EXP}_${DATA}_lonlat.nc -gtc,0 -topo pr_s
 cdo ifthen pr_seamask.nc pr_amz_neb_reg_had_${EXP}_${DATA}_lonlat.nc pr_amz_neb_reg_had_${EXP}_${DATA}_lonlat_seamask.nc
 echo "Data: ${DATA} - Variables: Temperature 2 m"
 cdo -f nc -remapnn,tas_amz_neb_reg_had_${EXP}_${DATA}_lonlat.nc -gtc,0 -topo tas_seamask.nc
-cdo ifthen pr_seamask.nc tas_amz_neb_reg_had_${EXP}_${DATA}_lonlat.nc tas_amz_neb_reg_had_${EXP}_${DATA}_lonlat_seamask.nc
+cdo ifthen tas_seamask.nc tas_amz_neb_reg_had_${EXP}_${DATA}_lonlat.nc tas_amz_neb_reg_had_${EXP}_${DATA}_lonlat_seamask.nc
 
 echo
 echo "7. Select new area: amz (-68,-52,-12,-3), neb (-40,-35,-16,-3) and matopiba (-50.5,-42.5,-15,-2.5)"
