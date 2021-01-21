@@ -113,4 +113,3 @@ rm tasmax_seamask.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
-
