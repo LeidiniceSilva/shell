@@ -20,12 +20,12 @@
 !  VERSAO=4.7
 
 
-&coreparam
+ &coreparam
  idynamic = 2,  ! 1 = MM4 hydrostatical core
                 ! 2 = MM5 NON hydrostatical core
  /
 
-&dimparam 
+ &dimparam 
  iy     = 196,
  jx     = 202,
  kz     = 23,
@@ -40,20 +40,20 @@
 ! Domain geolocation
 !
  &geoparam
-  iproj = 'NORMER',
-  ds = 36.0,
-  ptop = 5.0,
-  clat = -10.0,
-  clon = -56.0,
-  plat = 45.39,
-  plon = 13.48,
-  truelatl = 30.0,
-  truelath = 60.0,
-  i_band = 0,
-  i_crm = 0,
+ iproj = 'NORMER',
+ ds = 36.0,
+ ptop = 5.0,
+ clat = -10.0,
+ clon = -56.0,
+ plat = 45.39,
+ plon = 13.48,
+ truelatl = 30.0,
+ truelath = 60.0,
+ i_band = 0,
+ i_crm = 0,
  /
 
-&terrainparam
+ &terrainparam
  domname = 'AmericadoSul_DOMAIN2',
  lresamp = .false.,
  smthbdy = .false.,
@@ -74,13 +74,13 @@
  tersrc = 'GMTED',
  smsrc  = 'ESACCI',
  moist_filename = 'moist.nc',
-/
+ /
 
 ! ICBC Global data input control
 !   GLOBAL DATA AVAILABLE FROM ICTP FROM:
 !            http://clima-dods.ictp.it/Data/RegCM_Data
-&globdatparam
-ibdyfrq = 6,
+ &globdatparam
+ ibdyfrq = 6,
  ssttyp = 'EIN15',
  dattyp = 'EIN15',
  chemtyp = 'MZCLM',
@@ -90,30 +90,30 @@ ibdyfrq = 6,
  dirglob = '/home/rcm14/dados/input',
  inpglob = '/home/rcm14/dados/RCMDATA',
  ensemble_run = .false.,
-/
+ /
 
-&fnestparam
+ &fnestparam
  coarse_outdir = 'globdata/RegCM',
  coarse_domname = 'EUROPE',
-/
+ /
 
-&restartparam
+ &restartparam
  ifrest  = .FALSE.,
  mdate0  = 2010060100,
  mdate1  = 2010060100,
  mdate2  = 2010090100,
-/
+ /
 
-&timeparam
+ &timeparam
  dt     =   45.,
  dtrad  =     0.,
  dtabem =     0.,
  dtsrf  =     0.,
  dtcum  =     0.,
  dtche  =     0.,
-/
+ /
 
-&outparam
+ &outparam
  ifsave  = .false. ,
  savfrq  =     0.,
  ifatm   = .false. ,
@@ -144,9 +144,9 @@ ibdyfrq = 6,
  idiag = 0,
  do_parallel_netcdf_in  = .false.,
  do_parallel_netcdf_out = .false.,
-/
+ /
  
-&physicsparam
+ &physicsparam
  iboudy  =          5,  ! Lateral Boundary conditions scheme
                         ! 5 => Relaxation, exponential technique.
  isladvec =         0,  ! Semilagrangian advection scheme for tracers and
@@ -202,9 +202,9 @@ ibdyfrq = 6,
  itweak =            0, ! Enable tweak scenario
  ifixsolar =         0,
  fixedsolarval =  343.,
-/
+ /
 
-&dynparam
+ &dynparam
  gnu1 = 0.1,
  gnu2 = 0.1,
  ckh = 1.0,
@@ -218,14 +218,14 @@ ibdyfrq = 6,
  q_rel_extrema = 0.2,
  c_rel_extrema = 0.5,
  t_rel_extrema = 0.5,
-/
+ /
 
-&referenceatm
+ &referenceatm
  base_state_pressure = 101325.0,
  logp_lrate = 47.70,
-/
+ /
 
-&nonhydroparam
+ &nonhydroparam
  ifupr = 1,
  nhbet = 0.4,
  nhxkd = 0.1,
@@ -233,14 +233,14 @@ ibdyfrq = 6,
  rayndamp = 5,
  rayalpha0 = 0.001,
  rayhd = 10000.0,
-/
+ /
 
-&hydroparam
+ &hydroparam
  nsplit = 2,
  lstand = .true.,
-/
+ /
 
-&boundaryparam
+ &boundaryparam
  nspgx  = 12,
  nspgd  = 12,
  high_nudge =    3.0,
@@ -248,9 +248,9 @@ ibdyfrq = 6,
  low_nudge =     1.0,
  bdy_nm = -1.0,
  bdy_dm = -1.0,
-/
+ /
  
-&cldparam
+ &cldparam
  ncld      = 1,
  rhmax     = 1.01,
  rhmin     = 0.01,
@@ -268,9 +268,9 @@ ibdyfrq = 6,
  rcrit     = 13.5,
  coef_ccn  = 2.5e+20,
  abulk     = 0.9,
-/
+ /
  
-&subexparam
+ &subexparam
  qck1land  = 0.0005,
  qck1oce   = 0.0005,
  gulland   = 0.65,
@@ -280,9 +280,9 @@ ibdyfrq = 6,
  caccrlnd  = 6.0,
  caccroce  = 4.0,
  conf      = 1.00,
-/
+ /
 
-&microparam
+ &microparam
  stats = .false.,
  budget_compute = .false.,
  nssopt = 1,
@@ -297,9 +297,9 @@ ibdyfrq = 6,
  skconv = 1.0-3,
  rcovpmin = 0.1,
  rpecons = 5.547e-5,
-/
+ /
 
-&grellparam
+ &grellparam
  igcc  = 2,
  gcr0 = 0.0020,
  edtmin      = 0.20,
@@ -324,10 +324,9 @@ ibdyfrq = 6,
  htmax = 500.0,
  skbmax = 0.4,
  dtauc = 30.0,
-/
+ /
 
-
-&emanparam
+ &emanparam
  minsig = 0.95,
  elcrit_ocn = 0.0011,
  elcrit_lnd = 0.0011,
@@ -346,9 +345,9 @@ ibdyfrq = 6,
  damp = 0.1,
  epmax_ocn = 0.999,
  epmax_lnd = 0.999,
-/
+ /
 
-&tiedtkeparam
+ &tiedtkeparam
  iconv = 4,
  entrmax = 1.75e-3,
  entrdd  = 3.0e-4,
@@ -379,9 +378,9 @@ ibdyfrq = 6,
  lmftrac   = .true.,
  lmfsmooth = .false.,
  lmfwstar  = .false.,
-/
+ /
 
-&kfparam
+ &kfparam
  kf_entrate = 0.03,
  kf_convrate = 0.03,
  kf_min_pef = 0.2,
@@ -392,31 +391,31 @@ ibdyfrq = 6,
  kf_max_dtcape = 3600.0,
  /
 
-&holtslagparam
+ &holtslagparam
  ricr_ocn = 0.25,
  ricr_lnd = 0.25,
  zhnew_fac = 0.25,
  ifaholtth10 = 1,
  ifaholt = 1,
  holtth10iter = 1,
-/
+ /
 
-&uwparam
+ &uwparam
  iuwvadv = 0,
  atwo = 15.0,
  rstbl = 1.5,
  czero = 5.869,
  nuk = 5.0,
-/
+ /
 
-&slabocparam
+ &slabocparam
  do_qflux_adj  = .false.,
  do_restore_sst = .true.,
  sst_restore_timescale = 5.0,
  mixed_layer_depth     = 50.0,
-/
+ /
 
-&rrtmparam
+ &rrtmparam
  inflgsw  = 2,
  iceflgsw = 3,
  liqflgsw = 1,
@@ -429,7 +428,7 @@ ibdyfrq = 6,
  nradfo = 4,
  /
 
-&chemparam
+ &chemparam
  chemsimtype = 'SSLT',
  ichsolver = 0,
  ichsursrc = 0,
@@ -448,22 +447,22 @@ ibdyfrq = 6,
  ichbion = 0,
  rdstemfac = 1.0,
  rocemfac = 1.33,
-/
+ /
 
-&clmparam
+ &clmparam
  dirclm = '/home/rcm14/dados/input',
  clmfrq =  12.,
  imask  =   1,
-/
+ /
 
-&cplparam
+ &cplparam
  cpldt        = 10800.,
  zomax        = 0.005,
  ustarmax     = 2.0,
  cpldbglevel  = 1,
-/
+ /
 
-&perturbparam
+ &perturbparam
  lperturb_topo = .false.,
  perturb_frac_topo = 0.001,
  lperturb_ts = .false.,
@@ -478,9 +477,9 @@ ibdyfrq = 6,
  perturb_frac_u  = 0.001,
  lperturb_v  = .false.,
  perturb_frac_v  = 0.001,
-/
+ /
 
-&tweakparam
+ &tweakparam
  itweak_sst = 0,
  itweak_temperature = 0,
  itweak_solar_irradiance = 0,
@@ -491,30 +490,30 @@ ibdyfrq = 6,
  gas_tweak_factors = 1.0, 1.0 , 1.0 , 1.0 , 1.0,
  /
 
-&clm_inparm
+ &clm_inparm
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
-/
+ /
 
-&clm_soilhydrology_inparm
+ &clm_soilhydrology_inparm
  h2osfcflag = 1,
  origflag = 0,
-/
+ /
 
-&clm_hydrology1_inparm
+ &clm_hydrology1_inparm
  oldfflag = 0,
-/
+ /
 
-&clm_regcm
+ &clm_regcm
  enable_megan_emission = .false.,
  enable_urban_landunit = .true.,
  enable_more_crop_pft = .false.,
  /
 
-&debugparam
+ &debugparam
  debug_level = 0,
  dbgfrq = 3,
-/
+ /
 
-!####################################################################
+!-----------------------------------------------------------------------

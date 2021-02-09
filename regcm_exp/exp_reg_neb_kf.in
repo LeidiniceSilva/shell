@@ -18,12 +18,12 @@
 !---------------------------------------------------------------------------------
 
 
-&coreparam
+ &coreparam
  idynamic = 2,  ! 1 = MM4 hydrostatical core
                 ! 2 = MM5 NON hydrostatical core
  /
 
-&dimparam 
+ &dimparam 
  iy     = 220,
  jx     = 270,
  kz     = 23,
@@ -37,7 +37,7 @@
 !
 ! Domain geolocation
 !
-&geoparam
+ &geoparam
  iproj = 'NORMER',
  ds = 12.0,
  ptop = 5.0,
@@ -51,7 +51,7 @@
  i_crm = 0,
  /
 
-&terrainparam
+ &terrainparam
  domname = 'neb',
  lresamp = .false.,
  smthbdy = .false.,
@@ -77,7 +77,7 @@
 ! ICBC Global data input control
 !   GLOBAL DATA AVAILABLE FROM ICTP FROM:
 !            http://clima-dods.ictp.it/Data/RegCM_Data
-&globdatparam
+ &globdatparam
  ibdyfrq = 6,
  ssttyp = 'EIN15',
  dattyp = 'EIN15',
@@ -90,12 +90,12 @@
  ensemble_run = .false.,
  /
 
-&fnestparam
+ &fnestparam
  coarse_outdir = 'globdata/RegCM',
  coarse_domname = 'EUROPE',
  /
 
-&restartparam
+ &restartparam
  ifrest  = .FALSE.,
  mdate0  = 2017040100,
  mdate1  = 2017040100,
@@ -109,7 +109,7 @@
  dt      =    45.,
  /
 
-&outparam
+ &outparam
  ifsave  = .false. ,
  savfrq  =     0.,
  ifatm   = .true. ,
@@ -142,7 +142,7 @@
  do_parallel_netcdf_out = .false.,
  /
  
-&physicsparam
+ &physicsparam
  iboudy  =          5,  ! Lateral Boundary conditions scheme
                         ! 5 => Relaxation, exponential technique.
  isladvec =         0,  ! Semilagrangian advection scheme for tracers and
@@ -200,7 +200,7 @@
  fixedsolarval =  343., !
  /
 
-&dynparam
+ &dynparam
  gnu1 = 0.1,
  gnu2 = 0.1,
  ckh = 1.0,
@@ -216,12 +216,12 @@
  t_rel_extrema = 0.5,
  /
 
-&referenceatm
+ &referenceatm
  base_state_pressure = 101325.0,
  logp_lrate = 47.70,
  /
 
-&nonhydroparam
+ &nonhydroparam
  ifupr = 1,
  nhbet = 0.4,
  nhxkd = 0.1,
@@ -236,7 +236,7 @@
  lstand = .true.,
  /
 
-&boundaryparam
+ &boundaryparam
  nspgx  = 12,
  nspgd  = 12,
  high_nudge =    3.0,
@@ -246,7 +246,7 @@
  bdy_dm = -1.0,
  /
  
-&cldparam
+ &cldparam
  ncld      = 1,
  rhmax     = 1.01,
  rhmin     = 0.01,
@@ -266,7 +266,7 @@
  abulk     = 0.9,
  /
  
-&subexparam
+ &subexparam
  qck1land  = 0.0005,
  qck1oce   = 0.0005,
  gulland   = 0.65,
@@ -278,7 +278,7 @@
  conf      = 1.00,
  /
 
-&microparam
+ &microparam
  stats = .false.,
  budget_compute = .false.,
  nssopt = 1,
@@ -295,7 +295,7 @@
  rpecons = 5.547e-5,
  /
 
-&grellparam
+ &grellparam
  igcc  = 2,
  gcr0 = 0.0020,
  edtmin      = 0.20,
@@ -322,7 +322,7 @@
  dtauc = 30.0,
  /
 
-&emanparam
+ &emanparam
  minsig = 0.95,
  elcrit_ocn = 0.0011,
  elcrit_lnd = 0.0011,
@@ -343,7 +343,7 @@
  epmax_lnd = 0.999,
  /
 
-&tiedtkeparam
+ &tiedtkeparam
  iconv = 4,
  entrmax = 1.75e-3,
  entrdd  = 3.0e-4,
@@ -387,7 +387,7 @@
  kf_max_dtcape = 3600.0,
  /
 
-&holtslagparam
+ &holtslagparam
  ricr_ocn = 0.25,
  ricr_lnd = 0.25,
  zhnew_fac = 0.25,
@@ -396,7 +396,7 @@
  holtth10iter = 1,
  /
 
-&uwparam
+ &uwparam
  iuwvadv = 0,
  atwo = 15.0,
  rstbl = 1.5,
@@ -411,7 +411,7 @@
  mixed_layer_depth     = 50.0,
  /
 
-&rrtmparam
+ &rrtmparam
  inflgsw  = 2,
  iceflgsw = 3,
  liqflgsw = 1,
@@ -424,7 +424,7 @@
  nradfo = 4,
  /
 
-&chemparam
+ &chemparam
  chemsimtype = 'SSLT',
  ichsolver = 0,
  ichsursrc = 0,
@@ -445,20 +445,20 @@
  rocemfac = 1.33,
  /
 
-&clmparam
+ &clmparam
  dirclm = '/vol1/nice/exp_neb_era5/input',
  clmfrq =  12.,
  imask  =  1,
  /
 
-&cplparam
+ &cplparam
  cpldt        = 10800.,
  zomax        = 0.005,
  ustarmax     = 2.0,
  cpldbglevel  = 1,
  /
 
-&perturbparam
+ &perturbparam
  lperturb_topo = .false.,
  perturb_frac_topo = 0.001,
  lperturb_ts = .false.,
@@ -475,7 +475,7 @@
  perturb_frac_v  = 0.001,
  /
 
-&tweakparam
+ &tweakparam
  itweak_sst = 0,
  itweak_temperature = 0,
  itweak_solar_irradiance = 0,
@@ -486,30 +486,32 @@
  gas_tweak_factors = 1.0, 1.0 , 1.0 , 1.0 , 1.0,
  /
 
-&clm_inparm
+ &clm_inparm
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
  /
 
-&clm_soilhydrology_inparm
+ &clm_soilhydrology_inparm
  h2osfcflag = 1,
  origflag = 0,
  /
 
-&clm_hydrology1_inparm
+ &clm_hydrology1_inparm
  oldfflag = 0,
  /
 
-&clm_regcm
+ &clm_regcm
  enable_megan_emission = .false.,
  enable_urban_landunit = .true.,
  enable_more_crop_pft = .false.,
  /
 
-&debugparam
+ &debugparam
  debug_level = 0,
  dbgfrq = 3,
  /
 
 !---------------------------------------------------------------------------------
+
+

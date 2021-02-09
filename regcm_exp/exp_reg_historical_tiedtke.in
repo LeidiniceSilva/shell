@@ -1,0 +1,240 @@
+!---------------------------------------------------------------------------------
+!
+! This README details namelist parameters for RegCM Version 4.7
+!
+!---------------------------------------------------------------------------------
+!
+! Author: Leidinice Silva (leidinicesilva@gmail.com)
+! Data: December 30, 2020
+!
+! In 17out2015: Inclusion of parameterization of variables &dimparam e &geoparam;
+! In 29dez2016: Inclusion of the variable idyamic (hydros/non-hydros);
+! In 10jan2017: Start of global data testing using CFS;
+! In 03out2018: Version 4.7 included new parameters. 
+!
+! RegCM4.7 downscaling for reference period
+! Domain simulation: Amazon basin and Northeast from Brazil 
+!
+!---------------------------------------------------------------------------------
+
+ &dimparam
+ iy     = 160,
+ jx     = 320,
+ kz     = 18,
+ nsg    = 1,
+ /
+ 
+!
+! Choice of dynamical core
+!
+ &coreparam
+ idynamic = 1,  ! Choice of dynamical core
+                ! 1 = MM4 hydrostatical core
+                ! 2 = MM5 NON hydrostatical core
+ /
+
+!
+! Dynamical core parameters
+!
+! &dynparam
+! gnu = 0.0625,   
+! diffu_hgtf = 1, 
+! /
+
+!
+! Location parameters
+!
+ &geoparam
+ iproj = 'NORMER',
+ ds = 25.0,
+ ptop = 5.0,
+ clat = -6.00,
+ clon = -50.00,
+ plat = -6.00,
+ plon = -50.00,
+ truelatl = 30.0,
+ truelath = 60.0,
+ i_band = 0,
+ /
+
+! 
+! Boundary conditions
+!
+ &terrainparam
+ domname = 'reg_amz_neb_historical',
+ lakedpth = .false.,
+ fudge_lnd   = .false.,
+ fudge_lnd_s = .false.,
+ fudge_tex   = .false.,
+ fudge_tex_s = .false.,
+ dirter ='/vol1/nice/exp_rcm/historical/input',     
+ inpter ='/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling' ,    
+ /
+ 
+ &debugparam
+ debug_level = 0,
+ /
+
+ &boundaryparam
+ nspgx  = 40,
+ nspgd  = 40,
+ high_nudge =    8.0,
+ medium_nudge =  6.0,
+ low_nudge =     4.0,
+ bdy_nm = -1.0,
+ bdy_dm = -1.0,
+ /
+ 
+!
+! Global atmospheric and SST data information and the period of the simulations
+!
+ &globdatparam
+ ibdyfrq = 6,
+ ssttyp = 'HA_26',
+ dattyp = 'HA_26',
+ gdate1 = 2000060100,
+ gdate2 = 2005120100,
+ calendar = '360_day', 
+ dirglob = '/vol1/nice/exp_rcm/historical/input',
+ inpglob = '/vol3/disco1/nice/data_file/cmip_data/cmip5/hadgem2-es_downscaling',
+ /
+
+ &globwindow
+ lat0 = 0.0
+ lat1 = 0.0
+ lon0 = 0.0
+ lon1 = 0.0
+ /
+
+ &restartparam
+ ifrest  = .false. ,
+ mdate0  = 2000060100,
+ mdate1  = 2000060100,
+ mdate2  = 2005120100,
+ /
+ 
+! 
+! Model integration parameters dt is the time that the models dynamic core 
+! rotates The dtrad is the radiation code dtsrf is the surface model In 
+! addition one of the ways to fix CFL problems is here
+!
+ &timeparam
+ dt     =    50.,
+ dtrad  =    30.,
+ dtsrf  =   600.,
+ dtcum  =    50.,
+ dtabem =    30.,
+ /
+ 
+! 
+! Control of the simulations outputs
+! 
+ &outparam
+ ifsave  = .false. ,
+   savfrq  =    0.,
+ ifatm  = .true. ,
+   atmfrq  =     6.,
+ ifrad   = .true. ,
+   radfrq  =     6.,
+ ifsrf   = .true. ,
+ ifsub   = .true. ,
+   srffrq  =     6.,
+ ifchem  = .false.,
+   chemfrq =     6.,
+ ifsts   = .true.,
+ dirout = '/vol1/nice/exp_rcm/historical/output',
+ /
+ 
+!
+! Model physics parameters when you want other options you must go to the
+! original README.namelist file
+!
+ &physicsparam
+ iboudy  =          5,
+ ibltyp  =          1,
+ icup_lnd =         5,
+ icup_ocn =         4,
+ ipptls  =          1,
+ iocnflx =          2,
+ ipgf    =          0,
+ iemiss  =          0,
+ lakemod =          0,
+ ichem   =          0,
+ scenario =   'RCP26',
+ idcsst  =          0,
+ iseaice =          0,
+ idesseas =         0,
+ iconvlwp =         1, 
+ icldfrac =         0,
+ icldmstrat =       1, 
+ icumcloud =        1, 
+ irrtm    =         0, 
+ iclimao3 =         0, 
+ iclimaaer =        0, 
+ isolconst =        1, 
+ /
+ 
+! &subexparam
+! qck1land =   .250E-03,
+! qck1oce  =   .250E-03,
+! cevaplnd =   .100E-02,
+! caccrlnd =      3.000,
+! cftotmax =      0.75,
+! /
+ 
+ &grellparam
+ /
+
+ &emanparam
+ elcrit_ocn  = 0.0011D0,
+ elcrit_lnd  = 0.0011D0,
+ coeffr      = 1.0D0,
+ /
+
+ &tiedtkeparam
+ iconv = 4,
+ entrmax = 3.0e-3,
+ entrdd  = 3.0e-4,
+ entrpen_lnd = 3.0e-3,
+ entrpen_ocn = 3.0e-3,
+ entrscv = 3.0e-4,
+ entrmid = 1.0e-4,
+ cprcon = 1.0e-4,
+ detrpen_lnd = 0.75e-4,
+ detrpen_ocn = 0.75e-4,
+ rcuc_lnd = 0.05,
+ rcuc_ocn = 0.05,
+ rcpec_lnd = 5.55e-5,
+ rcpec_ocn = 5.55e-5,
+ rhebc_lnd = 0.5,
+ rhebc_ocn = 0.6,
+ rprc_lnd = 0.03,
+ rprc_ocn = 0.03,
+ entshalp = 2.0,
+ cmtcape = 3600.0,
+ lmfpen    = .true.,
+ lmfmid    = .true.,
+ lmfdd     = .true.,
+ lepcld    = .true.,
+ lmfdudv   = .true.,
+ lmfscv    = .true.,
+ lmfuvdis  = .true.,
+ lmftrac   = .true.,
+ lmfsmooth = .false.,
+ lmfwstar  = .false.,
+ /
+ 
+ &holtslagparam
+ /
+
+ &clm_inparm
+ fpftcon = 'pft-physiology.c130503.nc',
+ fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
+ fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
+ /
+
+ &clm_soilhydrology_inparm
+ /
+
+ &clm_hydrology1_inparm
+ /
