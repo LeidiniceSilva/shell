@@ -10,8 +10,8 @@ echo "--------------- INIT CALCULATE INDEX REGCM AND HADGEM OUTPUT -------------
 
 DATA="1986-2005"
 EXP="historical"
-MODEL="HadGEM2-ES"
-MODEL_DIR="gcm"
+MODEL="RegCM47_had"
+MODEL_DIR="rcm"
 DIR="/home/nice/Documents/dataset/${MODEL_DIR}/eca"
 
 echo
@@ -20,19 +20,19 @@ echo ${DIR}
 
 echo 
 echo "1. Calculate txx"
-cdo -yearmax tasmax_amz_neb_${MODEL}_${EXP}_${DATA}_lonlat_seamask.nc eca_txx_amz_neb_${MODEL}_${EXP}_${DATA}_yr_${DATA}_lonlat.nc
+cdo -yearmax tasmax_amz_neb_${MODEL}_${EXP}_${DATA}_lonlat_seamask.nc eca_txx_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 
 echo 
 echo "2. Calculate txn"
-cdo -yearmin tasmax_amz_neb_${MODEL}_${EXP}_${DATA}_lonlat_seamask.nc eca_txn_amz_neb_${MODEL}_${EXP}_${DATA}_yr_${DATA}_lonlat.nc
+cdo -yearmin tasmax_amz_neb_${MODEL}_${EXP}_${DATA}_lonlat_seamask.nc eca_txn_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 
 echo 
 echo "3. Calculate tnx"
-cdo -yearmax tasmin_amz_neb_${MODEL}_${EXP}_${DATA}_lonlat_seamask.nc eca_tnx_amz_neb_${MODEL}_${EXP}_${DATA}_yr_${DATA}_lonlat.nc
+cdo -yearmax tasmin_amz_neb_${MODEL}_${EXP}_${DATA}_lonlat_seamask.nc eca_tnx_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 
 echo 
 echo "4. Calculate tnn"
-cdo -yearmin tasmin_amz_neb_${MODEL}_${EXP}_${DATA}_lonlat_seamask.nc eca_tnn_amz_neb_${MODEL}_${EXP}_${DATA}_yr_${DATA}_lonlat.nc
+cdo -yearmin tasmin_amz_neb_${MODEL}_${EXP}_${DATA}_lonlat_seamask.nc eca_tnn_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 
 echo 
 echo "5. Calculate dtr"
