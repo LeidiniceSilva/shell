@@ -84,7 +84,7 @@ cdo cat sdii_*.nc eca_sdii_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 cdo cat cdd_*.nc eca_cdd_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 cdo cat cwd_*.nc eca_cwd_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 cdo cat r10mm_*.nc eca_r10mm_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
-cdo cat r20mm_*.nc eca_r20mm_amz_neb_${MODEL}d_${EXP}_yr_${DATA}_lonlat.nc
+cdo cat r20mm_*.nc eca_r20mm_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 
 echo 
 echo "13. Delete files"
