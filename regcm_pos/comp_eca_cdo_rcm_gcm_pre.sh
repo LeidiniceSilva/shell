@@ -8,17 +8,17 @@
 echo
 echo "--------------- INIT CALCULATE INDEX REGCM AND HADGEM OUTPUT ----------------"
 
-DATA="2080-2099"
-EXP="rcp26"
-MODEL="HadGEM2-ES"
-MODEL_DIR="gcm"
+DATA="1986-2005"
+EXP="historical"
+MODEL="RegCM47_had"
+MODEL_DIR="rcm"
 DIR="/home/nice/Documents/dataset/${MODEL_DIR}/eca"
 
 echo
 cd ${DIR}
 echo ${DIR}
 
-for YEAR in `seq -w 2080 2099`; do
+for YEAR in `seq -w 1986 2005`; do
 
 	echo ${YEAR}
 	echo "1. Select year"

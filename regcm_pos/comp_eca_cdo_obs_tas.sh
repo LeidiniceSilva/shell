@@ -33,7 +33,7 @@ cdo -yearmin tmin_daily_UT_Brazil_v2.2_${DATA}.nc eca_tnn_amz_neb_xavier_obs_yr_
 
 echo 
 echo "5. Calculate dtr"
-cdo yearmean -sub tmax_${DATA}.nc tmin_${DATA}.nc dtr_${DATA}.nc
+cdo yearmean -sub tmax_daily_UT_Brazil_v2.2_${DATA}.nc tmin_daily_UT_Brazil_v2.2_${DATA}.nc eca_dtr_amz_neb_xavier_obs_yr_${DATA}.nc
 
 echo
 echo "6. Calculate 90th and 10th percentile - tmax"
