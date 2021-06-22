@@ -21,12 +21,10 @@ for YEAR in `seq -w 1986 2005`; do
 	echo "1. Select year"
 	cdo seldate,${YEAR}-01-01,${YEAR}-12-31 precip_cpc_obs_day_${DATA}.nc prec_${YEAR}.nc
 
-precip_cpc_obs_day_1986-2005.nc
-
 	echo 
 	echo "2. Calculate precttot"
 	cdo monsum prec_${YEAR}.nc prec_mon_${YEAR}.nc
-	cdo yearsum prec_mon_${YEAR}.nc prectot_${YEAR}.nc
+	cdo yearsum prec_mon_${YEAR}.nc pretot_${YEAR}.nc
 
 	echo 
 	echo "3. Calculate r95ptot"
@@ -74,7 +72,7 @@ done
 
 echo 
 echo "12. Concatenate data"
-cdo cat prectot_*.nc eca_prectot_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat pretot_*.nc eca_prcptot_amz_neb_cpc_obs_yr_${DATA}.nc
 cdo cat r95p_*.nc eca_r95p_amz_neb_cpc_obs_yr_${DATA}.nc
 cdo cat r99p_*.nc eca_r99p_amz_neb_cpc_obs_yr_${DATA}.nc
 cdo cat rx1day_*.nc eca_rx1day_amz_neb_cpc_obs_yr_${DATA}.nc
@@ -87,7 +85,7 @@ cdo cat r20mm_*.nc eca_r20mm_amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo 
 echo "13. Regular grid"
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_prectot_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_prcptot_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
 /home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_r95p_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
 /home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_r99p_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
 /home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_rx1day_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
@@ -100,7 +98,7 @@ echo "13. Regular grid"
 
 echo 
 echo "14. Delete files"
-rm prectot*
+rm pretot*
 rm prec_1*.nc
 rm prec_2*.nc
 rm r95p*

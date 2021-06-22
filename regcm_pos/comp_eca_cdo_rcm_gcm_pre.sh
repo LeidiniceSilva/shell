@@ -75,7 +75,7 @@ done
 
 echo 
 echo "12. Concatenate data"
-cdo cat prectot_*.nc eca_prectot_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
+cdo cat prectot_*.nc eca_prcptot_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 cdo cat r95p_*.nc eca_r95p_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 cdo cat r99p_*.nc eca_r99p_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 cdo cat rx1day_*.nc eca_rx1day_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
