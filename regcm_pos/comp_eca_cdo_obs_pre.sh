@@ -19,7 +19,9 @@ for YEAR in `seq -w 1986 2005`; do
 
 	echo ${YEAR}
 	echo "1. Select year"
-	cdo seldate,${YEAR}-01-01,${YEAR}-12-31 prec_daily_UT_Brazil_v2.2_${DATA}.nc prec_${YEAR}.nc
+	cdo seldate,${YEAR}-01-01,${YEAR}-12-31 precip_cpc_obs_day_${DATA}.nc prec_${YEAR}.nc
+
+precip_cpc_obs_day_1986-2005.nc
 
 	echo 
 	echo "2. Calculate precttot"
@@ -72,29 +74,29 @@ done
 
 echo 
 echo "12. Concatenate data"
-cdo cat prectot_*.nc eca_prectot_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat r95p_*.nc eca_r95p_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat r99p_*.nc eca_r99p_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat rx1day_*.nc eca_rx1day_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat rx5day_*.nc eca_rx5day_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat sdii_*.nc eca_sdii_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat cdd_*.nc eca_cdd_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat cwd_*.nc eca_cwd_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat r10mm_*.nc eca_r10mm_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat r20mm_*.nc eca_r20mm_amz_neb_xavier_obs_yr_${DATA}.nc
+cdo cat prectot_*.nc eca_prectot_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat r95p_*.nc eca_r95p_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat r99p_*.nc eca_r99p_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat rx1day_*.nc eca_rx1day_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat rx5day_*.nc eca_rx5day_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat sdii_*.nc eca_sdii_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat cdd_*.nc eca_cdd_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat cwd_*.nc eca_cwd_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat r10mm_*.nc eca_r10mm_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat r20mm_*.nc eca_r20mm_amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo 
 echo "13. Regular grid"
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_prectot_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_r95p_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_r99p_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_rx1day_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_rx5day_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_sdii_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_cdd_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_cwd_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_r10mm_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_r20mm_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_prectot_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_r95p_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_r99p_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_rx1day_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_rx5day_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_sdii_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_cdd_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_cwd_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_r10mm_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_r20mm_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
 
 echo 
 echo "14. Delete files"
@@ -114,7 +116,7 @@ rm timsum*
 rm q9*
 rm total*
 rm *mon*
-rm *amz_neb_xavier_obs_yr_${DATA}.nc
+rm *amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo
 echo "--------------- END CALCULATE INDEX XAVIER BATASET ----------------"

@@ -17,37 +17,37 @@ echo ${DIR}
 
 echo 
 echo "1. Calculate txx"
-cdo -yearmax tmax_daily_UT_Brazil_v2.2_${DATA}.nc eca_txx_amz_neb_xavier_obs_yr_${DATA}.nc
+cdo -yearmax tmax_cpc_obs_day_${DATA}.nc eca_txx_amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo 
 echo "2. Calculate txn"
-cdo -yearmin tmax_daily_UT_Brazil_v2.2_${DATA}.nc eca_txn_amz_neb_xavier_obs_yr_${DATA}.nc
+cdo -yearmin tmax_cpc_obs_day_${DATA}.nc eca_txn_amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo 
 echo "3. Calculate tnx"
-cdo -yearmax tmin_daily_UT_Brazil_v2.2_${DATA}.nc eca_tnx_amz_neb_xavier_obs_yr_${DATA}.nc
+cdo -yearmax tmin_cpc_obs_day_${DATA}.nc eca_tnx_amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo 
 echo "4. Calculate tnn"
-cdo -yearmin tmin_daily_UT_Brazil_v2.2_${DATA}.nc eca_tnn_amz_neb_xavier_obs_yr_${DATA}.nc
+cdo -yearmin tmin_cpc_obs_day_${DATA}.nc eca_tnn_amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo 
 echo "5. Calculate dtr"
-cdo yearmean -sub tmax_daily_UT_Brazil_v2.2_${DATA}.nc tmin_daily_UT_Brazil_v2.2_${DATA}.nc eca_dtr_amz_neb_xavier_obs_yr_${DATA}.nc
+cdo yearmean -sub tmax_cpc_obs_day_${DATA}.nc tmin_cpc_obs_day_${DATA}.nc eca_dtr_amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo
 echo "6. Calculate 90th and 10th percentile - tmax"
-cdo timmin tmax_daily_UT_Brazil_v2.2_${DATA}.nc tmax_minfile.nc
-cdo timmax tmax_daily_UT_Brazil_v2.2_${DATA}.nc tmax_maxfile.nc
-cdo timpctl,90 tmax_daily_UT_Brazil_v2.2_${DATA}.nc tmax_minfile.nc tmax_maxfile.nc tmax_90th_percentile_${DATA}.nc 
-cdo timpctl,10 tmax_daily_UT_Brazil_v2.2_${DATA}.nc tmax_minfile.nc tmax_maxfile.nc tmax_10th_percentile_${DATA}.nc 
+cdo timmin tmax_cpc_obs_day_${DATA}.nc tmax_minfile.nc
+cdo timmax tmax_cpc_obs_day_${DATA}.nc tmax_maxfile.nc
+cdo timpctl,90 tmax_cpc_obs_day_${DATA}.nc tmax_minfile.nc tmax_maxfile.nc tmax_90th_percentile_${DATA}.nc 
+cdo timpctl,10 tmax_cpc_obs_day_${DATA}.nc tmax_minfile.nc tmax_maxfile.nc tmax_10th_percentile_${DATA}.nc 
 
 echo
 echo "7. Calculate 90th and 10th percentile - tmin"
-cdo timmin tmin_daily_UT_Brazil_v2.2_${DATA}.nc tmin_minfile.nc
-cdo timmax tmin_daily_UT_Brazil_v2.2_${DATA}.nc tmin_maxfile.nc
-cdo timpctl,90 tmin_daily_UT_Brazil_v2.2_${DATA}.nc tmin_minfile.nc tmin_maxfile.nc tmin_90th_percentile_${DATA}.nc 
-cdo timpctl,10 tmin_daily_UT_Brazil_v2.2_${DATA}.nc tmin_minfile.nc tmin_maxfile.nc tmin_10th_percentile_${DATA}.nc 
+cdo timmin tmin_cpc_obs_day_${DATA}.nc tmin_minfile.nc
+cdo timmax tmin_cpc_obs_day_${DATA}.nc tmin_maxfile.nc
+cdo timpctl,90 tmin_cpc_obs_day_${DATA}.nc tmin_minfile.nc tmin_maxfile.nc tmin_90th_percentile_${DATA}.nc 
+cdo timpctl,10 tmin_cpc_obs_day_${DATA}.nc tmin_minfile.nc tmin_maxfile.nc tmin_10th_percentile_${DATA}.nc 
 
 for YEAR in `seq -w 1986 2005`; do
 
@@ -56,8 +56,8 @@ for YEAR in `seq -w 1986 2005`; do
 	echo 
 
 	echo "8. Select year"
-	cdo seldate,${YEAR}-01-01,${YEAR}-12-31 tmax_daily_UT_Brazil_v2.2_${DATA}.nc tmax_${YEAR}.nc
-	cdo seldate,${YEAR}-01-01,${YEAR}-12-31 tmin_daily_UT_Brazil_v2.2_${DATA}.nc tmin_${YEAR}.nc
+	cdo seldate,${YEAR}-01-01,${YEAR}-12-31 tmax_cpc_obs_day_${DATA}.nc tmax_${YEAR}.nc
+	cdo seldate,${YEAR}-01-01,${YEAR}-12-31 tmin_cpc_obs_day_${DATA}.nc tmin_${YEAR}.nc
 
 	cdo addc,273.15 tmax_${YEAR}.nc tmax_K_${YEAR}.nc
 	cdo addc,273.15 tmin_${YEAR}.nc tmin_K_${YEAR}.nc
@@ -96,26 +96,26 @@ done
 
 echo 
 echo "11. Concatenate data"
-cdo cat su_*.nc eca_su_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat tr_*.nc eca_tr_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat tx90p_*.nc eca_tx90p_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat tx10p_*.nc eca_tx10p_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat tn90p_*.nc eca_tn90p_amz_neb_xavier_obs_yr_${DATA}.nc
-cdo cat tn10p_*.nc eca_tn10p_amz_neb_xavier_obs_yr_${DATA}.nc
+cdo cat su_*.nc eca_su_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat tr_*.nc eca_tr_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat tx90p_*.nc eca_tx90p_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat tx10p_*.nc eca_tx10p_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat tn90p_*.nc eca_tn90p_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat tn10p_*.nc eca_tn10p_amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo 
 echo "13. Regular grid"
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_txx_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_txn_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tnx_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tnn_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_dtr_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_su_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tr_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tx90p_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tx10p_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tn90p_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
-/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tn10p_amz_neb_xavier_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_txx_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_txn_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tnx_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tnn_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_dtr_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_su_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tr_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tx90p_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tx10p_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tn90p_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
+/home/nice/Documents/github_projects/shell/regcm_pos/./regrid eca_tn10p_amz_neb_cpc_obs_yr_${DATA}.nc -20,10,0.25 -85,-15,0.25 bil
 
 echo 
 echo "14. Delete files"
@@ -137,7 +137,7 @@ rm tn10p_1*
 rm tn10p_2*
 rm *minfile*
 rm *maxfile*
-rm *amz_neb_xavier_obs_yr_${DATA}.nc
+rm *amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo
 echo "--------------- THE END CALCULATE INDEX XAVIER DATASET ----------------"
