@@ -8,17 +8,17 @@
 echo
 echo "--------------- INIT CALCULATE INDEX REGCM AND HADGEM OUTPUT ----------------"
 
-DATA="1986-2005"
-EXP="historical"
-MODEL="RegCM47_had"
-MODEL_DIR="rcm"
+DATA="2080-2099"
+EXP="rcp85"
+MODEL="HadGEM2-ES"
+MODEL_DIR="gcm"
 DIR="/home/nice/Documents/dataset/${MODEL_DIR}/eca"
 
 echo
 cd ${DIR}
 echo ${DIR}
 
-for YEAR in `seq -w 1986 2005`; do
+for YEAR in `seq -w 2080 2099`; do
 
 	echo ${YEAR}
 	echo "1. Select year"
@@ -27,7 +27,7 @@ for YEAR in `seq -w 1986 2005`; do
 	echo 
 	echo "2. Calculate precttot"
 	cdo monsum pr_${YEAR}.nc pr_mon_${YEAR}.nc
-	cdo yearsum pr_mon_${YEAR}.nc prectot_${YEAR}.nc
+	cdo yearsum pr_mon_${YEAR}.nc prcptot_${YEAR}.nc
 
 	echo 
 	echo "3. Calculate r95ptot"
@@ -75,7 +75,7 @@ done
 
 echo 
 echo "12. Concatenate data"
-cdo cat prectot_*.nc eca_prcptot_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
+cdo cat prcptot_*.nc eca_prcptot_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 cdo cat r95p_*.nc eca_r95p_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 cdo cat r99p_*.nc eca_r99p_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 cdo cat rx1day_*.nc eca_rx1day_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
@@ -88,7 +88,7 @@ cdo cat r20mm_*.nc eca_r20mm_amz_neb_${MODEL}_${EXP}_yr_${DATA}_lonlat.nc
 
 echo 
 echo "13. Delete files"
-rm prectot*
+rm prcptot*
 rm pr_1*.nc
 rm pr_2*.nc
 rm r95p*
