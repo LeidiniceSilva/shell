@@ -2,8 +2,8 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '01/26/19'
-#__description__ = 'Creating new areas from CMIP5 models and obs database with CDO'
+#__date__        = '01/26/2019'
+#__description__ = 'Creating new areas of CMIP5 models and obs database with CDO'
  
 
 echo

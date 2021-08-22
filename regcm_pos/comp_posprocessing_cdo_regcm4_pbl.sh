@@ -2,7 +2,7 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '05/26/18'
+#__date__        = '05/26/2018'
 #__description__ = 'Posprocessing the RegCM4.6.0 model data with CDO'
  
 

@@ -2,11 +2,11 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '01/18/2021'
+#__date__        = '01/01/2021'
 #__description__ = 'Calculate extreme index with ECA_CDO'
 
 echo
-echo "--------------- INIT CALCULATE INDEX XAVIER BATASET ----------------"
+echo "--------------- INIT CALCULATE EXTREME INDICES ETCCDI ----------------"
 
 DATA="1986-2005"
 DIR="/home/nice/Documents/dataset/obs/eca"
@@ -117,6 +117,6 @@ rm *mon*
 rm *amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo
-echo "--------------- END CALCULATE INDEX XAVIER BATASET ----------------"
+echo "--------------- THE END CALCULATE EXTREME INDICES ETCCDI ----------------"
 
 

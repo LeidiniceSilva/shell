@@ -2,8 +2,8 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '06/22/21'
-#__description__ = 'Creating new areas for etccdi indices'
+#__date__        = '06/22/2021'
+#__description__ = 'Creating new areas of ETCCDI indices with CDO'
  
 
 echo

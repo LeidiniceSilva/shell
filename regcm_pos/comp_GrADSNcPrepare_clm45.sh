@@ -2,7 +2,7 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '05/10/18'
+#__date__        = '05/10/2018'
 #__description__ = 'Creating .ctl with GrADSNcPrepareCLM45'
 
 

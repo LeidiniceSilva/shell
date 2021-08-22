@@ -2,7 +2,7 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '01/18/2021'
+#__date__        = '01/01/2021'
 #__description__ = 'Calculate extreme index with ECA_CDO'
 
 echo

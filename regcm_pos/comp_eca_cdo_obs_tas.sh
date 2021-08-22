@@ -6,7 +6,7 @@
 #__description__ = 'Calculate extreme index with ECA_CDO'
 
 echo
-echo "--------------- INIT CALCULATE INDEX XAVIER DATASET ----------------"
+echo "--------------- INIT CALCULATE EXTREME INDICES ETCCDI ----------------"
 
 DATA="1986-2005"
 DIR="/home/nice/Documents/dataset/obs/eca"
@@ -140,6 +140,6 @@ rm *maxfile*
 rm *amz_neb_cpc_obs_yr_${DATA}.nc
 
 echo
-echo "--------------- THE END CALCULATE INDEX XAVIER DATASET ----------------"
+echo "--------------- THE END CALCULATE EXTREME INDICES ETCCDI ----------------"
 
 
