@@ -32,9 +32,11 @@ for var in ${var_list[@]}; do
 
 	echo
 	echo "1. Select new area: amz (-68,-52,-12,-3), neb (-40,-35,-16,-3) and matopiba (-50.5,-42.5,-15,-2.5)"
-	#cdo sellonlatbox,-68,-52,-12,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_samz_Amon_${model}_${exp}_197512-200511.nc
-	#cdo sellonlatbox,-40,-35,-16,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_eneb_Amon_${model}_${exp}_197512-200511.nc
+	
+	cdo sellonlatbox,-68,-52,-12,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_samz_Amon_${model}_${exp}_197512-200511.nc
+	cdo sellonlatbox,-40,-35,-16,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_eneb_Amon_${model}_${exp}_197512-200511.nc
 	cdo sellonlatbox,-50.5,-42.5,-15,-2.5 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_matopiba_Amon_${model}_${exp}_197512-200511.nc
+    
     done
 done
 
