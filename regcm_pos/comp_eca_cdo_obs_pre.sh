@@ -22,9 +22,9 @@ for YEAR in `seq -w 1986 2005`; do
 	cdo seldate,${YEAR}-01-01,${YEAR}-12-31 precip_cpc_obs_day_${DATA}.nc prec_${YEAR}.nc
 
 	echo 
-	echo "2. Calculate precttot"
+	echo "2. Calculate prcptot"
 	cdo monsum prec_${YEAR}.nc prec_mon_${YEAR}.nc
-	cdo yearsum prec_mon_${YEAR}.nc pretot_${YEAR}.nc
+	cdo yearsum prec_mon_${YEAR}.nc prcptot_${YEAR}.nc
 
 	echo 
 	echo "3. Calculate r95ptot"
@@ -72,7 +72,7 @@ done
 
 echo 
 echo "12. Concatenate data"
-cdo cat pretot_*.nc eca_prcptot_amz_neb_cpc_obs_yr_${DATA}.nc
+cdo cat prcptot_*.nc eca_prcptot_amz_neb_cpc_obs_yr_${DATA}.nc
 cdo cat r95p_*.nc eca_r95p_amz_neb_cpc_obs_yr_${DATA}.nc
 cdo cat r99p_*.nc eca_r99p_amz_neb_cpc_obs_yr_${DATA}.nc
 cdo cat rx1day_*.nc eca_rx1day_amz_neb_cpc_obs_yr_${DATA}.nc
@@ -98,7 +98,7 @@ echo "13. Regular grid"
 
 echo 
 echo "14. Delete files"
-rm pretot*
+rm prcptot*
 rm prec_1*.nc
 rm prec_2*.nc
 rm r95p*
