@@ -9,7 +9,7 @@ echo
 echo "--------------- INIT POSPROCESSING ETCCDI INDICES ----------------"
 
 OBS="cpc_obs_yr"
-SIM="HadGEM2-ES_historical_yr"
+SIM="RegCM47_had_historical_yr"
 DATE="1986-2005_lonlat"
 AREA="matopiba"
 
@@ -19,7 +19,7 @@ VAR_LIST=('eca_prcptot' 'eca_r95p' 'eca_r99p' 'eca_rx1day' 'eca_rx5day' 'eca_sdi
 for VAR in ${VAR_LIST[@]}; do
 
     DIR_OBS="/home/nice/Documents/dataset/obs/eca/"
-    DIR_SIM="/home/nice/Documents/dataset/gcm/eca/"
+    DIR_SIM="/home/nice/Documents/dataset/rcm/eca/"
 
     cdo fldcor ${DIR_OBS}${VAR}_${AREA}_${OBS}_${DATE}.nc ${DIR_SIM}${VAR}_${AREA}_${SIM}_${DATE}.nc fdlcor_${VAR}_${AREA}_${SIM}.nc
     cdo timmean fdlcor_${VAR}_${AREA}_${SIM}.nc ${VAR}_${AREA}_${SIM}_fdlcor.nc
