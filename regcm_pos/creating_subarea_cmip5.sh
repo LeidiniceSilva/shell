@@ -18,25 +18,25 @@ model_list=( 'BCC-CSM1.1' 'BCC-CSM1.1M' 'BNU-ESM' 'CanESM2' 'CNRM-CM5' 'CSIRO-AC
 for var in ${var_list[@]}; do
     for model in ${model_list[@]}; do
 
-	path="/home/nice/Documents/ufrn/phd_project/datas/cmip5/hist"
-	cd ${path}
-	
-	echo
-	echo ${path}
+		path="/home/nice/Documents/ufrn/phd_project/datas/cmip5/hist"
+		cd ${path}
+		
+		echo
+		echo ${path}
 
-	# Experiment name
-	exp=( 'historical_r1i1p1' ) 
+		# Experiment name
+		exp=( 'historical_r1i1p1' ) 
 
-	echo
-	echo "Posprocessing file:" ${var}"_amz_neb_Amon_"${model}"_"${exp}"_197512-200511.nc"
+		echo
+		echo "Posprocessing file:" ${var}"_amz_neb_Amon_"${model}"_"${exp}"_197512-200511.nc"
 
-	echo
-	echo "1. Select new area: amz (-68,-52,-12,-3), neb (-40,-35,-16,-3) and matopiba (-50.5,-42.5,-15,-2.5)"
-	
-	cdo sellonlatbox,-68,-52,-12,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_samz_Amon_${model}_${exp}_197512-200511.nc
-	cdo sellonlatbox,-40,-35,-16,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_eneb_Amon_${model}_${exp}_197512-200511.nc
-	cdo sellonlatbox,-50.5,-42.5,-15,-2.5 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_matopiba_Amon_${model}_${exp}_197512-200511.nc
-    
+		echo
+		echo "1. Select new area: amz (-68,-52,-12,-3), neb (-40,-35,-16,-3) and matopiba (-50.5,-42.5,-15,-2.5)"
+		
+		cdo sellonlatbox,-68,-52,-12,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_samz_Amon_${model}_${exp}_197512-200511.nc
+		cdo sellonlatbox,-40,-35,-16,-3 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_eneb_Amon_${model}_${exp}_197512-200511.nc
+		cdo sellonlatbox,-50.5,-42.5,-15,-2.5 ${var}_amz_neb_Amon_${model}_${exp}_197512-200511.nc ${var}_matopiba_Amon_${model}_${exp}_197512-200511.nc
+		
     done
 done
 
