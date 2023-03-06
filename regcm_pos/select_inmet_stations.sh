@@ -2,7 +2,7 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '09/19/2022'
+#__date__        = '02/09/2023'
 #__description__ = 'Select only this stations'
 
 echo
@@ -14,7 +14,7 @@ code_list=('A899' 'A836' 'A802' 'A811' 'A827' 'A878' 'A881' 'A804' 'A838' 'A812'
 for code in ${code_list[@]}; do
 
     echo "Starting to move:" ${code}
-    mv /home/nice/Downloads/inmet/dados_${code}_H_* /home/nice/Downloads/inmet_new
+    mv /home/nice/Downloads/inmet/dados_${code}_H_* /home/nice/Documentos/FPS_SESA/database/inmet/inmet_used_sesa
     
 done
 

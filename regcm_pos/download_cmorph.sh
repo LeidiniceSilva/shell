@@ -2,7 +2,7 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '12/12/2022'
+#__date__        = '02/09/2023'
 #__description__ = 'Download CMORPH satelite data'
 
 PATH="/home/nice/Documentos/FPS_SESA/database/cmorph"

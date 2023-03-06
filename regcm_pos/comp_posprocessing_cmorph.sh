@@ -2,9 +2,8 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '12/12/2022'
+#__date__        = '02/09/2023'
 #__description__ = 'Posprocessing CMORPH satelite data'
-
 
 for YEAR in 2018 2019 2020 2021; do
     for MON in 01 02 03 04 05 06 07 08 09 10 11 12; do

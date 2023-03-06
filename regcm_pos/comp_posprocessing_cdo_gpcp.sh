@@ -3,7 +3,10 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = '01/24/2023'
-#__description__ = 'Posprocessing dataset'
+#__description__ = 'Preprocessing the observation data with CDO'
+
+echo
+echo "--------------- INIT PREPROCESSING OBS ----------------"
 
 var="tcc"
 
@@ -68,3 +71,7 @@ cdo -yearavg ${var}_samz_regcm_${exp}_mon_2001-2005.nc ${var}_samz_regcm_${exp}_
 cdo -r -timselavg,3 -selmon,1,2,12 ${var}_neb_regcm_${exp}_mon_2001-2005.nc ${var}_neb_regcm_${exp}_djf_2001-2005.nc
 cdo -r -timselavg,3 -selmon,6,7,8  ${var}_neb_regcm_${exp}_mon_2001-2005.nc ${var}_neb_regcm_${exp}_jja_2001-2005.nc
 cdo -yearavg ${var}_neb_regcm_${exp}_mon_2001-2005.nc ${var}_neb_regcm_${exp}_ann_2001-2005.nc
+
+echo
+echo "--------------- END PREPROCESSING OBS ----------------"
+
