@@ -5,7 +5,6 @@
 #__date__        = '04/26/2018'
 #__description__ = 'Download EIN15 contour data'
 
-
 for YEAR in `seq 1979 2017`; do
     for VAR in air hgt qas rhum uwnd vwnd; do
     	for HOUR in 00 06 12 18; do

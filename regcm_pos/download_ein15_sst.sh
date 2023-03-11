@@ -5,7 +5,6 @@
 #__date__        = '04/26/2018'
 #__description__ = 'Download EIN15 sea surface temperature data'
 
-
 for YEAR in `seq 1979 2017`; do
 	    
     echo ${YEAR} 

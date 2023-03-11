@@ -5,7 +5,6 @@
 #__date__        = '11/19/2018'
 #__description__ = 'Download CMIP5 monthly historical data'
 
-
 echo
 echo "--------------- INIT DOWNLOAD CMIP5 MODELS ----------------"
 

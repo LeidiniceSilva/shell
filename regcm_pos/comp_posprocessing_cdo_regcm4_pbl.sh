@@ -17,7 +17,6 @@ echo
 cd ${DIR}
 echo ${DIR}
 
-
 echo 
 echo "1. Select variable (PR and T2M)"
 
