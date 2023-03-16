@@ -3,7 +3,7 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = '12/28/2020'
-#__description__ = 'Preprocessing the observation data with CDO'
+#__description__ = 'Posprocessing the observation data with CDO'
  
 
 echo

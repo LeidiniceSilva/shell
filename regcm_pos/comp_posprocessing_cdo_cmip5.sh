@@ -3,11 +3,11 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = '01/26/2019'
-#__description__ = 'Posprocessing from CMIP5 models and obs database with CDO'
+#__description__ = 'Posprocessing from CMIP5 models database with CDO'
  
 
 echo
-echo "--------------- INIT POSPROCESSING CMIP5 MODELS ----------------"
+echo "--------------- INIT POSPROCESSING MODELS ----------------"
 
 # Variables list
 var_list=('pr tas')     
