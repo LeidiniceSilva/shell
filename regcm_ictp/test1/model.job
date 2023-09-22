@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#SBATCH -J MODEL
+## This is the maximum time allowed.
+#SBATCH -t 24:00:00
+## The partition name
+#SBATCH -p long
+## This means a total of 20 processors
+#SBATCH -N 1 --ntasks-per-node=20
+
+NAMELIST=$HOME/SAM-22_RegCM5_ERA5.in
+BINARIES=$HOME/RegCM/bin/
+EXTENSION=CLM45
+
+# load required modules
+module purge
+source /opt-ictp/ESMF/env202108
+export OMP_NUM_THREADS=20
+
+# run model
+set -e
+{
+  mpirun $BINARIES/regcmMPI$EXTENSION $NAMELIST
+}
