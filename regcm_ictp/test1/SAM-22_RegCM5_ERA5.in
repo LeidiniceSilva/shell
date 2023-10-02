@@ -45,9 +45,9 @@
  /
 
  &restartparam
- ifrest  = .false.,    ! If a restart
+ ifrest  = .true.,  ! If a restart
  mdate0  = 2000010100, ! Global start (is globidate1) 197001-197501 run on A1
- mdate1  = 2000010100, ! Start date of this run
+ mdate1  = 2000110100, ! Start date of this run
  mdate2  = 2001010100, ! End date for this run
  /
 
@@ -66,7 +66,7 @@
  ifshf   = .true. ,           ! Output SHF (pr hourly)
  ifsrf   = .true. ,           ! Output SRF ?
  srffrq  =     3.,            ! Frequency in hours to write to SRF
- dirout  = '/home/mda_silv/scratch/test1/ouput',        ! Path where all output will be placed
+ dirout  = '/home/mda_silv/scratch/test1/output',        ! Path where all output will be placed
  lsync   = .true.,            ! If sync of output files at every timestep is
  uvrotate = .false.,          ! Rotate projected wind to S-N, W-E direction
  icosp = 1,                   ! Enable COSP needed fields in output in the ATM
