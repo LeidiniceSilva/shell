@@ -8,8 +8,8 @@
 !-----------------------------------------------------------------------
 
  &dimparam 
- iy     = 873,   ! This is number of points in the N/S direction
- jx     = 1431,  ! This is number of points in the E/W direction
+ iy     = 783,   ! This is number of points in the N/S direction
+ jx     = 1231,  ! This is number of points in the E/W direction
  kz     = 41,   ! Number of vertical levels
  dsmin  = 0.01, ! Minimum sigma spacing (only used if kz is not 14, 18, 23, 41)
  dsmax  = 0.05, ! Maximum sigma spacing (only used if kz is not 14, 18, 23, 41)
@@ -48,7 +48,7 @@
                    ! 'POLSTR', Polar stereographic.
                    ! 'NORMER', Normal  Mercator.
                    ! 'ROTMER', Rotated Mercator.
- ds = 3.0,           ! Grid point horizontal resolution in km
+ ds = -0.03,           ! Grid point horizontal resolution in km
  ptop = 10.0,      ! Pressure of model top in cbar
  clat = -24.0,     ! Central latitude  of model domain in degrees
                    ! North hemisphere is positive
@@ -66,7 +66,7 @@
 ! DOMAIN terrain generation parameters
 !
  &terrainparam
- domname  = 'sam-3km-pbl1',    ! Name of the domain/experiment.
+ domname  = 'SAM-3km',    ! Name of the domain/experiment.
                               ! Controls naming of input files
  lresamp     = .false.,       ! Do a first resampling before interpolation
  smthbdy     = .true.,        ! Perform extra smoothing in boundaries
@@ -134,7 +134,7 @@
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
  gdate1 = 2018010100,        ! Start date for ICBC data generation
- gdate2 = 2021123100,        ! End data for ICBC data generation
+ gdate2 = 2018123100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/home/mda_silv/scratch/sam_3km/input', ! Path for ICBC produced input files
  inpglob = '/home/esp-shared-b/RegCM_Data',        ! Path for ICBC global input datasets.
@@ -180,7 +180,7 @@
  ifrest  = .false. ,   ! If a restart
  mdate0  = 2018010100, ! Global start (is globidate1)
  mdate1  = 2018010100, ! Start date of this run
- mdate2  = 2021123100, ! End date for this run 
+ mdate2  = 2018123100, ! End date for this run 
  /
  
 !
