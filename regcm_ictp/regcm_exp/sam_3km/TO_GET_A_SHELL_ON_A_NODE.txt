@@ -1,0 +1,1 @@
+srun -p skl_usr_dbg -A ICT23_ESP -t 00:30:00 --pty -N 1 --ntasks-per-node=48 /bin/bash

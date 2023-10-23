@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#SBATCH -J icbc
+#SBATCH -A ICT23_ESP
+#SBATCH -p skl_usr_prod
+#SBATCH --qos=qos_prio
+#SBATCH -t 24:00:00
+#SBATCH -N 1
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=mda_silv@ictp.it
+
+module purge
+source /marconi/home/userexternal/ggiulian/STACK22/env2022
+
+PLATFORM=SKL
+export OMP_NUM_THREADS=48
+REGCM=/marconi/home/userexternal/mdasilva/bin
+SUFFIX=CLM45_${PLATFORM}
+NAMELIST=/marconi/home/userexternal/mdasilva/sam_3km_cp_era5_moloch_pbl1_noto.in
+
+# load required modules
+
+export I_MPI_FABRICS=shm:tmi
+export I_MPI_TMI_PROVIDER=psm2
+OUTFILE=/marconi/home/userexternal/mdasilva/ICBC.out
+ERRFILE=/marconi/home/userexternal/mdasilva/ICBC.err
+
+${REGCM}/terrain${SUFFIX}    ${NAMELIST} >> ${OUTFILE} 2> ${ERRFILE}
+${REGCM}/mksurfdata${SUFFIX} ${NAMELIST} >> ${OUTFILE} 2> ${ERRFILE}
+${REGCM}/sst${SUFFIX}        ${NAMELIST} >> ${OUTFILE} 2> ${ERRFILE}
+${REGCM}/icbc${SUFFIX}       ${NAMELIST} >> ${OUTFILE} 2> ${ERRFILE}

@@ -31,6 +31,7 @@
  idynamic = 3,  ! Choice of dynamical core
                 ! 1 = MM4 hydrostatical core
                 ! 2 = MM5 NON hydrostatical core
+                ! 3 = MOLOCH NON hydrostatical core
  /
  
 !
@@ -48,7 +49,7 @@
                    ! 'POLSTR', Polar stereographic.
                    ! 'NORMER', Normal  Mercator.
                    ! 'ROTMER', Rotated Mercator.
- ds = -0.03,           ! Grid point horizontal resolution in km
+ ds = -0.03,      ! Grid point horizontal resolution in km
  ptop = 10.0,      ! Pressure of model top in cbar
  clat = -24.0,     ! Central latitude  of model domain in degrees
                    ! North hemisphere is positive
@@ -84,8 +85,8 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/home/mda_silv/scratch/sam_3km/input',           ! Output directory for terrain files
- inpter = '/home/esp-shared-b/RegCM_Data',                  ! Input directory for SURFACE dataset
+ dirter = '/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/input',  ! Output directory for terrain files
+ inpter = '/marconi_work/ICT23_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
                               ! when lsmoist option is True
@@ -134,10 +135,10 @@
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
  gdate1 = 2018010100,        ! Start date for ICBC data generation
- gdate2 = 2018123100,        ! End data for ICBC data generation
+ gdate2 = 2021123100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/home/mda_silv/scratch/sam_3km/input', ! Path for ICBC produced input files
- inpglob = '/home/esp-shared-b/RegCM_Data',        ! Path for ICBC global input datasets.
+ dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/input', ! Path for ICBC produced input files
+ inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
                              ! ICBC controlled by the perturbparam stanza
@@ -180,7 +181,7 @@
  ifrest  = .false. ,   ! If a restart
  mdate0  = 2018010100, ! Global start (is globidate1)
  mdate1  = 2018010100, ! Start date of this run
- mdate2  = 2018123100, ! End date for this run 
+ mdate2  = 2021123100, ! End date for this run 
  /
  
 !
@@ -212,7 +213,7 @@
  ifchem  = .false.,           ! Output CHE ?
  ifopt   = .false.,           ! Output OPT ?
  chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/home/mda_silv/scratch/sam_3km/output', ! Path where all output will be placed
+ dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/output', ! Path where all output will be placed
  lsync   = .true.,            ! If sync of output files at every timestep is
                               ! requested. Note, it has a performance impact.
                               ! Enabled by default if debug_level > 2
@@ -314,7 +315,7 @@
  islab_ocean =      0,  ! Activate the SLAB ocean model
  itweak =           0,  ! Enable tweak scenario
  iclimaaer =        3,  ! x Aerosol
- radclimpath = '/home/esp-shared-b/RegCM_Data/MERRA2/OPPMONTH', ! x Aerosol
+ radclimpath = '/marconi_work/ICT23_ESP/RCMDATA/MERRA2/OPPMONTH', ! x Aerosol
  /
  
 !
