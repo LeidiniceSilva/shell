@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#SBATCH -J icbc
+#SBATCH -J sam_3km
 #SBATCH -A ICT23_ESP
 #SBATCH -p skl_usr_prod
 #SBATCH --qos=qos_prio
 #SBATCH -t 24:00:00
-#SBATCH -N 5 
+#SBATCH -N 30 
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -16,13 +16,13 @@ PLATFORM=SKL
 export OMP_NUM_THREADS=1
 REGCM=/marconi/home/userexternal/mdasilva/bin
 SUFFIX=CLM45_${PLATFORM}
-NAMELIST=/marconi/home/userexternal/mdasilva/sam_3km_cp_era5_moloch_pbl1_noto.in
-
+NAMELIST=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/sam_3km/SAM_3km_CP_RegCM5_ERA5.in
+         
 # load required modules
 
 export I_MPI_FABRICS=shm:tmi
 export I_MPI_TMI_PROVIDER=psm2
-OUTFILE=/marconi/home/userexternal/mdasilva/MODEL.out
-ERRFILE=/marconi/home/userexternal/mdasilva/MODEL.err
+OUTFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/sam_3km/MODEL.out
+ERRFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/sam_3km/MODEL.err
 
 mpirun ${REGCM}/regcmMPI${SUFFIX} ${NAMELIST} > ${OUTFILE} 2> ${ERRFILE}
