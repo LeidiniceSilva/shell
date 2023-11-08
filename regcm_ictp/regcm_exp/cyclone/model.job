@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -J sam_3km
+#SBATCH -J cp_cyclone
 #SBATCH -A ICT23_ESP
 #SBATCH -p skl_usr_prod
 #SBATCH --qos=qos_prio
@@ -16,13 +16,13 @@ PLATFORM=SKL
 export OMP_NUM_THREADS=1
 REGCM=/marconi/home/userexternal/ggiulian/binaries_5.0
 SUFFIX=CLM45_${PLATFORM}
-NAMELIST=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/sam_3km/SAM_3km_CP_RegCM5_ERA5.in
+NAMELIST=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/cyclone/SAM_3km_cyclone_CP_RegCM5_ERA5.in
          
 # load required modules
 
 export I_MPI_FABRICS=shm:tmi
 export I_MPI_TMI_PROVIDER=psm2
-OUTFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/sam_3km/MODEL.out
-ERRFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/sam_3km/MODEL.err
+OUTFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/cyclone/MODEL.out
+ERRFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/cyclone/MODEL.err
 
 mpirun ${REGCM}/regcmMPI${SUFFIX} ${NAMELIST} > ${OUTFILE} 2> ${ERRFILE}

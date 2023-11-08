@@ -8,9 +8,9 @@
 !-----------------------------------------------------------------------
 
  &dimparam 
- iy     = 783,   ! This is number of points in the N/S direction
- jx     = 1231,  ! This is number of points in the E/W direction
- kz     = 41,   ! Number of vertical levels
+ iy     = 1231, ! This is number of points in the N/S direction
+ jx     = 1231, ! This is number of points in the E/W direction
+ kz     = 50,   ! Number of vertical levels
  dsmin  = 0.01, ! Minimum sigma spacing (only used if kz is not 14, 18, 23, 41)
  dsmax  = 0.05, ! Maximum sigma spacing (only used if kz is not 14, 18, 23, 41)
  nsg    = 1,    ! For subgridding, number of points to decompose. If nsg=1,
@@ -49,9 +49,9 @@
                    ! 'POLSTR', Polar stereographic.
                    ! 'NORMER', Normal  Mercator.
                    ! 'ROTMER', Rotated Mercator.
- ds = -0.03,      ! Grid point horizontal resolution in km
+ ds = -0.03,       ! Grid point horizontal resolution in km
  ptop = 10.0,      ! Pressure of model top in cbar
- clat = -24.0,     ! Central latitude  of model domain in degrees
+ clat = -30.0,     ! Central latitude  of model domain in degrees
                    ! North hemisphere is positive
  clon = 303.0,     ! Central longitude of model domain in degrees
                    ! West is negative.
@@ -67,7 +67,7 @@
 ! DOMAIN terrain generation parameters
 !
  &terrainparam
- domname  = 'SAM-3km',    ! Name of the domain/experiment.
+ domname  = 'SAM-3km-cyclone',! Name of the domain/experiment.
                               ! Controls naming of input files
  lresamp     = .false.,       ! Do a first resampling before interpolation
  smthbdy     = .true.,        ! Perform extra smoothing in boundaries
@@ -85,7 +85,7 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/input',  ! Output directory for terrain files
+ dirter = '/marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/input',  ! Output directory for terrain files
  inpter = '/marconi_work/ICT23_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
@@ -137,7 +137,7 @@
  gdate1 = 2018010100,        ! Start date for ICBC data generation
  gdate2 = 2021123100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/input', ! Path for ICBC produced input files
+ dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/input', ! Path for ICBC produced input files
  inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
@@ -179,9 +179,9 @@
 !
  &restartparam
  ifrest  = .true.,     ! If a restart
- mdate0  = 2018010100, ! Global start (is globidate1)
- mdate1  = 2018092800, ! Start date of this run
- mdate2  = 2021123100, ! End date for this run 
+ mdate0  = 2023050100, ! Global start (is globidate1)
+ mdate1  = 2023050100, ! Start date of this run
+ mdate2  = 2023090100, ! End date for this run 
  /
  
 !
@@ -205,7 +205,7 @@
  radfrq  =     6.,            ! Frequency in hours to write to RAD
  ifsts   = .true. ,           ! Output STS (frequence is daily) ?
  ifsrf   = .true. ,           ! Output SRF ?
- srffrq  =    1.0,            ! Frequency in hours to write to SRF
+ srffrq  =     3.,            ! Frequency in hours to write to SRF
  ifsub   = .true. ,           ! Output SUB ?
  subfrq  =     6.,            ! Frequency in hours to write to SUB
  iflak   = .false.,           ! Output LAK ?
@@ -213,7 +213,7 @@
  ifchem  = .false.,           ! Output CHE ?
  ifopt   = .false.,           ! Output OPT ?
  chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/output', ! Path where all output will be placed
+ dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/output', ! Path where all output will be placed
  lsync   = .true.,            ! If sync of output files at every timestep is
                               ! requested. Note, it has a performance impact.
                               ! Enabled by default if debug_level > 2
