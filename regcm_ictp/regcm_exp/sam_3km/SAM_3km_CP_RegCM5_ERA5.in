@@ -67,7 +67,7 @@
 ! DOMAIN terrain generation parameters
 !
  &terrainparam
- domname  = 'SAM-3km',    ! Name of the domain/experiment.
+ domname     = 'SAM-3km',     ! Name of the domain/experiment.
                               ! Controls naming of input files
  lresamp     = .false.,       ! Do a first resampling before interpolation
  smthbdy     = .true.,        ! Perform extra smoothing in boundaries
@@ -180,7 +180,7 @@
  &restartparam
  ifrest  = .true.,     ! If a restart
  mdate0  = 2018010100, ! Global start (is globidate1)
- mdate1  = 2018092800, ! Start date of this run
+ mdate1  = 2018112700, ! Start date of this run
  mdate2  = 2021123100, ! End date for this run 
  /
  

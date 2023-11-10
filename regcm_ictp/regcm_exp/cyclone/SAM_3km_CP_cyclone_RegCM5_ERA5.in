@@ -134,8 +134,8 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = 2018010100,        ! Start date for ICBC data generation
- gdate2 = 2021123100,        ! End data for ICBC data generation
+ gdate1 = 2023050100,        ! Start date for ICBC data generation
+ gdate2 = 2023090100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/input', ! Path for ICBC produced input files
  inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
@@ -178,7 +178,7 @@
 ! Model start/restart control
 !
  &restartparam
- ifrest  = .true.,     ! If a restart
+ ifrest  = .false.,    ! If a restart
  mdate0  = 2023050100, ! Global start (is globidate1)
  mdate1  = 2023050100, ! Start date of this run
  mdate2  = 2023090100, ! End date for this run 
@@ -196,9 +196,9 @@
 ! Model Output control
 !
  &outparam
- outnwf  =    0.,             ! Day interval to open new files (0 = monthly)
+ outnwf  =     0.,            ! Day interval to open new files (0 = monthly)
  ifsave  = .true. ,           ! Create SAV files for restart
- savfrq  =    10.,            ! Frequency in days to create them (0 = monthly)
+ savfrq  =     0.,            ! Frequency in days to create them (0 = monthly)
  ifatm   = .true. ,           ! Output ATM ?
  atmfrq  =     6.,            ! Frequency in hours to write to ATM
  ifrad   = .true. ,           ! Output RAD ?
@@ -212,7 +212,7 @@
  lakfrq  =     6.,            ! Frequency in hours to write to LAK
  ifchem  = .false.,           ! Output CHE ?
  ifopt   = .false.,           ! Output OPT ?
- chemfrq =     6.,            ! Frequency in hours to write to CHE
+ chemfrq =      6.,           ! Frequency in hours to write to CHE
  dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/output', ! Path where all output will be placed
  lsync   = .true.,            ! If sync of output files at every timestep is
                               ! requested. Note, it has a performance impact.

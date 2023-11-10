@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -J cp_cyclone
+#SBATCH -J cyclone
 #SBATCH -A ICT23_ESP
 #SBATCH -p skl_usr_prod
 #SBATCH --qos=qos_prio
@@ -12,7 +12,7 @@
 module purge
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
-REGCM=PLATFORM=SKL
+PLATFORM=SKL
 export OMP_NUM_THREADS=48
 REGCM=/marconi/home/userexternal/ggiulian/binaries_5.0
 SUFFIX=CLM45_${PLATFORM}
