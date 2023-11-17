@@ -5,7 +5,7 @@
 #SBATCH -p skl_usr_prod
 #SBATCH --qos=qos_prio
 #SBATCH -t 24:00:00
-#SBATCH -N 10 
+#SBATCH -N 18 
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -16,7 +16,7 @@ PLATFORM=SKL
 export OMP_NUM_THREADS=1
 REGCM=/marconi/home/userexternal/ggiulian/binaries_5.0
 SUFFIX=CLM45_${PLATFORM}
-NAMELIST=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/cyclone/SAM_3km_cyclone_CP_RegCM5_ERA5.in
+NAMELIST=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/cyclone/SAM_3km_CP_cyclone_RegCM5_ERA5.in
          
 # load required modules
 
