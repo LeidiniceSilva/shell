@@ -2,7 +2,7 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '12/28/2020'
+#__date__        = 'Nov 20, 2023'
 #__description__ = 'Posprocessing the observation data with CDO'
  
 

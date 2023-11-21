@@ -9,60 +9,58 @@
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
-NAME="SAM-3km"
-DIR="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/output"
+DIR_IN="/home/esp-shared-a/Observations/CRU/CRU_TS4.07"
+DIR_OUT="/afs/ictp.it/home/m/mda_silv/Documents/ICTP/database/obs/cru"
+DIR_REGRID="/afs/ictp.it/home/m/mda_silv/Documents/github_projects/shell/regcm_ufrn/regcm_pos"
 
 echo
-cd ${DIR}
-echo ${DIR}
+cd ${DIR_OUT}
+echo ${DIR_OUT}
 
 echo 
-echo "1. Select variable"
+echo "1. Select date"
 
-for MON in `seq -w 01 12`; do
-
-    cdo selname,pr ${NAME}_STS.2018${MON}0100.nc pr_${NAME}_2018${MON}0100.nc
-    cdo selname,tas ${NAME}_STS.2018${MON}0100.nc tas_${NAME}_2018${MON}0100.nc
-    cdo selname,tasmax ${NAME}_STS.2018${MON}0100.nc tasmax_${NAME}_2018${MON}0100.nc
-    cdo selname,tasmin ${NAME}_STS.2018${MON}0100.nc tasmin_${NAME}_2018${MON}0100.nc
-    cdo selname,cl ${NAME}_RAD.2018${MON}0100.nc cl_${NAME}_2018${MON}0100.nc
-    cdo selname,clt ${NAME}_SRF.2018${MON}0100.nc clt_${NAME}_2018${MON}0100.nc
-    cdo selname,cli ${NAME}_ATM.2018${MON}0100.nc cli_${NAME}_2018${MON}0100.nc
-    cdo selname,clw ${NAME}_ATM.2018${MON}0100.nc clw_${NAME}_2018${MON}0100.nc
-
-done	
+cdo seldate,2018-01-01,2021-12-31 ${DIR_IN}/cru_ts4.07.1901.2022.cld.dat.nc cld_cru_ts4.07_mon_2018-2021.nc
+cdo seldate,2018-01-01,2021-12-31 ${DIR_IN}/cru_ts4.07.1901.2022.pre.dat.nc pre_cru_ts4.07_mon_2018-2021.nc
+cdo seldate,2018-01-01,2021-12-31 ${DIR_IN}/cru_ts4.07.1901.2022.tmp.dat.nc tmp_cru_ts4.07_mon_2018-2021.nc
+cdo seldate,2018-01-01,2021-12-31 ${DIR_IN}/cru_ts4.07.1901.2022.tmx.dat.nc tmx_cru_ts4.07_mon_2018-2021.nc
+cdo seldate,2018-01-01,2021-12-31 ${DIR_IN}/cru_ts4.07.1901.2022.tmn.dat.nc tmn_cru_ts4.07_mon_2018-2021.nc
 
 echo 
-echo "2. Concatenate data"
+echo "2. Regrid output"
 
-cdo cat pr_${NAME}_2018*0100.nc pr_${NAME}_day_2018.nc 
-cdo cat tas_${NAME}_2018*0100.nc tas_${NAME}_day_2018.nc 
-cdo cat tasmax_${NAME}_2018*0100.nc tasmax_${NAME}_day_2018.nc 
-cdo cat tasmin_${NAME}_2018*0100.nc tasmin_${NAME}_day_2018.nc 
-cdo cat cl_${NAME}_2018*0100.nc cl_${NAME}_2018.nc
-cdo cat clt_${NAME}_2018*0100.nc clt_${NAME}_2018.nc  
-cdo cat cli_${NAME}_2018*0100.nc cli_${NAME}_2018.nc 
-cdo cat clw_${NAME}_2018*0100.nc clw_${NAME}_2018.nc 
+${DIR_REGRID}/./regrid cld_cru_ts4.07_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid pre_cru_ts4.07_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid tmp_cru_ts4.07_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid tmx_cru_ts4.07_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid tmn_cru_ts4.07_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo 
-echo "2. Calculate monthly avg"
+echo "3. Convert unit"
 
-cdo monmean cl_${NAME}_2018.nc cl_${NAME}_mon_2018.nc
-cdo monmean clt_${NAME}_2018.nc clt_${NAME}_mon_2018.nc  
-cdo monmean cli_${NAME}_2018.nc cli_${NAME}_mon_2018.nc
-cdo monmean clw_${NAME}_2018.nc clw_${NAME}_mon_2018.nc
+cdo divc,30.5 pre_cru_ts4.07_mon_2018-2021_lonlat.nc pre_SAM-3km_cru_ts4.07_mon_2018-2021_lonlat.nc
 
 echo 
-echo "3. Regrid output"
+echo "4. Change files name"
 
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid pr_${NAME}_day_2018.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid tas_${NAME}_day_2018.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid tasmax_${NAME}_day_2018.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid tasmin_${NAME}_day_2018.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid cl_${NAME}_mon_2018.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid clt_${NAME}_mon_2018.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid cli_${NAME}_mon_2018.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid clw_${NAME}_mon_2018.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+cp cld_cru_ts4.07_mon_2018-2021_lonlat.nc cld_SAM-3km_cru_ts4.07_mon_2018-2021_lonlat.nc
+cp tmp_cru_ts4.07_mon_2018-2021_lonlat.nc tmp_SAM-3km_cru_ts4.07_mon_2018-2021_lonlat.nc
+cp tmx_cru_ts4.07_mon_2018-2021_lonlat.nc tmx_SAM-3km_cru_ts4.07_mon_2018-2021_lonlat.nc
+cp tmn_cru_ts4.07_mon_2018-2021_lonlat.nc tmn_SAM-3km_cru_ts4.07_mon_2018-2021_lonlat.nc
+
+echo 
+echo "5. Delete files"
+
+rm cld_cru_ts4.07_mon_2018-2021.nc
+rm pre_cru_ts4.07_mon_2018-2021.nc
+rm tmp_cru_ts4.07_mon_2018-2021.nc 
+rm tmx_cru_ts4.07_mon_2018-2021.nc
+rm tmn_cru_ts4.07_mon_2018-2021.nc
+rm cld_cru_ts4.07_mon_2018-2021_lonlat.nc
+rm pre_cru_ts4.07_mon_2018-2021_lonlat.nc
+rm tmp_cru_ts4.07_mon_2018-2021_lonlat.nc 
+rm tmx_cru_ts4.07_mon_2018-2021_lonlat.nc 
+rm tmn_cru_ts4.07_mon_2018-2021_lonlat.nc 
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

@@ -11,6 +11,7 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 NAME="SAM-3km"
 DIR="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/output"
+DIR_REGRID="/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos"
 
 echo
 cd ${DIR}
@@ -40,10 +41,10 @@ done
 echo 
 echo "2. Concatenate data"
 
-cdo cat pr_${NAME}_*0100.nc pr_${NAME}_day_2018-2021.nc 
-cdo cat tas_${NAME}_*0100.nc tas_${NAME}_day_2018-2021.nc 
-cdo cat tasmax_${NAME}_*0100.nc tasmax_${NAME}_day_2018-2021.nc 
-cdo cat tasmin_${NAME}_*0100.nc tasmin_${NAME}_day_2018-2021.nc 
+cdo cat pr_${NAME}_*0100.nc pr_${NAME}_2018-2021.nc 
+cdo cat tas_${NAME}_*0100.nc tas_${NAME}_2018-2021.nc 
+cdo cat tasmax_${NAME}_*0100.nc tasmax_${NAME}_2018-2021.nc 
+cdo cat tasmin_${NAME}_*0100.nc tasmin_${NAME}_2018-2021.nc 
 cdo cat cl_${NAME}_*0100.nc cl_${NAME}_2018-2021.nc
 cdo cat clt_${NAME}_*0100.nc clt_${NAME}_2018-2021.nc  
 cdo cat cli_${NAME}_*0100.nc cli_${NAME}_2018-2021.nc 
@@ -53,8 +54,20 @@ cdo cat ua_${NAME}_*0100.nc ua_${NAME}_2018-2021.nc
 cdo cat va_${NAME}_*0100.nc va_${NAME}_2018-2021.nc 
 
 echo 
-echo "2. Calculate monthly avg"
+echo "3. Convert unit"
 
+cdo mulc,86400 pr_${NAME}_2018.nc pr_${NAME}_day_2018-2021.nc
+cdo subc,273.15 tas_${NAME}_2018.nc tas_${NAME}_day_2018-2021.nc
+cdo subc,273.15 tasmax_${NAME}_2018.nc tasmax_${NAME}_day_2018-2021.nc
+cdo subc,273.15 tasmin_${NAME}_2018.nc tasmin_${NAME}_day_2018-2021.nc
+
+echo 
+echo "4. Calculate monthly avg"
+
+cdo monmean pr_${NAME}_2018.nc pr_${NAME}_mon_2018-2021.nc
+cdo monmean tas_${NAME}_2018.nc tas_${NAME}_mon_2018-2021.nc
+cdo monmean tasmax_${NAME}_2018.nc tasmax_${NAME}_mon_2018-2021.nc
+cdo monmean tasmin_${NAME}_2018.nc tasmin_${NAME}_mon_2018-2021.nc
 cdo monmean cl_${NAME}_2018.nc cl_${NAME}_mon_2018-2021.nc
 cdo monmean clt_${NAME}_2018.nc clt_${NAME}_mon_2018-2021.nc  
 cdo monmean cli_${NAME}_2018.nc cli_${NAME}_mon_2018-2021.nc
@@ -66,18 +79,21 @@ cdo monmean va_${NAME}_2018.nc va_${NAME}_mon_2018-2021.nc
 echo 
 echo "3. Regrid output"
 
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid pr_${NAME}_day_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid tas_${NAME}_day_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid tasmax_${NAME}_day_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid tasmin_${NAME}_day_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid cl_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid clt_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid cli_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid clw_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid hus_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid ua_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos/./regrid va_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-
+${DIR_REGRID}/./regrid pr_${NAME}_day_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid tas_${NAME}_day_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid tasmax_${NAME}_day_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid tasmin_${NAME}_day_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid cl_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid pr_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid tas_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid tasmax_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid tasmin_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid clt_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid cli_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid clw_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid hus_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid ua_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${DIR_REGRID}/./regrid va_${NAME}_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
