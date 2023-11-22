@@ -2,8 +2,8 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = '10/02/2023'
-#__description__ = 'Posprocessing the RegCM5 model data with CDO'
+#__date__        = 'Nov 20, 2023'
+#__description__ = 'Posprocessing the CRU dataset with CDO'
  
 
 echo
