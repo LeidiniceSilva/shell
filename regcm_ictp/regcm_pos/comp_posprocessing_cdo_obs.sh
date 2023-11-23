@@ -3,64 +3,96 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
-#__description__ = 'Posprocessing the CRU dataset with CDO'
+#__description__ = 'Posprocessing the OBS datasets with CDO'
  
+DATASET="CPC"
 
-echo
-echo "--------------- INIT POSPROCESSING MODEL ----------------"
+DT="2018-2021"
+DT_i="2018-01-01"
+DT_ii="2021-12-31"
 
-DIR_IN="/home/esp-shared-a/Observations/CRU/CRU_TS4.07"
-DIR_OUT="/afs/ictp.it/home/m/mda_silv/Documents/ICTP/database/obs/cru"
-DIR_REGRID="/afs/ictp.it/home/m/mda_silv/Documents/github_projects/shell/regcm_ufrn/regcm_pos"
+DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/postproc"
+
+REGRIG="/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_pos"
 
 echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
+if [ ${DATASET} == 'CPC' ]
+then
 echo 
-echo "1. Select date"
-
-cdo seldate,2018-01-01,2021-12-31 ${DIR_IN}/cru_ts4.07.1901.2022.cld.dat.nc cld_cru_ts4.07_mon_2018-2021.nc
-cdo seldate,2018-01-01,2021-12-31 ${DIR_IN}/cru_ts4.07.1901.2022.pre.dat.nc pre_cru_ts4.07_mon_2018-2021.nc
-cdo seldate,2018-01-01,2021-12-31 ${DIR_IN}/cru_ts4.07.1901.2022.tmp.dat.nc tmp_cru_ts4.07_mon_2018-2021.nc
-cdo seldate,2018-01-01,2021-12-31 ${DIR_IN}/cru_ts4.07.1901.2022.tmx.dat.nc tmx_cru_ts4.07_mon_2018-2021.nc
-cdo seldate,2018-01-01,2021-12-31 ${DIR_IN}/cru_ts4.07.1901.2022.tmn.dat.nc tmn_cru_ts4.07_mon_2018-2021.nc
-
-echo 
-echo "2. Regrid output"
-
-${DIR_REGRID}/./regrid cld_cru_ts4.07_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid pre_cru_ts4.07_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid tmp_cru_ts4.07_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid tmx_cru_ts4.07_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid tmn_cru_ts4.07_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-
-echo 
-echo "3. Convert unit"
-
-cdo divc,30.5 pre_cru_ts4.07_mon_2018-2021_lonlat.nc pre_SAM-3km_cru_ts4.07_mon_2018-2021_lonlat.nc
-
-echo 
-echo "4. Change files name"
-
-cp cld_cru_ts4.07_mon_2018-2021_lonlat.nc cld_SAM-3km_cru_ts4.07_mon_2018-2021_lonlat.nc
-cp tmp_cru_ts4.07_mon_2018-2021_lonlat.nc tmp_SAM-3km_cru_ts4.07_mon_2018-2021_lonlat.nc
-cp tmx_cru_ts4.07_mon_2018-2021_lonlat.nc tmx_SAM-3km_cru_ts4.07_mon_2018-2021_lonlat.nc
-cp tmn_cru_ts4.07_mon_2018-2021_lonlat.nc tmn_SAM-3km_cru_ts4.07_mon_2018-2021_lonlat.nc
-
-echo 
-echo "5. Delete files"
-
-rm cld_cru_ts4.07_mon_2018-2021.nc
-rm pre_cru_ts4.07_mon_2018-2021.nc
-rm tmp_cru_ts4.07_mon_2018-2021.nc 
-rm tmx_cru_ts4.07_mon_2018-2021.nc
-rm tmn_cru_ts4.07_mon_2018-2021.nc
-rm cld_cru_ts4.07_mon_2018-2021_lonlat.nc
-rm pre_cru_ts4.07_mon_2018-2021_lonlat.nc
-rm tmp_cru_ts4.07_mon_2018-2021_lonlat.nc 
-rm tmx_cru_ts4.07_mon_2018-2021_lonlat.nc 
-rm tmn_cru_ts4.07_mon_2018-2021_lonlat.nc 
+echo "1. ------------------------------- PROCCESSING CPC DATASET -------------------------------"
 
 echo
-echo "--------------- THE END POSPROCESSING MODEL ----------------"
+echo "1.1. Select date"
+cdo seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/cpc.day.1979-2021.nc precip_SAM-3km_cpc_day_${DT}.nc
+cdo seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/tmax.1979-2021.nc tmax_SAM-3km_cpc_day_${DT}.nc
+cdo seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/tmin.1979-2021.nc tmin_SAM-3km_cpc_day_${DT}.nc
+
+echo 
+echo "1.2. Regrid output"
+${REGRIG}/./regrid precip_SAM-3km_cpc_day_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${REGRIG}/./regrid tmax_SAM-3km_cpc_day_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${REGRIG}/./regrid tmin_SAM-3km_cpc_day_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+	
+echo 
+echo "1.3. Delete files"
+rm *_SAM-3km_cpc_day_${DT}.nc
+
+elif [ ${DATASET} == 'CRU' ]
+then
+echo 
+echo "2.  ------------------------------- PROCCESSING CRU DATASET -------------------------------"
+
+echo
+echo "2.1. Select date"
+cdo seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/cld.dat.nc cld_cru_ts4.07_mon_${DT}.nc
+cdo seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/pre.dat.nc pre_cru_ts4.07_mon_${DT}.nc
+cdo seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/tmp.dat.nc tmp_cru_ts4.07_mon_${DT}.nc
+cdo seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/tmx.dat.nc tmx_cru_ts4.07_mon_${DT}.nc
+cdo seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/tmn.dat.nc tmn_cru_ts4.07_mon_${DT}.nc
+
+echo 
+echo "2.2. Convert unit"
+cdo divc,30.5 pre_cru_ts4.07_mon_${DT}.nc pre_SAM-3km_cru_ts4.07_mon_${DT}.nc
+cp cld_cru_ts4.07_mon_${DT}.nc cld_SAM-3km_cru_ts4.07_mon_${DT}.nc
+cp tmp_cru_ts4.07_mon_${DT}.nc tmp_SAM-3km_cru_ts4.07_mon_${DT}.nc
+cp tmx_cru_ts4.07_mon_${DT}.nc tmx_SAM-3km_cru_ts4.07_mon_${DT}.nc
+cp tmn_cru_ts4.07_mon_${DT}.nc tmn_SAM-3km_cru_ts4.07_mon_${DT}.nc
+
+echo 
+echo "2.3. Regrid output"
+${REGRIG}/./regrid cld_SAM-3km_cru_ts4.07_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${REGRIG}/./regrid pre_SAM-3km_cru_ts4.07_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${REGRIG}/./regrid tmp_SAM-3km_cru_ts4.07_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${REGRIG}/./regrid tmx_SAM-3km_cru_ts4.07_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${REGRIG}/./regrid tmn_SAM-3km_cru_ts4.07_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+
+echo 
+echo "2.4. Delete files"
+rm *_cru_ts4.07_mon_${DT}.nc
+rm *_SAM-3km_cru_ts4.07_mon_${DT}.nc
+
+else
+echo 
+echo "3. ------------------------------- PROCCESSING GPCP DATASET -------------------------------"
+
+echo
+echo "3.1. Select date"
+cdo seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/GPCPMON_L3_198301-202209_V3.2.nc4 GPCP_SAM-3km_L3_V3.2_mon_${DT}.nc
+
+echo 
+echo "3.2. Select variable"
+cdo selvar,sat_gauge_precip GPCP_L3_V3.2_mon_${DT}.nc sat_gauge_precip_SAM-3km_GPCP_L3_V3.2_mon_${DT}.nc
+
+echo 
+echo "2.3. Regrid output"
+${REGRIG}/./regrid sat_gauge_precip_SAM-3km_GPCP_L3_V3.2_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+
+echo 
+echo "3.4. Delete files"
+rm *_SAM-3km_L3_V3.2_mon_${DT}.nc
+
+fi
