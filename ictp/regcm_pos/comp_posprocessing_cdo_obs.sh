@@ -107,7 +107,6 @@ echo "3.3. Calculate monthly mean"
 cdo monmean tp_${EXP}_${DATASET}_day_${DT}.nc tp_${EXP}_${DATASET}_mon_${DT}.nc
 cdo monmean t2m_${EXP}_${DATASET}_day_${DT}.nc t2m_${EXP}_${DATASET}_mon_${DT}.nc
 
-
 echo 
 echo "3.4. Regrid output"
 ${REGRIG}/./regrid tp_${EXP}_${DATASET}_day_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil

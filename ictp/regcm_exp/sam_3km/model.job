@@ -14,8 +14,8 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 PLATFORM=SKL
 export OMP_NUM_THREADS=1
-REGCM=/marconi/home/userexternal/ggiulian/binaries_5.0/regcmMPINETCDF4_HDF5_CLM45_SKL
-SUFFIX=CLM45_${PLATFORM}
+REGCM=/marconi/home/userexternal/ggiulian/binaries_5.0
+SUFFIX=NETCDF4_HDF5_CLM45_${PLATFORM} 
 NAMELIST=/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ictp/regcm_exp/sam_3km/SAM_3km_CP_RegCM5_ERA5.in
          
 # load required modules
