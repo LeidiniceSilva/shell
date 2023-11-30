@@ -10,8 +10,8 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 NAME="SAM-3km"
-DIR="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/output"
-DIR_REGRID="/marconi/home/userexternal/mdasilva/github_projects/shell/regcm_ufrn/regcm_pos"
+DIR="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/postproc"
+BIN="/marconi/home/userexternal/ggiulian/binaries_5.0"
 
 echo
 cd ${DIR}
@@ -77,20 +77,25 @@ cdo monmean ua_${NAME}_2018-2021.nc ua_${NAME}_RegCM5_mon_2018-2021.nc
 cdo monmean va_${NAME}_2018-2021.nc va_${NAME}_RegCM5_mon_2018-2021.nc
 
 echo 
-echo "3. Regrid output"
+echo "5. Regrid output"
 
-${DIR_REGRID}/./regrid pr_${NAME}_RegCM5_day_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid pr_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid tas_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid tasmax_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid tasmin_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid cl_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid clt_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid cli_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid clw_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid hus_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid ua_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${DIR_REGRID}/./regrid va_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid pr_${NAME}_RegCM5_day_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid pr_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid tas_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid tasmax_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid tasmin_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid cl_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid clt_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid cli_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid clw_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid hus_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid ua_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid va_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+
+echo 
+echo "6. Sigma2 output"
+
+${BIN}/./sigma2pCLM45_SKL hus_${NAME}_RegCM5_mon_2018-2021_lonlat.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
