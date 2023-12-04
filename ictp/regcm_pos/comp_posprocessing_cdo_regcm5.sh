@@ -10,7 +10,7 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 NAME="SAM-3km"
-DIR="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/postproc"
+DIR="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/output_old"
 BIN="/marconi/home/userexternal/ggiulian/binaries_5.0"
 
 echo
@@ -93,9 +93,9 @@ ${BIN}/./regrid ua_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.
 ${BIN}/./regrid va_${NAME}_RegCM5_mon_2018-2021.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo 
-echo "6. Sigma2 output"
+echo "6. Delete files"
 
-${BIN}/./sigma2pCLM45_SKL hus_${NAME}_RegCM5_mon_2018-2021_lonlat.nc
+rm *_2018-2021.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

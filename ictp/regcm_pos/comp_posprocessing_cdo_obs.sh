@@ -5,17 +5,17 @@
 #__date__        = 'Nov 20, 2023'
 #__description__ = 'Posprocessing the OBS datasets with CDO'
  
-DATASET="GPCP"
+DATASET="ERA5"
 
-EXP='SAM-3km'
+EXP="SAM-3km"
 
 DT="2018-2021"
 DT_i="2018-01-01"
 DT_ii="2021-12-31"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/REF"
+DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/postproc"
-REGRIG="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_pos"
+REGRIG="/marconi/home/userexternal/ggiulian/binaries_5.0"
 
 echo
 cd ${DIR_OUT}
@@ -83,10 +83,10 @@ echo "3.  ------------------------------- PROCCESSING ERA5 DATASET -------------
 
 echo
 echo "3.1. Convert unit"
-cdo mulc,1000 ${DIR_IN}/${DATASET}/tp_${DATASET}_${DT}.nc tp_${EXP}_${DATASET}_day_${DT}.nc
-cdo subc,273.15 ${DIR_IN}/${DATASET}/t2m_${DATASET}_${DT}.nc t2m_${EXP}_${DATASET}_mon_${DT}.nc
-cdo subc,273.15 ${DIR_IN}/${DATASET}/mx2t_${DATASET}_${DT}.nc mx2t_${EXP}_${DATASET}_mon_${DT}.nc
-cdo subc,273.15 ${DIR_IN}/${DATASET}/mn2t_${DATASET}_${DT}.nc mn2t_${EXP}_${DATASET}_mon_${DT}.nc
+cdo -b f32 mulc,1000 ${DIR_IN}/${DATASET}/tp_${DATASET}_${DT}.nc tp_${DATASET}_day_${DT}.nc
+cdo -b f32 subc,273.15 ${DIR_IN}/${DATASET}/t2m_${DATASET}_${DT}.nc t2m_${DATASET}_mon_${DT}.nc
+cdo -b f32 subc,273.15 ${DIR_IN}/${DATASET}/mx2t_${DATASET}_${DT}.nc mx2t_${DATASET}_mon_${DT}.nc
+cdo -b f32 subc,273.15 ${DIR_IN}/${DATASET}/mn2t_${DATASET}_${DT}.nc mn2t_${DATASET}_mon_${DT}.nc
 
 echo 
 echo "3.2. Calculate monthly mean"
@@ -94,18 +94,18 @@ cdo monmean tp_${DATASET}_day_${DT}.nc tp_${DATASET}_mon_${DT}.nc
 
 echo 
 echo "3.3. Change names"
-cp tp_${DATASET}_day_${DT}.nc tp_${EXP}_${DATASET}_mon_${DT}.nc
+cp tp_${DATASET}_day_${DT}.nc tp_${EXP}_${DATASET}_day_${DT}.nc
 cp tp_${DATASET}_mon_${DT}.nc tp_${EXP}_${DATASET}_mon_${DT}.nc 
 cp t2m_${DATASET}_mon_${DT}.nc t2m_${EXP}_${DATASET}_mon_${DT}.nc
 cp mx2t_${DATASET}_mon_${DT}.nc mx2t_${EXP}_${DATASET}_mon_${DT}.nc
 cp mn2t_${DATASET}_mon_${DT}.nc mn2t_${EXP}_${DATASET}_mon_${DT}.nc
-cp cc_${DATASET}_mon_${DT}.nc cc_${EXP}_${DATASET}_mon_${DT}.nc
-cp ciwc_${DATASET}_mon_${DT}.nc ciwc_${EXP}_${DATASET}_mon_${DT}.nc
-cp clwc_${DATASET}_mon_${DT}.nc clwc_${EXP}_${DATASET}_mon_${DT}.nc
-cp crwc_${DATASET}_mon_${DT}.nc crwc_${EXP}_${DATASET}_mon_${DT}.nc
-cp q_${DATASET}_mon_${DT}.nc q_${EXP}_${DATASET}_mon_${DT}.nc
-cp u_${DATASET}_mon_${DT}.nc u_${EXP}_${DATASET}_mon_${DT}.nc
-cp v_${DATASET}_mon_${DT}.nc v_${EXP}_${DATASET}_mon_${DT}.nc
+cp ${DIR_IN}/${DATASET}/cc_${DATASET}_${DT}.nc cc_${EXP}_${DATASET}_mon_${DT}.nc
+cp ${DIR_IN}/${DATASET}/ciwc_${DATASET}_${DT}.nc ciwc_${EXP}_${DATASET}_mon_${DT}.nc
+cp ${DIR_IN}/${DATASET}/clwc_${DATASET}_${DT}.nc clwc_${EXP}_${DATASET}_mon_${DT}.nc
+cp ${DIR_IN}/${DATASET}/crwc_${DATASET}_${DT}.nc crwc_${EXP}_${DATASET}_mon_${DT}.nc
+cp ${DIR_IN}/${DATASET}/q_${DATASET}_${DT}.nc q_${EXP}_${DATASET}_mon_${DT}.nc
+cp ${DIR_IN}/${DATASET}/u_${DATASET}_${DT}.nc u_${EXP}_${DATASET}_mon_${DT}.nc
+cp ${DIR_IN}/${DATASET}/v_${DATASET}_${DT}.nc v_${EXP}_${DATASET}_mon_${DT}.nc
 
 echo 
 echo "3.4. Regrid output"
