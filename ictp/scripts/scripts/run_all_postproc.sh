@@ -5,7 +5,6 @@
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=mda_silv@ictp.it
 #SBATCH -p skl_usr_prod
-#SBATCH --qos=qos_prio
 
 {
 
@@ -19,22 +18,20 @@ set -eo pipefail
 if [ $# -ne 2 ]
 then
    echo "Please provide Domain name and conf name in $rdir"
-   echo 'Example: $0 Africa NoTo' #2000-2001 #"0 0 0 0 1"
+   echo 'Example: $0 SAM NoTo' # 2000-2001' # "0 0 0 0 1"'
    exit 1
 fi
 
 this_domain=$1
 this_config=$2
 dep="" #to be used only with run_postproc=2
-
 #yrs=$3
-
 n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
 
-export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/
-yrs=2018-2021
+export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km
+yrs=2018-2018
 email="mda_silv@ictp.it"
 
 run_postproc="1 0 0 0 0 0 0 0 0 0"    # sigma2p
@@ -48,21 +45,21 @@ run_postproc="1 0 0 0 0 0 0 0 0 0"    # sigma2p
 #run_postproc="0 0 0 0 0 0 0 2 0 0"   # vert
 #run_postproc="0 0 0 0 0 0 0 0 1 0"   # day/night
 #run_postproc="0 0 0 0 0 0 0 0 0 2"   # wind
-#1/0 = on/off switch for sigma, bias, pr(%), prc/pr, pdfs, pr-frq/int, p99, vert, day/night, wind 
+# 1/0 = on/off switch for sigma, bias, pr(%), prc/pr, pdfs, pr-frq/int, p99, vert, day/night, wind 
 # last three are automatically switched off if submit-sigma is on
 # 2 = on but submitted as a job. submit-sigma should not be 2
 # true -if you want submit sigma to be followed by vert, daynight, and quv
 
-export lgc_vert=true  #vertical
+export lgc_vert=false #vertical
 export lgc_dynt=false #day/night vertical
-export lgc_quv=true   #winds
+export lgc_quv=false  #true winds
 
 ##############################
 ####### end of inputs ########
 ##############################
 
 export odir=$rdir/obs
-hdir=/marconi/home/userexternal/mdasilva/scripts_2024/scripts_regcm
+hdir=/marconi_work/ICT23_ESP/clu/CORDEX-RegCM-Submit-main/scripts_00_v2
 
 cp=false
 if [ $n = Europe03 -o $n = WMediterranean ]; then
@@ -70,10 +67,11 @@ if [ $n = Europe03 -o $n = WMediterranean ]; then
 fi
 
 set -eo pipefail
-mn=postproc # postproc files # main script name
+# postproc files
+mn=postproc # main script name
 #postproc=("$mn" "${mn}_pdfs" "${mn}_p99" "${mn}_vert" "${mn}_quv")
 #postproc=("submit-sigma" "$mn" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs" "${mn}_frq-int" "${mn}_p99" "${mn}_vert" "${mn}_vert_daynight" "${mn}_quv")
-postproc=("submit-sigma" "${mn}" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs" "${mn}_frq-int_v2" "${mn}_p99" "${mn}_vert" "${mn}_vert_daynight" "${mn}_quv_v2" "${mn}_part2")
+postproc=("submit-sigma" "${mn}" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs_v2" "${mn}_frq-int" "${mn}_p99" "${mn}_vert" "${mn}_vert_daynight" "${mn}_quv_v2" "${mn}_part2")
 nrun=$(( ${#postproc[@]} - 1 ))
 
 export n=$this_domain
@@ -91,8 +89,9 @@ for i in `seq 0 $nrun`; do
   this_run=${run_postproc:$id:1}
   this_postproc=${postproc[i]}
   [[ $this_postproc = "submit-sigma" ]] && sub_sig=$this_run
+# echo $this_run
   post_sigma=false
-  if [ $this_run -eq 1 ]; then
+  if [[ $this_run -eq 1 ]]; then
     [[ $this_postproc = ${mn}_vert ]] && post_sigma=true
     [[ $this_postproc = ${mn}_vert_daynight ]] && post_sigma=true
     [[ $this_postproc = ${mn}_quv ]] && post_sigma=true
@@ -105,14 +104,14 @@ for i in `seq 0 $nrun`; do
     this_run=0
     echo "### $this_postproc skipped because submit-sigma is set to 1"
   fi
-  if [ $this_run -eq 1 ]; then
+  if [[ $this_run -eq 1 ]]; then
     if [ $this_postproc = ${mn}_prc2pr -a $cp = true ]; then
       echo "### skipping $this_postproc"
       continue
     fi
     echo Running $this_postproc $this_domain $this_config $yrs
     bash $hdir/${this_postproc}.sh $dom $conf $rdir $odir $yrs $hdir $em
-  elif [ $this_run -eq 2 ]; then
+  elif [[ $this_run -eq 2 ]]; then
     if [ $this_postproc = ${mn}_prc2pr -a $cp = true ]; then
       echo "### skipping $this_postproc"
       continue
