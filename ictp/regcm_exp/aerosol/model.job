@@ -8,7 +8,7 @@
 ## This means a total of 20 processors
 #SBATCH -N 1 --ntasks-per-node=20
 
-NAMELIST=$HOME/SAM-22_aerosol_RegCM5_ERA5.in
+NAMELIST=$HOME/SAM_22km_aerosol_RegCM5_ERA5.in
 BINARIES=$HOME/RegCM/bin/
 EXTENSION=CLM45
 
