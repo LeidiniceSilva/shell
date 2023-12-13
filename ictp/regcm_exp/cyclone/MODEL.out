@@ -1,0 +1,35 @@
+MPI startup(): shm:tmi fabric is unknown or has been removed from the product, please use ofi or shm:ofi instead.
+[0] MPI startup(): I_MPI_TMI_PROVIDER variable has been removed from the product, its value is ignored
+
+WARNING: release_mt library was used but no multi-ep feature was enabled. Please use release library instead.
+
+  This is RegCM 5
+   GIT Revision: 5.0.0 compiled at: data : Jan 13 2023  time: 09:27:06
+
+ : this run start at  : 2023-12-13 01:34:55+0100
+ : it is submitted by : mdasilva
+ : it is running on   : r171c01s01
+ : it is using        :          960   processors
+ : in directory       : 
+ /marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cyclon
+ e
+                       
+ CPUS DIM1 =           30
+ CPUS DIM2 =           32
+ 
+ Reading model namelist file
+ Using default microphysical parameter.
+ Initial date of the global simulation:  2023-05-01 00:00:00 UTC        
+ Initial date of this run             :  2023-09-01 00:00:00 UTC        
+ Final date of this run               :  2023-09-01 00:00:00 UTC        
+ Total simulation lenght              :            0  hours
+ Timestep in seconds =   45.000000
+ Reading Domain file : 
+ /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/input/SAM-3km-cyclone
+ _DOMAIN000.nc
+ Advection timestep =    15.000 (factor  3)
+ Max. Courant number for horizontal advection =    0.9538
+ Sound waves timestep =     2.500 (factor  6)
+ Courant number of horizontal sound waves =    0.3760
+ Setting IPCC scenario to SSP585  
+ Load GHG for 202309 SSP585

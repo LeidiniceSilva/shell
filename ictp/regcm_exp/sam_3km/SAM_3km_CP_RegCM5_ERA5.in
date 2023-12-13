@@ -180,7 +180,7 @@
  &restartparam
  ifrest  = .true.,     ! If a restart
  mdate0  = 2018010100, ! Global start (is globidate1)
- mdate1  = 2018110100, ! Start date of this run
+ mdate1  = 2019020100, ! Start date of this run
  mdate2  = 2021123100, ! End date for this run 
  /
  
@@ -213,7 +213,7 @@
  ifchem  = .false.,           ! Output CHE ?
  ifopt   = .false.,           ! Output OPT ?
  chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/output', ! Path where all output will be placed
+ dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/NoTo-SAM', ! Path where all output will be placed
  lsync   = .true.,            ! If sync of output files at every timestep is
                               ! requested. Note, it has a performance impact.
                               ! Enabled by default if debug_level > 2

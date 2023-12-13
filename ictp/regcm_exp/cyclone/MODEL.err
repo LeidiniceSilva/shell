@@ -1,0 +1,11 @@
+ Error in parameter set.
+ Cannot set idate0 /= idate1 on non restart run
+ Correct idate1.
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_params.F90 at line:     1930
+ IDATE0/=IDATE1 ON NON RESTART
+ -------------------------------------------
+ mod_params.F90 :     1930:            1
+ Abort called by computing node            0 at 2023-12-13 01:35:10.554 +0100
+ Execution terminated because of runtime error
+Abort(1) on node 0 (rank 0 in comm 496): application called MPI_Abort(comm=0x84000003, 1) - process 0

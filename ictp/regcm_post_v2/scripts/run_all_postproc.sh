@@ -59,7 +59,7 @@ export lgc_quv=false  #true winds
 ##############################
 
 export odir=$rdir/obs
-hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/scripts/scripts_regcm
+hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm
 
 cp=false
 if [ $n = Europe03 -o $n = WMediterranean ]; then

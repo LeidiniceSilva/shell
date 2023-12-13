@@ -48,10 +48,10 @@ cdo cat clt_${EXP}_*0100.nc clt_${EXP}_${DT}.nc
 echo 
 echo "3. Convert unit"
 
-cdo mulc,86400 pr_${EXP}_${DT}.nc pr_${EXP}_RegCM5_day_${DT}.nc
-cdo subc,273.15 tas_${EXP}_${DT}.nc tas_${EXP}_RegCM5_day_${DT}.nc
-cdo subc,273.15 tasmax_${EXP}_${DT}.nc tasmax_${EXP}_RegCM5_day_${DT}.nc
-cdo subc,273.15 tasmin_${EXP}_${DT}.nc tasmin_${EXP}_RegCM5_day_${DT}.nc
+cdo -b f32 mulc,86400 pr_${EXP}_${DT}.nc pr_${EXP}_RegCM5_day_${DT}.nc
+cdo -b f32 subc,273.15 tas_${EXP}_${DT}.nc tas_${EXP}_RegCM5_day_${DT}.nc
+cdo -b f32 subc,273.15 tasmax_${EXP}_${DT}.nc tasmax_${EXP}_RegCM5_day_${DT}.nc
+cdo -b f32 subc,273.15 tasmin_${EXP}_${DT}.nc tasmin_${EXP}_RegCM5_day_${DT}.nc
 
 echo 
 echo "4. Calculate monthly avg"
@@ -75,6 +75,7 @@ ${BIN}/./regrid clt_${EXP}_RegCM5_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.6627
 echo 
 echo "6. Delete files"
 
+rm *_${EXP}_*0100.nc
 rm *_${DT}.nc
 
 echo
