@@ -6,9 +6,9 @@ WARNING: release_mt library was used but no multi-ep feature was enabled. Please
   This is RegCM 5
    GIT Revision: 5.0.0 compiled at: data : Jan 13 2023  time: 09:27:06
 
- : this run start at  : 2023-12-13 01:34:55+0100
+ : this run start at  : 2023-12-14 14:36:48+0100
  : it is submitted by : mdasilva
- : it is running on   : r171c01s01
+ : it is running on   : r164c09s01
  : it is using        :          960   processors
  : in directory       : 
  /marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cyclon
@@ -20,9 +20,9 @@ WARNING: release_mt library was used but no multi-ep feature was enabled. Please
  Reading model namelist file
  Using default microphysical parameter.
  Initial date of the global simulation:  2023-05-01 00:00:00 UTC        
- Initial date of this run             :  2023-09-01 00:00:00 UTC        
+ Initial date of this run             :  2023-05-01 00:00:00 UTC        
  Final date of this run               :  2023-09-01 00:00:00 UTC        
- Total simulation lenght              :            0  hours
+ Total simulation lenght              :         2952  hours
  Timestep in seconds =   45.000000
  Reading Domain file : 
  /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/input/SAM-3km-cyclone
@@ -32,4 +32,631 @@ WARNING: release_mt library was used but no multi-ep feature was enabled. Please
  Sound waves timestep =     2.500 (factor  6)
  Courant number of horizontal sound waves =    0.3760
  Setting IPCC scenario to SSP585  
- Load GHG for 202309 SSP585
+ Load GHG for 202305 SSP585
+ Create SAV files :  T
+ Create ATM files :  T
+ Create RAD files :  T
+ Create SRF files :  T
+ Create STS files :  T
+ Create SHF files :  F
+ Create LAK files :  F
+ Monthly new files are created
+ Monthly SAV files are written
+ Frequency in hours to create ATM :    6.0
+ Frequency in hours to create RAD :    6.0
+ Frequency in hours to create SRF :    3.0
+ Frequency in hours to create LAK :    6.0
+ Physical Parameterizations
+  Lateral Boundary conditions :  5
+  Semi-Lagrangian Advection   :  0
+  Land cumulus conv. scheme   :  0
+  Ocean cumulus conv. scheme  :  0
+  Moisture schem              :  2
+  Ocean Flux scheme           :  2
+  Zeng roughness formula      :  1
+  Zeng roughness method       :  1
+  Coupling with ocean         :  0
+  Coupling with wave          :  0
+  Coupling with COP           :  0
+  Pressure gradient force     :  0
+  Prescribed LW emissivity    :  0
+  Lake model in BATS          :  1
+  Simulate diurnal sst cycle  :  0
+  Simulate sea ice cover      :  0
+  Enable chem/aerosol model   :  0
+  Large scale LWP as convect. :  1
+  Cloud fraction scheme       :  1
+  Marine stratocumulus        :  0
+  Climate O3 dataset          :  0
+  Climate Aerosol dataset     :  3
+ Boundary Pameterizations
+  Num. of bndy points cross  : 30
+  Num. of bndy points dot    : 30
+  Nudge value high range     :  9.000000
+  Nudge value medium range   :  6.000000
+  Nudge value low range      :  3.000000
+  Nm paramter                : -1.000000
+  Dm paramter                : -1.000000
+ Model Timestep Pameterizations
+  time step for dynamical model in seconds :    45.000000
+  time step for surface   model in seconds :   540.000000
+  time step for cumulus   model in seconds :   270.000000
+  time step for radiation model in seconds :  1620.000000
+  time step for emission  model in seconds : 58320.000000
+ Nudging coefficients F1=    0.040000, F2=    0.000000
+  # Nudging coefficient profile #
+     8.94       8.82       8.70       8.58       8.46       8.34       8.22    
+     8.10       7.98       7.86       7.74       7.62       7.50       7.38    
+     7.26       7.14       7.02       6.90       6.78       6.66       6.54    
+     6.42       6.30       6.18       6.06       5.94       5.82       5.70    
+     5.58       5.46       5.34       5.22       5.10       4.98       4.86    
+     4.74       4.62       4.50       4.38       4.26       4.14       4.02    
+     3.90       3.78       3.66       3.54       3.42       3.30       3.18    
+     3.18       3.06    
+ Model top at    25000.0000000000       m
+ Domain grid parameters:
+  Map Projection        : ROTLLR
+  Dot Grid Full Extent  : 1231x1231x 50
+  Model Grid Spacing    :    3.335968 km
+  Proj Center Latitude  :  -30.000000 deg
+  Proj Center longitude :  303.000000 deg
+  Pole Latitude         :  -70.600000 deg
+  Pole longitude        :  123.940000 deg
+ Holtslag PBL Scheme
+  ricr_ocn     =    0.250000
+  ricr_lnd     =    0.250000
+  zhnew_fac    =    0.250000
+  ifaholt      =  0
+  ifaholtth10  =  2
+  holtth10iter =    1
+ Cloud fraction schemes parameters
+  # of bottom no cloud model levels :  1
+  Maximum relative humidity         :    1.010000
+  Minimum relative humidity         :    0.010000
+  Maximum total cloud cover for rad :    0.750000
+  Conv. CF UMF factor deep cumulus  :    0.140000
+  Conv. CF UMF factor deep cumulus  :    0.140000
+  Conv. CF UMF factor k2            :  500.000000
+  Surface radiation hack            :           F
+  Vavrus-Waliser Arctic cloud fix   :           T
+ Convective Cloud Cover parameters after resolution scaling
+  Maximum Convective Cloud Cover :    1.000000
+  Convective Cloud Water         :    0.000300
+ The surface energy budget is used to calculate the ground temperature.
+ The radiation is computed every   27. minutes.
+ Relaxation boundary conditions (exponential method)
+ READY IC DATA for  2023-05-01 00:00:00 UTC        
+ SEARCH BC data for 2023050106 , step =        0
+ READY  BC from     2023050100  to 2023050106 
+ Read solar forcing total irradiance data...
+ Updating orbit parameters at  2023-05-01 00:00:00 UTC        
+ At  2023-05-01 00:00:00 UTC        
+ JDay    120.00000 solar declination angle =  14.58153609 degrees
+                   solar TSI irradiance    =    1356.9304 W/m^2
+ CLM version: 4.5 - RegCM 5.0.0
+ Attempting to initialize the land model .....
+ Mask given by RegCM model has a total of       787934  land points
+ Attempting to initialize run control settings .....
+ Read in clm_inparm namelist from: 
+ /marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cyclon
+ e/SAM_3km_cyclone_CP_RegCM5_ERA5.in
+ Read in clm_hydrology1_inparm namelist
+ Read in clm_soilhydrology_inparm namelist
+ Successfully initialized run control settings
+ 
+ define run:
+    source                = Community Land Model CLM4.5
+    model_version         = 5.0.0
+    run type              = initial
+    case title            = RegCM driven CLM4.5
+    username              = mdasilva
+    hostname              = r164c09s01
+ input data files:
+    PFT physiology = 
+ /marconi_work/ICT23_ESP/RCMDATA/CLM45/pftdata/pft-physiology.c130503.nc
+    surface data   = 
+ /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/input/SAM-3km-cyclone
+ _CLM45_surface.nc
+    land frac data = 
+ /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/input/SAM-3km-cyclone
+ _DOMAIN000.nc
+    enable_megan_emission                                 :  F
+    enable_urban_landunit                                 :  T
+    enable_more_crop_pft                                  :  F
+    SNICAR optical = 
+ /marconi_work/ICT23_ESP/RCMDATA/CLM45/snicardata/snicar_optics_5bnd_c090915.nc
+    SNICAR aging = 
+ /marconi_work/ICT23_ESP/RCMDATA/CLM45/snicardata/snicar_drdt_bst_fit_60_c070416
+ .nc
+    initial data is from RegCM atm model
+    atmospheric forcing data is from RegCM atm model
+ Large file support for output files is ON
+ model physics parameters:
+    flag for random perturbation test is not set
+    CO2 volume mixing ratio   (umol/mol)   =    355.000000000000     
+    land albedos  (unitless 0-1)   =   0.800000000000000     
+    ice albedos   (unitless 0-1)   =   0.550000000000000     
+    urban air conditioning/heating and wasteheat   = OFF             
+    urban traffic flux   =  F
+    more vertical layers =  F
+    maxpatch_pft         =           17
+    allocate_all_vegpfts =  T
+    perchroot (PWS based on unfrozen layers only) =  F
+    perchroot (PWS based on time-integrated active layer only) =  F
+ 
+ Lake Model Namelists:
+ Hostetler eddy increase low    :    25.0000000000000     
+ Hostetler eddy increase factor :    10.0000000000000     
+ Albedo melting lakes (visible) :  0.100000000000000     
+ Albedo melting lakes (NIR)     :  0.100000000000000     
+ Attempting to read ldomain from 
+ /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/input/SAM-3km-cyclone
+ _DOMAIN000.nc
+   domain_check set       = domain_set
+   domain_check decomped  =  T
+   domain_check ns        =      1507984
+   domain_check ni,nj     =         1228        1228
+   domain_check clmlevel  = gridcell
+   domain_check nbeg,nend =            1         820
+   domain_check lonc      =   -74.6807960876584       -66.1356542037614     
+   domain_check latc      =   -48.1949975808358       -47.5746824441787     
+   domain_check mask      =            1           1
+   domain_check frac      =    100.000000000000        100.000000000000     
+   domain_check topo      =    20.8630202024171        1853.32043752779     
+   domain_check area      =    9.73126675810302        9.73973559145505     
+   domain_check pftm      =            1           1
+  
+  Reading in urban input data from surface data file ...
+  UrbanInput : 
+ /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/input/SAM-3km-cyclone
+ _CLM45_surface.nc
+  Sucessfully read urban input data
+ 
+ Attempting to read PFT physiological data .....
+ Successfully read PFT physiological data
+ Attempting to read surface boundary data .....
+ Checked LAT/LON compliance
+ Successfully read surface boundary data
+ 
+  Surface Grid Characteristics
+    total number of gridcells =       787934
+    total number of landunits =      1656681
+    total number of columns   =      2695726
+    total number of pfts      =     13720460
+  
+ ---clm_ptrs_check:
+    clm_ptrs_check: g index ranges - OK
+    clm_ptrs_check: l index ranges - OK
+    clm_ptrs_check: c index ranges - OK
+    clm_ptrs_check: p index ranges - OK
+    clm_ptrs_check: g mono increasing - OK
+    clm_ptrs_check: l mono increasing - OK
+    clm_ptrs_check: c mono increasing - OK
+    clm_ptrs_check: p mono increasing - OK
+    clm_ptrs_check: tree consistent - OK
+  
+ Attempting to initialize time invariant variables
+ Attempting to read soil color, sand and clay boundary data .....
+ WARNING:: ETALAKE not found on surface data set.
+ All lake columns will have eta set equal to default value
+ WARNING:: LAKEFETCH not found on surface data set.
+ All lake columns will have fetch set equal to default value
+ Successfully read fmax, soil color, sand and clay boundary data
+ 
+ Attempting to read organic matter data .....
+  organicrd : 
+ /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/input/SAM-3km-cyclone
+ _CLM45_surface.nc
+ Successfully read organic matter data
+ 
+  # zsoi #
+    0.710E-02  0.279E-01  0.623E-01  0.119      0.212      0.366      0.620    
+     1.04       1.73       2.86       4.74       7.83       12.9       21.3    
+     21.3       35.2    
+  # zisoi #
+     0.00      0.175E-01  0.451E-01  0.906E-01  0.166      0.289      0.493    
+    0.829       1.38       2.30       3.80       6.28       10.4       17.1    
+     17.1       28.3       42.1    
+  # dzsoi #
+    0.175E-01  0.276E-01  0.455E-01  0.750E-01  0.124      0.204      0.336    
+    0.554      0.913       1.51       2.48       4.09       6.75       11.1    
+     11.1       13.9    
+ dzsoi_decomp   1.00000000000000     
+ Set    17 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     8 100% special land-units points to zero slope
+ Set    30 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    21 100% special land-units points to zero slope
+ Set     7 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set    18 100% special land-units points to zero slope
+ Set    14 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     7 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     6 100% special land-units points to zero slope
+ Set     6 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    12 100% special land-units points to zero slope
+ Set    25 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set    30 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Attempting to read snow optical properties .....
+ Set     1 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ SnowOptics_init : 
+ /marconi_work/ICT23_ESP/RCMDATA/CLM45/snicardata/snicar_optics_5bnd_c090915.nc
+ Set     4 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    35 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    40 100% special land-units points to zero slope
+ Set    70 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set    13 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    31 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     6 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Successfully read snow optical properties
+ Attempting to read snow aging parameters .....
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Successfully read snow aging properties
+ Successfully initialized time invariant variables
+ CLM_hist_printflds : number of master fields =          241
+ Setting initial data to non-spun up values
+ Attempting to initialize time invariant variables for lakes
+ CLM timestep appears to differ from 1800s. 
+ Adjusting minimum snow layer thickness over lakes to maintain stability.
+ New minimum thickness is   2.190890230020665E-002 .
+ Successfully initialized time invariant variables for lakes
+ Setting initial data to non-spun up values for lake points
+ Initializing clm2 history files
+ There will be a total of            1  history tapes
+ History tape            1  write frequency is MONTHLY
+ All fields on history tape            1  are grid averaged
+ Output precision on history tape            1 =           2
+ hist tape =            1  written with dov2xy=  T
+ Successfully initialized clm2 history files
+ Successfully initialized the land model
+ begin initial run at:  2023-05-01 00:00:00 UTC
+ Attempting to read monthly vegetation data .....
+ At  2023-05-01 00:00:00 UTC
+ Month =            5  Day =            1
+ Reading months :            4           5
+ Successfully read monthly vegetation data for
+ month            5
+ Opening new output file 
+ /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/output//SAM-3km-cyclo
+ ne_ATM.2023050100.nc
+ Opening new output file 
+ /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/output//SAM-3km-cyclo
+ ne_SRF.2023050100.nc
+ Opening new output file 
+ /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/output//SAM-3km-cyclo
+ ne_STS.2023050100.nc
+ Opening new output file 
+ /marconi/home/userexternal/mdasilva/user/mdasilva/cyclone/output//SAM-3km-cyclo
+ ne_RAD.2023050100.nc
+ ATM variables written at  2023-05-01 00:00:00 UTC        
+  # Ozone profile at (3,3) #
+    0.884E-05  0.699E-05  0.602E-05  0.492E-05  0.377E-05  0.282E-05  0.209E-05
+    0.158E-05  0.124E-05  0.984E-06  0.761E-06  0.572E-06  0.428E-06  0.322E-06
+    0.253E-06  0.206E-06  0.170E-06  0.147E-06  0.129E-06  0.115E-06  0.104E-06
+    0.941E-07  0.867E-07  0.809E-07  0.753E-07  0.717E-07  0.682E-07  0.649E-07
+    0.629E-07  0.609E-07  0.591E-07  0.575E-07  0.564E-07  0.553E-07  0.544E-07
+    0.534E-07  0.526E-07  0.521E-07  0.517E-07  0.513E-07  0.509E-07  0.505E-07
+    0.501E-07  0.498E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07
+    0.496E-07  0.496E-07  0.496E-07
+ Updating aerosol optical properties...
+ SRF variables written at  2023-05-01 03:00:00 UTC        
+ $$$  2023-05-01 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.39  498.50
+ ATM variables written at  2023-05-01 06:00:00 UTC        
+ SRF variables written at  2023-05-01 06:00:00 UTC        
+ RAD variables written at  2023-05-01 06:00:00 UTC        
+ SEARCH BC data for 2023050112 , step =      480
+ READY  BC from     2023050106  to 2023050112 
+ $$$  2023-05-01 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.03  498.23
+ SRF variables written at  2023-05-01 09:00:00 UTC        
+ $$$  2023-05-01 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.55  497.89
+ ATM variables written at  2023-05-01 12:00:00 UTC        
+ SRF variables written at  2023-05-01 12:00:00 UTC        
+ RAD variables written at  2023-05-01 12:00:00 UTC        
+ SEARCH BC data for 2023050118 , step =      960
+ READY  BC from     2023050112  to 2023050118 
+ $$$  2023-05-01 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.55  497.63
+ SRF variables written at  2023-05-01 15:00:00 UTC        
+ $$$  2023-05-01 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.30  497.38
+ ATM variables written at  2023-05-01 18:00:00 UTC        
+ SRF variables written at  2023-05-01 18:00:00 UTC        
+ RAD variables written at  2023-05-01 18:00:00 UTC        
+ SEARCH BC data for 2023050200 , step =     1440
+ READY  BC from     2023050118  to 2023050200 
+ $$$  2023-05-01 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.87  497.11
+ SRF variables written at  2023-05-01 21:00:00 UTC        
+ $$$  2023-05-01 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.59  496.87
+ At  2023-05-02 00:00:00 UTC        
+ JDay    121.00000 solar declination angle =  14.88846431 degrees
+                   solar TSI irradiance    =    1356.9304 W/m^2
+ ATM variables written at  2023-05-02 00:00:00 UTC        
+ SRF variables written at  2023-05-02 00:00:00 UTC        
+ STS variables written at  2023-05-02 00:00:00 UTC        
+ RAD variables written at  2023-05-02 00:00:00 UTC        
+ SEARCH BC data for 2023050206 , step =     1920
+ READY  BC from     2023050200  to 2023050206 
+ $$$  2023-05-02 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.11  496.77
+ Updating aerosol optical properties...
+ SRF variables written at  2023-05-02 03:00:00 UTC        
+ $$$  2023-05-02 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.51  496.39
+ ATM variables written at  2023-05-02 06:00:00 UTC        
+ SRF variables written at  2023-05-02 06:00:00 UTC        
+ RAD variables written at  2023-05-02 06:00:00 UTC        
+ SEARCH BC data for 2023050212 , step =     2400
+ READY  BC from     2023050206  to 2023050212 
+ $$$  2023-05-02 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.74  495.67
+ SRF variables written at  2023-05-02 09:00:00 UTC        
+ $$$  2023-05-02 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.41  495.06
+ ATM variables written at  2023-05-02 12:00:00 UTC        
+ SRF variables written at  2023-05-02 12:00:00 UTC        
+ RAD variables written at  2023-05-02 12:00:00 UTC        
+ SEARCH BC data for 2023050218 , step =     2880
+ READY  BC from     2023050212  to 2023050218 
+ $$$  2023-05-02 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.12  494.70
+ SRF variables written at  2023-05-02 15:00:00 UTC        
+ $$$  2023-05-02 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.50  494.33
+ ATM variables written at  2023-05-02 18:00:00 UTC        
+ SRF variables written at  2023-05-02 18:00:00 UTC        
+ RAD variables written at  2023-05-02 18:00:00 UTC        
+ SEARCH BC data for 2023050300 , step =     3360
+ READY  BC from     2023050218  to 2023050300 
+ $$$  2023-05-02 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.96  493.92
+ SRF variables written at  2023-05-02 21:00:00 UTC        
+ $$$  2023-05-02 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.13  493.39
+ At  2023-05-03 00:00:00 UTC        
+ JDay    122.00000 solar declination angle =  15.19129834 degrees
+                   solar TSI irradiance    =    1356.9304 W/m^2
+ ATM variables written at  2023-05-03 00:00:00 UTC        
+ SRF variables written at  2023-05-03 00:00:00 UTC        
+ STS variables written at  2023-05-03 00:00:00 UTC        
+ RAD variables written at  2023-05-03 00:00:00 UTC        
+ SEARCH BC data for 2023050306 , step =     3840
+ READY  BC from     2023050300  to 2023050306 
+ $$$  2023-05-03 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.49  493.11
+ Updating aerosol optical properties...
+ SRF variables written at  2023-05-03 03:00:00 UTC        
+ $$$  2023-05-03 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.09  492.45
+ ATM variables written at  2023-05-03 06:00:00 UTC        
+ SRF variables written at  2023-05-03 06:00:00 UTC        
+ RAD variables written at  2023-05-03 06:00:00 UTC        
+ SEARCH BC data for 2023050312 , step =     4320
+ READY  BC from     2023050306  to 2023050312 
+ $$$  2023-05-03 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.52  491.62
+ SRF variables written at  2023-05-03 09:00:00 UTC        
+ $$$  2023-05-03 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.89  490.98
+ ATM variables written at  2023-05-03 12:00:00 UTC        
+ SRF variables written at  2023-05-03 12:00:00 UTC        
+ RAD variables written at  2023-05-03 12:00:00 UTC        
+ SEARCH BC data for 2023050318 , step =     4800
+ READY  BC from     2023050312  to 2023050318 
+ $$$  2023-05-03 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.46  490.86
+ SRF variables written at  2023-05-03 15:00:00 UTC        
+ $$$  2023-05-03 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.12  490.57
+ ATM variables written at  2023-05-03 18:00:00 UTC        
+ SRF variables written at  2023-05-03 18:00:00 UTC        
+ RAD variables written at  2023-05-03 18:00:00 UTC        
+ SEARCH BC data for 2023050400 , step =     5280
+ READY  BC from     2023050318  to 2023050400 
+ $$$  2023-05-03 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.72  490.65
+ SRF variables written at  2023-05-03 21:00:00 UTC        
+ $$$  2023-05-03 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.45  490.53
+ At  2023-05-04 00:00:00 UTC        
+ JDay    123.00000 solar declination angle =  15.48995030 degrees
+                   solar TSI irradiance    =    1356.9304 W/m^2
+ ATM variables written at  2023-05-04 00:00:00 UTC        
+ SRF variables written at  2023-05-04 00:00:00 UTC        
+ STS variables written at  2023-05-04 00:00:00 UTC        
+ RAD variables written at  2023-05-04 00:00:00 UTC        
+ SEARCH BC data for 2023050406 , step =     5760
+ READY  BC from     2023050400  to 2023050406 
+ $$$  2023-05-04 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.68  490.14
+ Updating aerosol optical properties...
+ SRF variables written at  2023-05-04 03:00:00 UTC        
+ $$$  2023-05-04 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.47  489.47
+ ATM variables written at  2023-05-04 06:00:00 UTC        
+ SRF variables written at  2023-05-04 06:00:00 UTC        
+ RAD variables written at  2023-05-04 06:00:00 UTC        
+ SEARCH BC data for 2023050412 , step =     6240
+ READY  BC from     2023050406  to 2023050412 
+ $$$  2023-05-04 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.23  488.92
+ SRF variables written at  2023-05-04 09:00:00 UTC        
+ $$$  2023-05-04 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.35  488.46
+ ATM variables written at  2023-05-04 12:00:00 UTC        
+ SRF variables written at  2023-05-04 12:00:00 UTC        
+ RAD variables written at  2023-05-04 12:00:00 UTC        
+ SEARCH BC data for 2023050418 , step =     6720
+ READY  BC from     2023050412  to 2023050418 
+ $$$  2023-05-04 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.46  488.50
+ SRF variables written at  2023-05-04 15:00:00 UTC        
+ $$$  2023-05-04 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.30  488.65
+ ATM variables written at  2023-05-04 18:00:00 UTC        
+ SRF variables written at  2023-05-04 18:00:00 UTC        
+ RAD variables written at  2023-05-04 18:00:00 UTC        
+ SEARCH BC data for 2023050500 , step =     7200
+ READY  BC from     2023050418  to 2023050500 
+ $$$  2023-05-04 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.15  489.23
+ SRF variables written at  2023-05-04 21:00:00 UTC        
+ $$$  2023-05-04 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.76  489.77
+ At  2023-05-05 00:00:00 UTC        
+ JDay    124.00000 solar declination angle =  15.78433288 degrees
+                   solar TSI irradiance    =    1356.9304 W/m^2
+ ATM variables written at  2023-05-05 00:00:00 UTC        
+ SRF variables written at  2023-05-05 00:00:00 UTC        
+ STS variables written at  2023-05-05 00:00:00 UTC        
+ RAD variables written at  2023-05-05 00:00:00 UTC        
+ SEARCH BC data for 2023050506 , step =     7680
+ READY  BC from     2023050500  to 2023050506 
+ $$$  2023-05-05 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.37  489.67
+ Updating aerosol optical properties...
+ SRF variables written at  2023-05-05 03:00:00 UTC        
+ $$$  2023-05-05 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.28  489.35
+ ATM variables written at  2023-05-05 06:00:00 UTC        
+ SRF variables written at  2023-05-05 06:00:00 UTC        
+ RAD variables written at  2023-05-05 06:00:00 UTC        
+ SEARCH BC data for 2023050512 , step =     8160
+ READY  BC from     2023050506  to 2023050512 
+ $$$  2023-05-05 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.80  488.90
+ SRF variables written at  2023-05-05 09:00:00 UTC        
+ $$$  2023-05-05 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.33  488.82
+ ATM variables written at  2023-05-05 12:00:00 UTC        
+ SRF variables written at  2023-05-05 12:00:00 UTC        
+ RAD variables written at  2023-05-05 12:00:00 UTC        
+ SEARCH BC data for 2023050518 , step =     8640
+ READY  BC from     2023050512  to 2023050518 
+ $$$  2023-05-05 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.65  489.25
+ SRF variables written at  2023-05-05 15:00:00 UTC        
+ $$$  2023-05-05 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.05  490.26
+ ATM variables written at  2023-05-05 18:00:00 UTC        
+ SRF variables written at  2023-05-05 18:00:00 UTC        
+ RAD variables written at  2023-05-05 18:00:00 UTC        
+ SEARCH BC data for 2023050600 , step =     9120
+ READY  BC from     2023050518  to 2023050600 
+ $$$  2023-05-05 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.34  491.45
+ SRF variables written at  2023-05-05 21:00:00 UTC        
+ $$$  2023-05-05 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.99  492.05
+ At  2023-05-06 00:00:00 UTC        
+ JDay    125.00000 solar declination angle =  16.07435933 degrees
+                   solar TSI irradiance    =    1356.9304 W/m^2
+ ATM variables written at  2023-05-06 00:00:00 UTC        
+ SRF variables written at  2023-05-06 00:00:00 UTC        
+ STS variables written at  2023-05-06 00:00:00 UTC        
+ RAD variables written at  2023-05-06 00:00:00 UTC        
+ SEARCH BC data for 2023050606 , step =     9600
+ READY  BC from     2023050600  to 2023050606 
+ $$$  2023-05-06 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.47  492.37
+ Updating aerosol optical properties...
+ SRF variables written at  2023-05-06 03:00:00 UTC        
+ $$$  2023-05-06 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.83  491.98
+ ATM variables written at  2023-05-06 06:00:00 UTC        
+ SRF variables written at  2023-05-06 06:00:00 UTC        
+ RAD variables written at  2023-05-06 06:00:00 UTC        
+ SEARCH BC data for 2023050612 , step =    10080
+ READY  BC from     2023050606  to 2023050612 
+ $$$  2023-05-06 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.18  491.63
