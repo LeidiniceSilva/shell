@@ -24,8 +24,7 @@ fi
 
 this_domain=$1
 this_config=$2
-dep="" #to be used only with run_postproc=2
-#yrs=$3
+dep="" #to be used only with run_postproc=2 #yrs=$3
 n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
@@ -34,8 +33,8 @@ export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km
 yrs=2018-2018
 email="mda_silv@ictp.it"
 
-run_postproc="1 0 0 0 0 0 0 0 0 0"    # sigma2p
-#run_postproc="0 1 0 0 0 0 0 0 0 0"   # bias
+#run_postproc="1 0 0 0 0 0 0 0 0 0"   # sigma2p
+run_postproc="0 1 0 0 0 0 0 0 0 0"    # bias
 #run_postproc="0 0 0 0 0 0 0 0 0 0 1" # bias part2
 #run_postproc="0 1 1 1 1 1 1 0 0 0"   # all
 #run_postproc="0 0 0 0 1 0 0 0 0 0"   # pdf

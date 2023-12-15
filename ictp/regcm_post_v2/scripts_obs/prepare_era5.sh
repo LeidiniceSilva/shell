@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OBSDIR=/marconi_work/ICT23_ESP/clu/OBS
+OBSDIR=/marconi/home/userexternal/mdasilva/OBS
 
 {
 set -eo pipefail
@@ -10,14 +10,11 @@ CDO(){
 
 set -a
 obs=ERA5
-ys=$1
-#ys=2018-2021
+hdir=$OBSDIR/$obs
+ys=2018-2021
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
-hdir=$OBSDIR/$obs
- vars="clt pr tas tasmax tasmin"
-#vars="pr tas tasmax tasmin"
-#vars="clt"
+vars="clt pr tas tasmax tasmin"
 seas="DJF MAM JJA SON"
 seasdays=( 30.5 30.5 30.5 30.5 )
 is=0

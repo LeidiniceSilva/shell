@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# OBSDIR=/marconi/home/userexternal/ggiulian/esp/ggiulian/OBS
-OBSDIR=/marconi_work/ICT23_ESP/ggiulian/OBS
-wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/postproc
+BSDIR=/marconi/home/userexternal/mdasilva/OBS
+wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/obs
 cd $wdir
 
 {
@@ -13,10 +12,10 @@ CDO(){
 
 set -a
 obs=GPCC
-ys=$1 #1999-1999
+hdir=$OBSDIR/$obs
+ys=2018-2021
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
-hdir=$OBSDIR/$obs
 vars="pr"
 for v in $vars; do
   [[ $fyr -lt 1982 ]] && continue
@@ -28,5 +27,4 @@ for v in $vars; do
   eval CDO chname,$vc,$v -selyear,$fyr/$lyr $tf $yf
 done
 echo "Done."
-
 }

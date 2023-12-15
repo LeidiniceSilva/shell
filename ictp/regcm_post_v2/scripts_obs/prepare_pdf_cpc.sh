@@ -1,7 +1,7 @@
 #!/bin/bash
 
-OBSDIR=/marconi/home/userexternal/ggiulian/esp/ggiulian/OBS
-wdir=/marconi_scratch/userexternal/jciarlo0/ERA5/obs
+OBSDIR=/marconi/home/userexternal/mdasilva/OBS
+wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/obs
 cd $wdir
 
 {
@@ -11,10 +11,10 @@ CDO(){
 }
 
 obs=CPC
-ys=$1 #2000-2004
+hdir=$OBSDIR/$obs
+ys=2018-2021
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
-hdir=$OBSDIR/$obs
 vars="pr"
 for v in $vars; do
   [[ $fyr -lt 1979 ]] && continue
@@ -25,5 +25,4 @@ for v in $vars; do
   eval CDO chname,$vc,$v -selvar,$vc -selyear,$fyr/$lyr $sf $yf
 done
 echo "Done."
-
 }

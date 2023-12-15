@@ -178,9 +178,9 @@
 ! Model start/restart control
 !
  &restartparam
- ifrest  = .false.,    ! If a restart
+ ifrest  = .true.,     ! If a restart
  mdate0  = 2023050100, ! Global start (is globidate1)
- mdate1  = 2023050100, ! Start date of this run
+ mdate1  = 2023060100, ! Start date of this run
  mdate2  = 2023090100, ! End date for this run 
  /
  

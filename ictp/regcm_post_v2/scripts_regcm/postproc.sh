@@ -6,7 +6,6 @@
 #SBATCH -p skl_usr_prod
 #SBATCH --qos=qos_prio
 
-
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 ##############################
@@ -15,9 +14,9 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 n=$1
 path=$2-$1
-rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5
-odir=$4 #/marconi_scratch/userexternal/jciarlo0/ERA5/obs
-ys=$5 #1999-1999
+rdir=$3 
+odir=$4 
+ys=$5 
 
 ##############################
 ####### end of inputs ########
@@ -93,7 +92,7 @@ for s in $seas ; do
       [[ $v = pr     ]] && o=("mswep" "cpc" "gpcc" "aphro" "cn05.1") && res=("0.1" "0.1" "0.25" "0.25" "0.25")
       [[ $v = tas    ]] && o=("cru" "cn05.1") && res=("0.5" "0.25")
     else
-      [[ $v = pr     ]] && o=("mswep" "cpc" "gpcc" 'cru') && res=("0.1" "0.1" "0.25" "0.5")
+      [[ $v = pr     ]] && o=("cpc" "cru") && res=("0.25" "0.5")
       [[ $v = tas    ]] && o=("cru") && res=("0.5")
     fi
     [[ $v = tasmax ]] && o=("cru") && res=("0.5")
@@ -191,8 +190,8 @@ for s in $seas ; do
       mfr=$pdir/$( basename $mof .nc )_${n}_${this_res}.nc
       grid=$odir/${n}_${this_o^^}.grid
       if [ ! -f $grid ]; then
-        ggiuldir=/marconi_work/ICT23_ESP/ggiulian/CORDEX-RegCM-Submit-main/scripts
-        python3 $ggiuldir/griddes_ll.py $mof $this_res > $grid
+        mdasilvadir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm
+        python3 $mdasilvadir/griddes_ll.py $mof $this_res > $grid
       fi
       if [ $v = pr ]
       then
