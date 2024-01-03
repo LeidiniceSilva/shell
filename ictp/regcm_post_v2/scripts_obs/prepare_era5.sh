@@ -1,6 +1,8 @@
 #!/bin/bash
 
 OBSDIR=/marconi/home/userexternal/mdasilva/OBS
+wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/obs
+cd $wdir
 
 {
 set -eo pipefail
@@ -19,11 +21,11 @@ seas="DJF MAM JJA SON"
 seasdays=( 30.5 30.5 30.5 30.5 )
 is=0
 for v in $vars; do
-  [[ $v = clt     ]] && vc=clt
-  [[ $v = pr      ]] && vc=pr
-  [[ $v = tas     ]] && vc=tas
-  [[ $v = tasmax  ]] && vc=tasmax
-  [[ $v = tasmin  ]] && vc=tasmin
+  [[ $v = clt     ]] && vc=tcc
+  [[ $v = pr      ]] && vc=tp
+  [[ $v = tas     ]] && vc=t2m
+  [[ $v = tasmax  ]] && vc=mx2t
+  [[ $v = tasmin  ]] && vc=mn2t
   sf=$hdir/${vc}_${obs}_${ys}.nc
   yf=${v}_${obs}_${ys}.nc
   eval CDO selyear,$fyr/$lyr $sf $yf
@@ -31,15 +33,15 @@ for v in $vars; do
     echo "## Processing $v $ys $s"
     mf=${v}_${obs}_${ys}_${s}_mean.nc
 	if [ $v = pr ]; then # m/day to mm/day
-		CDO mulc,1000 -timmean -selseas,$s -selyear,$fyr/$lyr \
+		CDO -b f32 mulc,1000 -timmean -selseas,$s -selyear,$fyr/$lyr \
 			-chname,$vc,$v -selvar,$vc $sf $mf
 		ncatted -O -a units,pr,m,c,mm/day $mf
 	elif [ $v = clt ]; then # no unit conversion
-		CDO mulc,100 -timmean -selseas,$s -selyear,$fyr/$lyr \
+		CDO -b f32 mulc,100 -timmean -selseas,$s -selyear,$fyr/$lyr \
 			-chname,$vc,$v -selvar,$vc $sf $mf
 		ncatted -O -a units,clt,m,c,% $mf
 	else # tas, tasmax, tasmin: K to degree C
-		CDO subc,273.15 -timmean -selseas,$s -selyear,$fyr/$lyr \
+		CDO -b f32 subc,273.15 -timmean -selseas,$s -selyear,$fyr/$lyr \
 			-chname,$vc,$v -selvar,$vc $sf $mf
 		ncatted -O -a units,$v,m,c,Celsius $mf
 	fi
@@ -48,5 +50,4 @@ for v in $vars; do
   rm $yf
 done
 echo "Done."
-
 }

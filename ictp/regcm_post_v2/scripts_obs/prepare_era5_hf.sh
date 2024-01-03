@@ -1,6 +1,8 @@
 #!/bin/bash
 
-OBSDIR=/marconi_work/ICT23_ESP/clu/OBS
+BSDIR=/marconi/home/userexternal/mdasilva/OBS
+wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3m/obs
+cd $wdir
 
 {
 set -eo pipefail
@@ -10,13 +12,11 @@ CDO(){
 
 set -a
 obs=ERA5
-ys=$1
+ys=2018-2021
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 hdir=$OBSDIR/$obs
-#vars="hfss hfls"
-vars="hfss"
-#vars="hfls"
+vars="hfss hfls"
 seas="DJF MAM JJA SON"
 seasdays=( 30.5 30.5 30.5 30.5 )
 is=0
@@ -38,5 +38,4 @@ for v in $vars; do
   rm $yf
 done
 echo "Done."
-
 }
