@@ -18,7 +18,7 @@ set -eo pipefail
 if [ $# -ne 2 ]
 then
    echo "Please provide Domain name and conf name in $rdir"
-   echo 'Example: $0 Africa NoTo' # 2000-2001' # "0 0 0 0 1"'
+   echo "Example: $0 Africa NoTo"
    exit 1
 fi
 
@@ -29,8 +29,8 @@ n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
 
-export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km
-yrs=2018-2021
+export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/cyclone
+yrs=2018-2018
 email="mda_silv@ictp.it"
 
 run_postproc="1 0 0 0 0 0 0 0 0 0"   # sigma2p
@@ -68,8 +68,6 @@ fi
 set -eo pipefail
 # postproc files
 mn=postproc # main script name
-#postproc=("$mn" "${mn}_pdfs" "${mn}_p99" "${mn}_vert" "${mn}_quv")
-#postproc=("submit-sigma" "$mn" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs" "${mn}_frq-int" "${mn}_p99" "${mn}_vert" "${mn}_vert_daynight" "${mn}_quv")
 postproc=("submit-sigma" "${mn}" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs_v2" "${mn}_frq-int" "${mn}_p99" "${mn}_vert" "${mn}_vert_daynight" "${mn}_quv_v2" "${mn}_part2")
 nrun=$(( ${#postproc[@]} - 1 ))
 
