@@ -14,7 +14,7 @@ EXP="SAM-3km"
 DT="2018-2021"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/NoTo-SAM"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/postproc"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/post"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
