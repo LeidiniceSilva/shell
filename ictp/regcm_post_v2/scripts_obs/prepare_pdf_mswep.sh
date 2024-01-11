@@ -12,10 +12,10 @@ CDO(){
 
 set -a
 obs=MSWEP
+hdir=$OBSDIR/$obs
 ys=$1 #1999-1999
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
-hdir=$OBSDIR/$obs
 vars="pr"
 is=0
 for v in $vars; do

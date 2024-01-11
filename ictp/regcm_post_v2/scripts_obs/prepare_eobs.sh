@@ -11,10 +11,10 @@ CDO(){
 }
 
 obs=EOBS
+hdir=$OBSDIR/$obs
 ys=$1 #1980-1989
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
-hdir=$OBSDIR/$obs
 vars="pr tas tasmax tasmin"
 seas="DJF MAM JJA SON"
 is=0

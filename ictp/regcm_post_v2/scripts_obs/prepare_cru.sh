@@ -12,7 +12,6 @@ CDO(){
 
 obs=CRU
 hdir=$OBSDIR/$obs
-
 ys=2018-2021
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )

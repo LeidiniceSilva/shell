@@ -14,7 +14,7 @@ EXP="SAM-3km"
 DT="2018-2021"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/NoTo-SAM/pressure"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/postproc"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/post"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
@@ -24,7 +24,7 @@ echo ${DIR_OUT}
 echo 
 echo "1. Select variable"
 
-for YEAR in `seq -w 2018 2018`; do
+for YEAR in `seq -w 2018 2021`; do
     for MON in `seq -w 01 12`; do
 
     	cdo selname,cli ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc cli_${EXP}_${YEAR}${MON}0100.nc
@@ -70,9 +70,9 @@ ${BIN}/./regrid cl_${EXP}_RegCM5_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277
 echo 
 echo "5. Delete files"
 
-#rm *_${EXP}_*0100.nc
-#rm *_${EXP}_${DT}.nc
-#rm *_${EXP}_RegCM5_mon_${DT}.nc
+rm *_${EXP}_*0100.nc
+rm *_${EXP}_${DT}.nc
+rm *_${EXP}_RegCM5_mon_${DT}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

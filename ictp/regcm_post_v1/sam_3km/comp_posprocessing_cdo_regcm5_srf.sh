@@ -24,7 +24,7 @@ echo ${DIR_OUT}
 echo 
 echo "1. Select variable"
 
-for YEAR in `seq -w 2018 2018`; do
+for YEAR in `seq -w 2018 2021`; do
     for MON in `seq -w 01 12`; do
 
     	cdo selname,pr ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc pr_${EXP}_${YEAR}${MON}0100.nc

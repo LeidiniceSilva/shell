@@ -11,16 +11,14 @@ CDO(){
 }
 
 obs=SWE
+hdir=$OBSDIR/${obs}_SNOW
 ys=1999-1999
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
-hdir=$OBSDIR/${obs}_SNOW
-
 v="snw"
 seas="DJF MAM JJA SON"
 sf=$( eval ls ${hdir}/SWE_Blended5_1x1daily.{${fyr}..${lyr}}.v2.nc )
 of=${v}_${obs}_${ys}.nc
-
 CDO mergetime $sf $of
 for s in $seas ; do
   echo "## Processing $v $ys $s"
