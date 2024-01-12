@@ -5,13 +5,15 @@
 #__date__        = 'Nov 20, 2023'
 #__description__ = 'Posprocessing the RegCM5 output with CDO'
  
-
-echo
-echo "--------------- INIT POSPROCESSING MODEL ----------------"
+{
+set -eo pipefail
+CDO(){
+  cdo -O -L -f nc4 -z zip $@
+}
 
 EXP="SAM-3km"
-
 DT="2018-2021"
+SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/NoTo-SAM"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/post"
@@ -21,24 +23,23 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
+echo
+echo "--------------- INIT POSPROCESSING MODEL ----------------"
+
 echo 
 echo "1. Select variable"
-
 for YEAR in `seq -w 2018 2021`; do
     for MON in `seq -w 01 12`; do
-
     	cdo selname,pr ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc pr_${EXP}_${YEAR}${MON}0100.nc
     	cdo selname,tas ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc tas_${EXP}_${YEAR}${MON}0100.nc
     	cdo selname,tasmax ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc tasmax_${EXP}_${YEAR}${MON}0100.nc
     	cdo selname,tasmin ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc tasmin_${EXP}_${YEAR}${MON}0100.nc
     	cdo selname,clt ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc clt_${EXP}_${YEAR}${MON}0100.nc
-    	    
     done
 done	
 
 echo 
 echo "2. Concatenate data"
-
 cdo cat pr_${EXP}_*0100.nc pr_${EXP}_${DT}.nc 
 cdo cat tas_${EXP}_*0100.nc tas_${EXP}_${DT}.nc 
 cdo cat tasmax_${EXP}_*0100.nc tasmax_${EXP}_${DT}.nc 
@@ -47,7 +48,6 @@ cdo cat clt_${EXP}_*0100.nc clt_${EXP}_${DT}.nc
 
 echo 
 echo "3. Convert unit"
-
 cdo -b f32 mulc,86400 pr_${EXP}_${DT}.nc pr_${EXP}_RegCM5_day_${DT}.nc
 cdo -b f32 subc,273.15 tas_${EXP}_${DT}.nc tas_${EXP}_RegCM5_day_${DT}.nc
 cdo -b f32 subc,273.15 tasmax_${EXP}_${DT}.nc tasmax_${EXP}_RegCM5_day_${DT}.nc
@@ -55,7 +55,6 @@ cdo -b f32 subc,273.15 tasmin_${EXP}_${DT}.nc tasmin_${EXP}_RegCM5_day_${DT}.nc
 
 echo 
 echo "4. Calculate monthly avg"
-
 cdo monmean pr_${EXP}_RegCM5_day_${DT}.nc pr_${EXP}_RegCM5_mon_${DT}.nc
 cdo monmean tas_${EXP}_RegCM5_day_${DT}.nc tas_${EXP}_RegCM5_mon_${DT}.nc
 cdo monmean tasmax_${EXP}_RegCM5_day_${DT}.nc tasmax_${EXP}_RegCM5_mon_${DT}.nc
@@ -64,7 +63,6 @@ cdo monmean clt_${EXP}_${DT}.nc clt_${EXP}_RegCM5_mon_${DT}.nc
 
 echo 
 echo "5. Regrid output"
-
 ${BIN}/./regrid pr_${EXP}_RegCM5_day_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 ${BIN}/./regrid pr_${EXP}_RegCM5_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 ${BIN}/./regrid tas_${EXP}_RegCM5_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
@@ -72,11 +70,22 @@ ${BIN}/./regrid tasmax_${EXP}_RegCM5_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.6
 ${BIN}/./regrid tasmin_${EXP}_RegCM5_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 ${BIN}/./regrid clt_${EXP}_RegCM5_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
-echo 
-echo "6. Delete files"
+echo
+echo "6. Seasonal avg"
+for SEASON in ${SEASON_LIST[@]}; do
+    CDO -timmean -selseas,${SEASON} pr_${EXP}_RegCM5_mon_${DT}_lonlat.nc pr_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+    CDO -timmean -selseas,${SEASON} tas_${EXP}_RegCM5_mon_${DT}_lonlat.nc tas_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+    CDO -timmean -selseas,${SEASON} tasmax_${EXP}_RegCM5_mon_${DT}_lonlat.nc tasmax_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+    CDO -timmean -selseas,${SEASON} tasmin_${EXP}_RegCM5_mon_${DT}_lonlat.nc tasmin_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+    CDO -timmean -selseas,${SEASON} clt_${EXP}_RegCM5_mon_${DT}_lonlat.nc clt_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+done
 
+echo 
+echo "7. Delete files"
 rm *_${EXP}_*0100.nc
 rm *_${DT}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
+
+}
