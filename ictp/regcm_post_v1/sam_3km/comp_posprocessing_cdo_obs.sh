@@ -11,7 +11,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DATASET="ERA5"
+DATASET="CPC"
 
 EXP="SAM-3km"
 DT="2018-2021"
@@ -57,8 +57,8 @@ echo
 echo "1.4. Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} precip_${EXP}_${DATASET}_mon_${DT}_lonlat.nc precip_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-    CDO -timmean -selseas,${SEASON} tmax_${EXP}_${DATASET}_mon_${DT}_lonlat.nc precip_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-    CDO -timmean -selseas,${SEASON} tmin_${EXP}_${DATASET}_mon_${DT}_lonlat.nc precip_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
+    CDO -timmean -selseas,${SEASON} tmax_${EXP}_${DATASET}_mon_${DT}_lonlat.nc tmax_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
+    CDO -timmean -selseas,${SEASON} tmin_${EXP}_${DATASET}_mon_${DT}_lonlat.nc tmin_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
 done
          
 echo 
