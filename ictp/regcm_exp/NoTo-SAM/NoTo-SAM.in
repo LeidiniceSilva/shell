@@ -134,8 +134,8 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = 2018010100,        ! Start date for ICBC data generation
- gdate2 = 2021123100,        ! End data for ICBC data generation
+ gdate1 = startTarget,       ! Start date for ICBC data generation
+ gdate2 = endTarget,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/NoTo-SAM/input', ! Path for ICBC produced input files
  inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                                  ! Path for ICBC global input datasets.
@@ -178,10 +178,10 @@
 ! Model start/restart control
 !
  &restartparam
- ifrest  = .false.,    ! If a restart
- mdate0  = 2018010100, ! Global start (is globidate1)
- mdate1  = 2018010100, ! Start date of this run
- mdate2  = 2021123100, ! End date for this run 
+ ifrest  = restLogic,   ! If a restart
+ mdate0  = startTarget, ! Global start (is globidate1)
+ mdate1  = startDate,   ! Start date of this run
+ mdate2  = endDate,     ! End date for this run 
  /
  
 !

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/marconi_scratch/userexternal/jciarlo0
+base=/marconi/home/userexternal/mdasilva/user/mdasilva
 
 {
 set -eo pipefail
@@ -20,22 +20,22 @@ then
 fi
 
 nl=$1 #namelist
-sD="${2:-1999010100}" #start Date
+sD="${2:-2018010100}" #start Date
 cL="${3:-false}" #control Logic
 dep=$4
 
 dmon=12
-p=BDW
+p=SKL
 pp=""
 [[ $p = BDW ]] && pp="-p bdw_all_serial -t 4:00:00"
 [[ $p = SKL ]] && pp="-p skl_usr_prod -t 24:00:00"
 
-eT=2005010100
+eT=2021123100
 ter=true 
 sst=true 
 icb=false
 
-mkdir -p $base/ERA5/icbc
+mkdir -p $base/NoTo-SAM/input
 
 if [ $cL = true ]; then
   ter=false

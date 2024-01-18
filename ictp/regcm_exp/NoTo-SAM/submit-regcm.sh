@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/marconi_scratch/userexternal/jciarlo0/
+base=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-NoTo
 
 {
 set -eo pipefail
@@ -18,7 +18,7 @@ then
 fi
 
 nl=$1 #namelist
-startDate="${2:-1999010100}" #start Date
+startDate="${2:-2018010100}" #start Date
 dep=$3
 
 dpath=$( echo $nl | cut -d. -f1 )
@@ -30,8 +30,8 @@ driv=$( echo $nl | cut -d- -f1 )
 tdir=$base/$driv/$dpath
 mkdir -p $tdir
 
-startTarget=1999010100
-  endTarget=2000010100
+startTarget=2018010100
+  endTarget=2021123100
 [[ $startDate -eq $startTarget ]] && newsim=true || newsim=false
 if [ $startDate -lt $startTarget ]; then
   echo "ERROR! startDate < startTarget"

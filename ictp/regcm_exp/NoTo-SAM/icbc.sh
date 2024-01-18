@@ -1,12 +1,13 @@
 #!/bin/bash
 
+#SBATCH -J ICBC
+#SBATCH -A ICT23_ESP
 #SBATCH -o logs/icbc_SLURM.out
 #SBATCH -e logs/icbc_SLURM.err
-#SBATCH -N 1 #--ntasks-per-node=20 --mem=63G ##esp1
-#SBATCH -J icbc
-#SBATCH --mail-type=END,FAIL
+#SBATCH -N 1 
+#SBATCH --mail-type=ALL
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -A ICT23_ESP
+
 {
 set -eo pipefail
 
@@ -33,9 +34,10 @@ cp $nl $nnl
 sed -i "s/startTarget/${startDate}/g" $nnl
 sed -i "s/endTarget/${endTarget}/g" $nnl
 
-[[ $ter = true ]] && ./bin/terrainNETCDF4_HDF5_CLM45_$pp $nnl
-[[ $ter = true ]] && ./bin/mksurfdataNETCDF4_HDF5_CLM45_$pp $nnl
-[[ $sst = true ]] && ./bin/sstNETCDF4_HDF5_CLM45_$pp $nnl
-[[ $icb = true ]] && ./bin/icbcNETCDF4_HDF5_CLM45_$pp $nnl
+[[ $ter = true ]] && ./bin/terrainCLM45_$pp $nnl
+[[ $ter = true ]] && ./bin/mksurfdataCLM45_$pp $nnl
+[[ $sst = true ]] && ./bin/sstCLM45_$pp $nnl
+[[ $icb = true ]] && ./bin/icbcCLM45_$pp $nnl
+
 echo "icbc script complete"
 }
