@@ -1,6 +1,7 @@
 #!/bin/bash
+
 #SBATCH -N 1 
-#SBATCH -t 4:00:00
+#SBATCH -t 24:00:00
 #SBATCH -A ICT23_ESP
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=mda_silv@ictp.it
@@ -41,9 +42,9 @@ email="mda_silv@ictp.it"
 #run_postproc="0 0 0 0 0 1 0 0 0 0"   # pr-frq/int
 #run_postproc="0 0 0 0 0 0 1 0 0 0"   # p99
 #run_postproc="0 0 0 0 0 0 0 2 0 2"   # vert + wind
-#run_postproc="0 0 0 0 0 0 0 2 0 0"   # vert
+run_postproc="0 0 0 0 0 0 0 2 0 0"   # vert
 #run_postproc="0 0 0 0 0 0 0 0 1 0"   # day/night
-run_postproc="0 0 0 0 0 0 0 0 0 2"   # wind
+#run_postproc="0 0 0 0 0 0 0 0 0 2"   # wind
 # 1/0 = on/off switch for sigma, bias, pr(%), prc/pr, pdfs, pr-frq/int, p99, vert, day/night, wind 
 # last three are automatically switched off if submit-sigma is on
 # 2 = on but submitted as a job. submit-sigma should not be 2
