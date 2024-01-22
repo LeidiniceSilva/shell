@@ -27,7 +27,6 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-
 if [ ${DATASET} == 'CPC' ]
 then
 echo 
@@ -54,17 +53,21 @@ ${BIN}/./regrid tmin_${EXP}_${DATASET}_day_${DT}.nc -35.70235,-11.25009,0.03 -78
 ${BIN}/./regrid tmin_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo
-echo "1.4. Seasonal avg"
+echo "1.4. Select subdomain"
+CDO sellonlatbox,-65,-52,-35,-24 precip_${EXP}_${DATASET}_day_${DT}_lonlat.nc precip_SESA-3km_${DATASET}_day_${DT}_lonlat.nc
+CDO sellonlatbox,-65,-52,-35,-24 precip_${EXP}_${DATASET}_mon_${DT}_lonlat.nc precip_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
+  
+echo
+echo "1.5. Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} precip_${EXP}_${DATASET}_mon_${DT}_lonlat.nc precip_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
     CDO -timmean -selseas,${SEASON} tmax_${EXP}_${DATASET}_mon_${DT}_lonlat.nc tmax_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
     CDO -timmean -selseas,${SEASON} tmin_${EXP}_${DATASET}_mon_${DT}_lonlat.nc tmin_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
 done
-         
+   
 echo 
-echo "1.5. Delete files"
+echo "1.6. Delete files"
 rm *_${EXP}_${DATASET}_*_${DT}.nc
-
 
 elif [ ${DATASET} == 'CRU' ]
 then
@@ -96,7 +99,12 @@ ${BIN}/./regrid tmn_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.
 ${BIN}/./regrid cld_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo
-echo "2.4. Seasonal avg"
+echo "2.4. Select subdomain"
+CDO sellonlatbox,-65,-52,-35,-24 pre_${EXP}_${DATASET}_mon_${DT}_lonlat.nc pre_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
+CDO sellonlatbox,-65,-52,-35,-24 tmp_${EXP}_${DATASET}_mon_${DT}_lonlat.nc tmp_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
+
+echo
+echo "2.5. Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} pre_${EXP}_${DATASET}_mon_${DT}_lonlat.nc pre_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
     CDO -timmean -selseas,${SEASON} tmp_${EXP}_${DATASET}_mon_${DT}_lonlat.nc tmp_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
@@ -104,11 +112,10 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} tmn_${EXP}_${DATASET}_mon_${DT}_lonlat.nc tmn_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
     CDO -timmean -selseas,${SEASON} cld_${EXP}_${DATASET}_mon_${DT}_lonlat.nc cld_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
 done
-
+  
 echo 
-echo "2.5. Delete files"
+echo "2.6. Delete files"
 rm *_${DATASET}_mon_${DT}.nc
-
 
 elif [ ${DATASET} == 'ERA5' ]
 then
@@ -156,25 +163,38 @@ ${BIN}/./regrid clwc_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78
 ${BIN}/./regrid q_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 ${BIN}/./regrid u_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 ${BIN}/./regrid v_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-  
+ 
 echo
-echo "3.5. Seasonal avg"
+echo "3.5. Select subdomain"
+CDO sellonlatbox,-65,-52,-35,-24 tp_${EXP}_${DATASET}_day_${DT}_lonlat.nc tp_SESA-3km_${DATASET}_day_${DT}_lonlat.nc
+CDO sellonlatbox,-65,-52,-35,-24 tp_${EXP}_${DATASET}_mon_${DT}_lonlat.nc tp_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
+CDO sellonlatbox,-65,-52,-35,-24 t2m_${EXP}_${DATASET}_mon_${DT}_lonlat.nc t2m_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
+
+echo
+echo "3.6. Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} tp_${EXP}_${DATASET}_mon_${DT}_lonlat.nc tp_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
     CDO -timmean -selseas,${SEASON} t2m_${EXP}_${DATASET}_mon_${DT}_lonlat.nc t2m_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
     CDO -timmean -selseas,${SEASON} mx2t_${EXP}_${DATASET}_mon_${DT}_lonlat.nc mx2t_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
     CDO -timmean -selseas,${SEASON} mn2t_${EXP}_${DATASET}_mon_${DT}_lonlat.nc mn2t_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
     CDO -timmean -selseas,${SEASON} tcc_${EXP}_${DATASET}_mon_${DT}_lonlat.nc tcc_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
+    
     CDO -timmean -selseas,${SEASON} cc_${EXP}_${DATASET}_mon_${DT}_lonlat.nc cc_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
+    CDO sellonlatbox,-65,-52,-35,-24 cc_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc cc_SESA-3km_${DATASET}_${SEASON}_${DT}_lonlat.nc
+    
     CDO -timmean -selseas,${SEASON} ciwc_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ciwc_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
+    CDO sellonlatbox,-65,-52,-35,-24 ciwc_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ciwc_SESA-3km_${DATASET}_${SEASON}_${DT}_lonlat.nc
+   
     CDO -timmean -selseas,${SEASON} clwc_${EXP}_${DATASET}_mon_${DT}_lonlat.nc clwc_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
+    CDO sellonlatbox,-65,-52,-35,-24 clwc_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc clwc_SESA-3km_${DATASET}_${SEASON}_${DT}_lonlat.nc 
+    
     CDO -timmean -selseas,${SEASON} q_${EXP}_${DATASET}_mon_${DT}_lonlat.nc q_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
     CDO -timmean -selseas,${SEASON} u_${EXP}_${DATASET}_mon_${DT}_lonlat.nc u_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
     CDO -timmean -selseas,${SEASON} v_${EXP}_${DATASET}_mon_${DT}_lonlat.nc v_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
 done
 
 echo
-echo "3.6. Select levels"
+echo "3.7. Select levels"
 VAR_LIST="q u v"
 for VAR in ${VAR_LIST[@]}; do
     CDO sellevel,200 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ${VAR}_200hPa_${EXP}_${DATASET}_DJF_${DT}_lonlat.nc
@@ -192,7 +212,7 @@ for VAR in ${VAR_LIST[@]}; do
 done
 
 echo 
-echo "3.7. Delete files"
+echo "3.8. Delete files"
 rm *_${DATASET}_day_${DT}.nc
 rm *_${DATASET}_mon_${DT}.nc
 
@@ -213,13 +233,17 @@ echo "4.3. Regrid output"
 ${BIN}/./regrid sat_gauge_precip_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo
-echo "4.4. Seasonal avg"
+echo "4.4. Select subdomain"
+CDO sellonlatbox,-65,-52,-35,-24 sat_gauge_precip_${EXP}_${DATASET}_mon_${DT}_lonlat.nc sat_gauge_precip_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
+
+echo
+echo "4.5. Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} sat_gauge_precip_${EXP}_${DATASET}_mon_${DT}_lonlat.nc sat_gauge_precip_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
 done
-
+ 
 echo 
-echo "4.5. Delete files"
+echo "4.6. Delete files"
 rm *${DATASET}_mon_${DT}.nc
 
 fi

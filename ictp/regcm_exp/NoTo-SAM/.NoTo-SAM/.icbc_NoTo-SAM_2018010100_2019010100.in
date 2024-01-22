@@ -8,8 +8,8 @@
 !-----------------------------------------------------------------------
 
  &dimparam 
- iy     = 783,  ! This is number of points in the N/S direction
- jx     = 1231, ! This is number of points in the E/W direction
+ iy     = 783,   ! This is number of points in the N/S direction
+ jx     = 1231,  ! This is number of points in the E/W direction
  kz     = 41,   ! Number of vertical levels
  dsmin  = 0.01, ! Minimum sigma spacing (only used if kz is not 14, 18, 23, 41)
  dsmax  = 0.05, ! Maximum sigma spacing (only used if kz is not 14, 18, 23, 41)
@@ -134,8 +134,8 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = startTarget,       ! Start date for ICBC data generation
- gdate2 = endTarget,         ! End data for ICBC data generation
+ gdate1 = 2018010100,       ! Start date for ICBC data generation
+ gdate2 = 2019010100,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/NoTo-SAM/input', ! Path for ICBC produced input files
  inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                                  ! Path for ICBC global input datasets.
@@ -179,7 +179,7 @@
 !
  &restartparam
  ifrest  = restLogic,   ! If a restart
- mdate0  = startTarget, ! Global start (is globidate1)
+ mdate0  = 2018010100, ! Global start (is globidate1)
  mdate1  = startDate,   ! Start date of this run
  mdate2  = endDate,     ! End date for this run 
  /
@@ -315,7 +315,6 @@
  islab_ocean =      0,  ! Activate the SLAB ocean model
  itweak =           0,  ! Enable tweak scenario
  iclimaaer =        3,  ! x Aerosol
- iaervisonly =      1,  !
  radclimpath = '/marconi_work/ICT23_ESP/RCMDATA/MERRA2/OPPMONTH', ! x Aerosol
  /
  
