@@ -22,8 +22,8 @@ seasdays=( 30.5 30.5 30.5 30.5 )
 is=0
 for v in $vars; do
   echo "##### Processing $v"
-  [[ $v = rsns    ]] && vc=msnlwrf
-  [[ $v = rsnl    ]] && vc=msnswrf
+  [[ $v = rsns    ]] && vc=msnswrf
+  [[ $v = rsnl    ]] && vc=msnlwrf
   [[ $v = rlds    ]] && vc=msdwlwrf
   [[ $v = rsds    ]] && vc=msdwswrf
   [[ $v = rsnscl  ]] && vc=msnswrfcs
@@ -34,8 +34,6 @@ for v in $vars; do
   for s in $seas ; do
     echo "## Processing $v $ys $s"
     mf=${v}_${obs}_${ys}_${s}_mean.nc
-	#CDO timmean -selseas,$s -selyear,$fyr/$lyr \
-	#	-chname,$vc,$v -selvar,$vc $sf $mf
 	CDO mulc,-1 -timmean -selseas,$s -selyear,$fyr/$lyr \
 		-chname,$vc,$v -selvar,$vc $sf $mf
     is=$(( is+1 ))

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-OBSDIR=/marconi/home/userexternal/ggiulian/esp/ggiulian/OBS
-wdir=/marconi_scratch/userexternal/jciarlo0/ERA5/obs
+OBSDIR=/marconi/home/userexternal/mdasilva/OBS
+wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/obs
 cd $wdir
 
 {
@@ -13,7 +13,7 @@ CDO(){
 set -a
 obs=MSWEP
 hdir=$OBSDIR/$obs
-ys=$1 #1999-1999
+ys=2018-2020
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 vars="pr"

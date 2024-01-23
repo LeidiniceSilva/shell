@@ -13,7 +13,7 @@ CDO(){
 set -a
 obs=GPCC
 hdir=$OBSDIR/$obs
-ys=2018-2021
+ys=2018-2020
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 vars="pr"

@@ -13,7 +13,8 @@ CDO(){
 
 EXP="SAM-3km"
 DT="2018-2021"
-VAR_LIST="pr, tas, tasmax, tasmin, clt, rsnl"
+VAR_LIST="hfls hfss rsns"
+#VAR_LIST="pr tas tasmax tasmin clt hfls hfss rsnl rsns"
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/NoTo-SAM"
@@ -27,22 +28,26 @@ echo ${DIR_OUT}
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
-echo 
-echo "1. Select variable"
 for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "1. Select variable: ${VAR}"
     for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
-            if [ ${VAR} = clt  ]
+            if [ ${VAR} = pr  ]
             then
-            CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	    elif [ ${VAR} = rsnl  ]
-            then
-            CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-            else
             CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	    elif [ ${VAR} = tas  ]
+            then
+            CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	    elif [ ${VAR} = tasmax  ]
+            then
+            CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	    elif [ ${VAR} = tasmin  ]
+            then
+            CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+            else
+            CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
 	    fi   
         done
     done
