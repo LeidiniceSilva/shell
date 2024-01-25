@@ -11,7 +11,7 @@ then
   echo $0: Not enough arguments.
   echo $0: Need at least namelist file.
   echo $0: Can receive start date, terrain/icbc flag and dependency.
-  echo $0: START DATE : YYYYMMDD00 - default 1999010100
+  echo $0: START DATE : YYYYMMDD00 - default 2018010100
   echo $0: WORK FLAG  : true icbc, false terrain/mksurfdata/sst
   echo $0: DEPENDENCY : -d afterany:JOBID
   echo $0: Example:
@@ -30,12 +30,12 @@ pp=""
 [[ $p = BDW ]] && pp="-p bdw_all_serial -t 4:00:00"
 [[ $p = SKL ]] && pp="-p skl_usr_prod -t 24:00:00"
 
-eT=2021123100
+eT=2022010100
 ter=true 
 sst=true 
 icb=false
 
-mkdir -p $base/NoTo-SAM/input
+mkdir -p $base/SAM-3km_v2/input
 
 if [ $cL = true ]; then
   ter=false

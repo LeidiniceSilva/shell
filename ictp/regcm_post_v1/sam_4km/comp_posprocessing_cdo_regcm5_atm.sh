@@ -13,13 +13,12 @@ CDO(){
 
 EXP="SAM-3km"
 DT="2018-2021"
-VAR_LIST="cl cli clw hus ua va"
+VAR_LIST="cli clw hus ua va cl"
 SEASON_LIST="DJF MAM JJA SON"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM/pressure"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/NoTo-SAM/pressure"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/post"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
-
 
 echo
 cd ${DIR_OUT}
@@ -56,24 +55,24 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "4. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
-        if [ ${VAR} = ua  ]
+        if [ ${VAR} = u  ]
         then
         CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_RegCM5_mon_${DT}_lonlat.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        CDO sellevel,200 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_200hPa_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        CDO sellevel,500 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_500hPa_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        CDO sellevel,850 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_850hPa_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        elif [ ${VAR} = va  ]
+        CDO sellevel,200 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_200hPa${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+        CDO sellevel,500 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_500hPa${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+        CDO sellevel,850 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_850hPa${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+        elif [ ${VAR} = v  ]
         then
         CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_RegCM5_mon_${DT}_lonlat.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        CDO sellevel,200 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_200hPa_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        CDO sellevel,500 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_500hPa_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        CDO sellevel,850 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_850hPa_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        elif [ ${VAR} = hus  ]
+        CDO sellevel,200 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_200hPa${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+        CDO sellevel,500 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_500hPa${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+        CDO sellevel,850 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_850hPa${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+        elif [ ${VAR} = q  ]
         then
         CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_RegCM5_mon_${DT}_lonlat.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        CDO sellevel,200 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_200hPa_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        CDO sellevel,500 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_500hPa_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
-        CDO sellevel,850 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_850hPa_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+        CDO sellevel,200 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_200hPa${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+        CDO sellevel,500 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_500hPa${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
+        CDO sellevel,850 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_850hPa${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
 	else
         CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_RegCM5_mon_${DT}_lonlat.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc
 	CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}_lonlat.nc ${VAR}_SESA-3km_RegCM5_${SEASON}_${DT}_lonlat.nc

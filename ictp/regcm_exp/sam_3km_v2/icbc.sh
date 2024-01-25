@@ -1,13 +1,11 @@
 #!/bin/bash
-
-#SBATCH -J ICBC
-#SBATCH -A ICT23_ESP
 #SBATCH -o logs/icbc_SLURM.out
 #SBATCH -e logs/icbc_SLURM.err
-#SBATCH -N 1 
-#SBATCH --mail-type=ALL
+#SBATCH -N 1 #--ntasks-per-node=20 --mem=63G ##esp1 
+#SBATCH -J icbc
+#SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=mda_silv@ictp.it
-
+#SBATCH -A ICT23_ESP
 {
 set -eo pipefail
 
