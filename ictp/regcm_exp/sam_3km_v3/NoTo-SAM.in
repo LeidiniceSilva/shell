@@ -85,7 +85,7 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v2/input',  ! Output directory for terrain files
+ dirter = '/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v3/input',  ! Output directory for terrain files
  inpter = '/marconi_work/ICT23_ESP/RCMDATA',                                     ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
@@ -137,7 +137,7 @@
  gdate1 = 2018010100,        ! Start date for ICBC data generation
  gdate2 = 2021123100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v2/input', ! Path for ICBC produced input files
+ dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v3/input', ! Path for ICBC produced input files
  inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                                    ! Path for ICBC global input datasets.
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
@@ -213,7 +213,7 @@
  ifchem  = .false.,           ! Output CHE ?
  ifopt   = .false.,           ! Output OPT ?
  chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v2/output', ! Path where all output will be placed
+ dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v3/output', ! Path where all output will be placed
  lsync   = .true.,            ! If sync of output files at every timestep is
                               ! requested. Note, it has a performance impact.
                               ! Enabled by default if debug_level > 2
@@ -315,6 +315,7 @@
  islab_ocean =      0,  ! Activate the SLAB ocean model
  itweak =           0,  ! Enable tweak scenario
  iclimaaer =        3,  ! x Aerosol
+ iaervisonly =      1,  ! No aerosol
  radclimpath = '/marconi_work/ICT23_ESP/RCMDATA/MERRA2/OPPMONTH', ! x Aerosol
  /
  

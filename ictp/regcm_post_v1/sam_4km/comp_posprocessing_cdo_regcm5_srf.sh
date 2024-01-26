@@ -13,12 +13,11 @@ CDO(){
 
 EXP="SAM-3km"
 DT="2018-2021"
-VAR_LIST="hfls hfss rsns"
-#VAR_LIST="pr tas tasmax tasmin clt hfls hfss rsnl rsns"
+VAR_LIST="pr tas tasmax tasmin clt hfls hfss rsnl rsns"
 SEASON_LIST="DJF MAM JJA SON"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/NoTo-SAM"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/post"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
