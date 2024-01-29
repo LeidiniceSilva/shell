@@ -5,7 +5,7 @@
 #SBATCH -p skl_usr_prod
 #SBATCH --qos=qos_prio
 #SBATCH -t 24:00:00
-#SBATCH -N 8
+#SBATCH -N 1
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -13,7 +13,7 @@ module purge
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 PLATFORM=SKL
-export OMP_NUM_THREADS=1
+export OMP_NUM_THREADS=20
 REGCM=/marconi/home/userexternal/ggiulian/binaries_test/test_noaer
 SUFFIX=CLM45_${PLATFORM}
 NAMELIST=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_v3/NoTo-SAM.in

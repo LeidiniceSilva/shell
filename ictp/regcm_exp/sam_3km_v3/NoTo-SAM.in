@@ -135,7 +135,7 @@
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
  gdate1 = 2018010100,        ! Start date for ICBC data generation
- gdate2 = 2021123100,        ! End data for ICBC data generation
+ gdate2 = 2019123100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v3/input', ! Path for ICBC produced input files
  inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                                    ! Path for ICBC global input datasets.
@@ -181,7 +181,7 @@
  ifrest  = .false.,     ! If a restart
  mdate0  = 2018010100,  ! Global start (is globidate1)
  mdate1  = 2018010100,  ! Start date of this run
- mdate2  = 2021123100,  ! End date for this run 
+ mdate2  = 2019123100,  ! End date for this run 
  /
  
 !
