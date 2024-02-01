@@ -11,7 +11,7 @@ then
   echo $0: Not enough arguments.
   echo $0: Need at least namelist file.
   echo $0: Can receive start date, terrain/icbc flag and dependency.
-  echo $0: START DATE : YYYYMMDD00 - default 2018010100
+  echo $0: START DATE : YYYYMMDD00 - default 2000010100
   echo $0: WORK FLAG  : true icbc, false terrain/mksurfdata/sst
   echo $0: DEPENDENCY : -d afterany:JOBID
   echo $0: Example:
@@ -20,7 +20,7 @@ then
 fi
 
 nl=$1 #namelist
-sD="${2:-2018010100}" #start Date
+sD="${2:-2000010100}" #start Date
 cL="${3:-false}" #control Logic
 dep=$4
 
@@ -30,12 +30,12 @@ pp=""
 [[ $p = BDW ]] && pp="-p bdw_all_serial -t 4:00:00"
 [[ $p = SKL ]] && pp="-p skl_usr_prod -t 24:00:00"
 
-eT=2022010100
+eT=2001010100
 ter=true 
 sst=true 
 icb=false
 
-mkdir -p $base/SAM-3km_v2/input
+mkdir -p $base/test_new/input
 
 if [ $cL = true ]; then
   ter=false

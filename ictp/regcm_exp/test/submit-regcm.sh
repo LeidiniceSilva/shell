@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-NoTo
+base=/marconi/home/userexternal/mdasilva/user/mdasilva/test_new
 
 {
 set -eo pipefail
@@ -10,7 +10,7 @@ if [ $# -lt 1 ]
 then
   echo $0: Not enough arguments.
   echo $0: Need at least namelist file.
-  echo $0: START DATE : YYYYMMDD00 - default 1999010100
+  echo $0: START DATE : YYYYMMDD00 - default 2000010100
   echo $0: DEPENDENCY : -d afterany:JOBID
   echo $0: Example:
   echo $0 namelist.in [YYYYMMDD00] [dep]
@@ -18,7 +18,7 @@ then
 fi
 
 nl=$1 #namelist
-startDate="${2:-2018010100}" #start Date
+startDate="${2:-2000010100}" #start Date
 dep=$3
 
 dpath=$( echo $nl | cut -d. -f1 )
@@ -30,8 +30,8 @@ driv=$( echo $nl | cut -d- -f1 )
 tdir=$base/$driv/$dpath
 mkdir -p $tdir
 
-startTarget=2018010100
-  endTarget=2021123100
+startTarget=2000010100
+  endTarget=2001010100
 [[ $startDate -eq $startTarget ]] && newsim=true || newsim=false
 if [ $startDate -lt $startTarget ]; then
   echo "ERROR! startDate < startTarget"
