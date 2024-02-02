@@ -11,16 +11,16 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DATASET="ERA5"
+DATASET="CPC"
 
 EXP="SAM-3km"
-DT="2018-2021"
+DT="2018-2019"
 DT_i="2018-01-01"
-DT_ii="2021-12-31"
+DT_ii="2019-12-31"
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v1/post_evaluate"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
@@ -33,7 +33,6 @@ echo
 echo "1. ------------------------------- PROCCESSING CPC DATASET -------------------------------"
 
 VAR_LIST="precip tmax tmin"
-
 for VAR in ${VAR_LIST[@]}; do
     
     echo
@@ -76,7 +75,6 @@ echo
 echo "2.  ------------------------------- PROCCESSING CRU DATASET -------------------------------"
 
 VAR_LIST="pre tmp tmx tmn cld"
-
 for VAR in ${VAR_LIST[@]}; do
     
     echo
@@ -93,9 +91,15 @@ for VAR in ${VAR_LIST[@]}; do
     fi
     
     echo
-    echo "2.3. Regrid output"
+    echo "2.3. Regrid and select subdomain"
+    if [ ${VAR} == 'cld' ]
+    then
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    
+    else
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
+    fi
+
     echo
     echo "2.4. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
@@ -103,12 +107,8 @@ for VAR in ${VAR_LIST[@]}; do
     done
 done
 
-echo
-echo "2.5. Select subdomain"
-CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-
 echo 
-echo "2.6. Delete files"
+echo "2.5. Delete files"
 rm *_${DATASET}_mon_${DT}.nc
 
 elif [ ${DATASET} == 'ERA5' ]
@@ -116,47 +116,49 @@ then
 echo 
 echo "3.  ------------------------------- PROCCESSING ERA5 DATASET -------------------------------"
 
-VAR_LIST="tp"
-#VAR_LIST="tp t2m mx2t mn2t tcc mslhf msshf msnlwrf msnswrf cc clwc ciwc q u v"
-
+VAR_LIST="tp t2m mx2t mn2t tcc mslhf msshf msnlwrf msnswrf cc clwc ciwc q u v"
 for VAR in ${VAR_LIST[@]}; do
 
     echo
-    echo "3.1. Convert unit"
+    echo "3.1. Select date"
+    CDO seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2018-2021.nc ${VAR}_${DATASET}_${DT}.nc
+    
+    echo
+    echo "3.2. Convert unit"
     if [ ${VAR} == 'tp' ]
     then
-    CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_day_${DT}.nc
-    CDO monmean ${VAR}_${DATASET}_day_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_day_${DT}.nc
+    CDO monmean ${VAR}_${EXP}_${DATASET}_day_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     elif [ ${VAR} == 't2m' ]
     then
-    CDO -b f32 subc,273.15 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     elif [ ${VAR} == 'mx2t' ]
     then
-    CDO -b f32 subc,273.15 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     elif [ ${VAR} == 'mn2t' ]
     then
-    CDO -b f32 subc,273.15 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     elif [ ${VAR} == 'tcc' ]
     then
-    CDO -b f32 mulc,100 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 mulc,100 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     elif [ ${VAR} == 'mslhf' ]
     then
-    CDO -b f32 mulc,-1 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 mulc,-1 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     elif [ ${VAR} == 'msshf' ]
     then
-    CDO -b f32 mulc,-1 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 mulc,-1 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     elif [ ${VAR} == 'msnlwrf' ]
     then
-    CDO -b f32 mulc,-1 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 mulc,-1 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     elif [ ${VAR} == 'msnswrf' ]
     then
-    CDO -b f32 mulc,-1 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 mulc,-1 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     else
     cp ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     fi
     
     echo
-    echo "3.2. Regrid and select subdomain"
+    echo "3.3. Regrid and select subdomain"
     if [ ${VAR} == 'tp' ]
     then
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
@@ -164,6 +166,14 @@ for VAR in ${VAR_LIST[@]}; do
     CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_day_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_day_${DT}_lonlat.nc
     CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
     elif [ ${VAR} == 't2m' ]
+    then
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
+    elif [ ${VAR} == 'mx2t' ]
+    then
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
+    elif [ ${VAR} == 'mn2t' ]
     then
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
     CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
@@ -184,7 +194,7 @@ for VAR in ${VAR_LIST[@]}; do
     fi
     
     echo
-    echo "3.3. Seasonal avg"
+    echo "3.4. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
         if [ ${VAR} == 'cc' ]
 	then
@@ -221,6 +231,7 @@ done
 
 echo 
 echo "3.5. Delete files"
+rm *_${DATASET}_${DT}.nc
 rm *_${DATASET}_day_${DT}.nc
 rm *_${DATASET}_mon_${DT}.nc
 

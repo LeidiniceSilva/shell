@@ -1,7 +1,7 @@
 #!/bin/bash
 
-BSDIR=/marconi/home/userexternal/mdasilva/OBS
-wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3m/obs
+OBSDIR=/marconi/home/userexternal/mdasilva/OBS
+wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/obs
 cd $wdir
 
 {
@@ -29,7 +29,7 @@ for v in $vars; do
   for s in $seas ; do
     echo "## Processing $v $ys $s"
     mf=${v}_${obs}_${ys}_${s}_mean.nc
-	CDO mulc,-1 -timmean -selseas,$s -selyear,$fyr/$lyr \
+	CDO -b F32 mulc,-1 -timmean -selseas,$s -selyear,$fyr/$lyr \
 		-chname,$vc,$v -selvar,$vc $sf $mf
     is=$(( is+1 ))
   done

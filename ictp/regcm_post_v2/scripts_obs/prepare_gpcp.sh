@@ -1,7 +1,7 @@
 #!/bin/bash
 
 OBSDIR=/marconi/home/userexternal/mdasilva/OBS
-wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/obs
+wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/obs
 cd $wdir
 
 {
@@ -10,29 +10,22 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-set -a
-obs=MSWEP
+obs=GPCP
 hdir=$OBSDIR/$obs
-ys=2018-2020
+ys=2018-2021
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 vars="pr"
 seas="DJF MAM JJA SON"
-seasdays=( 30.5 30.5 30.5 30.5 )
-is=0
 for v in $vars; do
-  [[ $fyr -lt 1979 ]] && continue
-  [[ $v = pr ]] && vc=precipitation
-  sf=$hdir/mswep.mon.1979-2020.nc
+  [[ $v = pr ]] && vc=sat_gauge_precip
+  sf=$hdir/GPCPMON_L3_198301-202209_V3.2.nc4
   yf=${v}_${obs}_${ys}.nc
   eval CDO selyear,$fyr/$lyr $sf $yf
   for s in $seas ; do
     echo "## Processing $v $ys $s"
     mf=${v}_${obs}_${ys}_${s}_mean.nc
-    CDO divc,${seasdays[$i]} -timmean -selseas,$s \
-        -chname,$vc,$v -selvar,$vc $yf $mf
-    ncatted -O -a units,pr,m,c,mm/day $mf
-    is=$(( is+1 ))
+    CDO timmean -selseas,$s -chname,$vc,$v -selvar,$vc $yf $mf
   done
   rm $yf
 done

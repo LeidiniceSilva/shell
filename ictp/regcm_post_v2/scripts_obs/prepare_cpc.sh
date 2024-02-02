@@ -1,7 +1,7 @@
 #!/bin/bash
 
 OBSDIR=/marconi/home/userexternal/mdasilva/OBS
-wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/sam_3km/obs
+wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/obs
 cd $wdir
 
 {

@@ -5,7 +5,7 @@
 set -eo pipefail
 
 ys=2018-2021
-list="cpc cru"
+list="cpc cru gpcp"
 for l in $list; do
   echo $l ...
   bash prepare_${l}.sh $ys
