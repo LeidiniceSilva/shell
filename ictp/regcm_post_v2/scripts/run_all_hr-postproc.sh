@@ -1,9 +1,12 @@
 #!/bin/bash
+
 #SBATCH -N 1 
 #SBATCH -t 4:00:00
 #SBATCH -A ICT23_ESP
 #SBATCH -p skl_usr_prod
+
 {
+
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
 set -eo pipefail
 
@@ -14,23 +17,20 @@ set -eo pipefail
 #if [ $# -ne 2 ]
 #then
 #   echo "Please provide Domain name and conf name in $rdir"
-#   echo 'Example: $0 Africa NoTo' # 2000-2001' # "0 0 0 0 1"'
+#   echo "Example: $0 Africa NoTo"
 #   exit 1
 #fi
+
 this_domain=$1
 this_config=$2
-#ltemp=$3
 dep="" #to be used only with run_postproc=2
-#yrs=$3
 n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
 
-#export rdir=/marconi_work/ICT23_ESP/jciarlo0/EUR11/ERA5 
-export rdir=/marconi_work/ICT23_ESP/jciarlo0/$domdir/$2
-#export rdir=/marconi_scratch/userexternal/jciarlo0/ERA5
-yrs=1995-1995
-email="jciarlo@ictp.it"
+export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-NoTo
+yrs=2018-2021
+email="mda_silv@ictp.it"
 run_postproc="2 2 2 2" 
 #1/0 = on/off switch for pdfs, pr-frq/int, p99, DiurnalCycle
 #2 = on but submitted as a job. 
@@ -40,7 +40,7 @@ run_postproc="2 2 2 2"
 ##############################
 
 export odir=$rdir/obs
-hdir=/marconi/home/userexternal/jciarlo0/regcm_tests/Atlas2
+hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm
 
 cp=false
 if [ $n = Europe03 -o $n = WMediterranean ]; then

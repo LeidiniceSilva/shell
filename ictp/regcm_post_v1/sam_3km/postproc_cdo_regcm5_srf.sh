@@ -55,7 +55,7 @@ for VAR in ${VAR_LIST[@]}; do
     done
     
     echo 
-    echo "2. Concatenate data"
+    echo "2. Concatenate data: ${DT}"
     if [ ${VAR} = pr  ]
     then
     CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_${DT}.nc
@@ -67,7 +67,7 @@ for VAR in ${VAR_LIST[@]}; do
     fi
         
     echo
-    echo "3. Convert unit"
+    echo "3. Convert unit: mm/d"
     if [ ${VAR} = pr  ]
     then
     CDO -b f32 mulc,86400 ${VAR}_${EXP}_${DT}.nc ${VAR}_${EXP}_RegCM5_day_${DT}.nc

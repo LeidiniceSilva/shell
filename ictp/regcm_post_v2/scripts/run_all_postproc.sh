@@ -3,7 +3,7 @@
 #SBATCH -N 1 
 #SBATCH -t 24:00:00
 #SBATCH -A ICT23_ESP
-#SBATCH --mail-type=FAIL
+#SBATCH --mail-type=ALL
 #SBATCH --mail-user=mda_silv@ictp.it
 #SBATCH -p skl_usr_prod
 
@@ -25,7 +25,7 @@ fi
 
 this_domain=$1
 this_config=$2
-dep="" #to be used only with run_postproc=2 #yrs=$3
+dep="" #to be used only with run_postproc=2 
 n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
@@ -36,13 +36,15 @@ email="mda_silv@ictp.it"
 
 #run_postproc="1 0 0 0 0 0 0 0 0 0"   # sigma2p
 #run_postproc="0 1 0 0 0 0 0 0 0 0"   # bias
-#run_postproc="0 0 0 0 0 0 0 0 0 0 1" # bias part2
-#run_postproc="0 1 1 1 1 1 1 0 0 0"   # all
+#run_postproc="0 0 0 0 0 0 0 0 0 0 1" # bias2
+#run_postproc="0 0 1 0 0 0 0 0 0 0"   # prpct
+#run_postproc="0 0 0 1 0 0 0 0 0 0"   # prc2pr
 #run_postproc="0 0 0 0 1 0 0 0 0 0"   # pdf
 #run_postproc="0 0 0 0 0 1 0 0 0 0"   # pr-frq/int
-run_postproc="0 0 0 0 0 0 1 0 0 0"   # p99
-#run_postproc="0 0 0 0 0 0 0 2 0 2"   # vert + wind
+#run_postproc="0 0 0 0 0 0 1 0 0 0"   # p99
+#run_postproc="0 1 1 1 1 1 1 0 0 0"   # all
 #run_postproc="0 0 0 0 0 0 0 2 0 0"   # vert
+#run_postproc="0 0 0 0 0 0 0 2 0 2"   # vert + wind
 #run_postproc="0 0 0 0 0 0 0 0 1 0"   # day/night
 #run_postproc="0 0 0 0 0 0 0 0 0 2"   # wind
 # 1/0 = on/off switch for sigma, bias, pr(%), prc/pr, pdfs, pr-frq/int, p99, vert, day/night, wind 

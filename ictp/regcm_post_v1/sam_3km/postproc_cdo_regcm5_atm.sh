@@ -46,7 +46,7 @@ for VAR in ${VAR_LIST[@]}; do
     done	
 
     echo 
-    echo "2. Concatenate data"
+    echo "2. Concatenate data: ${DT}"
     CDO mergetime ${VAR}_${EXP}_mon_*0100.nc ${VAR}_${EXP}_RegCM5_mon_${DT}.nc 
 
     echo 
