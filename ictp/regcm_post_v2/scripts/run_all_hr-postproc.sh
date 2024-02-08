@@ -23,12 +23,12 @@ set -eo pipefail
 
 this_domain=$1
 this_config=$2
-dep="" #to be used only with run_postproc=2
+dep="" 
 n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
 
-export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-NoTo
+export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km
 yrs=2018-2021
 email="mda_silv@ictp.it"
 run_postproc="2 2 2 2" 

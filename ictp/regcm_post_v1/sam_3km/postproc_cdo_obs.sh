@@ -14,13 +14,13 @@ CDO(){
 DATASET="CPC"
 
 EXP="SAM-3km"
-DT="2018-2019"
+DT="2018-2021"
 DT_i="2018-01-01"
-DT_ii="2019-12-31"
+DT_ii="2021-12-31"
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo

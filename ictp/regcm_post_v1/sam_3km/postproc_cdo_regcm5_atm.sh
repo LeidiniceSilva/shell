@@ -12,12 +12,12 @@ CDO(){
 }
 
 EXP="SAM-3km"
-DT="2018-2019"
+DT="2018-2021"
 VAR_LIST="cl cli clw hus ua va"
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM/pressure"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 
@@ -32,7 +32,7 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "1. Select variable: ${VAR}"
-    for YEAR in `seq -w 2018 2019`; do
+    for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
             if [ ${VAR} = cl  ]
             then
