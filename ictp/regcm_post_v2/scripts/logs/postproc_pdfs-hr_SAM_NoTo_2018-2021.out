@@ -1,1 +1,9 @@
-Path does not exist: /marconi/home/userexternal/mdasilva/user/mdasilva/SAM-NoTo/NoTo-SAM
+## Processing SAM 2018 - 2021 ##
+.. FullDom ..
+.. .. pr ..
+cdo(1) selname: Process started
+cdo(1) selname: Processed 957840 values from 19 variables over 31 timesteps.
+cdo    gec: Processed 957840 values from 1 variable over 1 timestep [0.57s 77MB].
+ERROR. Data not found in either directories.
+  ddir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM/*_SHF.{2018..2021}*.nc
+  gdir=/marconi_scratch/userexternal/jciarlo0/gsstmp//pr_*_{2018..2021}*.nc

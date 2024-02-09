@@ -83,7 +83,7 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "2.2. Convert unit"
-    if [ ${VAR} == 'tp' ]
+    if [ ${VAR} == 'pre' ]
     then
     CDO -b f32 divc,30.5 ${VAR}_${DATASET}_mon_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
     else
