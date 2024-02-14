@@ -10,10 +10,11 @@ n=$1
 c=$2
 path=$2-$1
 dep=$3
-rdir=/marconi_scratch/userexternal/jciarlo0/ERA5
-ys=1999-1999        
-scrdir=/marconi/home/userexternal/jciarlo0/regcm_tests/Atlas2
-email="jciarlo@ictp.it"
+rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km
+ys=2018-2021        
+scrdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm
+email="mda_silv@ictp.it"
+
 ## exported from master script
 lgc_vert=true 
 lgc_dynt=true 

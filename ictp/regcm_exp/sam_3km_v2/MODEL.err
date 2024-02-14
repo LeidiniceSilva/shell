@@ -1,4 +1,0 @@
-slurmstepd: error: run_script_as_user: couldn't change working dir to /marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_v2: Stale file handle
-/bin/bash: /cineca/prod/opt/environment/module/current/none/init/bash_without_modulerc: Stale file handle
-srun: error: r171c04s04: task 0: Bus error
-srun: launch/slurm: _step_signal: Terminating StepId=12884211.8

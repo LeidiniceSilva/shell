@@ -30,8 +30,8 @@ n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
 
-export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km
-yrs=2018-2021
+export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km-cyclone
+yrs=2023-2023
 email="mda_silv@ictp.it"
 
 #run_postproc="1 0 0 0 0 0 0 0 0 0"   # sigma2p
@@ -46,7 +46,7 @@ email="mda_silv@ictp.it"
 #run_postproc="0 0 0 0 0 0 0 2 0 0"   # vert
 #run_postproc="0 0 0 0 0 0 0 2 0 2"   # vert + wind
 #run_postproc="0 0 0 0 0 0 0 0 1 0"   # day/night
-#run_postproc="0 0 0 0 0 0 0 0 0 2"   # wind
+run_postproc="0 0 0 0 0 0 0 0 0 2"   # wind
 # 1/0 = on/off switch for sigma, bias, pr(%), prc/pr, pdfs, pr-frq/int, p99, vert, day/night, wind 
 # last three are automatically switched off if submit-sigma is on
 # 2 = on but submitted as a job. submit-sigma should not be 2
@@ -89,7 +89,7 @@ for i in `seq 0 $nrun`; do
   this_run=${run_postproc:$id:1}
   this_postproc=${postproc[i]}
   [[ $this_postproc = "submit-sigma" ]] && sub_sig=$this_run
-# echo $this_run
+  #echo $this_run
   post_sigma=false
   if [[ $this_run -eq 1 ]]; then
     [[ $this_postproc = ${mn}_vert ]] && post_sigma=true

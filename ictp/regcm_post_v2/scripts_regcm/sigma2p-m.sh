@@ -31,7 +31,7 @@ here=$( pwd )
 bnf=$here/bin/sigma2pNETCDF4_HDF5_CLM45_${p}
 cd $pdir
 
-[[ $t = ATM ]] && sv="clw,cli,ua,va,hus" || sv="cl"
+[[ $t = ATM ]] && sv="clw,cli,ua,va,hus,ta,wa" || sv="cl"
 for f in $( \ls ../*${t}.${y}12*.nc ); do
   bn=$( basename $f .nc )
   echo $bn
