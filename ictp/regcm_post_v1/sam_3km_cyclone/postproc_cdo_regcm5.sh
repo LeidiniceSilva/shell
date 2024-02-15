@@ -14,8 +14,7 @@ CDO(){
 EXP="SAM-3km-cyclone"
 YEAR="2023"
 DT="2023060100-2023083100"
-VAR_LIST="hus ta ua va wa"
-#VAR_LIST="hfss hfls hus pr psl sfcWind ta tas ua uas va vas wa"
+VAR_LIST="hfss hfls hus pr psl sfcWind ta tas ua uas va vas wa"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km-cyclone/NoTo-SAM"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km-cyclone/post"
@@ -62,29 +61,36 @@ for VAR in ${VAR_LIST[@]}; do
     echo "2. Concatenate variable"
     if [ ${VAR} = hus  ]
     then
-    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF_ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
+    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
+    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil  
     elif [ ${VAR} = ta  ]
     then
-    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF_ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
+    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
+    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil
     elif [ ${VAR} = ua  ]
     then
-    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF_ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
+    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
+    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil
     elif [ ${VAR} = va  ]
     then
-    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF_ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
+    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
+    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil
     elif [ ${VAR} = wa  ]
     then
-    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF_ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
+    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
+    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil
     else
-    CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_ECMWF_ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_3h_${DT}.nc
+    CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_3h_${DT}.nc
+    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil
     fi
-
+    
 done
 
 echo 
 echo "3. Delete files"
 rm *_${EXP}_*0100.nc
 rm *_${EXP}_*0100_lev.nc
+rm *_${EXP}_ECMWF_ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
