@@ -14,9 +14,9 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 dom=$1
 snam=$2-$1
-rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5
-odir=$4 #/marconi_scratch/userexternal/jciarlo0/ERA5/obs
-tper=$5 #2000-2001
+rdir=$3 
+odir=$4 
+tper=$5 
 
 ##############################
 ### change inputs manually ###

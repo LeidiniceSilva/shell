@@ -3,7 +3,7 @@
 #SBATCH -t 8:00:00
 #SBATCH -A ICT23_ESP
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=jciarlo@ictp.it
+#SBATCH --mail-user=mda_silv@ictp.it
 #SBATCH -p skl_usr_prod
 
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
@@ -14,9 +14,9 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 n=$1
 path=$2-$1
-rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5
-odir=$4 #/marconi_scratch/userexternal/jciarlo0/ERA5/obs
-ys=$5 #1999-1999
+rdir=$3 
+odir=$4 
+ys=$5 
 
 ##############################
 ####### end of inputs ########

@@ -14,9 +14,9 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 n=$1
 path=$2-$1
-rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5
-odir=$4 #/marconi_scratch/userexternal/jciarlo0/ERA5/obs
-ys=$5 #1999-1999
+rdir=$3 
+odir=$4
+ys=$5 
 
 ##############################
 ####### end of inputs ########
@@ -87,8 +87,8 @@ for s in $seas ; do
       o=("cpc" "gpcc" "aphro")
       res=("0.1" "0.25" "0.25")
     else
-      o=("cpc" "gpcc")
-      res=("0.1" "0.25")
+      o=("cpc")
+      res=("0.1")
     fi
       
     echo "#=== $v ===#"

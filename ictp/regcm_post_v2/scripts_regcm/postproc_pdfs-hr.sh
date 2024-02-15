@@ -14,17 +14,22 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 dom=$1
 snam=$2-$1
-rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5
-odir=$4 #/marconi_scratch/userexternal/jciarlo0/ERA5/obs
-tper=$5 #1999-1999
+rdir=$3
+odir=$4 
+tper=$5 
 conf=$2
 
 ##############################
-### change inputs manually ###
+###     end of inputs      ###
 ##############################
+
+##########################################################
 
 mdir=/marconi_work/ICT23_ESP/ggiulian/OBS/SREX
 gdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4
+
+##########################################################
+
 export SKIP_SAME_TIME=1
 
 #if [ $# -ne 2 ]

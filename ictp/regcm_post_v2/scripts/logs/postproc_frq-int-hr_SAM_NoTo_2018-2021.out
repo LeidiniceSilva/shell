@@ -1,50 +1,13 @@
 #### post-processing SAM DJF 2018-2021 ####
 #=== pr ===#
-cdo(1) selname: Process started
-cdo(1) selname: Processed 712632960 values from 46 variables over 744 timesteps.
-cdo    mulc: Processed 712632960 values from 1 variable over 744 timesteps [136.62s 115MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 643668480 values from 46 variables over 672 timesteps.
-cdo    mulc: Processed 643668480 values from 1 variable over 672 timesteps [123.64s 115MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 712632960 values from 46 variables over 744 timesteps.
-cdo    mulc: Processed 712632960 values from 1 variable over 744 timesteps [135.89s 115MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 712632960 values from 46 variables over 744 timesteps.
-cdo    mulc: Processed 712632960 values from 1 variable over 744 timesteps [137.26s 115MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 643668480 values from 46 variables over 672 timesteps.
-cdo    mulc: Processed 643668480 values from 1 variable over 672 timesteps [124.53s 116MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 712632960 values from 46 variables over 744 timesteps.
-cdo    mulc: Processed 712632960 values from 1 variable over 744 timesteps [133.62s 116MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 712632960 values from 46 variables over 744 timesteps.
-cdo    mulc: Processed 712632960 values from 1 variable over 744 timesteps [136.58s 115MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 666656640 values from 46 variables over 696 timesteps.
-cdo    mulc: Processed 666656640 values from 1 variable over 696 timesteps [126.22s 115MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 712632960 values from 46 variables over 744 timesteps.
-cdo    mulc: Processed 712632960 values from 1 variable over 744 timesteps [134.39s 115MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 712632960 values from 46 variables over 744 timesteps.
-cdo    mulc: Processed 712632960 values from 1 variable over 744 timesteps [174.04s 115MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 643668480 values from 46 variables over 672 timesteps.
-cdo    mulc: Processed 643668480 values from 1 variable over 672 timesteps [143.81s 116MB].
-cdo(1) selname: Process started
-cdo(1) selname: Processed 689644800 values from 46 variables over 720 timesteps.
-cdo    mulc: Processed 689644800 values from 1 variable over 720 timesteps [132.45s 116MB].
-cdo    mergetime: Processed 8275737600 values from 12 variables over 8640 timesteps [1569.94s 236MB].
 cdo(1) divc: Process started
 cdo(2) divc: Process started
 cdo(3) histcount: Process started
 cdo(3) histcount: Processed 8275737600 values from 1 variable over 8640 timesteps.
 cdo(2) divc: Processed 957840 values from 1 variable over 1 timestep.
 cdo(1) divc: Processed 957840 values from 1 variable over 1 timestep.
-cdo    mulc: Processed 957840 values from 1 variable over 1 timestep [632.12s 144MB].
-cdo    histmean: Processed 8275737600 values from 1 variable over 8640 timesteps [340.15s 127MB].
+cdo    mulc: Processed 957840 values from 1 variable over 1 timestep [689.26s 144MB].
+cdo    histmean: Processed 8275737600 values from 1 variable over 8640 timesteps [250.18s 123MB].
 cpc, 0
 #--- processing CPC with resolution of 0.1 ---#
 not coded for

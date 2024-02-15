@@ -4,13 +4,14 @@
 #SBATCH -t 04:00:00
 #SBATCH -p bdw_all_serial
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=jciarlo@ictp.it
+#SBATCH --mail-user=mda_silv@ictp.it
+
 ##############################
 ### change inputs manually ###
 ##############################
 
-rdir=/marconi_scratch/userexternal/jciarlo0/ERA5
-ys=1999-1999
+rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km
+ys=2018-2021
 
 ##############################
 ####### end of inputs ########

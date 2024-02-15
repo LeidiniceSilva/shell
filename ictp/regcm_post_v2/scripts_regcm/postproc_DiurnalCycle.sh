@@ -4,22 +4,24 @@
 #SBATCH -t 24:00:00
 #SBATCH -p skl_usr_prod  
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=jciarlo@ictp.it
+#SBATCH --mail-user=mda_silv@ictp.it
 #SBATCH --qos=qos_prio
+
 ##############################
 ### change inputs manually ###
 ##############################
 
 n=$1
 path=$2-$1
-rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5
-#odir=$4 #/marconi_scratch/userexternal/jciarlo0/ERA5/obs
-ys=$5 #2000-2001
+rdir=$3 
+#odir=$4 
+ys=$5 
 conf=$2
 
 ##############################
 ####### end of inputs ########
 ##############################
+
 {
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
 export SKIP_SAME_TIME=1

@@ -20,9 +20,9 @@ CDO(){
 
 dom=$1
 snam=$2-$1
-rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5 
-odir=$4 #/marconi_scratch/userexternal/jciarlo0/ERA5/obs 
-yr=$5 #1995-1997
+rdir=$3 
+odir=$4
+yr=$5 
 
 ##########################################################
 
