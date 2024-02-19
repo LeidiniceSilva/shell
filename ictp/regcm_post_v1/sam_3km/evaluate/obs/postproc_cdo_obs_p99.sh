@@ -56,7 +56,7 @@ rm p99_${EXP}_${DATASET}_${DT}.nc
 
 else
 echo 
-echo "2.  ------------------------------- PROCCESSING ERA5 DATASET -------------------------------"
+echo "2. ------------------------------- PROCCESSING ERA5 DATASET -------------------------------"
 
 VAR="tp"
     

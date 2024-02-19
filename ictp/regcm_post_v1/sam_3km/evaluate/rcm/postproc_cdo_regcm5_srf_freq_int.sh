@@ -14,9 +14,10 @@ CDO(){
 VAR="pr"
 EXP="SAM-3km"
 DT="2018-2021"
+SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
@@ -43,21 +44,22 @@ echo "3. Convert unit"
 CDO -b f32 mulc,86400 ${VAR}_${EXP}_${DT}.nc ${VAR}_${EXP}_RegCM5_${DT}.nc
 
 echo
-echo "4. Calculate p99"
-CDO timmin ${VAR}_${EXP}_RegCM5_${DT}.nc ${VAR}_${EXP}_RegCM5_${DT}_min.nc
-CDO timmax ${VAR}_${EXP}_RegCM5_${DT}.nc ${VAR}_${EXP}_RegCM5_${DT}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_RegCM5_${DT}.nc ${VAR}_${EXP}_RegCM5_${DT}_min.nc ${VAR}_${EXP}_RegCM5_${DT}_max.nc p99_${EXP}_RegCM5_${DT}.nc
-  
-echo
-echo "5. Regrid variable"
-${BIN}/./regrid p99_${EXP}_RegCM5_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+echo "4. Frequency and intensity by season"
+for SEASON in ${SEASON_LIST[@]}; do
+    CDO selseas,${SEASON} ${VAR}_${EXP}_RegCM5_${DT}.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}.nc
+    
+    CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}.nc ${VAR}_freq_${EXP}_RegCM5_${SEASON}_${DT}.nc
+    ${BIN}/./regrid ${VAR}_freq_${EXP}_RegCM5_${SEASON}_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+
+    CDO histmean,1,100000 ${VAR}_${EXP}_RegCM5_${SEASON}_${DT}.nc ${VAR}_int_${EXP}_RegCM5_${SEASON}_${DT}.nc
+    ${BIN}/./regrid ${VAR}_int_${EXP}_RegCM5_${SEASON}_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+
+done
 
 echo 
 echo "6. Delete files"
 rm *0100.nc
 rm *_${DT}.nc
-rm ${VAR}_${EXP}_RegCM5_${DT}_min.nc
-rm ${VAR}_${EXP}_RegCM5_${DT}_max.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

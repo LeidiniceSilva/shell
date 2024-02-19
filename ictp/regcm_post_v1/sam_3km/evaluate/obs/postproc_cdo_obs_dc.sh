@@ -11,8 +11,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DATASET="CPC"
-
+DATASET="ERA5"
 EXP="SAM-3km"
 DT="2018-2021"
 DT_i="2018-01-01"
@@ -27,96 +26,10 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-if [ ${DATASET} == 'CPC' ]
-then
 echo 
-echo "1. ------------------------------- PROCCESSING CPC DATASET -------------------------------"
+echo "------------------------------- PROCCESSING ERA5 DATASET -------------------------------"
 
-VAR_LIST="precip tmax tmin"
-for VAR in ${VAR_LIST[@]}; do
-    
-    echo
-    echo "1.1. Select date"
-    if [ ${VAR} == 'precip' ]
-    then
-    CDO seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/cpc.day.1979-2021.nc ${VAR}_${EXP}_${DATASET}_day_${DT}.nc
-    else
-    CDO seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/${VAR}.1979-2021.nc ${VAR}_${EXP}_${DATASET}_day_${DT}.nc
-    fi
-    
-    echo
-    echo "1.2. Monthly avg"
-    CDO monmean ${VAR}_${EXP}_${DATASET}_day_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-
-    echo
-    echo "1.3. Regrid output"
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-
-    echo
-    echo "1.4. Select subdomain"
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_day_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_day_${DT}_lonlat.nc
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-
-    echo
-    echo "1.5. Seasonal avg"
-    for SEASON in ${SEASON_LIST[@]}; do
-        CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-    done
-done
-
-echo 
-echo "1.6. Delete files"
-rm *_${EXP}_${DATASET}_*_${DT}.nc
-
-elif [ ${DATASET} == 'CRU' ]
-then
-echo 
-echo "2.  ------------------------------- PROCCESSING CRU DATASET -------------------------------"
-
-VAR_LIST="pre tmp tmx tmn cld"
-for VAR in ${VAR_LIST[@]}; do
-    
-    echo
-    echo "2.1. Select date"
-    CDO seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/${VAR}.dat.nc ${VAR}_${DATASET}_mon_${DT}.nc
-    
-    echo
-    echo "2.2. Convert unit"
-    if [ ${VAR} == 'pre' ]
-    then
-    CDO -b f32 divc,30.5 ${VAR}_${DATASET}_mon_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-    else
-    cp ${VAR}_${DATASET}_mon_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-    fi
-    
-    echo
-    echo "2.3. Regrid and select subdomain"
-    if [ ${VAR} == 'cld' ]
-    then
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    else
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-    fi
-
-    echo
-    echo "2.4. Seasonal avg"
-    for SEASON in ${SEASON_LIST[@]}; do
-        CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-    done
-done
-
-echo 
-echo "2.5. Delete files"
-rm *_${DATASET}_mon_${DT}.nc
-
-elif [ ${DATASET} == 'ERA5' ]
-then
-echo 
-echo "3.  ------------------------------- PROCCESSING ERA5 DATASET -------------------------------"
-
-VAR_LIST="tp t2m mx2t mn2t tcc mslhf msshf msnlwrf msnswrf cc clwc ciwc q u v"
+VAR_LIST="tp t2m"
 for VAR in ${VAR_LIST[@]}; do
 
     echo
@@ -234,37 +147,5 @@ echo "3.5. Delete files"
 rm *_${DATASET}_${DT}.nc
 rm *_${DATASET}_day_${DT}.nc
 rm *_${DATASET}_mon_${DT}.nc
-
-else
-echo 
-echo "4. ------------------------------- PROCCESSING GPCP DATASET -------------------------------"
-
-echo
-echo "4.1. Select date"
-cdo seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/GPCPMON_L3_198301-202209_V3.2.nc4 ${EXP}_${DATASET}_mon_${DT}.nc
-
-echo 
-echo "4.2. Select variable"
-cdo selvar,sat_gauge_precip ${EXP}_${DATASET}_mon_${DT}.nc sat_gauge_precip_${EXP}_${DATASET}_mon_${DT}.nc
-
-echo 
-echo "4.3. Regrid output"
-${BIN}/./regrid sat_gauge_precip_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-
-echo
-echo "4.4. Select subdomain"
-CDO sellonlatbox,-65,-52,-35,-24 sat_gauge_precip_${EXP}_${DATASET}_mon_${DT}_lonlat.nc sat_gauge_precip_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-
-echo
-echo "4.5. Seasonal avg"
-for SEASON in ${SEASON_LIST[@]}; do
-    CDO -timmean -selseas,${SEASON} sat_gauge_precip_${EXP}_${DATASET}_mon_${DT}_lonlat.nc sat_gauge_precip_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-done
- 
-echo 
-echo "4.6. Delete files"
-rm *${DATASET}_mon_${DT}.nc
-
-fi
 
 }
