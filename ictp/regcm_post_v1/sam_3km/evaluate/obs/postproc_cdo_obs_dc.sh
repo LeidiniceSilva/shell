@@ -16,10 +16,9 @@ EXP="SAM-3km"
 DT="2018-2021"
 DT_i="2018-01-01"
 DT_ii="2021-12-31"
-SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/obs"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
@@ -33,119 +32,34 @@ VAR_LIST="tp t2m"
 for VAR in ${VAR_LIST[@]}; do
 
     echo
-    echo "3.1. Select date"
-    CDO seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2018-2021.nc ${VAR}_${DATASET}_${DT}.nc
+    echo "1. Select date"
+    CDO seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_hr_2018-2021.nc ${VAR}_${DATASET}_${DT}.nc
     
     echo
-    echo "3.2. Convert unit"
+    echo "2. Convert unit"
     if [ ${VAR} == 'tp' ]
     then
-    CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_day_${DT}.nc
-    CDO monmean ${VAR}_${EXP}_${DATASET}_day_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-    elif [ ${VAR} == 't2m' ]
-    then
-    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-    elif [ ${VAR} == 'mx2t' ]
-    then
-    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-    elif [ ${VAR} == 'mn2t' ]
-    then
-    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-    elif [ ${VAR} == 'tcc' ]
-    then
-    CDO -b f32 mulc,100 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-    elif [ ${VAR} == 'mslhf' ]
-    then
-    CDO -b f32 mulc,-1 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-    elif [ ${VAR} == 'msshf' ]
-    then
-    CDO -b f32 mulc,-1 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-    elif [ ${VAR} == 'msnlwrf' ]
-    then
-    CDO -b f32 mulc,-1 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
-    elif [ ${VAR} == 'msnswrf' ]
-    then
-    CDO -b f32 mulc,-1 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}.nc
     else
-    cp ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc
+    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}.nc
     fi
+
+    echo
+    echo "5. Diurnal cycle"
+    CDO dhourmean ${VAR}_${EXP}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_dc_${DT}.nc
+
+    echo
+    echo "3. Regrid and select subdomain"
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_dc_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
     
     echo
-    echo "3.3. Regrid and select subdomain"
-    if [ ${VAR} == 'tp' ]
-    then
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_day_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_day_${DT}_lonlat.nc
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-    elif [ ${VAR} == 't2m' ]
-    then
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-    elif [ ${VAR} == 'mx2t' ]
-    then
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-    elif [ ${VAR} == 'mn2t' ]
-    then
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-    elif [ ${VAR} == 'cc' ]
-    then
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-    elif [ ${VAR} == 'ciwc' ]
-    then
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-    elif [ ${VAR} == 'clwc' ]
-    then
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc
-    else
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-    fi
-    
-    echo
-    echo "3.4. Seasonal avg"
-    for SEASON in ${SEASON_LIST[@]}; do
-        if [ ${VAR} == 'cc' ]
-	then
-	CDO -timmean -selseas,${SEASON} ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	elif [ ${VAR} == 'ciwc' ]
-	then
-	CDO -timmean -selseas,${SEASON} ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	elif [ ${VAR} == 'clwc' ]
-	then
-	CDO -timmean -selseas,${SEASON} ${VAR}_SESA-3km_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	elif [ ${VAR} == 'q' ]
-	then
-	CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	CDO sellevel,200 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ${VAR}_200hPa_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	CDO sellevel,500 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ${VAR}_500hPa_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	CDO sellevel,850 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ${VAR}_850hPa_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	elif [ ${VAR} == 'u' ]
-	then
-	CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	CDO sellevel,200 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ${VAR}_200hPa_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	CDO sellevel,500 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ${VAR}_500hPa_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	CDO sellevel,850 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ${VAR}_850hPa_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	elif [ ${VAR} == 'v' ]
-	then
-	CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	CDO sellevel,200 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ${VAR}_200hPa_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	CDO sellevel,500 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ${VAR}_500hPa_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	CDO sellevel,850 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc ${VAR}_850hPa_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	else
-	CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${DT}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}_lonlat.nc
-	fi
-    done       
+    echo "4. Select SESA domain"
+    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_dc_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_dc_${DT}_lonlat.nc
+               
 done
 
 echo 
-echo "3.5. Delete files"
-rm *_${DATASET}_${DT}.nc
-rm *_${DATASET}_day_${DT}.nc
-rm *_${DATASET}_mon_${DT}.nc
+echo "6. Delete files"
+rm *_${DT}.nc
 
 }

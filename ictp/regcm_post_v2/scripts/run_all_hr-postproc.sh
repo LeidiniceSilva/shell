@@ -27,11 +27,12 @@ dep=""
 n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
+[[ $n = SouthAmerica ]] && domdir=SAM03
 
 export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km
 yrs=2018-2021
 email="mda_silv@ictp.it"
-run_postproc="2 2 2 2" 
+run_postproc="0 2 2 2" 
 #1/0 = on/off switch for pdfs, pr-frq/int, p99, DiurnalCycle
 #2 = on but submitted as a job. 
 
@@ -48,7 +49,6 @@ if [ $n = Europe03 -o $n = WMediterranean ]; then
 fi
 if [ $cp = false ]; then
   echo "ERROR. This script is to be used by CP simulations only"
-#  exit 1
 fi
 
 set -eo pipefail
@@ -71,7 +71,6 @@ for i in `seq 0 $nrun`; do
   id=$(( $i * 2 ))
   this_run=${run_postproc:$id:1}
   this_postproc=${postproc[i]}
-# echo $this_run
   if [ $this_run -eq 1 ]; then
     echo Running $this_postproc $this_domain $this_config $yrs
     bash $hdir/${this_postproc}.sh $dom $conf $rdir $odir $yrs $hdir # $ltemp
