@@ -13,7 +13,7 @@ CDO(){
 
 EXP="SAM-3km"
 DT="2018-2021"
-VAR_LIST="ua va"
+VAR_LIST="va"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM"
