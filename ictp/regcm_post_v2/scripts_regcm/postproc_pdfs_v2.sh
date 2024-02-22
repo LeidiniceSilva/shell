@@ -84,18 +84,18 @@ if [ $cp = true ]; then
   pdom=$( cat $parentin | grep coarse_domname | cut -d"'" -f2 )
 fi
 
-r4="on"
-special=false
-subregs="FullDom"
-[[ $dom = Europe         ]] && subregs="MED NEU WCE"
+r4="off"
+special=true
+subregs="SAM"
+[[ $dom = SouthAmerica         ]] && subregs="SAM"
 if [ $dom = Europe -a $special = true ]; then
   subregs="CARPAT EURO4M RdisaggH GRIPHO REGNIE ENG-REGR COMEPHORE"
 fi
 [[ $dom = Europe03       ]] && subregs="MED NEU WCE"
 [[ $dom = NorthAmerica   ]] && subregs="NWN NEN WNA CNA ENA NCA"
 [[ $dom = CentralAmerica ]] && subregs="NCA SCA CAR"
-[[ $dom = SouthAmerica   ]] && subregs="NWS NSA SAM NES SES SWS SSA"
-[[ $dom = SouthAmerica   ]] && subregs="NWS NSA SAM NES SES SWS SSA"
+[[ $dom = SouthAmerica   ]] && subregs="SAM"
+#[[ $dom = SouthAmerica   ]] && subregs="NWS NSA SAM NES SES SWS SSA"
 [[ $dom = Africa         ]] && subregs="SAH WAF CAF NEAF SEAF ARP WSAF ESAF MDG"
 [[ $dom = SouthAsia      ]] && subregs="WCA ECA TIB SAS ARP"
 [[ $dom = EastAsia       ]] && subregs="ESB RFE ECA TIB EAS"

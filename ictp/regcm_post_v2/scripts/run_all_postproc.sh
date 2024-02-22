@@ -89,7 +89,6 @@ for i in `seq 0 $nrun`; do
   this_run=${run_postproc:$id:1}
   this_postproc=${postproc[i]}
   [[ $this_postproc = "submit-sigma" ]] && sub_sig=$this_run
-  #echo $this_run
   post_sigma=false
   if [[ $this_run -eq 1 ]]; then
     [[ $this_postproc = ${mn}_vert ]] && post_sigma=true
