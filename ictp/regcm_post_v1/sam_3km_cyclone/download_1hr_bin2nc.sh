@@ -11,7 +11,7 @@ do
   wget $wgetopt $direc
   for file in *.gz
   do
-    python3 ../bintonc.py $file && rm $file
+    python3 ../bin2nc.py $file && rm $file
   done
   has29feb=`date -d "Feb 29 $year" 2>/dev/null`
   doy=$([ -n "$has29feb" ] && echo 367)
