@@ -33,7 +33,7 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "1. Select date"
-    CDO seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_hr_2018-2021.nc ${VAR}_${DATASET}_${DT}.nc
+    CDO seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_2018-2021.nc ${VAR}_${DATASET}_${DT}.nc
     
     echo
     echo "2. Convert unit"

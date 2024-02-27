@@ -37,22 +37,23 @@ echo "------------------------------- PROCCESSING OBS DATASET ------------------
    
 echo
 echo "1. Select date"
-CDO mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_hr_${DT}.nc
+CDO mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc
 
 echo
 echo "2. Frequency and intensity by season"
 for SEASON in ${SEASON_LIST[@]}; do
-    CDO selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_hr_${SEASON}_${DT}.nc
+    CDO selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_1hr_${SEASON}_${DT}.nc
     
-    CDO mulc,100 -histfreq,${th},100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}.nc ${VAR}_freq_${EXP}_${DATASET}_${SEASON}_${DT}_th${TH}.nc
-    ${BIN}/./regrid ${VAR}_freq_${EXP}_${DATASET}_${SEASON}_${DT}_th${TH}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    CDO mulc,100 -histfreq,${TH},100000 ${VAR}_${EXP}_${DATASET}_1hr_${SEASON}_${DT}.nc ${VAR}_freq_${EXP}_${DATASET}_1hr_${SEASON}_${DT}_th${TH}.nc
+    ${BIN}/./regrid ${VAR}_freq_${EXP}_${DATASET}_1hr_${SEASON}_${DT}_th${TH}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
-    CDO histmean,${th},100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${DT}.nc ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${DT}_th${TH}.nc
-    ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${DT}_th${TH}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    CDO histmean,${TH},100000 ${VAR}_${EXP}_${DATASET}_1hr_${SEASON}_${DT}.nc ${VAR}_int_${EXP}_${DATASET}_1hr_${SEASON}_${DT}_th${TH}.nc
+    ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_1hr_${SEASON}_${DT}_th${TH}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 done
 
 echo 
 echo "3. Delete files"
 rm *_${DT}.nc
+rm *_th${TH}.nc
 
 }

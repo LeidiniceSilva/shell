@@ -28,23 +28,23 @@ echo ${DIR_OUT}
 
 echo
 echo "2.1. Convert unit"
-CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_hr_${DT}.nc
+CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc
 
 echo
 echo "2.2. Calculate p99"
-CDO timmin ${VAR}_${EXP}_${DATASET}_hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_hr_${DT}_min.nc
-CDO timmax ${VAR}_${EXP}_${DATASET}_hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_hr_${DT}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_hr_${DT}_min.nc ${VAR}_${EXP}_${DATASET}_hr_${DT}_max.nc p99_${EXP}_${DATASET}_hr_${DT}.nc
+CDO timmin ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_1hr_${DT}_min.nc
+CDO timmax ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_1hr_${DT}_max.nc
+CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_1hr_${DT}_min.nc ${VAR}_${EXP}_${DATASET}_1hr_${DT}_max.nc p99_${EXP}_${DATASET}_1hr_${DT}.nc
   
 echo
 echo "2.3. Regrid variable"
-${BIN}/./regrid p99_${EXP}_${DATASET}_hr_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid p99_${EXP}_${DATASET}_1hr_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo 
 echo "2.4. Delete files"
-rm ${VAR}_${EXP}_${DATASET}_hr_${DT}.nc
-rm ${VAR}_${EXP}_${DATASET}_hr_${DT}_min.nc
-rm ${VAR}_${EXP}_${DATASET}_hr_${DT}_max.nc
-rm ${VAR}_p99_${EXP}_${DATASET}_hr_${DT}.nc
+rm ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc
+rm ${VAR}_${EXP}_${DATASET}_1hr_${DT}_min.nc
+rm ${VAR}_${EXP}_${DATASET}_1hr_${DT}_max.nc
+rm p99_${EXP}_${DATASET}_1hr_${DT}.nc
 
 }
