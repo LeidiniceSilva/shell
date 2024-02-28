@@ -55,8 +55,8 @@ CDO -b f32 mulc,3600 ${VAR}_${EXP}_1hr_${DT}.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}.n
 
 echo
 echo "4. Calculate p99"
-CDO timmin ${VAR}_${EXP}_1hr_RegCM5_${DT}.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}_min.nc
-CDO timmax ${VAR}_${EXP}_1hr_RegCM5_${DT}.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}_max.nc
+CDO timmin ${VAR}_${EXP}_RegCM5_1hr_${DT}.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}_min.nc
+CDO timmax ${VAR}_${EXP}_RegCM5_1hr_${DT}.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}_max.nc
 CDO timpctl,99 ${VAR}_${EXP}_RegCM5_1hr_${DT}.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}_min.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}_max.nc p99_${EXP}_RegCM5_1hr_${DT}.nc
   
 echo

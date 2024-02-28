@@ -11,7 +11,7 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
-#__description__ = 'Calculate the 1hr p99 of RegCM5 with CDO'
+#__description__ = 'Calculate the 1hr freq/int of RegCM5 with CDO'
 
 {
 
@@ -43,7 +43,7 @@ echo
 echo "1. Select variable: ${VAR}"
 for YEAR in `seq -w 2018 2021`; do
     for MON in `seq -w 01 12`; do
-        CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+        CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
     done
 done
 
@@ -69,7 +69,7 @@ for SEASON in ${SEASON_LIST[@]}; do
 done
 
 echo 
-echo "6. Delete files"
+echo "5. Delete files"
 rm *0100.nc
 rm *_${DT}.nc
 rm *_${DT}_th${TH}.nc
