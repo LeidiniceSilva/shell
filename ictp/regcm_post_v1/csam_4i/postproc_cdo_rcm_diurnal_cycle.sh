@@ -40,27 +40,27 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
 echo "1. Merge time"
-#CDO mergetime ${DIR_IN}/reg_ictp/${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr* ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr_${DT}.nc
-#CDO mergetime ${DIR_IN}/reg_ictp/${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr* ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr_${DT}.nc
-#CDO mergetime ${DIR_IN}/reg_usp/${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr* ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr_${DT}.nc
-#CDO mergetime ${DIR_IN}/wrf_ncar/${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr* ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr_${DT}.nc
-#CDO mergetime ${DIR_IN}/wrf_ucan/${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr* ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr_${DT}.nc
+CDO mergetime ${DIR_IN}/reg_ictp/${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr* ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr_${DT}.nc
+CDO mergetime ${DIR_IN}/reg_ictp/${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr* ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr_${DT}.nc
+CDO mergetime ${DIR_IN}/reg_usp/${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr* ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr_${DT}.nc
+CDO mergetime ${DIR_IN}/wrf_ncar/${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr* ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr_${DT}.nc
+CDO mergetime ${DIR_IN}/wrf_ucan/${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr* ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr_${DT}.nc
 
 echo 
 echo "2. Select data"
-#CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_1hr_${DT}.nc
-#CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_1hr_${DT}.nc
-#CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_1hr_${DT}.nc
-#CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_1hr_${DT}.nc
-#CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_1hr_${DT}.nc
+CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_1hr_${DT}.nc
+CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_1hr_${DT}.nc
+CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_1hr_${DT}.nc
+CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_1hr_${DT}.nc
+CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_1hr_${DT}.nc
 
 echo
 echo "3. Convert unit"
-#CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl1_1hr_${DT}.nc
-#CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl2_1hr_${DT}.nc
-#CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_1hr_${DT}.nc ${VAR}_${EXP}_USP-RegCM471_1hr_${DT}.nc
-#CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_1hr_${DT}.nc ${VAR}_${EXP}_NCAR-WRF415_1hr_${DT}.nc
-#CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_1hr_${DT}.nc ${VAR}_${EXP}_UCAN-WRF433_1hr_${DT}.nc
+CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl1_1hr_${DT}.nc
+CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl2_1hr_${DT}.nc
+CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_1hr_${DT}.nc ${VAR}_${EXP}_USP-RegCM471_1hr_${DT}.nc
+CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_1hr_${DT}.nc ${VAR}_${EXP}_NCAR-WRF415_1hr_${DT}.nc
+CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_1hr_${DT}.nc ${VAR}_${EXP}_UCAN-WRF433_1hr_${DT}.nc
 
 echo
 echo "4. Hourly mean"

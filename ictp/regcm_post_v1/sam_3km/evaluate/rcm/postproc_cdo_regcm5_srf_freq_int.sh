@@ -57,7 +57,7 @@ for SEASON in ${SEASON_LIST[@]}; do
 done
 
 echo 
-echo "6. Delete files"
+echo "5. Delete files"
 rm *0100.nc
 rm *_${DT}.nc
 

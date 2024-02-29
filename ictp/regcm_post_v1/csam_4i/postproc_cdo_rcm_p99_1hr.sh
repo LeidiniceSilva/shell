@@ -96,7 +96,6 @@ echo "7. Delete files"
 rm *_1hr_${DT}.nc
 rm ${VAR}_${EXP}_*_1hr_${DT}_min.nc 
 rm ${VAR}_${EXP}_*_1hr_${DT}_max.nc
-rm ${VAR}_${DOMAIN}_${EXP}_*_${DT}_min.nc
 rm p99_${EXP}_*_1hr_${DT}.nc
 
 echo

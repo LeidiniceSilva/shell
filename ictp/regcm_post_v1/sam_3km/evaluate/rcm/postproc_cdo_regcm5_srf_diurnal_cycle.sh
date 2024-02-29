@@ -75,7 +75,7 @@ done
 echo 
 echo "7. Delete files"
 rm *0100.nc
-#rm *_${DT}.nc
+rm *_${DT}.nc
 rm *_timmean.nc
 rm *_diurnal_cycle_${DT}.nc
 

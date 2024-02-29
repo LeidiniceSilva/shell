@@ -12,6 +12,7 @@ CDO(){
 }
 
 DATASET="ERA5"
+VAR_LIST="tp"
 EXP="SAM-3km"
 DT="2018-2021"
 DT_i="2018-01-01"
@@ -28,7 +29,6 @@ echo ${DIR_OUT}
 echo 
 echo "------------------------------- PROCCESSING ERA5 DATASET -------------------------------"
 
-VAR_LIST="tp t2m"
 for VAR in ${VAR_LIST[@]}; do
 
     echo
@@ -43,23 +43,29 @@ for VAR in ${VAR_LIST[@]}; do
     else
     CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}.nc
     fi
-
-    echo
-    echo "5. Diurnal cycle"
-    CDO dhourmean ${VAR}_${EXP}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_dc_${DT}.nc
-
-    echo
-    echo "3. Regrid and select subdomain"
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_dc_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
     
     echo
-    echo "4. Select SESA domain"
-    CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_${DATASET}_dc_${DT}_lonlat.nc ${VAR}_SESA-3km_${DATASET}_dc_${DT}_lonlat.nc
-               
+    echo "4. Hourly mean"
+    for HR in `seq -w 00 23`; do
+    
+        CDO selhour,${HR} ${VAR}_${EXP}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${DT}.nc
+	CDO timmean ${VAR}_${EXP}_${DATASET}_${HR}hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${DT}_timmean.nc
+	
+    done
+    
+    echo
+    echo "5. Diurnal cycle"
+    CDO mergetime ${VAR}_${EXP}_${DATASET}_*hr_${DT}_timmean.nc ${VAR}_${EXP}_${DATASET}_${DT}_diurnal_cycle_${DT}.nc
+   
+    echo
+    echo "6. Regrid output"
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${DT}_diurnal_cycle_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+              
 done
 
 echo 
-echo "6. Delete files"
+echo "7. Delete files"
 rm *_${DT}.nc
+rm *_${DT}_timmean.nc
 
 }
