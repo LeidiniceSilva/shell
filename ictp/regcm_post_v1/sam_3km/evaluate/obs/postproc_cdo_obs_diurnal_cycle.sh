@@ -55,11 +55,11 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "5. Diurnal cycle"
-    CDO mergetime ${VAR}_${EXP}_${DATASET}_*hr_${DT}_timmean.nc ${VAR}_${EXP}_${DATASET}_${DT}_diurnal_cycle_${DT}.nc
+    CDO mergetime ${VAR}_${EXP}_${DATASET}_*hr_${DT}_timmean.nc ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${DT}.nc
    
     echo
     echo "6. Regrid output"
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${DT}_diurnal_cycle_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
               
 done
 

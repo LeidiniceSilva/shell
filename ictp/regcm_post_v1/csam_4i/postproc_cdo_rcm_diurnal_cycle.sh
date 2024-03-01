@@ -40,27 +40,27 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
 echo "1. Merge time"
-CDO mergetime ${DIR_IN}/reg_ictp/${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr* ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr_${DT}.nc
-CDO mergetime ${DIR_IN}/reg_ictp/${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr* ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr_${DT}.nc
-CDO mergetime ${DIR_IN}/reg_usp/${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr* ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr_${DT}.nc
-CDO mergetime ${DIR_IN}/wrf_ncar/${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr* ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr_${DT}.nc
-CDO mergetime ${DIR_IN}/wrf_ucan/${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr* ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr_${DT}.nc
+#CDO mergetime ${DIR_IN}/reg_ictp/${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr* ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr_${DT}.nc
+#CDO mergetime ${DIR_IN}/reg_ictp/${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr* ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr_${DT}.nc
+#CDO mergetime ${DIR_IN}/reg_usp/${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr* ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr_${DT}.nc
+#CDO mergetime ${DIR_IN}/wrf_ncar/${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr* ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr_${DT}.nc
+#CDO mergetime ${DIR_IN}/wrf_ucan/${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr* ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr_${DT}.nc
 
 echo 
 echo "2. Select data"
-CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_1hr_${DT}.nc
-CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_1hr_${DT}.nc
-CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_1hr_${DT}.nc
-CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_1hr_${DT}.nc
-CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_1hr_${DT}.nc
+#CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_1hr_${DT}.nc
+#CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_1hr_${DT}.nc
+#CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_1hr_${DT}.nc
+#CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_1hr_${DT}.nc
+#CDO seldate,2018-06-01,2021-05-31 ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_1hr_${DT}.nc ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_1hr_${DT}.nc
 
 echo
 echo "3. Convert unit"
-CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl1_1hr_${DT}.nc
-CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl2_1hr_${DT}.nc
-CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_1hr_${DT}.nc ${VAR}_${EXP}_USP-RegCM471_1hr_${DT}.nc
-CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_1hr_${DT}.nc ${VAR}_${EXP}_NCAR-WRF415_1hr_${DT}.nc
-CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_1hr_${DT}.nc ${VAR}_${EXP}_UCAN-WRF433_1hr_${DT}.nc
+#CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl1_1hr_${DT}.nc
+#CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl2_1hr_${DT}.nc
+#CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_1hr_${DT}.nc ${VAR}_${EXP}_USP-RegCM471_1hr_${DT}.nc
+#CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_1hr_${DT}.nc ${VAR}_${EXP}_NCAR-WRF415_1hr_${DT}.nc
+#CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_1hr_${DT}.nc ${VAR}_${EXP}_UCAN-WRF433_1hr_${DT}.nc
 
 echo
 echo "4. Hourly mean"
@@ -69,8 +69,8 @@ for HR in `seq -w 00 23`; do
     CDO selhour,${HR} ${VAR}_${EXP}_ICTP-RegCM5pbl1_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl1_${HR}hr_${DT}.nc
     CDO timmean ${VAR}_${EXP}_ICTP-RegCM5pbl1_${HR}hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl1_${HR}hr_${DT}_timmean.nc
 
-    CDO selhour,${HR} ${VAR}_${EXP}_ICTP-RegCM5pbl2_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl2_${HR}hr_${DT}.nc
-    CDO timmean ${VAR}_${EXP}_ICTP-RegCM5pbl2_${HR}hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl2_${HR}hr_${DT}_timmean.nc
+    #CDO selhour,${HR} ${VAR}_${EXP}_ICTP-RegCM5pbl2_1hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl2_${HR}hr_${DT}.nc
+    #CDO timmean ${VAR}_${EXP}_ICTP-RegCM5pbl2_${HR}hr_${DT}.nc ${VAR}_${EXP}_ICTP-RegCM5pbl2_${HR}hr_${DT}_timmean.nc
 
     CDO selhour,${HR} ${VAR}_${EXP}_USP-RegCM471_1hr_${DT}.nc ${VAR}_${EXP}_USP-RegCM471_${HR}hr_${DT}.nc
     CDO timmean ${VAR}_${EXP}_USP-RegCM471_${HR}hr_${DT}.nc ${VAR}_${EXP}_USP-RegCM471_${HR}hr_${DT}_timmean.nc
@@ -86,7 +86,7 @@ done
 echo
 echo "5. Diurnal cycle"
 CDO mergetime ${VAR}_${EXP}_ICTP-RegCM5pbl1_*_${DT}_timmean.nc ${VAR}_${EXP}_ICTP-RegCM5pbl1_diurnal_cycle_${DT}.nc
-CDO mergetime ${VAR}_${EXP}_ICTP-RegCM5pbl2_*_${DT}_timmean.nc ${VAR}_${EXP}_ICTP-RegCM5pbl2_diurnal_cycle_${DT}.nc
+#CDO mergetime ${VAR}_${EXP}_ICTP-RegCM5pbl2_*_${DT}_timmean.nc ${VAR}_${EXP}_ICTP-RegCM5pbl2_diurnal_cycle_${DT}.nc
 CDO mergetime ${VAR}_${EXP}_USP-RegCM471_${HR}hr_${DT}_timmean.nc ${VAR}_${EXP}_USP-RegCM471_diurnal_cycle_${DT}.nc
 CDO mergetime ${VAR}_${EXP}_NCAR-WRF415_${HR}hr_${DT}_timmean.nc ${VAR}_${EXP}_NCAR-WRF415_diurnal_cycle_${DT}.nc
 CDO mergetime ${VAR}_${EXP}_UCAN-WRF433_${HR}hr_${DT}_timmean.nc ${VAR}_${EXP}_UCAN-WRF433_diurnal_cycle_${DT}.nc
@@ -94,14 +94,14 @@ CDO mergetime ${VAR}_${EXP}_UCAN-WRF433_${HR}hr_${DT}_timmean.nc ${VAR}_${EXP}_U
 echo
 echo "6. Regrid output"
 ${BIN}/./regrid ${VAR}_${EXP}_ICTP-RegCM5pbl1_diurnal_cycle_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${BIN}/./regrid ${VAR}_${EXP}_ICTP-RegCM5pbl2_diurnal_cycle_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+#${BIN}/./regrid ${VAR}_${EXP}_ICTP-RegCM5pbl2_diurnal_cycle_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 ${BIN}/./regrid ${VAR}_${EXP}_USP-RegCM471_diurnal_cycle_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 ${BIN}/./regrid ${VAR}_${EXP}_NCAR-WRF415_diurnal_cycle_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 ${BIN}/./regrid ${VAR}_${EXP}_UCAN-WRF433_diurnal_cycle_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
   
 echo 
 echo "7. Delete files"
-rm *_${DT}.nc
+#rm *_${DT}.nc
 rm *_${DT}_timmean.nc
 rm *_diurnal_cycle_${DT}.nc
 

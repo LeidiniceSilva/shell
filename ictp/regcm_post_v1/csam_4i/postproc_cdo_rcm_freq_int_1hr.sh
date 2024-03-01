@@ -101,9 +101,7 @@ done
   
 echo 
 echo "5. Delete files"
-#rm *_1hr_${DT}.nc
-rm ${VAR}_${EXP}_r1i1p1f1_*_1hr_${DT}.nc
-rm *_1hr_${SEASON}_${DT}.nc
+rm *_1hr_${DT}.nc
 rm *_${DT}_th${TH}.nc
 
 echo
