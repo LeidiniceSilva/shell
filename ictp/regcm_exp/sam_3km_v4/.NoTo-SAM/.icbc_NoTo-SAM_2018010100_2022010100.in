@@ -5,12 +5,13 @@
 !-----------------------------------------------------------------------
 !
 ! DOMAIN dimension Stanza
+!
 !-----------------------------------------------------------------------
 
  &dimparam 
- iy     = 850,  ! This is number of points in the N/S direction
+ iy     = 783,  ! This is number of points in the N/S direction
  jx     = 1231, ! This is number of points in the E/W direction
- kz     = 50,   ! Number of vertical levels
+ kz     = 41,   ! Number of vertical levels
  dsmin  = 0.01, ! Minimum sigma spacing (only used if kz is not 14, 18, 23, 41)
  dsmax  = 0.05, ! Maximum sigma spacing (only used if kz is not 14, 18, 23, 41)
  nsg    = 1,    ! For subgridding, number of points to decompose. If nsg=1,
@@ -67,7 +68,7 @@
 ! DOMAIN terrain generation parameters
 !
  &terrainparam
- domname     = 'SAM-3km',     ! Name of the domain/experiment.
+ domname     = 'NoTo-SAM',    ! Name of the domain/experiment.
                               ! Controls naming of input files
  lresamp     = .false.,       ! Do a first resampling before interpolation
  smthbdy     = .true.,        ! Perform extra smoothing in boundaries
@@ -85,8 +86,8 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/marconi/home/userexternal/mdasilva/user/mdasilva/test/input',  ! Output directory for terrain files
- inpter = '/marconi_work/ICT23_ESP/RCMDATA',                               ! Input directory for SURFACE dataset
+ dirter = '/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v2/input', ! Output directory for terrain files
+ inpter = '/marconi_work/ICT23_ESP/RCMDATA',                                    ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
                               ! when lsmoist option is True
@@ -124,6 +125,7 @@
                              !          CA_XX, HA_XX, EC_XX, IP_XX, GF_XX,
                              !          CN_XX, MP_XX
  dattyp = 'ERA5',            ! Type of global analysis datasets used
+!dattyp = 'FNEST',           ! Type of global analysis datasets used
                              !  One in: ECMWF, ERA40, EIN75, EIN15, EIN25,
                              !          ERAHI, NNRP1, NNRP2, NRP2W, GFS11,
                              !          FVGCM, FNEST, EH5A2, EH5B1, EHA1B,
@@ -133,16 +135,16 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = 2018010100,        ! Start date for ICBC data generation
- gdate2 = 2021123100,        ! End data for ICBC data generation
+ gdate1 = 2018010100,       ! Start date for ICBC data generation
+ gdate2 = 2022010100,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/test/input', ! Path for ICBC produced input files
- inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                              ! Path for ICBC global input datasets
+ dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v2/input', ! Path for ICBC produced input files
+ inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                                    ! Path for ICBC global input datasets.
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
                              ! ICBC controlled by the perturbparam stanza
-                             ! Look http://users.ictp.it/~pubregcm/RegCM4/globedat.htm
-                             ! on how to download them.
+                   ! Look http://users.ictp.it/~pubregcm/RegCM4/globedat.htm
+                   ! on how to download them.
  /
  
 !
@@ -177,10 +179,10 @@
 ! Model start/restart control
 !
  &restartparam
- ifrest  = .false.,     ! If a restart
- mdate0  = 2018010100,  ! Global start (is globidate1)
- mdate1  = 2018010100,  ! Start date of this run
- mdate2  = 2021123100,  ! End date for this run 
+ ifrest  = restLogic,   ! If a restart
+ mdate0  = 2018010100, ! Global start (is globidate1)
+ mdate1  = startDate,   ! Start date of this run
+ mdate2  = endDate,     ! End date for this run 
  /
  
 !
@@ -195,7 +197,6 @@
 ! Model Output control
 !
  &outparam
- outnwf  =     0.,            ! Day interval to open new files   (0 = monthly)
  ifsave  = .true. ,           ! Create SAV files for restart
  savfrq  =     0.,            ! Frequency in days to create them (0 = monthly)
  ifatm   = .true. ,           ! Output ATM ?
@@ -212,7 +213,7 @@
  ifchem  = .false.,           ! Output CHE ?
  ifopt   = .false.,           ! Output OPT ?
  chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/test/output', ! Path where all output will be placed
+ dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v2/output', ! Path where all output will be placed
  lsync   = .true.,            ! If sync of output files at every timestep is
                               ! requested. Note, it has a performance impact.
                               ! Enabled by default if debug_level > 2
@@ -314,6 +315,7 @@
  islab_ocean =      0,  ! Activate the SLAB ocean model
  itweak =           0,  ! Enable tweak scenario
  iclimaaer =        3,  ! x Aerosol
+ iaervisonly =      1,  !
  radclimpath = '/marconi_work/ICT23_ESP/RCMDATA/MERRA2/OPPMONTH', ! x Aerosol
  /
  

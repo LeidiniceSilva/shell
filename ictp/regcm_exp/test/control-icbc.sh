@@ -1,6 +1,7 @@
 #!/bin/bash
+
 #SBATCH -N 1 
-#SBATCH -t 0:01:00
+#SBATCH -t 00:01:00
 #SBATCH -A ICT23_ESP
 #SBATCH -p bdw_all_serial
 #SBATCH -o logs/control.o
