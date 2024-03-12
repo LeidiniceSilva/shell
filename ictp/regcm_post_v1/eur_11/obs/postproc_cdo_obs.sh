@@ -15,9 +15,9 @@ YR="2000-2000"
 
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
-
-DATASET="MSWEP" 
+ 
 EXP="EUR-11"
+DATASET="MSWEP"
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
@@ -130,6 +130,6 @@ rm *_${YR}.nc
 fi
 
 echo
-echo "--------------- THE END POSTPROCESSING DATASET ----------------"
+echo "------------------------------- THE END POSTPROCESSING DATASET -------------------------------"
 
 }
