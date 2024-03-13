@@ -16,9 +16,8 @@ YR="2000-2000"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-VAR="precip"
 EXP="EUR-11"
-DATASET="CPC" 
+DATASET="EOBS" 
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/post_evaluate/obs"
@@ -30,7 +29,11 @@ echo ${DIR_OUT}
 
 echo 
 echo "------------------------------- INIT POSTPROCESSING DATASET -------------------------------"
-   
+
+if [ ${DATASET} == 'CPC' ]
+then
+VAR="precip"
+ 
 echo
 echo "1. Select date"
 CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cpc.day.1979-2021.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
@@ -45,12 +48,32 @@ echo
 echo "3. Regrid variable"
 ${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
 
+else
+VAR="rr"
+
+echo
+echo "1. Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/rr.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+
+echo
+echo "2. Calculate p99"
+CDO timmin ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
+CDO timmax ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
+CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc p99_${EXP}_${DATASET}_${YR}.nc
+  
+echo
+echo "3. Regrid variable"
+${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+
+fi
+
 echo 
 echo "4. Delete files"
 rm ${VAR}_${EXP}_${DATASET}_${YR}.nc
 rm ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
 rm ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
 rm p99_${EXP}_${DATASET}_${YR}.nc
+
 
 echo
 echo "------------------------------- THE END POSTPROCESSING DATASET -------------------------------"

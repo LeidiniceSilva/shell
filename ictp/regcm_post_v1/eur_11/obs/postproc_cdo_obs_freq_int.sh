@@ -16,9 +16,8 @@ YR="2000-2000"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-VAR="precip"
 EXP="EUR-11"
-DATASET="CPC" 
+DATASET="EOBS" 
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
@@ -31,6 +30,10 @@ echo ${DIR_OUT}
 
 echo 
 echo "------------------------------- INIT POSTPROCESSING DATASET -------------------------------"
+
+if [ ${DATASET} == 'CPC' ]
+then
+VAR="precip"
    
 echo
 echo "1. Select date"
@@ -47,6 +50,27 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO histmean,1,100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc
     ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
 done
+
+else
+VAR="rr"
+   
+echo
+echo "1. Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/rr.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+
+echo
+echo "2. Frequency and intensity by season"
+for SEASON in ${SEASON_LIST[@]}; do
+    CDO selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+    
+    CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc ${VAR}_freq_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+    ${BIN}/./regrid ${VAR}_freq_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+
+    CDO histmean,1,100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+    ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+done
+
+fi
 
 echo 
 echo "3. Delete files"
