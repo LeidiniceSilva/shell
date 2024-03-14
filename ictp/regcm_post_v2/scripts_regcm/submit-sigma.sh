@@ -13,9 +13,9 @@ rdir=$3
 ys=$5     
 scrdir=$6 
 email=$7
-#lgc_vert=true
-#lgc_dynt=true
-#lgc_quv=true
+lgc_vert=true
+lgc_dynt=true
+lgc_quv=true
 dep=""
 
 ##############################

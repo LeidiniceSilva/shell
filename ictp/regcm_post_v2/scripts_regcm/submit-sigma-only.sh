@@ -10,12 +10,12 @@ n=$1
 c=$2
 path=$2-$1
 dep=$3
-rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km
-ys=2018-2021        
-scrdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm
+rdir=$3
+ys=$5     
+scrdir=$6
 email="mda_silv@ictp.it"
 
-## exported from master script
+# exported from master script
 lgc_vert=true 
 lgc_dynt=true 
 lgc_quv=true 

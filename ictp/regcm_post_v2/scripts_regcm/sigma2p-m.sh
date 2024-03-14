@@ -3,6 +3,7 @@
 #SBATCH -t 4:00:00
 #SBATCH -A ICT23_ESP
 #SBATCH --mail-type=FAIL
+#SBATCH --qos=qos_prio
 
 # load required modules
 module purge

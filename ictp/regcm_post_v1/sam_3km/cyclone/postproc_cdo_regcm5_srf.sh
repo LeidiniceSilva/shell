@@ -13,7 +13,7 @@ CDO(){
 
 EXP="SAM-3km"
 DT="2018-2021"
-VAR_LIST="psl sfcWind uas vas"
+VAR_LIST="sfcWind uas vas"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"

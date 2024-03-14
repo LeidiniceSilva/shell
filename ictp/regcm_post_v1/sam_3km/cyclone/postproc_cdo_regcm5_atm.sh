@@ -13,7 +13,10 @@ CDO(){
 
 EXP="SAM-3km"
 DT="2018-2021"
-VAR_LIST="ua va"
+VAR_LIST="psl"
+#VAR_LIST="psl ua va"
+
+MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
@@ -29,20 +32,53 @@ for VAR in ${VAR_LIST[@]}; do
     cd ${DIR_OUT}
     echo ${DIR_OUT}
     
-    echo
-    echo "1. Select variable: ${VAR}"
     for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
+	    
+	    if [ ${VAR} == 'psl' ]
+	    then
+	    echo
+	    echo "1. Select variable: ${VAR}"
+	    CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+
+	    echo
+	    echo "2. Copy name"
+	    cp ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100.nc
+
+	    echo
+	    echo "3. Regrid"
+	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100.nc -35,-15,0.15 -76,-38,0.15 bil
+
+	    echo
+	    echo "4. Smooth"
+	    CDO smooth ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100_smooth.nc
+	    CDO smooth ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100_smooth.nc ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}01.nc
+	    	    
+	    else
+	    echo
+	    echo "1. Select variable: ${VAR}"
 	    CDO selname,${VAR} ${DIR_IN}/pressure/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
 	    
 	    echo
 	    echo "2. Select levels"
-	    CDO sellevel,925 ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_925hPa_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6hr_${YEAR}${MON}0100.nc
-	    
+	    CDO sellevel,925 ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_${MODEL}_6hr_${YEAR}${MON}0100.nc
+
 	    echo
-	    echo "3. Delete files"
-	    rm ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-    
+	    echo "3. Regrid"
+	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_6hr_${YEAR}${MON}0100.nc -35,-15,0.15 -76,-38,0.15 bil
+
+	    echo
+	    echo "4. Smooth"
+	    CDO smooth ${VAR}_${EXP}_${MODEL}_6hr_${YEAR}${MON}0100_lonlat.nc ${VAR}_${EXP}_${MODEL}_6hr_${YEAR}${MON}0100_smooth.nc
+	    CDO smooth ${VAR}_${EXP}_${MODEL}_6hr_${YEAR}${MON}0100_smooth.nc ${VAR}_${EXP}_${MODEL}_6hr_${YEAR}${MON}01.nc
+	    fi
+
+	    echo
+	    echo "5. Delete files"
+	    rm *0100.nc
+	    rm *lonlat.nc
+	    rm *smooth.nc
+	    
         done
     done	
 
