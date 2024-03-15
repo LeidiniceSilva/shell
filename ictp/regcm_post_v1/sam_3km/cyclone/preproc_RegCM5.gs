@@ -4,8 +4,8 @@ pathbin=subwrd(args,2)
 
 
 *Alterar o ano inicial (mudar aqui)
-ano=1980
-while(ano<=2010)
+ano=2018
+while(ano<=2021)
 
 
 

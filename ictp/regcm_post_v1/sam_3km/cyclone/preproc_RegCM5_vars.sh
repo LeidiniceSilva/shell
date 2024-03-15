@@ -12,11 +12,9 @@ CDO(){
 }
 
 EXP="SAM-3km"
-DT="2018-2021"
-VAR_LIST="psl"
-#VAR_LIST="psl ua va"
-
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5"
+DT="2018-2021"
+VAR_LIST="psl ua va"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"

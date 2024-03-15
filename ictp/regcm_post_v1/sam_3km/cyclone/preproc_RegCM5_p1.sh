@@ -14,6 +14,12 @@
 #__date__        = 'Mar 15, 2024'
 #__description__ = 'Preprocess RegCM5 output to track cyclone'
 
+{
+set -eo pipefail
+CDO(){
+  cdo -O -L -f nc4 -z zip $@
+}
+
 # Change path
 path='/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/rcm'
 
@@ -32,18 +38,18 @@ for yr in $(seq $anoi $anof); do
     
         if [ ${var} == 'psl' ]
 	then
-    	cdo -b F64 mergetime ${path}/${var}/${var}_${filename1}_${yr}*.nc ${path}/track/${var}_${filename}_${yr}.nc
+    	CDO -b F64 mergetime ${path}/${var}/${var}_${filename1}_${yr}*.nc ${path}/track/${var}_${filename}_${yr}.nc
 	else
-    	cdo -b F64 mergetime ${path}/${var}/${var}_925hPa_${filename2}_${yr}*.nc ${path}/track/${var}_${filename}_${yr}.nc	
+    	CDO -b F64 mergetime ${path}/${var}/${var}_925hPa_${filename2}_${yr}*.nc ${path}/track/${var}_${filename}_${yr}.nc	
 	fi
 	
 	for hr in 00 06 12 18; do
-            cdo selhour,$hr ${path}/track/${var}_${filename}_${yr}.nc ${path}/track/${var}.${yr}.${hr}.nc
+            CDO selhour,$hr ${path}/track/${var}_${filename}_${yr}.nc ${path}/track/${var}.${yr}.${hr}.nc
         
 	done
     done
 done
 
-
+}
 
 
