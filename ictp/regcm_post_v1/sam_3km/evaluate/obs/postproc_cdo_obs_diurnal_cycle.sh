@@ -6,17 +6,21 @@
 #__description__ = 'Posprocessing the OBS datasets with CDO'
 
 {
+
+source /marconi/home/userexternal/ggiulian/STACK22/env2022
 set -eo pipefail
+
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DATASET="ERA5"
-VAR_LIST="tp"
+YR="2018-2021"
+IYR=$( echo $YR | cut -d- -f1 )
+FYR=$( echo $YR | cut -d- -f2 )
+
 EXP="SAM-3km"
-DT="2018-2021"
-DT_i="2018-01-01"
-DT_ii="2021-12-31"
+DATASET="ERA5"
+VAR_LIST="tp t2m"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/obs"
@@ -33,39 +37,39 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "1. Select date"
-    CDO seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_2018-2021.nc ${VAR}_${DATASET}_${DT}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_2018-2021.nc ${VAR}_${DATASET}_${YR}.nc
     
     echo
     echo "2. Convert unit"
     if [ ${VAR} == 'tp' ]
     then
-    CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}.nc
+    CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
     else
-    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}.nc
+    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
     fi
     
     echo
     echo "4. Hourly mean"
     for HR in `seq -w 00 23`; do
     
-        CDO selhour,${HR} ${VAR}_${EXP}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${DT}.nc
-	CDO timmean ${VAR}_${EXP}_${DATASET}_${HR}hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${DT}_timmean.nc
+        CDO selhour,${HR} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}.nc
+	CDO timmean ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}_timmean.nc
 	
     done
     
     echo
     echo "5. Diurnal cycle"
-    CDO mergetime ${VAR}_${EXP}_${DATASET}_*hr_${DT}_timmean.nc ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${DT}.nc
+    CDO mergetime ${VAR}_${EXP}_${DATASET}_*hr_${YR}_timmean.nc ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc
    
     echo
     echo "6. Regrid output"
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
               
 done
 
 echo 
 echo "7. Delete files"
-rm *_${DT}.nc
-rm *_${DT}_timmean.nc
+rm *_${YR}.nc
+rm *_${YR}_timmean.nc
 
 }

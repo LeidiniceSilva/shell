@@ -55,6 +55,10 @@ CDO -b f32 mulc,3600 ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_${DT}.nc ${VAR}_${EXP
 echo 
 echo "5. Delete files"
 rm ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl1_v0_${DT}.nc
+rm ${VAR}_${EXP}_r1i1p1f1_ICTP-RegCM5pbl2_v0_${DT}.nc
+rm ${VAR}_${EXP}_r1i1p1f1_USP-RegCM471_v2_${DT}.nc
+rm ${VAR}_${EXP}_r1i1p1f1_NCAR-WRF415_v1_${DT}.nc
+rm ${VAR}_${EXP}_r1i1p1f1_UCAN-WRF433_v1_${DT}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

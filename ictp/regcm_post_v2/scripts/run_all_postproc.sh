@@ -30,8 +30,8 @@ n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
 
-export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11
-yrs=2000-2001
+export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v2
+yrs=2018-2018
 email="mda_silv@ictp.it"
 
 run_postproc="1 0 0 0 0 0 0 0 0 0"   # sigma2p

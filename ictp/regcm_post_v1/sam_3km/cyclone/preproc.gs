@@ -3,27 +3,29 @@ pathnc=subwrd(args,1)
 pathbin=subwrd(args,2)
 
 
-*Alterar o ano inicial (mudar aqui)
+*Change the year here
 ano=2018
 while(ano<=2021)
 
+lon1=-85
+lon2=-10
+lat1=-58.5
+lat2=-1.5
 
 
 ***Open the file
-
-'sdfopen 'pathnc'/psl.'ano'.00.nc'  
-'sdfopen 'pathnc'/psl.'ano'.06.nc'  
-'sdfopen 'pathnc'/psl.'ano'.12.nc'  
-'sdfopen 'pathnc'/psl.'ano'.18.nc'  
-'sdfopen 'pathnc'/ua.'ano'.00.nc' 
-'sdfopen 'pathnc'/ua.'ano'.06.nc' 
-'sdfopen 'pathnc'/ua.'ano'.12.nc' 
-'sdfopen 'pathnc'/ua.'ano'.18.nc' 
-'sdfopen 'pathnc'/va.'ano'.00.nc' 
-'sdfopen 'pathnc'/va.'ano'.06.nc' 
-'sdfopen 'pathnc'/va.'ano'.12.nc' 
-'sdfopen 'pathnc'/va.'ano'.18.nc' 
-
+'sdfopen 'pathnc'/msl.'ano'.00.nc'  
+'sdfopen 'pathnc'/msl.'ano'.06.nc'  
+'sdfopen 'pathnc'/msl.'ano'.12.nc'  
+'sdfopen 'pathnc'/msl.'ano'.18.nc'  
+'sdfopen 'pathnc'/u.'ano'.00.nc' 
+'sdfopen 'pathnc'/u.'ano'.06.nc' 
+'sdfopen 'pathnc'/u.'ano'.12.nc' 
+'sdfopen 'pathnc'/u.'ano'.18.nc' 
+'sdfopen 'pathnc'/v.'ano'.00.nc' 
+'sdfopen 'pathnc'/v.'ano'.06.nc' 
+'sdfopen 'pathnc'/v.'ano'.12.nc' 
+'sdfopen 'pathnc'/v.'ano'.18.nc' 
 
 
 mes=1
@@ -84,8 +86,7 @@ tf=i+31
 endif
 
 
-*******cria o arquivo de saida******
-
+*Creatie the output file
 if(mes<10)
 'set gxout fwrite'
 'set fwrite 'pathbin'/ncp.'ano'0'mes'0100'
@@ -97,12 +98,12 @@ endif
 
 while (i<tf)
 i=i+1
-****************************************
+
 
 'set dfile 1'
 'set t 'i
 'set z 1'
-'define pres=psl/100'
+'define pres=msl/100'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 
@@ -110,18 +111,18 @@ i=i+1
 'set t 'i
 'set z 1'
 *'define xu=regrid2(u,1.5,1.5,bl_p1,'lon1','lat1')'
-'d ua'
+'d u'
 
 'set dfile 9'
 'set t 'i
 'set z 1'
 *'define xv=regrid2(v,1.5,1.5,bl_p1,'lon1','lat1')'
-'d va'
+'d v'
 
 'set dfile 2'
 'set t 'i
 'set z 1'
-'define pres=psl/100'
+'define pres=msl/100'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 
@@ -129,18 +130,18 @@ i=i+1
 'set t 'i
 'set z 1'
 *'define xu=regrid2(u,1.5,1.5,bl_p1,'lon1','lat1')'
-'d ua'
+'d u'
 
 'set dfile 10'
 'set t 'i
 'set z 1'
 *'define xv=regrid2(v,1.5,1.5,bl_p1,'lon1','lat1')'
-'d va'
+'d v'
 
 'set dfile 3'
 'set t 'i
 'set z 1'
-'define pres=psl/100'
+'define pres=msl/100'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 
@@ -148,18 +149,18 @@ i=i+1
 'set t 'i
 'set z 1'
 *'define xu=regrid2(u,1.5,1.5,bl_p1,'lon1','lat1')'
-'d ua'
+'d u'
 
 'set dfile 11'
 'set t 'i
 'set z 1'
 *'define xv=regrid2(v,1.5,1.5,bl_p1,'lon1','lat1')'
-'d va'
+'d v'
 
 'set dfile 4'
 'set t 'i
 'set z 1'
-'define pres=psl/100'
+'define pres=msl/100'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 
@@ -167,14 +168,14 @@ i=i+1
 'set t 'i
 'set z 1'
 *'define xu=regrid2(u,1.5,1.5,bl_p1,'lon1','lat1')'
-'d ua'
+'d u'
 
 'set dfile 12'
 'set t 'i
 'set z 1'
 *'define xv=regrid2(v,1.5,1.5,bl_p1,'lon1','lat1')'
-'d va'
-******************************************
+'d v'
+
 endwhile
 'disable fwrite'
 mes=mes+1
@@ -196,7 +197,6 @@ endwhile
 ano=ano+1
 
 endwhile
-
 
 'quit'
 

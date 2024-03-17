@@ -22,9 +22,12 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
+YR="2018-2021"
+IYR=$( echo $YR | cut -d- -f1 )
+FYR=$( echo $YR | cut -d- -f2 )
+
 VAR="pr"
 EXP="SAM-3km"
-DT="2018-2021"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/rcm"
@@ -39,37 +42,36 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo
 echo "1. Select variable: ${VAR}"
-for YEAR in `seq -w 2018 2021`; do
+for YEAR in `seq -w ${IYR} ${FYR}`; do
     for MON in `seq -w 01 12`; do
         CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
     done
 done
 
 echo 
-echo "2. Merge time: ${DT}"
-CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_1hr_${DT}.nc
+echo "2. Concatenate date: ${YR}"
+CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_1hr_${YR}.nc
  
 echo
 echo "3. Convert unit"
-CDO -b f32 mulc,3600 ${VAR}_${EXP}_1hr_${DT}.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}.nc
+CDO -b f32 mulc,3600 ${VAR}_${EXP}_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc
 
 echo
 echo "4. Calculate p99"
-CDO timmin ${VAR}_${EXP}_RegCM5_1hr_${DT}.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}_min.nc
-CDO timmax ${VAR}_${EXP}_RegCM5_1hr_${DT}.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_RegCM5_1hr_${DT}.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}_min.nc ${VAR}_${EXP}_RegCM5_1hr_${DT}_max.nc p99_${EXP}_RegCM5_1hr_${DT}.nc
+CDO timmin ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}_min.nc
+CDO timmax ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}_max.nc
+CDO timpctl,99 ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}_min.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}_max.nc p99_${EXP}_RegCM5_1hr_${YR}.nc
   
 echo
 echo "5. Regrid variable"
-${BIN}/./regrid p99_${EXP}_RegCM5_1hr_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid p99_${EXP}_RegCM5_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo 
 echo "6. Delete files"
 rm *0100.nc
-rm *_${DT}.nc
-rm ${VAR}_${EXP}_RegCM5_1hr_${DT}_min.nc
-rm ${VAR}_${EXP}_RegCM5_1hr_${DT}_max.nc
-rm p99_${EXP}_RegCM5_1hr_${DT}.nc
+rm *_${YR}.nc
+rm ${VAR}_${EXP}_RegCM5_1hr_${YR}_min.nc
+rm ${VAR}_${EXP}_RegCM5_1hr_${YR}_max.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

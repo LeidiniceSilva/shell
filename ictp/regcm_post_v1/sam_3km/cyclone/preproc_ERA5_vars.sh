@@ -25,7 +25,8 @@ CDO(){
 
 EXP="SAM-25km"
 DATASET="ERA5"
-VAR_LIST="msl u v"
+VAR_LIST="v"
+#VAR_LIST="msl u v"
 
 DIR_IN="/marconi_work/ICT23_ESP/mdasilva/SAM-3km/post_cyclone/obs/era5"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"

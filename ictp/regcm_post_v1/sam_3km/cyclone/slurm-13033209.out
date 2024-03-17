@@ -1,9 +1,0 @@
-
-/marconi_work/ICT23_ESP/mdasilva/SAM-3km/post_cyclone/obs/era5
-
---------------- INIT POSPROCESSING DATASET ----------------
-
-1. Regrid
-cdo    remapbil: Bilinear weights from lonlat (189x109) to lonlat (254x134) grid
-
-2. Smooth

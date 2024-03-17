@@ -6,17 +6,20 @@
 #__description__ = 'Posprocessing the OBS datasets with CDO'
 
 {
+
+source /marconi/home/userexternal/ggiulian/STACK22/env2022
 set -eo pipefail
+
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DATASET="ERA5"
+YR="2018-2021"
+IYR=$( echo $YR | cut -d- -f1 )
+FYR=$( echo $YR | cut -d- -f2 )
 
 EXP="SAM-3km"
-DT="2018-2021"
-DT_i="2018-01-01"
-DT_ii="2021-12-31"
+DATASET="CPC"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/obs"
@@ -35,51 +38,55 @@ VAR="precip"
     
 echo
 echo "1.1. Select date"
-CDO seldate,${DT_i},${DT_ii} ${DIR_IN}/${DATASET}/cpc.day.1979-2021.nc ${VAR}_${EXP}_${DATASET}_${DT}.nc
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cpc.day.1979-2021.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
 
 echo
 echo "1.2. Calculate p99"
-CDO timmin ${VAR}_${EXP}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}_min.nc
-CDO timmax ${VAR}_${EXP}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}_min.nc ${VAR}_${EXP}_${DATASET}_${DT}_max.nc p99_${EXP}_${DATASET}_${DT}.nc
+CDO timmin ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
+CDO timmax ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
+CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc p99_${EXP}_${DATASET}_${YR}.nc
   
 echo
 echo "1.3. Regrid variable"
-${BIN}/./regrid p99_${EXP}_${DATASET}_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo 
 echo "1.4. Delete files"
-rm ${VAR}_${EXP}_${DATASET}_${DT}.nc
-rm ${VAR}_${EXP}_${DATASET}_${DT}_min.nc
-rm ${VAR}_${EXP}_${DATASET}_${DT}_max.nc
-rm p99_${EXP}_${DATASET}_${DT}.nc
+rm ${VAR}_${EXP}_${DATASET}_${YR}.nc
+rm ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
+rm ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
+rm p99_${EXP}_${DATASET}_${YR}.nc
 
 else
 echo 
 echo "2. ------------------------------- PROCCESSING ERA5 DATASET -------------------------------"
 
 VAR="tp"
+
+echo
+echo "2.1. Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2018-2021.nc ${VAR}_${DATASET}_${YR}.nc
     
 echo
-echo "2.1. Convert unit"
-CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}.nc
+echo "2.2. Convert unit"
+CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
 
 echo
-echo "2.2. Calculate p99"
-CDO timmin ${VAR}_${EXP}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}_min.nc
-CDO timmax ${VAR}_${EXP}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${DT}.nc ${VAR}_${EXP}_${DATASET}_${DT}_min.nc ${VAR}_${EXP}_${DATASET}_${DT}_max.nc p99_${EXP}_${DATASET}_${DT}.nc
+echo "2.3. Calculate p99"
+CDO timmin ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
+CDO timmax ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
+CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc p99_${EXP}_${DATASET}_${YR}.nc
   
 echo
-echo "2.3. Regrid variable"
-${BIN}/./regrid p99_${EXP}_${DATASET}_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+echo "2.4. Regrid variable"
+${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo 
-echo "2.4. Delete files"
-rm ${VAR}_${EXP}_${DATASET}_${DT}.nc
-rm ${VAR}_${EXP}_${DATASET}_${DT}_min.nc
-rm ${VAR}_${EXP}_${DATASET}_${DT}_max.nc
-rm p99_${EXP}_${DATASET}_${DT}.nc
+echo "2.. Delete files"
+rm ${VAR}_${EXP}_${DATASET}_${YR}.nc
+rm ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
+rm ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
+rm p99_${EXP}_${DATASET}_${YR}.nc
 
 fi
 
