@@ -14,15 +14,15 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2018-2021"
+YR="2018-2018"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 VAR="pr"
 EXP="SAM-3km"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/rcm"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v4/NoTo-SAM"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v4/post/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
