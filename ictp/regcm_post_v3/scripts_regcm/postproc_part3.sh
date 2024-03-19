@@ -14,10 +14,10 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 n=$1
 path=$2-$1
-rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5
-odir=$4 #/marconi_scratch/userexternal/jciarlo0/ERA5/obs
-ys=$5 #1999-1999
-export scrdir=$6 #/marconi/home/userexternal/jciarlo0/regcm_tests/Atlas2
+rdir=$3 
+odir=$4 
+ys=$5 
+export scrdir=$6 
 
 ##############################
 ####### end of inputs ########
@@ -60,7 +60,14 @@ pdir=$hdir/plots
 mkdir -p $pdir
 
 seas="DJF MAM JJA SON"
-vars="pr tas tasmax tasmin clt"
+vars="rsnl"
+#seas="DJF"
+#seas="MAM JJA SON"
+#vars="pr tas tasmax tasmin clt"
+#vars="pr"
+#if [ $n = Europe -o $n = NorthAmerica -o $n = EastAsia ]; then
+#  vars="$vars snw"
+#fi
 for s in $seas ; do
   echo "#### post-processing $n $s $ys ####"
   [[ $s = DJF ]] && mons="{12,01,02}"
@@ -86,48 +93,50 @@ for s in $seas ; do
 #    [[ $v = tasmin ]] && o=("cru") && res=("0.5")
 #    [[ $v = clt    ]] && o=("cru") && res=("0.5")
 #    [[ $v = snw    ]] && o=("swe") && res=("1.0")
-	o=("cru" "era5")
-	res=("0.5" "0.25")
+	o=("era5")
+	res=("0.25")
     echo "#=== $v ===#"
     typ=STS
     [[ $v = clt ]] && typ=SRF
     [[ $v = snw ]] && typ=SRF
+    [[ $v = rsnl ]] && typ=RAD
 
     func="selvar,$v"
     [[ $v = clt ]] && func="daymean -selvar,$v"
     [[ $v = snw ]] && func="daymean -selvar,$v"
+    [[ $v = rsnl ]] && func="daymean -selvar,$v"
     for f in $( eval ls $hdir/*${typ}.{${fyr}..${lyr}}${mons}*.nc ); do
       of=$pdir/${n}_${v}_$( basename $f | cut -d'.' -f2 ).nc
-#      CDO $func $f $of
+      CDO $func $f $of
     done
     sof=$pdir/${n}_${v}_${ys}_${s}.nc
-#    CDO mergetime $( eval ls $pdir/${n}_${v}_{${fyr}..${lyr}}${mons}*.nc ) $sof
-#    rm $( eval ls $pdir/${n}_${v}_{${fyr}..${lyr}}${mons}*.nc )
+    CDO mergetime $( eval ls $pdir/${n}_${v}_{${fyr}..${lyr}}${mons}*.nc ) $sof
+    rm $( eval ls $pdir/${n}_${v}_{${fyr}..${lyr}}${mons}*.nc )
 
     mof=$pdir/${n}_${v}_${ys}_${s}_mean.nc
-#    CDO timmean $sof $mof
-#    rm $sof
+    CDO timmean $sof $mof
+    rm $sof
 
-    if [ $v = pr ]; then
-      cof=$pdir/${n}_${v}_${ys}_${s}_mean_tmp.nc
+#    if [ $v = pr ]; then
+#      cof=$pdir/${n}_${v}_${ys}_${s}_mean_tmp.nc
 #      CDO mulc,86400 $mof $cof
 #      ncatted -O -a units,pr,m,c,mm/day $cof
 #      mv $cof $mof
-    elif [ $v = tas -o $v = tasmax -o $v = tasmin ]; then
-      cof=$pdir/${n}_${v}_${ys}_${s}_mean_tmp.nc
+#    elif [ $v = tas -o $v = tasmax -o $v = tasmin ]; then
+#      cof=$pdir/${n}_${v}_${ys}_${s}_mean_tmp.nc
 #      CDO subc,273.15 $mof $cof
 #      ncatted -O -a units,$v,m,c,Celsius $cof
 #      mv $cof $mof
-    fi
+#    fi
 
-	# apply land-sea mask
-	#export mf=$( eval ls $hdir/*_STS.2005010100.nc )
-	#export mf=$( eval ls $hdir/*_SRF.2005010100.nc )
-	export mf=$( eval ls $hdir/*.nc | head -n1 )
-	echo $mf
-	export sea=$s
-	export var=$v
-	ncl -Q $scrdir/apply_RegCM_land_sea_mask.ncl
+#	# apply land-sea mask
+#	#export mf=$( eval ls $hdir/*_STS.2005010100.nc )
+#	#export mf=$( eval ls $hdir/*_SRF.2005010100.nc )
+#	export mf=$( eval ls $hdir/*.nc | head -n1 )
+#	echo $mf
+#	export sea=$s
+#	export var=$v
+#	ncl -Q $scrdir/apply_RegCM_land_sea_mask.ncl
     mof2=$pdir/${n}_${v}_${ys}_${s}_mean_masked.nc
 
     no=$(( ${#o[@]} - 1 ))

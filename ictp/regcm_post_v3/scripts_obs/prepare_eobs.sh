@@ -10,26 +10,27 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-obs=CPC
-hdir=$OBSDIR/$obs
+obs=EOBS
 ys=2000-2001
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
-vars="pr"
+hdir=$OBSDIR/$obs
+vars="pr tas tasmax tasmin"
 seas="DJF MAM JJA SON"
+is=0
 for v in $vars; do
-  [[ $ys = 1970-1979 ]] && continue
-  [[ $lyr -le 1979 ]] && continue
-  [[ $v = pr ]] && vc=precip
-  sf=$hdir/cpc.day.1979-2021.nc
-  yf=${v}_${obs}_${ys}.nc
-  eval CDO selyear,$fyr/$lyr $sf $yf
+  [[ $v = pr  ]] && vc=rr
+  [[ $v = tas ]] && vc=tg
+  [[ $v = tasmin ]] && vc=tn
+  [[ $v = tasmax ]] && vc=tx
+  sf=$hdir/eobs.${vc}.mon.1950-2021.nc
   for s in $seas ; do
     echo "## Processing $v $ys $s"
     mf=${v}_${obs}_${ys}_${s}_mean.nc
-    CDO timmean -selseas,$s -chname,$vc,$v -selvar,$vc $yf $mf
+    CDO timmean -selseas,$s -selyear,$fyr/$lyr \
+                -chname,$vc,$v -selvar,$vc $sf $mf
+    is=$(( is+1 ))
   done
-  rm $yf
 done
 echo "Done."
 

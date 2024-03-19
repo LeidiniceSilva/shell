@@ -13,9 +13,9 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 dom=$1
 snam=$2-$1
-rdir=$3 
-odir=$4 
-tper=$5 
+rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5
+odir=$4 #/marconi_scratch/userexternal/jciarlo0/ERA5/obs
+tper=$5 #2000-2001
 
 ##############################
 ### change inputs manually ###
@@ -84,18 +84,18 @@ if [ $cp = true ]; then
   pdom=$( cat $parentin | grep coarse_domname | cut -d"'" -f2 )
 fi
 
-r4="off"
-special=true
-subregs="SAM"
-[[ $dom = SouthAmerica         ]] && subregs="SAM"
+r4="on"
+#special=true
+special=false
+subregs="FullDom"
+[[ $dom = Europe         ]] && subregs="MED NEU WCE"
 if [ $dom = Europe -a $special = true ]; then
   subregs="CARPAT EURO4M RdisaggH GRIPHO REGNIE ENG-REGR COMEPHORE"
 fi
 [[ $dom = Europe03       ]] && subregs="MED NEU WCE"
 [[ $dom = NorthAmerica   ]] && subregs="NWN NEN WNA CNA ENA NCA"
 [[ $dom = CentralAmerica ]] && subregs="NCA SCA CAR"
-[[ $dom = SouthAmerica   ]] && subregs="SAM"
-#[[ $dom = SouthAmerica   ]] && subregs="NWS NSA SAM NES SES SWS SSA"
+[[ $dom = SouthAmerica   ]] && subregs="NWS NSA SAM NES SES SWS SSA"
 [[ $dom = Africa         ]] && subregs="SAH WAF CAF NEAF SEAF ARP WSAF ESAF MDG"
 [[ $dom = SouthAsia      ]] && subregs="WCA ECA TIB SAS ARP"
 [[ $dom = EastAsia       ]] && subregs="ESB RFE ECA TIB EAS"
@@ -105,7 +105,7 @@ fi
 [[ $dom = WMediterranean ]] && subregs="EURO4M GRIPHO" #SPAIN02 CARPAT RdisaggH COMEPHORE
 [[ $dom = SEEurope       ]] && subregs="GRIPHO COMEPHORE"
 [[ $snam = MPI-Europe ]] && r4="off"
-
+#[[ $snam = ERA5-Europe ]] && r4="off"
 [[ "$subregs" = "FullDom" ]] && r4="off"
 if [ $dom = Europe -a $special = false -o "$subregs" = "FullDom" -a $special = false ]; then
   obs_p=EOBS

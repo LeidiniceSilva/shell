@@ -10,24 +10,30 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-obs=CPC
-hdir=$OBSDIR/$obs
+set -a
+obs=GPCC
 ys=2000-2001
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
+hdir=$OBSDIR/$obs
 vars="pr"
 seas="DJF MAM JJA SON"
+seasdays=( 30.5 30.5 30.5 30.5 )
+is=0
 for v in $vars; do
-  [[ $ys = 1970-1979 ]] && continue
-  [[ $lyr -le 1979 ]] && continue
   [[ $v = pr ]] && vc=precip
-  sf=$hdir/cpc.day.1979-2021.nc
+  tf=gpcc.mon.1911-2020.nc
+  sf=$( eval ls $OBSDIR/$obs/full_data_monthly_v2022_????_????_025.nc )
+  [[ ! -f $tf ]] && CDO mergetime $sf $tf
   yf=${v}_${obs}_${ys}.nc
-  eval CDO selyear,$fyr/$lyr $sf $yf
+  eval CDO selyear,$fyr/$lyr $tf $yf
   for s in $seas ; do
     echo "## Processing $v $ys $s"
     mf=${v}_${obs}_${ys}_${s}_mean.nc
-    CDO timmean -selseas,$s -chname,$vc,$v -selvar,$vc $yf $mf
+    CDO divc,${seasdays[$i]} -timmean -selseas,$s \
+        -chname,$vc,$v -selvar,$vc $yf $mf
+    ncatted -O -a units,pr,m,c,mm/day $mf
+    is=$(( is+1 ))
   done
   rm $yf
 done

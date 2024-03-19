@@ -186,8 +186,8 @@ for s in $seas ; do
         [[ $n = WMediterranean ]] && nn=Medi3 
         rrr=$( echo $this_res | cut -d. -f2 )
 #       if [ $ys = "2000-2004" -o $ys = "1970-1975" ]; then
-          fobs0=$( eval ls $hrdir/${v}_frq_${ys}_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
-          iobs0=$( eval ls $hrdir/${v}_int_${ys}_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
+          fobs0=$( eval ls $hrdir/${v}_frq_2000-2009_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
+          iobs0=$( eval ls $hrdir/${v}_int_2000-2009_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
 #       else
 #         fobs0=$( eval ls $hrdir/${v}_frq_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
 #         iobs0=$( eval ls $hrdir/${v}_int_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
