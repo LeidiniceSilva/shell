@@ -3,7 +3,7 @@
 #SBATCH -t 8:00:00
 #SBATCH -A ICT23_ESP
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=clu@ictp.it
+#SBATCH --mail-user=mda_silv@ictp.it
 #SBATCH -p skl_usr_prod
 
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
