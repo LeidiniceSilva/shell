@@ -1,9 +1,10 @@
 #!/bin/bash
+
 #SBATCH -N 1 
 #SBATCH -t 8:00:00
 #SBATCH -A ICT23_ESP
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=ggiulian@ictp.it
+#SBATCH --mail-user=mda_silv@ictp.it
 #SBATCH -p skl_usr_prod
 
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
@@ -16,9 +17,9 @@ n=$1
 path=$2-$1
 export snum=$1
 export conf=$2
-rdir=$3      #/marconi_scratch/userexternal/jciarlo0/ERA5
-scrdir=$4    #/marconi/home/userexternal/jciarlo0/regcm_tests/Atlas2
-export ys=$5 #1999-1999
+rdir=$3      
+scrdir=$4    
+export ys=$5 
 
 ##############################
 ####### end of inputs ########
@@ -51,7 +52,8 @@ fi
 pdir=$hdir/plots
 mkdir -p $pdir
 
-ncl -Q $scrdir/plot_vert.ncl
+ncl -Q $scrdir/plot_vert_v2.ncl
+#ncl -Q $scrdir/plot_vert.ncl
 #ncl -Q $scrdir/plot_vert_daynight.ncl
 
 echo "#### vertical plots complete! ####"

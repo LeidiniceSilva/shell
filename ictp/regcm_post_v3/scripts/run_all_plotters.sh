@@ -24,9 +24,9 @@ ys=2000-2001
 #run_plots="0 0 0 1 0 0 0 0 0"   # prc/pr
 #run_plots="0 0 0 0 1 0 0 0 0"   # frq-int
 #run_plots="0 0 0 0 0 1 0 0 0"   # pdf
-#run_plots="0 0 0 0 0 0 1 0 0"   # vertical
+ run_plots="0 0 0 0 0 0 1 0 0"   # vertical
 #run_plots="0 0 0 0 0 0 0 1 0"   # wind
-run_plots="0 0 0 0 0 0 0 0 1"   # taylor
+#run_plots="0 0 0 0 0 0 0 0 1"   # taylor
 #run_plots="0 0 0 0 0 0 0 0 0 1" # pixels
 ##0/1 = on/off switch: bias, %pr%, p99, prc/pr, pr-frq/int, pdfs, vertical, wind, taylor plots
 

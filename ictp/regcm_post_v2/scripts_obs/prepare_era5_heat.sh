@@ -1,7 +1,7 @@
 #!/bin/bash
 
 OBSDIR=/marconi/home/userexternal/mdasilva/OBS
-wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/obs
+wdir=$2
 cd $wdir
 
 {
@@ -13,7 +13,7 @@ CDO(){
 set -a
 obs=ERA5
 hdir=$OBSDIR/$obs
-ys=2018-2021
+ys=$1
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 vars="hfss hfls"

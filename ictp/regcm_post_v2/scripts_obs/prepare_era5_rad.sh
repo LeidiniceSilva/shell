@@ -1,7 +1,7 @@
 #!/bin/bash
 
 OBSDIR=/marconi/home/userexternal/mdasilva/OBS
-wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/obs
+wdir=$2
 cd $wdir
 
 {
@@ -13,11 +13,10 @@ CDO(){
 set -a
 obs=ERA5
 hdir=$OBSDIR/$obs
-ys=2018-2021
+ys=$1
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
-vars="rsns rsnl"
-#vars="rsns rsnl rlds rsds rsnscl rlntpcs"
+vars="rsns rsnl rlds rsds rsnscl rlntpcs"
 seas="DJF MAM JJA SON"
 seasdays=( 30.5 30.5 30.5 30.5 )
 is=0
@@ -25,10 +24,10 @@ for v in $vars; do
   echo "##### Processing $v"
   [[ $v = rsns    ]] && vc=msnswrf
   [[ $v = rsnl    ]] && vc=msnlwrf
-  #[[ $v = rlds    ]] && vc=msdwlwrf
-  #[[ $v = rsds    ]] && vc=msdwswrf
-  #[[ $v = rsnscl  ]] && vc=msnswrfcs
-  #[[ $v = rlntpcs ]] && vc=msnlwrfcs
+  [[ $v = rlds    ]] && vc=msdwlwrf
+  [[ $v = rsds    ]] && vc=msdwswrf
+  [[ $v = rsnscl  ]] && vc=msnswrfcs
+  [[ $v = rlntpcs ]] && vc=msnlwrfcs
   sf=$hdir/${vc}_${obs}_${ys}.nc
   yf=${v}_${obs}_${ys}.nc
   eval CDO selyear,$fyr/$lyr $sf $yf

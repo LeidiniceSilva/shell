@@ -1,7 +1,7 @@
 #!/bin/bash
 
 OBSDIR=/marconi/home/userexternal/mdasilva/OBS
-wdir=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/obs
+wdir=$2
 cd $wdir
 
 {
@@ -10,19 +10,22 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-obs=CPC
+set -a
+obs=GPCC
 hdir=$OBSDIR/$obs
-ys=2018-2021
+ys=$1
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 vars="pr"
 for v in $vars; do
-  [[ $fyr -lt 1979 ]] && continue
-  [[ $lyr -le 1979 ]] && continue
+  [[ $fyr -lt 1982 ]] && continue
   [[ $v = pr ]] && vc=precip
-  sf=$hdir/cpc.day.1979-2021.nc
+  tf=gpcc.day.1982-2020.nc
+  sf=$( eval ls $OBSDIR/$obs/full_data_daily_v2022_10_????.nc )
+  [[ ! -f $tf ]] && CDO mergetime $sf $tf
   yf=${v}_${obs}_${ys}.nc
-  eval CDO chname,$vc,$v -selvar,$vc -selyear,$fyr/$lyr $sf $yf
+  eval CDO chname,$vc,$v -selyear,$fyr/$lyr $tf $yf
 done
 echo "Done."
+
 }
