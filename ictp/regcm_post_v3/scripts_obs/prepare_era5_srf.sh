@@ -26,7 +26,6 @@ for v in $vars; do
   [[ $v = tas     ]] && vc=tas
   [[ $v = tasmax  ]] && vc=tasmax
   [[ $v = tasmin  ]] && vc=tasmin
-  [[ $v = rsnl    ]] && vc=msnlwrf
   sf=$hdir/${vc}_${obs}_${ys}.nc
   yf=${v}_${obs}_${ys}.nc
   eval CDO selyear,$fyr/$lyr $sf $yf
@@ -41,9 +40,6 @@ for v in $vars; do
 		CDO mulc,100 -timmean -selseas,$s -selyear,$fyr/$lyr \
 			-chname,$vc,$v -selvar,$vc $sf $mf
 		ncatted -O -a units,clt,m,c,% $mf
-	elif [ $v = rsnl ]; then # to adjust the positive direction
-		CDO mulc,-1 -timmean -selseas,$s -selyear,$fyr/$lyr \
-			-chname,$vc,$v -selvar,$vc $sf $mf
 	else # tas, tasmax, tasmin: K to degree C
 		CDO subc,273.15 -timmean -selseas,$s -selyear,$fyr/$lyr \
 			-chname,$vc,$v -selvar,$vc $sf $mf

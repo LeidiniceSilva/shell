@@ -21,7 +21,7 @@ begin
   snumT  = conf+"-"+snum
   vars   = (/"clw","cli","rh","cl"/)
   vnames = (/"cloud liquid water","cloud ice","relative humidity","cloud fraction"/)
-  cfacts = (/1000000.,1000000.,100.,100./)
+  cfacts = (/1000000.,1000000.,1.,100./)
   ulist  = (/"mg/kg","mg/kg","%","%"/)
   nvars = dimsizes(vars)
 

@@ -1,14 +1,5 @@
 #!/bin/bash
 
-#SBATCH -J preproctrack
-#SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --qos=qos_prio
-#SBATCH --mail-type=FAIL
-#SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
-#SBATCH -N 1 --ntasks-per-node=20
-
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Mar 15, 2024'

@@ -1,4 +1,4 @@
-#i/bin/bash
+#!/bin/bash
 
 
-cdo remapbil,grid_EAS land.nc mask_EAS.nc
+cdo remapbil,grid_SAM land.nc mask_SAM.nc
