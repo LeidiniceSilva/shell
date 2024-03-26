@@ -18,7 +18,7 @@
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
 set -eo pipefail
 
-DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/diurnal_cycle"
+DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cp_3km_4km"
 
 echo
 cd ${DIR_IN}
@@ -26,7 +26,7 @@ cd ${DIR_IN}
 echo
 echo "--------------- INIT PLOT ----------------"
 
-python3 plot_graph_pdf.py
+python3 plot_graph_pdf_function_dc.py
 
 echo
 echo "--------------- THE END PLOT ----------------"

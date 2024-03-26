@@ -15,28 +15,31 @@ CDO(){
 }
 
 # Change path
-path1='/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/era5'
-path2='/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/track_p1'
+path1="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/era5"
+path2="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/postproc"
 
 # Set file name
-filename='SAM-25km_ERA5_1hr'
-dt='20180101-20211231'
+var_list="msl u v"
+file="SAM-25km_ERA5_1hr"
+dt="2018010100-2021123100"
 
 # Datetime
 anoi=2018
 anof=2021 
 
-for var in msl u v; do
+for var in ${var_list[@]}; do
     
     for yr in $(seq $anoi $anof); do
-        CDO selyear,$yr ${path1}/${var}_${filename}_${dt}.nc ${path2}/${var}_${filename}_${yr}.nc 
+        CDO selyear,$yr ${path1}/${var}_${file}_${dt}_lonlat.nc ${path2}/${var}_${file}_${yr}.nc 
    	
 	for hr in 00 06 12 18; do
-            CDO selhour,$hr ${path2}/${var}_${filename}_${yr}.nc ${path2}/${var}.${yr}.${hr}.nc
-        
+            CDO selhour,$hr ${path2}/${var}_${file}_${yr}.nc ${path2}/${var}.${yr}.${hr}.nc
+	                
 	done
     done
 done
+
+rm ${path2}/${var}_${file}_*.nc
 
 }
 

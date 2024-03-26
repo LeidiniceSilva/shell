@@ -6,8 +6,8 @@
 #__description__ = 'Preprocess dataset to track cyclone'
 
 # Change directory
-pathnc="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/track_p1"
-pathbin="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/track_p2"
+pathnc="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/postproc"
+pathbin="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/ncp"
 
 mkdir ${pathbin}
 

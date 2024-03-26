@@ -8,8 +8,8 @@
 {
 
 # Change directory
-pathnc="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/rcm/track_p1"
-pathbin="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/rcm/track_p2"
+pathnc="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/rcm/preproc"
+pathbin="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/rcm/ncp"
 
 mkdir ${pathbin}
 

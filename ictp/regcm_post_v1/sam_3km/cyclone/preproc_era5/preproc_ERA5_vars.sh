@@ -31,17 +31,7 @@ for VAR in ${VAR_LIST[@]}; do
    
     echo
     echo "1. Regrid"
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100.nc -35,-15,1.5 -76,-38,1.5 bil
-    
-    echo
-    echo "2. Smooth"
-    CDO smooth ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100_lonlat.nc ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100_smooth.nc
-    CDO smooth ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100_smooth.nc ${VAR}_${EXP}_${DATASET}_1hr_20180101-20211231.nc
-	    	    
-    echo
-    echo "3. Delete files"
-    rm ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100_lonlat.nc
-    rm ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100_smooth.nc
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
 
 done
     

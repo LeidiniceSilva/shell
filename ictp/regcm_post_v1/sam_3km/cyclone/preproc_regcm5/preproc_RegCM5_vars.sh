@@ -42,7 +42,7 @@ for VAR in ${VAR_LIST[@]}; do
 
 	    echo
 	    echo "2. Regrid"
-	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100.nc -35,-15,1.5 -76,-38,1.5 bil
+	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
 
 	    echo
 	    echo "3. Smooth"
@@ -60,7 +60,7 @@ for VAR in ${VAR_LIST[@]}; do
 
 	    echo
 	    echo "3. Regrid"
-	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_6hr_${YEAR}${MON}0100.nc -35,-15,0.15 -76,-38,0.15 bil
+	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_6hr_${YEAR}${MON}0100.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
 
 	    echo
 	    echo "4. Smooth"
@@ -70,7 +70,6 @@ for VAR in ${VAR_LIST[@]}; do
 
 	    echo
 	    echo "Delete files"
-	    rm *0100.nc
 	    rm *lonlat.nc
 	    rm *smooth.nc
 	    

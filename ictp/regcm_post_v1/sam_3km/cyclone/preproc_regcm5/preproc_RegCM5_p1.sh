@@ -13,34 +13,37 @@ CDO(){
 }
 
 # Change path
-path='/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/rcm/regcm5'
+path="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/rcm/regcm5"
 
 # Set file name
-filename='SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5'
-filename1='SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_1hr'
-filename2='SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6hr'
+var_list="psl ua va"
+file="SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5"
+file1="SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_1hr"
+file2="SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6hr"
+dt="20180101-20211231"
 
 # Datetime
 anoi=2018
 anof=2021 
-        
-for yr in $(seq $anoi $anof); do
+
+for var in ${var_list[@]}; do 
     
-    for var in ua va psl; do
-    
+    for yr in $(seq $anoi $anof); do
         if [ ${var} == 'psl' ]
 	then
-    	CDO -b F64 mergetime ${path}/${var}/${var}_${filename1}_${yr}*.nc ${path}/track_p1/${var}_${filename}_${yr}.nc
+        CDO selyear,$yr ${path}/${var}/${var}_${file1}_${dt}.nc ${path}/${var}/${var}_${file}_${yr}.nc 
 	else
-    	CDO -b F64 mergetime ${path}/${var}/${var}_${filename2}_${yr}*.nc ${path}/track_p1/${var}_${filename}_${yr}.nc	
+        CDO selyear,$yr ${path}/${var}/${var}_${file2}_${dt}.nc ${path}/${var}/${var}_${file}_${yr}.nc 
 	fi
 	
 	for hr in 00 06 12 18; do
-            CDO selhour,$hr ${path}/track_p1/${var}_${filename}_${yr}.nc ${path}/track_p1/${var}.${yr}.${hr}.nc
-        
+            CDO selhour,$hr ${path}/${var}/${var}_${file}_${yr}.nc ${path}/preproc/${var}.${yr}.${hr}.nc
+	                
 	done
     done
 done
+
+#rm ${path}/${var}_${file}_*.nc
 
 }
 
