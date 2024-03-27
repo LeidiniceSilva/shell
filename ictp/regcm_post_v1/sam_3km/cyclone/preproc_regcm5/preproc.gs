@@ -103,7 +103,7 @@ i=i+1
 'set dfile 1'
 'set t 'i
 'set z 1'
-'define pres=psl/1'
+'define pres=psl/100'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 
@@ -122,7 +122,7 @@ i=i+1
 'set dfile 2'
 'set t 'i
 'set z 1'
-'define pres=psl/1'
+'define pres=psl/100'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 
@@ -141,7 +141,7 @@ i=i+1
 'set dfile 3'
 'set t 'i
 'set z 1'
-'define pres=psl/1'
+'define pres=psl/100'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 
@@ -160,7 +160,7 @@ i=i+1
 'set dfile 4'
 'set t 'i
 'set z 1'
-'define pres=psl/1'
+'define pres=psl/100'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 

@@ -7,7 +7,9 @@
 
 {
 
+source /marconi/home/userexternal/ggiulian/STACK22/env2022
 set -eo pipefail
+
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
@@ -20,7 +22,7 @@ var_list="psl ua va"
 file="SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5"
 file1="SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_1hr"
 file2="SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6hr"
-dt="20180101-20211231"
+dt="20180101-20211201"
 
 # Datetime
 anoi=2018
@@ -31,13 +33,13 @@ for var in ${var_list[@]}; do
     for yr in $(seq $anoi $anof); do
         if [ ${var} == 'psl' ]
 	then
-        CDO selyear,$yr ${path}/${var}/${var}_${file1}_${dt}.nc ${path}/${var}/${var}_${file}_${yr}.nc 
+        CDO selyear,$yr ${path}/${var}/${var}_${file1}_${dt}.nc ${path}/${var}_${file}_${yr}.nc 
 	else
-        CDO selyear,$yr ${path}/${var}/${var}_${file2}_${dt}.nc ${path}/${var}/${var}_${file}_${yr}.nc 
+        CDO selyear,$yr ${path}/${var}/${var}_${file2}_${dt}.nc ${path}/${var}_${file}_${yr}.nc 
 	fi
 	
 	for hr in 00 06 12 18; do
-            CDO selhour,$hr ${path}/${var}/${var}_${file}_${yr}.nc ${path}/preproc/${var}.${yr}.${hr}.nc
+            CDO selhour,$hr ${path}/${var}_${file}_${yr}.nc ${path}/${var}.${yr}.${hr}.nc
 	                
 	done
     done
