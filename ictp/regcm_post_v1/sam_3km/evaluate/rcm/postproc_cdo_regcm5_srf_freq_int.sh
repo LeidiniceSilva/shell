@@ -22,8 +22,8 @@ SEASON_LIST="DJF MAM JJA SON"
 VAR="pr"
 EXP="SAM-3km"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v4/NoTo-SAM"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v4/post/rcm"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v5/NoTo-SAM"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v5/post/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo

@@ -14,16 +14,17 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2018-2021"
+YR="2018-2018"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-3km"
-VAR_LIST="pr tas tasmax tasmin clt hfls hfss rsnl rsns"
+VAR_LIST="clt rsnl"
+#VAR_LIST="pr tas tasmax tasmin clt rsnl"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/rcm"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v5/NoTo-SAM"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v5/post/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
@@ -89,7 +90,7 @@ for VAR in ${VAR_LIST[@]}; do
     then
     CDO -b f32 subc,273.15 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
     else
-    cp ${VAR}_${EXP}_${DT}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
+    cp ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
     fi
     
     echo

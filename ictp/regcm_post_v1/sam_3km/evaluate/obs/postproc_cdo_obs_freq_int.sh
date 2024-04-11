@@ -14,7 +14,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2018-2021"
+YR="2018-2018"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
@@ -23,7 +23,7 @@ EXP="SAM-3km"
 DATASET="CPC"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/obs"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v5/post/obs"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
