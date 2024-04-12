@@ -19,7 +19,7 @@ path1="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/ob
 path2="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/postproc"
 
 # Set file name
-var_list="msl u v"
+var_list="t"
 file="SAM-25km_ERA5_1hr"
 dt="2018010100-2021123100"
 

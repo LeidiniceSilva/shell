@@ -18,7 +18,7 @@ CDO(){
 path="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/rcm/regcm5"
 
 # Set file name
-var_list="psl ua va"
+var_list="ta"
 file="SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5"
 file1="SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_1hr"
 file2="SAM-3km_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6hr"

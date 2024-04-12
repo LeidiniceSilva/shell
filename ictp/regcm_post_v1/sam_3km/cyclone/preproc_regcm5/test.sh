@@ -36,21 +36,14 @@ for VAR in ${VAR_LIST[@]}; do
 	    
 	    echo
 	    echo "1. Select variable: ${VAR}"
-	    #CDO selname,${VAR} ${DIR_IN}/pressure/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	    
-	    echo
-	    echo "2. Select levels"
-	    #CDO sellevel,925 ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_${MODEL}_6hr_${YEAR}${MON}0100.nc
-	    
-	    
-	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_6hr_${YEAR}${MON}0100.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
-	    
-	    echo
-	    echo "Delete files"
+	    CDO daymean ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100.nc ${VAR}_${EXP}_${MODEL}_day_${YEAR}${MON}01.nc
 	    
         done
     done	
 
+
+    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_day_20180101-20211201.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    
 done
     
 echo
