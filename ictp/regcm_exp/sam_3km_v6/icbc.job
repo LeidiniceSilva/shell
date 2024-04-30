@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -J cyclone
+#SBATCH -J SAM-3km
 #SBATCH -A ICT23_ESP
 #SBATCH -p skl_usr_prod
 #SBATCH --qos=qos_prio
@@ -14,16 +14,16 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 PLATFORM=SKL
 export OMP_NUM_THREADS=20
-REGCM=/marconi/home/userexternal/ggiulian/binaries_5.0
-SUFFIX=NETCDF4_HDF5_CLM45_${PLATFORM}
-NAMELIST=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_cyclone/SAM_3km_cyclone_CP_RegCM5_ERA5.in
+REGCM=/marconi/home/userexternal/ggiulian/binaries_testio
+SUFFIX=CLM45_${PLATFORM}
+NAMELIST=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_v6/NoTo-SAM.in
 
 # load required modules
 
 export I_MPI_FABRICS=shm:tmi
 export I_MPI_TMI_PROVIDER=psm2
-OUTFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_cyclone/ICBC.out
-ERRFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_cyclone/ICBC.err
+OUTFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_v6/ICBC.out
+ERRFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_v6/ICBC.err
 
 ${REGCM}/terrain${SUFFIX}    ${NAMELIST} >> ${OUTFILE} 2> ${ERRFILE}
 ${REGCM}/mksurfdata${SUFFIX} ${NAMELIST} >> ${OUTFILE} 2> ${ERRFILE}

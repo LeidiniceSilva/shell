@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#SBATCH -J SAM-3km
+#SBATCH -A ICT23_ESP
+#SBATCH -p skl_usr_prod 
+#SBATCH --qos=qos_prio
+#SBATCH -t 24:00:00
+#SBATCH -N 30 
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=mda_silv@ictp.it
+
+module purge
+source /marconi/home/userexternal/ggiulian/STACK22/env2022
+
+PLATFORM=SKL
+export OMP_NUM_THREADS=1
+REGCM=/marconi/home/userexternal/ggiulian/binaries_testio
+SUFFIX=CLM45_${PLATFORM}
+NAMELIST=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_v6/NoTo-SAM.in
+         
+# load required modules
+
+export I_MPI_FABRICS=shm:tmi
+export I_MPI_TMI_PROVIDER=psm2
+OUTFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_v6/MODEL.out
+ERRFILE=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km_v6/MODEL.err
+
+mpirun ${REGCM}/regcmMPI${SUFFIX} ${NAMELIST} > ${OUTFILE} 2> ${ERRFILE}
