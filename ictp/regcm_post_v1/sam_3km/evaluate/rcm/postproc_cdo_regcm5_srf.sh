@@ -20,11 +20,10 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-3km"
-VAR_LIST="clt rsnl"
-#VAR_LIST="pr tas tasmax tasmin clt rsnl"
+VAR_LIST="pr tas tasmax tasmin clt rsnl"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v5/NoTo-SAM"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v5/post/rcm"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v6/NoTo-SAM"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v6/post/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo

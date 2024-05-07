@@ -49,7 +49,6 @@ for YEAR in `seq -w ${IYR} ${FYR}`; do
 	CDO timpctl,99 ${VAR}_${EXP}_RegCM5_${YEAR}${MON}01.nc ${VAR}_${EXP}_RegCM5_${YEAR}${MON}01_min.nc ${VAR}_${EXP}_RegCM5_${YEAR}${MON}01_max.nc p99_${EXP}_RegCM5_${YEAR}${MON}01.nc
 
 	CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_RegCM5_${YEAR}${MON}01.nc ${VAR}_freq_${EXP}_RegCM5_${YEAR}${MON}01.nc
-	
 	CDO histmean,1,100000 ${VAR}_${EXP}_RegCM5_${YEAR}${MON}01.nc ${VAR}_int_${EXP}_RegCM5_${YEAR}${MON}01.nc
 
 	echo
