@@ -21,13 +21,12 @@ echo "--------------- INIT PLOT ----------------"
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
 set -eo pipefail
 
-#DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cp_3km_4km"
-#cd ${DIR_IN}
-# python3 plot_graph_pdf_function_dc.py
-
-DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/sam_3km_cyclone"
+DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/sam_3km_evaluate"
 cd ${DIR_IN}
-python3 plot_graph_pdf_precipitation_acc_ec.py
+
+python3 plot_maps_bias_srf.py
+
+#python3 plot_graph_scatter_plot.py
 
 echo
 echo "--------------- THE END PLOT ----------------"

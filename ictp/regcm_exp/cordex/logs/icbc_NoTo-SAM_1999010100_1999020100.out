@@ -1,0 +1,82 @@
+BIN = bin
+SUFFIX = CLM45_BDW
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : Apr 12 2024  time: 18:06:45
+
+ : this run start at    : 2024-05-13 17:53:25+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : r000u10l05
+ : in directory         : 
+ /marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  1999-01-01 00:00:00 UTC        
+ GLOBIDATE2 :  1999-02-01 00:00:00 UTC        
+ NSTEPS     :          125
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+      131072 /marconi_work/ICT23_ESP/RCMDATA/ERA5/1999/tatm_1999_01.nc
+  2.169396151005862E-003   246.989309894210     
+      196608 /marconi_work/ICT23_ESP/RCMDATA/ERA5/1999/geop_1999_01.nc
+   7.64493771267911        243995.450968644     
+      262144 /marconi_work/ICT23_ESP/RCMDATA/ERA5/1999/qhum_1999_01.nc
+  3.783117146547938E-007  1.237556396239179E-002
+      327680 /marconi_work/ICT23_ESP/RCMDATA/ERA5/1999/uwnd_1999_01.nc
+  4.280411536607749E-003   39.2420919719661     
+      393216 /marconi_work/ICT23_ESP/RCMDATA/ERA5/1999/vwnd_1999_01.nc
+  4.062693742590803E-003  -21.8514423576135     
+ READ IN fields at DATE: 1999-01-01 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-01 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-01 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-01 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-02 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-02 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-02 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-02 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-03 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-03 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-03 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-03 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-04 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-04 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-04 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-04 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-05 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-05 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-05 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-05 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-06 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-06 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-06 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-06 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-07 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-07 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-07 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-07 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-08 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-08 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-08 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-08 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-09 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-09 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-09 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-09 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-10 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-10 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-10 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-10 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-11 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-11 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-11 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-11 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-12 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-12 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-12 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-12 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-13 00:00:00 UTC        
+ READ IN fields at DATE: 1999-01-13 06:00:00 UTC        
+ READ IN fields at DATE: 1999-01-13 12:00:00 UTC        
+ READ IN fields at DATE: 1999-01-13 18:00:00 UTC        
+ READ IN fields at DATE: 1999-01-14 00:00:00 UTC        
