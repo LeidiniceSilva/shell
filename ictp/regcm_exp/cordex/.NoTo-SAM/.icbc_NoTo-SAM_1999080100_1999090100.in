@@ -65,7 +65,7 @@
 ! DOMAIN terrain generation parameters
 !
  &terrainparam
- domname     = 'CSAM-3',      ! Name of the domain/experiment. Controls naming of input files
+ domname     = 'SAM-3km',     ! Name of the domain/experiment. Controls naming of input files
  lresamp     = .false.,       ! Do a first resampling before interpolation
  smthbdy     = .true.,        ! Perform extra smoothing in boundaries
  ismthlev    = 2,             ! Smoothing level (additional 1-2-1 smoother)
@@ -129,8 +129,8 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = startTarget,       ! Start date for ICBC data generation
- gdate2 = endTarget,         ! End data for ICBC data generation
+ gdate1 = 1999080100,       ! Start date for ICBC data generation
+ gdate2 = 1999090100,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/input', ! Path for ICBC produced input files
  inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                                     ! Path for ICBC global input datasets
@@ -174,7 +174,7 @@
 !
  &restartparam
  ifrest  = restLogic,   ! If a restart
- mdate0  = startTarget, ! Global start (is globidate1)
+ mdate0  = 1999080100, ! Global start (is globidate1)
  mdate1  = startDate,   ! Start date of this run
  mdate2  = endDate,     ! End date for this run 
  /

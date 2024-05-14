@@ -2,9 +2,9 @@ BIN = bin
 SUFFIX = CLM45_BDW
 
   This is Terrain part of RegCM package version 5
-   GIT Revision: 5.0.1 compiled at: data : Apr 12 2024  time: 18:06:29
+   GIT Revision: 5.0.1 compiled at: data : May 14 2024  time: 13:19:00
 
- : this run start at  : 2024-05-13 17:29:03+0200
+ : this run start at  : 2024-05-14 17:55:39+0200
  : it is submitted by : mdasilva
  : it is running on   : r000u10l05
  : in directory       : 
@@ -89,9 +89,9 @@ SUFFIX = CLM45_BDW
  Successfully completed terrain fields generation
 
   This is mksurfdata part of RegCM package version 5
-   GIT Revision: 5.0.1 compiled at: data : Apr 12 2024  time: 19:43:43
+   GIT Revision: 5.0.1 compiled at: data : May 14 2024  time: 13:23:35
 
- : this run start at  : 2024-05-13 17:29:22+0200
+ : this run start at  : 2024-05-14 17:55:59+0200
  : it is submitted by : mdasilva
  : it is running on   : r000u10l05
  : in directory       : 
@@ -123,9 +123,9 @@ SUFFIX = CLM45_BDW
  Successfully completed CLM preprocessing.
 
   This is sst part of the RegCM version 5
-   SVN Revision: 5.0.1 compiled at: data : Apr 12 2024  time: 18:06:45
+   SVN Revision: 5.0.1 compiled at: data : May 14 2024  time: 13:19:30
 
- : this run start at    : 2024-05-13 17:40:37+0200
+ : this run start at    : 2024-05-14 18:07:26+0200
  : it is submitted by   : mdasilva
  : it is running on     : r000u10l05
  : in directory         : 
@@ -4686,6 +4686,6 @@ SUFFIX = CLM45_BDW
  Scale factor =   5.930188559580670E-004
  Fill Value   =  -32767
  WRITEN OUT SST DATA :  2010-01-01 00:00:00 UTC        
- Input ready at : Mon May 13 17:45:10 2024
+ Input ready at : Tue May 14 18:12:05 2024
  Successfully generated SST
 icbc script complete
