@@ -1,0 +1,167 @@
+BIN = bin
+SUFFIX = CLM45_BDW
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : May 14 2024  time: 13:19:30
+
+ : this run start at    : 2024-05-15 16:36:38+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : r000u10l05
+ : in directory         : 
+ /marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2000-10-01 00:00:00 UTC        
+ GLOBIDATE2 :  2000-11-01 00:00:00 UTC        
+ NSTEPS     :          125
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+      131072 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2000/tatm_2000_10.nc
+  2.083532428169539E-003   248.474620465231     
+      196608 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2000/geop_2000_10.nc
+   7.41414064526651        236523.853476552     
+      262144 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2000/qhum_2000_10.nc
+  3.615024648447138E-007  1.183234142483181E-002
+      327680 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2000/uwnd_2000_10.nc
+  3.337913486290423E-003   15.4250354499951     
+      393216 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2000/vwnd_2000_10.nc
+  3.169807421392180E-003   3.85797320175805     
+ READ IN fields at DATE: 2000-10-01 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-01 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-01 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-01 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-02 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-02 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-02 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-02 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-03 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-03 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-03 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-03 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-04 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-04 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-04 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-04 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-05 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-05 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-05 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-05 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-06 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-06 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-06 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-06 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-07 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-07 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-07 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-07 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-08 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-08 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-08 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-08 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-09 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-09 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-09 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-09 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-10 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-10 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-10 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-10 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-11 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-11 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-11 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-11 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-12 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-12 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-12 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-12 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-13 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-13 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-13 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-13 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-14 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-14 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-14 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-14 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-15 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-15 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-15 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-15 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-16 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-16 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-16 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-16 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-17 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-17 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-17 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-17 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-18 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-18 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-18 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-18 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-19 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-19 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-19 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-19 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-20 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-20 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-20 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-20 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-21 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-21 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-21 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-21 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-22 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-22 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-22 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-22 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-23 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-23 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-23 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-23 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-24 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-24 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-24 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-24 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-25 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-25 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-25 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-25 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-26 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-26 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-26 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-26 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-27 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-27 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-27 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-27 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-28 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-28 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-28 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-28 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-29 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-29 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-29 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-29 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-30 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-30 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-30 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-30 18:00:00 UTC        
+ READ IN fields at DATE: 2000-10-31 00:00:00 UTC        
+ READ IN fields at DATE: 2000-10-31 06:00:00 UTC        
+ READ IN fields at DATE: 2000-10-31 12:00:00 UTC        
+ READ IN fields at DATE: 2000-10-31 18:00:00 UTC        
+      131072 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2000/tatm_2000_11.nc
+  2.083669571696583E-003   248.476977879570     
+      196608 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2000/geop_2000_11.nc
+   7.55093569270444        243008.240157154     
+      262144 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2000/qhum_2000_11.nc
+  3.818676364247759E-007  1.250609143157520E-002
+      327680 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2000/uwnd_2000_11.nc
+  4.205228011465836E-003   39.4104492658771     
+      393216 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2000/vwnd_2000_11.nc
+  3.059466489494677E-003   1.00531383364978     
+ READ IN fields at DATE: 2000-11-01 00:00:00 UTC        
+ Input ready at : Wed May 15 17:37:12 2024
+ Successfully completed ICBC
+icbc script complete
