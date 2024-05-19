@@ -1,0 +1,167 @@
+BIN = bin
+SUFFIX = CLM45_BDW
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : May 14 2024  time: 13:19:30
+
+ : this run start at    : 2024-05-19 18:14:03+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : r000u10l05
+ : in directory         : 
+ /marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2009-01-01 00:00:00 UTC        
+ GLOBIDATE2 :  2009-02-01 00:00:00 UTC        
+ NSTEPS     :          125
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+      131072 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2009/tatm_2009_01.nc
+  2.116388664334667E-003   250.320047762699     
+      196608 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2009/geop_2009_01.nc
+   7.62564524981689        244437.232099250     
+      262144 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2009/qhum_2009_01.nc
+  3.780952594401377E-007  1.236663496450357E-002
+      327680 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2009/uwnd_2009_01.nc
+  5.076272421462517E-003   35.4372354233596     
+      393216 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2009/vwnd_2009_01.nc
+  5.005177356747388E-003   2.23752579266928     
+ READ IN fields at DATE: 2009-01-01 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-01 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-01 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-01 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-02 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-02 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-02 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-02 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-03 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-03 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-03 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-03 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-04 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-04 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-04 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-04 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-05 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-05 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-05 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-05 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-06 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-06 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-06 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-06 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-07 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-07 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-07 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-07 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-08 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-08 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-08 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-08 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-09 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-09 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-09 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-09 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-10 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-10 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-10 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-10 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-11 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-11 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-11 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-11 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-12 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-12 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-12 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-12 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-13 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-13 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-13 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-13 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-14 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-14 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-14 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-14 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-15 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-15 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-15 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-15 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-16 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-16 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-16 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-16 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-17 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-17 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-17 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-17 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-18 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-18 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-18 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-18 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-19 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-19 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-19 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-19 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-20 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-20 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-20 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-20 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-21 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-21 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-21 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-21 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-22 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-22 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-22 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-22 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-23 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-23 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-23 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-23 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-24 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-24 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-24 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-24 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-25 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-25 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-25 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-25 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-26 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-26 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-26 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-26 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-27 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-27 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-27 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-27 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-28 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-28 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-28 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-28 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-29 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-29 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-29 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-29 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-30 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-30 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-30 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-30 18:00:00 UTC        
+ READ IN fields at DATE: 2009-01-31 00:00:00 UTC        
+ READ IN fields at DATE: 2009-01-31 06:00:00 UTC        
+ READ IN fields at DATE: 2009-01-31 12:00:00 UTC        
+ READ IN fields at DATE: 2009-01-31 18:00:00 UTC        
+      131072 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2009/tatm_2009_02.nc
+  2.086970562839047E-003   250.263757540109     
+      196608 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2009/geop_2009_02.nc
+   7.52732252977508        240722.847666860     
+      262144 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2009/qhum_2009_02.nc
+  4.044124368791965E-007  1.320967046186671E-002
+      327680 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2009/uwnd_2009_02.nc
+  3.102819444408018E-003   1.26698801898873     
+      393216 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2009/vwnd_2009_02.nc
+  2.769431679608222E-003   4.52075578708988     
+ READ IN fields at DATE: 2009-02-01 00:00:00 UTC        
+ Input ready at : Sun May 19 19:12:18 2024
+ Successfully completed ICBC
+icbc script complete
