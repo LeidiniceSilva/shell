@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/
+base=/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/
 
 {
 set -eo pipefail

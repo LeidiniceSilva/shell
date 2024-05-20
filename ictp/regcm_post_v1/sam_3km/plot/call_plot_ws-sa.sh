@@ -24,8 +24,8 @@ set -eo pipefail
 DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/ws-sa"
 cd ${DIR_IN}
 
-#python3 plot_dendrogram_stations_sam_v2.py
-python3 plot_cluster_stations_sam_v2.py
+python3 plot_dendrogram_stations_sam_v2.py
+#python3 plot_cluster_stations_sam_v2.py
 
 echo
 echo "--------------- THE END PLOT ----------------"
