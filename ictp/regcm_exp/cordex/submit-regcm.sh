@@ -24,7 +24,7 @@ dep=$3
 dpath=$( echo $nl | cut -d. -f1 )
 
 nnod=30
-dmon=133
+dmon=2
 
 driv=$( echo $nl | cut -d- -f1 )
 tdir=$base/$driv/$dpath

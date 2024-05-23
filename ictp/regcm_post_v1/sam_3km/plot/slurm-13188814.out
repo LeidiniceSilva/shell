@@ -1,10 +1,6 @@
 
 --------------- INIT PLOT ----------------
-/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/ws-sa/plot_cluster_stations_sam_v2.py:195: RuntimeWarning: Mean of empty slice
-  cluster_v = np.nanmean(pre_c_v, axis=0)
-/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/ws-sa/plot_cluster_stations_sam_v2.py:201: RuntimeWarning: Mean of empty slice
-  cluster_v_i = np.nanmean(pre_c_v_i, axis=0)
-/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/ws-sa/plot_cluster_stations_sam_v2.py:266: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/ws-sa/plot_cluster_stations_sam_v2.py:268: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
   plt.show()
 Reading weather station: 3 A657
 Reading weather station: 4 A908
