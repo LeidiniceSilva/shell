@@ -3,7 +3,7 @@
 #SBATCH -o logs/rcm5_SLURM.out
 #SBATCH -e logs/rcm5_SLURM.err
 #SBATCH -N 30 ##--ntasks-per-node=20 #--mem=63G ##esp1
-#SBATCH -t 24:00:00
+#SBATCH -t 20:00:00
 #SBATCH -J CSAM-3
 #SBATCH -A ICT23_ESP
 #SBATCH --mail-type=FAIL,END

@@ -129,8 +129,8 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = startTarget,       ! Start date for ICBC data generation
- gdate2 = endTarget,         ! End data for ICBC data generation
+ gdate1 = 1999010100,       ! Start date for ICBC data generation
+ gdate2 = 2010010100,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/icbc',  ! Path for ICBC produced input files
  inpglob = '/marconi_work/ICT23_ESP/RCMDATA',                                     ! Path for ICBC global input datasets
@@ -173,10 +173,10 @@
 ! Model start/restart control
 !
  &restartparam
- ifrest  = restLogic,   ! If a restart
- mdate0  = startTarget, ! Global start (is globidate1)
- mdate1  = startDate,   ! Start date of this run
- mdate2  = endDate,     ! End date for this run 
+ ifrest  = .true.,   ! If a restart
+ mdate0  = 1999010100, ! Global start (is globidate1)
+ mdate1  = 1999050100,   ! Start date of this run
+ mdate2  = 2010010100,     ! End date for this run 
  /
  
 !
@@ -210,7 +210,7 @@
  ! ifchem  = .false.,           ! Output CHE ?
  ! ifopt   = .false.,           ! Output OPT ?
  ! chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/dpath', ! Path where all output will be placed
+ dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM3', ! Path where all output will be placed
  lsync   = .false.,                ! If sync of output files at every timestep is requested. 
                                    ! Note, it has a performance impact.
                                    ! Enabled by default if debug_level > 2

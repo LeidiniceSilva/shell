@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/
+base=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex
 
 {
 set -eo pipefail
@@ -24,7 +24,7 @@ dep=$3
 dpath=$( echo $nl | cut -d. -f1 )
 
 nnod=30
-dmon=2
+dmon=133
 
 driv=$( echo $nl | cut -d- -f1 )
 tdir=$base/$driv/$dpath
