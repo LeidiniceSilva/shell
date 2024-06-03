@@ -39,18 +39,18 @@ srffile=$datadir/*_SRF.${idate}*.nc
 stsfile=$datadir/*_STS.${idate}*.nc
 radfile=$datadir/*_RAD.${idate}*.nc
 atmfile=$datadir/*_ATM.${idate}*.nc
-#$pycordex/pycordexer.py \
-#	-m $mail -d $domain -g $global -e $experiment -b $ensemble \
-#	-n "$notes" -o $output -p $proc -r $regcm_release \
-#	--regcm-version-id $regcm_version_id $srffile $srfvars
-#$pycordex/pycordexer.py \
-#	-m $mail -d $domain -g $global -e $experiment -b $ensemble \
-#	-n "$notes" -o $output -p $proc -r $regcm_release \
-#	--regcm-version-id $regcm_version_id $radfile $radvars
-#$pycordex/pycordexer.py \
-#	-m $mail -d $domain -g $global -e $experiment -b $ensemble \
-#	-n "$notes" -o $output -p $proc -r $regcm_release \
-#	--regcm-version-id $regcm_version_id $stsfile $stsvars
+$pycordex/pycordexer.py \
+	-m $mail -d $domain -g $global -e $experiment -b $ensemble \
+	-n "$notes" -o $output -p $proc -r $regcm_release \
+	--regcm-version-id $regcm_version_id $srffile $srfvars
+$pycordex/pycordexer.py \
+	-m $mail -d $domain -g $global -e $experiment -b $ensemble \
+	-n "$notes" -o $output -p $proc -r $regcm_release \
+	--regcm-version-id $regcm_version_id $radfile $radvars
+$pycordex/pycordexer.py \
+	-m $mail -d $domain -g $global -e $experiment -b $ensemble \
+	-n "$notes" -o $output -p $proc -r $regcm_release \
+	--regcm-version-id $regcm_version_id $stsfile $stsvars
 $pycordex/pycordexer.py \
 	-m $mail -d $domain -g $global -e $experiment -b $ensemble \
 	-n "$notes" -o $output -p $proc -r $regcm_release \

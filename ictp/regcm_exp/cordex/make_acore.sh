@@ -1,5 +1,6 @@
 #!/bin/bash
-#SBATCH -t 01:00:00
+
+#SBATCH -t 00:02:00
 #SBATCH -A ICT23_ESP
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=mda_silv@ictp.it
@@ -9,14 +10,14 @@
 nl=$1
 gcm=$( echo $nl | cut -d- -f1 )
 sim=$( basename $nl .in )
-datadir=/marconi_work/ICT23_ESP/jdeleeuw/CORDEX/$gcm/$sim
+datadir=/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/$gcm/$sim
 idate=$2
 
-pycordex=/marconi/home/userexternal/ggiulian/pycordexer
-mail="mda_silv@ictp.it;coppolae@ictp.it"
+pycordex=/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/pycordexer
+mail="coppolae@ictp.it"
 domain=CSAM-3
-global=ECMWF-ERA5
-[[ $gcm = ERA5    ]] && global="ECMWF-ERA5"
+global=ERA5
+[[ $gcm = ERA5    ]] && global="ERA5"
 [[ $gcm = MPI     ]] && global="DKRZ-MPI-ESM1-2-HR"
 [[ $gcm = EcEarth ]] && global="EC-Earth-Consortium-EC-Earth3-Veg"
 [[ $gcm = NorESM  ]] && global="NCC-NorESM2-MM"
@@ -30,7 +31,7 @@ notes="None"
 output="."
 proc=20
 regcm_release=5
-regcm_version_id=0
+regcm_version_id='v1-r1'
 srfvars=tas,pr,evspsbl,huss,hurs,ps,psl,sfcWind,uas,vas,clt,rsds,rlds
 stsvars=prmean,psmean,tasmean,tasmax,tasmin
 
