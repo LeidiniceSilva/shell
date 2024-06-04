@@ -27,6 +27,7 @@ cd ${DIR_IN}
 python3 plot_maps_bias_srf.py
 
 #python3 plot_graph_scatter_plot.py
+python3 plot_graph_annual_cycle.py
 
 echo
 echo "--------------- THE END PLOT ----------------"
