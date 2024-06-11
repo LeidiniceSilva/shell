@@ -15,14 +15,15 @@
 
 {
 
-echo
-echo "--------------- INIT PLOT ----------------"
-
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
 set -eo pipefail
 
+echo
+echo "--------------- INIT PLOT ----------------"
+
 DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/sam_3km_cyclone"
 cd ${DIR_IN}
+
 python3 plot_graph_pdf_precipitation_acc_ec.py
 
 echo

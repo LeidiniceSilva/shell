@@ -15,11 +15,11 @@
 
 {
 
-echo
-echo "--------------- INIT PLOT ----------------"
-
 source /marconi/home/userexternal/ggiulian/STACK22/env2022
 set -eo pipefail
+
+echo
+echo "--------------- INIT PLOT ----------------"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/ws-sa"
 cd ${DIR_IN}

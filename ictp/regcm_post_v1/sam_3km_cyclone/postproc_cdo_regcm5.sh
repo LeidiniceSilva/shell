@@ -1,24 +1,34 @@
 #!/bin/bash
 
+#SBATCH -N 1 
+#SBATCH -t 24:00:00
+#SBATCH -A ICT23_ESP
+#SBATCH --qos=qos_prio
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH -p skl_usr_prod
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Jan 02, 2024'
 #__description__ = 'Posprocessing the RegCM5 output with CDO'
 
 {
+
+source /marconi/home/userexternal/ggiulian/STACK22/env2022
 set -eo pipefail
+
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
 EXP="SAM-3km-cyclone"
 YEAR="2023"
-DT="2023060100-2023083100"
-VAR_LIST="hfss hfls hus pr psl sfcWind ta tas ua uas va vas wa"
+VAR_LIST="hus pr psl sfcWind ta tas ua uas va vas wa"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km-cyclone/NoTo-SAM"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km-cyclone/post"
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+DIR_BIN="/marconi/home/userexternal/ggiulian/binaries_5.0"
 
 echo
 cd ${DIR_OUT}
@@ -31,66 +41,33 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "1. Select variable: ${VAR}"
-    for MON in `seq -w 06 08`; do
+    for MON in `seq -w 06 07`; do
     	if [ ${VAR} = hus  ]
 	then
-	CDO selname,${VAR} ${DIR_IN}/pressure/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	CDO sellevel,200,500,850,925 ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100_lev.nc
+	CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	${DIR_BIN}/./sigma2pNETCDF4_HDF5_CLM45_SKL SAM_3km_cyclone_CP_RegCM5_ERA5.in ${VAR}_${EXP}_${YEAR}${MON}0100.nc
     	elif [ ${VAR} = ta  ]
 	then
-	CDO selname,${VAR} ${DIR_IN}/pressure/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	CDO sellevel,200,500,850,925 ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100_lev.nc
+	CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	${DIR_BIN}/./sigma2pNETCDF4_HDF5_CLM45_SKL SAM_3km_cyclone_CP_RegCM5_ERA5.in ${VAR}_${EXP}_${YEAR}${MON}0100.nc
     	elif [ ${VAR} = ua  ]
 	then
-	CDO selname,${VAR} ${DIR_IN}/pressure/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	CDO sellevel,200,500,850,925 ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100_lev.nc	
+	CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	${DIR_BIN}/./sigma2pNETCDF4_HDF5_CLM45_SKL SAM_3km_cyclone_CP_RegCM5_ERA5.in ${VAR}_${EXP}_${YEAR}${MON}0100.nc
     	elif [ ${VAR} = va  ]
 	then
-	CDO selname,${VAR} ${DIR_IN}/pressure/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	CDO sellevel,200,500,850,925 ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100_lev.nc
+	CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	${DIR_BIN}/./sigma2pNETCDF4_HDF5_CLM45_SKL SAM_3km_cyclone_CP_RegCM5_ERA5.in ${VAR}_${EXP}_${YEAR}${MON}0100.nc
     	elif [ ${VAR} = wa  ]
 	then
-	CDO selname,${VAR} ${DIR_IN}/pressure/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	CDO sellevel,200,500,850,925 ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100_lev.nc	
+	CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	${DIR_BIN}/./sigma2pNETCDF4_HDF5_CLM45_SKL SAM_3km_cyclone_CP_RegCM5_ERA5.in ${VAR}_${EXP}_${YEAR}${MON}0100.nc
 	else
-	CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
 	fi
-    done
-    
-    echo
-    echo "2. Concatenate variable"
-    if [ ${VAR} = hus  ]
-    then
-    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
-    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil  
-    elif [ ${VAR} = ta  ]
-    then
-    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
-    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil
-    elif [ ${VAR} = ua  ]
-    then
-    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
-    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil
-    elif [ ${VAR} = va  ]
-    then
-    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
-    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil
-    elif [ ${VAR} = wa  ]
-    then
-    CDO mergetime ${VAR}_${EXP}_*0100_lev.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
-    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil
-    else
-    CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_3h_${DT}.nc
-    ${BIN}/./regrid ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc -48.42226,-10.53818,0.03 -81.08339,-33.17916,0.03 bil
-    fi
-    
+    done   
 done
 
-echo 
-echo "3. Delete files"
-rm *_${EXP}_*0100.nc
-rm *_${EXP}_*0100_lev.nc
-rm *_${EXP}_ECMWF_ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_6h_${DT}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
