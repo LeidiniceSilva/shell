@@ -37,10 +37,9 @@ for year in $(seq 2018 2021); do
 	done
 done
 
-for year in $(seq 2018 2021); do
-
-	cdo mergetime $dir_out/precipitation_SAM_GPM_3B-HHR_${year}*_V07A.nc $dir_out/precipitation_SAM_GPM_3B-HHR_${year}.nc
-
-done
+cdo mergetime $dir_out/precipitation_SAM_GPM_3B-HHR_2018*_V07A.nc $dir_out/precipitation_SAM_GPM_3B-HHR_2018.nc
+cdo mergetime $dir_out/precipitation_SAM_GPM_3B-HHR_2019*_V07A.nc $dir_out/precipitation_SAM_GPM_3B-HHR_2019.nc
+cdo mergetime $dir_out/precipitation_SAM_GPM_3B-HHR_2020*_V07A.nc $dir_out/precipitation_SAM_GPM_3B-HHR_2020.nc
+cdo mergetime $dir_out/precipitation_SAM_GPM_3B-HHR_2021*_V07A.nc $dir_out/precipitation_SAM_GPM_3B-HHR_2021.nc
 
 }

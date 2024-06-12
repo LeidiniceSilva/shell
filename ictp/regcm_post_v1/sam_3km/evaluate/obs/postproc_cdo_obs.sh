@@ -20,7 +20,7 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-3km"
-DATASET="CPC"
+DATASET="GPM"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/obs"
@@ -33,7 +33,7 @@ echo ${DIR_OUT}
 if [ ${DATASET} == 'CPC' ]
 then
 echo 
-echo "1. ------------------------------- PROCCESSING CPC DATASET -------------------------------"
+echo "1. ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 VAR_LIST="precip tmax tmin"
 for VAR in ${VAR_LIST[@]}; do
@@ -75,7 +75,7 @@ rm *_${EXP}_${DATASET}_*_${YR}.nc
 elif [ ${DATASET} == 'CRU' ]
 then
 echo 
-echo "2.  ------------------------------- PROCCESSING CRU DATASET -------------------------------"
+echo "2.  ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 VAR_LIST="pre tmp tmx tmn cld"
 for VAR in ${VAR_LIST[@]}; do
@@ -117,7 +117,7 @@ rm *_${DATASET}_mon_${YR}.nc
 elif [ ${DATASET} == 'ERA5' ]
 then
 echo 
-echo "3.  ------------------------------- PROCCESSING ERA5 DATASET -------------------------------"
+echo "3.  ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 VAR_LIST="tp t2m mx2t mn2t tcc mslhf msshf msnlwrf msnswrf cc clwc ciwc q u v"
 for VAR in ${VAR_LIST[@]}; do
@@ -238,9 +238,10 @@ rm *_${DATASET}_${YR}.nc
 rm *_${DATASET}_day_${YR}.nc
 rm *_${DATASET}_mon_${YR}.nc
 
-else
+elif [ ${DATASET} == 'ERA5' ]
+then
 echo 
-echo "4. ------------------------------- PROCCESSING GPCP DATASET -------------------------------"
+echo "4. ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 echo
 echo "4.1. Select date"
@@ -263,10 +264,38 @@ echo "4.5. Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}_lonlat.nc sat_gauge_precip_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 done
- 
+
 echo 
 echo "4.6. Delete files"
 rm *${DATASET}_mon_${YR}.nc
+
+else
+echo 
+echo "5. ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+
+echo
+echo "5.1. Average"
+CDO daysum ${DIR_IN}/${DATASET}/precipitation_SAM-10km_${DATASET}_3B-V0A7_1hr_2018-2021.nc precipitation_${EXP}_${DATASET}_3B-V0A7_day_${YR}.nc
+CDO monmean precipitation_${EXP}_${DATASET}_3B-V0A7_day_${YR}.nc precipitation_${EXP}_${DATASET}_3B-V0A7_mon_${YR}.nc
+
+echo 
+echo "5.2. Regrid output"
+${BIN}/./regrid precipitation_${EXP}_${DATASET}_3B-V0A7_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid precipitation_${EXP}_${DATASET}_3B-V0A7_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+
+echo
+echo "5.3. Select subdomain"
+#CDO sellonlatbox,-65,-52,-35,-24 precipitation_${EXP}_${DATASET}_3B-V0A7_mon_${YR}_lonlat.nc.nc precipitation_SESA-3km_${DATASET}_3B-V0A7_mon_${YR}_lonlat.nc.nc
+
+echo
+echo "5.4. Seasonal avg"
+for SEASON in ${SEASON_LIST[@]}; do
+    CDO -timmean -selseas,${SEASON} precipitation_${EXP}_${DATASET}_3B-V0A7_mon_${YR}_lonlat.nc precipitation_${EXP}_${DATASET}_3B-V0A7_${SEASON}_${YR}_lonlat.nc
+done
+
+echo 
+echo "5.5. Delete files"
+rm precipitation_${EXP}_${DATASET}_3B-V0A7_*_${YR}.nc
 
 fi
 

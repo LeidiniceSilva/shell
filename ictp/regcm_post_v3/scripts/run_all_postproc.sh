@@ -32,7 +32,7 @@ n=$this_domain
 [[ $n = WMediterranean ]] && domdir=WMD03
 
 export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11
-yrs=2000-2001
+yrs=2000-2000
 email="mda_silv@ictp.it"
 
  run_postproc="1 0 0 0 0 0 0 0 0 0"       # sigma2p
