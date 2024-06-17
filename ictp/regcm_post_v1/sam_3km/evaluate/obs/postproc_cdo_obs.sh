@@ -238,7 +238,7 @@ rm *_${DATASET}_${YR}.nc
 rm *_${DATASET}_day_${YR}.nc
 rm *_${DATASET}_mon_${YR}.nc
 
-elif [ ${DATASET} == 'ERA5' ]
+elif [ ${DATASET} == 'CPCP' ]
 then
 echo 
 echo "4. ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"

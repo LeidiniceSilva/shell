@@ -26,7 +26,7 @@ YR="2018-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-VAR_LIST="pr tas"
+VAR_LIST="pr"
 EXP="SAM-3km"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM"
@@ -56,11 +56,7 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "3. Convert unit"
-    if [ ${VAR} = 'pr'  ]
-    then
     CDO -b f32 mulc,86400 ${VAR}_${EXP}_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc
-    else
-    CDO -b f32 mulc,3600 ${VAR}_${EXP}_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc
 
     echo
     echo "4. Hourly mean"
@@ -82,7 +78,7 @@ done
 echo 
 echo "7. Delete files"
 rm *0100.nc
-rm *_${YR}.nc
+rm ${VAR}_${EXP}_1hr_${YR}.nc
 rm *_timmean.nc
 rm *_diurnal_cycle_${YR}.nc
 
