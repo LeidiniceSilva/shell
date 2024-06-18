@@ -41,15 +41,17 @@ for VAR in ${VAR_LIST[@]}; do
             if [ ${VAR} = 'cl'  ]
             then
             CDO selname,${VAR} ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	    CDO monmean ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_mon_${YEAR}${MON}0100.nc
+	    CDO monmean ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_RegCM5_${YEAR}${MON}.nc
             else
             CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	    CDO monmean ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_mon_${YEAR}${MON}0100.nc
+	    CDO monmean ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_RegCM5_${YEAR}${MON}01.nc
 	    fi 
 	    
 	    echo
 	    echo "2. Regrid variable"
-	    ${BIN}/./regrid ${VAR}_${EXP}_mon_${YEAR}${MON}0100.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+	    ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_${YEAR}${MON}01.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+	    
+	    CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_RegCM5_${YEAR}${MON}01_lonlat.nc ${VAR}_${EXP}_RegCM5_FPS_${YEAR}${MON}01_lonlat.nc
 
         done
     done 

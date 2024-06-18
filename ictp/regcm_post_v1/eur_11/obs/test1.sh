@@ -37,21 +37,14 @@ for VAR in ${VAR_LIST[@]}; do
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2000-2001.nc ${VAR}_${DATASET}_${IYR}.nc
     
     for MON in `seq -w 01 01`; do
-	CDO selmonth,${MON} ${VAR}_${DATASET}_${IYR}.nc ${VAR}_${DATASET}_${IYR}${MON}01.nc
+	CDO selmonth,${MON} ${VAR}_${DATASET}_${IYR}.nc ${VAR}_${EXP}_${DATASET}_${IYR}${MON}01.nc
     done
-	
+	   
     echo
-    echo "2. Convert unit"
-    if [ ${VAR} == 'tcc' ]
-    then
-    CDO -b f32 mulc,100 ${VAR}_${DATASET}_${IYR}${MON}01.nc ${VAR}_${EXP}_${DATASET}_${IYR}${MON}01.nc
-    else
-    cp ${VAR}_${DATASET}_${IYR}${MON}01.nc ${VAR}_${EXP}_${DATASET}_${IYR}${MON}01.nc
-    fi
+    echo "2. Regrid"
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${IYR}${MON}01.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
     
-    echo
-    echo "3. Regrid"
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${IYR}${MON}01.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${DATASET}_${IYR}${MON}01_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_${IYR}${MON}01_lonlat.nc
 
 done
 
