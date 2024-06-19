@@ -56,7 +56,7 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "3. Convert unit"
-    CDO -b f32 mulc,86400 ${VAR}_${EXP}_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc
+    CDO -b f32 mulc,3600 ${VAR}_${EXP}_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc
 
     echo
     echo "4. Hourly mean"
