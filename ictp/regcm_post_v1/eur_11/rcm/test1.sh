@@ -21,8 +21,8 @@ FYR=$( echo $YR | cut -d- -f2 )
 EXP="EUR-11"
 VAR_LIST="cl cli clw"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WDM7-Europe_v3/pressure"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/post_evaluate/rcm/wdm7-Europe_v3"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WDM7-Europe/pressure"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/post_evaluate/rcm/wdm7-Europe_v4"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
@@ -41,7 +41,7 @@ for VAR in ${VAR_LIST[@]}; do
             if [ ${VAR} = 'cl'  ]
             then
             CDO selname,${VAR} ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	    CDO monmean ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_RegCM5_${YEAR}${MON}.nc
+	    CDO monmean ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_RegCM5_${YEAR}${MON}01.nc
             else
             CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
 	    CDO monmean ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${EXP}_RegCM5_${YEAR}${MON}01.nc
@@ -60,7 +60,6 @@ done
 echo 
 echo "Delete files"
 rm *0100.nc
-rm *${MON}0100.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

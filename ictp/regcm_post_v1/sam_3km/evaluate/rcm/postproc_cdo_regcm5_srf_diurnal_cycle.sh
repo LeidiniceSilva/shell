@@ -78,7 +78,7 @@ done
 echo 
 echo "7. Delete files"
 rm *0100.nc
-rm ${VAR}_${EXP}_1hr_${YR}.nc
+rm *hr_${YR}.nc
 rm *_timmean.nc
 rm *_diurnal_cycle_${YR}.nc
 
