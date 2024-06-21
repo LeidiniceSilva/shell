@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -N 1 
+#SBATCH -N 4 
 #SBATCH -t 24:00:00
 #SBATCH -A ICT23_ESP
 #SBATCH --qos=qos_prio
@@ -25,7 +25,8 @@ DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/sa
 cd ${DIR_IN}
 
 #python3 plot_graph_annual_cycle.py
-python3 plot_graph_pdf_function.py
+#python3 plot_graph_pdf_function.py
+python3 plot_graph_pdf_function_1hr.py
 
 echo
 echo "--------------- THE END PLOT ----------------"

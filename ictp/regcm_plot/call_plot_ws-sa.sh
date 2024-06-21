@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -N 1 
+#SBATCH -N 4
 #SBATCH -t 24:00:00
 #SBATCH -A ICT23_ESP
 #SBATCH --qos=qos_prio
