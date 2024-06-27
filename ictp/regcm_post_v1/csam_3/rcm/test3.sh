@@ -46,13 +46,13 @@ CDO mulc,100 -histfreq,${TH},100000 ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc ${VAR}_fre
 
 echo
 echo "3. Calculate Int"
-CDO histmean,${TH},100000 ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc ${VAR}_freq_${EXP}_RegCM5_1hr_${YR}_th${TH}.nc
+CDO histmean,${TH},100000 ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc ${VAR}_int_${EXP}_RegCM5_1hr_${YR}_th${TH}.nc
 
 echo
 echo "4. Regrid variable"
 ${BIN}/./regrid p99_${EXP}_RegCM5_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 ${BIN}/./regrid ${VAR}_freq_${EXP}_RegCM5_1hr_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-${BIN}/./regrid ${VAR}_freq_${EXP}_RegCM5_1hr_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+${BIN}/./regrid ${VAR}_int_${EXP}_RegCM5_1hr_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

@@ -35,6 +35,7 @@ CDO daysum ${VAR}_${EXP}_ERA5_1hr_${YR}.nc ${VAR}_${EXP}_ERA5_day_${YR}.nc
     
 echo
 echo "2. Regrid output"
+${BIN}/./regrid ${VAR}_${EXP}_ERA5_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 ${BIN}/./regrid ${VAR}_${EXP}_ERA5_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo

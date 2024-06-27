@@ -69,6 +69,7 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "4. Regrid output"
+    ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_1hr_${YR}${MON}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_day_${YR}${MON}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     
 done

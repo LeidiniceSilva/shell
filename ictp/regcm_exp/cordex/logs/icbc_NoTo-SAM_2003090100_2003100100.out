@@ -1,0 +1,163 @@
+BIN = bin
+SUFFIX = CLM45_BDW
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : May 14 2024  time: 13:19:30
+
+ : this run start at    : 2024-05-17 03:41:31+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : r000u10l05
+ : in directory         : 
+ /marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2003-09-01 00:00:00 UTC        
+ GLOBIDATE2 :  2003-10-01 00:00:00 UTC        
+ NSTEPS     :          121
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+      131072 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2003/tatm_2003_09.nc
+  2.238808005946789E-003   246.594942302540     
+      196608 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2003/geop_2003_09.nc
+   7.36718642706728        235381.777344286     
+      262144 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2003/qhum_2003_09.nc
+  4.107580495010100E-007  1.339752566388978E-002
+      327680 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2003/uwnd_2003_09.nc
+  3.654602105731797E-003   38.5649146423065     
+      393216 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2003/vwnd_2003_09.nc
+  3.600799698854609E-003   10.0347215117717     
+ READ IN fields at DATE: 2003-09-01 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-01 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-01 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-01 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-02 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-02 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-02 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-02 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-03 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-03 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-03 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-03 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-04 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-04 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-04 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-04 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-05 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-05 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-05 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-05 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-06 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-06 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-06 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-06 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-07 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-07 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-07 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-07 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-08 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-08 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-08 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-08 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-09 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-09 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-09 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-09 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-10 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-10 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-10 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-10 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-11 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-11 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-11 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-11 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-12 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-12 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-12 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-12 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-13 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-13 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-13 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-13 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-14 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-14 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-14 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-14 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-15 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-15 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-15 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-15 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-16 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-16 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-16 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-16 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-17 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-17 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-17 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-17 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-18 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-18 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-18 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-18 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-19 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-19 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-19 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-19 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-20 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-20 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-20 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-20 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-21 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-21 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-21 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-21 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-22 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-22 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-22 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-22 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-23 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-23 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-23 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-23 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-24 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-24 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-24 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-24 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-25 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-25 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-25 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-25 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-26 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-26 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-26 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-26 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-27 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-27 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-27 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-27 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-28 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-28 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-28 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-28 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-29 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-29 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-29 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-29 18:00:00 UTC        
+ READ IN fields at DATE: 2003-09-30 00:00:00 UTC        
+ READ IN fields at DATE: 2003-09-30 06:00:00 UTC        
+ READ IN fields at DATE: 2003-09-30 12:00:00 UTC        
+ READ IN fields at DATE: 2003-09-30 18:00:00 UTC        
+      131072 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2003/tatm_2003_10.nc
+  2.095003587767804E-003   249.776799788245     
+      196608 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2003/geop_2003_10.nc
+   7.42579150246822        238148.964838624     
+      262144 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2003/qhum_2003_10.nc
+  3.839913600686152E-007  1.247380919359541E-002
+      327680 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2003/uwnd_2003_10.nc
+  3.267333932218548E-003   22.5061940918230     
+      393216 /marconi_work/ICT23_ESP/RCMDATA/ERA5/2003/vwnd_2003_10.nc
+  3.165212298291629E-003   7.38850070683914     
+ READ IN fields at DATE: 2003-10-01 00:00:00 UTC        
+ Input ready at : Fri May 17 04:39:29 2024
+ Successfully completed ICBC
+icbc script complete

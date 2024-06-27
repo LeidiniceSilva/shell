@@ -17,7 +17,7 @@ CDO(){
 TH=0.5
 YR="200101"
 EXP="CSAM-3"
-VAR="pr"
+VAR="tp"
 
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/obs"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
@@ -41,13 +41,13 @@ CDO mulc,100 -histfreq,${TH},100000 ${VAR}_${EXP}_ERA5_1hr_${YR}.nc ${VAR}_freq_
 
 echo
 echo "3. Calculate Int"
-CDO histmean,${TH},100000 ${VAR}_${EXP}_ERA5_1hr_${YR}.nc ${VAR}_freq_${EXP}_ERA5_1hr_${YR}_th${TH}.nc
+CDO histmean,${TH},100000 ${VAR}_${EXP}_ERA5_1hr_${YR}.nc ${VAR}_int_${EXP}_ERA5_1hr_${YR}_th${TH}.nc
 
 echo
 echo "4. Regrid variable"
 ${BIN}/./regrid p99_${EXP}_ERA5_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 ${BIN}/./regrid ${VAR}_freq_${EXP}_ERA5_1hr_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-${BIN}/./regrid ${VAR}_freq_${EXP}_ERA5_1hr_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+${BIN}/./regrid ${VAR}_int_${EXP}_ERA5_1hr_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

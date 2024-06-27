@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/marconi/home/userexternal/mdasilva/user/mdasilva/CSAM-3/
+base=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex
 
 {
 set -eo pipefail

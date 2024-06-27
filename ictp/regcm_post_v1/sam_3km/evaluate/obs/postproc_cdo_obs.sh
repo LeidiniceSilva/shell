@@ -14,13 +14,13 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2018-2018"
+YR="2018-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-EXP="SAM-3km"
 DATASET="CPC"
+EXP="SAM-3km"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/obs"
@@ -30,10 +30,11 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
+echo 
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+
 if [ ${DATASET} == 'CPC' ]
 then
-echo 
-echo "1. ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 VAR_LIST="precip tmax tmin"
 for VAR in ${VAR_LIST[@]}; do
@@ -74,8 +75,6 @@ rm *_${EXP}_${DATASET}_*_${YR}.nc
 
 elif [ ${DATASET} == 'CRU' ]
 then
-echo 
-echo "2.  ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 VAR_LIST="pre tmp tmx tmn cld"
 for VAR in ${VAR_LIST[@]}; do
@@ -116,8 +115,6 @@ rm *_${DATASET}_mon_${YR}.nc
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-echo 
-echo "3.  ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 VAR_LIST="tp t2m mx2t mn2t tcc mslhf msshf msnlwrf msnswrf cc clwc ciwc q u v"
 for VAR in ${VAR_LIST[@]}; do
@@ -240,8 +237,6 @@ rm *_${DATASET}_mon_${YR}.nc
 
 elif [ ${DATASET} == 'GPCP' ]
 then
-echo 
-echo "4. ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 echo
 echo "4.1. Select date"
@@ -257,7 +252,7 @@ ${BIN}/./regrid sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}.nc -35.70235,-11.25
 
 echo
 echo "4.4. Select subdomain"
-#CDO sellonlatbox,-65,-52,-35,-24 sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}_lonlat.nc sat_gauge_precip_SESA-3km_${DATASET}_mon_${YR}_lonlat.nc
+CDO sellonlatbox,-65,-52,-35,-24 sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}_lonlat.nc sat_gauge_precip_SESA-3km_${DATASET}_mon_${YR}_lonlat.nc
 
 echo
 echo "4.5. Seasonal avg"
@@ -270,8 +265,6 @@ echo "4.6. Delete files"
 rm *${DATASET}_mon_${YR}.nc
 
 else
-echo 
-echo "5. ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 echo
 echo "5.1. Average"

@@ -8,20 +8,20 @@
 email="mda_silv@ictp.it"
 gcm="ERA5"
 config="ERA5"
-domain="CSAM3"
+domain="CSAM-3"
 
 # base directory to the data (in which folders are arranged as: ${base}/$gcm/${config}-${domain})
 base=/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX
 
 # working directory (where the log files are located)
-hdir=/marconi/home/userexternal/mdasilva/user/mdasilva/CSAM-3
+hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex
 
 # start and end year(s)
-yr0=2001
-yr1=2001
+yr0=2000
+yr1=2000
 # start and end month(s)
-mn0=5
-mn1=5
+mn0=1
+mn1=1
 
 # other inputs for pycordexer
 experiment="evaluation"
@@ -41,7 +41,7 @@ nl="${config}-${domain}"
 wdir=${base}/$gcm/$nl
 
 # path to run pycordex scripts (make_acore, make_tier1, make_tier2)
-sdir=/marconi/home/userexternal/mdasilva/user/mdasilva/CSAM-3
+sdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex
 
 ########################
 ##### run pycordex #####

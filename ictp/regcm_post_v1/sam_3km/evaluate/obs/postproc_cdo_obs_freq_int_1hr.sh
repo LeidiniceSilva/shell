@@ -19,10 +19,9 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-TH=0.5 
-VAR="tp"
+DATASET="GPM"
 EXP="SAM-3km"
-DATASET="ERA5"
+TH=0.5 
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/obs"
@@ -33,7 +32,12 @@ cd ${DIR_OUT}
 echo ${DIR_OUT}
 
 echo 
-echo "------------------------------- PROCCESSING OBS DATASET -------------------------------"
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+
+if [ ${DATASET} == 'ERA5' ] 
+then
+
+VAR="tp"
 
 echo
 echo "1. Select date"
@@ -54,9 +58,31 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO histmean,${TH},100000 ${VAR}_${EXP}_${DATASET}_1hr_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_${DATASET}_1hr_${SEASON}_${YR}_th${TH}.nc
     ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_1hr_${SEASON}_${YR}_th${TH}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 done
+                 
+else
+
+VAR="precipitation"
+
+echo
+echo "1.1. Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/precipitation_SAM-10km_GPM_3B-V0A7_1hr_2018-2021.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
+
+echo
+echo "3. Frequency and intensity by season"
+for SEASON in ${SEASON_LIST[@]}; do
+    CDO selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${SEASON}_${YR}.nc
+    
+    CDO mulc,100 -histfreq,${TH},100000 ${VAR}_${EXP}_${DATASET}_1hr_${SEASON}_${YR}.nc ${VAR}_freq_${EXP}_${DATASET}_1hr_${SEASON}_${YR}_th${TH}.nc
+    ${BIN}/./regrid ${VAR}_freq_${EXP}_${DATASET}_1hr_${SEASON}_${YR}_th${TH}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+
+    CDO histmean,${TH},100000 ${VAR}_${EXP}_${DATASET}_1hr_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_${DATASET}_1hr_${SEASON}_${YR}_th${TH}.nc
+    ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_1hr_${SEASON}_${YR}_th${TH}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+done
+
+fi
 
 echo 
-echo "4. Delete files"
+echo "Delete files"
 rm *_${YR}.nc
 rm *_th${TH}.nc
 

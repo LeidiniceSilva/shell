@@ -16,7 +16,7 @@ CDO(){
 
 YR="200101"
 EXP="CSAM-3"
-VAR="pr"
+VAR="tp"
 
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/obs"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
