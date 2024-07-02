@@ -26,7 +26,7 @@ for v in $vars; do
   [[ $v = tas     ]] && vc=tas
   [[ $v = tasmax  ]] && vc=tasmax
   [[ $v = tasmin  ]] && vc=tasmin
-  sf=$hdir/${vc}_${obs}_${ys}.nc
+  sf=$hdir/${vc}_${obs}_2000-2001.nc
   yf=${v}_${obs}_${ys}.nc
   eval CDO selyear,$fyr/$lyr $sf $yf
   for s in $seas ; do

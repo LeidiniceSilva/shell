@@ -16,19 +16,14 @@ hdir=$OBSDIR/$obs
 ys=$1
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
-vars="rsns rsnl rlds rsds rsnscl rlntpcs"
+vars="rsnl"
 seas="DJF MAM JJA SON"
 seasdays=( 30.5 30.5 30.5 30.5 )
 is=0
 for v in $vars; do
   echo "##### Processing $v"
-  [[ $v = rsns    ]] && vc=msnswrf
   [[ $v = rsnl    ]] && vc=msnlwrf
-  [[ $v = rlds    ]] && vc=msdwlwrf
-  [[ $v = rsds    ]] && vc=msdwswrf
-  [[ $v = rsnscl  ]] && vc=msnswrfcs
-  [[ $v = rlntpcs ]] && vc=msnlwrfcs
-  sf=$hdir/${vc}_${obs}_${ys}.nc
+  sf=$hdir/${vc}_${obs}_2000-2001.nc
   yf=${v}_${obs}_${ys}.nc
   eval CDO selyear,$fyr/$lyr $sf $yf
   for s in $seas ; do

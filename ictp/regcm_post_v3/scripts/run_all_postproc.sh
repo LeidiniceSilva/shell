@@ -35,7 +35,7 @@ export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11
 yrs=2000-2000
 email="mda_silv@ictp.it"
 
- run_postproc="1 0 0 0 0 0 0 0 0 0"       # sigma2p
+#run_postproc="1 0 0 0 0 0 0 0 0 0"       # sigma2p
 #run_postproc="0 1 0 0 0 0 0 0 0 0 1 1"   # bias 1 & 2 & 3
 #run_postproc="0 0 0 0 0 0 0 0 0 0 0 0 2" # vert part 2 
 #run_postproc="0 0 1 1 1 1 1 0 0 0 0 0"   # all but bias
@@ -49,16 +49,16 @@ email="mda_silv@ictp.it"
 #run_postproc="0 0 0 0 0 1 0 0 0 0"       # pr-frq/int
 #run_postproc="0 0 0 0 0 0 1 0 0 0"       # p99
 #run_postproc="0 0 0 0 0 0 0 2 0 2"       # vert + wind
-#run_postproc="0 0 0 0 0 0 0 2 0 0"       # vert
+ run_postproc="0 0 0 0 0 0 0 2 0 0"       # vert
 #run_postproc="0 0 0 0 0 0 0 0 1 0"       # day/night
 #run_postproc="0 0 0 0 0 0 0 0 0 2"       # wind
 # 1/0 = on/off switch for sigma, bias, pr(%), prc/pr, pdfs, pr-frq/int, p99, vert, day/night, wind 
 # last three are automatically switched off if submit-sigma is on 2 = on but submitted as a job. 
 # submit-sigma should not be 2 true -if you want submit sigma to be followed by vert, daynight, and quv
 
-export lgc_vert=true  #vertical
-export lgc_dynt=false #day/night vertical
-export lgc_quv=true   #winds
+export lgc_vert=false  #vertical
+export lgc_dynt=false  #day/night vertical
+export lgc_quv=false   #winds
 
 ##############################
 ####### end of inputs ########
