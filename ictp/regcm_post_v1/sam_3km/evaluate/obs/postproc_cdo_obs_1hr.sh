@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#SBATCH -N 1 
+#SBATCH -t 24:00:00
+#SBATCH -A ICT23_ESP
+#SBATCH --qos=qos_prio
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH -p skl_usr_prod
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
@@ -18,7 +26,7 @@ YR="2018-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-DATASET="GPM"
+DATASET="ERA5"
 EXP="SAM-3km"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
@@ -47,7 +55,7 @@ CDO -b f32 mulc,1000 ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr
 
 echo
 echo "3. Regrid variable"
-${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc -35.70235,-11.25009,0.25 -78.66277,-35.48362,0.25 bil
+${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 else
 
@@ -59,7 +67,7 @@ CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/precipitation_SAM-10km_GPM_3B-V0A
 
 echo
 echo "2. Regrid variable"
-${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc -35.70235,-11.25009,0.1 -78.66277,-35.48362,0.1 bil
+${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 fi
 
