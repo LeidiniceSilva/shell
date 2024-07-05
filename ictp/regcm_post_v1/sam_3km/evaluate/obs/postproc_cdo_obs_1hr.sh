@@ -26,7 +26,7 @@ YR="2018-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-DATASET="ERA5"
+DATASET="GPM"
 EXP="SAM-3km"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
