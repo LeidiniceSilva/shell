@@ -13,7 +13,6 @@ CDO(){
 }
 
 VAR_LIST="U10 V10 PREC_ACC_NC PSFC"
-EXP="SAM-4km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
 
 echo
