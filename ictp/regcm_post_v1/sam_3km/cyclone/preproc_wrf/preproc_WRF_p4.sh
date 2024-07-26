@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'May 28, 2024'
@@ -7,20 +7,22 @@
  
 {
 
+source /marconi/home/userexternal/ggiulian/STACK22/env2022
 set -eo pipefail
+
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="U10 V10 PREC_ACC_NC PSFC"
-MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
+VAR_LIST="U V"
+PATH_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/wrf"
 
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 for VAR in ${VAR_LIST[@]}; do
 
-    DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/WRF/${VAR}"
+    DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/wrf/${VAR}"
     
     echo
     cd ${DIR_OUT}
@@ -28,17 +30,14 @@ for VAR in ${VAR_LIST[@]}; do
     
     for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
-	    
-	    echo
-	    echo "1. Select variable: ${VAR}"
-	    CDO selname,${VAR} ${DIR_IN}/wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${MODEL}_${YEAR}${MON}.nc
-	    
-        done
-    done	
 
+            cdo selvar,${VAR} ${PATH_IN}/WRF/wind_925Pha_ml_saag_${YEAR}${MON}.nc ${VAR}_wrf3d_ml_saag_${YEAR}${MON}.nc
+
+        done
+    done
 done
-    
+
 echo
-echo "--------------- THE END POSPROCESSING MODEL ----------------"
+echo "--------------- THE END POSPROCESSING MODEL -------------"
 
 }
