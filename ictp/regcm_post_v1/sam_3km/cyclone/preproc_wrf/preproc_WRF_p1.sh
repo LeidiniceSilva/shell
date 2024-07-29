@@ -14,7 +14,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="MSLP U V"
+VAR_LIST="PSFC U V"
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
 
@@ -39,7 +39,7 @@ for VAR in ${VAR_LIST[@]}; do
 	    
 	    echo
 	    echo "2. Regrid"
-            ncremap -m ${DIR}/WRF2SAM_esmf_weights_bilinear.nc ${VAR}_wrf3d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+            ncremap -m ${DIR}/WRF2SAM_esmf_weights_bilinear.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
 
 	    echo
 	    echo "3. Smooth"
