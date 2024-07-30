@@ -39,11 +39,18 @@ for VAR in ${VAR_LIST[@]}; do
 	    
 	    echo
 	    echo "2. Regrid"
-            ncremap -m ${DIR}/WRF2SAM_esmf_weights_bilinear.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
-
+            if [ ${VAR} == "PSFC" ]
+	    then
+	    CDO -setgrid,${DIR}/xlonlat.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    else
+	    CDO -setgrid,${DIR}/xlonlat.nc ${VAR}_wrf3d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    fi
+	    
+	    CDO remapbil,${DIR}/grid.txt ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_lonlat.nc
+	    	    
 	    echo
 	    echo "3. Smooth"
-	    CDO smooth ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_smooth.nc
+	    CDO smooth ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_lonlat.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_smooth.nc
 	    CDO smooth ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_smooth.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_smooth2.nc
 	    	
         done
