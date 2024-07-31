@@ -45,7 +45,7 @@ for VAR in ${VAR_LIST[@]}; do
     for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
 
-            CDO -setgrid,${DIR}/xlonglat.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+            CDO -setgrid,${DIR}/xlonlat.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
 	    CDO remapbil,${DIR}/grid2.txt ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_lonlat.nc
 
         done

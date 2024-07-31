@@ -15,7 +15,7 @@ CDO(){
 }
 
 # Set file name
-VAR_LIST="PSFC U V"
+VAR_LIST="PSFC U10e V10e"
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
 DT="2018010100-2021123100"
@@ -34,7 +34,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo ${DIR_OUT}
     
     for YR in `seq -w 2018 2021`; do
-        CDO selyear,$YR ${DIR_IN}/${VAR}/${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_smooth2.nc ${VAR}_${EXP}_${MODEL}_${YR}.nc
+        CDO selyear,$YR ${DIR_IN}/${VAR}/${VAR}_${EXP}_${MODEL}_${DT}_smooth2.nc ${VAR}_${EXP}_${MODEL}_${YR}.nc
    	
 	for HR in 00 06 12 18; do
             CDO selhour,$HR ${VAR}_${EXP}_${MODEL}_${YR}.nc ${VAR}.${YR}.${HR}.nc

@@ -14,7 +14,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="PREC_ACC_NC" #  PSFC U U10e V V10e
+VAR_LIST="U10e V10e" # PREC_ACC_NC PSFC U U10e V V10e
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/wrf"
 
 echo

@@ -22,7 +22,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="uas vas" # psl ua uas va vas
+VAR_LIST="psl ua uas va vas"
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5"
 DT="2018-2021"
@@ -44,7 +44,7 @@ for VAR in ${VAR_LIST[@]}; do
     for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
 	    
-	    if [ ${VAR} == 'psl' ] || [ ${VAR} == 'uas' ] || [ ${VAR} == 'vas' ]
+	    if [ ${VAR} == 'psl' ]
 	    then
 	    echo
 	    echo "1. Select variable: ${VAR}"
@@ -58,7 +58,7 @@ for VAR in ${VAR_LIST[@]}; do
 	    echo "3. Smooth"
 	    CDO smooth ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100_smooth.nc
 	    CDO smooth ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100_smooth.nc ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100_smooth2.nc
-	       
+	    	    
 	    else
 	    echo
 	    echo "1. Select variable: ${VAR}"

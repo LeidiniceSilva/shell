@@ -14,7 +14,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="PSFC U V"
+VAR_LIST="PSFC U10e V10e"
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
 
@@ -39,7 +39,7 @@ for VAR in ${VAR_LIST[@]}; do
 	    
 	    echo
 	    echo "2. Regrid"
-            if [ ${VAR} == "PSFC" ]
+            if [ ${VAR} == "PSFC" ] || [ ${VAR} == "U10e" ] || [ ${VAR} == "V10e" ]
 	    then
 	    CDO -setgrid,${DIR}/xlonlat.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
 	    else
