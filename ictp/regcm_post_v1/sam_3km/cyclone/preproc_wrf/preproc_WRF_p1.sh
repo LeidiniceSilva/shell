@@ -17,6 +17,7 @@ CDO(){
 VAR_LIST="PSFC U10e V10e"
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
+DT="2018010100-2021123100"
 
 DIR="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/wrf/WRF"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/postproc"
@@ -55,6 +56,9 @@ for VAR in ${VAR_LIST[@]}; do
 	    	
         done
     done	
+    
+    CDO mergetime ${VAR}_${EXP}_${MODEL}_*_smooth2.nc ${VAR}_${EXP}_${MODEL}_${DT}_smooth2.nc
+    
 done
     
 echo

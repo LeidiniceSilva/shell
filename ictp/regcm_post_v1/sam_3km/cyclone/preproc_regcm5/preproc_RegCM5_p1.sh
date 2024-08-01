@@ -22,7 +22,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="uas vas" # psl ua uas va vas
+VAR_LIST="psl" # psl ua uas va vas
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5"
 DT="2018-2021"
