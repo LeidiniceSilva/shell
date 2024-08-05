@@ -22,10 +22,10 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="psl" # psl ua uas va vas
+VAR_LIST="psl uas vas" # psl ua uas va vas
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5"
-DT="2018-2021"
+DT="2018010100-2021123100"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/output"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
@@ -79,7 +79,10 @@ for VAR in ${VAR_LIST[@]}; do
 	    fi
 	    
         done
-    done	
+    done
+    
+    CDO mergetime ${VAR}_${EXP}_${MODEL}_1hr_*_smooth2.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_smooth2.nc
+    	
 done
     
 echo

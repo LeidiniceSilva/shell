@@ -96,7 +96,7 @@ fi
 [[ $dom = SouthEastAsia  ]] && ddd=SEA
 [[ $dom = Australasia    ]] && ddd=AUS
 
-vars="clw cli cl rh"
+vars="clw cli cl hus rh"
 seas="DJF MAM JJA SON"
 for v in $vars; do
   r4log=F
@@ -116,10 +116,12 @@ for v in $vars; do
   [[ $v = clw ]] && vo=clliq
   [[ $v = cli ]] && vo=clice
   [[ $v = cl  ]] && vo=clfrac
+  [[ $v = hus ]] && vo=qhum
   [[ $v = rh  ]] && vo=rhum
   [[ $v = clw ]] && vi=clwc
   [[ $v = cli ]] && vi=ciwc
   [[ $v = cl  ]] && vi=cc
+  [[ $v = hus ]] && vi=q
   [[ $v = rh  ]] && vi=r
   
   for f in $( eval ls $sdir/*${t}.{${fyr}..${lyr}}??*.nc | grep -v day | grep -v night ); do
