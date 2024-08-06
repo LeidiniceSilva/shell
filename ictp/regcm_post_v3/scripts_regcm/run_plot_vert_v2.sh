@@ -52,7 +52,8 @@ fi
 pdir=$hdir/plots
 mkdir -p $pdir
 
-ncl -Q $scrdir/plot_vert.ncl
+ncl -Q $scrdir/plot_vert_v2.ncl
+#ncl -Q $scrdir/plot_vert.ncl
 #ncl -Q $scrdir/plot_vert_daynight.ncl
 
 echo "#### vertical plots complete! ####"

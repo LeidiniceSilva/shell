@@ -34,7 +34,7 @@ ys=2000-2000
 ####### end of inputs ########
 ##############################
 
-plots=("4s_simple_v3" "prpct" "p99" "prc2pr_v2" "4s_frq-int" "pdfs_v2" "vert" "quv" "taylor_diagram" "pixels")
+plots=("4s_simple_v3" "prpct" "p99" "prc2pr_v2" "4s_frq-int" "pdfs_v2" "vert_v2" "quv" "taylor_diagram" "pixels")
 nrun=$(( ${#plots[@]} - 1 ))
 
 sdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v3/scripts_regcm

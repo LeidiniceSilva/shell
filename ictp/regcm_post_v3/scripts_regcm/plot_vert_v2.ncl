@@ -19,10 +19,10 @@ begin
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   snumT  = conf+"-"+snum
-  vars   = (/"clw","cli","rh","cl"/)
-  vnames = (/"cloud liquid water","cloud ice","relative humidity","cloud fraction"/)
-  cfacts = (/1000000.,1000000.,1.,100./)
-  ulist  = (/"mg/kg","mg/kg","%","%"/)
+  vars   = (/"clw","cli","qh","rh","cl"/)
+  vnames = (/"cloud liquid water","cloud ice","specific humidity","relative humidity","cloud fraction"/)
+  cfacts = (/1000000.,1000000.,1000.,1.,100./)
+  ulist  = (/"mg/kg","mg/kg","g/kg","%","%"/)
   nvars = dimsizes(vars)
 
   obsn   = "ERA5"

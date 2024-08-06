@@ -116,12 +116,12 @@ for v in $vars; do
   [[ $v = clw ]] && vo=clliq
   [[ $v = cli ]] && vo=clice
   [[ $v = cl  ]] && vo=clfrac
-  [[ $v = hus ]] && vo=qhum
+  [[ $v = qh  ]] && vo=qhum
   [[ $v = rh  ]] && vo=rhum
   [[ $v = clw ]] && vi=clwc
   [[ $v = cli ]] && vi=ciwc
   [[ $v = cl  ]] && vi=cc
-  [[ $v = hus ]] && vi=q
+  [[ $v = qh  ]] && vi=q
   [[ $v = rh  ]] && vi=r
   
   for f in $( eval ls $sdir/*${t}.{${fyr}..${lyr}}??*.nc | grep -v day | grep -v night ); do
