@@ -26,13 +26,13 @@ EXP="SAM-3km-cyclone"
 YEAR="2023"
 VAR_LIST="hus pr psl sfcWind ta tas ua uas va vas wa"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km-cyclone/NoTo-SAM"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km-cyclone/post"
-DIR_BIN="/marconi/home/userexternal/ggiulian/binaries_5.0"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km-cyclone/output"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km-cyclone/post/rcm"
+DIR_BIN="/marconi/home/userexternal/ggiulian/RegCM/bin"
 
 echo
-cd ${DIR_OUT}
-echo ${DIR_OUT}
+cd ${DIR_IN}
+echo ${DIR_IN}
 
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
@@ -42,32 +42,15 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "1. Select variable: ${VAR}"
     for MON in `seq -w 06 07`; do
-    	if [ ${VAR} = hus  ]
+    	if [ ${VAR} = hus  ] || [ ${VAR} = ta  ] || [ ${VAR} = ua  ] || [ ${VAR} = va  ] || [ ${VAR} = wa  ]
 	then
-	CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	${DIR_BIN}/./sigma2pNETCDF4_HDF5_CLM45_SKL SAM_3km_cyclone_CP_RegCM5_ERA5.in ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-    	elif [ ${VAR} = ta  ]
-	then
-	CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	${DIR_BIN}/./sigma2pNETCDF4_HDF5_CLM45_SKL SAM_3km_cyclone_CP_RegCM5_ERA5.in ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-    	elif [ ${VAR} = ua  ]
-	then
-	CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	${DIR_BIN}/./sigma2pNETCDF4_HDF5_CLM45_SKL SAM_3km_cyclone_CP_RegCM5_ERA5.in ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-    	elif [ ${VAR} = va  ]
-	then
-	CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	${DIR_BIN}/./sigma2pNETCDF4_HDF5_CLM45_SKL SAM_3km_cyclone_CP_RegCM5_ERA5.in ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-    	elif [ ${VAR} = wa  ]
-	then
-	CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-	${DIR_BIN}/./sigma2pNETCDF4_HDF5_CLM45_SKL SAM_3km_cyclone_CP_RegCM5_ERA5.in ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	${DIR_BIN}/./sigma2pCLM45 namelist.in ${EXP}_ATM.${YEAR}${MON}0100.nc
+	CDO selname,${VAR} ${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${DIR_OUT}/${VAR}_${EXP}_${YEAR}${MON}0100.nc
 	else
-	CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+	CDO selname,${VAR} ${EXP}_SRF.${YEAR}${MON}0100.nc ${DIR_OUT}/${VAR}_${EXP}_${YEAR}${MON}0100.nc
 	fi
     done   
 done
-
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
