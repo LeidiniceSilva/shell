@@ -9,9 +9,9 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 n=$1
 c=$2
 path=$2-$1
-rdir=$3   
-ys=$5     
-scrdir=$6 
+rdir=$3   #/marconi_scratch/userexternal/jciarlo0/ERA5
+ys=$5     #2000-2004
+scrdir=$6 #/marconi/home/userexternal/jciarlo0/regcm_tests/Atlas2
 email=$7
 lgc_vert=true
 lgc_dynt=true

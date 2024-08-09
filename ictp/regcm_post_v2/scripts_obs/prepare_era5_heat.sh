@@ -23,7 +23,7 @@ is=0
 for v in $vars; do
   [[ $v = hfss  ]] && vc=msshf
   [[ $v = hfls  ]] && vc=mslhf
-  sf=$hdir/${vc}_${obs}_${ys}.nc
+  sf=$hdir/${vc}_${obs}_2000-2001.nc
   yf=${v}_${obs}_${ys}.nc
   eval CDO selyear,$fyr/$lyr $sf $yf
   for s in $seas ; do

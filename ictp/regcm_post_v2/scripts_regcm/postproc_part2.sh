@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #SBATCH -N 1 
 #SBATCH -t 4:00:00
 #SBATCH -A ICT23_ESP
@@ -60,11 +61,6 @@ mkdir -p $pdir
 
 seas="DJF MAM JJA SON"
 vars="pr tas tasmax tasmin clt"
-#seas="DJF"
-#vars="pr"
-#if [ $n = Europe -o $n = NorthAmerica -o $n = EastAsia ]; then
-#  vars="$vars snw"
-#fi
 for s in $seas ; do
   echo "#### post-processing $n $s $ys ####"
   [[ $s = DJF ]] && mons="{12,01,02}"

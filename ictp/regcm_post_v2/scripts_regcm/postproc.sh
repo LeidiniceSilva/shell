@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #SBATCH -N 1 
 #SBATCH -t 4:00:00
 #SBATCH -A ICT23_ESP
@@ -178,11 +179,11 @@ for s in $seas ; do
         [[ $n = Europe03 ]] && nn=Europe 
         [[ $n = WMediterranean ]] && nn=Medi3 
         rrr=$( echo $this_res | cut -d. -f2 )
- #      if [ $ys = "2000-2004" ]; then
-          obf=$( eval ls $hrdir/${v}_mean_${ys}_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
- #      else
- #        obf=$( eval ls $hrdir/${v}_mean_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
- #      fi
+        if [ $ys = "2000-2001" ]; then
+          obf=$( eval ls $hrdir/${v}_mean_2000-2009_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
+        else
+          obf=$( eval ls $hrdir/${v}_mean_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
+        fi
       else
         obf=$( eval ls $odir/$obs )
       fi
