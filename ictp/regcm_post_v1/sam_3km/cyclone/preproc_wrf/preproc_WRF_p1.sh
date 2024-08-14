@@ -21,6 +21,7 @@ DT="2018010100-2021123100"
 
 DIR="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/wrf/WRF"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/postproc"
+BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
@@ -47,7 +48,9 @@ for VAR in ${VAR_LIST[@]}; do
 	    CDO -setgrid,${DIR}/xlonlat.nc ${VAR}_wrf3d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
 	    fi
 	    
-	    CDO remapbil,${DIR}/grid.txt ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_lonlat.nc
+	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
+	    
+	    #CDO remapbil,${DIR}/grid.txt ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_lonlat.nc
 	    	    
 	    echo
 	    echo "3. Smooth"

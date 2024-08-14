@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin0/bash
 
-cdo remapbil,grid_SAM land.nc mask_SAM.nc
+cdo remapbil,grid.txt land.nc mask.nc
