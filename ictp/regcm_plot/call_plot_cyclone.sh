@@ -21,13 +21,10 @@ set -eo pipefail
 echo
 echo "--------------- INIT PLOT ----------------"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/sam_3km_cyclone/egu"
+DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/sam_3km_cyclone/paper"
 cd ${DIR_IN}
 
-python3 plot_graph_pdf_precipitation_acc_ec.py
-python3 plot_graph_pdf_precipitation_1hr_acc_ec.py
-python3 plot_maps_precipitation_1hr_95th_ec.py
-python3 plot_maps_precipitation_1hr_99th_ec.py
+python3 plot_maps_precipitation_95-99th_1hr.py
 
 echo
 echo "--------------- THE END PLOT ----------------"

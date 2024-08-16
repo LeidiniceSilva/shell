@@ -52,8 +52,14 @@ for VAR in ${VAR_LIST[@]}; do
 
         done
     done
-    
+        
+    if [ ${VAR} == "AFWA_CAPE_MU" ]
+    then
     CDO mergetime ${VAR}_${EXP}_${MODEL}_*_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
+    else
+    CDO mergetime ${VAR}_${EXP}_${MODEL}_*_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
+    CDO daysum ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_day_${DT}_lonlat.nc
+    fi 
 
 done
 
