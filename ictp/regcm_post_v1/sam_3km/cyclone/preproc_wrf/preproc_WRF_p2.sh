@@ -18,7 +18,7 @@ CDO(){
 VAR_LIST="PSFC U10e V10e"
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
-DT="2018010100-2021123100"
+DT="2018-2021"
 
 # Change path
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/wrf"
