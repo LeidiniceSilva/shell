@@ -67,7 +67,7 @@
  ifshf   = .true. ,           ! Output SHF (pr hourly)
  ifsrf   = .true. ,           ! Output SRF ?
  srffrq  =     3.,            ! Frequency in hours to write to SRF
- dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WDM7-Europe',       
+ dirout  = '/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/NoTo-Europe',       
  lsync   = .true.,            ! If sync of output files at every timestep is
  icosp = 1,                   ! Enable COSP needed fields in output in the ATM
  do_parallel_netcdf_in  = .true.,  ! This enables paralell input

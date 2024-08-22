@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#SBATCH -o logs/wdm7-45_SLURM.out
-#SBATCH -e logs/wdm7-45_SLURM.err
+#SBATCH -o logs/NoTo_SLURM.out
+#SBATCH -e logs/NoTo_SLURM.err
 #SBATCH -N 8 --ntasks-per-node=48 #--mem=63G ##esp1
 #SBATCH -t 24:00:00
 #SBATCH -J NoTo-EUR11

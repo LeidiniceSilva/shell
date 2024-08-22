@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -N 1
+#SBATCH -N 8
 #SBATCH -t 24:00:00
 #SBATCH -A ICT23_ESP
 #SBATCH --qos=qos_prio
@@ -24,7 +24,7 @@ echo "--------------- INIT PLOT ----------------"
 DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/sam_3km_cyclone/paper"
 cd ${DIR_IN}
 
-python3 plot_graph_pdf_precipitation_day-1hr.py
+python3 /marconi/home/userexternal/ggiulian/pycordexer/pycordexer.py /marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km-cyclone/output/SAM-3km-cyclone_ATM.2023060100.nc capecin
 
 echo
 echo "--------------- THE END PLOT ----------------"
