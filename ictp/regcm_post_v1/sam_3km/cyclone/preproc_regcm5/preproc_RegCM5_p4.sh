@@ -22,7 +22,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="psl tas uas vas" # cape psl tas uas vas
+VAR_LIST="cape cin" # cape cin psl tas uas vas
 EXP="SAM-3km"
 MODEL="RegCM5"
 DT="2018-2021"
@@ -41,13 +41,13 @@ for VAR in ${VAR_LIST[@]}; do
     cd ${DIR_OUT}
     echo ${DIR_OUT}
     
-    #for YEAR in `seq -w 2018 2021`; do
-        #for MON in `seq -w 01 12`; do
+    for YEAR in `seq -w 2018 2021`; do
+        for MON in `seq -w 01 12`; do
 	    
-	    #CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100.nc
+	    CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100.nc
 	    
-        #done
-    #done
+        done
+    done
     
     CDO mergetime ${VAR}_${EXP}_ECMWF-ERA5_evaluation_r1i1p1f1_ICTP-RegCM5_1hr_*.nc  ${VAR}_${EXP}_${MODEL}_1hr_${DT}.nc
     CDO selhour,00,06,12,18 ${VAR}_${EXP}_${MODEL}_1hr_${DT}.nc ${VAR}_${EXP}_${MODEL}_6hr_${DT}.nc

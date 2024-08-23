@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#SBATCH -N 1
+#SBATCH -t 24:00:00
+#SBATCH -A ICT23_ESP
+#SBATCH --qos=qos_prio
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH -p skl_usr_prod
+
+#__author__      = 'Leidinice Silva'
+#__email__       = 'leidinicesilva@gmail.com'
+#__date__        = 'Aug 23, 2024'
+#__description__ = 'Create CAPE and CIN variables using PyCordex code'
+
+{
+
+source /marconi/home/userexternal/ggiulian/STACK22/env2022
+set -eo pipefail
+
+echo
+echo "--------------- INIT POSPROCESSING MODEL ----------------"
+
+PYCORDEX="/marconi/home/userexternal/ggiulian/pycordexer"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/output"
+echo ${DIR_IN}
+cd ${DIR_IN}
+
+for YEAR in `seq -w 2018 2021`; do
+    for MON in `seq -w 01 12`; do
+    
+    	python3 ${PYCORDEX}/pycordexer.py SAM-3km_ATM.${YEAR}${MON}0100.nc capecin
+	
+    done
+done
+
+echo
+echo "--------------- THE END POSPROCESSING MODEL ----------------"
+
+}

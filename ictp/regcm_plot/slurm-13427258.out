@@ -1,0 +1,40 @@
+
+--------------- INIT PLOT ----------------
+1 ABROLHOS
+2 ACARAU
+3 AFONSO_CLAUDIO
+Traceback (most recent call last):
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 211, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/site-packages/xarray/backends/lru_cache.py", line 56, in __getitem__
+    value = self._cache[key]
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('/marconi/home/userexternal/mdasilva/OBS/WS-SA/INMET/nc/hourly/pre/pre_A657_H_2018-01-01_2021-12-31.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False)), '2326f0ad-e9ed-484b-bdf7-cb855865967f']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/sam_3km_evaluate/plot_graph_pdf_function_1hr.py", line 105, in <module>
+    clim_i_x, clim_ii_x, clim_iii_x = import_situ_i()			
+  File "/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/sam_3km_evaluate/plot_graph_pdf_function_1hr.py", line 48, in import_situ_i
+    arq_i  = xr.open_dataset('{0}/OBS/WS-SA/INMET/nc/hourly/pre/'.format(path) + 'pre_{0}_H_2018-01-01_2021-12-31.nc'.format(inmet[station][0]))
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/site-packages/xarray/backends/api.py", line 573, in open_dataset
+    backend_ds = backend.open_dataset(
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/site-packages/xarray/backends/netCDF4_.py", line 603, in open_dataset
+    store = NetCDF4DataStore.open(
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/site-packages/xarray/backends/netCDF4_.py", line 400, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/site-packages/xarray/backends/netCDF4_.py", line 347, in __init__
+    self.format = self.ds.data_model
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/site-packages/xarray/backends/netCDF4_.py", line 409, in ds
+    return self._acquire()
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/site-packages/xarray/backends/netCDF4_.py", line 403, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 199, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  File "/marconi/home/userexternal/ggiulian/STACK22/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 217, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "src/netCDF4/_netCDF4.pyx", line 2469, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 2028, in netCDF4._netCDF4._ensure_nc_success
+FileNotFoundError: [Errno 2] No such file or directory: '/marconi/home/userexternal/mdasilva/OBS/WS-SA/INMET/nc/hourly/pre/pre_A657_H_2018-01-01_2021-12-31.nc'
