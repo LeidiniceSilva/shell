@@ -26,7 +26,8 @@ cd ${DIR_IN}
 
 #python3 plot_maps_precipitation_95-99th.py
 #python3 plot_maps_precipitation_95-99th_1hr.py
-python3 plot_graph_pdf_precipitation_day-1hr.py
+#python3 plot_graph_pdf_precipitation_day-1hr.py
+python3 plot_maps_composites_wind.py
 
 echo
 echo "--------------- THE END PLOT ----------------"

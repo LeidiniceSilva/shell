@@ -26,8 +26,16 @@ DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/output"
 echo ${DIR_IN}
 cd ${DIR_IN}
 
-for YEAR in `seq -w 2018 2021`; do
-    for MON in `seq -w 01 12`; do
+# start and end year(s)
+YR0=2018
+YR1=2018
+
+# start and end month(s)
+MN0=7
+MN1=12
+
+for YEAR in `seq -w ${YR0} ${YR1}`; do
+    for MON in `seq -w ${MN0} ${MN1}`; do
     
     	python3 ${PYCORDEX}/pycordexer.py SAM-3km_ATM.${YEAR}${MON}0100.nc capecin
 	
