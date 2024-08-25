@@ -27,12 +27,12 @@ echo ${DIR_IN}
 cd ${DIR_IN}
 
 # start and end year(s)
-YR0=2018
-YR1=2018
+YR0=2019
+YR1=2019
 
 # start and end month(s)
-MN0=7
-MN1=12
+MN0=1
+MN1=6
 
 for YEAR in `seq -w ${YR0} ${YR1}`; do
     for MON in `seq -w ${MN0} ${MN1}`; do

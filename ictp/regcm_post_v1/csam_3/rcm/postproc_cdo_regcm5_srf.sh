@@ -65,19 +65,17 @@ for VAR in ${VAR_LIST[@]}; do
     fi
 
     echo
-    echo "3. Seasonal avg"
+    echo "3. Seasonal avg and regrid"
     for SEASON in ${SEASON_LIST[@]}; do
-        CDO -timmean -selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc 
+        
+	CDO -timmean -selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
+	${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
     done
-       
-    echo
-    echo "4. Regrid output"
-    ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-    
 done
 
 echo 
-echo "5. Delete files"
+echo "4. Delete files"
 rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc
 rm ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
 rm ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
