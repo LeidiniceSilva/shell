@@ -72,13 +72,14 @@ for VAR in ${VAR_LIST[@]}; do
 	${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
     done
+    
+    echo 
+    echo "4. Delete files"
+    rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc
+    rm ${VAR}_${DOMAIN}_RegCM5_*_${YR}.nc
+      
 done
 
-echo 
-echo "4. Delete files"
-rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc
-rm ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
-rm ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

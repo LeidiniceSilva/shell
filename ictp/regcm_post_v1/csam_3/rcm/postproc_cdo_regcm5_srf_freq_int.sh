@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#SBATCH -N 1 
+#SBATCH -t 24:00:00
+#SBATCH -A ICT23_ESP
+#SBATCH --qos=qos_prio
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH -p skl_usr_prod
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
@@ -14,16 +22,18 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2018-2018"
+YR="2000-2000"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 VAR="pr"
-EXP="SAM-3km"
+FREQ="day"
+DOMAIN="CSAM-3"
+EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v6/NoTo-SAM"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v6/post/rcm"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/${FREQ}/${VAR}"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
@@ -33,39 +43,32 @@ echo ${DIR_OUT}
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
-echo
-echo "1. Select variable: ${VAR}"
-for YEAR in `seq -w ${IYR} ${FYR}`; do
-    for MON in `seq -w 01 12`; do
-        CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-    done
-done
-
 echo 
-echo "2. Concatenate date: ${YR}"
-CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_${YR}.nc
- 
-echo
-echo "3. Convert unit"
-CDO -b f32 mulc,86400 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_${YR}.nc
-
-echo
-echo "4. Frequency and intensity by season"
-for SEASON in ${SEASON_LIST[@]}; do
-    CDO selseas,${SEASON} ${VAR}_${EXP}_RegCM5_${YR}.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}.nc
+echo "1. Concatenate date: ${YR}"
+CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_0_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
-    CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}.nc ${VAR}_freq_${EXP}_RegCM5_${SEASON}_${YR}.nc
-    ${BIN}/./regrid ${VAR}_freq_${EXP}_RegCM5_${SEASON}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+echo
+echo "2. Convert unit"
+CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 
-    CDO histmean,1,100000 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_RegCM5_${SEASON}_${YR}.nc
-    ${BIN}/./regrid ${VAR}_int_${EXP}_RegCM5_${SEASON}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+echo
+echo "3. Frequency and intensity by season"
+for SEASON in ${SEASON_LIST[@]}; do
+
+    CDO selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
+    CDO mulc,100 -histfreq,1,100000 ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc ${VAR}_freq_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
+    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+
+    CDO histmean,1,100000 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_int_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
+    ${BIN}/./regrid ${VAR}_int_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 done
 
 echo 
-echo "5. Delete files"
-rm *0100.nc
-rm *_${YR}.nc
+echo "4. Delete files"
+rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc
+rm ${VAR}_${DOMAIN}_RegCM5_*.nc
+rm ${VAR}_*_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

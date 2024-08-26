@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#SBATCH -N 1 
+#SBATCH -t 24:00:00
+#SBATCH -A ICT23_ESP
+#SBATCH --qos=qos_prio
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH -p skl_usr_prod
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
@@ -14,15 +22,17 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2018-2018"
+YR="2000-2000"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 VAR="pr"
-EXP="SAM-3km"
+FREQ="day"
+DOMAIN="CSAM-3"
+EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v6/NoTo-SAM"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km_v6/post/rcm"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/${FREQ}/${VAR}"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
@@ -32,38 +42,31 @@ echo ${DIR_OUT}
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
-echo
-echo "1. Select variable: ${VAR}"
-for YEAR in `seq -w ${IYR} ${FYR}`; do
-    for MON in `seq -w 01 12`; do
-        CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-    done
-done
-
 echo 
-echo "2. Concatenate date: ${YR}"
-CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_${YR}.nc
- 
+echo "1. Concatenate date: ${YR}"
+CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_0_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+    
 echo
-echo "3. Convert unit"
-CDO -b f32 mulc,86400 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_${YR}.nc
+echo "2. Convert unit"
+CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 
 echo
 echo "4. Calculate p99"
-CDO timmin ${VAR}_${EXP}_RegCM5_${YR}.nc ${VAR}_${EXP}_RegCM5_${YR}_min.nc
-CDO timmax ${VAR}_${EXP}_RegCM5_${YR}.nc ${VAR}_${EXP}_RegCM5_${YR}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_RegCM5_${YR}.nc ${VAR}_${EXP}_RegCM5_${YR}_min.nc ${VAR}_${EXP}_RegCM5_${YR}_max.nc p99_${EXP}_RegCM5_${YR}.nc
+CDO timmin ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_min.nc
+CDO timmax ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_max.nc
+CDO timpctl,99 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_min.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_max.nc p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
   
 echo
-echo "5. Regrid variable"
-${BIN}/./regrid p99_${EXP}_RegCM5_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+echo "3. Regrid variable"
+${BIN}/./regrid p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo 
-echo "6. Delete files"
-rm *0100.nc
-rm *_${YR}.nc
-rm ${VAR}_${EXP}_RegCM5_${YR}_min.nc
-rm ${VAR}_${EXP}_RegCM5_${YR}_max.nc
+echo "4. Delete files"
+rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_min.nc 
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_max.nc
+rm p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

@@ -31,8 +31,8 @@ YR0=2019
 YR1=2019
 
 # start and end month(s)
-MN0=1
-MN1=6
+MN0=07
+MN1=12
 
 for YEAR in `seq -w ${YR0} ${YR1}`; do
     for MON in `seq -w ${MN0} ${MN1}`; do
