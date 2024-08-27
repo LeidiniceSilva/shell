@@ -30,7 +30,8 @@ SEASON_LIST="DJF MAM JJA SON"
 FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
-VAR_LIST="CAPE pr tas tasmax tasmin clt rsnl"
+#VAR_LIST="CAPE CIN pr tas tasmax tasmin clt rsnl"
+VAR_LIST="CAPE CIN"
 
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
@@ -76,7 +77,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo 
     echo "4. Delete files"
     rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc
-    rm ${VAR}_${DOMAIN}_RegCM5_*_${YR}.nc
+    rm ${VAR}_${DOMAIN}_*_${YR}.nc
       
 done
 
