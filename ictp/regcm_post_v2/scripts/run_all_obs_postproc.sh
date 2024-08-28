@@ -21,7 +21,7 @@ list1="cpc cru eobs era5_srf gpcc mswep"
 # Processing the pdf
 list2="cpc cru eobs gpcc mswep"
 
-hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v3/scripts_obs
+hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_obs
 
 for l in $list1; do
   echo "===== processing mean: $l ====="

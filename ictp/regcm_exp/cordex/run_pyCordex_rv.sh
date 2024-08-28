@@ -17,11 +17,11 @@ base=/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX
 hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex
 
 # start and end year(s)
-yr0=2001
-yr1=2001
+yr0=2002
+yr1=2002
 # start and end month(s)
-mn0=1
-mn1=4
+mn0=7
+mn1=12
 
 # other inputs for pycordexer
 experiment="evaluation"

@@ -58,7 +58,7 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc
     
     CDO mulc,100 -histfreq,1,100000 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc ${VAR}_freq_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc
-    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
     CDO histmean,1,100000 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc ${VAR}_int_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc
     ${BIN}/./regrid ${VAR}_int_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil

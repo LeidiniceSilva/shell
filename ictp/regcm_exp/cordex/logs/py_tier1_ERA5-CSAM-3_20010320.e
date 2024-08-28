@@ -404,3 +404,125 @@ INFO - Subordinate 6: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evalu
 INFO - Subordinate 6: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/wa200/wa200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
 INFO - Subordinate 6: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/wa200/wa200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
 INFO - Subordinate 6: Variable wa saved using action number 0
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va1000/va1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua1000/ua1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va1000/va1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va925/va925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua1000/ua1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua925/ua925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va925/va925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va850/va850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua925/ua925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua850/ua850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va850/va850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va700/va700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua850/ua850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua700/ua700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va700/va700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va600/va600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua700/ua700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua600/ua600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va600/va600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va500/va500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua600/ua600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua500/ua500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va500/va500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va400/va400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua500/ua500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua400/ua400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua400/ua400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua300/ua300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va400/va400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va300/va300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua300/ua300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua250/ua250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va300/va300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va250/va250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua250/ua250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua200/ua200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va250/va250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va200/va200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/ua200/ua200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua1000/ua1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/1hr/va200/va200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_1hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va1000/va1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua1000/ua1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua925/ua925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va1000/va1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va925/va925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua925/ua925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua850/ua850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va925/va925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va850/va850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua850/ua850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua700/ua700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va850/va850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va700/va700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua700/ua700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua600/ua600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va700/va700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va600/va600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua600/ua600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua500/ua500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va600/va600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va500/va500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua500/ua500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua400/ua400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va500/va500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va400/va400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua400/ua400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua300/ua300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va400/va400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va300/va300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua300/ua300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua250/ua250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va300/va300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va250/va250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua250/ua250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua200/ua200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va250/va250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va200/va200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/ua200/ua200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua1000/ua1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua1000/ua1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua925/ua925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/6hr/va200/va200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_6hr_200103200100-200103210000.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va1000/va1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua925/ua925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua850/ua850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va1000/va1000_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va925/va925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua850/ua850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua700/ua700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va925/va925_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va850/va850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua700/ua700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua600/ua600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va850/va850_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va700/va700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua600/ua600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua500/ua500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va700/va700_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va600/va600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua500/ua500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua400/ua400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va600/va600_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va500/va500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua400/ua400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua300/ua300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va500/va500_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va400/va400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua300/ua300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua250/ua250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va400/va400_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va300/va300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua250/ua250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua200/ua200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va300/va300_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va250/va250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/ua200/ua200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 1: Variable ua saved using action number 0
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va250/va250_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va200/va200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Finished writing on file ./CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/day/va200/va200_CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5_0_day_20010320-20010320.nc
+INFO - Subordinate 2: Variable va saved using action number 0
