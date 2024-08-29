@@ -36,9 +36,9 @@ yrs=2000-2000
 email="mda_silv@ictp.it"
 
 #run_postproc="1 0 0 0 0 0 0 0 0 0"       # sigma2p
-#run_postproc="0 1 0 0 0 0 0 0 0 0 1 1"   # bias 1 & 2 & 3
+ run_postproc="0 1 0 0 0 0 0 0 0 0 1 1"   # bias 1 & 2 & 3
 #run_postproc="0 0 0 0 0 0 0 0 0 0 0 0 2" # vert part 2 
- run_postproc="0 0 1 1 1 1 1 0 0 0 0 0"   # all but bias
+#run_postproc="0 0 1 1 1 1 1 0 0 0 0 0"   # all but bias
 #run_postproc="0 1 0 0 0 0 0 0 0 0"       # bias
 #run_postproc="0 0 0 0 0 0 0 0 0 0 1"     # bias part2 (process ERA5, add land-sea mask)
 #run_postproc="0 0 0 0 0 0 0 0 0 0 0 1"   # bias part3 (process ERA5 rsnl)

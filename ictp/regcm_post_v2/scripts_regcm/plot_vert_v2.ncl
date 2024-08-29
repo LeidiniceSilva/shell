@@ -19,7 +19,7 @@ begin
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   snumT  = conf+"-"+snum
-  vars   = (/"clw","cli","qh","rh","cl"/)
+  vars   = (/"clw","cli","hus","rh","cl"/)
   vnames = (/"cloud liquid water","cloud ice","specific humidity","relative humidity","cloud fraction"/)
   cfacts = (/1000000.,1000000.,1000.,1.,100./)
   ulist  = (/"mg/kg","mg/kg","g/kg","%","%"/)

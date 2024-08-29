@@ -17,14 +17,14 @@ ys=2000-2000
 
 #run_plots="1 0 0 0 0 0 0 1 1 1" # bias + wind + taylor + pixels
 #run_plots="0 0 1 0 1 0 0 0 0 0" # p99 + frq-int
-#run_plots="1 1 1 1 1 1 1 1 1 1" # all
+ run_plots="1 1 1 1 1 1 1 1 1 1" # all
 #run_plots="1 0 0 0 0 0 0 0 0"   # bias
 #run_plots="0 1 0 0 0 0 0 0 0"   # %pr%
 #run_plots="0 0 1 0 0 0 0 0 0"   # p99
 #run_plots="0 0 0 1 0 0 0 0 0"   # prc/pr
 #run_plots="0 0 0 0 1 0 0 0 0"   # frq-int
 #run_plots="0 0 0 0 0 1 0 0 0"   # pdf
- run_plots="0 0 0 0 0 0 1 0 0"   # vertical
+#run_plots="0 0 0 0 0 0 1 0 0"   # vertical
 #run_plots="0 0 0 0 0 0 0 1 0"   # wind
 #run_plots="0 0 0 0 0 0 0 0 1"   # taylor
 #run_plots="0 0 0 0 0 0 0 0 0 1" # pixels
@@ -37,7 +37,7 @@ ys=2000-2000
 plots=("4s_simple_v3" "prpct" "p99" "prc2pr_v2" "4s_frq-int" "pdfs_v2" "vert_v2" "quv" "taylor_diagram" "pixels")
 nrun=$(( ${#plots[@]} - 1 ))
 
-sdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v3/scripts_regcm
+sdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm
 
 if [ $# -ne 2 ]
 then
