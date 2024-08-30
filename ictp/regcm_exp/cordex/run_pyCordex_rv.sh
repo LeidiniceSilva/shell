@@ -20,8 +20,8 @@ hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/co
 yr0=2003
 yr1=2003
 # start and end month(s)
-mn0=1
-mn1=6
+mn0=7
+mn1=12
 
 # other inputs for pycordexer
 experiment="evaluation"

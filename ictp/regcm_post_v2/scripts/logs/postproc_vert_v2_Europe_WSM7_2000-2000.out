@@ -12,3 +12,495 @@
 /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000110100_pressure.nc ..
 /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000120100_pressure.nc ..
 #### ... DJF ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... MAM ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... JJA ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... SON ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### vert-processing WSM7-Europe 2000-2000 cli ####
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000010100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000020100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000030100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000040100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000050100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000060100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000070100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000080100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000090100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000100100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000110100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000120100_pressure.nc ..
+#### ... DJF ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... MAM ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... JJA ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... SON ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### vert-processing WSM7-Europe 2000-2000 cl ####
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000010100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000020100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000030100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000040100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000050100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000060100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000070100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000080100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000090100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000100100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000110100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_RAD.2000120100_pressure.nc ..
+#### ... DJF ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... MAM ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... JJA ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... SON ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### vert-processing WSM7-Europe 2000-2000 hus ####
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000010100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000020100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000030100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000040100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000050100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000060100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000070100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000080100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000090100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000100100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000110100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000120100_pressure.nc ..
+#### ... DJF ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... MAM ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... JJA ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... SON ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### vert-processing WSM7-Europe 2000-2000 rh ####
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000010100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000020100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000030100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000040100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000050100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000060100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000070100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000080100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000090100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000100100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000110100_pressure.nc ..
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/pressure/EUR-11_ATM.2000120100_pressure.nc ..
+#### ... DJF ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... MAM ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... JJA ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### ... SON ... ####
+#### ### ... MED ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/MED-RegCM5_mask.nc< by copying the first record.
+#### ### ... NEU ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/NEU-RegCM5_mask.nc< by copying the first record.
+#### ### ... WCE ... ### ####
+cdo    remapnn: Nearest neighbor weights from lonlat (360x180) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (1032480)
+cdo    remapnn: Nearest neighbor weights from curvilinear (424x412) to lonlat (1440x721) grid
+cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid, with source mask (51677)
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-ERA5_mask.nc< by copying the first record.
+cdo    ifthen: Filling up stream1 >/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WSM7-Europe/vert/WCE-RegCM5_mask.nc< by copying the first record.
+#### process complete! ####
