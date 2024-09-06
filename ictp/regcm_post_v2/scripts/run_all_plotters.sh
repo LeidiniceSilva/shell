@@ -15,9 +15,9 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 
 ys=2000-2000
 
-#run_plots="1 0 0 0 0 0 0 1 1 1" # bias + wind + taylor + pixels
-#run_plots="0 0 1 0 1 0 0 0 0 0" # p99 + frq-int
- run_plots="1 1 1 1 1 1 1 1 1 1" # all
+#run_plots="1 0 0 0 0 0 0 1 1 0" # bias + wind + taylor + pixels
+ run_plots="0 0 1 0 1 0 0 0 0 0" # p99 + frq-int
+#run_plots="1 1 1 1 1 1 1 1 1 1" # all
 #run_plots="1 0 0 0 0 0 0 0 0"   # bias
 #run_plots="0 1 0 0 0 0 0 0 0"   # %pr%
 #run_plots="0 0 1 0 0 0 0 0 0"   # p99

@@ -14,15 +14,15 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2000-2000"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="CSAM-3"
-DATASET="CMORPH"
+DATASET="ERA5"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/OBS"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/obs"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
@@ -33,13 +33,13 @@ echo ${DIR_OUT}
 if [ ${DATASET} == 'CPC' ]
 then
 echo 
-echo "1. ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 VAR_LIST="precip tmax tmin"
 for VAR in ${VAR_LIST[@]}; do
     
     echo
-    echo "1.1. Select date"
+    echo "Select date"
     if [ ${VAR} == 'precip' ]
     then
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cpc.day.1979-2021.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc
@@ -48,39 +48,39 @@ for VAR in ${VAR_LIST[@]}; do
     fi
     
     echo
-    echo "1.2. Monthly avg"
+    echo "Monthly avg"
     CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
 
     echo
-    echo "1.3. Regrid output"
+    echo "Regrid output"
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
     echo
-    echo "1.4. Seasonal avg"
+    echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
         CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${YR}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
     done
 done
 
 echo 
-echo "1.5. Delete files"
+echo "Delete files"
 rm *_${EXP}_${DATASET}_*_${YR}.nc
 
 elif [ ${DATASET} == 'CRU' ]
 then
 echo 
-echo "2.  ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 VAR_LIST="pre tmp tmx tmn cld"
 for VAR in ${VAR_LIST[@]}; do
     
     echo
-    echo "2.1. Select date"
+    echo "Select date"
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}.dat.nc ${VAR}_${DATASET}_mon_${YR}.nc
     
     echo
-    echo "2.2. Convert unit"
+    echo "Convert unit"
     if [ ${VAR} == 'pre' ]
     then
     CDO -b f32 divc,30.5 ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
@@ -89,52 +89,51 @@ for VAR in ${VAR_LIST[@]}; do
     fi
     
     echo
-    echo "2.3. Regrid"
+    echo "Regrid"
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
     echo
-    echo "2.4. Seasonal avg"
+    echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
         CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${YR}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
     done
 done
 
 echo 
-echo "2.5. Delete files"
+echo "Delete files"
 rm *_${DATASET}_mon_${YR}.nc
 
 elif [ ${DATASET} == 'ERA5' ]
 then
 echo 
-echo "3.  ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
-VAR_LIST="pr tas tasmax tasmin clt qhum uwnd vwnd"
+VAR_LIST="lcc mcc hcc"
+#VAR_LIST="pr tas tasmax tasmin clt qhum uwnd vwnd"
+
 for VAR in ${VAR_LIST[@]}; do
 
     echo
-    echo "3.1. Select date and convert unit"
+    echo "Select date and convert unit"
     if [ ${VAR} == 'pr' ]
     then
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2000-2001.nc ${VAR}_${DATASET}_${YR}.nc
-    CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     elif [ ${VAR} == 'tas' ] || [ ${VAR} == 'tasmax' ] || [ ${VAR} == 'tasmin' ]
     then
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2000-2001.nc ${VAR}_${DATASET}_${YR}.nc
-    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 'clt' ]
+    CDO -b f32 subc,273.15 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    elif [ ${VAR} == 'clt' ] || [ ${VAR} == 'lcc' ] || [ ${VAR} == 'mcc' ] || [ ${VAR} == 'hcc' ]
     then
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2000-2001.nc ${VAR}_${DATASET}_${YR}.nc
-    CDO -b f32 mulc,100 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    CDO -b f32 mulc,100 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
-    cp ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2000-2000.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    cp ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi
     
     echo
-    echo "3.3. Regrid and select subdomain"
+    echo "Regrid and select subdomain"
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     
     echo
-    echo "3.4. Seasonal avg"
+    echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
 	if [ ${VAR} == 'qhum' ] || [ ${VAR} == 'uwnd' ] || [ ${VAR} == 'vwnd' ]
 	then
@@ -148,7 +147,7 @@ for VAR in ${VAR_LIST[@]}; do
 done
 
 echo 
-echo "3.5. Delete files"
+echo "Delete files"
 rm *_${DATASET}_${YR}.nc
 rm *_${DATASET}_day_${YR}.nc
 rm *_${DATASET}_mon_${YR}.nc
@@ -156,54 +155,81 @@ rm *_${DATASET}_mon_${YR}.nc
 elif [ ${DATASET} == 'GPCP' ]
 then
 echo 
-echo "4. ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 echo
-echo "4.1. Select date"
+echo "Select date"
 CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/GPCPMON_L3_198301-202209_V3.2.nc4 ${EXP}_${DATASET}_mon_${YR}.nc
 
 echo 
-echo "4.2. Select variable"
+echo "Select variable"
 CDO selvar,sat_gauge_precip ${EXP}_${DATASET}_mon_${YR}.nc sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}.nc
 
 echo 
-echo "4.3. Regrid output"
+echo "Regrid output"
 ${BIN}/./regrid sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo
-echo "4.4. Seasonal avg"
+echo "Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}_lonlat.nc sat_gauge_precip_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 done
 
 echo 
-echo "4.5. Delete files"
+echo "Delete files"
 rm *${DATASET}_mon_${YR}.nc
 
-else
+elif [ ${DATASET} == 'MSWEP' ]
+then
 echo 
-echo "5. ------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
 echo
-echo "5.1. Average"
-CDO chname,cmorph,pr ${DIR_IN}/${DATASET}/cmorph_SAM-8km_1hr_2000-2000.nc pr_SAM-8km_1hr_2000-2000.nc
-CDO daysum pr_SAM-8km_1hr_2000-2000.nc pr_${EXP}_${DATASET}_day_2000-2000.nc
-CDO monmean pr_${EXP}_${DATASET}_day_2000-2000.nc pr_${EXP}_${DATASET}_mon_2000-2000.nc
+echo "Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/mswep.mon.1979-2020.nc precipitation_${EXP}_${DATASET}_mon_${YR}.nc
 
 echo 
-echo "5.2. Regrid output"
-${BIN}/./regrid pr_${EXP}_${DATASET}_day_2000-2000.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-${BIN}/./regrid pr_${EXP}_${DATASET}_mon_2000-2000.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+echo "Regrid output"
+${BIN}/./regrid precipitation_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo
-echo "5.3. Seasonal avg"
+echo "Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
-    CDO -timmean -selseas,${SEASON} pr_${EXP}_${DATASET}_mon_2000-2000_lonlat.nc pr_${EXP}_${DATASET}_${SEASON}_2000-2000_lonlat.nc
+    CDO -timmean -selseas,${SEASON} precipitation_${EXP}_${DATASET}_mon_${YR}_lonlat.nc precipitation_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 done
 
 echo 
-echo "5.4. Delete files"
-rm pr_*_2000-2000.nc
+echo "Delete files"
+rm precipitation_*_${YR}.nc
+
+else
+echo 
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+
+echo
+echo "Select date"
+FILE=$( eval ls ${DIR_IN}/${DATASET}/TRMM.day.mean.????.nc )
+CDO mergetime ${FILE} hrf_${EXP}_${DATASET}_day_${YR}.nc
+
+echo
+echo "Monthly avg"
+CDO monmean hrf_${EXP}_${DATASET}_day_${YR}.nc hrf_${EXP}_${DATASET}_mon_${YR}.nc
+
+echo 
+echo "Regrid output"
+${BIN}/./regrid hrf_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+${BIN}/./regrid hrf_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
+echo
+echo "Seasonal avg"
+for SEASON in ${SEASON_LIST[@]}; do
+    CDO -timmean -selseas,${SEASON} hrf_${EXP}_${DATASET}_mon_${YR}_lonlat.nc hrf_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
+done
+
+echo 
+echo "Delete files"
+rm *${DATASET}_day_${YR}.nc
+rm *${DATASET}_mon_${YR}.nc
 
 fi
 

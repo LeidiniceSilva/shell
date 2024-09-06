@@ -22,7 +22,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2000-2000"
+YR="2000-2005"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
@@ -30,8 +30,8 @@ SEASON_LIST="DJF MAM JJA SON"
 FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
-#VAR_LIST="CAPE CIN pr tas tasmax tasmin clt rsnl"
-VAR_LIST="CAPE CIN"
+VAR_LIST="cll clm clh"
+#VAR_LIST="cll clm clh pr tas tasmax tasmin clt"
 
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
@@ -80,7 +80,6 @@ for VAR in ${VAR_LIST[@]}; do
     rm ${VAR}_${DOMAIN}_*_${YR}.nc
       
 done
-
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
