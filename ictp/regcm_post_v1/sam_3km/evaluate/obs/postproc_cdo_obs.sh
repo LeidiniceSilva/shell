@@ -116,8 +116,7 @@ rm *_${DATASET}_mon_${YR}.nc
 elif [ ${DATASET} == 'ERA5' ]
 then
 
-VAR_LIST="lcc mcc hcc"
-#VAR_LIST="lcc mcc hcc tp t2m mx2t mn2t tcc mslhf msshf msnlwrf msnswrf cc clwc ciwc q u v"
+VAR_LIST="lcc mcc hcc tp t2m mx2t mn2t tcc mslhf msshf msnlwrf msnswrf cc clwc ciwc q u v"
 
 for VAR in ${VAR_LIST[@]}; do
 

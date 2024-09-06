@@ -63,10 +63,6 @@ for VAR in ${VAR_LIST[@]}; do
     done
 done
 
-echo 
-echo "Delete files"
-rm *_${EXP}_${DATASET}_*_${YR}.nc
-
 elif [ ${DATASET} == 'CRU' ]
 then
 echo 
@@ -99,17 +95,13 @@ for VAR in ${VAR_LIST[@]}; do
     done
 done
 
-echo 
-echo "Delete files"
-rm *_${DATASET}_mon_${YR}.nc
-
 elif [ ${DATASET} == 'ERA5' ]
 then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
-VAR_LIST="lcc mcc hcc"
-#VAR_LIST="pr tas tasmax tasmin clt qhum uwnd vwnd"
+VAR_LIST="msnlwrf msnswrf"
+#VAR_LIST="clt lcc mcc hcc pr tas tasmax tasmin msnlwrf msnswrf qhum uwnd vwnd"
 
 for VAR in ${VAR_LIST[@]}; do
 
@@ -124,6 +116,9 @@ for VAR in ${VAR_LIST[@]}; do
     elif [ ${VAR} == 'clt' ] || [ ${VAR} == 'lcc' ] || [ ${VAR} == 'mcc' ] || [ ${VAR} == 'hcc' ]
     then
     CDO -b f32 mulc,100 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    elif [ ${VAR} == 'msnlwrf' ]
+    then
+    CDO -b f32 mulc,-1 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
     cp ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi
@@ -145,12 +140,6 @@ for VAR in ${VAR_LIST[@]}; do
 	fi
     done       
 done
-
-echo 
-echo "Delete files"
-rm *_${DATASET}_${YR}.nc
-rm *_${DATASET}_day_${YR}.nc
-rm *_${DATASET}_mon_${YR}.nc
 
 elif [ ${DATASET} == 'GPCP' ]
 then
@@ -175,10 +164,6 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}_lonlat.nc sat_gauge_precip_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 done
 
-echo 
-echo "Delete files"
-rm *${DATASET}_mon_${YR}.nc
-
 elif [ ${DATASET} == 'MSWEP' ]
 then
 echo 
@@ -197,10 +182,6 @@ echo "Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} precipitation_${EXP}_${DATASET}_mon_${YR}_lonlat.nc precipitation_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 done
-
-echo 
-echo "Delete files"
-rm precipitation_*_${YR}.nc
 
 else
 echo 
@@ -226,11 +207,10 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} hrf_${EXP}_${DATASET}_mon_${YR}_lonlat.nc hrf_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 done
 
+fi
+
 echo 
 echo "Delete files"
-rm *${DATASET}_day_${YR}.nc
-rm *${DATASET}_mon_${YR}.nc
-
-fi
+rm *_${YR}.nc
 
 }

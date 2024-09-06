@@ -30,8 +30,8 @@ SEASON_LIST="DJF MAM JJA SON"
 FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
-VAR_LIST="cll clm clh"
-#VAR_LIST="cll clm clh pr tas tasmax tasmin clt"
+VAR_LIST="rsnl rsns"
+#VAR_LIST="cll clm clh clt pr tas tasmax tasmin rsnl rsns"
 
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
@@ -45,14 +45,26 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 	
 for VAR in ${VAR_LIST[@]}; do
 
-    DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/${FREQ}/${VAR}"
-
     echo
-    echo "1. Select variable"
+    echo "Select variable"
+    if [ ${VAR} = 'rsnl'  ] || [ ${VAR} = 'rsnl'  ]
+    then
+    DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3"
+    for YEAR in `seq -w ${IYR} ${FYR}`; do
+        for MON in `seq -w 01 12`; do
+	    for DAY in `seq -w 01 31`; do
+	        CDO selname,${VAR} ${DIR_IN}/CSAM-3_RAD.${YEAR}${MON}${DAY}00.nc ${VAR}_${DOMAIN}_${YEAR}${MON}${DAY}.nc
+	    done
+	done
+    done
+    CDO mergetime ${VAR}_${DOMAIN}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+    else
+    DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/${FREQ}/${VAR}"
     CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_0_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+    fi
     
     echo
-    echo "2. Convert unit"
+    echo "Convert unit"
     if [ ${VAR} = 'pr'  ]
     then
     CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}_unit.nc
@@ -66,7 +78,7 @@ for VAR in ${VAR_LIST[@]}; do
     fi
 
     echo
-    echo "3. Seasonal avg and regrid"
+    echo "Seasonal avg and regrid"
     for SEASON in ${SEASON_LIST[@]}; do
         
 	CDO -timmean -selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
@@ -75,7 +87,7 @@ for VAR in ${VAR_LIST[@]}; do
     done
     
     echo 
-    echo "4. Delete files"
+    echo "Delete files"
     rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc
     rm ${VAR}_${DOMAIN}_*_${YR}.nc
       

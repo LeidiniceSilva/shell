@@ -28,8 +28,8 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-22"
-VAR_LIST="cll clm clh"
-VAR_LIST="cll clm clh pr tas tasmax tasmin clt"
+VAR_LIST="rsnl rsns"
+#VAR_LIST="clt cll clm clh pr rsnl rsns tas tasmax tasmin"
 
 DIR_IN="/marconi_work/ICT23_ESP/nzazulie/ERA5/NoTo-SouthAmerica"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate"
@@ -51,7 +51,7 @@ for VAR in ${VAR_LIST[@]}; do
             if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'tas'  ] || [ ${VAR} = 'tasmax'  ] || [ ${VAR} = 'tasmin'  ]
             then
             CDO selname,${VAR} ${DIR_IN}/SAM-22_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-            elif [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh'  ] 
+            elif [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh'  ] || [ ${VAR} = 'rsnl'  ] || [ ${VAR} = 'rsns'  ] 
             then
             CDO selname,${VAR} ${DIR_IN}/SAM-22_RAD.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
 	    else
