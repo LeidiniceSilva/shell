@@ -42,22 +42,54 @@ echo ${DIR_OUT}
 
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
-	
+
+is_leap_year() {
+    YEAR=$1
+    if [ $((YEAR % 4)) -eq 0 ]; then
+        if [ $((YEAR % 100)) -ne 0 ] || [ $((YEAR % 400)) -eq 0 ]; then
+            return 0  # Leap year
+        else
+            return 1  # Not a leap year
+        fi
+    else
+        return 1  # Not a leap year
+    fi
+}
+
 for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "Select variable"
-    if [ ${VAR} = 'rsnl'  ] || [ ${VAR} = 'rsnl'  ]
+    if [ ${VAR} = 'rsnl'  ] || [ ${VAR} = 'rsns'  ]
     then
     DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3"
     for YEAR in `seq -w ${IYR} ${FYR}`; do
         for MON in `seq -w 01 12`; do
-	    for DAY in `seq -w 01 31`; do
-	        CDO selname,${VAR} ${DIR_IN}/CSAM-3_RAD.${YEAR}${MON}${DAY}00.nc ${VAR}_${DOMAIN}_${YEAR}${MON}${DAY}.nc
+	
+	    case ${MON} in
+		01|03|05|07|08|10|12)
+		    DAYS=31
+		    ;;
+		04|06|09|11)
+		    DAYS=30
+		    ;;
+		02)
+		    if is_leap_year ${YEAR}; then
+			DAYS=29
+		    else
+			DAYS=28
+		    fi
+		    ;;
+	    esac
+		
+	    for DAY in `seq -w 01 ${DAYS}`; do
+		CDO selname,${VAR} ${DIR_IN}/CSAM-3_RAD.${YEAR}${MON}${DAY}00.nc ${VAR}_${DOMAIN}_${YEAR}${MON}${DAY}.nc
 	    done
 	done
     done
+
     CDO mergetime ${VAR}_${DOMAIN}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+    
     else
     DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/${FREQ}/${VAR}"
     CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_0_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
