@@ -100,8 +100,7 @@ then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
-VAR_LIST="msnlwrf msnswrf"
-#VAR_LIST="clt lcc mcc hcc pr tas tasmax tasmin msnlwrf msnswrf qhum uwnd vwnd"
+VAR_LIST="clt lcc mcc hcc pr tas tasmax tasmin msnlwrf msnswrf msdwlwrf msdwswrf qhum uwnd vwnd"
 
 for VAR in ${VAR_LIST[@]}; do
 

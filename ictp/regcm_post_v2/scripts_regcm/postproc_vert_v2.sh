@@ -21,7 +21,7 @@ ys=$5
 ##############################
 
 xdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4/vertical
-odir=/marconi/home/userexternal/mdasilva/OBS/ERA5
+odir=/marconi/home/userexternal/mdasilva/user/mdasilva/OBS/ERA5
 mdir=/marconi_work/ICT23_ESP/ggiulian/OBS/SREX
 obsn=ERA5
 
@@ -116,12 +116,12 @@ for v in $vars; do
   [[ $v = clw ]] && vo=clliq
   [[ $v = cli ]] && vo=clice
   [[ $v = cl  ]] && vo=clfrac
-  [[ $v = qh  ]] && vo=qhum
+  [[ $v = hus ]] && vo=qhum
   [[ $v = rh  ]] && vo=rhum
   [[ $v = clw ]] && vi=clwc
   [[ $v = cli ]] && vi=ciwc
   [[ $v = cl  ]] && vi=cc
-  [[ $v = qh  ]] && vi=q
+  [[ $v = hus ]] && vi=q
   [[ $v = rh  ]] && vi=r
   
   for f in $( eval ls $sdir/*${t}.{${fyr}..${lyr}}??*.nc | grep -v day | grep -v night ); do

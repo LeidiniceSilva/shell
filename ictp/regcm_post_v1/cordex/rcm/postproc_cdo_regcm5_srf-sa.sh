@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 #SBATCH -N 1 
@@ -28,8 +29,7 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-22"
-VAR_LIST="rsnl rsns"
-#VAR_LIST="clt cll clm clh pr rsnl rsns tas tasmax tasmin"
+VAR_LIST="clt cll clm clh pr rsnl rsns tas tasmax tasmin"
 
 DIR_IN="/marconi_work/ICT23_ESP/nzazulie/ERA5/NoTo-SouthAmerica"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate"

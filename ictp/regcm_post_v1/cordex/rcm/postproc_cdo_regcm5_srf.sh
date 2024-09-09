@@ -30,7 +30,7 @@ SEASON_LIST="DJF MAM JJA SON"
 FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
-VAR_LIST="rsnl rsns"
+VAR_LIST="rsns"
 #VAR_LIST="cll clm clh clt pr tas tasmax tasmin rsnl rsns"
 
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
@@ -45,14 +45,15 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 is_leap_year() {
     YEAR=$1
-    if [ $((YEAR % 4)) -eq 0 ]; then
+    if [ $((YEAR % 4)) -eq 0 ]
+    then
         if [ $((YEAR % 100)) -ne 0 ] || [ $((YEAR % 400)) -eq 0 ]; then
-            return 0  # Leap year
+            return 0 # Leap year
         else
-            return 1  # Not a leap year
+            return 1 # Not a leap year
         fi
     else
-        return 1  # Not a leap year
+        return 1     # Not a leap year
     fi
 }
 
@@ -74,7 +75,8 @@ for VAR in ${VAR_LIST[@]}; do
 		    DAYS=30
 		    ;;
 		02)
-		    if is_leap_year ${YEAR}; then
+		    if is_leap_year ${YEAR}
+		    then
 			DAYS=29
 		    else
 			DAYS=28
@@ -112,10 +114,8 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Seasonal avg and regrid"
     for SEASON in ${SEASON_LIST[@]}; do
-        
 	CDO -timmean -selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
 	${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-
     done
     
     echo 
