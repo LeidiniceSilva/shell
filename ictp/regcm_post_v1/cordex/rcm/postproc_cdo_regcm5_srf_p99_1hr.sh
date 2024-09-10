@@ -58,7 +58,7 @@ CDO timpctl,99 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_
   
 echo
 echo "3. Regrid variable"
-${BIN}/./regrid p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo 
 echo "4. Delete files"

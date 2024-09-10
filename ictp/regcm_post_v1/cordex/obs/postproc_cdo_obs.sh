@@ -19,8 +19,8 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
+DATASET=$1
 EXP="CSAM-3"
-DATASET="ERA5"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/OBS"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/obs"
@@ -108,7 +108,9 @@ for VAR in ${VAR_LIST[@]}; do
     echo "Select date and convert unit"
     if [ ${VAR} == 'pr' ]
     then
-    CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${DATASET}_1hr_${YR}.nc
+    CDO daysum ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc
+    CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     elif [ ${VAR} == 'tas' ] || [ ${VAR} == 'tasmax' ] || [ ${VAR} == 'tasmin' ]
     then
     CDO -b f32 subc,273.15 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
@@ -124,8 +126,9 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "Regrid and select subdomain"
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-    
+   
     echo
     echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
@@ -170,8 +173,12 @@ echo "------------------------------- PROCCESSING ${DATASET} DATASET -----------
 
 echo
 echo "Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/mswep.mon.1979-2020.nc precipitation_${EXP}_${DATASET}_mon_${YR}.nc
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/mswep.mon.1979-2020.nc precipitation_${EXP}_${DATASET}_${YR}.nc
 
+echo
+echo "Convert unit"
+CDO -b f32 divc,30.5 precipitation_${EXP}_${DATASET}_${YR}.nc precipitation_${EXP}_${DATASET}_mon_${YR}.nc
+    
 echo 
 echo "Regrid output"
 ${BIN}/./regrid precipitation_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
