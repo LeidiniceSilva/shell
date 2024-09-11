@@ -32,7 +32,7 @@ DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/${FREQ}/${VAR}"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
@@ -43,25 +43,25 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
-echo "1. Concatenate date: ${YR}"
+echo "Concatenate date"
 CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_0_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
 echo
-echo "2. Convert unit"
+echo "Convert unit"
 CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 
 echo
-echo "4. Calculate p99"
+echo "Calculate p99"
 CDO timmin ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_min.nc
 CDO timmax ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_max.nc
 CDO timpctl,99 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_min.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_max.nc p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
   
 echo
-echo "3. Regrid variable"
+echo "Regrid variable"
 ${BIN}/./regrid p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo 
-echo "4. Delete files"
+echo "Delete files"
 rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
 rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_min.nc 

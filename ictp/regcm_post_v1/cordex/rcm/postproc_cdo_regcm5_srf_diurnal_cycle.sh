@@ -33,7 +33,7 @@ DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/${FREQ}/${VAR}"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
@@ -44,30 +44,30 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
-echo "1. Concatenate date: ${YR}"
+echo "Concatenate date: ${YR}"
 CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_0_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
 echo
-echo "2. Convert unit"
+echo "Convert unit"
 CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 
 echo
-echo "3. Hourly mean"
+echo "Hourly mean"
 for HR in `seq -w 00 23`; do
     CDO selhour,${HR} ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${HR}hr_${YR}.nc
     CDO timmean ${VAR}_${DOMAIN}_RegCM5_${HR}hr_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${HR}hr_${YR}_timmean.nc
 done
     
 echo
-echo "4. Diurnal cycle"
+echo "Diurnal cycle"
 CDO mergetime ${VAR}_${DOMAIN}_RegCM5_*_${YR}_timmean.nc ${VAR}_${DOMAIN}_RegCM5_diunal_cycle_${YR}.nc
     
 echo
-echo "5. Regrid output"
-${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_diunal_cycle_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+echo "Regrid output"
+${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_diunal_cycle_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo 
-echo "6. Delete files"
+echo "Delete files"
 rm *0100.nc
 rm *hr_${YR}.nc
 rm *_timmean.nc

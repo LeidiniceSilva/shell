@@ -1,0 +1,18 @@
+
+/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate
+
+--------------- INIT POSPROCESSING MODEL ----------------
+
+Concatenate date: 2000-2005
+
+Convert unit
+
+Hourly mean
+
+Diurnal cycle
+
+Regrid output
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1450x816) grid
+
+Delete files
+rm: cannot remove ‘*0100.nc’: No such file or directory

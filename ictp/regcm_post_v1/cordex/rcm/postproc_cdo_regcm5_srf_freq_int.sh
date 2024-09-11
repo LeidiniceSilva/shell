@@ -60,16 +60,14 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO mulc,100 -histfreq,1,100000 ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc ${VAR}_freq_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
     ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
-    CDO histmean,1,100000 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_int_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
+    CDO histmean,1,100000 ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc ${VAR}_int_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
     ${BIN}/./regrid ${VAR}_int_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 done
 
 echo 
 echo "Delete files"
-rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc
-rm ${VAR}_${DOMAIN}_RegCM5_*.nc
-rm ${VAR}_*_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
+rm *_${YR}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

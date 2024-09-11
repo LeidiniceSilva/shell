@@ -47,15 +47,15 @@ for VAR in ${VAR_LIST[@]}; do
     DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/${FREQ}/${VAR}"
 
     echo
-    echo "1. Select variable"
+    echo "Select variable"
     CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_0_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
     echo
-    echo "2. Monthly average"
+    echo "Monthly average"
     CDO monmean ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
 
     echo
-    echo "3. Seasonal avg and regrid"
+    echo "Seasonal avg and regrid"
     for SEASON in ${SEASON_LIST[@]}; do
         
 	CDO -timmean -selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
@@ -64,7 +64,7 @@ for VAR in ${VAR_LIST[@]}; do
     done
     
     echo 
-    echo "4. Delete files"
+    echo "Delete files"
     rm ${VAR}_${DOMAIN}_*_${YR}.nc
       
 done
