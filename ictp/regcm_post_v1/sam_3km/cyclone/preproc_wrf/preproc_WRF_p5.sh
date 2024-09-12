@@ -22,7 +22,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="U10e V10e" # MSLP AFWA_CAPE_MU PREC_ACC_NC U10e V10e
+VAR_LIST="PSL" # AFWA_CAPE_MU AFWA_CIN_MU PREC_ACC_NC PSL U10e V10e
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
 DT="2018-2021"
@@ -44,9 +44,14 @@ for VAR in ${VAR_LIST[@]}; do
     for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
 
+	    if [ ${VAR} == "PSL" ]
+	    then
+	    cp ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+	    else
             CDO -setgrid,${DIR}/xlonlat.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
 	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-	    #CDO remapbil,${DIR}/grid2.txt ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_lonlat.nc
+	    fi
 
         done
     done

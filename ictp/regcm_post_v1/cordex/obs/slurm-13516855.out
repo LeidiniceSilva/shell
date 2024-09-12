@@ -1,0 +1,13 @@
+
+/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate
+
+------------------------------- PROCCESSING MSWEP DATASET -------------------------------
+
+Select date
+
+Calculate p99
+
+Regrid variable
+cdo    remapbil: Bilinear weights from lonlat (3600x1800) to lonlat (1450x816) grid
+
+Delete files

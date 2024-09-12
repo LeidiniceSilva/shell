@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#SBATCH -N 1 
+#SBATCH -t 24:00:00
+#SBATCH -A ICT23_ESP
+#SBATCH --qos=qos_prio
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH -p skl_usr_prod
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
@@ -173,20 +181,21 @@ echo "------------------------------- PROCCESSING ${DATASET} DATASET -----------
 
 echo
 echo "Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/mswep.mon.1979-2020.nc precipitation_${EXP}_${DATASET}_${YR}.nc
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/precipitation_MSWEP_1979-2020.nc precipitation_${EXP}_${DATASET}_day_${YR}.nc
 
 echo
-echo "Convert unit"
-CDO -b f32 divc,30.5 precipitation_${EXP}_${DATASET}_${YR}.nc precipitation_${EXP}_${DATASET}_mon_${YR}.nc
-    
+echo "Monthly avg"
+CDO monmean precipitation_${EXP}_${DATASET}_day_${YR}.nc precipitation_${EXP}_${DATASET}_mon_${YR}.nc
+
 echo 
 echo "Regrid output"
+${BIN}/./regrid precipitation_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 ${BIN}/./regrid precipitation_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo
 echo "Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
-    CDO -timmean -selseas,${SEASON} precipitation_${EXP}_${DATASET}_mon_${YR}_lonlat.nc precipitation_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
+    CDO -timmean -selseas,${SEASON} precipitation_${EXP}_${DATASET}_mon_${YR}.nc precipitation_${EXP}_${DATASET}_${SEASON}_${YR}.nc
 done
 
 else

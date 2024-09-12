@@ -15,7 +15,7 @@ CDO(){
 }
 
 # Set file name
-VAR_LIST="PSFC U10e V10e"
+VAR_LIST="PSL U10e V10e"
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
 DT="2018-2021"

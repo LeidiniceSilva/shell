@@ -14,10 +14,10 @@ lat2=-1.5
 
 
 ***Open the file
-'sdfopen 'pathnc'/PSFC.'ano'.00.nc'  
-'sdfopen 'pathnc'/PSFC.'ano'.06.nc'  
-'sdfopen 'pathnc'/PSFC.'ano'.12.nc'  
-'sdfopen 'pathnc'/PSFC.'ano'.18.nc'  
+'sdfopen 'pathnc'/PSL.'ano'.00.nc'  
+'sdfopen 'pathnc'/PSL.'ano'.06.nc'  
+'sdfopen 'pathnc'/PSL.'ano'.12.nc'  
+'sdfopen 'pathnc'/PSL.'ano'.18.nc'  
 'sdfopen 'pathnc'/U10e.'ano'.00.nc' 
 'sdfopen 'pathnc'/U10e.'ano'.06.nc' 
 'sdfopen 'pathnc'/U10e.'ano'.12.nc' 
@@ -103,7 +103,7 @@ i=i+1
 'set dfile 1'
 'set t 'i
 'set z 1'
-'define pres=PSFC/100'
+'define pres=PSL'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 
@@ -122,7 +122,7 @@ i=i+1
 'set dfile 2'
 'set t 'i
 'set z 1'
-'define pres=PSFC/100'
+'define pres=PSL'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 
@@ -141,7 +141,7 @@ i=i+1
 'set dfile 3'
 'set t 'i
 'set z 1'
-'define pres=PSFC/100'
+'define pres=PSL'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 
@@ -160,7 +160,7 @@ i=i+1
 'set dfile 4'
 'set t 'i
 'set z 1'
-'define pres=PSFC/100'
+'define pres=PSL'
 *'define xp=regrid2(pres,1.5,1.5,bl_p1,'lon1','lat1')'
 'd pres'
 

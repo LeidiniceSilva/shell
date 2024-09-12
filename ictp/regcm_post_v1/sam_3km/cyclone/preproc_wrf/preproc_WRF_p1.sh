@@ -14,7 +14,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="PSFC U10e V10e"
+VAR_LIST="PSL U10e V10e"
 EXP="SAM-3km"
 MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
 DT="2018-2021"
@@ -40,16 +40,15 @@ for VAR in ${VAR_LIST[@]}; do
 	    
 	    echo
 	    echo "2. Regrid"
-            if [ ${VAR} == "PSFC" ] || [ ${VAR} == "U10e" ] || [ ${VAR} == "V10e" ]
+            if [ ${VAR} == "PSL" ]
 	    then
-	    CDO -setgrid,${DIR}/xlonlat.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    	cp ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    	${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
 	    else
-	    CDO -setgrid,${DIR}/xlonlat.nc ${VAR}_wrf3d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    	CDO -setgrid,${DIR}/xlonlat.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    	${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
 	    fi
 	    
-	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
-	    #CDO remapbil,${DIR}/grid.txt ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_lonlat.nc
-	    	    
 	    echo
 	    echo "3. Smooth"
 	    CDO smooth ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_lonlat.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_smooth.nc
