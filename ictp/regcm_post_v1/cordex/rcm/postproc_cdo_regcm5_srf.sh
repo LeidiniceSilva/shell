@@ -30,7 +30,8 @@ SEASON_LIST="DJF MAM JJA SON"
 FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
-VAR_LIST="cll clm clh clt pr tas tasmax tasmin rsnl rsns"
+VAR_LIST="LI"
+#VAR_LIST="cll clm clh clt evspsblpot LI pr tas tasmax tasmin rsnl rsns"
 
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
@@ -98,7 +99,7 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "Convert unit"
-    if [ ${VAR} = 'pr'  ]
+    if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'evspsblpot'  ]
     then
     CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}_unit.nc
     CDO monmean ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}_unit.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc

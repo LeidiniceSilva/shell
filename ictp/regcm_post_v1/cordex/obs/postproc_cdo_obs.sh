@@ -108,7 +108,7 @@ then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
-VAR_LIST="clt lcc mcc hcc pr tas tasmax tasmin msnlwrf msnswrf msdwlwrf msdwswrf qhum uwnd vwnd"
+VAR_LIST="evpot clt lcc mcc hcc pr tas tasmax tasmin msnlwrf msnswrf msdwlwrf msdwswrf qhum uwnd vwnd"
 
 for VAR in ${VAR_LIST[@]}; do
 
@@ -119,6 +119,9 @@ for VAR in ${VAR_LIST[@]}; do
     CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${DATASET}_1hr_${YR}.nc
     CDO daysum ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc
     CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    elif [ ${VAR} == 'evpot' ]
+    then
+    CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     elif [ ${VAR} == 'tas' ] || [ ${VAR} == 'tasmax' ] || [ ${VAR} == 'tasmin' ]
     then
     CDO -b f32 subc,273.15 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
@@ -134,8 +137,13 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "Regrid and select subdomain"
+    if [ ${VAR} == 'pr' ]
+    then
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+    else
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+    fi
    
     echo
     echo "Seasonal avg"

@@ -32,7 +32,7 @@ EXP="SAM-22"
 VAR_LIST="clt cll clm clh pr rsnl rsns tas tasmax tasmin"
 
 DIR_IN="/marconi_work/ICT23_ESP/nzazulie/ERA5/NoTo-SouthAmerica"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
