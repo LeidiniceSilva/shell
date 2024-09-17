@@ -108,7 +108,8 @@ then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
-VAR_LIST="evpot clt lcc mcc hcc pr tas tasmax tasmin msnlwrf msnswrf msdwlwrf msdwswrf qhum uwnd vwnd"
+VAR_LIST="lftx"
+#VAR_LIST="evpot mper clt lcc mcc hcc pr tas tasmax tasmin lftx msnlwrf msnswrf msdwlwrf msdwswrf qhum uwnd vwnd"
 
 for VAR in ${VAR_LIST[@]}; do
 
@@ -121,7 +122,10 @@ for VAR in ${VAR_LIST[@]}; do
     CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     elif [ ${VAR} == 'evpot' ]
     then
-    CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    CDO -b f32 mulc,-1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    elif [ ${VAR} == 'mper' ]
+    then
+    CDO -b f32 mulc,-86400 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     elif [ ${VAR} == 'tas' ] || [ ${VAR} == 'tasmax' ] || [ ${VAR} == 'tasmin' ]
     then
     CDO -b f32 subc,273.15 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
@@ -131,6 +135,9 @@ for VAR in ${VAR_LIST[@]}; do
     elif [ ${VAR} == 'msnlwrf' ]
     then
     CDO -b f32 mulc,-1 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    elif [ ${VAR} == 'lftx' ]
+    then
+    cp ${DIR_IN}/${DATASET}/lftx_ERA5_1948-2024.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
     cp ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi

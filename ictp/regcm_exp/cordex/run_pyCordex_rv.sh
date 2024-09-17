@@ -4,10 +4,14 @@
 ##### input #####
 #################
 
-# email and domain
+# email
 email="mda_silv@ictp.it"
+
+# gcm
 gcm="ERA5"
 config="ERA5"
+
+# domain
 domain="CSAM-3"
 
 # base directory to the data (in which folders are arranged as: ${base}/$gcm/${config}-${domain})
@@ -17,8 +21,8 @@ base=/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX
 hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex
 
 # start and end year(s)
-yr0=2006
-yr1=2006
+yr0=2000
+yr1=2000
 # start and end month(s)
 mn0=7
 mn1=12
@@ -29,8 +33,8 @@ ensemble="r1i1p1f1"
 notes="None"
 output="."
 proc=40 # 20
-regcm_release=5
-regcm_version_id=0 # must be an integer
+regcm_release="5"
+regcm_version_id="v1-r1" # must be an integer
 
 ########################
 ##### end of input #####
