@@ -3,9 +3,9 @@ WARNING: release_mt library was used but no multi-ep feature was enabled. Please
   This is RegCM development version
    GIT Revision: 5.0.0 compiled at: data : Sep 06 2024  time: 17:38:50
 
- : this run start at  : 2024-09-09 09:40:11+0200
+ : this run start at  : 2024-09-18 12:05:00+0200
  : it is submitted by : mdasilva
- : it is running on   : r130c14s02
+ : it is running on   : r130c04s04
  : it is using        :          384   processors
  : in directory       : 
  /marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/eur_11
@@ -156,7 +156,7 @@ WARNING: release_mt library was used but no multi-ep feature was enabled. Please
     run type              = restart
     case title            = RegCM driven CLM4.5
     username              = mdasilva
-    hostname              = r130c14s02
+    hostname              = r130c04s04
  input data files:
     PFT physiology = 
  /marconi_work/ICT23_ESP/RCMDATA//CLM45/pftdata/pft-physiology.c130503.nc
@@ -272,9 +272,9 @@ WARNING: release_mt library was used but no multi-ep feature was enabled. Please
      11.1       13.9    
  dzsoi_decomp   1.00000000000000     
  Attempting to read snow optical properties .....
- Set     6 100% special land-units points to zero slope
  SnowOptics_init : 
  /marconi_work/ICT23_ESP/RCMDATA//CLM45/snicardata/snicar_optics_5bnd_c090915.nc
+ Set     6 100% special land-units points to zero slope
  Set     4 100% special land-units points to zero slope
  Successfully read snow optical properties
  Attempting to read snow aging parameters .....
@@ -1241,3 +1241,111 @@ WARNING: release_mt library was used but no multi-ep feature was enabled. Please
  $$$  2000-07-12 12:00:00 UTC        
  $$$ max, min of ps (mb) =  1032.75  712.47
  $$$ no. of points with active convection =   42167
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 56 PID 6766 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 62 PID 6772 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 72 PID 6782 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 73 PID 6783 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 75 PID 6785 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 76 PID 6786 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 77 PID 6787 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 78 PID 6788 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 82 PID 6792 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 83 PID 6793 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 85 PID 6795 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 86 PID 6796 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 87 PID 6797 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 89 PID 6799 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 91 PID 6801 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 92 PID 6802 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 93 PID 6803 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 94 PID 6804 RUNNING AT r130c07s02
+=   KILLED BY SIGNAL: 9 (Killed)
+===================================================================================

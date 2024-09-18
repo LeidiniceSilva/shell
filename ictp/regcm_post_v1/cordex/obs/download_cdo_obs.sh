@@ -82,8 +82,6 @@ for YEAR in `seq -w ${YR0} ${YR1}`; do
 				
 				CDO hourmean CSAM-3_CMORPH_${YEAR}${MON}${DAY}${HOUR}.nc cmorph_CSAM-3_CMORPH_${YEAR}${MON}${DAY}${HOUR}.nc
 				
-				rm CMORPH_V1.0_ADJ_8km-30min_${YEAR}${MON}${DAY}${HOUR}.nc
-				
 				rm CSAM-3_CMORPH_${YEAR}${MON}${DAY}${HOUR}.nc
 								
 			done
@@ -91,7 +89,19 @@ for YEAR in `seq -w ${YR0} ${YR1}`; do
 	done	
 done
 
-CDO mergetime cmorph_CSAM-3_CMORPH_*.nc cmorph_CSAM-3_CMORPH_1hr_2000-2009.nc
-rm cmorph_CSAM-3_CMORPH_200*.nc
+CDO mergetime cmorph_CSAM-3_CMORPH_2000*.nc cmorph_CSAM-3_CMORPH_1hr_2000.nc
+CDO mergetime cmorph_CSAM-3_CMORPH_2001*.nc cmorph_CSAM-3_CMORPH_1hr_2001.nc
+CDO mergetime cmorph_CSAM-3_CMORPH_2002*.nc cmorph_CSAM-3_CMORPH_1hr_2002.nc
+CDO mergetime cmorph_CSAM-3_CMORPH_2003*.nc cmorph_CSAM-3_CMORPH_1hr_2003.nc
+CDO mergetime cmorph_CSAM-3_CMORPH_2004*.nc cmorph_CSAM-3_CMORPH_1hr_2004.nc
+CDO mergetime cmorph_CSAM-3_CMORPH_2005*.nc cmorph_CSAM-3_CMORPH_1hr_2005.nc
+CDO mergetime cmorph_CSAM-3_CMORPH_2006*.nc cmorph_CSAM-3_CMORPH_1hr_2006.nc
+CDO mergetime cmorph_CSAM-3_CMORPH_2007*.nc cmorph_CSAM-3_CMORPH_1hr_2007.nc
+CDO mergetime cmorph_CSAM-3_CMORPH_2008*.nc cmorph_CSAM-3_CMORPH_1hr_2008.nc
+CDO mergetime cmorph_CSAM-3_CMORPH_2009*.nc cmorph_CSAM-3_CMORPH_1hr_2009.nc
+
+CDO mergetime cmorph_CSAM-3_CMORPH_1hr_200*.nc cmorph_CSAM-3_CMORPH_1hr_2000-2009.nc
+
+rm cmorph_CSAM-3_CMORPH_2000*.nc
 
 }
