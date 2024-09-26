@@ -108,8 +108,8 @@ then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
-VAR_LIST="lftx"
-#VAR_LIST="evpot mper clt lcc mcc hcc pr tas tasmax tasmin lftx msnlwrf msnswrf msdwlwrf msdwswrf qhum uwnd vwnd"
+VAR_LIST="cape cin lftx"
+#VAR_LIST="clt lcc mcc hcc pr tas tasmax tasmin msnlwrf msnswrf msdwlwrf msdwswrf qhum uwnd vwnd evpot mper cape cin lftx"
 
 for VAR in ${VAR_LIST[@]}; do
 
@@ -137,7 +137,7 @@ for VAR in ${VAR_LIST[@]}; do
     CDO -b f32 mulc,-1 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     elif [ ${VAR} == 'lftx' ]
     then
-    cp ${DIR_IN}/${DATASET}/lftx_ERA5_1948-2024.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    CDO selyear,2000/2009 ${DIR_IN}/${DATASET}/lftx_NCEP-NCAR1_1948-2024.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
     cp ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi

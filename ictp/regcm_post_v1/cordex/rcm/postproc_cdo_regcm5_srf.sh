@@ -30,8 +30,7 @@ SEASON_LIST="DJF MAM JJA SON"
 FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
-VAR_LIST="LI"
-#VAR_LIST="cll clm clh clt evspsblpot LI pr tas tasmax tasmin rsnl rsns"
+VAR_LIST="cll clm clh clt CAPE CIN evspsblpot LI pr tas tasmax tasmin rsnl rsns"
 
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
@@ -93,10 +92,10 @@ for VAR in ${VAR_LIST[@]}; do
     CDO mergetime ${VAR}_${DOMAIN}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
     else
-    DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/${FREQ}/${VAR}"
-    CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_0_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+    DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/v1-r1/${FREQ}/${VAR}"
+    CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_v1-r1_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     fi
-    
+
     echo
     echo "Convert unit"
     if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'evspsblpot'  ]
