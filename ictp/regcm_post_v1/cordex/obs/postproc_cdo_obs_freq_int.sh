@@ -31,14 +31,38 @@ DATASET=$1
 EXP="CSAM-3"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/OBS"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/obs"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-if [ ${DATASET} == 'CPC' ]
+if [ ${DATASET} == 'CMORPH' ]
+then
+echo 
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+
+VAR="cmorph"
+ 
+echo
+echo "Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cmorph_CSAM-3_CMORPH_1hr_2000-2009.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
+CDO daysum ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+
+echo
+echo "Frequency and intensity by season"
+for SEASON in ${SEASON_LIST[@]}; do
+    CDO selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+    
+    CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc ${VAR}_freq_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+    ${BIN}/./regrid ${VAR}_freq_${EXP}_${DATASET}_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
+    CDO histmean,1,100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+    ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+done
+
+elif [ ${DATASET} == 'CPC' ]
 then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
@@ -70,7 +94,7 @@ VAR="pr"
 
 echo
 echo "Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_2000-2009.nc
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/pr_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_2000-2009.nc
     
 echo
 echo "Convert unit"
@@ -142,7 +166,7 @@ done
 fi
 
 echo 
-echo "2.4. Delete files"
+echo "Delete files"
 rm *2009.nc
 
 }

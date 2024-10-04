@@ -30,14 +30,39 @@ DATASET=$1
 EXP="CSAM-3"
 
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/OBS"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate"
+DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/obs"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
 echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-if [ ${DATASET} == 'CPC' ]
+if [ ${DATASET} == 'CMORPH' ]
+then
+echo 
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+
+VAR="cmorph"
+
+echo
+echo "Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cmorph_CSAM-3_CMORPH_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_2000-2009.nc
+
+echo
+echo "Convert unit"
+CDO daysum ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+
+echo
+echo "Calculate p99"
+CDO timmin ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
+CDO timmax ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
+CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc p99_${EXP}_${DATASET}_${YR}.nc
+
+echo
+echo "Regrid variable"
+${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
+elif [ ${DATASET} == 'CPC' ]
 then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"

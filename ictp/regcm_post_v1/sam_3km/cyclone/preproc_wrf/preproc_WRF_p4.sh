@@ -14,7 +14,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="PREC_ACC_NC PSFC U U10e V V10e" # PREC_ACC_NC PSFC PSL U U10e V V10e
+VAR_LIST="PREC_ACC_NC U U10e V V10e" # PREC_ACC_NC PSFC PSL U U10e V V10e
 DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/wrf"
 
 echo
@@ -31,7 +31,7 @@ for VAR in ${VAR_LIST[@]}; do
     for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
 	
-	    if  [ ${VAR} == "PSFC" ] || [ ${VAR} == "PREC_ACC_NC" ] || [ ${VAR} == "U10e" ] || [ ${VAR} == "V10e" ]
+	    if  [ ${VAR} == "PREC_ACC_NC" ] || [ ${VAR} == "U10e" ] || [ ${VAR} == "V10e" ]
 	    then
 	    CDO selvar,${VAR} ${DIR_IN}/WRF/wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc
 	    else

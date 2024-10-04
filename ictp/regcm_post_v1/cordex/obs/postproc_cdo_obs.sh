@@ -38,7 +38,32 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-if [ ${DATASET} == 'CPC' ]
+if [ ${DATASET} == 'CMORPH' ]
+then
+echo 
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+
+echo
+echo "Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cmorph_CSAM-3_CMORPH_1hr_2000-2009.nc cmorph_${EXP}_${DATASET}_1hr_${YR}.nc
+
+echo
+echo "Monthly avg"
+CDO daysum cmorph_${EXP}_${DATASET}_1hr_${YR}.nc cmorph_${EXP}_${DATASET}_day_${YR}.nc
+CDO monmean cmorph_${EXP}_${DATASET}_day_${YR}.nc cmorph_${EXP}_${DATASET}_mon_${YR}.nc
+
+echo 
+echo "Regrid output"
+${BIN}/./regrid cmorph_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+${BIN}/./regrid cmorph_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
+echo
+echo "Seasonal avg"
+for SEASON in ${SEASON_LIST[@]}; do
+    CDO -timmean -selseas,${SEASON} cmorph_${EXP}_${DATASET}_mon_${YR}_lonlat.nc cmorph_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
+done
+
+elif [ ${DATASET} == 'CPC' ]
 then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
@@ -108,8 +133,7 @@ then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
-VAR_LIST="cape cin lftx"
-#VAR_LIST="clt lcc mcc hcc pr tas tasmax tasmin msnlwrf msnswrf msdwlwrf msdwswrf qhum uwnd vwnd evpot mper cape cin lftx"
+VAR_LIST="clt lcc mcc hcc pr tas tasmax tasmin msnlwrf msnswrf msdwlwrf msdwswrf qhum uwnd vwnd evpot mper cape cin lftx"
 
 for VAR in ${VAR_LIST[@]}; do
 
@@ -135,9 +159,6 @@ for VAR in ${VAR_LIST[@]}; do
     elif [ ${VAR} == 'msnlwrf' ]
     then
     CDO -b f32 mulc,-1 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 'lftx' ]
-    then
-    CDO selyear,2000/2009 ${DIR_IN}/${DATASET}/lftx_NCEP-NCAR1_1948-2024.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
     cp ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi
@@ -210,7 +231,7 @@ ${BIN}/./regrid precipitation_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439
 echo
 echo "Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
-    CDO -timmean -selseas,${SEASON} precipitation_${EXP}_${DATASET}_mon_${YR}.nc precipitation_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+    CDO -timmean -selseas,${SEASON} precipitation_${EXP}_${DATASET}_mon_${YR}_lonlat.nc precipitation_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 done
 
 else

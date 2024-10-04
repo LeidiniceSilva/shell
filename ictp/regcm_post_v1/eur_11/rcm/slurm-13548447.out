@@ -1,0 +1,6 @@
+cdo    mergetime (Warning): Some data values (min=-32766 max=35811) are outside the
+    valid range (-32768 - 32767) of the used output precision!
+    Use the CDO option -b F32 or -b F64 to increase the output precision.
+cdi  error (cdf_put_vara_double): NetCDF: Numeric conversion not representable
+cdi  cdf_put_vara_double: name=tp  type=NC_SHORT  minval=-32766.000000  maxval=35811.000000
+

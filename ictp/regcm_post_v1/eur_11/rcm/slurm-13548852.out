@@ -1,0 +1,14 @@
+
+/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/postproc/rcm
+
+--------------- INIT POSPROCESSING MODEL ----------------
+
+1. Select variable: pr
+
+2. Convert unit
+
+cdo (Abort): 
+[4mmonmeam[0m pr_EUR-11_NoTo-Europe_20000101.nc pr_EUR-11_NoTo-Europe_200001.nc  
+   ^ Operator >monmeam< not found!
+Similar operators are:
+monmax monmean seasmonmean xmonmax xmonmean yearmonmean ymonmax ymonmean zonmean 
