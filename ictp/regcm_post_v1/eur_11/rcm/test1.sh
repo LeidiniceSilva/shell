@@ -47,7 +47,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo "1. Select variable: ${VAR}"
     for YEAR in `seq -w ${IYR} ${FYR}`; do
         for MON in `seq -w 01 01`; do
-            CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
+            CDO selname,${VAR} ${DIR_IN}/${EXP}_SHF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
 	    
 	    	echo
 		echo "2. Convert unit"
@@ -86,7 +86,7 @@ for VAR in ${VAR_LIST[@]}; do
 done
 
 echo 
-echo "5. Delete files"
+echo "6. Delete files"
 rm *0100.nc
 rm *01.nc
 rm *min.nc
