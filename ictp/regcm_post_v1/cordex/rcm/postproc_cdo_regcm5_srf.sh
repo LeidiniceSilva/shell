@@ -100,14 +100,18 @@ for VAR in ${VAR_LIST[@]}; do
     echo "Convert unit"
     if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'evspsblpot'  ]
     then
-    CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}_unit.nc
-    CDO monmean ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}_unit.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
+    CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc
+    CDO monmean ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
+    ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+    ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     elif [ ${VAR} = 'tas' ] || [ ${VAR} = 'tasmax'  ] || [ ${VAR} = 'tasmin'  ]
     then
-    CDO -b f32 subc,273.15 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}_unit.nc
-    CDO monmean ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}_unit.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
+    CDO -b f32 subc,273.15 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc
+    CDO monmean ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
+    ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     else
     CDO monmean ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
+    ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     fi
 
     echo

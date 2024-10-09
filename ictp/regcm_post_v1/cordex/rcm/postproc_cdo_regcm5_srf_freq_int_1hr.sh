@@ -27,12 +27,13 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
+TH=0.5
 VAR="pr"
 FREQ="1hr"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/0/${FREQ}/${VAR}"
+DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/v1-r1/${FREQ}/${VAR}"
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
 
@@ -45,7 +46,7 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
 echo "Concatenate date: ${YR}"
-CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_0_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_v1-r1_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
 echo
 echo "Convert unit"
@@ -57,11 +58,11 @@ for SEASON in ${SEASON_LIST[@]}; do
 
     CDO selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc
     
-    CDO mulc,100 -histfreq,1,100000 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc ${VAR}_freq_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc
-    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+    CDO mulc,100 -histfreq,${TH},100000 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc ${VAR}_freq_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}_th${TH}.nc
+    CDO histmean,${TH},100000 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc ${VAR}_int_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}_th${TH}.nc
 
-    CDO histmean,1,100000 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc ${VAR}_int_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc
-    ${BIN}/./regrid ${VAR}_int_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+    ${BIN}/./regrid ${VAR}_int_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 done
 
@@ -69,7 +70,7 @@ echo
 echo "Delete files"
 rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc
 rm ${VAR}_${DOMAIN}_RegCM5_*.nc
-rm ${VAR}_*_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
+rm ${VAR}_*_${YR}_th${TH}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

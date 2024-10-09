@@ -49,14 +49,8 @@ echo "Select date"
 CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cmorph_CSAM-3_CMORPH_1hr_2000-2009.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
 
 echo
-echo "Calculate p99"
-CDO timmin ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}_min.nc
-CDO timmax ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}_max.nc p99_${EXP}_${DATASET}_1hr_${YR}.nc
-
-echo
 echo "Regrid variable"
-${BIN}/./regrid p99_${EXP}_${DATASET}_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil 
+${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil 
 
 else
 echo 
@@ -69,22 +63,13 @@ echo "Select date"
 CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/pr_ERA5_1hr_2000-2009.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
 
 echo
-echo "3. Calculate p99"
-CDO timmin ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}_min.nc
-CDO timmax ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}_max.nc p99_${EXP}_${DATASET}_1hr_${YR}.nc
-
-echo
 echo "Regrid variable"
-${BIN}/./regrid p99_${EXP}_${DATASET}_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 fi
 
 echo 
 echo "Delete files"
 rm ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
-rm ${VAR}_${EXP}_${DATASET}_1hr_${YR}_min.nc
-rm ${VAR}_${EXP}_${DATASET}_1hr_${YR}_max.nc
-rm p99_${EXP}_${DATASET}_1hr_${YR}.nc
 
 }
