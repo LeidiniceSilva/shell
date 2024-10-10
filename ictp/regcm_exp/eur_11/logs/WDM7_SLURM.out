@@ -3,15 +3,15 @@ WARNING: release_mt library was used but no multi-ep feature was enabled. Please
   This is RegCM development version
    GIT Revision: 5.0.0 compiled at: data : Sep 06 2024  time: 17:38:50
 
- : this run start at  : 2024-10-08 10:21:51+0200
+ : this run start at  : 2024-10-10 00:19:45+0200
  : it is submitted by : mdasilva
- : it is running on   : r130c04s03
- : it is using        :          384   processors
+ : it is running on   : r130c03s02
+ : it is using        :          192   processors
  : in directory       : 
  /marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/eur_11
                        
- CPUS DIM1 =           24
- CPUS DIM2 =           16
+ CPUS DIM1 =           16
+ CPUS DIM2 =           12
  
  Reading model namelist file
  Using default non-hydrostatc parameters.
@@ -126,771 +126,87 @@ WARNING: release_mt library was used but no multi-ep feature was enabled. Please
  The surface energy budget is used to calculate the ground temperature.
  The radiation is computed every   22. minutes.
  Relaxation boundary conditions (exponential method)
-  # Ozone profiles restart #
-    0.889E-05  0.708E-05  0.395E-05  0.173E-05  0.428E-06  0.957E-07  0.642E-07
-    0.633E-07  0.662E-07  0.678E-07  0.694E-07  0.697E-07  0.675E-07  0.618E-07
-    0.546E-07  0.493E-07  0.463E-07  0.446E-07  0.437E-07  0.429E-07  0.425E-07
-    0.421E-07  0.417E-07  0.412E-07  0.406E-07  0.401E-07  0.397E-07  0.389E-07
-    0.389E-07  0.376E-07  0.363E-07  0.352E-07
- READY BC DATA for  2000-07-01 00:00:00 UTC        
- SEARCH BC data for 2000070106 , step =   174720
- READY  BC from     2000070100  to 2000070106 
- Successfully read restart file at time =  2000-07-01 00:00:00 UTC        
- Read solar forcing total irradiance data...
- Updating orbit parameters at  2000-07-01 00:00:00 UTC        
- At  2000-07-01 00:00:00 UTC        
- JDay    182.00000 solar declination angle =  23.16673589 degrees
-                   solar TSI irradiance    =    1356.7857 W/m^2
- CLM version: 4.5 - RegCM 5.0.0
- Attempting to initialize the land model .....
- Mask given by RegCM model has a total of        97559  land points
- Attempting to initialize run control settings .....
- Read in clm_inparm namelist from: EUR-11_WDM7.in
- Read in clm_hydrology1_inparm namelist
- Read in clm_soilhydrology_inparm namelist
- Successfully initialized run control settings
- 
- define run:
-    source                = Community Land Model CLM4.5
-    model_version         = 5.0.0
-    run type              = restart
-    case title            = RegCM driven CLM4.5
-    username              = mdasilva
-    hostname              = r130c04s03
- input data files:
-    PFT physiology = 
- /marconi_work/ICT23_ESP/RCMDATA//CLM45/pftdata/pft-physiology.c130503.nc
-    surface data   = 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/icbc//EUR-11_CLM45_sur
- face.nc
-    land frac data = 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/icbc//EUR-11_DOMAIN000
- .nc
-    enable_megan_emission                                 :  F
-    enable_urban_landunit                                 :  T
-    enable_more_crop_pft                                  :  F
-    SNICAR optical = 
- /marconi_work/ICT23_ESP/RCMDATA//CLM45/snicardata/snicar_optics_5bnd_c090915.nc
-    SNICAR aging = 
- /marconi_work/ICT23_ESP/RCMDATA//CLM45/snicardata/snicar_drdt_bst_fit_60_c07041
- 6.nc
-    restart data   = using a restart file
-    atmospheric forcing data is from RegCM atm model
- Large file support for output files is ON
- model physics parameters:
-    flag for random perturbation test is not set
-    CO2 volume mixing ratio   (umol/mol)   =    355.000000000000     
-    land albedos  (unitless 0-1)   =   0.800000000000000     
-    ice albedos   (unitless 0-1)   =   0.550000000000000     
-    urban air conditioning/heating and wasteheat   = ON_WASTEHEAT    
-    urban traffic flux   =  F
-    more vertical layers =  F
- restart warning:
-    Namelist not checked for agreement with initial run.
-    Namelist should not differ except for ending time step and run type
-    maxpatch_pft         =           17
-    allocate_all_vegpfts =  T
-    perchroot (PWS based on unfrozen layers only) =  F
-    perchroot (PWS based on time-integrated active layer only) =  F
- 
- Lake Model Namelists:
- Hostetler eddy increase low    :    25.0000000000000     
- Hostetler eddy increase factor :    10.0000000000000     
- Albedo melting lakes (visible) :  0.100000000000000     
- Albedo melting lakes (NIR)     :  0.100000000000000     
- Attempting to read ldomain from 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/icbc//EUR-11_DOMAIN000
- .nc
-   domain_check set       = domain_set
-   domain_check decomped  =  T
-   domain_check ns        =       174688
-   domain_check ni,nj     =          424         412
-   domain_check clmlevel  = gridcell
-   domain_check nbeg,nend =            1         254
-   domain_check lonc      =   -9.74029571306985        16.9907279666833     
-   domain_check latc      =    20.2360572776116        25.6407022860034     
-   domain_check mask      =            1           1
-   domain_check frac      =    100.000000000000        100.000000000000     
-   domain_check topo      =    183.850437620496        1559.16146097231     
-   domain_check area      =    135.487523982398        135.487523982398     
-   domain_check pftm      =            1           1
-  
-  Reading in urban input data from surface data file ...
-  UrbanInput : 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/icbc//EUR-11_CLM45_sur
- face.nc
-  Sucessfully read urban input data
- 
- Attempting to read PFT physiological data .....
- Successfully read PFT physiological data
- Attempting to read surface boundary data .....
- Checked LAT/LON compliance
- Successfully read surface boundary data
- 
-  Surface Grid Characteristics
-    total number of gridcells =        97559
-    total number of landunits =       229707
-    total number of columns   =       447188
-    total number of pfts      =      1812874
-  
- ---clm_ptrs_check:
-    clm_ptrs_check: g index ranges - OK
-    clm_ptrs_check: l index ranges - OK
-    clm_ptrs_check: c index ranges - OK
-    clm_ptrs_check: p index ranges - OK
-    clm_ptrs_check: g mono increasing - OK
-    clm_ptrs_check: l mono increasing - OK
-    clm_ptrs_check: c mono increasing - OK
-    clm_ptrs_check: p mono increasing - OK
-    clm_ptrs_check: tree consistent - OK
-  
- Attempting to initialize time invariant variables
- Attempting to read soil color, sand and clay boundary data .....
- WARNING:: ETALAKE not found on surface data set.
- All lake columns will have eta set equal to default value
- WARNING:: LAKEFETCH not found on surface data set.
- All lake columns will have fetch set equal to default value
- Successfully read fmax, soil color, sand and clay boundary data
- 
- Attempting to read organic matter data .....
-  organicrd : 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/icbc//EUR-11_CLM45_sur
- face.nc
- Successfully read organic matter data
- 
-  # zsoi #
-    0.710E-02  0.279E-01  0.623E-01  0.119      0.212      0.366      0.620    
-     1.04       1.73       2.86       4.74       7.83       12.9       21.3    
-     21.3       35.2    
-  # zisoi #
-     0.00      0.175E-01  0.451E-01  0.906E-01  0.166      0.289      0.493    
-    0.829       1.38       2.30       3.80       6.28       10.4       17.1    
-     17.1       28.3       42.1    
-  # dzsoi #
-    0.175E-01  0.276E-01  0.455E-01  0.750E-01  0.124      0.204      0.336    
-    0.554      0.913       1.51       2.48       4.09       6.75       11.1    
-     11.1       13.9    
- dzsoi_decomp   1.00000000000000     
- Attempting to read snow optical properties .....
- Set     6 100% special land-units points to zero slope
- SnowOptics_init : 
- /marconi_work/ICT23_ESP/RCMDATA//CLM45/snicardata/snicar_optics_5bnd_c090915.nc
- Set     4 100% special land-units points to zero slope
- Successfully read snow optical properties
- Attempting to read snow aging parameters .....
- Successfully read snow aging properties
- Successfully initialized time invariant variables
- CLM_hist_printflds : number of master fields =          241
- There will be a total of            1  history tapes
- History tape            1  write frequency is MONTHLY
- All fields on history tape            1  are grid averaged
- Output precision on history tape            1 =           2
- Reading restart dataset at 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WDM7-Europe//EUR-11.cl
- m.regcm.r.2000070100.nc
- Successfully read restart data for restart run
- Attempting to initialize time invariant variables for lakes
- CLM timestep appears to differ from 1800s. 
- Adjusting minimum snow layer thickness over lakes to maintain stability.
- New minimum thickness is   2.000000000000000E-002 .
- Successfully initialized time invariant variables for lakes
- Setting initial data to non-spun up values for lake points
- Successfully initialized the land model
- begin continuation run at: 2000-07-01 00:00:00 UTC
- Attempting to read monthly vegetation data .....
- At  2000-07-01 00:00:00 UTC
- Month =            7  Day =            1
- Reading months :            6           7
- Successfully read monthly vegetation data for
- month            7
- Opening new output file 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WDM7-Europe//EUR-11_AT
- M.2000070100.nc
- Opening new output file 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WDM7-Europe//EUR-11_SH
- F.2000070100.nc
- Opening new output file 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WDM7-Europe//EUR-11_SR
- F.2000070100.nc
- Opening new output file 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WDM7-Europe//EUR-11_ST
- S.2000070100.nc
- Opening new output file 
- /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/WDM7-Europe//EUR-11_RA
- D.2000070100.nc
-  1.038383662593577E-009
-  1.091057101859498E-009
-  1.105998419121158E-009
-  1.242426437140409E-009
-  1.196467293837371E-009
-  1.264782697554647E-009
-  1.084637165306204E-009
-  1.127528998557605E-009
-  1.212701180076764E-009
-  1.196274724458482E-009
-  1.196469477783239E-009
-  1.078245863135428E-009
-  1.254771067912473E-009
-  1.217483942068252E-009
-  1.091731149576856E-009
-  1.082508811738199E-009
-  1.251007858639958E-009
-  1.098217360050747E-009
-  1.200658276977575E-009
-  1.122750180672963E-009
-  1.094021241019661E-009
-  1.255525761019052E-009
-  1.099620114998402E-009
-  1.103823625065303E-009
-  1.198621660011459E-009
-  1.220840122141303E-009
-  1.270035059583383E-009
-  1.257184526291968E-009
-  1.208225367695090E-009
-  1.277724137423104E-009
-  1.212576944741626E-009
-  1.239825253562082E-009
-  1.122847767488735E-009
-  1.083347852858926E-009
-  1.108599343416240E-009
-  1.189332838425230E-009
-  1.036781961572329E-009
-  1.194828317336882E-009
-  1.179121724563419E-009
-  1.249250275103568E-009
-  1.254153864370340E-009
-  1.253109819096881E-009
-  1.129075085622110E-009
-  1.209111511374779E-009
-  1.169137849799099E-009
-  1.201245259783455E-009
-  1.253210417640703E-009
-  1.083879723396659E-009
-  1.075417876615581E-009
-  1.219493647411071E-009
-  1.211426208517947E-009
-  1.112992042512642E-009
-  1.017048673939059E-009
-  1.152143052286447E-009
-  1.129475011936923E-009
-  1.103210395795767E-009
-  1.175955041563684E-009
-  1.248251123605152E-009
-  1.180468896474891E-009
-  1.257818353927680E-009
-  1.196362708618172E-009
-  1.086093419842315E-009
-  1.066043235557763E-009
-  1.026493165542694E-009
-  1.251691902101359E-009
-  1.064930736597571E-009
-  1.111876184600218E-009
-  1.084745880744246E-009
-  1.121980609345672E-009
-  1.199239667883890E-009
-  1.237889376766442E-009
-  1.254514791984975E-009
-  1.202430693011022E-009
-  1.181765265600084E-009
-  1.020060214481971E-009
-  1.093644360836591E-009
-  1.119033517966717E-009
-  1.257278388082149E-009
-  1.247795612135117E-009
-  1.057086849905387E-009
-  1.222477745481821E-009
-  1.151132108893360E-009
-  1.245903172174257E-009
-  1.188581090699803E-009
-  1.095649268896925E-009
-  1.075854659772562E-009
-  1.201057258615949E-009
-  1.087630561555973E-009
-  1.081966754956745E-009
-  1.203934351781769E-009
-  1.209651975308503E-009
-  1.192418165647440E-009
-  1.153654350089319E-009
-  1.130653488222355E-009
-  1.239921678655814E-009
-  1.149013450264249E-009
-  1.079756543846862E-009
-  9.924478485055203E-010
-  1.163520834559454E-009
-  1.078423107878997E-009
-  1.146462542494665E-009
-  1.064855760283754E-009
-  1.291147477414360E-009
-  1.097795982670470E-009
-  1.041150459124357E-009
-  1.104795723814603E-009
-  1.091997360955915E-009
-  1.212860873836312E-009
-  1.206551613603170E-009
-  1.186692224332112E-009
-  1.213984672957780E-009
-  1.102715437111592E-009
-  1.214604119980837E-009
-  1.274292012807289E-009
-  1.051541995037125E-009
-  9.945205944795142E-010
-  1.238144164991738E-009
-  1.116096205478766E-009
-  1.079139894199754E-009
-  1.214440007127630E-009
-  1.225136182716656E-009
-  1.251794122696404E-009
-  1.237441176279776E-009
-  1.047859990926794E-009
-  1.140585948397674E-009
-  1.225512243986827E-009
-  1.229917896809488E-009
-  1.255940356935862E-009
-  1.113492391514130E-009
-  1.180917758131083E-009
-  1.097439193489918E-009
-  1.263843535055179E-009
-  1.157493340249877E-009
-  1.178829696984418E-009
-  1.069377468373152E-009
-  1.180042345792993E-009
-  1.213334351798103E-009
-  1.254349301303618E-009
-  1.268282785646875E-009
-  1.219770994248537E-009
-  1.109489428949195E-009
-  1.027601731569393E-009
-  1.196378310512337E-009
-  1.274266897892145E-009
-  1.218408422735851E-009
-  1.214552697964164E-009
-  1.230793788383630E-009
-  1.216010900673430E-009
-  1.183950032659595E-009
-  1.215110715014757E-009
-  1.030974261020047E-009
-  9.664332568430919E-010
-  1.258875395847651E-009
-  1.212755710387178E-009
-  1.213028759709099E-009
-  1.247798193414425E-009
-  1.175316383499618E-009
-  1.021086406779073E-009
-  1.216110545549849E-009
-  1.212664427570328E-009
-  1.215499023735556E-009
-  1.189395666441839E-009
-  1.296463547078740E-009
-  1.217427918914838E-009
-  1.175675217701044E-009
-  1.216773812629737E-009
-  1.068315167383417E-009
-  1.124120086656257E-009
-  1.214228737009947E-009
-  1.089724873278421E-009
-  1.217673488707932E-009
-  1.221102876075572E-009
-  1.147823813856985E-009
-  1.239949374493953E-009
-  1.216851263273920E-009
-  1.212663139232610E-009
-  1.122018125026249E-009
-  1.202852524553059E-009
-  1.218869906680748E-009
-  1.216807686003447E-009
-  1.224958551535540E-009
-  1.180497748969404E-009
-  1.203059190599199E-009
-  1.183428699005801E-009
-  1.228443450850625E-009
-  1.088707226856578E-009
-  1.227817171095423E-009
-  1.186687725098687E-009
-  1.216311566435089E-009
-  1.215769318817001E-009
-  1.216336147442665E-009
-  1.250408594890974E-009
-  1.077413161444508E-009
-  1.262364720003963E-009
-  1.046214390309519E-009
-  1.271811796688084E-009
-  1.213565140309510E-009
-  1.123197598452641E-009
-  1.027632143297615E-009
-  1.182256783006204E-009
-  1.213545217283053E-009
-  1.176743660501377E-009
-  1.178025324990971E-009
-  1.166333622847972E-009
-  1.185286233964555E-009
-  1.187990516354853E-009
-  1.245739088353428E-009
-  1.218421940604108E-009
-  1.259697126852902E-009
-  1.254165401383578E-009
-  1.176577835876542E-009
-  1.144709190816865E-009
-  1.180447630756814E-009
-  1.062669806895044E-009
-  1.194119830423169E-009
-  1.099580031377616E-009
-  1.217940998102890E-009
-  1.172226264077457E-009
-  1.267078045817017E-009
-  1.279605950073765E-009
-  1.085704811557393E-009
-  1.182302345647010E-009
-  1.210588749087785E-009
-  1.213885428162163E-009
-  1.174490932985692E-009
-  1.172882828340373E-009
-  1.248524274293782E-009
-  1.186264959353114E-009
-  1.186432944305322E-009
-  1.145461215619734E-009
-  1.176555437588750E-009
-  1.258922477869723E-009
-  1.201822167102886E-009
-  1.235938851126565E-009
-  1.163448964688847E-009
-  1.176547445187543E-009
-  1.172775530992894E-009
-  1.139006356666105E-009
-  1.178327535603625E-009
-  1.144605308755437E-009
-  1.125455968887249E-009
-  1.277659730219494E-009
-  1.039375325028581E-009
-  1.185845997618996E-009
-  1.170600350943290E-009
-  1.124956552636103E-009
-  1.243979307239395E-009
-  1.179328694955144E-009
-  1.120236093725885E-009
-  1.209901482725268E-009
-  1.103884611278311E-009
-  1.169677653236689E-009
-  1.202716347317621E-009
-  1.176265508809012E-009
-  1.175740285001532E-009
-  1.178055702093397E-009
-  1.218205648560065E-009
-  1.146483487710492E-009
-  1.193076615818910E-009
-  9.784339198084307E-010
-  1.177115340294134E-009
-  1.166437777033778E-009
-  1.108559908501341E-009
-  1.146960617606591E-009
-  1.146944876542172E-009
-  1.236862518645541E-009
-  1.182725376076852E-009
-  1.047075363750937E-009
-  1.175311206513620E-009
-  1.240848395205207E-009
-  1.197867486509824E-009
-  1.118843473061825E-009
-  1.151750273687828E-009
-  1.189154707273858E-009
-  1.188683845289366E-009
-  1.198962294682635E-009
-  1.200484406114149E-009
-  1.194149616307248E-009
-  1.211446180714138E-009
-  1.197278608309823E-009
-  1.173565555967136E-009
-  1.189290336400576E-009
-  1.116462632971645E-009
-  1.202455003331952E-009
-  1.163099491792827E-009
-  1.194615417220578E-009
-  1.097757162583318E-009
-  1.215518191277754E-009
-  1.168845704734059E-009
-  1.105985740524454E-009
-  1.133464392430855E-009
-  1.197251063081676E-009
-  1.185371109166474E-009
-  1.207738931779508E-009
-  1.197346058200277E-009
-  1.159665226685255E-009
-  1.217001988419797E-009
-  1.238829117339164E-009
-  1.175723647041756E-009
-  1.195831012273929E-009
-  1.105117676813069E-009
-  1.088907704215628E-009
-  1.209031105527480E-009
-  1.204305289209900E-009
-  1.178658385491339E-009
-  1.139242101576393E-009
-  1.169615494354513E-009
-  1.230428354071671E-009
-  1.215817026625319E-009
-  1.179179504675992E-009
-  1.151609374609332E-009
-  1.168541267641890E-009
-  1.237447501327448E-009
-  1.212905384512999E-009
-  1.233887369870725E-009
-  1.177365932565547E-009
-  1.215992169130620E-009
-  1.219799826123276E-009
-  1.147401312034844E-009
-  1.169517727255455E-009
-  1.155585629331862E-009
-  1.176366165443569E-009
-  1.100057717325261E-009
-  1.192997317148662E-009
-  1.170757954686244E-009
-  1.082759226073138E-009
-  1.176735174582611E-009
-  1.124799990238538E-009
-  1.160655323814163E-009
-  1.135505148802479E-009
-  1.209577942300645E-009
-  1.172250962437964E-009
-  1.157585675578729E-009
-  1.143026443062218E-009
-  1.201051529369541E-009
-  1.246461365756826E-009
-  1.165316072034292E-009
-  1.231398784212953E-009
-  1.214902174037643E-009
-  1.188421501259964E-009
-  1.223154921717708E-009
-  1.232553240315396E-009
-  1.169648669484818E-009
-  1.173651714983685E-009
-  1.117439671552765E-009
-  1.229001141393454E-009
-  1.173360584801670E-009
-  1.156208048349908E-009
-  1.178488564505616E-009
-  1.180106538057103E-009
-  1.095432549057370E-009
-  1.165376983363560E-009
-  1.182523544448234E-009
-  1.169026173076200E-009
-  1.170339724794242E-009
-  1.179199422463792E-009
-  1.099030047544075E-009
-  1.177287101655721E-009
-  1.172349728404620E-009
-  1.163212644755423E-009
-  1.192783740236598E-009
-  1.218859045639522E-009
-  1.205949185758363E-009
-  1.163682453554089E-009
-  1.179397283904311E-009
-  1.216937951298379E-009
-  1.208925973592785E-009
-  1.203464541273928E-009
-  1.143846638974420E-009
-  1.172400620384207E-009
-  1.192025801483615E-009
-  1.203777103213402E-009
-  1.217058697066674E-009
-  1.216741004042098E-009
-  1.214217353755713E-009
-  1.222925461082464E-009
-  1.215001609320808E-009
-  1.201646061500214E-009
-  1.193672945234797E-009
-  1.139878795220553E-009
-  1.218001562928146E-009
-  1.198429975757580E-009
-  1.202806799664703E-009
-  1.178387386901976E-009
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 337 PID 50772 RUNNING AT r130c07s03
+=   RANK 0 PID 23607 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 338 PID 50773 RUNNING AT r130c07s03
+=   RANK 25 PID 23632 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 339 PID 50774 RUNNING AT r130c07s03
+=   RANK 26 PID 23633 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 340 PID 50775 RUNNING AT r130c07s03
+=   RANK 28 PID 23635 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 341 PID 50776 RUNNING AT r130c07s03
+=   RANK 30 PID 23637 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 346 PID 50781 RUNNING AT r130c07s03
+=   RANK 32 PID 23639 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 347 PID 50782 RUNNING AT r130c07s03
+=   RANK 33 PID 23640 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 348 PID 50783 RUNNING AT r130c07s03
+=   RANK 35 PID 23642 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 349 PID 50784 RUNNING AT r130c07s03
+=   RANK 37 PID 23644 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 350 PID 50785 RUNNING AT r130c07s03
+=   RANK 38 PID 23645 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 353 PID 50788 RUNNING AT r130c07s03
+=   RANK 40 PID 23647 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 354 PID 50789 RUNNING AT r130c07s03
+=   RANK 41 PID 23648 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 355 PID 50790 RUNNING AT r130c07s03
+=   RANK 45 PID 23652 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================
 
 ===================================================================================
 =   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 356 PID 50791 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 357 PID 50792 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 358 PID 50793 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 359 PID 50794 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 360 PID 50795 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 361 PID 50796 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 362 PID 50797 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 363 PID 50798 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 364 PID 50799 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 365 PID 50800 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 366 PID 50801 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 370 PID 50805 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 371 PID 50806 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 372 PID 50807 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 373 PID 50808 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 374 PID 50809 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 375 PID 50810 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 376 PID 50811 RUNNING AT r130c07s03
-=   KILLED BY SIGNAL: 9 (Killed)
-===================================================================================
-
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   RANK 380 PID 50815 RUNNING AT r130c07s03
+=   RANK 46 PID 23653 RUNNING AT r130c03s02
 =   KILLED BY SIGNAL: 9 (Killed)
 ===================================================================================

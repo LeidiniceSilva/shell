@@ -21,7 +21,7 @@ set -eo pipefail
 echo
 echo "--------------- INIT PLOT ----------------"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/sam_3km_evaluate"
+DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/cordex"
 cd ${DIR_IN}
 
 python3 plot_graph_pdf_function.py

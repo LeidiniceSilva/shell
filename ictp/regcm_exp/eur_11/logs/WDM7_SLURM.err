@@ -1,0 +1,12 @@
+ Cannot open savefile /marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/W
+ DM7-Europe//EUR-11_SAV.2000070100.nc
+ No such file or directory                                                      
+  
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_savefile.F90 at line:     1817
+ SAVEFILE
+ -------------------------------------------
+ mod_savefile.F90 :     1817:            1
+ Abort called by computing node            0 at 2024-10-10 00:19:47.076 +0200
+ Execution terminated because of runtime error
+Abort(1) on node 0 (rank 0 in comm 496): application called MPI_Abort(comm=0x84000003, 1) - process 0

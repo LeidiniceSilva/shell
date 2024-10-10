@@ -30,7 +30,7 @@ SEASON_LIST="DJF MAM JJA SON"
 FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
-VAR_LIST="cll clm clh clt CAPE CIN evspsblpot LI pr tas tasmax tasmin rsnl rsns"
+VAR_LIST="cll clm clh clt evspsblpot pr tas tasmax tasmin rsnl rsns CAPE CIN LI"
 
 DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
 BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
@@ -117,8 +117,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Seasonal avg and regrid"
     for SEASON in ${SEASON_LIST[@]}; do
-	CDO -timmean -selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+	CDO -timmean -selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_mon_${YR}_lonlat.nc ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}_lonlat.nc
     done
     
     echo 

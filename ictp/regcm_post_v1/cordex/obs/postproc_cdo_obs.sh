@@ -133,29 +133,23 @@ then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
-VAR_LIST="clt lcc mcc hcc pr tas tasmax tasmin msnlwrf msnswrf msdwlwrf msdwswrf qhum uwnd vwnd evpot mper cape cin lftx"
+VAR_LIST="lcc mcc hcc tcc tp t2m mx2t mn2t msnlwrf msnswrf msdwlwrf msdwswrf q u v evpot cape cin"
 
 for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "Select date and convert unit"
-    if [ ${VAR} == 'pr' ]
+    if [ ${VAR} == 'tp' ]
     then
     CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${DATASET}_1hr_${YR}.nc
     CDO daysum ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc
     CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    elif [ ${VAR} == 't2m' ] || [ ${VAR} == 'mx2t' ] || [ ${VAR} == 'mn2t' ]
+    then
+    CDO -b f32 subc,273.15 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     elif [ ${VAR} == 'evpot' ]
     then
     CDO -b f32 mulc,-1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 'mper' ]
-    then
-    CDO -b f32 mulc,-86400 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 'tas' ] || [ ${VAR} == 'tasmax' ] || [ ${VAR} == 'tasmin' ]
-    then
-    CDO -b f32 subc,273.15 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 'clt' ] || [ ${VAR} == 'lcc' ] || [ ${VAR} == 'mcc' ] || [ ${VAR} == 'hcc' ]
-    then
-    CDO -b f32 mulc,100 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     elif [ ${VAR} == 'msnlwrf' ]
     then
     CDO -b f32 mulc,-1 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
@@ -165,7 +159,7 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "Regrid and select subdomain"
-    if [ ${VAR} == 'pr' ]
+    if [ ${VAR} == 'tp' ]
     then
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
@@ -176,7 +170,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
-	if [ ${VAR} == 'qhum' ] || [ ${VAR} == 'uwnd' ] || [ ${VAR} == 'vwnd' ]
+	if [ ${VAR} == 'q' ] || [ ${VAR} == 'u' ] || [ ${VAR} == 'v' ]
 	then
 	CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${YR}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 	CDO sellevel,200 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc ${VAR}_200hPa_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
