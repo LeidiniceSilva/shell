@@ -2,7 +2,7 @@
 
 #SBATCH -o logs/NoTo_SLURM.out
 #SBATCH -e logs/NoTo_SLURM.err
-#SBATCH -N 8 --ntasks-per-node=48 #--mem=63G ##esp1
+#SBATCH -N 4 --ntasks-per-node=48 #--mem=63G ##esp1
 #SBATCH -t 24:00:00
 #SBATCH -J NoTo-EUR11
 #SBATCH -A ICT23_ESP

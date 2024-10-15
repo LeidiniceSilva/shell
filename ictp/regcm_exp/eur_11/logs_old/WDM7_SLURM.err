@@ -1,0 +1,413 @@
+ urban net longwave radiation balance error  -23685234.3293300     
+ -------------- FATAL CALLED ---------------
+ urban net longwave radiation balance error  2.361183241434823E+021
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2650
+ clm now stopping
+ -------------------------------------------
+ urban net longwave radiation balance error  -718.401677829010     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2650
+ clm now stopping
+ -------------------------------------------
+ urban incident atmospheric longwave radiation balance error
+  Fatal in file: mod_clm_urban.F90 at line:     2650
+ clm now stopping
+ -------------------------------------------
+ urban incident atmospheric longwave radiation balance error
+ -8.507059173023462E+037
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2400
+ clm now stopping
+ -------------------------------------------
+ urban net longwave radiation balance error  -160655.937600777     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2650
+ clm now stopping
+ -------------------------------------------
+ urban incident atmospheric longwave radiation balance error
+  1.361129467683754E+039
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2400
+ clm now stopping
+ -------------------------------------------
+ urban incident atmospheric longwave radiation balance error
+  -2.00000000000000     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2400
+ clm now stopping
+ -------------------------------------------
+ urban incident atmospheric longwave radiation balance error
+   32.0000000000000     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2400
+ clm now stopping
+ -------------------------------------------
+  1.157920892373162E+077
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2400
+ clm now stopping
+ -------------------------------------------
+ urban net longwave radiation balance error  -6.53089999180520     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2650
+ clm now stopping
+ -------------------------------------------
+ urban net longwave radiation balance error  -238.584398119710     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2650
+ clm now stopping
+ -------------------------------------------
+ urban net longwave radiation balance error  -2658.25038872997     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2650
+ clm now stopping
+ -------------------------------------------
+ energy balance in canopy       267287 , err=   71.8258534071869     
+ energy balance in canopy       310071 , err=   17.9674886494162     
+ energy balance in canopy       310074 , err=   18.6701237561521     
+ energy balance in canopy       331185 , err=   9.37509769327270     
+ energy balance in canopy       331188 , err=   9.36757681227754     
+ BalanceCheck: surface flux energy balance error step =     40607 point =345038 imbalance =************ W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        63568
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+  eflx_lwrad_net =   1.243811861114685E+022
+  eflx_sh_tot    =  -5.872964164870326E+020
+  eflx_lh_tot    =  -3.463896162074959E+019
+  eflx_soil_grnd =  -1.181618323303907E+022
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ BalanceCheck: soil balance error step =     40607 point = 62293 imbalance =************ W/m2
+ indexc=        62293  errsoi_col=    1438547722.15661     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      754
+ clm model is stopping
+ -------------------------------------------
+ WARNING:  CLM step     :                  40607
+ WARNING:  indexc       :        49028
+ WARNING:  ctype(indexc):            1
+ WARNING:  water balance error   9.765625000000000E-004
+ BalanceCheck: surface flux energy balance error step =     40607 point =267287 imbalance =  512.000000 W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        49028
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+  eflx_lwrad_net =   6.679883623915270E+018
+  eflx_sh_tot    =  -7.731113963380578E+018
+  eflx_lh_tot    =  -1.192203896248888E+016
+  eflx_soil_grnd =   1.063152378427796E+018
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ BalanceCheck: longwave enery balance error step =     40607 point =351353 imbalance =  128.000000 W/m2
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      707
+ clm model is stopping
+ -------------------------------------------
+ BalanceCheck: surface flux energy balance error step =     40607 point =295375 imbalance =************ W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        54155
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+  eflx_lwrad_net =   1.578554752310138E+045
+  eflx_sh_tot    =  -3.457446885282739E+043
+  eflx_lh_tot    =  -8.947695642904389E+041
+  eflx_soil_grnd =  -1.543085513893020E+045
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ BalanceCheck: surface flux energy balance error step =     40607 point =303218 imbalance = -256.000000 W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        55670
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+ BalanceCheck: surface flux energy balance error step =     40607 point =281462 imbalance =    8.000000 W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        51638
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+  eflx_lwrad_net =   7.544538141079178E+016
+  eflx_sh_tot    =  -5.800133927991198E+015
+  eflx_lh_tot    =   -331907378722388.     
+  eflx_soil_grnd =  -6.931334010407819E+016
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+  eflx_lwrad_net =  -1.265310250291009E+018
+  eflx_sh_tot    =   6.411583945503398E+016
+  eflx_lh_tot    =    3281.97301846271     
+  eflx_soil_grnd =   1.201194410835972E+018
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ BalanceCheck: surface flux energy balance error step =     40607 point =331188 imbalance =************ W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        60961
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+  eflx_lwrad_net =   1.492168996706942E+029
+  eflx_sh_tot    =  -1.581160388804953E+029
+  eflx_lh_tot    =  -2.483567502885131E+025
+  eflx_soil_grnd =   8.923974884829950E+027
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ Abort called by computing node           29 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           31 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           37 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           38 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           39 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           43 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           45 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           26 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           27 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           28 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           30 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           32 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           33 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           41 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           42 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           44 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           47 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           40 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           46 at 2024-10-11 20:14:48.382 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           34 at 2024-10-11 20:14:48.383 +0200
+ Execution terminated because of runtime error
+ BalanceCheck: surface flux energy balance error step =     40607 point =163553 imbalance =  -28.000000 W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        29965
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+  eflx_lwrad_net =  -1.497508648889217E+017
+  eflx_sh_tot    =   1.280983837302446E+017
+  eflx_lh_tot    =    7300.81871141725     
+  eflx_soil_grnd =   2.165248115866990E+016
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ Abort called by computing node           18 at 2024-10-11 20:14:48.384 +0200
+ Execution terminated because of runtime error
+ BalanceCheck: surface flux energy balance error step =     40607 point =128101 imbalance =************ W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        23241
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+  eflx_lwrad_net =  -9.108387540604382E+040
+  eflx_sh_tot    =   1.298467619275228E+040
+  eflx_lh_tot    =    7884.44102907179     
+  eflx_soil_grnd =   7.809919921329155E+040
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ Abort called by computing node           14 at 2024-10-11 20:14:48.384 +0200
+ Execution terminated because of runtime error
+ BalanceCheck: soil balance error step =     40607 point = 31247 imbalance =************ W/m2
+ indexc=        31247  errsoi_col=    40041097065.7407     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      754
+ clm model is stopping
+ -------------------------------------------
+ Abort called by computing node           19 at 2024-10-11 20:14:48.385 +0200
+ Execution terminated because of runtime error
+ BalanceCheck: surface flux energy balance error step =     40607 point =204387 imbalance = -512.000000 W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        37465
+  sabg           =    573.990528765933        573.990528765933     
+   573.990528765933     
+  eflx_lwrad_net =  -2.252860331527204E+018
+  eflx_sh_tot    =   8.060761791413868E+017
+  eflx_lh_tot    =    8381.31263836097     
+  eflx_soil_grnd =   1.446784152385809E+018
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ BalanceCheck: surface flux energy balance error step =     40607 point =191354 imbalance =************ W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        35101
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+ Abort called by computing node           23 at 2024-10-11 20:14:48.385 +0200
+ Execution terminated because of runtime error
+  eflx_lwrad_net =  -3.463944438061677E+033
+  eflx_sh_tot    =   4.344677119679379E+033
+  eflx_lh_tot    =    4138.04980713869     
+  eflx_soil_grnd =  -8.807326816177018E+032
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ Abort called by computing node           21 at 2024-10-11 20:14:48.385 +0200
+ Execution terminated because of runtime error
+ BalanceCheck: soil balance error step =     40607 point = 25953 imbalance =************ W/m2
+ indexc=        25953  errsoi_col=   1.287779103907495E+015
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      754
+ clm model is stopping
+ -------------------------------------------
+ Abort called by computing node           16 at 2024-10-11 20:14:48.386 +0200
+ BalanceCheck: longwave enery balance error step =     40607 point =113728 imbalance =************ W/m2
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      707
+ clm model is stopping
+ -------------------------------------------
+ Execution terminated because of runtime error
+ Abort called by computing node           13 at 2024-10-11 20:14:48.386 +0200
+ Execution terminated because of runtime error
+ BalanceCheck: surface flux energy balance error step =     40607 point =148886 imbalance =************ W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        27199
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+  eflx_lwrad_net =  -2.690934637473217E+049
+  eflx_sh_tot    =   3.782731316454367E+049
+  eflx_lh_tot    =    11743.4300617486     
+  eflx_soil_grnd =  -1.091796678981150E+049
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ Abort called by computing node           17 at 2024-10-11 20:14:48.387 +0200
+ Execution terminated because of runtime error
+ BalanceCheck: surface flux energy balance error step =     40607 point =177473 imbalance =************ W/m2
+  sabv           =   0.000000000000000E+000
+  column      =        32532
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+  eflx_lwrad_net =  -4.016919652277522E+037
+  eflx_sh_tot    =   4.927680553534647E+037
+  eflx_lh_tot    =    2482.03236074763     
+  eflx_soil_grnd =  -9.107609012571255E+036
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ Abort called by computing node           20 at 2024-10-11 20:14:48.387 +0200
+ Execution terminated because of runtime error
+Abort(1) on node 31 (rank 31 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 31
+Abort(1) on node 14 (rank 14 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 14
+Abort(1) on node 16 (rank 16 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 16
+Abort(1) on node 18 (rank 18 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 18
+Abort(1) on node 19 (rank 19 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 19
+Abort(1) on node 23 (rank 23 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 23
+Abort(1) on node 29 (rank 29 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 29
+Abort(1) on node 13 (rank 13 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 13
+Abort(1) on node 17 (rank 17 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 17
+Abort(1) on node 20 (rank 20 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 20
+Abort(1) on node 21 (rank 21 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 21
+Abort(1) on node 47 (rank 47 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 47
+Abort(1) on node 41 (rank 41 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 41
+Abort(1) on node 28 (rank 28 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 28
+Abort(1) on node 27 (rank 27 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 27
+Abort(1) on node 39 (rank 39 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 39
+Abort(1) on node 38 (rank 38 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 38
+Abort(1) on node 32 (rank 32 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 32
+Abort(1) on node 46 (rank 46 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 46
+Abort(1) on node 40 (rank 40 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 40
+Abort(1) on node 44 (rank 44 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 44
+Abort(1) on node 33 (rank 33 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 33
+Abort(1) on node 26 (rank 26 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 26
+Abort(1) on node 42 (rank 42 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 42
+Abort(1) on node 37 (rank 37 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 37
+Abort(1) on node 30 (rank 30 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 30
+Abort(1) on node 34 (rank 34 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 34
+Abort(1) on node 43 (rank 43 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 43
+Abort(1) on node 45 (rank 45 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 45
+ WARNING:  CLM step     :                  40607
+ WARNING:  indexc       :        56955
+ WARNING:  ctype(indexc):            1
+ WARNING:  water balance error   -16.0000000000000     
+ clm model is stopping - error is greater than .10
+ indexc=        56955  errh2o=   -16.0000000000000     
+ ctype(indexc):            1
+ forc_rain    =   0.000000000000000E+000
+ forc_snow    =   0.000000000000000E+000
+ endwb        =   8.842782859430688E+016
+ begwb        =    4020.48850557097     
+ qflx_evap_tot=   -196506285765118.     
+ qflx_irrig   =   0.000000000000000E+000
+ qflx_surf    =   0.000000000000000E+000
+ qflx_h2osfc_surf    =   0.000000000000000E+000
+ qflx_qrgwl   =   0.000000000000000E+000
+ qflx_drain   =   9.691333424391642E-012
+ qflx_drain_perched   =   0.000000000000000E+000
+ qflx_flood   =   0.000000000000000E+000
+ qflx_snwcp_ice   =   0.000000000000000E+000
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      506
+ clm model is stopping
+ -------------------------------------------
+ Abort called by computing node           35 at 2024-10-11 20:14:48.405 +0200
+ Execution terminated because of runtime error
+Abort(1) on node 35 (rank 35 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 35
+ BalanceCheck: surface flux energy balance error step =     40607 point =429691 imbalance = -512.000000 W/m2
+ urban net longwave radiation balance error  -28.2919923864283     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2650
+ clm now stopping
+ -------------------------------------------
+ BalanceCheck: soil balance error step =     40607 point = 83572 imbalance =    0.552362 W/m2
+ indexc=        83572  errsoi_col=   0.552361535043716     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      754
+ clm model is stopping
+ -------------------------------------------
+ urban net longwave radiation balance error  -131072.000000000     
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_urban.F90 at line:     2650
+ clm now stopping
+ -------------------------------------------
+  sabv           =   0.000000000000000E+000
+  column      =        80531
+  sabg           =   0.000000000000000E+000  0.000000000000000E+000
+  0.000000000000000E+000
+  eflx_lwrad_net =  -4.562890274422496E+018
+  eflx_sh_tot    =   1.617091078706187E+017
+  eflx_lh_tot    =   -6.84398345123766     
+  eflx_soil_grnd =   4.401181166551878E+018
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_balancecheck.F90 at line:      735
+ clm model is stopping
+ -------------------------------------------
+ Abort called by computing node           48 at 2024-10-11 20:14:48.478 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           49 at 2024-10-11 20:14:48.478 +0200
+ Abort called by computing node           50 at 2024-10-11 20:14:48.478 +0200
+ Execution terminated because of runtime error
+ Abort called by computing node           51 at 2024-10-11 20:14:48.478 +0200
+ Execution terminated because of runtime error
+ Execution terminated because of runtime error
+Abort(1) on node 49 (rank 49 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 49
+Abort(1) on node 50 (rank 50 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 50
+Abort(1) on node 51 (rank 51 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 51
+Abort(1) on node 48 (rank 48 in comm 496): application called MPI_Abort(comm=0x84000003, 1) - process 48
