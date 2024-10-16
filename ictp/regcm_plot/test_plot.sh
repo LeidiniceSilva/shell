@@ -24,11 +24,7 @@ echo "--------------- INIT PLOT ----------------"
 DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper"
 cd ${DIR_IN}
 
-#python3 plot_maps_precipitation_95-99th.py
-#python3 plot_maps_precipitation_95-99th_1hr.py
-#python3 plot_graph_pdf_precipitation_day-1hr.py
-python3 plot_maps_mslp_wind10m.py
-#plot_maps_cape_cin.py
+python3 plot_maps_cape_cin.py
 
 echo
 echo "--------------- THE END PLOT ----------------"

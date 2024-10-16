@@ -22,6 +22,6 @@ nl=$1
 #mpirun /marconi/home/userexternal/ggiulian/binaries_test/terrainCLM45_SKL $nl
 #mpirun /marconi/home/userexternal/ggiulian/binaries_test/sstCLM45_SKL $nl
 #mpirun /marconi/home/userexternal/ggiulian/binaries_test/icbcCLM45_SKL $nl
-mpirun ./bin/regcmMPICLM45 EUR-11_WSM7.in
+mpirun ./bin/regcmMPIDEBUG_CLM45 EUR-11_WSM7.in
 
 }
