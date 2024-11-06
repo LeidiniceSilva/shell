@@ -2,11 +2,10 @@
 
 #SBATCH -o logs/WDM7_SLURM.out
 #SBATCH -e logs/WDM7_SLURM.err
-#SBATCH -N 4 --ntasks-per-node=48 #--mem=63G ##esp1
 #SBATCH -t 24:00:00
 #SBATCH -J WDM7-Europe
 #SBATCH -p long
-#SBATCH -N 1 --ntasks-per-node=20
+#SBATCH -N 4 --ntasks-per-node=20
 
 NAMELIST=/home/mda_silv/github_projects/shell/ictp/regcm_exp/eur_11/EUR-11_WDM7.in
 BINARIES=/home/mda_silv/RegCM/bin/

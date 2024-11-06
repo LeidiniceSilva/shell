@@ -6,7 +6,7 @@
 #SBATCH -t 24:00:00
 #SBATCH -J WSM5-Europe
 #SBATCH -p long
-#SBATCH -N 1 --ntasks-per-node=20
+#SBATCH -N 4 --ntasks-per-node=20
 
 NAMELIST=/home/mda_silv/github_projects/shell/ictp/regcm_exp/eur_11/EUR-11_WSM5.in
 BINARIES=/home/mda_silv/RegCM/bin/

@@ -1,0 +1,125 @@
+
+  This is RegCM development version
+   GIT Revision: 5.0.0-826-g78417 compiled at: data : Nov 05 2024  time: 12:51:46
+
+ : this run start at  : 2024-11-06 11:02:22+0100
+ : it is submitted by : mda_silv
+ : it is running on   : node62
+ : it is using        :           80   processors
+ : in directory       : 
+ /home/mda_silv/github_projects/shell/ictp/regcm_exp/eur_11
+                       
+ CPUS DIM1 =            8
+ CPUS DIM2 =           10
+ 
+ Reading model namelist file
+ Using default non-hydrostatc parameters.
+ Initial date of the global simulation:  2000-01-01 00:00:00 UTC        
+ Initial date of this run             :  2000-01-01 00:00:00 UTC        
+ Final date of this run               :  2002-01-01 00:00:00 UTC        
+ Total simulation length              :        17544  hours
+ Timestep in seconds =   90.000000
+ Reading Domain file : /home/mda_silv/scratch/EUR-11/icbc//EUR-11_DOMAIN000.nc
+ Advection timestep =    30.000 (factor  3)
+ Max. Courant number for horizontal advection =    0.5203
+ Sound waves timestep =     6.000 (factor  5)
+ Courant number of horizontal sound waves =    0.2461
+ Setting IPCC scenario to SSP585  
+ Load GHG for 200001 SSP585
+ Create SAV files :  T
+ Create ATM files :  T
+ Create RAD files :  T
+ Create SRF files :  T
+ Create STS files :  T
+ Create SHF files :  T
+ Monthly new files are created
+ Monthly SAV files are written
+ Frequency in hours to create ATM :    6.0
+ Frequency in hours to create RAD :    6.0
+ Frequency in hours to create SRF :    3.0
+ Physical Parameterizations
+  Lateral Boundary conditions :  5
+  Semi-Lagrangian Advection   :  0
+  Land cumulus conv. scheme   :  5
+  Ocean cumulus conv. scheme  :  5
+  Moisture schem              :  4
+  Ocean Flux scheme           :  2
+  Zeng roughness formula      :  1
+  Zeng roughness method       :  1
+  Coupling with ocean         :  0
+  Coupling with wave          :  0
+  Coupling with COP           :  0
+  Pressure gradient force     :  0
+  Prescribed LW emissivity    :  0
+  Lake model in BATS          :  0
+  Simulate diurnal sst cycle  :  0
+  Simulate sea ice cover      :  1
+  Enable chem/aerosol model   :  0
+  Large scale LWP as convect. :  0
+  Cloud fraction scheme       :  1
+  Marine stratocumulus        :  0
+  Climate O3 dataset          :  1
+  Climate Aerosol dataset     :  2
+ Boundary Pameterizations
+  Num. of bndy points cross  :  40
+  Num. of bndy points dot    :  40
+  Nudge value high range     :  8.000000
+  Nudge value medium range   :  4.000000
+  Nudge value low range      :  2.000000
+  Nm paramter                : -1.000000
+  Dm paramter                : -1.000000
+ Model Timestep Pameterizations
+  time step for dynamical model in seconds :          90.000000
+  time step for surface   model in seconds :         450.000000
+  time step for cumulus   model in seconds :         225.000000
+  time step for radiation model in seconds :        1350.000000
+  time step for emission  model in seconds :       48600.000000
+ Nudging coefficients F1=    0.016667, F2=    0.000000
+  # Nudging coefficient profile #
+     7.85       7.54       7.23       6.92       6.61       6.30       5.99    
+     5.69       5.38       5.07       4.77       4.46       4.15       3.94    
+     3.82       3.70       3.58       3.46       3.34       3.23       3.11    
+     2.99       2.87       2.76       2.64       2.52       2.41       2.29    
+     2.29       2.17       2.06    
+ Model top at    30000.0000000000       m
+ Domain grid parameters:
+  Map Projection        : ROTLLR
+  Dot Grid Full Extent  :  427x 415x 30
+  Model Grid Spacing    :   12.231882 km
+  Proj Center Latitude  :   48.000000 deg
+  Proj Center longitude :    9.750000 deg
+  Pole Latitude         :   39.250000 deg
+  Pole longitude        :  198.000000 deg
+ Holtslag PBL Scheme
+  ricr_ocn     =    0.250000
+  ricr_lnd     =    0.250000
+  zhnew_fac    =    0.250000
+  ifaholt      =  0
+  ifaholtth10  =  2
+  holtth10iter =    1
+ Cloud fraction schemes parameters
+  # of bottom no cloud model levels :  0
+  Maximum relative humidity         :    1.010000
+  Minimum relative humidity         :    0.010000
+  Maximum total cloud cover for rad :    1.000000
+  Conv. CF UMF factor deep cumulus  :    0.140000
+  Conv. CF UMF factor deep cumulus  :    0.140000
+  Conv. CF UMF factor k2            :  500.000000
+  Surface radiation hack            :           F
+  Vavrus-Waliser Arctic cloud fix   :           T
+ Tiedtke (1986) Convection Scheme used.
+  Used Scheme                       :  4
+  Entrainment rate pen. conv. land  :    0.001750
+  Entrainment rate pen. conv. ocean :    0.001750
+  Entrainment rate shallow conv.    :    0.000300
+  Entrainment rate midlev conv.     :    0.000100
+  Entrainment rate cumulus downdraft:    0.000300
+  CLW to rain conversion factor     :    0.000100
+  Max entrainment                   :    0.001750
+  CAPE adjustment timescale         :  3600.000000
+ Convective Cloud Cover parameters after resolution scaling
+  Maximum Convective Cloud Cover :    0.963263
+  Convective Cloud Water         :    0.000300
+ The surface energy budget is used to calculate the ground temperature.
+ The radiation is computed every   22. minutes.
+ Relaxation boundary conditions (exponential method)
