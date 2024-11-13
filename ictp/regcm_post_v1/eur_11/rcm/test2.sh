@@ -32,7 +32,7 @@ CONF=$1
 EXP="EUR-11"
 
 DIR_IN="/home/mda_silv/scratch/EUR-11/${CONF}"
-BIN="/home/mda_silv/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+BIN="/home/mda_silv/RegCM/bin"
 WIND="/home/mda_silv/github_projects/shell/ictp/regcm_post_v2/scripts_regcm"
 
 echo

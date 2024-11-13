@@ -34,7 +34,7 @@ VAR_LIST="cl cli clw"
 
 DIR_IN="/home/mda_silv/scratch/EUR-11/${CONF}"
 DIR_OUT="/home/mda_silv/scratch/EUR-11/postproc/rcm"
-BIN="/home/mda_silv/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+BIN="/home/mda_silv/RegCM/bin"
 
 echo
 cd ${DIR_OUT}
