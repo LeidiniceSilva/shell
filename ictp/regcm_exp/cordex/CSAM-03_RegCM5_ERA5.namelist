@@ -1,0 +1,201 @@
+ &dimparam 
+ iy     = 783, 
+ jx     = 1231,
+ kz     = 40,  
+ dsmin  = 0.01,
+ dsmax  = 0.05,
+ nsg    = 1,          
+ njxcpus = -1, 
+ niycpus = -1, 
+ /
+ 
+ &coreparam
+ idynamic = 3, 
+ /
+ 
+ &geoparam
+ iproj = 'ROTLLR', 
+ ds = -0.03,       
+ ptop = 10.0,      
+ clat = -25.0,     
+ clon = 303.0,     
+ plat = -70.60,    
+ plon = 123.94,   
+ truelatl = -30., 
+ truelath = -60., 
+ i_band = 0,      
+ /
+
+ &terrainparam
+ domname     = 'CSAM-3',     
+ lresamp     = .false.,  
+ smthbdy     = .true.,  
+ ismthlev    = 2,       
+ roidem      = 1.5,  
+ h2ohgt      = .true.,  
+ h2opct      = 50.0,     
+ lakedpth    = .true.,  
+ lsmoist     = .false.,       
+ fudge_lnd   = .false.,       
+ fudge_lnd_s = .false.,       
+ fudge_tex   = .false.,      
+ fudge_tex_s = .false.,      
+ fudge_lak   = .false.,     
+ fudge_lak_s = .false.,    
+ dirter = 'input',
+ inpter = 'RCMDATA',                                   
+ tersrc = 'GMTED',   
+ smsrc  = 'ESACCI',                   
+ moist_filename = 'moist.nc', 
+ /
+ 
+ &boundaryparam
+ nspgx  = 30, 
+ nspgd  = 30, 
+ high_nudge =    9.0D0, 
+ medium_nudge =  6.0D0, 
+ low_nudge =     3.0D0 
+ /
+ 
+ &globdatparam
+ ibdyfrq =     6,  
+ ssttyp = 'ERA5D',
+ dattyp = 'ERA5',            
+ gdate1 = 2007020100,
+ gdate2 = 2007030100,
+ calendar = 'gregorian',   
+ dirglob = 'input',  
+ inpglob = 'RCMDATA',       
+ /
+ 
+ &restartparam
+ ifrest  = restLogic,   ! If a restart
+ mdate0  = 1999010100, ! Global start (is globidate1)
+ mdate1  = 1999010100, ! Start date of this run
+ mdate2  = 2010010100, ! End date for this run
+ 
+ &timeparam
+ dt     =   45.,        ! time step in seconds
+ /
+ 
+ &outparam
+ ifcordex  = .true.,            
+ atmfrq    =     1.,        
+ outnwf    =     1.,         
+ ! ifsave  = .true.,       
+ ! savfrq  =     0.,          
+ ! ifatm   = .true.,    
+ ! atmfrq  =     1.,         
+ ! ifrad   = .true.,    
+ ! radfrq  =     6.,         
+ ! ifsts   = .true.,      
+ ! ifsrf   = .true.,           
+ ! srffrq  =    1.0,          
+ ! ifsub   = .true.,            
+ ! subfrq  =     6.,            
+ ! iflak   = .false.,           
+ ! lakfrq  =     6.,            
+ ! ifchem  = .false.,      
+ ! ifopt   = .false.,           
+ ! chemfrq =     6.,        
+ dirout  = 'output', 
+ lsync   = .false., 
+ icosp = 0,
+ idiag = 0,
+ do_parallel_netcdf_in  = .true.,  
+ do_parallel_netcdf_out = .false., 
+ /
+ 
+ &physicsparam
+ iboudy  =          5,
+ isladvec =         0, 
+ iqmsl =            1,  
+ ibltyp  =          1,  
+ icup_lnd =         0,  
+ icup_ocn =         0,  
+ ipptls  =          2,  
+ iocncpl =          0, 
+ iwavcpl =          0,
+ iocnflx =          2,  
+   iocnrough =      1,  
+   iocnzoq =        1,  
+ scenario =   'SSP370', 
+ ipgf    =          0,  
+ iemiss  =          0,  
+ lakemod =          1, 
+ ichem   =          0,  
+ idcsst   =         0,
+ iseaice  =         0,
+ iconvlwp =         1,                    
+ icldfrac =         1, 
+ icldmstrat =       0,  
+ icumcloud =        1,  
+ irrtm    =         0, 
+ iclimao3 =         0, 
+ isolconst =        0, 
+ islab_ocean =      0, 
+ itweak =           0, 
+ iclimaaer =        3, 
+ radclimpath = 'RCMDATA/MERRA2/OPPMONTH', 
+ /
+ 
+ &referenceatm
+ base_state_pressure = 101325.0,
+ logp_lrate = 47.70,             
+ /
+ 
+ &nonhydroparam
+ mo_nadv = 3,       
+ mo_nsound = 6,     
+ mo_nzfilt = 0,
+ / 
+ 
+ &molochparam
+ mo_ztop = 25000.0, 
+ mo_a0 = 0.0,       
+ mo_h = 7500.0,     
+ /
+ 
+ &cldparam
+ ncld      = 1,      
+ rhmax     = 1.01,   
+ rhmin     = 0.01,   
+ rh0land   = 0.80,    
+ rh0oce    = 0.90,    
+ tc0       = 238.0,  
+ cllwcv    = 0.3e-3, 
+ clfrcvmax = 1.00,   
+ cftotmax  = 0.75,   
+ kfac_shal = 0.07,   
+ kfac_deep = 0.14,   
+ lsrfhack  = .false. 
+ larcticcorr = .true.
+ rcrit     = 13.5,    
+ coef_ccn  = 2.5e+20,
+ abulk     = 0.9,     
+ /
+ 
+ &holtslagparam
+ ifaholtth10 = 2,
+ ifaholt = 0,
+ /
+ 
+ &clm_inparm
+ fpftcon = 'pft-physiology.c130503.nc',
+ fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
+ fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
+ urban_hac = 'ON_WASTEHEAT',
+ hist_nhtfrq = 0, 1,
+ hist_fincl2(1:6) = 'EFLX_LH_TOT_U','FGR_U','FIRA_U','FSA_U','FSH_U','FSM_U',
+ hist_fincl2(7:11) = 'QRUNOFF_U','RH2M_U','SoilAlpha_U','TG_U','TREFMNAV_U',
+ hist_fincl2(12:13) = 'TREFMXAV_U','TSA_U'
+ /
+ 
+ &clm_soilhydrology_inparm
+ h2osfcflag = 1,
+ origflag = 0,
+ /
+ 
+ &clm_hydrology1_inparm
+ oldfflag = 0,
+ /
