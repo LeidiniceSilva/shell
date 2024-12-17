@@ -2,21 +2,23 @@
 
 #SBATCH -N 1 
 #SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
+#SBATCH -J Postproc
 #SBATCH --qos=qos_prio
-#SBATCH --mail-type=FAIL
+#SBATCH --mail-type=ALL
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
+#SBATCH -p long
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
 #__description__ = 'Posprocessing the RegCM5 output with CDO'
- 
-{
 
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
-set -eo pipefail
+# load required modules
+module purge
+source /opt-ictp/ESMF/env202108
+set -e
+
+{
 
 CDO(){
   cdo -O -L -f nc4 -z zip $@
@@ -30,9 +32,9 @@ CONF=$1
 EXP="EUR-11"
 VAR_LIST="pr"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/${CONF}"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/postproc/rcm"
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+DIR_IN="/home/mda_silv/scratch/EUR-11/${CONF}"
+DIR_OUT="/home/mda_silv/scratch/EUR-11/postproc/rcm"
+BIN="/home/mda_silv/RegCM/bin"
 
 echo
 cd ${DIR_OUT}

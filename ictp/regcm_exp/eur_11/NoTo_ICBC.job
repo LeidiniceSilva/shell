@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#SBATCH -o logs/NoTo_SLURM.out
+#SBATCH -e logs/NoTo_SLURM.err
+#SBATCH -t 24:00:00
+#SBATCH -J NoTo-Europe
+#SBATCH -p long
+#SBATCH -N 1 --ntasks-per-node=20
+
+NAMELIST=/home/mda_silv/github_projects/shell/ictp/regcm_exp/eur_11/EUR-11_NoTo.in
+BINARIES=/home/mda_silv/RegCM/bin/
+EXTENSION=CLM45
+
+# load required modules
+module purge
+source /opt-ictp/ESMF/env202108
+export OMP_NUM_THREADS=20
+
+# run model
+set -e
+{
+  $BINARIES/terrain$EXTENSION $NAMELIST
+  $BINARIES/mksurfdata$EXTENSION $NAMELIST
+  $BINARIES/sst$EXTENSION $NAMELIST
+  $BINARIES/icbc$EXTENSION $NAMELIST
+}
