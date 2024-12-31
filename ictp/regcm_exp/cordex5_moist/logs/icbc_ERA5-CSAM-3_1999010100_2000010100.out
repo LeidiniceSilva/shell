@@ -7,14 +7,14 @@ Loading netcdf-fortran/4.6.1--oneapi--2023.2.0
     netcdf-c/4.9.2--oneapi--2023.2.0
 
   This is icbc part of the RegCM version 5
-   SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
+   SVN Revision: 5.0.1 compiled at: data : Oct 30 2024  time: 08:38:59
 
- : this run start at    : 2024-12-30 15:46:10+0100
+ : this run start at    : 2024-12-30 22:21:03+0100
  : it is submitted by   : mdasilva
- : it is running on     : lrdn4248.leonardo.local
+ : it is running on     : lrdn4222.leonardo.local
  : in directory         : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/corde
- x5
+ x5_moist
                        
  Using Moloch non-hydrostatic dynamical core
  GLOBIDATE1 :  1999-01-01 00:00:00 UTC        
@@ -1614,6 +1614,6 @@ Loading netcdf-fortran/4.6.1--oneapi--2023.2.0
       393216 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2000/vwnd_2000_01.nc
   4.504284257609239E-003  -7.70919183939443     
  READ IN fields at DATE: 2000-01-01 00:00:00 UTC        
- Input ready at : Mon Dec 30 22:22:02 2024
+ Input ready at : Tue Dec 31 03:18:27 2024
  Successfully completed ICBC
 icbc script complete

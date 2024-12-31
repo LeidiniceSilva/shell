@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5
+base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_MOIST
 
 {
 set -eo pipefail
@@ -92,4 +92,6 @@ o=logs/${cj}.out
 e=logs/${cj}.err
 cid=$( sbatch -J $cj -o $o -e $e -d afterany:$jid control-regcm.sh $job | cut -d' ' -f4 )
 echo "Submitted control with job i.d. $cid !!!"
+
 }
+

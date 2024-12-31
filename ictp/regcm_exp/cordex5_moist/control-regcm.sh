@@ -84,4 +84,5 @@ if [ $pycor = true ]; then
     jpid=$( sbatch -J $pynm -o $o -e $e -t $tl $pp $dd pycordexer.sh $pnl $t | cut -d' ' -f4 )
   done
 fi
+
 }

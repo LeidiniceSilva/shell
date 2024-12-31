@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5
+base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_MOIST
 
 {
 set -eo pipefail
@@ -80,3 +80,4 @@ if [ $icb = true ]; then
   echo "Submitted control with job i.d. $cid !!!"
 fi
 }
+
