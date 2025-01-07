@@ -22,7 +22,7 @@
  domname  = 'EUR-11',          ! Name of the domain/experiment.
  h2opct = 50.,                 ! Surface min H2O percent to be considered water
  h2ohgt = .false.,             ! Allow water points to have hgt greater than 0
- dirter = '/home/mda_silv/users/EUR-11/icbc/', ! Output directory for terrain files
+ dirter = '/home/mda_silv/scratch/EUR-11/icbc/', ! Output directory for terrain files
  inpter = '/home/mda_silv/RegCM_Data/',          ! Input directory for SURFACE dataset
  /
 
@@ -41,7 +41,7 @@
  gdate1 = 2000010100,        ! Start date for ICBC data generation
  gdate2 = 2002010100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/home/mda_silv/users/EUR-11/icbc/', ! Path for ICBC produced input files
+ dirglob = '/home/mda_silv/scratch/EUR-11/icbc/', ! Path for ICBC produced input files
  inpglob = '/home/mda_silv/RegCM_Data/',          ! Path for ICBC global input datasets.
  /
 
@@ -67,7 +67,7 @@
  ifshf   = .true. ,           ! Output SHF (pr hourly)
  ifsrf   = .true. ,           ! Output SRF ?
  srffrq  =     3.,            ! Frequency in hours to write to SRF
- dirout  = '/home/mda_silv/users/EUR-11/WSM5-Europe/',       
+ dirout  = '/home/mda_silv/scratch/EUR-11/WSM5-Europe/',       
  lsync   = .true.,            ! If sync of output files at every timestep is
  icosp = 1,                   ! Enable COSP needed fields in output in the ATM
  do_parallel_netcdf_in  = .true.,  ! This enables paralell input

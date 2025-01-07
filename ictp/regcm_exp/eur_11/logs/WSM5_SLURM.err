@@ -1,0 +1,2110 @@
+--------------------------------------------------------------------------
+WARNING: Could not generate an xpmem segment id for this process'
+address space.
+
+The vader shared memory BTL will fall back on another single-copy
+mechanism if one is available. This may result in lower performance.
+
+  Local host: node80
+  Error code: 2 (No such file or directory)
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   node82
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+[node80:02792] 79 more processes have sent help message help-btl-vader.txt / xpmem-make-failed
+[node80:02792] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[node80:02792] 79 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+[node83:2627 :0:2627] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2627) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b62c07021d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b62c070238f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b62c0702656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b62af185555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node81:2150 :0:2150] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node80:2843 :0:2843] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node82:2156 :0:2156] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node81:2155 :0:2155] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2843) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b0d4dc0a1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b0d4dc0a38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b0d4dc0a656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b0d3c6ce555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2155) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ac7ee8c21d4]
+[node83:2622 :0:2622] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2150) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b24a7f811d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b24a7f8138f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b24a7f81656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b24a0d89555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2156) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ae2e97b81d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ae2e97b838f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ae2e97b8656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ac7ee8c238f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ac7ee8c2656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ac7dd322555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ae2d827d555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2622) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b75547cc1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b75547cc38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b75547cc656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b754324d555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2623 :0:2623] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2623) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b3b265c61d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b3b265c638f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b3b265c6656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b3b15055555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node80:2836 :0:2836] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2836) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b6a1ca271d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b6a1ca2738f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b6a1ca27656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b6a0b4f6555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2624 :0:2624] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2624) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b874ba6d1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b874ba6d38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b874ba6d656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b873a532555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node80:2839 :0:2839] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node80:2842 :0:2842] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2839) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b3af61bb1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b3af61bb38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b3af61bb656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b3ae4c45555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2842) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ab89ffb71d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ab89ffb738f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ab89ffb7656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ab894605555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node82:2152 :0:2152] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2152) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b56d7eb81d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b56d7eb838f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b56d7eb8656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b56c6979555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node81:2152 :0:2152] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2152) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ace463bc1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ace463bc38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ace463bc656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ace34e48555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B62AEF56630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B62AF185555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node82:2153 :0:2153] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B0D3C49F630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B0D3C6CE555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+==== backtrace (tid:   2153) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2afd8caca1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2afd8caca38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2afd8caca656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2afd7b58f555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node81:2154 :0:2154] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B754301E630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B754324D555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+==== backtrace (tid:   2154) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b4c709df1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b4c709df38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b4c709df656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b4c5f4a3555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AE2D804E630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE2D827D555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B3B14E26630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B3B15055555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B24A0B59630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B24A0D89555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AC7DD0F3630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AC7DD322555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node82:2155 :0:2155] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2155) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2aacca0d21d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2aacca0d238f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2aacca0d2656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B6A0B2C7630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B6A0B4F6555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aacb8b7b555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B873A303630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B873A532555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node82:2139 :0:2139] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node82:2135 :0:2135] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B3AE4A16630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B3AE4C45555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AB8943D6630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AB894605555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+==== backtrace (tid:   2135) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b79b4b611d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b79b4b6138f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b79b4b61656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+==== backtrace (tid:   2139) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b4d0f4ff1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b4d0f4ff38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b4d0f4ff656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b4cfdf81555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b79a3626555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node82:2136 :0:2136] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2136) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b6d2a9631d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b6d2a96338f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b6d2a963656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b6d193d8555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B56C674A630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B56C6979555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002ACE34C19630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002ACE34E48555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AFD7B360630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AFD7B58F555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node82:2143 :0:2143] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node83:2619 :0:2619] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node81:2145 :0:2145] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node83:2620 :0:2620] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node81:2147 :0:2147] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node81:2148 :0:2148] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2143) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ad016a631d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ad016a6338f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ad016a63656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ad005514555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2619) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2aeee5fd11d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2aeee5fd138f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2aeee5fd1656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aeed4a2f555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2145) ====
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B4C5F274630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B4C5F4A3555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node83:2618 :0:2618] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b218177a1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b218177a38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b218177a656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b217023f555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2620) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ac3e89df1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ac3e89df38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ac3e89df656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ac3d7454555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2613 :0:2613] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2148) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b35ffdb71d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b35ffdb738f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b35ffdb7656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+==== backtrace (tid:   2147) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b21b8b291d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b21b8b2938f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b21b8b29656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b21a75ee555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+[node82:2137 :0:2137] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b35ee812555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2614 :0:2614] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+=================================
+==== backtrace (tid:   2618) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b1a034ff1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b1a034ff38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b1a034ff656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b19f1f87555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2613) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b7d7e5c61d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b7d7e5c638f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b7d7e5c6656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b7d6d029555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2137) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b12c7f001d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b12c7f0038f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b12c7f00656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b12b698e555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2614) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ac423ade1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ac423ade38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ac423ade656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ac4125a1555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2612 :0:2612] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AACB894C630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AACB8B7B555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node81:2141 :0:2141] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2612) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b2bb7fc41d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b2bb7fc438f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b2bb7fc4656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b2ba6a5c555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2141) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b0dce0191d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b0dce01938f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b0dce019656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b0dbcac9555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2621 :0:2621] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2621) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2abd0cfcd1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2abd0cfcd38f]
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B4CFDD52630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B4CFDF81555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2abd0cfcd656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2abcfba92555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B79A33F7630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B79A3626555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B6D191A9630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B6D193D8555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node82:2148 :0:2148] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2148) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2aacb86ba1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2aacb86ba38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2aacb86ba656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aaca711b555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node81:2132 :0:2132] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node81:2135 :0:2135] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node82:2147 :0:2147] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2132) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b3acbf961d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b3acbf9638f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b3acbf96656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+==== backtrace (tid:   2135) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b76e65c61d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b76e65c638f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b76e65c6656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b76d5043555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2606 :0:2606] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2147) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b462ba261d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b462ba2638f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b462ba26656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b3ac60e3555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b461a4e8555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node81:2133 :0:2133] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node82:2132 :0:2132] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2606) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2af5cfbad1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2af5cfbad38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2af5cfbad656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2af5be666555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2133) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ad314fc21d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ad314fc238f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ad314fc2656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+[node81:2136 :0:2136] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AD0052E5630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AD005514555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ad303a87555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node80:2826 :0:2826] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2132) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ba2b1fd11d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ba2b1fd138f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ba2b1fd1656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ba2a0a36555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2604 :0:2604] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2136) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b151b8cc1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b151b8cc38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b151b8cc656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+[node82:2149 :0:2149] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b150a386555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B35EE5E3630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B35EE812555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node83:2605 :0:2605] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2826) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ab1a0c7e1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ab1a0c7e38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ab1a0c7e656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ab18f743555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2149) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ada066c71d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ada066c738f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ada066c7656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+==== backtrace (tid:   2604) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b698ff001d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b698ff0038f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b698ff00656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b697e981555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ad9f5159555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B21A73BF630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B21A75EE555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B2170010630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B217023F555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AC3D7225630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AC3D7454555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B12B675F630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B12B698E555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AEED4800630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AEED4A2F555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node82:2144 :0:2144] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B7D6CDFA630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B7D6D029555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+==== backtrace (tid:   2605) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ae9deeff1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ae9deeff38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ae9deeff656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ae9cd99e555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node80:2833 :0:2833] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B19F1D58630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B19F1F87555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AC412372630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AC4125A1555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node82:2146 :0:2146] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2144) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b28e8cf11d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b28e8cf138f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b28e8cf1656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b28d77b2555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2603 :0:2603] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node82:2142 :0:2142] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node83:2607 :0:2607] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2833) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b441acb51d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b441acb538f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b441acb5656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b4409743555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2146) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b3483bfd1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b3483bfd38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b3483bfd656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b347267d555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2607) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b83b6b641d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b83b6b6438f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b83b6b64656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+[node81:2131 :0:2131] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2603) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b4bee70f1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b4bee70f38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b4bee70f656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+==== backtrace (tid:   2142) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2aca4aaab1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2aca4aaab38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2aca4aaab656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+[node81:2140 :0:2140] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b83a560c555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aca39538555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b4bdd1b3555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node81:2139 :0:2139] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node83:2609 :0:2609] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2131) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2af37fb661d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2af37fb6638f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2af37fb66656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B2BA682D630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B2BA6A5C555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+==== backtrace (tid:   2140) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2af59d30f1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2af59d30f38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2af59d30f656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2af58bdd3555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2608 :0:2608] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2af36e627555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2609) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b81f12181d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b81f121838f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b81f1218656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b81dfcdd555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node82:2150 :0:2150] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B0DBC89A630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B0DBCAC9555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node82:2141 :0:2141] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2139) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b002f1651d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b002f16538f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b002f165656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+[node82:2134 :0:2134] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b001dbdb555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node81:2127 :0:2127] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2608) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b53fa1bb1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b53fa1bb38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b53fa1bb656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b53e8c7e555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2150) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b8b568c21d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b8b568c238f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b8b568c2656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+==== backtrace (tid:   2141) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ac253f7e1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ac253f7e38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ac253f7e656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ac24dfca555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b8b45353555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node80:2834 :0:2834] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2134) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b17e6fc31d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b17e6fc338f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b17e6fc3656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b17d5a25555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2127) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b10f300b1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b10f300b38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b10f300b656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b10e1aaa555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002ABCFB863630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002ABCFBA92555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node80:2819 :0:2819] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2834) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b922e8091d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b922e80938f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b922e809656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b921d288555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node83:2611 :0:2611] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node81:2130 :0:2130] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node80:2831 :0:2831] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node81:2144 :0:2144] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node82:2133 :0:2133] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node81:2143 :0:2143] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node83:2610 :0:2610] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node80:2835 :0:2835] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2611) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ab6b168c1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ab6b168c38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ab6b168c656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ab6a0151555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node80:2827 :0:2827] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2130) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b801ba261d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b801ba2638f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b801ba26656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+==== backtrace (tid:   2819) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b17532651d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b175326538f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b1753265656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b1741cf6555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b800a4aa555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node80:2829 :0:2829] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2144) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b6b1db721d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b6b1db7238f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b6b1db72656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b6b0c60c555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+==== backtrace (tid:   2831) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b55b7fa61d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b55b7fa638f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b55b7fa6656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b55b1afe555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2133) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2aefc0be41d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2aefc0be438f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2aefc0be4656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+=================================
+==== backtrace (tid:   2610) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b5de8fbf1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b5de8fbf38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b5de8fbf656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aefaf678555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2143) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b3fa7fbf1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b3fa7fbf38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b3fa7fbf656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b3f9c4c4555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b5dd7a83555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2835) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ad6fdf0d1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ad6fdf0d38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ad6fdf0d656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ad6ec99a555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2827) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b02e55ea1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b02e55ea38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b02e55ea656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b02d40ab555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2829) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ba88ffa01d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ba88ffa038f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ba88ffa0656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ba88a6ea555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node81:2142 :0:2142] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AACA6EEC630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AACA711B555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+==== backtrace (tid:   2142) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b34bc5b91d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b34bc5b938f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b34bc5b9656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+[node80:2818 :0:2818] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b34ab018555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2818) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ab71118d1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ab71118d38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ab71118d656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ab6ffc52555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node80:2822 :0:2822] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B3AC5EB4630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B3AC60E3555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B461A2B9630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B461A4E8555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B76D4E14630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B76D5043555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+==== backtrace (tid:   2822) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b14851cc1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b14851cc38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b14851cc656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b1473c90555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AD303858630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AD303A87555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002BA2A0807630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002BA2A0A36555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+[node80:2820 :0:2820] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node80:2824 :0:2824] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2820) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b9acff991d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b9acff9938f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b9acff99656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b9ac99f0555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B150A157630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B150A386555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AB18F514630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AB18F743555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+==== backtrace (tid:   2824) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b6b145b91d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b6b145b938f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b6b145b9656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b6b0303f555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node80:2817 :0:2817] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AD9F4F2A630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AD9F5159555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AF5BE437630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AF5BE666555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+==== backtrace (tid:   2817) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2ba44a0d21d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2ba44a0d238f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2ba44a0d2656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+[node80:2825 :0:2825] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ba438b43555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B28D7583630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B28D77B2555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B347244E630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B347267D555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002ACA39309630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002ACA39538555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+==== backtrace (tid:   2825) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b98bffc41d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b98bffc438f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b98bffc4656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B4409514630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B4409743555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b98bb437555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+[node80:2816 :0:2816] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+[node80:2821 :0:2821] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:   2816) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b98b15a51d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b98b15a538f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b98b15a5656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b98a006a555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+==== backtrace (tid:   2821) ====
+ 0  /opt-ictp/ESMF/202108/lib/libucs.so.0(ucs_handle_error+0x294) [0x2b70601ae1d4]
+ 1  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x3138f) [0x2b70601ae38f]
+ 2  /opt-ictp/ESMF/202108/lib/libucs.so.0(+0x31656) [0x2b70601ae656]
+ 3  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0xa3e608]
+ 4  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x869262]
+ 5  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x85f1a8]
+ 6  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x4120f9]
+ 7  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x8a0b15]
+ 8  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x41204e]
+ 9  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b704ec47555]
+10  /home/mda_silv/RegCM/bin//regcmMPICLM45() [0x411f69]
+=================================
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AF36E3F8630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AF36E627555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AF58BBA4630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AF58BDD3555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AC24DD9B630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AC24DFCA555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B17D57F6630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B17D5A25555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B001D9AC630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B001DBDB555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B8B45124630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B8B45353555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B697E752630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B697E981555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B10E187B630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B10E1AAA555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B921D059630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B921D288555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AE9CD76F630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE9CD99E555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B1741AC7630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B1741CF6555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AEFAF449630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AEFAF678555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B6B0C3DD630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B6B0C60C555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B800A27B630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B800A4AA555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B02D3E7C630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B02D40AB555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AD6EC76B630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AD6EC99A555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B3F9C295630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B3F9C4C4555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002BA88A4BB630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002BA88A6EA555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B83A53DD630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B83A560C555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B55B18CF630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B55B1AFE555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B53E8A4F630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B53E8C7E555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B34AADE9630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B34AB018555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AB6FFA23630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AB6FFC52555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B4BDCF84630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B4BDD1B3555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B81DFAAE630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B81DFCDD555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B1473A61630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B1473C90555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002AB69FF22630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002AB6A0151555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B5DD7854630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B5DD7A83555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B9AC97C1630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B9AC99F0555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B6B02E10630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B6B0303F555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002BA438914630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002BA438B43555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B98BB208630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B98BB437555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B989FE3B630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B98A006A555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+regcmMPICLM45      00000000013BBABC  for__signal_handl     Unknown  Unknown
+libpthread-2.17.s  00002B704EA18630  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000A3E608  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000869262  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000085F1A8  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004120F9  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000008A0B15  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041204E  Unknown               Unknown  Unknown
+libc-2.17.so       00002B704EC47555  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      0000000000411F69  Unknown               Unknown  Unknown
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[61147,1],76]
+  Exit code:    174
+--------------------------------------------------------------------------

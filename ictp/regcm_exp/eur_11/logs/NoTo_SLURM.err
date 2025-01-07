@@ -1,0 +1,655 @@
+--------------------------------------------------------------------------
+WARNING: Could not generate an xpmem segment id for this process'
+address space.
+
+The vader shared memory BTL will fall back on another single-copy
+mechanism if one is available. This may result in lower performance.
+
+  Local host: node61
+  Error code: 2 (No such file or directory)
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   node61
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+[node61:155753] 79 more processes have sent help message help-btl-vader.txt / xpmem-make-failed
+[node61:155753] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[node61:155753] 79 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+ WARNING:  snow balance error 
+  CLM step  =                   1191
+  indexc    =       442021
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.389849146847513E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1192
+  indexc    =       442539
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.430882186487457E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1200
+  indexc    =       441490
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.318388573100562E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1233
+  indexc    =       420876
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.073886707613526E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1235
+  indexc    =       420868
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.150036922136870E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1237
+  indexc    =       420339
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.201547892798423E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1239
+  indexc    =       420347
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.142927530568628E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1240
+  indexc    =       419818
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.227304254756585E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1250
+  indexc    =       419826
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.177275281229400E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1263
+  indexc    =       425567
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   8.317539394248272E-003
+ WARNING:  snow balance error 
+  CLM step  =                   1265
+  indexc    =       425581
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   7.939316142534722E-003
+ WARNING:  snow balance error 
+  CLM step  =                   1269
+  indexc    =       425589
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   7.613953895222556E-003
+ WARNING:  snow balance error 
+  CLM step  =                   1270
+  indexc    =       425059
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   9.002722100200707E-003
+ WARNING:  snow balance error 
+  CLM step  =                   1271
+  indexc    =       425073
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   8.497605531207736E-003
+ WARNING:  snow balance error 
+  CLM step  =                   1274
+  indexc    =       425086
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   7.916051632118622E-003
+ WARNING:  snow balance error 
+  CLM step  =                   1276
+  indexc    =       424536
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   9.636480879567720E-003
+ WARNING:  snow balance error 
+  CLM step  =                   1277
+  indexc    =       424549
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   9.026941776411064E-003
+ WARNING:  snow balance error 
+  CLM step  =                   1278
+  indexc    =       424562
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   8.403128273988418E-003
+ WARNING:  snow balance error 
+  CLM step  =                   1279
+  indexc    =       423931
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.095233942048692E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1280
+  indexc    =       423957
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.039223051046883E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1301
+  indexc    =       423944
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   9.914634704994598E-003
+ WARNING:  snow balance error 
+  CLM step  =                   1397
+  indexc    =       443016
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.529523819558679E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1416
+  indexc    =       443008
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.667114189418407E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1417
+  indexc    =       442034
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.537438349450573E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1417
+  indexc    =       442552
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.571451740634904E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1419
+  indexc    =       443092
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.443695979483108E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1420
+  indexc    =       443058
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.628361616766039E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1420
+  indexc    =       441516
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.575188101877703E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1421
+  indexc    =       443491
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.753061085249719E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1421
+  indexc    =       442047
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.629025005585844E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1422
+  indexc    =       443499
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.768414925288546E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1422
+  indexc    =       442068
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.700858701762978E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1423
+  indexc    =       442060
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.654698646876088E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1424
+  indexc    =       443084
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.708328424209907E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1426
+  indexc    =       443536
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.747919342113688E-002
+ WARNING:  snow balance error 
+  CLM step  =                   2089
+  indexc    =       165900
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.685384843085730E-002
+ WARNING:  snow balance error 
+  CLM step  =                   2307
+  indexc    =       419810
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.335447007488476E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3076
+  indexc    =       360822
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.773491093313764E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3079
+  indexc    =       356984
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.170267208541290E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3088
+  indexc    =       373655
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.475372782433931E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3089
+  indexc    =       373647
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.475404637971248E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3095
+  indexc    =       358041
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.432303461302615E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3098
+  indexc    =       355009
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.392299411030248E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3098
+  indexc    =       357023
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.436956570729124E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3099
+  indexc    =       356016
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.418156002202870E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3100
+  indexc    =       357031
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.444833423370532E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3101
+  indexc    =       359963
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.659317350798883E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3103
+  indexc    =       356029
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.459828547435023E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3105
+  indexc    =       355035
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.460120040711387E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3106
+  indexc    =       374557
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.362781061557164E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3107
+  indexc    =       356042
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.481881527825657E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3108
+  indexc    =       353993
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.677305382175211E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3110
+  indexc    =       375438
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.293513137997777E-003
+ WARNING:  snow balance error 
+  CLM step  =                   3111
+  indexc    =       354043
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.506704735033689E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3112
+  indexc    =       355056
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.469062638825765E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3113
+  indexc    =       262610
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.977045796445522E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3114
+  indexc    =       241543
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.130661245880483E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3116
+  indexc    =       264475
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.528064204867787E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3118
+  indexc    =       241538
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   9.646548423680758E-003
+ WARNING:  snow balance error 
+  CLM step  =                   3123
+  indexc    =       321972
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.016425803365618E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3123
+  indexc    =       241556
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.155928687791172E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3125
+  indexc    =       361872
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.655983762107727E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3126
+  indexc    =       237526
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.818919754502076E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3135
+  indexc    =       313431
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.531905456978677E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3189
+  indexc    =       285389
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.069394705445396E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3190
+  indexc    =       281399
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.150538800995261E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3192
+  indexc    =       235785
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.571273546188379E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3196
+  indexc    =       260716
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.666050551662457E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3202
+  indexc    =       206923
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.833530520111809E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3240
+  indexc    =       258848
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.765977982374236E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3243
+  indexc    =       213464
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.797508535653870E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3253
+  indexc    =       234046
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.551424939392378E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3281
+  indexc    =       234054
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.644323112347732E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3298
+  indexc    =       176859
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.123652356642129E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3459
+  indexc    =       222323
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.367671354562298E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3982
+  indexc    =       225690
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.655409111180967E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3985
+  indexc    =       220622
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.243182314301974E-002
+ WARNING:  snow balance error 
+  CLM step  =                   4173
+  indexc    =       225699
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   8.287805326743244E-003
+ WARNING:  snow balance error 
+  CLM step  =                   4226
+  indexc    =       210666
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   8.165965765932100E-003
+ WARNING:  snow balance error 
+  CLM step  =                   5167
+  indexc    =       398858
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.089989151107065E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5183
+  indexc    =       398144
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   9.999332869992574E-003
+ WARNING:  snow balance error 
+  CLM step  =                   5190
+  indexc    =       397483
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.204548540833711E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5193
+  indexc    =       397475
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.232686008309779E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5194
+  indexc    =       398128
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.085081681464128E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5195
+  indexc    =       398793
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.025883392088479E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5195
+  indexc    =       395944
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.153775000996994E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5196
+  indexc    =       397410
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.103313643827689E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5197
+  indexc    =       396669
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.132749482663698E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5198
+  indexc    =       395960
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.240606908467419E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5199
+  indexc    =       395249
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.319330077605392E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5201
+  indexc    =       396727
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.296024349872103E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5202
+  indexc    =       397402
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.172769415872593E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5203
+  indexc    =       396719
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.265718682496136E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5205
+  indexc    =       395986
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.307962903422109E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5206
+  indexc    =       395280
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.376073823230697E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5403
+  indexc    =       394372
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.232070392015595E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5407
+  indexc    =       393616
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.537819522748970E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5413
+  indexc    =       392906
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.739524222265923E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5414
+  indexc    =       395148
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.369902938667164E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5417
+  indexc    =       395132
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.513526903317165E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5418
+  indexc    =       394380
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.711054343650158E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5420
+  indexc    =       395140
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.598804162749355E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5450
+  indexc    =       401382
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.415374561687620E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5451
+  indexc    =       400117
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.484838543102641E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5454
+  indexc    =       401982
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.467308834582147E-002
+ WARNING:  snow balance error 
+  CLM step  =                   5457
+  indexc    =       399474
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.763672328729715E-002
