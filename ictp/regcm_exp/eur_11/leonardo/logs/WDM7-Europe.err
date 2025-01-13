@@ -1,0 +1,34 @@
+[lrdn4366:913272:0:913272] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn4366:913272:0:913272] ib_mlx5_log.c:177  DCI QP 0x15b66 wqe[35037]: SEND s-e [rqpn 0x2fdf rlid 5015] [inl len 18] 
+forrtl: error (76): Abort trap signal
+Image              PC                Routine            Line        Source             
+libpthread-2.28.s  000015087FB7ACF0  Unknown               Unknown  Unknown
+libc-2.28.so       000015087F3A3AFF  gsignal               Unknown  Unknown
+libc-2.28.so       000015087F376EA5  abort                 Unknown  Unknown
+libucs.so.0.0.0    00001504256A2D46  Unknown               Unknown  Unknown
+libucs.so.0.0.0    00001504256A76A4  ucs_log_default_h     Unknown  Unknown
+libucs.so.0.0.0    00001504256A79C4  ucs_log_dispatch      Unknown  Unknown
+libuct_ib.so.0.0.  00001504252014FA  uct_ib_mlx5_compl     Unknown  Unknown
+libuct_ib.so.0.0.  000015042522A68B  uct_dc_mlx5_ep_ha     Unknown  Unknown
+libuct_ib.so.0.0.  0000150425202F9D  uct_ib_mlx5_check     Unknown  Unknown
+libuct_ib.so.0.0.  000015042522CC32  Unknown               Unknown  Unknown
+libucp.so.0.0.0    0000150425B5381A  ucp_worker_progre     Unknown  Unknown
+libmlx-fi.so       0000150425DDCDF1  Unknown               Unknown  Unknown
+libmlx-fi.so       0000150425DF5EAD  Unknown               Unknown  Unknown
+libmlx-fi.so       0000150425DF539B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001508803AD8FA  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001508803EAACE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001508803D054C  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001508803A6453  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001508804FADD5  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000150880309655  PMPI_Allreduce        Unknown  Unknown
+libmpifort.so.12.  0000150881D39620  mpi_allreduce_        Unknown  Unknown
+regcmMPICLM45      0000000000C881B6  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000447B83  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000614A50  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000060F2C7  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000416331  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000063A8C0  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041544D  Unknown               Unknown  Unknown
+libc-2.28.so       000015087F38FD85  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      000000000041536E  Unknown               Unknown  Unknown

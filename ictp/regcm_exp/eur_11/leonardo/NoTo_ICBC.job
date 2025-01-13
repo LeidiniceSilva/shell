@@ -1,26 +1,30 @@
 #!/bin/bash
 
-#SBATCH -o logs/NoTo_SLURM.out
-#SBATCH -e logs/NoTo_SLURM.err
-#SBATCH -t 24:00:00
-#SBATCH -J NoTo-Europe
-#SBATCH -p long
-#SBATCH -N 1 --ntasks-per-node=20
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 4
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -o logs/ICBC_SLURM.out
+#SBATCH -e logs/ICBC_SLURM.err
+#SBATCH -J ICBC
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
 
-NAMELIST=/home/mda_silv/github_projects/shell/ictp/regcm_exp/eur_11/EUR-11_NoTo.in
-BINARIES=/home/mda_silv/RegCM/bin/
-EXTENSION=CLM45
+{
+set -eo pipefail
 
 # load required modules
-module purge
-source /opt-ictp/ESMF/env202108
-export OMP_NUM_THREADS=20
+# module purge
+source /leonardo/home/userexternal/ggiulian/modules
+
+NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/eur_11/leonardo/EUR-11_NoTo.in
+BINARIES=/leonardo/home/userexternal/mdasilva/RegCM/bin/
+EXTENSION=CLM45
 
 # run model
-set -e
-{
-  $BINARIES/terrain$EXTENSION $NAMELIST
-  $BINARIES/mksurfdata$EXTENSION $NAMELIST
-  $BINARIES/sst$EXTENSION $NAMELIST
-  $BINARIES/icbc$EXTENSION $NAMELIST
+$BINARIES/terrain$EXTENSION $NAMELIST
+$BINARIES/mksurfdata$EXTENSION $NAMELIST
+$BINARIES/sst$EXTENSION $NAMELIST
+$BINARIES/icbc$EXTENSION $NAMELIST
 }

@@ -18,12 +18,10 @@
 module purge
 source /opt-ictp/ESMF/env202108
 
+echo
 echo "--------------- INIT PLOT ----------------"
 
-DIR_IN="/home/mda_silv/github_projects/shell/ictp/regcm_plot"
-cd ${DIR_IN}
-
-python3 test_luana.py
+python3 test.py
 
 echo
 echo "--------------- THE END PLOT ----------------"

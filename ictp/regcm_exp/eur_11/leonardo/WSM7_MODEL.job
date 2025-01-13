@@ -1,23 +1,27 @@
 #!/bin/bash
 
-#SBATCH -o logs/WSM7_SLURM.out
-#SBATCH -e logs/WSM7_SLURM.err
-#SBATCH -t 24:00:00
+#SBATCH -o logs/WSM7-Europe.out
+#SBATCH -e logs/WSM7-Europe.err
+#SBATCH -N 16 ##--ntasks-per-node=20 #--mem=63G ##esp1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
 #SBATCH -J WSM7-Europe
-#SBATCH -p long
-#SBATCH -N 4 --ntasks-per-node=20
+#SBATCH -A ICT23_ESP_1
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH -p dcgp_usr_prod
 
-NAMELIST=/home/mda_silv/github_projects/shell/ictp/regcm_exp/eur_11/EUR-11_WSM7.in
-BINARIES=/home/mda_silv/RegCM/bin/
-EXTENSION=CLM45
+{
+set -eo pipefail
 
 # load required modules
-module purge
-source /opt-ictp/ESMF/env202108
-export OMP_NUM_THREADS=20
+# module purge
+source /leonardo/home/userexternal/ggiulian/modules
+
+NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/eur_11/leonardo/EUR-11_WSM7.in
+BINARIES=/leonardo/home/userexternal/mdasilva/RegCM/bin/
+EXTENSION=CLM45
 
 # run model
-set -e
-{
-  mpirun $BINARIES/regcmMPI$EXTENSION $NAMELIST
+mpirun $BINARIES/regcmMPI$EXTENSION $NAMELIST
 }

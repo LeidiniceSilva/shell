@@ -1,0 +1,34 @@
+[lrdn3895:814405:0:814405] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn3895:814405:0:814405] ib_mlx5_log.c:177  DCI QP 0x14bcd wqe[42835]: SEND s-e [rqpn 0xc940 rlid 5087] [inl len 18] 
+forrtl: error (76): Abort trap signal
+Image              PC                Routine            Line        Source             
+libpthread-2.28.s  0000154FA2096CF0  Unknown               Unknown  Unknown
+libc-2.28.so       0000154FA18BFAFF  gsignal               Unknown  Unknown
+libc-2.28.so       0000154FA1892EA5  abort                 Unknown  Unknown
+libucs.so.0.0.0    0000154B47BBED46  Unknown               Unknown  Unknown
+libucs.so.0.0.0    0000154B47BC36A4  ucs_log_default_h     Unknown  Unknown
+libucs.so.0.0.0    0000154B47BC39C4  ucs_log_dispatch      Unknown  Unknown
+libuct_ib.so.0.0.  0000154B4771D4FA  uct_ib_mlx5_compl     Unknown  Unknown
+libuct_ib.so.0.0.  0000154B4774668B  uct_dc_mlx5_ep_ha     Unknown  Unknown
+libuct_ib.so.0.0.  0000154B4771EF9D  uct_ib_mlx5_check     Unknown  Unknown
+libuct_ib.so.0.0.  0000154B47748C32  Unknown               Unknown  Unknown
+libucp.so.0.0.0    0000154B4806F81A  ucp_worker_progre     Unknown  Unknown
+libmlx-fi.so       0000154B482F8DF1  Unknown               Unknown  Unknown
+libmlx-fi.so       0000154B48311EAD  Unknown               Unknown  Unknown
+libmlx-fi.so       0000154B4831139B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000154FA2E00E40  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000154FA29A5715  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000154FA2F2C3A9  PMPI_Waitall          Unknown  Unknown
+libmpifort.so.12.  0000154FA426E250  pmpi_waitall__        Unknown  Unknown
+regcmMPICLM45      0000000000BB916E  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000441A94  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000043D7DA  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000005E4035  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000005CB640  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000416331  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000005EB434  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000041544D  Unknown               Unknown  Unknown
+libc-2.28.so       0000154FA18ABD85  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      000000000041536E  Unknown               Unknown  Unknown
+ERROR: Simulation ended abruptly!!!
+Unknown ERROR Detected at 1999-08-13 05!

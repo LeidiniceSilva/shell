@@ -22,8 +22,8 @@
  domname  = 'EUR-11',          ! Name of the domain/experiment.
  h2opct = 50.,                 ! Surface min H2O percent to be considered water
  h2ohgt = .false.,             ! Allow water points to have hgt greater than 0
- dirter = '/home/mda_silv/scratch/EUR-11/icbc/', ! Output directory for terrain files
- inpter = '/home/mda_silv/RegCM_Data/',          ! Input directory for SURFACE dataset
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc/', ! Output directory for terrain files
+ inpter = '/leonardo_work/ICT24_ESP/RCMDATA/',                               ! Input directory for SURFACE dataset
  /
 
  &boundaryparam
@@ -41,8 +41,8 @@
  gdate1 = 2000010100,        ! Start date for ICBC data generation
  gdate2 = 2002010100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/home/mda_silv/scratch/EUR-11/icbc/', ! Path for ICBC produced input files
- inpglob = '/home/mda_silv/RegCM_Data/',          ! Path for ICBC global input datasets.
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc/', ! Path for ICBC produced input files
+ inpglob = '/leonardo_work/ICT24_ESP/RCMDATA/',                               ! Path for ICBC global input datasets.
  /
 
  &restartparam
@@ -67,7 +67,7 @@
  ifshf   = .true. ,           ! Output SHF (pr hourly)
  ifsrf   = .true. ,           ! Output SRF ?
  srffrq  =     3.,            ! Frequency in hours to write to SRF
- dirout  = '/home/mda_silv/scratch/EUR-11/WSM5-Europe/',       
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/WSM5-Europe/',       
  lsync   = .true.,            ! If sync of output files at every timestep is
  icosp = 1,                   ! Enable COSP needed fields in output in the ATM
  do_parallel_netcdf_in  = .true.,  ! This enables paralell input
@@ -92,7 +92,7 @@
  iclimao3 =          1, ! Use O3 climatic dataset from SPARC CMIP5
  isolconst =         0, ! Use a constant 1367 W/m^2 instead of the prescribed
  iclimaaer =         2, ! Use AEROSOL climatic dataset from AERGLOB for non
- radclimpath = '/home/mda_silv/RegCM_Data/MERRA2/OPPMONTH',
+ radclimpath = '/leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH',
  /
 
  &cldparam
