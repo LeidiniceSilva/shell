@@ -11,23 +11,23 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2000-2000"
+YR="2000-2001"
 
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 VAR="pr"
 EXP="EUR-11"
-FOLDER_LIST="Noto-Europe wdm7-Europe wsm5-Europe wsm7-Europe"
+FOLDER_LIST="NoTo-Europe WDM7-Europe WSM7-Europe WSM5-Europe"
 
 echo
-echo "--------------- INIT POSPROCESSING MODEL ----------------"
+echo "--------------- INIT POSTPROCESSING MODEL ----------------"
 
 for FOLDER in ${FOLDER_LIST[@]}; do
 
-    DIR_IN="/marconi_scratch/userexternal/rnoghero/${FOLDER}"
-    DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/post_evaluate/rcm/${FOLDER}"
-    BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/${FOLDER}"
+    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/rcm"
+    BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
     echo
     cd ${DIR_OUT}

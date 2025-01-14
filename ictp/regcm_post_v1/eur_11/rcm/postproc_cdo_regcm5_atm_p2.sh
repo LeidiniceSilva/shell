@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH -A ICT23_ESP_1
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH -p dcgp_usr_prod
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Mar 12, 2024'
@@ -17,7 +26,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 EXP="EUR-11"
-VAR_LIST="pr tas"
+VAR_LIST="cl cli clr cls clw hus rh"
 SEASON_LIST="DJF MAM JJA SON"
 FOLDER_LIST="NoTo-Europe WDM7-Europe WSM7-Europe WSM5-Europe"
 
@@ -34,15 +43,25 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     cd ${DIR_OUT}
     echo ${DIR_OUT}
 
-    for VAR in ${VAR_LIST[@]}; do
-    
-        echo
-        echo "1. Select variable: ${VAR}"
-        for YEAR in `seq -w ${IYR} ${FYR}`; do
-            for MON in `seq -w 01 12`; do
-                CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
-            done
-        done
+    echo
+    echo "1. Convert to sigma to pressure"
+    for YEAR in `seq -w ${IYR} ${FYR}`; do
+	for MON in `seq -w 01 12`; do
+	    ${BIN}/./sigma2pCLM45 ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc
+            ${BIN}/./sigma2pCLM45 ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100.nc
+
+	    echo
+            echo "2. Select variable"
+	    for VAR in ${VAR_LIST[@]}; do               
+		if [ ${VAR} = cl ]
+		then
+		CDO selname,${VAR} ${EXP}_RAD.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+		else
+                CDO selname,${VAR} ${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+		fi
+	    done
+	done
+    done
     
         echo 
         echo "2. Concatenate data"

@@ -31,7 +31,7 @@ pp=""
 [[ $p = BDW ]] && pp="-p bdw_all_serial -t 4:00:00"
 [[ $p = SKL ]] && pp="-p skl_usr_prod -t 24:00:00"
 
-eT=2000010100
+eT=2009010100
 ter=true 
 sst=true 
 icb=false
