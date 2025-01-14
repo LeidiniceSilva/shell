@@ -2,7 +2,7 @@
 
 #SBATCH -N 1
 #SBATCH -t 24:00:00
-#SBATCH -J Testing
+#SBATCH -J Postproc
 #SBATCH -p esp
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
@@ -24,8 +24,6 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 EXP="EUR-11"
-VAR_LIST="cl cli clr cls clw hus rh"
-SEASON_LIST="DJF MAM JJA SON"
 FOLDER_LIST="NoTo-Europe WDM7-Europe WSM7-Europe WSM5-Europe"
 
 echo
@@ -33,8 +31,9 @@ echo "--------------- INIT POSTPROCESSING MODEL ----------------"
 
 for FOLDER in ${FOLDER_LIST[@]}; do
 
-    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/${FOLDER}"
-    BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
+    DIR_IN="/home/mda_silv/scratch/EUR-11/${FOLDER}"
+    BIN="/home/mda_silv/RegCM/bin"
+    WIND="/home/mda_silv/github_projects/shell/ictp/regcm_post_v2/scripts_regcm"
 
     echo
     cd ${DIR_IN}
@@ -44,8 +43,12 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     echo "1. Convert to sigma to pressure"
     for YEAR in `seq -w ${IYR} ${FYR}`; do
 	for MON in `seq -w 01 12`; do
+
 	    ${BIN}/./sigma2pCLM45 ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc
-            ${BIN}/./sigma2pCLM45 ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100.nc
+	    python3 ${WIND}/rotatewinds.py ${EXP}_ATM.${YEAR}${MON}0100_pressure.nc
+            
+	    ${BIN}/./sigma2pCLM45 ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100.nc
+
 	done
     done
 done

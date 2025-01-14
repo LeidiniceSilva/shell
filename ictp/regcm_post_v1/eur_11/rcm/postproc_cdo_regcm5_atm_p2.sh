@@ -26,7 +26,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 EXP="EUR-11"
-VAR_LIST="cl cli clr cls clw hus rh"
+VAR_LIST="cl cli clr cls clw hail hus gra ncc ncn ncr rh"
 SEASON_LIST="DJF MAM JJA SON"
 FOLDER_LIST="NoTo-Europe WDM7-Europe WSM7-Europe WSM5-Europe"
 
@@ -43,12 +43,8 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     cd ${DIR_OUT}
     echo ${DIR_OUT}
 
-    echo
-    echo "1. Convert to sigma to pressure"
     for YEAR in `seq -w ${IYR} ${FYR}`; do
 	for MON in `seq -w 01 12`; do
-	    ${BIN}/./sigma2pCLM45 ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc
-            ${BIN}/./sigma2pCLM45 ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100.nc
 
 	    echo
             echo "2. Select variable"
