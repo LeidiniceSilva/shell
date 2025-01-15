@@ -18,7 +18,12 @@ cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461)
 
 7. Delete files
 
-1. Select variable: tas
-cdo    selname (Warning): Variable name tas not found!
+/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/rcm
 
-cdo    selname (Abort): No variables selected!
+1. Select variable: pr
+
+2. Concatenate data
+
+3. Convert unit
+
+4. Hourly mean

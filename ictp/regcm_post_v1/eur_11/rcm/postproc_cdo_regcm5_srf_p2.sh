@@ -27,7 +27,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="pr tas"
+VAR_LIST="pr"
 FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
 
 echo
@@ -59,12 +59,7 @@ for FOLDER in ${FOLDER_LIST[@]}; do
            
         echo
         echo "3. Convert unit"
-        if [ ${VAR} = pr  ]
-        then
         CDO -b f32 mulc,3600 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_hr_${YR}.nc
-        else
-        CDO -b f32 subc,273.15 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_hr_${YR}.nc
-        fi
 	
 	echo
 	echo "4. Hourly mean"
