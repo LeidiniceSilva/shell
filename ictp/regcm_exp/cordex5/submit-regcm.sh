@@ -24,14 +24,14 @@ dep=$3
 dpath=$( echo $nl | cut -d. -f1 )
 
 nnod=16
-dmon=3
+dmon=2
 
 driv=$( echo $nl | cut -d- -f1 )
 tdir=$base/$driv/$dpath
 mkdir -p $tdir
 
 startTarget=1999010100
-  endTarget=2000010100
+  endTarget=2010010100
 [[ $startDate -eq $startTarget ]] && newsim=true || newsim=false
 if [ $startDate -lt $startTarget ]; then
   echo "ERROR! startDate < startTarget"

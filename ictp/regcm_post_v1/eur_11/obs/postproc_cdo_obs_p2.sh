@@ -27,11 +27,11 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-if [ ${DATASET} == 'CPC' ]
-then
-echo 
+echo
 echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
 
+if [ ${DATASET} == 'CPC' ]
+then
 VAR_LIST="precip"
 for VAR in ${VAR_LIST[@]}; do
     
@@ -47,15 +47,8 @@ for VAR in ${VAR_LIST[@]}; do
     done
 done
 
-echo 
-echo "3. Delete files"
-rm *_${YR}.nc
-
 elif [ ${DATASET} == 'CRU' ]
 then
-echo 
-echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
-
 VAR_LIST="pre tmp"
 for VAR in ${VAR_LIST[@]}; do
     
@@ -71,21 +64,14 @@ for VAR in ${VAR_LIST[@]}; do
     done
 done
 
-echo 
-echo "3. Delete files"
-rm *_${YR}.nc
-
 elif [ ${DATASET} == 'EOBS' ]
 then
-echo 
-echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
-
 VAR_LIST="rr"
 for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}.nc ${VAR}_${DATASET}_day_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/rr.nc ${VAR}_${DATASET}_day_${YR}.nc
 
     echo
     echo "2. Seasonal avg"
@@ -97,37 +83,22 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-echo 
-echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
-
-VAR_LIST="rr"
+VAR_LIST="pr"
 for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}.nc ${VAR}_${DATASET}_day_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/pr_ERA5_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
 
     echo
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
-        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
         ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
     done
-
 done
-
-echo 
-echo "3. Delete files"
-rm *_${YR}.nc
-
-echo 
-echo "3. Delete files"
-rm *_${YR}.nc
   
 else
-echo 
-echo "------------------------------- INIT POSTPROCESSING DATASET -------------------------------"
-
 VAR_LIST="precipitation"
 for VAR in ${VAR_LIST[@]}; do
     
@@ -141,16 +112,14 @@ for VAR in ${VAR_LIST[@]}; do
         CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
 	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
     done
-
 done
-
-echo 
-echo "3. Delete files"
-rm *_${YR}.nc
-
 fi
 
 echo
-echo "------------------------------- THE END POSTPROCESSING DATASET -------------------------------"
+echo "Delete files"
+rm *_${YR}.nc
+
+echo
+echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"
 
 }

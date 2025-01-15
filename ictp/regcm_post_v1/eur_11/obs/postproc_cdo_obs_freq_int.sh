@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Mar 12, 2024'
@@ -11,25 +20,24 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2000-2000"
+DATASET=$1
+EXP="EUR-11"
 
+YR="2000-2001"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
-
-EXP="EUR-11"
-DATASET="EOBS" 
 SEASON_LIST="DJF MAM JJA SON"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11/post_evaluate/obs"
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/obs"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
 echo 
-echo "------------------------------- INIT POSTPROCESSING DATASET -------------------------------"
+echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
 
 if [ ${DATASET} == 'CPC' ]
 then
@@ -44,6 +52,28 @@ echo "2. Frequency and intensity by season"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
     
+    CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc ${VAR}_freq_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+    ${BIN}/./regrid ${VAR}_freq_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+
+    CDO histmean,1,100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+    ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+done
+
+elif [ ${DATASET} == 'ERA5' ]
+then
+VAR="pr"
+
+echo
+echo "1. Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/pr_ERA5_hr_2000-2009.nc ${VAR}_${DATASET}_hr_${YR}.nc
+CDO daysum ${VAR}_${DATASET}_hr_${YR}.nc ${VAR}_${DATASET}_${YR}.nc
+CDO mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+
+echo
+echo "2. Frequency and intensity by season"
+for SEASON in ${SEASON_LIST[@]}; do
+    CDO selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
+
     CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc ${VAR}_freq_${EXP}_${DATASET}_${SEASON}_${YR}.nc
     ${BIN}/./regrid ${VAR}_freq_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
 
@@ -73,10 +103,10 @@ done
 fi
 
 echo 
-echo "3. Delete files"
+echo "Delete files"
 rm *_${YR}.nc
 
 echo
-echo "------------------------------- THE END POSTPROCESSING DATASET -------------------------------"
+echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"
 
 }

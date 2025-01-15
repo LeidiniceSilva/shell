@@ -1,0 +1,166 @@
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
+
+ : this run start at    : 2025-01-15 17:06:32+0100
+ : it is submitted by   : mdasilva
+ : it is running on     : lrdn4255.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/corde
+ x5
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2002-01-01 00:00:00 UTC        
+ GLOBIDATE2 :  2002-02-01 00:00:00 UTC        
+ NSTEPS     :          125
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+      131072 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2002/tatm_2002_01.nc
+  2.118261406928928E-003   248.157823010410     
+      196608 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2002/geop_2002_01.nc
+   7.63019657081165        244787.973964215     
+      262144 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2002/qhum_2002_01.nc
+  3.709795293588085E-007  1.213839811757398E-002
+      327680 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2002/uwnd_2002_01.nc
+  5.096848840186552E-003   8.06720712977913     
+      393216 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2002/vwnd_2002_01.nc
+  4.623303417684125E-003   3.96111303090835     
+ READ IN fields at DATE: 2002-01-01 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-01 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-01 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-01 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-02 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-02 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-02 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-02 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-03 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-03 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-03 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-03 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-04 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-04 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-04 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-04 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-05 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-05 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-05 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-05 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-06 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-06 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-06 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-06 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-07 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-07 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-07 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-07 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-08 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-08 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-08 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-08 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-09 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-09 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-09 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-09 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-10 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-10 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-10 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-10 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-11 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-11 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-11 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-11 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-12 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-12 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-12 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-12 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-13 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-13 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-13 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-13 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-14 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-14 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-14 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-14 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-15 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-15 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-15 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-15 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-16 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-16 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-16 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-16 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-17 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-17 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-17 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-17 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-18 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-18 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-18 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-18 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-19 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-19 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-19 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-19 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-20 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-20 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-20 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-20 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-21 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-21 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-21 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-21 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-22 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-22 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-22 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-22 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-23 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-23 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-23 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-23 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-24 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-24 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-24 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-24 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-25 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-25 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-25 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-25 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-26 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-26 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-26 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-26 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-27 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-27 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-27 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-27 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-28 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-28 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-28 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-28 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-29 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-29 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-29 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-29 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-30 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-30 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-30 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-30 18:00:00 UTC        
+ READ IN fields at DATE: 2002-01-31 00:00:00 UTC        
+ READ IN fields at DATE: 2002-01-31 06:00:00 UTC        
+ READ IN fields at DATE: 2002-01-31 12:00:00 UTC        
+ READ IN fields at DATE: 2002-01-31 18:00:00 UTC        
+      131072 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2002/tatm_2002_02.nc
+  2.099710707534753E-003   248.538241526482     
+      196608 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2002/geop_2002_02.nc
+   7.54236200654632        241104.049131497     
+      262144 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2002/qhum_2002_02.nc
+  3.810233113838429E-007  1.245518314155501E-002
+      327680 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2002/uwnd_2002_02.nc
+  4.654788451420110E-003   2.22300677325476     
+      393216 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2002/vwnd_2002_02.nc
+  4.206436457824684E-003   3.74376164993515     
+ READ IN fields at DATE: 2002-02-01 00:00:00 UTC        
+ Input ready at : Wed Jan 15 17:41:19 2025
+ Successfully completed ICBC
+icbc script complete
