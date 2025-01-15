@@ -24,14 +24,14 @@ sD="${2:-1999010100}" #start Date
 cL="${3:-false}"      #control Logic
 dep=$4
 
-dmon=12
+dmon=1
 p=USR
 pp=""
 [[ $p = USR ]] && pp="-p dcgp_usr_prod -t 24:00:00"
 [[ $p = BDW ]] && pp="-p bdw_all_serial -t 4:00:00"
 [[ $p = SKL ]] && pp="-p skl_usr_prod -t 24:00:00"
 
-eT=2009010100
+eT=2010010100
 ter=true 
 sst=true 
 icb=false

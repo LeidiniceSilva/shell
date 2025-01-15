@@ -11,14 +11,14 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2000-2001"
+EXP="EUR-11"
 
+YR="2000-2001"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 VAR="pr"
-EXP="EUR-11"
-FOLDER_LIST="NoTo-Europe WDM7-Europe WSM7-Europe WSM5-Europe"
+FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
