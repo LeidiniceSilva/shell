@@ -1,0 +1,389 @@
+!-----------------------------------------------------------------------
+!
+! This README details namelist parameters for RegCM V5
+!
+!-----------------------------------------------------------------------
+!
+! DOMAIN dimension Stanza
+!-----------------------------------------------------------------------
+
+ &dimparam 
+ iy     = 783,  ! This is number of points in the N/S direction
+ jx     = 1231, ! This is number of points in the E/W direction
+ kz     = 40,   ! Number of vertical levels
+ dsmin  = 0.01, ! Minimum sigma spacing (only used if kz is not 14, 18, 23, 41)
+ dsmax  = 0.05, ! Maximum sigma spacing (only used if kz is not 14, 18, 23, 41)
+ nsg    = 1,    ! For subgridding, number of points to decompose. If nsg=1,
+                ! no subgridding is performed. CLM does NOT work as of now with
+                ! subgridding enabled.
+ njxcpus = -1,  ! Number of CPUS to be used in the jx (lon) dimension.
+                ! If <=0 , the executable will try to figure out a suitable
+                ! decomposition.
+ niycpus = -1,  ! Number of CPUS to be used in the iy (lat) dimension.
+                ! If <=0 , the executable will try to figure out a suitable
+                ! decomposition.
+ /
+ 
+!
+! Choice of the dynamical core
+!
+ &coreparam
+ idynamic = 3,  ! Choice of dynamical core
+                ! 1 = MM4 hydrostatical core
+                ! 2 = MM5 NON hydrostatical core
+                ! 3 = MOLOCH NON hydrostatical core
+ /
+ 
+!
+! Dynamical core parameters
+!
+ &dynparam
+ /
+ 
+!
+! DOMAIN geolocation Stanza
+!
+ &geoparam
+ iproj = 'ROTLLR', ! Domain cartographic projection. Supported values are:
+                   ! 'LAMCON', Lambert conformal.
+                   ! 'POLSTR', Polar stereographic.
+                   ! 'NORMER', Normal  Mercator.
+                   ! 'ROTMER', Rotated Mercator.
+ ds = -0.03,       ! Grid point horizontal resolution in km
+ ptop = 10.0,      ! Pressure of model top in cbar
+ clat = -25.0,     ! Central latitude  of model domain in degrees North hemisphere is positive
+ clon = 303.0,     ! Central longitude of model domain in degrees West is negative.
+ plat = -70.60,    ! Pole latitude (only for rotated Mercator Proj)
+ plon = 123.94,    ! Pole longitude (only for rotated Mercator Proj)
+ truelatl = -30.,  ! Lambert true latitude (low latitude side)
+ truelath = -60.,  ! Lambert true latitude (high latitude side)
+ i_band = 0,       ! Use this to enable a tropical band. In this case the ds,
+                   ! iproj, clat, clon parameters are not considered.
+ /
+ 
+!
+! DOMAIN terrain generation parameters
+!
+ &terrainparam
+ domname     = 'CSAM-3',      ! Name of the domain/experiment. Controls naming of input files
+ lresamp     = .false.,       ! Do a first resampling before interpolation
+ smthbdy     = .true.,        ! Perform extra smoothing in boundaries
+ ismthlev    = 2,             ! Smoothing level (additional 1-2-1 smoother)
+ roidem      = 1.5,           ! Interpolation radius in ds unit for topography
+ h2ohgt      = .true.,        ! Allow water points to have hgt greater than 0
+ h2opct      = 50.0,          ! Surface min H2O percent to be considered water
+ lakedpth    = .true.,        ! If using lakemod (see below), produce from terrain program the domain bathymetry
+ lsmoist     = .false.,       ! Use Satellite Soil Moisture Dataset for initialization of soil moisture.
+ fudge_lnd   = .false.,       ! Fudging Control flag, for landuse of grid
+ fudge_lnd_s = .false.,       ! Fudging Control flag, for landuse of subgrid
+ fudge_tex   = .false.,       ! Fudging Control flag, for texture of grid
+ fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
+ fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
+ fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/icbc', ! Output directory for terrain files
+ inpter = '/leonardo_work/ICT24_ESP/RCMDATA/',                                    ! Input directory for SURFACE dataset
+ tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
+ smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
+                              ! when lsmoist option is True
+ moist_filename = 'moist.nc', ! Read initial moisture and snow from this file
+ /
+ 
+!
+! Debug I/O printout level.
+!
+ &debugparam
+ /
+ 
+!
+! Buffer Zone Control relaxation + diffusion term
+!
+ &boundaryparam
+ nspgx  = 30, ! nspgx-1 represent the number of cross point slices on
+              ! the boundary sponge or relaxation boundary conditions.
+ nspgd  = 30, ! nspgd-1 represent the number of dot point slices on
+              ! the boundary sponge or relaxation boundary conditions.
+ high_nudge =    9.0D0, ! Nudge value high range
+ medium_nudge =  6.0D0, ! Nudge value medium range
+ low_nudge =     3.0D0  ! Nudge value low range
+ /
+ 
+!
+! ICBC Global data input control
+!
+ &globdatparam
+ ibdyfrq =     6,            ! boundary condition interval (hours)
+ ssttyp = 'ERA5D',           ! Type of Sea Surface Temperature used
+                             !  One in: GISST, OISST, OI2ST, OI_WK, OI2WK,
+                             !          FV_A2, FV_B2, EH5A2, EH5B1, EHA1B,
+                             !          EIN75, EIN15, CCSST,
+                             !          CA_XX, HA_XX, EC_XX, IP_XX, GF_XX,
+                             !          CN_XX, MP_XX
+ dattyp = 'ERA5',            ! Type of global analysis datasets used
+! dattyp = 'FNEST',          ! Type of global analysis datasets used
+                             !  One in: ECMWF, ERA40, EIN75, EIN15, EIN25,
+                             !          ERAHI, NNRP1, NNRP2, NRP2W, GFS11,
+                             !          FVGCM, FNEST, EH5A2, EH5B1, EHA1B,
+                             !          CCSMN, ECEXY, CA_XX, HA_XX, EC_XX,
+                             !          IP_XX, GF_XX, CN_XX, MP_XX
+                             ! with XX for CMIP5 datasets in 26, 45, 85
+ chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
+                             ! One in : MZ6HR, 6 hours MOZART output
+                             !        : MZCLM, MOZART climatology 1999-2009
+ gdate1 = 2004010100,       ! Start date for ICBC data generation
+ gdate2 = 2004020100,         ! End data for ICBC data generation
+ calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/icbc/',  ! Path for ICBC produced input files
+ inpglob = '/leonardo_work/ICT24_ESP/RCMDATA/',                                      ! Path for ICBC global input datasets
+ ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
+                             ! run. Activate random noise added to input
+                             ! ICBC controlled by the perturbparam stanza
+                             ! Look http://users.ictp.it/~pubregcm/RegCM4/globedat.htm
+                             ! on how to download them.
+ /
+ 
+!
+! Nesting control
+!
+ &fnestparam
+ coarse_outdir = '/home/netapp-clima/users/jciarlo/RegCM5-tests/EUR11-R5/1999/', ! Coarse domain output dir if FNEST
+ coarse_domname = 'EUR-11',                                                      ! Coarse domain domname
+ /
+ 
+!
+! Perturbation control for ensembles
+!
+ &perturbparam
+ lperturb_topo = .false.,     ! Add perturbation to surface elevation
+ perturb_frac_topo = 0.001D0, ! Fractional value of the perturbation on topo
+ lperturb_ts = .false.,       ! Add perturbation to surface temeprature
+ perturb_frac_ts = 0.001D0,   ! Fractional value of the perturbation on ts
+ lperturb_ps = .false.,       ! Add perturbation to surface pressure
+ perturb_frac_ps = 0.001D0,   ! Fractional value of the perturbation on ps
+ lperturb_t  = .false.,       ! Add perturbation to temperature
+ perturb_frac_t  = 0.001D0,   ! Fractional value of the perturbation on t
+ lperturb_q  = .false.,       ! Add perturbation to humidity mixing ratio
+ perturb_frac_q  = 0.001D0,   ! Fractional value of the perturbation on q
+ lperturb_u  = .false.,       ! Add perturbation to zonal velocity
+ perturb_frac_u  = 0.001D0,   ! Fractional value of the perturbation on u
+ lperturb_v  = .false.,       ! Add perturbation to meridional velocity
+ perturb_frac_v  = 0.001D0,   ! Fractional value of the perturbation on v
+ /
+ 
+!
+! Model start/restart control
+!
+ &restartparam
+ ifrest  = restLogic,   ! If a restart
+ mdate0  = 2004010100, ! Global start (is globidate1)
+ mdate1  = startDate,   ! Start date of this run
+ mdate2  = endDate,     ! End date for this run 
+ /
+ 
+!
+! Model timing parameters
+! All values except dt can be zero. Convenient values are chosen by the model.
+!
+ &timeparam
+ dt     =   45.,        ! time step in seconds
+ /
+ 
+!
+! Model Output control
+!
+ &outparam
+ ifcordex  = .true.,            ! <- selects and reshuffle output fields
+ atmfrq    =     1.,            ! Frequency in hours to write to ATM
+ outnwf    =     1.,            ! Day interval to open new files   (0 = monthly)
+ ! ifsave  = .true.,            ! Create SAV files for restart
+ ! savfrq  =     0.,            ! Frequency in days to create them (0 = monthly)
+ ! ifatm   = .true.,            ! Output ATM ?
+ ! atmfrq  =     1.,            ! Frequency in hours to write to ATM
+ ! ifrad   = .true.,            ! Output RAD ?
+ ! radfrq  =     6.,            ! Frequency in hours to write to RAD
+ ! ifsts   = .true.,            ! Output STS (frequence is daily) ?
+ ! ifsrf   = .true.,            ! Output SRF ?
+ ! srffrq  =    1.0,            ! Frequency in hours to write to SRF
+ ! ifsub   = .true.,            ! Output SUB ?
+ ! subfrq  =     6.,            ! Frequency in hours to write to SUB
+ ! iflak   = .false.,           ! Output LAK ?
+ ! lakfrq  =     6.,            ! Frequency in hours to write to LAK
+ ! ifchem  = .false.,           ! Output CHE ?
+ ! ifopt   = .false.,           ! Output OPT ?
+ ! chemfrq =     6.,            ! Frequency in hours to write to CHE
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/dpath/', ! Path where all output will be placed
+ lsync   = .false.,                ! If sync of output files at every timestep is requested. 
+                                   ! Note, it has a performance impact.
+                                   ! Enabled by default if debug_level > 2
+ icosp = 0,                        ! Enable COSP needed fields in output in the ATM
+ idiag = 0,                        ! Enable tendency diagnostic output in the ATM
+                                   ! file. NOTE: output file gets HUGE.
+ do_parallel_netcdf_in  = .true.,  ! This enables paralell input
+                                   ! Each processors reads its slice in the
+                                   ! input file. Enable ONLY in case of
+                                   ! HUGE input bandwidth,
+ do_parallel_netcdf_out = .false., ! This enables paralell output if the
+                                   ! hdf5/netcdf libraries support it and
+                                   ! the model is compiled with: --enable-nc4-parallel
+ /
+ 
+!
+! Model Physics
+!
+ &physicsparam
+ iboudy  =          5,  ! Lateral Boundary conditions scheme
+                        !   0 => Fixed
+                        !   1 => Relaxation, linear technique.
+                        !   2 => Time-dependent
+                        !   3 => Time and inflow/outflow dependent.
+                        !   4 => Sponge (Perkey & Kreitzberg, MWR 1976)
+                        !   5 => Relaxation, exponential technique.
+ isladvec =         0,  ! Semilagrangian advection scheme for tracers and humidity
+                        !   0 => Disabled
+                        !   1 => Enable Semi Lagrangian Scheme
+ iqmsl =            1,  ! Quasi-monotonic Semi Lagrangian
+                        !   0 => Standard Semi-Lagrangian
+                        !   1 => Bermejo and Staniforth 1992 QMSL scheme
+ ibltyp  =          1,  ! Boundary layer scheme
+                        !   0 => Frictionless
+                        !   1 => Holtslag PBL (Holtslag, 1990)
+                        !   2 => UW PBL (Bretherton and McCaa, 2004)
+ icup_lnd =         0,  ! Cumulus convection scheme Over Land
+ icup_ocn =         0,  ! Cumulus convection scheme Over Icean
+                        !   1 => Kuo
+                        !   2 => Grell
+                        !   3 => Betts-Miller (1986) DOES NOT WORK !!!
+                        !   4 => Emanuel (1991)
+                        !   5 => Tiedtke (1996)
+                        !   6 => Kain-Fritsch (1990), Kain (2004)
+                        !  -1 => MM5 Shallow cumulus scheme: No precipitation but only mixing.
+ ipptls  =          2,  ! Moisture scheme
+                        !   1 => Explicit moisture (SUBEX; Pal et al 2000)
+                        !   2 => Explicit moisture Nogherotto/Tompkins
+                        !   3 => Explicit moisture WSM5
+ iocncpl =          0,  ! Ocean SST from coupled Ocean Model through RegESM
+                        !   1 => Coupling activated
+ iwavcpl =          0,  ! Ocean roughness from coupled Wave Model through RegESM
+                        !   1 => Coupling activated
+ iocnflx =          2,  ! Ocean Flux scheme
+                        !   1 => Use BATS1e Monin-Obukhov
+                        !   2 => Zeng et al (1998)
+                        !   3 => Coare bulk flux algorithm
+ iocnrough =        1,  ! Zeng Ocean model roughness formula to use.
+                        !   1 => (0.0065*ustar*ustar)/egrav
+                        !   2 => (0.013*ustar*ustar)/egrav + 0.11*visa/ustar
+                        !   3 => (0.017*ustar*ustar)/egrav
+                        !   4 => Huang 2012 free convection and swell effects
+                        !   5 => four regime formulation
+ iocnzoq =          1,  ! Zeng Ocean model factors for t,q roughness
+                        !   1 => 2.67*(re**d_rfour) - 2.57
+                        !   2 => min(4.0e-4, 2.0e-4*re**(-3.3))
+                        !   3 => COARE formulation as in bulk flux above
+ scenario =   'SSP370', ! IPCC Scenario 
+ ipgf    =          0,  ! Pressure gradient force scheme
+                        !   0 => Use full fields
+                        !   1 => Hydrostatic deduction with pert. temperature
+ iemiss  =          0,  ! Use computed long wave emissivity
+ lakemod =          1,  ! Use lake model
+ ichem   =          0,  ! Use active aerosol chemical model
+ idcsst   =         0,  ! Use diurnal cycle sst scheme
+ iseaice  =         0,  ! Model seaice effects
+ iconvlwp =         1,  ! Use convective algo for lwp in the large-scale
+                        ! This is reset to zero if using ipptls = 2
+ icldfrac =         1,  ! Cloud fraction algorithm
+                        !   0 : Original SUBEX
+                        !   1 : Xu-Randall empirical
+                        !   2 : Thompson scheme
+ icldmstrat =       0,  ! Simulate stratocumulus clouds
+ icumcloud =        1,  ! Formulas to use for cumulus clouds (cf and lwc)
+                        ! Cloud fractions, only if mass fluxes are not
+                        ! available (Kuo and BM):
+                        !   0,1 => cf = 1-(1-clfrcv)**(1/kdepth)
+                        !   2   => cf = cloud profile
+                        ! Liquid water content:
+                        !   0   => constant in cloud
+                        !   1,2 => function of temperature
+ irrtm    =         0,  ! Use RRTM radiation scheme instead of CCSM
+ iclimao3 =         0,  ! Use O3 climatic dataset from SPARC CMIP5
+ isolconst =        0,  ! Use a constant 1367 W/m^2 instead of the prescribed
+                        ! TSI recommended CMIP5 solar forcing data.
+ islab_ocean =      0,  ! Activate the SLAB ocean model
+ itweak =           0,  ! Enable tweak scenario
+ iclimaaer =        3,  ! x Aerosol
+ radclimpath = '/leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH', 
+ /
+ 
+!
+! Non-hydrostatic core option
+!
+ &referenceatm
+ base_state_pressure = 101325.0, ! Base state reference pressure
+ logp_lrate = 47.70,             ! Logp lapse rate d(T)/d(ln P) [K/ln(Pa)]
+ /
+ 
+ &nonhydroparam
+ mo_nadv = 3,       ! Number of advection loops for phisics loop
+ mo_nsound = 6,     ! Number of sound loops for advection loop
+ mo_nzfilt = 0,
+ / 
+ 
+!
+! MOLOCH control parameters
+!
+ &molochparam
+ mo_ztop = 25000.0, ! Atmosphere top lid in meters
+ mo_a0 = 0.0,       ! Vertical stretching in model level equations
+ mo_h = 7500.0,     !
+ /
+ 
+!
+ &cldparam
+ ncld      = 1,       ! # of bottom model levels with no clouds (rad only)
+ rhmax     = 1.01,    ! RH at whicn FCC = 1.0
+ rhmin     = 0.01,    ! RH min value
+ rh0land   = 0.80,    ! Relative humidity threshold for land (subex)
+ rh0oce    = 0.90,    ! Relative humidity threshold for ocean (subex)
+ tc0       = 238.0,   ! Below this temp, rh0 begins to approach unity (subex)
+ cllwcv    = 0.3e-3,  ! Cloud liquid water content for convective precip.
+ clfrcvmax = 1.00,    ! Max cloud fractional cover for convective precip.
+ cftotmax  = 0.75,    ! Max total cover cloud fraction for radiation
+ kfac_shal = 0.07,    ! Factor cumulus mass flux - cloud fraction - shallow
+ kfac_deep = 0.14,    ! Factor cumulus mass flux - cloud fraction - deep
+ lsrfhack  = .false.  ! Surface radiation hack
+ larcticcorr = .true. ! Vavrus and Waliser Arctic cloud correction
+ rcrit     = 13.5,    ! Mean critical radius !
+ coef_ccn  = 2.5e+20, ! Coefficient determined by assuming a lognormal PMD
+ abulk     = 0.9,     ! Bulk activation ratio
+ /
+ 
+!
+! Holtslag PBL scheme control
+!
+ &holtslagparam
+ ifaholtth10 = 2,
+ ifaholt = 0,
+ /
+ 
+!
+! CLM 4.5 parameters
+!
+ &clm_inparm
+ fpftcon = 'pft-physiology.c130503.nc',
+ fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
+ fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
+ urban_hac = 'OFF',
+ hist_nhtfrq = 0, 1,
+ hist_fincl2(1:6) = 'EFLX_LH_TOT_U','FGR_U','FIRA_U','FSA_U','FSH_U','FSM_U',
+ hist_fincl2(7:11) = 'QRUNOFF_U','RH2M_U','SoilAlpha_U','TG_U','TREFMNAV_U',
+ hist_fincl2(12:13) = 'TREFMXAV_U','TSA_U'
+ /
+ 
+ &clm_soilhydrology_inparm
+ h2osfcflag = 1,
+ origflag = 0,
+ /
+ 
+ &clm_hydrology1_inparm
+ oldfflag = 0,
+ /
+ 
+! ####################################################################

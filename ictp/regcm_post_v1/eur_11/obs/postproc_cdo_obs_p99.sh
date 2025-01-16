@@ -76,6 +76,25 @@ echo
 echo "3. Regrid variable"
 ${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
 
+
+elif [ ${DATASET} == 'MSWEP' ]
+then
+VAR="precipitation"
+
+echo
+echo "1. Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/mswep.day.1979-2020.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+
+echo
+echo "2. Calculate p99"
+CDO timmin ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
+CDO timmax ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
+CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc p99_${EXP}_${DATASET}_${YR}.nc
+
+echo
+echo "3. Regrid variable"
+${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+
 else
 VAR="rr"
 

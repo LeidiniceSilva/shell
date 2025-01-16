@@ -1,0 +1,162 @@
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
+
+ : this run start at    : 2025-01-16 08:54:28+0100
+ : it is submitted by   : mdasilva
+ : it is running on     : lrdn3958.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/corde
+ x5
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2004-04-01 00:00:00 UTC        
+ GLOBIDATE2 :  2004-05-01 00:00:00 UTC        
+ NSTEPS     :          121
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+      131072 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2004/tatm_2004_04.nc
+  2.117493030631395E-003   248.880037139715     
+      196608 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2004/geop_2004_04.nc
+   7.35991087028673        235500.738013315     
+      262144 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2004/qhum_2004_04.nc
+  3.691322207232411E-007  1.201958117167970E-002
+      327680 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2004/uwnd_2004_04.nc
+  2.692504405953513E-003   25.9595531008244     
+      393216 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2004/vwnd_2004_04.nc
+  2.578362106954941E-003  -3.29801159316285     
+ READ IN fields at DATE: 2004-04-01 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-01 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-01 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-01 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-02 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-02 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-02 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-02 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-03 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-03 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-03 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-03 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-04 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-04 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-04 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-04 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-05 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-05 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-05 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-05 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-06 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-06 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-06 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-06 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-07 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-07 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-07 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-07 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-08 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-08 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-08 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-08 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-09 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-09 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-09 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-09 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-10 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-10 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-10 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-10 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-11 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-11 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-11 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-11 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-12 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-12 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-12 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-12 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-13 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-13 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-13 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-13 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-14 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-14 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-14 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-14 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-15 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-15 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-15 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-15 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-16 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-16 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-16 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-16 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-17 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-17 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-17 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-17 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-18 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-18 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-18 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-18 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-19 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-19 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-19 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-19 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-20 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-20 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-20 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-20 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-21 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-21 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-21 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-21 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-22 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-22 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-22 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-22 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-23 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-23 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-23 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-23 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-24 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-24 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-24 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-24 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-25 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-25 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-25 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-25 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-26 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-26 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-26 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-26 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-27 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-27 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-27 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-27 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-28 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-28 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-28 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-28 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-29 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-29 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-29 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-29 18:00:00 UTC        
+ READ IN fields at DATE: 2004-04-30 00:00:00 UTC        
+ READ IN fields at DATE: 2004-04-30 06:00:00 UTC        
+ READ IN fields at DATE: 2004-04-30 12:00:00 UTC        
+ READ IN fields at DATE: 2004-04-30 18:00:00 UTC        
+      131072 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2004/tatm_2004_05.nc
+  2.258875433584034E-003   248.870864580838     
+      196608 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2004/geop_2004_05.nc
+   7.54348250595120        240650.271227497     
+      262144 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2004/qhum_2004_05.nc
+  4.041506126275223E-007  1.319773400869146E-002
+      327680 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2004/uwnd_2004_05.nc
+  3.034784612928791E-003   40.8825310696076     
+      393216 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2004/vwnd_2004_05.nc
+  2.476962513906400E-003  0.534528120305547     
+ READ IN fields at DATE: 2004-05-01 00:00:00 UTC        
+ Input ready at : Thu Jan 16 09:25:25 2025
+ Successfully completed ICBC
+icbc script complete
