@@ -1,0 +1,166 @@
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
+
+ : this run start at    : 2025-01-17 13:13:27+0100
+ : it is submitted by   : mdasilva
+ : it is running on     : lrdn4245.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/corde
+ x5
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2008-03-01 00:00:00 UTC        
+ GLOBIDATE2 :  2008-04-01 00:00:00 UTC        
+ NSTEPS     :          125
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+      131072 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2008/tatm_2008_03.nc
+  2.067752307431228E-003   249.862689878729     
+      196608 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2008/geop_2008_03.nc
+   7.37519849255337        235899.745994504     
+      262144 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2008/qhum_2008_03.nc
+  3.615360152803002E-007  1.182803317667428E-002
+      327680 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2008/uwnd_2008_03.nc
+  2.889618771655359E-003   24.8097734523329     
+      393216 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2008/vwnd_2008_03.nc
+  2.791051693049089E-003  0.559784588899569     
+ READ IN fields at DATE: 2008-03-01 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-01 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-01 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-01 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-02 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-02 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-02 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-02 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-03 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-03 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-03 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-03 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-04 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-04 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-04 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-04 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-05 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-05 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-05 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-05 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-06 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-06 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-06 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-06 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-07 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-07 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-07 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-07 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-08 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-08 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-08 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-08 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-09 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-09 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-09 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-09 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-10 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-10 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-10 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-10 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-11 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-11 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-11 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-11 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-12 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-12 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-12 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-12 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-13 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-13 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-13 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-13 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-14 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-14 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-14 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-14 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-15 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-15 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-15 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-15 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-16 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-16 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-16 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-16 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-17 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-17 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-17 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-17 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-18 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-18 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-18 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-18 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-19 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-19 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-19 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-19 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-20 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-20 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-20 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-20 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-21 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-21 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-21 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-21 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-22 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-22 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-22 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-22 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-23 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-23 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-23 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-23 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-24 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-24 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-24 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-24 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-25 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-25 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-25 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-25 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-26 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-26 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-26 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-26 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-27 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-27 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-27 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-27 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-28 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-28 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-28 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-28 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-29 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-29 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-29 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-29 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-30 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-30 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-30 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-30 18:00:00 UTC        
+ READ IN fields at DATE: 2008-03-31 00:00:00 UTC        
+ READ IN fields at DATE: 2008-03-31 06:00:00 UTC        
+ READ IN fields at DATE: 2008-03-31 12:00:00 UTC        
+ READ IN fields at DATE: 2008-03-31 18:00:00 UTC        
+      131072 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2008/tatm_2008_04.nc
+  2.081585642041152E-003   249.704212808253     
+      196608 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2008/geop_2008_04.nc
+   7.33495582616773        234974.502443962     
+      262144 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2008/qhum_2008_04.nc
+  3.717541506164355E-007  1.212388279372532E-002
+      327680 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2008/uwnd_2008_04.nc
+  2.500335356670852E-003   23.1359034578099     
+      393216 /leonardo_work/ICT24_ESP/RCMDATA//ERA5/2008/vwnd_2008_04.nc
+  2.518570556100433E-003   1.36837725036648     
+ READ IN fields at DATE: 2008-04-01 00:00:00 UTC        
+ Input ready at : Fri Jan 17 13:42:19 2025
+ Successfully completed ICBC
+icbc script complete

@@ -15,7 +15,7 @@ gcm=$1 # $( echo $nl | cut -d- -f1 )
 config=$2
 domain=$3 # CSAM-3
 sim="${config}-${domain}" # $( basename $nl .in )
-datadir=$4 #/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/$gcm/$sim
+datadir=$4 
 idate=$5 # $2
 mail=$6 # "mda_silv@ictp.it"
 experiment=$7
@@ -26,8 +26,7 @@ proc=${11} # 20
 regcm_release=${12}
 regcm_version_id=${13} # 0 # 'v1-r1'
 
-#pycordex=/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/pycordexer
-pycordex=/marconi/home/userexternal/ggiulian/RegCM-5.0.0/Tools/Scripts/pycordexer
+pycordex=/leonardo/home/userexternal/ggiulian/RegCM-CORDEX5/Tools/Scripts/pycordexer
 
 ########################
 ##### end of input #####

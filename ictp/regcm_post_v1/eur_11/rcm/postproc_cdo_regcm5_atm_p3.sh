@@ -27,7 +27,6 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="cl cli clr cls clw rh hus hail gra ncc ncn ncr"
 FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
 
 echo
@@ -43,6 +42,16 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     cd ${DIR_OUT}
     echo ${DIR_OUT}
 
+    if [ ${FOLDER} = 'NoTo-Europe' ] || [ ${FOLDER} = 'WSM5-Europe' ]
+    then
+    VAR_LIST="cl cli clr cls clw rh hus"
+    elif [ ${FOLDER} = 'WSM7-Europe' ]
+    then
+    VAR_LIST="cl cli clr cls clw rh hus hail gra"
+    else
+    VAR_LIST="cl cli clr cls clw rh hus hail gra ncc ncn ncr"
+    fi
+
     echo
     echo "1. Select variable"
     for VAR in ${VAR_LIST[@]}; do
@@ -51,9 +60,9 @@ for FOLDER in ${FOLDER_LIST[@]}; do
 	    for MON in `seq -w 01 12`; do
                 if [ ${VAR} = cl ]
                 then
-                CDO selname,${VAR} ${EXP}_RAD.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+                CDO selname,${VAR} ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
                 else
-                CDO selname,${VAR} ${EXP}_ATM.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+                CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
                 fi
 	    done
 	done
