@@ -27,22 +27,17 @@ echo
 cd ${DIR_IN}
 echo ${DIR_IN}
 
-if [ ${DATASET} == 'MSWEP' ]
-then
-echo 
-echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
-FILE_OUT=mswep.day.1979-2020.nc
-FILE_IN=$( eval ls ????.nc )
-[[ ! -f $FILE_OUT ]] && CDO mergetime $FILE_IN $FILE_OUT
-
-else
 echo
 echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
+
+if [ ${DATASET} == 'MSWEP' ]
+then
 FILE_OUT=mswep.day.1979-2020.nc
 FILE_IN=$( eval ls ????.nc )
 [[ ! -f $FILE_OUT ]] && CDO mergetime $FILE_IN $FILE_OUT
 fi
+
 echo
-echo "------------------------------- THE END POSTPROCESSING DATASET -------------------------------"
+echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"
 
 }
