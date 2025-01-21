@@ -2,7 +2,6 @@
 
 {
 
-source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 if [ $# -ne 1 ]

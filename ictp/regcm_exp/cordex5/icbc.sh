@@ -2,7 +2,7 @@
 
 #SBATCH -A ICT23_ESP_1
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 8 
+#SBATCH -N 1 
 #SBATCH --ntasks-per-node=112
 #SBATCH -o logs/icbc_SLURM.out
 #SBATCH -e logs/icbc_SLURM.err
@@ -14,7 +14,7 @@
 set -eo pipefail
 
 # load required modules
-#module purge
+# module purge
 source /leonardo/home/userexternal/ggiulian/modules
 
 nl=$1

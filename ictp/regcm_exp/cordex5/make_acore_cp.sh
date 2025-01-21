@@ -12,7 +12,7 @@
 datadir=$1
 idate=$2
 
-pycordex=/leonardo/home/userexternal/ggiulian/RegCM-CORDEX5/Tools/Scripts/pycordexer
+pycordex=/leonardo_work/ICT24_ESP/jdeleeuw/pycordexer_cp
 mail=mda_silv@ictp.it
 domain=CSAM-3
 global=ERA5
@@ -32,18 +32,20 @@ srffile=$datadir/*_SRF.${idate}*.nc
 stsfile=$datadir/*_STS.${idate}*.nc
 radfile=$datadir/*_RAD.${idate}*.nc
 atmfile=$datadir/*_ATM.${idate}*.nc
-$pycordex/pycordexer.py \
+$pycordex/pycordexer_cp.py \
 	-m $mail -d $domain -g $global -e $experiment -b $ensemble \
 	-n "$notes" -o $output -p $proc -r $regcm_release \
 	--regcm-version-id $regcm_version_id $srffile $srfvars
-$pycordex/pycordexer.py \
+$pycordex/pycordexer_cp.py \
 	-m $mail -d $domain -g $global -e $experiment -b $ensemble \
 	-n "$notes" -o $output -p $proc -r $regcm_release \
 	--regcm-version-id $regcm_version_id $stsfile $stsvars
 }
 
-mondir=$output/output/$domain/ICTP/$global/$experiment/$ensemble
-mondir=$mondir/ICTP-RegCM$regcm_release/$regcm_version_id/mon
+#mondir=$output/output/$domain/ICTP/$global/$experiment/$ensemble
+#mondir=$mondir/ICTP-RegCM$regcm_release/$regcm_version_id/mon
+
+mondir=$output/CMIP6/DD/$domain/ICTP/$global/$experiment/$ensemble/RegCM5-0/$regcm_version_id/mon
 
 dirnow=$PWD
 mkdir -p $mondir && cd $mondir
@@ -52,7 +54,7 @@ do
   var=`basename $vars`
   mkdir -p $var
   cd $var
-  $pycordex/means.py ../../day/$var/*
+  $pycordex/means.py ../../day/$var/* mon
   cd ../
 done
 

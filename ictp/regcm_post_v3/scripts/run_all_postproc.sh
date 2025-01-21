@@ -1,15 +1,15 @@
 #!/bin/bash
 
-#SBATCH -N 1 
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
 #SBATCH -t 4:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --mail-type=FAIL
+#SBATCH -A ICT23_ESP_1
+#SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
+#SBATCH -p dcgp_usr_prod
 
 {
 
-source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 ##############################
@@ -31,7 +31,7 @@ n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
 
-export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11
+export rdir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11
 yrs=2000-2001
 email="mda_silv@ictp.it"
 
@@ -66,7 +66,7 @@ export lgc_quv=false   #winds
 ##############################
 
 export odir=$rdir/obs
-hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v3/scripts_regcm
+hdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v3/scripts_regcm
 
 cp=false
 if [ $n = Europe03 -o $n = WMediterranean ]; then
@@ -76,9 +76,11 @@ fi
 set -eo pipefail
 # postproc files
 mn=postproc # main script name
+
 #postproc=("$mn" "${mn}_pdfs" "${mn}_p99" "${mn}_vert" "${mn}_quv")
 #postproc=("submit-sigma" "$mn" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs" "${mn}_frq-int" "${mn}_p99" "${mn}_vert" "${mn}_vert_daynight" "${mn}_quv")
-postproc=("submit-sigma_v2" "${mn}_v2" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs_v2" "${mn}_frq-int" "${mn}_p99" "${mn}_vert_v2" "${mn}_vert_daynight" "${mn}_quv_v2" "${mn}_part2" "${mn}_part3" "${mn}_vert_part2")
+#postproc=("submit-sigma_v2" "${mn}_v2" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs_v2" "${mn}_frq-int" "${mn}_p99" "${mn}_vert_v2" "${mn}_vert_daynight" "${mn}_quv_v2" "${mn}_part2" "${mn}_part3" "${mn}_vert_part2")
+postproc=("submit-sigma_v3" "${mn}_v2" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs_v2" "${mn}_frq-int" "${mn}_p99" "${mn}_vert_v2" "${mn}_vert_daynight" "${mn}_quv_v2" "${mn}_part2" "${mn}_part3" "${mn}_vert_part2")
 nrun=$(( ${#postproc[@]} - 1 ))
 
 export n=$this_domain
@@ -95,8 +97,8 @@ for i in `seq 0 $nrun`; do
   id=$(( $i * 2 ))
   this_run=${run_postproc:$id:1}
   this_postproc=${postproc[i]}
-  [[ $this_postproc = "submit-sigma_v2" ]] && sub_sig=$this_run
-# echo $this_run
+  [[ $this_postproc = "submit-sigma_v3" ]] && sub_sig=$this_run
+  # echo $this_run
   post_sigma=false
   if [[ $this_run -eq 1 ]]; then
     [[ $this_postproc = ${mn}_vert ]] && post_sigma=true

@@ -105,7 +105,7 @@ for year in `seq ${yr0} ${yr1}`; do
 				jn=py_${s}_${idate}
 				o=$hdir/logs/${jn}.o
 				e=$hdir/logs/${jn}.e
-				sbatch $em -J $jn -o $o -e $e ${sdir}/make_${s}.sh $wdir $idate 
+				sbatch $em -J $jn -o $o -e $e ${sdir}/make_${s}_cp.sh $wdir $idate 
 			} 									
 
 			# submit
@@ -139,7 +139,7 @@ for year in `seq ${yr0} ${yr1}`; do
 					jn=py_${s}_${idate}
 					o=$hdir/logs/${jn}.o
 					e=$hdir/logs/${jn}.e
-					sbatch $em -J $jn -o $o -e $e ${sdir}/make_${s}.sh $wdir $idate 
+					sbatch $em -J $jn -o $o -e $e ${sdir}/make_${s}_cp.sh $wdir $idate 
 				}
 
 				# submit

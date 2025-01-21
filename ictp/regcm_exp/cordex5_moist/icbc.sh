@@ -14,7 +14,7 @@
 set -eo pipefail
 
 # load required modules
-#module purge
+module purge
 source /leonardo/home/userexternal/ggiulian/modules
 
 nl=$1

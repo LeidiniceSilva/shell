@@ -24,7 +24,7 @@ sD="${2:-1999010100}" #start Date
 cL="${3:-false}"      #control Logic
 dep=$4
 
-dmon=1
+dmon=12
 p=USR
 pp=""
 [[ $p = USR ]] && pp="-p dcgp_usr_prod -t 24:00:00"

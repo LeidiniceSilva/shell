@@ -5,7 +5,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -J Postproc
+#SBATCH -J diurnal_cycle
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -25,7 +25,6 @@ EXP="EUR-11"
 YR="2000-2001"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
-SEASON_LIST="DJF MAM JJA SON"
 
 VAR_LIST="pr"
 FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
@@ -49,7 +48,7 @@ for FOLDER in ${FOLDER_LIST[@]}; do
         echo "1. Select variable: ${VAR}"
         for YEAR in `seq -w ${IYR} ${FYR}`; do
             for MON in `seq -w 01 12`; do
-                CDO selname,${VAR} ${DIR_IN}/${EXP}_SHF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
+                CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
             done
         done
     
@@ -59,18 +58,18 @@ for FOLDER in ${FOLDER_LIST[@]}; do
            
         echo
         echo "3. Convert unit"
-        CDO -b f32 mulc,3600 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_hr_${YR}.nc
-	
+        CDO -b f32 mulc,86400 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_${YR}.nc
+	CDO monmean ${VAR}_${EXP}_${FOLDER}_RegCM5_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_mon_${YR}.nc 
+
 	echo
-	echo "6. Regrid output"
-       	${BIN}/./regrid ${VAR}_${EXP}_${FOLDER}_RegCM5_hr_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-	CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${FOLDER}_RegCM5_hr_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${FOLDER}_RegCM5_hr_${YR}_lonlat.nc
-    
+	echo "4. Regrid output"
+       	${BIN}/./regrid ${VAR}_${EXP}_${FOLDER}_RegCM5_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+	CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${FOLDER}_RegCM5_mon_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${FOLDER}_RegCM5_mon_${YR}_lonlat.nc 
+
         echo 
-        echo "7. Delete files"
+        echo "5. Delete files"
         rm *0100.nc
         rm *${YR}.nc
-	rm ${VAR}_${EXP}_${FOLDER}_RegCM5_hr_${YR}_lonlat.nc
 
     done
 done

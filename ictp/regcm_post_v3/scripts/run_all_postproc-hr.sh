@@ -10,7 +10,6 @@
 
 {
 
-source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 ##############################
@@ -32,7 +31,7 @@ n=$this_domain
 [[ $n = WMediterranean ]] && domdir=WMD03
 [[ $n = SouthAmerica ]] && domdir=SAM03
 
-export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11
+export rdir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11
 yrs=2000-2001
 email="mda_silv@ictp.it"
 
@@ -45,7 +44,7 @@ run_postproc="0 2 2 2"
 ##############################
 
 export odir=$rdir/obs
-hdir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm
+hdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v3/scripts_regcm
 
 cp=false
 if [ $n = Europe03 -o $n = WMediterranean ]; then

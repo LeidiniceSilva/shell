@@ -9,6 +9,7 @@
 #SBATCH -p dcgp_usr_prod
 
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
+set -eo pipefail
 
 ##############################
 ### change inputs manually ###
@@ -38,7 +39,7 @@ ys=2000-2001
 plots=("4s_simple_v3" "prpct" "p99" "prc2pr_v2" "4s_frq-int" "pdfs_v2" "vert_v2" "quv" "taylor_diagram" "pixels")
 nrun=$(( ${#plots[@]} - 1 ))
 
-sdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm
+sdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v3/scripts_regcm
 
 if [ $# -ne 2 ]
 then
@@ -54,9 +55,7 @@ export conf=$2
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
 
-export rdir=/marconi/home/userexternal/mdasilva/user/mdasilva/EUR-11
-
-set -eo pipefail
+export rdir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11
 
 cp=false
 if [ $n = Europe03 -o $n = WMediterranean ]; then
