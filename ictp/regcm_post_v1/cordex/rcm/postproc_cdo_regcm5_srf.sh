@@ -1,12 +1,13 @@
 #!/bin/bash
 
-#SBATCH -N 1 
-#SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --qos=qos_prio
-#SBATCH --mail-type=FAIL
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
@@ -14,26 +15,26 @@
 #__description__ = 'Posprocessing the RegCM5 output with CDO'
  
 {
-
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2000-2005"
+FREQ="day"
+DOMAIN="CSAM-3"
+
+YR="2000-2000"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-FREQ="day"
-DOMAIN="CSAM-3"
-EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
-VAR_LIST="cll clm clh clt evspsblpot pr tas tasmax tasmin rsnl rsns CAPE CIN LI"
+VAR_LIST="pr tas tasmax tasmin rsnl rsns cll clm clh clt evspsblpot"
 
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/rcm"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
 cd ${DIR_OUT}
@@ -56,16 +57,11 @@ is_leap_year() {
     fi
 }
 
+echo
+echo "Select variable"
 for VAR in ${VAR_LIST[@]}; do
-
-    echo
-    echo "Select variable"
-    if [ ${VAR} = 'rsnl'  ] || [ ${VAR} = 'rsns'  ]
-    then
-    DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3"
     for YEAR in `seq -w ${IYR} ${FYR}`; do
         for MON in `seq -w 01 12`; do
-	
 	    case ${MON} in
 		01|03|05|07|08|10|12)
 		    DAYS=31
@@ -82,27 +78,36 @@ for VAR in ${VAR_LIST[@]}; do
 		    fi
 		    ;;
 	    esac
-		
 	    for DAY in `seq -w 01 ${DAYS}`; do
+		if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'tas'  ] || [ ${VAR} = 'tasmax'  ] || [ ${VAR} = 'tasmin'  ] 
+		then
+		CDO selname,${VAR} ${DIR_IN}/CSAM-3_STS.${YEAR}${MON}${DAY}00.nc ${VAR}_${DOMAIN}_${YEAR}${MON}${DAY}.nc
+		elif [ ${VAR} = 'rsnl'  ] || [ ${VAR} = 'rsns'  ] || [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh' ]
+		then
 		CDO selname,${VAR} ${DIR_IN}/CSAM-3_RAD.${YEAR}${MON}${DAY}00.nc ${VAR}_${DOMAIN}_${YEAR}${MON}${DAY}.nc
+		else
+		CDO selname,${VAR} ${DIR_IN}/CSAM-3_SRF.${YEAR}${MON}${DAY}00.nc ${VAR}_${DOMAIN}_${YEAR}${MON}${DAY}.nc
+		fi
 	    done
 	done
     done
 
+    echo
+    echo "Merge files"
     CDO mergetime ${VAR}_${DOMAIN}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
-    
-    else
-    DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/v1-r1/${FREQ}/${VAR}"
-    CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_v1-r1_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
-    fi
 
     echo
     echo "Convert unit"
-    if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'evspsblpot'  ]
+    if [ ${VAR} = 'pr'  ]
     then
     CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc
     CDO monmean ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
-    ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+    ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+    elif [ ${VAR} = 'evspsblpot'  ]
+    then
+    CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${YR}.nc
+    CDO daysum ${VAR}_${DOMAIN}_RegCM5_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc 
+    CDO monmean ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
     ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     elif [ ${VAR} = 'tas' ] || [ ${VAR} = 'tasmax'  ] || [ ${VAR} = 'tasmin'  ]
     then

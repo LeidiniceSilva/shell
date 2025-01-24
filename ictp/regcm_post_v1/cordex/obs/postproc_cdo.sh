@@ -15,7 +15,9 @@
 #__description__ = 'Posprocessing the OBS datasets with CDO'
 
 {
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
+
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }

@@ -112,7 +112,12 @@ VAR_LIST="pr tas tasmax tasmin evpot q r msnlwrf msnswrf clt clh clm cll u v"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Select date"
+    if [ ${VAR} == 'pr' ]
+    then
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_${YR}.nc
+    else
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    fi
     echo
     echo "convert unit"
     if [ ${VAR} == 'pr' ]

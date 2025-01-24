@@ -5,7 +5,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -J diurnal_cycle
+#SBATCH -J Postproc
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -58,12 +58,14 @@ for FOLDER in ${FOLDER_LIST[@]}; do
            
         echo
         echo "3. Convert unit"
-        CDO -b f32 mulc,86400 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_${YR}.nc
-	CDO monmean ${VAR}_${EXP}_${FOLDER}_RegCM5_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_mon_${YR}.nc 
+        CDO -b f32 mulc,86400 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc
+	CDO monmean ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_mon_${YR}.nc 
 
 	echo
 	echo "4. Regrid output"
+       	${BIN}/./regrid ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
        	${BIN}/./regrid ${VAR}_${EXP}_${FOLDER}_RegCM5_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+	CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${FOLDER}_RegCM5_day_${YR}_lonlat.nc 
 	CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${FOLDER}_RegCM5_mon_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${FOLDER}_RegCM5_mon_${YR}_lonlat.nc 
 
         echo 
