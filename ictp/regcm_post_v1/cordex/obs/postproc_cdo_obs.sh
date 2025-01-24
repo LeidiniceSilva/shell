@@ -1,12 +1,13 @@
 #!/bin/bash
 
-#SBATCH -N 1 
-#SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --qos=qos_prio
-#SBATCH --mail-type=FAIL
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
@@ -65,7 +66,7 @@ VAR_LIST="precip tmax tmin"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}.day.1979-2024.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc   
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}.cpc.day.1979-2024.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc   
     echo
     echo "Monthly avg"
     CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
@@ -107,30 +108,27 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="lcc mcc hcc tcc tp t2m mx2t mn2t msnlwrf msnswrf msdwlwrf msdwswrf q u v evpot cape cin"
+VAR_LIST="pr tas tasmax tasmin evpot q r msnlwrf msnswrf clt clh clm cll u v"
 for VAR in ${VAR_LIST[@]}; do
     echo
-    echo "Select date and convert unit"
-    if [ ${VAR} == 'tp' ]
+    echo "Select date"
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_${YR}.nc
+    echo
+    echo "convert unit"
+    if [ ${VAR} == 'pr' ]
     then
-    CDO -b f32 mulc,1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${DATASET}_1hr_${YR}.nc
-    CDO daysum ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc
+    CDO -b f32 mulc,1000 ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
+    CDO daysum ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc
     CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 't2m' ] || [ ${VAR} == 'mx2t' ] || [ ${VAR} == 'mn2t' ]
+    elif [ ${VAR} == 'tas' ] || [ ${VAR} == 'tasmax' ] || [ ${VAR} == 'tasmin' ]
     then
-    CDO -b f32 subc,273.15 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 'evpot' ]
-    then
-    CDO -b f32 mulc,-1000 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 'msnlwrf' ]
-    then
-    CDO -b f32 mulc,-1 ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
-    cp ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    cp ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi    
     echo
     echo "Regrid and select subdomain"
-    if [ ${VAR} == 'tp' ]
+    if [ ${VAR} == 'pr' ]
     then
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
@@ -140,7 +138,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
-	if [ ${VAR} == 'q' ] || [ ${VAR} == 'u' ] || [ ${VAR} == 'v' ]
+	if [ ${VAR} == 'q' ] || [ ${VAR} == 'r' ] ||[ ${VAR} == 'u' ] || [ ${VAR} == 'v' ]
 	then
 	CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${YR}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 	CDO sellevel,200 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc ${VAR}_200hPa_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
@@ -172,7 +170,7 @@ elif [ ${DATASET} == 'MSWEP' ]
 then
 echo
 echo "Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/precipitation_MSWEP_1979-2020.nc precipitation_${EXP}_${DATASET}_day_${YR}.nc
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/mswep.day.1979-2020.nc precipitation_${EXP}_${DATASET}_day_${YR}.nc
 echo
 echo "Monthly avg"
 CDO monmean precipitation_${EXP}_${DATASET}_day_${YR}.nc precipitation_${EXP}_${DATASET}_mon_${YR}.nc
@@ -186,6 +184,7 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO -timmean -selseas,${SEASON} precipitation_${EXP}_${DATASET}_mon_${YR}_lonlat.nc precipitation_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 done
 
+else
 echo
 echo "Select date"
 FILE=$( eval ls ${DIR_IN}/${DATASET}/TRMM.day.mean.????.nc )

@@ -21,6 +21,11 @@ CDO(){
 }
 
 DATASET=$1
+
+YR="2000-2009"
+IYR=$( echo $YR | cut -d- -f1 )
+FYR=$( echo $YR | cut -d- -f2 )
+
 DIR_IN="/leonardo_work/ICT24_ESP/OBS/${DATASET}"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/${DATASET}"
 
@@ -32,9 +37,28 @@ then
 VAR_LIST="precip tmax tmin"
 for VAR in ${VAR_LIST[@]}; do
     FILE_OUT=${VAR}.cpc.day.1979-2024.nc
+    if [ ${VAR} == 'precip' ]
+    then
     FILE_IN=$( eval ls ${DIR_IN}/${VAR}/${VAR}.????.nc )
-    echo $FILE_IN
+    else
+    FILE_IN=$( eval ls ${DIR_IN}/temp/${VAR}.????.nc )
+    fi
     [[ ! -f $FILE_OUT ]] && CDO mergetime $FILE_IN ${DIR_OUT}/$FILE_OUT
+done
+
+elif [ ${DATASET} == 'ERA5' ]
+then
+VAR_LIST="evpot clh clm cll"
+for VAR in ${VAR_LIST[@]}; do
+    for YEAR in `seq -w ${IYR} ${FYR}`; do
+        FILE_OUT=${DIR_OUT}/${VAR}_${YEAR}.nc
+        FILE_IN=$( eval ls ${DIR_IN}/monthly/${YEAR}/${VAR}_${YEAR}_??.nc )
+        [[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
+    done
+    FILE_OUT_x=${DIR_OUT}/${VAR}_${DATASET}_${YR}.nc
+    FILE_OUT_y=$( eval ls ${DIR_OUT}/${VAR}_????.nc )
+    [[ ! -f $FILE_OUT_x ]] && CDO -b f32 mergetime $FILE_OUT_y $FILE_OUT_x
+    rm ${DIR_OUT}/${VAR}_????.nc
 done
 
 else
