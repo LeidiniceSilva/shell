@@ -1,12 +1,13 @@
 #!/bin/bash
 
-#SBATCH -N 1 
-#SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --qos=qos_prio
-#SBATCH --mail-type=FAIL
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
@@ -14,8 +15,7 @@
 #__description__ = 'Download and select domain in CMORPH data'
 
 {
-
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 CDO(){
@@ -43,7 +43,7 @@ MN1=12
 HR0=00
 HR1=23
 
-PATH_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/OBS/CMORPH"
+PATH_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/CMORPH"
 
 echo
 cd ${PATH_OUT}

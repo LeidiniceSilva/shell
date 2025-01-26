@@ -11,7 +11,7 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
-#__description__ = 'Calculate the freq/int of RegCM5 with CDO'
+#__description__ = 'Calculate the p99 of RegCM5 with CDO'
  
 {
 
@@ -25,7 +25,6 @@ CDO(){
 YR="2000-2005"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
-SEASON_LIST="DJF MAM JJA SON"
 
 VAR="pr"
 FREQ="1hr"
@@ -44,7 +43,7 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
-echo "Concatenate date: ${YR}"
+echo "Concatenate date"
 CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_v1-r1_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
 echo
@@ -52,12 +51,22 @@ echo "Convert unit"
 CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 
 echo
-echo "Regrid domain"
-${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+echo "Calculate p99"
+CDO timmin ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_min.nc
+CDO timmax ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_max.nc
+CDO timpctl,99 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_min.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_max.nc p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
+  
+echo
+echo "Regrid variable"
+${BIN}/./regrid p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo 
 echo "Delete files"
-rm *${YR}.nc
+rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_min.nc 
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_max.nc
+rm p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

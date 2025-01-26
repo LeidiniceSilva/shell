@@ -28,7 +28,7 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 VAR="pr"
-FREQ="1hr"
+FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
 
@@ -44,20 +44,30 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
-echo "Concatenate date: ${YR}"
-CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_v1-r1_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+echo "Concatenate date"
+CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_v1-r1_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${YR}.nc
     
 echo
 echo "Convert unit"
-CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
+CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${YR}.nc
 
 echo
-echo "Regrid domain"
-${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+echo "Frequency and intensity by season"
+for SEASON in ${SEASON_LIST[@]}; do
+
+    CDO selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
+    
+    CDO mulc,100 -histfreq,1,100000 ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc ${VAR}_freq_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
+    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
+    CDO histmean,1,100000 ${VAR}_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc ${VAR}_int_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc
+    ${BIN}/./regrid ${VAR}_int_${DOMAIN}_RegCM5_${SEASON}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
+done
 
 echo 
 echo "Delete files"
-rm *${YR}.nc
+rm *_${YR}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

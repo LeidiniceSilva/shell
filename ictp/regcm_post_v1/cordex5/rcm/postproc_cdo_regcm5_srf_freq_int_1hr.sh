@@ -27,6 +27,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
+TH=0.5
 VAR="pr"
 FREQ="1hr"
 DOMAIN="CSAM-3"
@@ -52,12 +53,24 @@ echo "Convert unit"
 CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 
 echo
-echo "Regrid domain"
-${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+echo "Frequency and intensity by season"
+for SEASON in ${SEASON_LIST[@]}; do
+
+    CDO selseas,${SEASON} ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc
+    
+    CDO mulc,100 -histfreq,${TH},100000 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc ${VAR}_freq_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}_th${TH}.nc
+    CDO histmean,${TH},100000 ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}.nc ${VAR}_int_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}_th${TH}.nc
+
+    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+    ${BIN}/./regrid ${VAR}_int_${DOMAIN}_RegCM5_${FREQ}_${SEASON}_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
+done
 
 echo 
 echo "Delete files"
-rm *${YR}.nc
+rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc
+rm ${VAR}_${DOMAIN}_RegCM5_*.nc
+rm ${VAR}_*_${YR}_th${TH}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
