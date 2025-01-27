@@ -9,7 +9,7 @@
 #SBATCH -p dcgp_usr_prod
 
 {
-
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 ##############################

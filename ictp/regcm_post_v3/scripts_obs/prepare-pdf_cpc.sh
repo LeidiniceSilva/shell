@@ -6,7 +6,6 @@ cd $wdir
 
 {
 set -eo pipefail
-
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }

@@ -84,7 +84,7 @@ for s in $seas ; do
   for v in $vars; do
     [[ $gdom = WMD-03 ]] && gdir=$hdir/CORDEX/output/$gdom/ICTP/$gcon/*/r*/ICTP-RegCM5-0/v*/day/$v/
     if [ $n = Europe -o $n = Europe03 ]; then
-      [[ $v = pr     ]] && o=("hires" "eobs" "mswep" "cpc" "gpcc") && res=("0.11" "0.1" "0.1" "0.1" "0.25")
+      [[ $v = pr     ]] && o=("eobs" "mswep" "cpc") && res=("0.1" "0.1" "0.1")
       [[ $v = tas    ]] && o=("eobs") && res=("0.1")
     elif [ $n = Mediterranean -o $n = SEEurope -o $n = WMediterranean ]; then
       [[ $v = pr     ]] && o=("hires" "eobs" "mswep") && res=("0.03" "0.1" "0.1")

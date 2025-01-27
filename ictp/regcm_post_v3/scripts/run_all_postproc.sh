@@ -9,7 +9,6 @@
 #SBATCH -p dcgp_usr_prod
 
 {
-
 set -eo pipefail
 
 ##############################

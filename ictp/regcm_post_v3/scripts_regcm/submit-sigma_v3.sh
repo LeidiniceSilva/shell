@@ -52,7 +52,6 @@ fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 
 p=USR
-#p=SKL
 [[ $p = USR ]] && pp="-p dcgp_usr_prod -t 24:00:00"
 [[ $p = SKL ]] && pp="-p skl_usr_prod -t 24:00:00"
 [[ $p = BDW ]] && pp="-p bdw_all_serial -t 4:00:00"

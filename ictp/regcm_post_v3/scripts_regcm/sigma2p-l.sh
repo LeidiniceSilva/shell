@@ -9,7 +9,6 @@
 #SBATCH -p dcgp_usr_prod
 
 # load required modules
-module purge
 source /leonardo/home/userexternal/ggiulian/modules
 
 export REMAP_EXTRAPOLATE=off
@@ -38,8 +37,6 @@ for f in $( \ls ../*${t}.${y}*.nc ); do
   echo $bn
   if [ ! -f $pdir/${bn}_pressure.nc ]; then
     $bnf $f
-    #CDO selvar,$sv $pdir/${bn}_pressure.nc $pdir/${bn}_tmp.nc
-    #mv $pdir/${bn}_tmp.nc $pdir/${bn}_pressure.nc
- fi
+  fi
 done
 }
