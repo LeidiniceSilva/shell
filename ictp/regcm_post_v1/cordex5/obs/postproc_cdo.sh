@@ -24,7 +24,7 @@ CDO(){
 
 DATASET=$1
 
-YR="2000-2009"
+YR="1999-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
@@ -50,14 +50,29 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="evpot clh clm cll"
+VAR_LIST="pr"
+#VAR_LIST="pr tas cll clm clh clt clfrac clice clliq clivi qhum rhum uwnd vwnd evpot roff"
+
 for VAR in ${VAR_LIST[@]}; do
     for YEAR in `seq -w ${IYR} ${FYR}`; do
+        if [ ${VAR} == 'pr' ]
+        then
+        FILE_OUT=${DIR_OUT}/${VAR}_${YEAR}.nc
+        FILE_IN=$( eval ls ${DIR_IN}/hourly/${VAR}_${YEAR}_??.nc )
+        [[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
+        else
         FILE_OUT=${DIR_OUT}/${VAR}_${YEAR}.nc
         FILE_IN=$( eval ls ${DIR_IN}/monthly/${YEAR}/${VAR}_${YEAR}_??.nc )
         [[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
+        fi
     done
+
+    if [ ${VAR} == 'pr' ]
+    then
+    FILE_OUT_x=${DIR_OUT}/${VAR}_${DATASET}_1hr_${YR}.nc
+    else
     FILE_OUT_x=${DIR_OUT}/${VAR}_${DATASET}_${YR}.nc
+    fi
     FILE_OUT_y=$( eval ls ${DIR_OUT}/${VAR}_????.nc )
     [[ ! -f $FILE_OUT_x ]] && CDO -b f32 mergetime $FILE_OUT_y $FILE_OUT_x
     rm ${DIR_OUT}/${VAR}_????.nc

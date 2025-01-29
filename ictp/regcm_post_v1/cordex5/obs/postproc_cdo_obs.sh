@@ -25,13 +25,13 @@ CDO(){
 DATASET=$1
 EXP="CSAM-3"
 
-YR="2000-2000"
+YR="1999-1999"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/obs"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v1/postproc/obs"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -108,15 +108,15 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="pr tas tasmax tasmin evpot q r msnlwrf msnswrf clt clh clm cll u v"
+VAR_LIST="pr tas tasmax tasmin clt clh clm cll"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Select date"
     if [ ${VAR} == 'pr' ]
     then
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1hr_1999-2009.nc ${VAR}_${DATASET}_1hr_${YR}.nc
     else
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1999-2009.nc ${VAR}_${DATASET}_${YR}.nc
     fi
     echo
     echo "convert unit"

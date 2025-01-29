@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 4:00:00
+#SBATCH -J Postproc
+#SBATCH -A ICT23_ESP_1
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH -p dcgp_usr_prod
+
 {
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
@@ -12,14 +21,14 @@ then
 fi
 
 ys=$1 
-rdir=/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/postproc
+rdir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/obs
 hdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v3/scripts_obs
 
 # Processing the average
-list1="cpc cru eobs era5 gpcp mswep"
+list1="cpc cru eobs era5_srf era5_vert gpcp mswep"
 
 # Processing the pdf
-list2="cpc eobs era5 gpcp mswep"
+list2="cru cpc eobs mswep"
 
 for l in $list1; do
   echo "===== processing mean: $l ====="

@@ -9,6 +9,7 @@
 #SBATCH -p dcgp_usr_prod
 
 # load required modules
+module purge
 source /leonardo/home/userexternal/ggiulian/modules
 
 export REMAP_EXTRAPOLATE=off

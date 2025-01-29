@@ -22,7 +22,7 @@ for v in $vars; do
 
   sf=GPCPMON_L3_198301-202209_V3.2.nc4
   yf=${v}_${obs}_${ys}.nc
-  ff=$( eval ls GPCPMON_L3_????_V3.2.nc4 )
+  ff=$( eval ls $hdir/GPCPMON_L3_????_V3.2.nc4 )
   [[ ! -f $sf ]] && CDO mergetime $ff $sf
   eval CDO selyear,$fyr/$lyr $sf $yf
 

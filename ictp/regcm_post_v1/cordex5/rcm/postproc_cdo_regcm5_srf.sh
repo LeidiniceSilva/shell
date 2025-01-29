@@ -25,13 +25,12 @@ CDO(){
 FREQ="day"
 DOMAIN="CSAM-3"
 
-YR="2000-2000"
+YR="1999-1999"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="rsnl rsns evspsblpot"
-#VAR_LIST="pr tas tasmax tasmin rsnl rsns cll clm clh clt evspsblpot"
+VAR_LIST="pr tas tasmax tasmin rsnl rsns cll clm clh clt evspsblpot"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_MOIST/ERA5/ERA5-CSAM-3"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_MOIST/postproc/rcm"
@@ -95,7 +94,7 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "Merge files"
-    CDO mergetime ${VAR}_${DOMAIN}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+    CDO mergetime ${VAR}_${DOMAIN}_${YEAR}*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
 
     echo
     echo "Convert unit"

@@ -26,7 +26,7 @@ for v in $vars; do
 
   sf=mswep.mon.1979-2020.nc
   yf=${v}_${obs}_${ys}.nc
-  ff=$( eval ls ??????.nc )
+  ff=$( eval ls $hdir/??????.nc )
   [[ ! -f $sf ]] && CDO mergetime $ff $sf  
   eval CDO selyear,$fyr/$lyr $sf $yf
 
