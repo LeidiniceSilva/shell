@@ -36,8 +36,6 @@ cd $pdir
 for f in $( \ls ../*${t}.${y}*.nc ); do
   bn=$( basename $f .nc )
   echo $bn
-  if [ ! -f $pdir/${bn}_pressure.nc ]; then
-    $bnf $f
-  fi
+  $bnf $f
 done
 }

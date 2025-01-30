@@ -47,16 +47,25 @@ done
 
 elif [ ${DATASET} == 'CRU' ]
 then
-VAR_LIST="pre"
+VAR_LIST="pre tmp"
 for VAR in ${VAR_LIST[@]}; do    
     echo
     echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_mon_${YR}.nc   
+    if [ ${VAR} == 'pre' ]
+    then
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_mon_${YR}.nc
     echo
     echo "2. Monthly avg"
     CDO -b f32 divc,30.5 ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+    CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_FPS_${DATASET}_mon_${YR}_lonlat.nc 
+    else
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    echo
+    echo "2. Monthly avg"
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
     CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_FPS_${DATASET}_mon_${YR}_lonlat.nc
+    fi
 done
 
 elif [ ${DATASET} == 'EOBS' ]

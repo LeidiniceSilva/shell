@@ -50,8 +50,7 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="pr"
-#VAR_LIST="pr tas cll clm clh clt clfrac clice clliq clivi qhum rhum uwnd vwnd evpot roff"
+VAR_LIST="pr tas cll clm clh clt clfrac clice clliq clivi qhum rhum uwnd vwnd evpot roff"
 
 for VAR in ${VAR_LIST[@]}; do
     for YEAR in `seq -w ${IYR} ${FYR}`; do
