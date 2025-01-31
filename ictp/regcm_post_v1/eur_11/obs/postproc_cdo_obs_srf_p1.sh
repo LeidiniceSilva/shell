@@ -83,12 +83,20 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="pr"
+VAR_LIST="pr clt tas"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/pr_ERA5_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1999-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    if [ ${VAR} == 'pr' ]
+    then
     CDO mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_mon_${YR}.nc 
+    elif [ ${VAR} == 'tas' ]
+    then
+    CDO subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_mon_${YR}.nc
+    else
+    CDO mulc,100 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_mon_${YR}.nc
+    fi
     echo
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do

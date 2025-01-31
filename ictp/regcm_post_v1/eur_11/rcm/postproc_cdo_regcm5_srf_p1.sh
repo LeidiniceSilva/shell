@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Mar 12, 2024'
@@ -18,8 +27,8 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="pr tas"
-FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
+VAR_LIST="clt"
+FOLDER_LIST="NoTo-Europe WDM7-Europe WSM7-Europe WSM5-Europe"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -40,7 +49,12 @@ for FOLDER in ${FOLDER_LIST[@]}; do
         echo "1. Select variable: ${VAR}"
         for YEAR in `seq -w ${IYR} ${FYR}`; do
             for MON in `seq -w 01 12`; do
-                CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
+        	if [ ${VAR} = 'pr' ] || [ ${VAR} = 'tas' ]
+        	then
+                CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+		else
+                CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+		fi  
             done
         done
     
@@ -50,11 +64,14 @@ for FOLDER in ${FOLDER_LIST[@]}; do
            
         echo
         echo "3. Convert unit"
-        if [ ${VAR} = pr  ]
+        if [ ${VAR} = 'pr' ]
         then
         CDO -b f32 mulc,86400 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc
-        else
+        elif [ ${VAR} = 'tas' ]
+        then
         CDO -b f32 subc,273.15 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc
+	else
+	CDO daymean ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc
         fi
 
         echo
