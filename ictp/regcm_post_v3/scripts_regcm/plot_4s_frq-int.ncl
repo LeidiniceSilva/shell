@@ -1,4 +1,4 @@
-load "$NCARG_ROOT/lib/ncarg/nclscripts/james/trimPNG.ncl"
+loadscript(getenv("scrdir")+"/"+"trimPNG.ncl")
 
 begin
 ;*************************
@@ -67,9 +67,9 @@ begin
     do oo = 0, nobs - 1
   	this_obs = obs(oo)
 
-  	;; Opening RegCM5
-  	filh = dirp+"/"+"plots/"+snum+"_"+var+"_"+indx+"_"+yr+"_"+ \
-               seas+"_bias_"+this_obs+".nc"
+  	;; Opening RegCM5 pr_frq_bias_2000-2001_DJF_CPC.nc
+  	filh = dirp+"/"+"plots/"+var+"_"+indx+"_bias_"+yr+"_"+ \
+               seas+"_"+this_obs+".nc"
   	a = addfile(filh,"r")
   	v := a->$var$(0,0,:,:)
         if ( this_obs.eq."GPCC" ) then
@@ -121,6 +121,18 @@ begin
   	res@tmYLOn = False
   	res@tmXBOn = False
 
+	;-- fill
+;	if ( this_obs.ne."ERA5" .and. this_obs.ne."MSWEP") then
+		res@mpFillOn = True
+		;res@mpFillAreaSpecifiers = (/"Land", "Oceans"/)
+		;res@mpSpecifiedFillColors = (/2, 2/) ;(/"white", "white"/)
+		res@mpMaskAreaSpecifiers  = (/"Land"/)
+		;res@mpOutlineSpecifiers = (/"Land"/)
+		res@mpOceanFillColor = 0
+		;res@mpLandFillColor = 2
+		res@mpFillDrawOrder       = "PostDraw"
+;	end if
+
   	res@cnLevelSelectionMode   = "ExplicitLevels"
         if ( indx.eq."frq" ) then
      	  res@cnLevels      := (/-40,-30,-20,-10,-5,5,10,20,30,40/)
@@ -132,7 +144,9 @@ begin
          else if ( snum.eq."WMediterranean" ) then
             res@cnLevels      := (/-5,-4,-3,-2,-1,-.5,.5,1,2,3,4,5/)
          else
-            res@cnLevels      := (/-20,-15,-10,-8,-5,5,8,10,15,20/)
+            ;res@cnLevels      := (/-20,-15,-10,-8,-5,5,8,10,15,20/)
+            ;res@cnLevels      := (/-20,-15,-10,-5,-2,2,5,10,15,20/)
+            res@cnLevels      := (/-20,-10,-5,-2.5,-1,1,2.5,5,10,20/)
          end if
          end if
         end if

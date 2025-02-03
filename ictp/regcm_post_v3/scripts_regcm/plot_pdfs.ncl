@@ -1,4 +1,4 @@
-load "$NCARG_ROOT/lib/ncarg/nclscripts/james/trimPNG.ncl"
+loadscript(getenv("scrdir")+"/"+"trimPNG.ncl")
 
 begin
 ;*************************
@@ -24,17 +24,17 @@ begin
   ulist  = (/"mm/day","~F34~0~F~C"/)
   nvars = dimsizes(vars)
 
-  if ( snum.eq."Europe" .or. snum.eq."Europe03" ) then
+  if ( snum.eq."Europe" ) then
     obsns = (/"EOBS","EOBS"/)
-  else if ( snum.eq."WMediterranean" ) then
+  else if ( snum.eq."SEEurope" .or. snum.eq."Medi3" .or. snum.eq."Medi" .or. snum.eq."Mediterranean" ) then
     obsns = (/"mask","EOBS"/)
   else
     obsns = (/"CPC","CRU"/)
   end if
   end if
 
-  r4 = "on"
-  if ( snum.eq."Europe" .or. snum.eq."Europe03" ) then
+  r4 = "off"
+  if ( snum.eq."Europe" ) then
     regs  = (/"MED","NEU","WCE"/)
     regns = (/"Mediterranean","N.Europe","C.Europe"/)
   end if
@@ -70,19 +70,18 @@ begin
     regs  = (/"NAU","CAU","EAU","SAU","NZ"/)
     regns = (/"N.Australia","C.Australia","E.Australia","S.Australia","New-Zealand"/)
   end if
-; if ( snum.eq."SEEurope" ) then
-;   regs  = (/"GRIPHO", "COMEPHORE"/)
-;   regns = regs
-;   r4 = "off"
-; end if
-; if ( snum.eq."Medi" ) then
-;   regs  = (/"CARPAT", "EURO4M", "GRIPHO", "COMEPHORE"/)
-;   regns = regs
-;   r4 = "off"
-; end if
-  if ( snum.eq."WMediterranean" ) then
-;   regs  = (/"CARPAT", "EURO4M", "RdisaggH", "GRIPHO", "COMEPHORE"/) ;"SPAIN02"
-    regs  = (/"EURO4M", "GRIPHO"/) 
+  if ( snum.eq."SEEurope" ) then
+    regs  = (/"GRIPHO", "COMEPHORE"/)
+    regns = regs
+    r4 = "off"
+  end if
+  if ( snum.eq."Medi" ) then
+    regs  = (/"CARPAT", "EURO4M", "GRIPHO", "COMEPHORE"/)
+    regns = regs
+    r4 = "off"
+  end if
+  if ( snum.eq."Mediterranean" .or. snum.eq."Medi3" ) then
+    regs  = (/"CARPAT", "EURO4M", "RdisaggH", "GRIPHO", "COMEPHORE"/) ;"SPAIN02"
     regns = regs
     r4 = "off"
   end if
@@ -93,14 +92,7 @@ begin
 ; end if
   nregs = dimsizes(regs)
 
-  cp = False
-  if ( snum.eq."WMediterranean" ) then
-    cp = True
-    r4 = "off"
-    pdom = "EUR-11"
-  end if
-
-  if ( snum.eq."Europe" ) then
+  if ( snumT.eq."MPI-Europe" ) then
     r4 = "off"
   end if
 
@@ -142,26 +134,15 @@ begin
      bo := ao->bin(:)
 
      ;; Opening RegCM4
-     film = dirp+var+"_RegCM4_"+sr+"_"+yr+fsup+"_pdf.nc"
-     if ( r4.eq."on" ) then
-       am = addfile(film,"r")
-       vm := am->$var$(0,:,0,0)
-       bm := am->bin(:)
-     else
-       vm := vo@_FillValue
-       bm := bo
-     end if
-
-     ;; Opening Parent RegCM5
-     if ( cp.eq.True ) then
-       filp =  dirp+var+"_Parent_"+sr+"_"+yr+fsup+"_pdf.nc"
-       ap = addfile(filp,"r")
-       vp := ap->$var$(0,:,0,0)
-       bp := ap->bin(:)
-     else
-       vp := vo@_FillValue
-       bp := bo
-     end if
+     ;film = dirp+var+"_RegCM4_"+sr+"_"+yr+fsup+"_pdf.nc"
+     ;if ( r4.eq."on" ) then
+     ;  am = addfile(film,"r")
+     ;  vm := am->$var$(0,:,0,0)
+     ;  bm := am->bin(:)
+     ;else
+     ;  vm := vo@_FillValue
+     ;  bm := bo
+     ;end if
 
      ;; Opening RegCM5
      filh = dirp+var+"_RegCM5_"+sr+"_"+yr+fsup+"_pdf.nc"
@@ -169,22 +150,19 @@ begin
      va := aa->$var$(0,:,0,0)
      ba := aa->bin(:)
  
-     minv = min((/bo(0),bm(0),bp(0),ba(0)/))
+     minv = min((/bo(0),ba(0)/))
      obins = dimsizes(vo)
-     mbins = dimsizes(vm)
-     pbins = dimsizes(vp)
+     ;mbins = dimsizes(vm)
      abins = dimsizes(va)
-     maxv = max((/bo(obins-1),bm(mbins-1),bp(pbins-1),ba(abins-1)/))
+     maxv = max((/bo(obins-1),ba(abins-1)/))
 
-     nbins := max((/obins,mbins,pbins,abins/)) 
-     allpdfs = new((/4,nbins/),double)
+     nbins := max((/obins,abins/)) 
+     allpdfs = new((/2,nbins/),double)
      allpdfs(0,0:obins-1) = vo
-     allpdfs(1,0:mbins-1) = vm
-     allpdfs(2,0:pbins-1) = vp
-     allpdfs(3,0:abins-1) = va
+     ;allpdfs(1,0:mbins-1) = vm
+     allpdfs(1,0:abins-1) = va
      delete(vo)
-     delete(vm)
-     delete(vp)
+     ;delete(vm)
      delete(va)
 
      bins := ispan(tointeger(minv),tointeger(maxv),1)
@@ -203,9 +181,12 @@ begin
      maxy = max(allpdfs)
      if ( var.eq."tas" ) then
        res@xyMarkLineMode    = "Lines"
-       res@xyLineThicknessF  = (/3,3,3,3/)     ; Thicken the lines
-       res@xyDashPatterns    = (/1,0,0,0/)
-       res@xyLineColors      = (/"black","red","red","blue"/)
+       ;res@xyLineThicknessF  = (/3,3,3/)     ; Thicken the lines
+       res@xyLineThicknessF  = (/3,3/)     ; Thicken the lines
+       ;res@xyDashPatterns    = (/1,0,0/)
+       res@xyDashPatterns    = (/1,0/)
+       ;res@xyLineColors      = (/"black","red","blue"/)
+       res@xyLineColors      = (/"black","blue"/)
        dmx = maxv*0.2
        res@trYMinF = 0.
        res@trYMaxF = maxy*1.5
@@ -213,8 +194,10 @@ begin
 
      if ( var.eq."pr" ) then
        res@xyMarkLineMode    = "Markers"
-       res@xyMarkers         = (/16,16,16,16/)
-       res@xyMarkerColors    = (/"black","red","red","blue"/)
+       ;res@xyMarkers         = (/16,16,16/)
+       res@xyMarkers         = (/16,16/)
+       ;res@xyMarkerColors    = (/"black","red","blue"/)
+       res@xyMarkerColors    = (/"black","blue"/)
        res@xyMarkerSizeF     = 0.0050
        res@trYLog            = True
        res@xyComputeYMin     = True
@@ -292,11 +275,7 @@ begin
      dum(np,1) = gsn_add_text(wks,plots(np),obsn,xT,yN,res_text)
 
      yN = yN-dY
-     if ( r4.eq."on" .or. cp.eq.True ) then
-       rlabel = "RegCM4"
-       if ( cp.eq.True ) then
-         rlabel = pdom
-       end if   
+     if ( r4.eq."on" ) then
        if ( var.eq."pr" ) then
         res_mark@gsMarkerColor     = "red"
         dum(np,2) = gsn_add_polymarker(wks,plots(np),xN,yN,res_mark)
@@ -304,17 +283,9 @@ begin
          res_line@gsLineColor       = "red"
          dum(np,2) = gsn_add_polyline(wks,plots(np),(/x0,xN/),(/yN,yN/),res_line)
        end if
-       dum(np,3) = gsn_add_text(wks,plots(np),rlabel,xT,yN,res_text)
+       dum(np,3) = gsn_add_text(wks,plots(np),"RegCM4",xT,yN,res_text)
 
        yN = yN-dY2
-     end if
-
-     blabel = "RegCM5"
-     if ( cp.eq.True ) then
-       blabel = snum
-       if ( snum.eq."WMediterranean" ) then
-         blabel = "WMD-03"
-       end if
      end if
      if ( var.eq."pr" ) then
       res_mark@gsMarkerColor     = "blue"
@@ -323,7 +294,7 @@ begin
        res_line@gsLineColor       = "blue"
        dum(np,4) = gsn_add_polyline(wks,plots(np),(/x0,xN/),(/yN,yN/),res_line)
      end if
-     dum(np,5) = gsn_add_text(wks,plots(np),blabel,xT,yN,res_text)
+     dum(np,5) = gsn_add_text(wks,plots(np),"RegCM5",xT,yN,res_text)
 
     end if
 

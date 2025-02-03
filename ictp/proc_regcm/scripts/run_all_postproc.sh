@@ -3,12 +3,14 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 4:00:00
+#SBATCH -J Postproc
 #SBATCH -A ICT23_ESP_1
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 #SBATCH -p dcgp_usr_prod
 
 {
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 ##############################
@@ -34,8 +36,8 @@ export rdir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11
 yrs=2000-2001
 email="mda_silv@ictp.it"
 
- run_postproc="1 0 0 0 0 0 0 0 0 0"       # sigma2p
-#run_postproc="0 1 0 0 0 0 0 0 0 0 1 1"   # bias 1 & 2 & 3
+#run_postproc="1 0 0 0 0 0 0 0 0 0"       # sigma2p
+ run_postproc="0 1 0 0 0 0 0 0 0 0 1 1"   # bias 1 & 2 & 3
 #run_postproc="0 0 0 0 0 0 0 0 0 0 0 0 2" # vert part 2 
 #run_postproc="0 0 1 1 1 1 1 0 0 0 0 0"   # all but bias
 #run_postproc="0 1 0 0 0 0 0 0 0 0"       # bias
@@ -72,13 +74,8 @@ if [ $n = Europe03 -o $n = WMediterranean ]; then
   cp=true
 fi
 
-set -eo pipefail
 # postproc files
 mn=postproc # main script name
-
-#postproc=("$mn" "${mn}_pdfs" "${mn}_p99" "${mn}_vert" "${mn}_quv")
-#postproc=("submit-sigma" "$mn" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs" "${mn}_frq-int" "${mn}_p99" "${mn}_vert" "${mn}_vert_daynight" "${mn}_quv")
-#postproc=("submit-sigma_v2" "${mn}_v2" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs_v2" "${mn}_frq-int" "${mn}_p99" "${mn}_vert_v2" "${mn}_vert_daynight" "${mn}_quv_v2" "${mn}_part2" "${mn}_part3" "${mn}_vert_part2")
 postproc=("submit-sigma_v3" "${mn}_v2" "${mn}_prpct" "${mn}_prc2pr" "${mn}_pdfs_v2" "${mn}_frq-int" "${mn}_p99" "${mn}_vert_v2" "${mn}_vert_daynight" "${mn}_quv_v2" "${mn}_part2" "${mn}_part3" "${mn}_vert_part2")
 nrun=$(( ${#postproc[@]} - 1 ))
 

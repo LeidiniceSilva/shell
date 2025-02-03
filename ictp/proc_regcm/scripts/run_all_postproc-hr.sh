@@ -3,6 +3,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 4:00:00
+#SBATCH -J Postproc
 #SBATCH -A ICT23_ESP_1
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it

@@ -1,12 +1,28 @@
 #!/bin/bash
-#SBATCH -N 1 
-#SBATCH -t 9:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --mail-type=FAIL
-#SBATCH -p skl_usr_prod  
-#SBATCH --qos=qos_prio
 
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1 
+#SBATCH -t 4:00:00
+#SBATCH --ntasks-per-node=108
+#SBATCH --mail-type=FAIL
+
+# module purge
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
+
+##############################
+### change inputs manually ###
+##############################
+
+dom=$1
+snam=$2-$1
+rdir=$3
+odir=$4 
+yr=$5
+
+##############################
+####### end of inputs ########
+##############################
 
 {
 set -eo pipefail
@@ -14,22 +30,8 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-##########################################################
-# Run the script by: sbatch postproc_p99.sh domain_name experiment_name
-# e.g.  sbatch postproc_p99.sh Africa NoTo
-
-dom=$1
-snam=$2-$1
-rdir=$3 
-odir=$4 
-yr=$5
-
-##########################################################
-
-mdir=/marconi_work/ICT23_ESP/ggiulian/OBS/SREX
+mdir=/leonardo_work/ICT24_ESP/clu/OBS/SREX
 gdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4
-
-##########################################################
 
 #if [ $# -ne 2 ]
 #then
@@ -64,24 +66,13 @@ fileout_regrid=$outdir/regrid_p99_$snam"_"$yr".nc"
 # Setting Observed and Grid information
 obs_grid_name=CRU
 obs_name=CPC
-#if [ "x$dom" == "xEurope" -o "x$dom" == "Europe03" -o "x$dom" == "WMediterranean" ]; then
-#  obs_grid_name=EOBS
-#  obs_name=EOBS
-#fi
-grid="$odir/"$dom"_"$obs_grid_name".grid"
-if [ "x$dom" == "xEurope" -o "x$dom" == "xEurope03" -o "x$dom" == "xWMediterranean" ]; then
-  obs_grid_name=EUR-HiRes
-  obs_name=$obs_grid_name
-  hirsdir=/marconi_work/ICT23_ESP/jciarlo0/obs/eur-hires
-  gr=03
-  dn=$dom
-  [[ $dom = Europe ]] && gr=11 && dn=EUR
-  [[ $dom = Europe03 ]] && dn=Europe
-  [[ $dom = WMediterranean ]] && dn=Medi3
-  grid=$hirsdir/pr_p99_${obs_name}_day_${dn}${gr}grid.nc
+if [ "x$dom" == "xEurope" -o "x$dom" == "Europe03" -o "x$dom" == "WMediterranean" ]; then
+  obs_grid_name=EOBS
+  obs_name=EOBS
 fi
+grid="$pdir/"$dom"_"$obs_grid_name".grid"
 
-r4="on"
+r4="off"
 [[ ! -f $grid ]] && r4="off"
 [[ ! -f $grid ]] && grid=$filein
 
@@ -106,27 +97,13 @@ if [ $r4 = on ]; then
 fi
 
 # p99 and regridding for Observed
-if [ "x$dom" == "xEurope" -o "x$dom" == "xEurope03" -o "x$dom" == "xWMediterranean" ]; then
-  obs_grid_name=EUR-HiRes
-  obs_name=$obs_grid_name
-  hirsdir=/marconi_work/ICT23_ESP/jciarlo0/obs/eur-hires
-  gr=03
-  dn=$dom
-  [[ $dom = Europe ]] && gr=11 && dn=EUR
-  [[ $dom = Europe03 ]] && dn=Europe
-  [[ $dom = WMediterranean ]] && dn=Medi3
-  CDO remapbil,$grid $hirsdir/pr_p99_${obs_name}_day_${dn}${gr}grid.nc \
+CDO timmin $odir/pr_$obs_name"_"$yr".nc" $outdir/prmin_$obs_name"_"$yr".nc"
+CDO timmax $odir/pr_$obs_name"_"$yr".nc" $outdir/prmax_$obs_name"_"$yr".nc"
+CDO timpctl,99 $odir/pr_$obs_name"_"$yr".nc" \
+     $outdir/prmin_$obs_name"_"$yr".nc" \
+     $outdir/prmax_$obs_name"_"$yr".nc" $outdir/p99_$obs_name"_"$yr".nc"
+CDO remapbil,$grid $outdir/p99_$obs_name"_"$yr".nc" \
                    $outdir/regrid_p99_$obs_name"_"$yr".nc"
-else
-  CDO timmin $odir/pr_$obs_name"_"$yr".nc" $outdir/prmin_$obs_name"_"$yr".nc"
-  CDO timmax $odir/pr_$obs_name"_"$yr".nc" $outdir/prmax_$obs_name"_"$yr".nc"
-  CDO timpctl,99 $odir/pr_$obs_name"_"$yr".nc" \
-        $outdir/prmin_$obs_name"_"$yr".nc" \
-        $outdir/prmax_$obs_name"_"$yr".nc" $outdir/p99_$obs_name"_"$yr".nc"
-  CDO remapbil,$grid $outdir/p99_$obs_name"_"$yr".nc" \
-                   $outdir/regrid_p99_$obs_name"_"$yr".nc"
-fi
-
 
 echo "#### process complete! ####"
 }

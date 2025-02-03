@@ -1,12 +1,15 @@
 #!/bin/bash
-#SBATCH -N 1 
-#SBATCH -t 8:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --mail-type=FAIL
-#SBATCH --mail-user=ggiulian@ictp.it
-#SBATCH -p skl_usr_prod
 
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1 
+#SBATCH -t 4:00:00
+#SBATCH --ntasks-per-node=108
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=clu@ictp.it
+
+# module purge
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 
 ##############################
 ### change inputs manually ###
@@ -17,7 +20,7 @@ path=$2-$1
 export snum=$1
 export conf=$2
 rdir=$3      #/marconi_scratch/userexternal/jciarlo0/ERA5
-scrdir=$4    #/marconi/home/userexternal/jciarlo0/regcm_tests/Atlas2
+export scrdir=$4    #/marconi/home/userexternal/jciarlo0/regcm_tests/Atlas2
 export ys=$5 #1999-1999
 
 ##############################

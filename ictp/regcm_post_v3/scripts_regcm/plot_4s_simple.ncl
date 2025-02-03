@@ -1,4 +1,4 @@
-load "$NCARG_ROOT/lib/ncarg/nclscripts/james/trimPNG.ncl"
+loadscript(getenv("scrdir")+"/"+"trimPNG.ncl")
 
 begin
 ;*************************
@@ -68,6 +68,10 @@ begin
 	  vnam = "Surface LWE Snow"
 	  unit = "mm"
   end if
+  if var .eq. "rsnl" then
+	  vnam = "Net Surface LW"
+	  unit = "W m-2"
+  end if
 
   ;-- plotting
   np=0
@@ -82,14 +86,18 @@ begin
     do oo = 0, nobs - 1
   	this_obs = obs(oo)
 
-  	;; Opening RegCM5
-  	filh = dirp+"/"+"plots/"+snum+"_"+var+"_"+yr+"_"+ \
-               seas+"_bias_"+this_obs+".nc"
+  	;; Opening bias 
+	filh = dirp+"/"+"plots/"+var+"_bias_"+yr+"_"+ \
+			   seas+"_"+this_obs+"_masked.nc"
+	if ( this_obs.eq."ERA5" .or. this_obs.eq."MSWEP" .or. this_obs.eq."GPCP") then
+		filh = dirp+"/"+"plots/"+var+"_bias_"+yr+"_"+ \
+				   seas+"_"+this_obs+".nc"
+	end if
   	a = addfile(filh,"r")
-        vdim = dimsizes(a->$var$)
-        vddim = dimsizes(vdim)
+    vdim = dimsizes(a->$var$)
+    vddim = dimsizes(vdim)
  ; 	if ( var .eq. "pr" .or. var .eq. "clt" .or. var .eq. "snw" ) then
-        if ( vddim.eq.3 ) then     
+    if ( vddim.eq.3 ) then     
   	  v := a->$var$(0,:,:)
   	else
   	  v := a->$var$(0,0,:,:)
@@ -124,6 +132,7 @@ begin
   	res@cnLinesOn              = False       ; no contour lines
   	res@cnLineLabelsOn         = False
   	res@mpFillOn               = False
+	;res@cnFillDrawOrder = "Predraw"
 
   	res@mpGeophysicalLineColor = "black"     ; color of continental outlines
   	res@mpPerimOn              = True      ; draw box around map
@@ -139,6 +148,18 @@ begin
   	res@tmXTOn = False            ; Turn off top tickmarks.
   	res@tmYLOn = False
   	res@tmXBOn = False
+
+;	;-- fill
+;	if ( this_obs.ne."ERA5" .and. this_obs.ne."MSWEP") then
+;		res@mpFillOn = True
+;		;res@mpFillAreaSpecifiers = (/"Land", "Oceans"/)
+;		;res@mpSpecifiedFillColors = (/2, 2/) ;(/"white", "white"/)
+;		res@mpMaskAreaSpecifiers  = (/"Land"/)
+;		;res@mpOutlineSpecifiers = (/"Land"/)
+;		res@mpOceanFillColor = 0
+;		;res@mpLandFillColor = 2
+;		res@mpFillDrawOrder       = "PostDraw"
+;	end if
 
   	res@cnLevelSelectionMode   = "ExplicitLevels"
       	res@cnLevels      := (/-8,-6,-4,-2,-1,1,2,4,6,8/) 
@@ -163,12 +184,22 @@ begin
   	  offsetL = 0.00
   	  offsetRe = offsetR
   	  offsetLe = offsetR
+  	else if ( var.eq."rsnl" ) then
+  	  ;res@cnLevels := (/-250,-100,-50,-25,-10,10,25,50,100,250/) ; "W m-2"
+  	  ;res@cnLevels := (/-75,-50,-25,-10,-5,5,10,25,50,75/) ; "W m-2"
+  	  res@cnLevels := (/-50,-25,-15,-10,-5,5,10,15,25,50/) ; "W m-2"
+  	  cmap = read_colormap_file("CBR_coldhot")
+  	  offsetR = 0.010
+  	  offsetL = 0.00
+  	  offsetRe = offsetR
+  	  offsetLe = offsetR
   	else
   	  cmap = read_colormap_file("CBR_coldhot")
   	  offsetR = 0.010
   	  offsetL = 0.00
   	  offsetRe = offsetR
   	  offsetLe = offsetR
+  	end if
   	end if
   	end if
   	end if

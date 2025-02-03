@@ -1,13 +1,14 @@
 #!/bin/bash
 
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
 #SBATCH -N 1 
 #SBATCH -t 4:00:00
-#SBATCH -A ICT23_ESP
+#SBATCH --ntasks-per-node=108
 #SBATCH --mail-type=FAIL
-#SBATCH -p skl_usr_prod
-#SBATCH --qos=qos_prio
 
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+# module purge
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 
 ##############################
 ### change inputs manually ###
@@ -18,6 +19,7 @@ path=$2-$1
 rdir=$3 
 odir=$4 
 ys=$5 
+scrdir=$6
 
 ##############################
 ####### end of inputs ########
@@ -42,7 +44,7 @@ CDO(){
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 
-hdir=$rdir/$path
+export hdir=$rdir/$path
 if [ ! -d $hdir ]
 then
   echo 'Path does not exist: '$hdir
@@ -71,9 +73,11 @@ mkdir -p $pdir
 
 seas="DJF MAM JJA SON"
 vars="pr tas tasmax tasmin clt"
+
 #if [ $n = Europe -o $n = NorthAmerica -o $n = EastAsia ]; then
 #  vars="$vars snw"
 #fi
+
 for s in $seas ; do
   echo "#### post-processing $n $s $ys ####"
   [[ $s = DJF ]] && mons="{12,01,02}" && mmons="12,01,02"
@@ -82,25 +86,28 @@ for s in $seas ; do
   [[ $s = SON ]] && mons="{09,10,11}" && mmons="09,10,11"
 
   for v in $vars; do
-    [[ $gdom = WMD-03 ]] && gdir=$hdir/CORDEX/output/$gdom/ICTP/$gcon/*/r*/ICTP-RegCM5-0/v*/day/$v/
-    if [ $n = Europe -o $n = Europe03 ]; then
-      [[ $v = pr     ]] && o=("hires" "eobs" "mswep" "cpc" "gpcc") && res=("0.11" "0.1" "0.1" "0.1" "0.25")
-      [[ $v = tas    ]] && o=("eobs") && res=("0.1")
-    elif [ $n = Mediterranean -o $n = SEEurope -o $n = WMediterranean ]; then
-      [[ $v = pr     ]] && o=("hires" "eobs" "mswep") && res=("0.03" "0.1" "0.1")
-      [[ $v = tas    ]] && o=("eobs") && res=("0.1")
-    elif [ $n = EastAsia ]; then
-      [[ $v = pr     ]] && o=("mswep" "cpc" "gpcc" "aphro" "cn05.1") && res=("0.1" "0.1" "0.25" "0.25" "0.25")
-      [[ $v = tas    ]] && o=("cru" "cn05.1") && res=("0.5" "0.25")
-    else
-      [[ $v = pr     ]] && o=("cpc" "cru") && res=("0.25" "0.5")
-      [[ $v = tas    ]] && o=("cru") && res=("0.5")
-    fi
+    echo "#=== $v ===#"
+    [[ $v = pr     ]] && o=("mswep" "cpc" "gpcc" 'cru' "gpcp" "era5") && res=("0.1" "0.1" "0.25" "0.5" "0.5" "0.25")
+    [[ $v = tas    ]] && o=("cru" "era5") && res=("0.5" "0.25")
     [[ $v = tasmax ]] && o=("cru") && res=("0.5")
     [[ $v = tasmin ]] && o=("cru") && res=("0.5")
-    [[ $v = clt    ]] && o=("cru") && res=("0.5")
-    [[ $v = snw    ]] && o=("swe") && res=("1.0")
-    echo "#=== $v ===#"
+    [[ $v = clt    ]] && o=("cru" "era5") && res=("0.5" "0.25")
+    # [[ $v = snw    ]] && o=("swe") && res=("1.0")
+	
+	# domain-specific adjustments
+    [[ $gdom = WMD-03 ]] && gdir=$hdir/CORDEX/output/$gdom/ICTP/$gcon/*/r*/ICTP-RegCM5-0/v*/day/$v/
+    if [ $n = Europe -o $n = Europe03 ]; then
+      [[ $v = pr     ]] && o+=("eobs") && res+=("0.1")
+      [[ $v = tas    ]] && o+=("eobs") && res+=("0.1")
+      [[ $v = tasmax ]] && o+=("eobs") && res+=("0.1")
+      [[ $v = tasmin ]] && o+=("eobs") && res+=("0.1")
+    elif [ $n = Mediterranean -o $n = SEEurope -o $n = WMediterranean ]; then
+      [[ $v = pr     ]] && o=("eobs" "mswep") && res=("0.1" "0.1")
+      [[ $v = tas    ]] && o=("eobs") && res=("0.1")
+    fi
+	# printf "%s\n" "${o[@]}"
+	# printf "%s\n" "${res[@]}"
+
     typ=STS
     [[ $v = clt ]] && typ=SRF
     [[ $v = snw ]] && typ=SRF
@@ -108,7 +115,11 @@ for s in $seas ; do
     # find data
     set +e
     files="$hdir/*${typ}.{${fyr}..${lyr}}${mons}*.nc" 
-    firstf=$( eval ls $files 2>/dev/null | head -1 ) && iwrk=true || iwrk=false
+    #firstf=$( eval ls $files 2>/dev/null | head -1 ) && iwrk=true || iwrk=false
+	files="`eval ls $files `"
+	firstf="$( echo $files | cut -d " " -f 1)"
+	#[[ ! -z $firstf ]] && iwrk=true || iwrk=false
+	[[ -f $firstf ]] && iwrk=true || iwrk=false
     gprt="${v}_${gdom}_${gcon}_*_day_"
     gfiles="$gdir/${gprt}{${fyr}..${lyr}}${mons}*.nc"
     [[ $gdom = WMD-03 ]] && gfiles="$gdir/${gprt}{${fyr}..${lyr}}*.nc"
@@ -141,7 +152,8 @@ for s in $seas ; do
       fi
     fi
 
-    mof=$pdir/${n}_${v}_${ys}_${s}_mean.nc
+    # mof=$pdir/${n}_${v}_${ys}_${s}_mean.nc
+    mof=$pdir/${v}_RegCM_${ys}_${s}_mean.nc
     CDO timmean $sof $mof
     rm $sof
 
@@ -157,6 +169,14 @@ for s in $seas ; do
       mv $cof $mof
     fi
 
+	# apply land-sea mask
+	export mf=$( eval ls $hdir/*.nc | grep -v "clm" | head -n1 )
+	echo $mf
+	export sea=$s
+	export var=$v
+	ncl -Q $scrdir/apply_RegCM_land_sea_mask.ncl
+    mof2=$pdir/${v}_RegCM_${ys}_${s}_mean_masked.nc
+
     no=$(( ${#o[@]} - 1 ))
     echo $o, $no
     for i in `seq 0 $no`; do
@@ -164,7 +184,7 @@ for s in $seas ; do
       if [ $this_o = cpc -a $fyr -lt 1979 ]; then
         continue
       fi
-      if [ $this_o = mswep -a $fyr -lt 1979 ]; then
+      if [ $this_o = mswep -a $fyr -lt 1980 ]; then
         continue
       fi
       this_res=${res[i]}
@@ -179,32 +199,36 @@ for s in $seas ; do
         [[ $n = Europe03 ]] && nn=Europe 
         [[ $n = WMediterranean ]] && nn=Medi3 
         rrr=$( echo $this_res | cut -d. -f2 )
-        if [ $ys = "2000-2001" ]; then
-          obf=$( eval ls $hrdir/${v}_mean_2000-2009_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
+        if [ $ys = "2000-2004" ]; then
+          obf=$( eval ls $hrdir/${v}_mean_${ys}_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
         else
           obf=$( eval ls $hrdir/${v}_mean_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
         fi
       else
         obf=$( eval ls $odir/$obs )
       fi
-      ofr=$odir/$( basename $obf .nc )_${n}_${this_res}.nc
+      ofr=$pdir/$( basename $obf .nc )_${n}_${this_res}.nc
       mfr=$pdir/$( basename $mof .nc )_${n}_${this_res}.nc
-      grid=$odir/${n}_${this_o^^}.grid
+      mfr2=$pdir/$( basename $mof2 .nc )_${n}_${this_res}.nc
+      grid=$pdir/${n}_${this_o^^}.grid
       if [ ! -f $grid ]; then
-        mdasilvadir=/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm
-        python3 $mdasilvadir/griddes_ll.py $mof $this_res > $grid
+        python3 $scrdir/griddes_ll.py $mof $this_res > $grid
       fi
       if [ $v = pr ]
       then
         CDO remapnn,$grid $obf $ofr
         CDO remapnn,$grid $mof $mfr
+        CDO remapnn,$grid $mof2 $mfr2
       else
         CDO remapdis,$grid $obf $ofr
         CDO remapdis,$grid $mof $mfr
+        CDO remapdis,$grid $mof2 $mfr2
       fi
-      bof=$pdir/${n}_${v}_${ys}_${s}_bias_${this_o^^}.nc
+      bof=$pdir/${v}_bias_${ys}_${s}_${this_o^^}.nc
+      bof2=$pdir/${v}_bias_${ys}_${s}_${this_o^^}_masked.nc
       echo "Producing $bof"
       CDO sub $mfr $ofr $bof
+      CDO sub $mfr2 $ofr $bof2
     done
   done
 done

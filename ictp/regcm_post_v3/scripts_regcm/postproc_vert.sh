@@ -1,10 +1,12 @@
 #!/bin/bash
+
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
 #SBATCH -N 1 
-#SBATCH -t 18:00:00
-#SBATCH -A ICT23_ESP
+#SBATCH -t 4:00:00
+#SBATCH --ntasks-per-node=108
 #SBATCH --mail-type=FAIL
-#SBATCH -p skl_usr_prod
-#SBATCH --qos=qos_prio
+#SBATCH --mail-user=mda_silv@ictp.it
 
 ##############################
 ### change inputs manually ###
@@ -12,16 +14,16 @@
 
 n=$1
 path=$2-$1
-rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5
-ys=$5 #2000-2001
+rdir=$3 
+ys=$5 
 
 ##############################
 ### change inputs manually ###
 ##############################
 
 xdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4/vertical
-odir=/marconi_work/ICT23_ESP/jciarlo0/obs/era5
-mdir=/marconi_work/ICT23_ESP/ggiulian/OBS/SREX
+odir=/marconi/home/userexternal/mdasilva/user/mdasilva/OBS/ERA5
+mdir=/leonardo_work/ICT24_ESP/clu/OBS/SREX
 obsn=ERA5
 
 export REMAP_EXTRAPOLATE=off
@@ -95,7 +97,7 @@ fi
 [[ $dom = SouthEastAsia  ]] && ddd=SEA
 [[ $dom = Australasia    ]] && ddd=AUS
 
-vars="clw cli cl"
+vars="clw cli cl hus rh"
 seas="DJF MAM JJA SON"
 for v in $vars; do
   r4log=F
@@ -115,10 +117,14 @@ for v in $vars; do
   [[ $v = clw ]] && vo=clliq
   [[ $v = cli ]] && vo=clice
   [[ $v = cl  ]] && vo=clfrac
+  [[ $v = hus ]] && vo=qhum
+  [[ $v = rh  ]] && vo=rhum
   [[ $v = clw ]] && vi=clwc
   [[ $v = cli ]] && vi=ciwc
   [[ $v = cl  ]] && vi=cc
-
+  [[ $v = hus ]] && vi=q
+  [[ $v = rh  ]] && vi=r
+  
   for f in $( eval ls $sdir/*${t}.{${fyr}..${lyr}}??*.nc | grep -v day | grep -v night ); do
     echo $f ..
     of=$pdir/${v}_$( basename $f | cut -d'.' -f2 | cut -c1-10 ).nc

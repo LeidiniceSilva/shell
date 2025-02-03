@@ -1,4 +1,4 @@
-load "$NCARG_ROOT/lib/ncarg/nclscripts/james/trimPNG.ncl"
+loadscript(getenv("scrdir")+"/"+"trimPNG.ncl")
 
 ;---------------------------------------------
 ; Plotting p99
@@ -22,15 +22,15 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/james/trimPNG.ncl"
 
   snumT  = conf+"-"+snum
   if ( snum.eq."Europe" .or. snum.eq."Europe03" .or. snum.eq."WMediterranean" ) then
-  ; obs = "EOBS"
-    obs = "EUR-HiRes"
+    obs = "EOBS"
+    ;obs = "EUR-HiRes"
   else
     obs = "CPC"
   end if
 
   ln="lon"
   lt="lat"
-  r4 = "on"
+  r4 = "off"
   if ( snum.eq."WMediterranean" .or. snum.eq."Europe" ) then
     r4 = "off"
     ln = "xlon"

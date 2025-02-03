@@ -1,13 +1,14 @@
 #!/bin/bash
+
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
 #SBATCH -N 1 
 #SBATCH -t 4:00:00
-#SBATCH -A ICT23_ESP
+#SBATCH --ntasks-per-node=108
 #SBATCH --mail-type=FAIL
-#SBATCH -p skl_usr_prod
-#SBATCH --qos=qos_prio
 
-
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+# module purge
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 
 ##############################
 ### change inputs manually ###
@@ -191,8 +192,7 @@ for s in $seas ; do
       mfr=$pdir/$( basename $mof .nc )_${n}_${this_res}.nc
       grid=$odir/${n}_${this_o^^}.grid
       if [ ! -f $grid ]; then
-        ggiuldir=/marconi_work/ICT23_ESP/ggiulian/CORDEX-RegCM-Submit-main/scripts
-        python3 $ggiuldir/griddes_ll.py $mof $this_res > $grid
+        python3 griddes_ll.py $mof $this_res > $grid
       fi
       if [ $v = pr ]
       then

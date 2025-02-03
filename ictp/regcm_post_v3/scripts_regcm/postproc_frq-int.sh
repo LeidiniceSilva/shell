@@ -1,12 +1,14 @@
 #!/bin/bash
-#SBATCH -N 1 
-#SBATCH -t 9:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --mail-type=FAIL
-#SBATCH -p skl_usr_prod
-#SBATCH --qos=qos_prio
 
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1 
+#SBATCH -t 4:00:00
+#SBATCH --ntasks-per-node=108
+#SBATCH --mail-type=FAIL
+
+# module purge
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 
 ##############################
 ### change inputs manually ###
@@ -15,8 +17,9 @@ source /marconi/home/userexternal/ggiulian/STACK22/env2022
 n=$1
 path=$2-$1
 rdir=$3 
-odir=$4
+odir=$4 
 ys=$5 
+scrdir=$6 
 
 ##############################
 ####### end of inputs ########
@@ -82,13 +85,10 @@ for s in $seas ; do
   for v in $vars; do
     [[ $gdom = WMD-03 ]] && gdir=$hdir/CORDEX/output/$gdom/ICTP/$gcon/*/r*/ICTP-RegCM5-0/v*/day/$v/
     if [ $n = Europe -o $n = Europe03 -o $n = Mediterranean -o $n = WMediterranean ]; then
-      o=("hires" "eobs" "cpc" "gpcc") && res=("0.03" "0.1" "0.1" "0.25")
-    elif [ $n = EastAsia ]; then
-      o=("cpc" "gpcc" "aphro")
-      res=("0.1" "0.25" "0.25")
+      o=("eobs" "cpc" "gpcc") && res=("0.1" "0.1" "1.0")
     else
-      o=("cpc")
-      res=("0.1")
+      o=("cpc" "gpcc")
+      res=("0.1" "1.0")
     fi
       
     echo "#=== $v ===#"
@@ -97,7 +97,11 @@ for s in $seas ; do
     # find data
     set +e
     files="$hdir/*${typ}.{${fyr}..${lyr}}${mons}*.nc"
-    firstf=$( eval ls $files 2>/dev/null | head -1 ) && iwrk=true || iwrk=false
+    #firstf=$( eval ls $files 2>/dev/null | head -1 ) && iwrk=true || iwrk=false
+	files="`eval ls $files `"
+	firstf="$( echo $files | cut -d " " -f 1)"
+	#[[ ! -z $firstf ]] && iwrk=true || iwrk=false
+	[[ -f $firstf ]] && iwrk=true || iwrk=false
     gprt="${v}_${gdom}_${gcon}_*_day_"
     gfiles="$gdir/${gprt}{${fyr}..${lyr}}${mons}*.nc"
     [[ $gdom = WMD-03 ]] && gfiles="$gdir/${gprt}{${fyr}..${lyr}}*.nc"
@@ -111,7 +115,7 @@ for s in $seas ; do
       exit 1
     fi
 
-    sof=$pdir/${n}_${v}_${ys}_${s}.nc
+    sof=$pdir/${v}_RegCM_${ys}_${s}.nc
     if [ $iwrk = true ]; then
       for f in $( eval ls $files ); do
         of=$pdir/${n}_${v}_$( basename $f | cut -d'.' -f2 ).nc
@@ -138,7 +142,7 @@ for s in $seas ; do
 #   mv $cof $sof
 
     #frequency 
-    fof=$pdir/${n}_${v}_frq_${ys}_${s}.nc
+    fof=$pdir/${v}_frq_RegCM_${ys}_${s}.nc
   # CDO chname,precipitation_days_index_per_time_period,$v -eca_pd,1 $sof $fof
   # CDO mulc,100. -divc,91.3 -divc,$dy -histcount,1,100000 $sof $fof
     CDO mulc,100 -histfreq,1,100000 $sof $fof
@@ -146,7 +150,7 @@ for s in $seas ; do
     ncatted -O -a units,$v,m,c,"%" $fof
  
     #intensity
-    iof=$pdir/${n}_${v}_int_${ys}_${s}.nc
+    iof=$pdir/${v}_int_RegCM_${ys}_${s}.nc
     CDO histmean,1,100000 $sof $iof
 #   CDO divc,$dy -timsum -mul $sof -gec,1 $sof $iof
 #   ncatted -O -a units,$v,m,c,"mm/yr" $iof
@@ -174,9 +178,8 @@ for s in $seas ; do
       fi
       echo "#--- processing ${this_o^^} with resolution of ${this_res} ---#"
 
-      grid=$odir/${n}_${this_o^^}.grid
-      ggiuldir=/marconi_work/ICT23_ESP/ggiulian/CORDEX-RegCM-Submit-main/scripts
-      [[ ! -f $grid ]] && python3 $ggiuldir/griddes_ll.py $fof $this_res > $grid
+      grid=$pdir/${n}_${this_o^^}_${this_res}.grid
+      [[ ! -f $grid ]] && python3 $scrdir/griddes_ll.py $fof $this_res > $grid
 
       obs="${v}_${this_o^^}_${ys}.nc"
       if [ $this_o = "hires" ]; then
@@ -186,14 +189,14 @@ for s in $seas ; do
         [[ $n = WMediterranean ]] && nn=Medi3 
         rrr=$( echo $this_res | cut -d. -f2 )
 #       if [ $ys = "2000-2004" -o $ys = "1970-1975" ]; then
-          fobs0=$( eval ls $hrdir/${v}_frq_2000-2009_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
-          iobs0=$( eval ls $hrdir/${v}_int_2000-2009_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
+          fobs0=$( eval ls $hrdir/${v}_frq_${ys}_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
+          iobs0=$( eval ls $hrdir/${v}_int_${ys}_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
 #       else
 #         fobs0=$( eval ls $hrdir/${v}_frq_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
 #         iobs0=$( eval ls $hrdir/${v}_int_${s}_EUR-HiRes_day_${nn}${rrr}grid.nc )
 #       fi
-        fobs=$odir/${v}_frq_${this_o^^}_${ys}_${s}.nc
-        iobs=$odir/${v}_int_${this_o^^}_${ys}_${s}.nc
+        fobs=$pdir/${v}_frq_${this_o^^}_${ys}_${s}.nc
+        iobs=$pdir/${v}_int_${this_o^^}_${ys}_${s}.nc
 #       CDO mulc,100. -divc,91.3 $fobs0 $fobs
         cp $fobs0 $fobs
         ncatted -O -a units,$v,m,c,"%" $fobs
@@ -203,17 +206,17 @@ for s in $seas ; do
         #ncatted -O -a units,$v,m,c,"mm/day" $iobs
       else
         obf=$( eval ls $odir/$obs )
-        sobs=$odir/${v}_${this_o^^}_${ys}_${s}.nc
+        sobs=$pdir/${v}_${this_o^^}_${ys}_${s}.nc
         [[ ! -f $sobs ]] && CDO selseas,$s $obf $sobs
 
-        fobs=$odir/${v}_frq_${this_o^^}_${ys}_${s}.nc
+        fobs=$pdir/${v}_frq_${this_o^^}_${ys}_${s}.nc
      #  CDO chname,precipitation_days_index_per_time_period,$v -eca_pd,1 $sobs $fobs
      #  CDO mulc,100. -divc,91.3 -divc,$dy -histcount,1,100000 $sobs $fobs
         CDO mulc,100. -histfreq,1,100000 $sobs $fobs
      #  CDO divc,$dy -timsum -gec,1 $sobs $fobs
         ncatted -O -a units,$v,m,c,"%" $fobs
 
-        iobs=$odir/${v}_int_${this_o^^}_${ys}_${s}.nc
+        iobs=$pdir/${v}_int_${this_o^^}_${ys}_${s}.nc
         CDO histmean,1,100000 $sobs $iobs
   #     CDO divc,$dy -timsum -mul $sobs -gec,1 $sobs $iobs
   #     ncatted -O -a units,$v,m,c,"mm/yr" $iobs
@@ -223,19 +226,19 @@ for s in $seas ; do
         ncatted -O -a units,$v,m,c,"mm/day" $iobs
       fi
 
-      ofr=$odir/$( basename $fobs .nc )_${n}_${this_res}.nc
+      ofr=$pdir/$( basename $fobs .nc )_${n}_${this_res}.nc
       mfr=$pdir/$( basename $fof .nc )_${n}_${this_res}.nc
       CDO remapnn,$grid $fobs $ofr
       CDO remapnn,$grid $fof $mfr
-      bof=$pdir/${n}_${v}_frq_${ys}_${s}_bias_${this_o^^}.nc
+      bof=$pdir/${v}_frq_bias_${ys}_${s}_${this_o^^}.nc
       echo "Producing $bof"
       CDO sub $mfr -selvar,$v $ofr $bof
 
-      ofr=$odir/$( basename $iobs .nc )_${n}_${this_res}.nc
+      ofr=$pdir/$( basename $iobs .nc )_${n}_${this_res}.nc
       mfr=$pdir/$( basename $iof .nc )_${n}_${this_res}.nc
       CDO remapnn,$grid $iobs $ofr
       CDO remapnn,$grid $iof $mfr
-      bof=$pdir/${n}_${v}_int_${ys}_${s}_bias_${this_o^^}.nc
+      bof=$pdir/${v}_int_bias_${ys}_${s}_${this_o^^}.nc
       echo "Producing $bof"
       CDO sub $mfr -selvar,$v $ofr $bof
     done

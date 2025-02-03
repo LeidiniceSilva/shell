@@ -23,12 +23,12 @@ for v in $vars; do
   [[ $v = pr ]] && vc=precipitation
 
   sf=mswep.day.1979-2020.nc
-  ff=$( eval ls $hdir/????.nc )
+  ff=$( eval ls ????.nc )
   [[ ! -f $sf ]] && CDO mergetime $ff $sf  
 
   echo "## Processing $v $ys "
   mf=${v}_${obs}_${ys}.nc
-  eval CDO chname,$vc,$v -selvar,$vc -selyear,$fyr/$lyr $sf $mf
+  eval CDO chname,$vc,$v -selvar,$vc -selyear,$fyr/$lyr $sf $yf
   ncatted -O -a units,pr,m,c,mm/day $mf
   is=$(( is+1 ))
 done

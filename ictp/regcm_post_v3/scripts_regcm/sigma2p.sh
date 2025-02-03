@@ -1,22 +1,21 @@
 #!/bin/bash
 
-#SBATCH -N 1 
-#SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --mail-type=FAIL
-#SBATCH --qos=qos_prio
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 4:00:00
+#SBATCH -A ICT23_ESP_1
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH -p dcgp_usr_prod
 
 # load required modules
-module purge
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+# module purge
+source /leonardo/home/userexternal/ggiulian/modules
 
 export REMAP_EXTRAPOLATE=off
 
 {
 set -eo pipefail
-CDO(){
-  cdo -O -L -f nc4 -z zip $@
-}
 
 n=$1
 path=$2-$1
@@ -30,17 +29,13 @@ pdir=$hdir/pressure
 mkdir -p $pdir
 
 here=$( pwd )
-bnf=$here/bin/sigma2pNETCDF4_HDF5_CLM45_${p}
+bnf=$here/bin/sigma2pCLM45
 cd $pdir
 
 [[ $t = ATM ]] && sv="clw,cli,ua,va,hus,rh,ta,wa" || sv="cl"
 for f in $( \ls ../*${t}.${y}*.nc ); do
   bn=$( basename $f .nc )
   echo $bn
-  if [ ! -f $pdir/${bn}_pressure.nc ]; then
-    $bnf $f
-    CDO selvar,$sv $pdir/${bn}_pressure.nc $pdir/${bn}_tmp.nc
-    mv $pdir/${bn}_tmp.nc $pdir/${bn}_pressure.nc
- fi
+  $bnf $f
 done
 }

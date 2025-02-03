@@ -7,11 +7,11 @@ begin
 	var = getenv("var")
 	mfname = getenv("mf")
     ; mof=$pdir/${n}_${v}_${ys}_${s}_mean_masked.nc
-	; EAS-22_STS.2000010100.nc
+	; WAS-22_STS.2000010100.nc
 	
 	;-- fname
-	fname = hdir+"/plots/"+n+"_"+var+"_"+ys+"_"+sea+"_mean.nc"
-	outfname = hdir+"/plots/"+n+"_"+var+"_"+ys+"_"+sea+"_mean_masked.nc"
+	fname = hdir+"/plots/"+var+"_RegCM_"+ys+"_"+sea+"_mean.nc"
+	outfname = hdir+"/plots/"+var+"_RegCM_"+ys+"_"+sea+"_mean_masked.nc"
 	;print(fname+"")
 	;print(outfname+"")
 
