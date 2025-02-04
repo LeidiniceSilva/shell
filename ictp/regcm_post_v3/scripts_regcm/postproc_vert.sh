@@ -8,6 +8,8 @@
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=mda_silv@ictp.it
 
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
+
 ##############################
 ### change inputs manually ###
 ##############################
@@ -21,9 +23,9 @@ ys=$5
 ### change inputs manually ###
 ##############################
 
-xdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4/vertical
-odir=/marconi/home/userexternal/mdasilva/user/mdasilva/OBS/ERA5
+odir=/leonardo_work/ICT24_ESP/clu/CORDEX/obs
 mdir=/leonardo_work/ICT24_ESP/clu/OBS/SREX
+xdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4/vertical
 obsn=ERA5
 
 export REMAP_EXTRAPOLATE=off

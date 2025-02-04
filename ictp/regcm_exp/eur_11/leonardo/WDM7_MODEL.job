@@ -1,15 +1,15 @@
 #!/bin/bash
 
-#SBATCH -o logs/WDM7-Europe.out
-#SBATCH -e logs/WDM7-Europe.err
-#SBATCH -N 16 ##--ntasks-per-node=20 #--mem=63G ##esp1
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 16 
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
+#SBATCH -o logs/WDM7-Europe.out
+#SBATCH -e logs/WDM7-Europe.err
 #SBATCH -J WDM7-Europe
-#SBATCH -A ICT23_ESP_1
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p dcgp_usr_prod
 
 {
 set -eo pipefail

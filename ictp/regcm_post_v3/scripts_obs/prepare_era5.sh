@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# OBSDIR=/leonardo_work/ICT24_ESP/OBS
-OBSDIR=/leonardo_work/ICT24_ESP/clu/OBS
+OBSDIR=/leonardo_work/ICT24_ESP/OBS
 wdir=$2
 cd $wdir
 
@@ -13,23 +12,20 @@ CDO(){
 
 set -a
 
-#
 obs=ERA5
 hdir=$OBSDIR/$obs/monthly
 ys=$1
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 
-#
 RED='\033[0;31m'
-NC='\033[0m' # No Color
+NC='\033[0m' 
 
 if [[ $fyr -lt 1950 || $lyr -lt 1950 || $fyr -gt 2023 || $lyr -gt 2023 ]]; then
   echo -e "${RED}Attention${NC}: $obs from 1950-01 to 2023-12, check input time range."
   exit 1 
 fi
 
-#
 vars="clt pr tas"
 seas="DJF MAM JJA SON"
 seasdays=( 30.5 30.5 30.5 30.5 )
@@ -40,16 +36,15 @@ for v in $vars; do
   [[ $v = pr      ]] && vc=tp
   [[ $v = tas     ]] && vc=t2m
 
-#  for y in `seq ${fyr} ${lyr}`; do
-#    ff=${v}_${y}.nc
-#    [[ ! -f $ff ]] && CDO -b f32 mergetime $hdir/$y/${v}_${y}_*.nc $ff
-#  done
-#
-#  yf=${v}_${obs}_${ys}.nc
-#  ff=$( eval ls ${v}_????.nc )
-#  CDO -b f32 mergetime $ff $yf
-#  rm $ff
-  yf=$hdir/${v}.era5.mon.1950-2023.nc
+  for y in `seq ${fyr} ${lyr}`; do
+    ff=${v}_${y}.nc
+    [[ ! -f $ff ]] && CDO -b f32 mergetime $hdir/$y/${v}_${y}_*.nc $ff
+  done
+
+  yf=${v}_${obs}_${ys}.nc
+  ff=$( eval ls ${v}_????.nc )
+  CDO -b f32 mergetime $ff $yf
+  rm $ff
 
   for s in $seas ; do
     echo "## Processing $v $ys $s"
@@ -69,7 +64,7 @@ for v in $vars; do
 	fi
     is=$(( is+1 ))
   done
-  # rm $yf
+
 done
 echo "Done."
 

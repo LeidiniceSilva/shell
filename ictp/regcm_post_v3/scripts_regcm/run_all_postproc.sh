@@ -20,26 +20,25 @@ set -eo pipefail
 if [ $# -ne 2 ]
 then
    echo "Please provide Domain name and conf name in $rdir"
-   echo 'Example: $0 Africa NoTo' # 2000-2001' # "0 0 0 0 1"'
+   echo 'Example: $0 Africa NoTo' 
    exit 1
 fi
+
 this_domain=$1
 this_config=$2
-dep="" #to be used only with run_postproc=2
+dep="" 
 n=$this_domain
 [[ $n = Europe ]] && domdir=EUR11
 [[ $n = WMediterranean ]] && domdir=WMD03
 
-# directory to RegCM output
+# directory to RegCM output and pre-processed observation data
 export rdir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11
-
-# directory to pre-processed observation data
 export odir=/leonardo_work/ICT24_ESP/clu/CORDEX/obs
 
 yrs=2000-2001
 email="mda_silv@ictp.it"
 
- run_postproc="0 1 1 1 1 0 0" # bias + pdf + pr-frq/int + p99
+#run_postproc="0 1 1 1 1 0 0" # bias + pdf + pr-frq/int + p99
 #run_postproc="0 1 0 0 0 0 0" # bias
 #run_postproc="0 0 1 0 0 0 0" # pdf
 #run_postproc="0 0 0 1 0 0 0" # pr-frq/int
@@ -47,15 +46,15 @@ email="mda_silv@ictp.it"
 #run_postproc="2 0 0 0 0 0 0" # sigma2p
 #run_postproc="0 0 0 0 0 2 2" # vert + wind
 #run_postproc="0 0 0 0 0 2 0" # vert
-#run_postproc="0 0 0 0 0 0 2" # wind
-#1/0 = on/off switch for sigma, bias, pr(%), prc/pr, pdfs, pr-frq/int, p99,
-#      vert, day/night, wind 
-#      last three are automatically switched off if submit-sigma is on
-#2 = on but submitted as a job. submit-sigma should not be 2
-## true -if you want submit sigma to be followed by vert, daynight, and quv
-export lgc_vert=true #vertical
+ run_postproc="0 0 0 0 0 0 1" # wind
+# 1/0 = on/off switch for sigma, bias, pr(%), prc/pr, pdfs, pr-frq/int, p99, vert, day/night, wind 
+# last three are automatically switched off if submit-sigma is on
+# 2 = on but submitted as a job. submit-sigma should not be 2
+# true -if you want submit sigma to be followed by vert, daynight, and quv
+
+export lgc_vert=true  #vertical
 export lgc_dynt=false #day/night vertical
-export lgc_quv=true  #winds
+export lgc_quv=true   #winds
 
 ##############################
 ####### end of inputs ########

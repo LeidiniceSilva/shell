@@ -10,7 +10,6 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-#
 obs=EOBS
 ds1=010
 ds2=0.1
@@ -19,17 +18,14 @@ fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 hdir=$OBSDIR/$obs/${ds1}
 
-#
 RED='\033[0;31m'
-NC='\033[0m' # No Color
+NC='\033[0m' 
 
-#
 if [[ $fyr -lt 1950 || $lyr -lt 1950 || $fyr -gt 2023 || $lyr -gt 2023 ]]; then
   echo -e "${RED}Attention${NC}: $obs from 1950-01-01 to 2024-06-30, check input time range."
   exit 1
 fi
 
-#
 vars="pr tas tasmax tasmin"
 seas="DJF MAM JJA SON"
 is=0

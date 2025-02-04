@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#OBSDIR=/leonardo_work/ICT24_ESP/OBS
-OBSDIR=/leonardo_work/ICT24_ESP/clu/OBS
+OBSDIR=/leonardo/home/userexternal/mdasilva/leonardo_work/OBS
 wdir=$2
 cd $wdir
 
@@ -11,23 +10,20 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-#
 obs=GPCC
 hdir=$OBSDIR/$obs
 ys=$1
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 
-#
 RED='\033[0;31m'
-NC='\033[0m' # No Color
+NC='\033[0m' 
 
 if [[ $fyr -lt 1982 || $lyr -lt 1982 || $fyr -gt 2020 || $lyr -gt 2020 ]]; then
   echo -e "${RED}Attention${NC}: $obs from 1982-01-01 to 2020-12-31, check input time range."
   exit 1 
 fi
 
-#
 vars="pr"
 for v in $vars; do
   [[ $v = pr ]] && vc=precip

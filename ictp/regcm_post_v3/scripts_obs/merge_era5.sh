@@ -1,13 +1,10 @@
 #!/bin/bash
 
-#
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
 
-#
 dir0=/leonardo_work/ICT24_ESP/OBS/ERA5/monthly
-dir1=/leonardo_work/ICT24_ESP/clu/OBS/ERA5/monthly
+dir1=/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/ERA5
 
-#
 fyr=1950
 lyr=2023
 
@@ -17,9 +14,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-# var="clt pr tas"
-var="pr tas"
-#var="clt"
+var="clt pr tas"
 for v in $var; do
 	for y in `seq ${fyr} ${lyr}`; do
 		ff=$dir1/${v}_${y}.nc

@@ -1,11 +1,9 @@
 #!/bin/bash
 
-#
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
 
-#
 dir0=/leonardo_work/ICT24_ESP/OBS/CPC/precip
-dir1=/leonardo_work/ICT24_ESP/clu/OBS/CPC/precip
+dir1=/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/CPC/precip
 
 {
 set -eo pipefail

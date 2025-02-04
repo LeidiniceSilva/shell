@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# OBSDIR=/leonardo_work/ICT24_ESP/OBS
-OBSDIR=/leonardo_work/ICT24_ESP/clu/OBS
+OBSDIR=OBSDIR=/leonardo/home/userexternal/mdasilva/leonardo_work/OBS
 wdir=$2
 cd $wdir
 
@@ -18,16 +17,14 @@ ys=$1
 fyr=$( echo $ys | cut -d- -f1 )
 lyr=$( echo $ys | cut -d- -f2 )
 
-#
 RED='\033[0;31m'
-NC='\033[0m' # No Color
+NC='\033[0m' 
 
 if [[ $fyr -lt 1980 || $lyr -lt 1980 || $fyr -gt 2019 || $lyr -gt 2019 ]]; then
   echo -e "${RED}Attention${NC}: $obs from 1979-02-01 to 2020-11-30, check input time range."
   exit 1 
 fi
 
-#
 vars="pr"
 seas="DJF MAM JJA SON"
 seasdays=( 30.5 30.5 30.5 30.5 )
@@ -36,11 +33,8 @@ for v in $vars; do
   [[ $fyr -lt 1979 ]] && continue
   [[ $v = pr ]] && vc=precipitation
 
-  #sf=mswep.mon.1979-2020.nc
   sf=$hdir/mswep.mon.1979-2020.nc
-  yf=${v}_${obs}_${ys}.nc
-  #ff=$( eval ls ??????.nc )
-  #[[ ! -f $sf ]] && CDO mergetime $ff $sf  
+  yf=${v}_${obs}_${ys}.nc 
   eval CDO selyear,$fyr/$lyr $sf $yf
 
   for s in $seas ; do

@@ -16,17 +16,16 @@ source /leonardo/home/userexternal/ggiulian/modules_gfortran
 
 dom=$1
 snam=$2-$1
-rdir=$3 #/marconi_scratch/userexternal/jciarlo0/ERA5
-odir=$4 #/marconi_scratch/userexternal/jciarlo0/ERA5/obs
-tper=$5 #2000-2001
+rdir=$3 
+odir=$4 
+tper=$5 
 
 ##############################
-### change inputs manually ###
+####### end of inputs ########
 ##############################
 
-# path to mask files
+# path to mask files and RegCM results
 mdir=/leonardo_work/ICT24_ESP/clu/OBS/SREX
-# path to RegCM4 results ==> not needed at this stage
 gdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4
 
 #if [ $# -ne 2 ]
@@ -38,12 +37,15 @@ gdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4
 
 {
 set -eo pipefail
+
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
+
 CDOf(){
   CDO -b F32 $@
 }
+
 cpdf(){
   mn=$1 ; mx=$2 ; fin=$3 ; fout=$4
   CDOf fldsum -timsum -gec,-1000 $fin ${fout}_cnt.nc
@@ -54,6 +56,7 @@ cpdf(){
   CDOf divc,$nc -fldsum -histcount,$( echo $( seq $mn 1 $mx ) | sed 's/ /,/g' ) $fin $fout
   rm ${fout}_cnt.nc
 }
+
 cpdfy(){
   mn=$1 ; mx=$2 ; fin=$3 ; fout=$4 ; tper=$5
   y1=$( echo $tper | cut -d- -f1 )
@@ -89,7 +92,6 @@ if [ $cp = true ]; then
   pdom=$( cat $parentin | grep coarse_domname | cut -d"'" -f2 )
 fi
 
-#r4="on"
 r4="off"
 #special=true
 special=false
@@ -124,7 +126,6 @@ elif [ $dom = Mediterranean -o $dom = Europe03 -o $dom = WMediterranean -o $spec
   r4="off"
 else 
   obs_p=CPC
-  #obs_p=ERA5
   obs_t=CRU
 fi
 vars="pr tas"
