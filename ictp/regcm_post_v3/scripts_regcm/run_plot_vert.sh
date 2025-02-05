@@ -19,8 +19,8 @@ n=$1
 path=$2-$1
 export snum=$1
 export conf=$2
-rdir=$3     
-export scrdir=$4   
+rdir=$3      
+scrdir=$4    
 export ys=$5 
 
 ##############################
@@ -54,6 +54,6 @@ fi
 pdir=$hdir/plots
 mkdir -p $pdir
 
-ncl -Q $scrdir/plot_p99.ncl
+ncl -Q $scrdir/plot_vert.ncl
 
-echo "#### plot complete! ####"
+echo "#### vertical plots complete! ####"

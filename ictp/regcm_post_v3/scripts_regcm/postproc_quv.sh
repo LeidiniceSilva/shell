@@ -24,8 +24,8 @@ scrdir=$6
 ####### end of inputs ########
 ##############################
 
-odir=/leonardo_work/ICT24_ESP/clu/CORDEX/obs
-mdir=/leonardo_work/ICT24_ESP/clu/OBS/SREX
+odir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/obs
+mdir=/leonardo/home/userexternal/mdasilva/leonardo_work/SREX
 xdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4/vertical
 obsn=ERA5
 
@@ -138,8 +138,8 @@ for v in $vars; do
     mfxr=$pdir/${v}_RegCM4_${ys}_${s}_mean_${res}.nc
     mfr=$pdir/${v}_RegCM5_${ys}_${s}_mean_${res}.nc
 	grid=$pdir/${dom}_${obsn}.grid
-    ggiuldir=/marconi_work/ICT23_ESP/ggiulian/CORDEX-RegCM-Submit-main/scripts
-    python3 $ggiuldir/griddes_ll.py $mf $res > $grid
+    griddir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v3/scripts_regcm
+    python3 $griddir/griddes_ll.py $mf $res > $grid
     CDO remapdis,$grid $ob1 $ofr
     [[ $r4log = T ]] && CDO remapdis $grid $mfx $mfxr
     CDO remapdis,$grid $mf $mfr

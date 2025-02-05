@@ -6,7 +6,7 @@
 #SBATCH -t 4:00:00
 #SBATCH --ntasks-per-node=108
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=clu@ictp.it
+#SBATCH --mail-user=mda_silv@ictp.it
 
 # module purge
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
@@ -15,38 +15,30 @@ source /leonardo/home/userexternal/ggiulian/modules_gfortran
 ### change inputs manually ###
 ##############################
 
-# path to post-processed data
-rdir=/leonardo_work/ICT24_ESP/clu/CORDEX/ERA5
+# path to post-processed data and  <domain>_CLM45_surface.nc file
+rdir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11
+ddir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc
 
-# directory to <domain>_CLM45_surface.nc file (icbc folder)
-ddir=/leonardo_scratch/large/userexternal/clu00000/CORDEX/ERA5/icbc
-
-#ys=1980-2010
-#ys=2000-2009
- ys=2000-2001
-#ys=1971-1975
-#run_plots="1 1 1 1 0 0 0" # all
+ys=2000-2001
+ run_plots="1 1 1 1 0 0 0" # all
 #run_plots="1 0 0 0 0 0 0" # bias
 #run_plots="0 1 0 0 0 0 0" # p99
 #run_plots="0 0 1 0 0 0 0" # frq-int
 #run_plots="0 0 0 1 0 0 0" # pdf
- run_plots="0 0 0 0 0 0 1" # urban mask
-#####run_plots="0 0 0 0 1 0 0" # vert
-#####run_plots="0 0 0 0 0 1 0" # wind
-##0/1 = on/off switch: bias, %pr%, p99, prc/pr, pr-frq/int, pdfs, 
-##                           vertical, wind, taylor plots
+#run_plots="0 0 0 0 0 0 1" # urban mask
+#run_plots="0 0 0 0 1 0 0" # vert
+#run_plots="0 0 0 0 0 1 0" # wind
+#0/1 = on/off switch: bias, %pr%, p99, prc/pr, pr-frq/int, pdfs, vertical, wind, taylor plots
 
 ##############################
 ####### end of inputs ########
 ##############################
 
-#plots=("4s_simple" "prpct" "p99" "prc2pr" "4s_frq-int" "pdfs" "vert" "quv" "taylor_diagram")
-#plots=("4s_simple_v6" "prpct" "p99_v2" "prc2pr_v2" "4s_frq-int_v4" "pdfs_v4" "vert_v3" "quv" "taylor_diagram_v2" "pixels" "vert_part2" "4s_simple_v4")
 plots=("4s_simple" "p99" "4s_frq-int" "pdfs" "vert" "quv" "urban_mask")
 nrun=$(( ${#plots[@]} - 1 ))
 
 # directory to scripts
-sdir=/leonardo_work/ICT24_ESP/clu/RegCM_scripts/postproc_raw
+sdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v3/scripts_regcm
 
 if [ $# -ne 3 ]
 then

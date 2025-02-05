@@ -6,7 +6,7 @@
 #SBATCH -t 4:00:00
 #SBATCH --ntasks-per-node=108
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=clu@ictp.it
+#SBATCH --mail-user=mda_silv@ictp.it
 
 # module purge
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
@@ -19,9 +19,9 @@ n=$1
 path=$2-$1
 export snum=$1
 export conf=$2
-export rdir=$3      #/marconi_scratch/userexternal/jciarlo0/ERA5
-export scrdir=$4    #/marconi/home/userexternal/jciarlo0/regcm_tests/Atlas2
-export ys=$5 #1999-1999
+export rdir=$3      
+export scrdir=$4   
+export ys=$5
 
 ##############################
 ####### end of inputs ########

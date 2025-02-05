@@ -23,8 +23,8 @@ ys=$5
 ### change inputs manually ###
 ##############################
 
-odir=/leonardo_work/ICT24_ESP/clu/CORDEX/obs
-mdir=/leonardo_work/ICT24_ESP/clu/OBS/SREX
+odir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/obs
+mdir=/leonardo/home/userexternal/mdasilva/leonardo_work/SREX
 xdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4/vertical
 obsn=ERA5
 
@@ -105,7 +105,7 @@ for v in $vars; do
   r4log=F
   [[ $dom = CentralAmerica ]] && r4log=T
   [[ $dom = SouthAmerica   ]] && r4log=T
-# [[ $dom = Europe         ]] && r4log=T
+  [[ $dom = Europe         ]] && r4log=T
   [[ $dom = Africa         ]] && r4log=T
   [[ $dom = SouthEastAsia  ]] && r4log=T
   [[ $dom = Australasia    ]] && r4log=T
@@ -131,7 +131,6 @@ for v in $vars; do
     echo $f ..
     of=$pdir/${v}_$( basename $f | cut -d'.' -f2 | cut -c1-10 ).nc
     CDO selvar,$v $f $of
-   #[[ $v = cl ]] && ncrename -v $vn,$v $nf
   done
 
   for s in $seas; do

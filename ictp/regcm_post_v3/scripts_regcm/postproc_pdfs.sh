@@ -25,7 +25,7 @@ tper=$5
 ##############################
 
 # path to mask files and RegCM results
-mdir=/leonardo_work/ICT24_ESP/clu/OBS/SREX
+mdir=/leonardo/home/userexternal/mdasilva/leonardo_work/SREX
 gdir=/marconi_work/ICT23_ESP/jciarlo0/CORDEX/ERA5/RegCM4
 
 #if [ $# -ne 2 ]

@@ -6,7 +6,7 @@ begin
 	sea = getenv("sea")
 	var = getenv("var")
 	mfname = getenv("mf")
-    ; mof=$pdir/${n}_${v}_${ys}_${s}_mean_masked.nc
+        ; mof=$pdir/${n}_${v}_${ys}_${s}_mean_masked.nc
 	; WAS-22_STS.2000010100.nc
 	
 	;-- fname

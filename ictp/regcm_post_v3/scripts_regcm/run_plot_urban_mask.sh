@@ -6,7 +6,7 @@
 #SBATCH -t 4:00:00
 #SBATCH --ntasks-per-node=108
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=clu@ictp.it
+#SBATCH --mail-user=mda_silv@ictp.it
 
 # module purge
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
@@ -19,11 +19,11 @@ n=$1
 path=$2-$1
 export snum=$1
 export conf=$2
-rdir=$3      #/marconi_scratch/userexternal/jciarlo0/ERA5
-export scrdir=$4    #/marconi/home/userexternal/jciarlo0/regcm_tests/Atlas2
-export ys=$5 #1999-1999
-snum2=$6 # AFR-22
-ddir=$7 # icbc folder
+rdir=$3      
+export scrdir=$4   
+export ys=$5
+snum2=$6 
+ddir=$7 
 
 ##############################
 ####### end of inputs ########
@@ -53,7 +53,6 @@ then
   exit -1
 fi
 
-#
 export f=$( eval ls $ddir/${snum2}_CLM45_surface.nc )
 echo $f
 if [[ ! -f $f ]]; then

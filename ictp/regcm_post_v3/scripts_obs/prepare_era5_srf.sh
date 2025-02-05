@@ -11,7 +11,6 @@ CDO(){
 }
 
 set -a
-
 obs=ERA5
 hdir=$OBSDIR/$obs/monthly
 ys=$1

@@ -23,6 +23,9 @@ rdir=$3
 export scrdir=$4   
 export ys=$5 
 
+plevs=(200 500 850)
+# plev options: 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000
+
 ##############################
 ####### end of inputs ########
 ##############################
@@ -54,6 +57,15 @@ fi
 pdir=$hdir/plots
 mkdir -p $pdir
 
-ncl -Q $scrdir/plot_p99.ncl
+nplev=$(( ${#plevs[@]} - 1 ))
+for i in `seq 0 $nplev`; do
+  export plev=${plevs[i]}
+
+  echo Plotting wind at $plev hPa
+  ncl -Q $scrdir/plot_uv.ncl
+  
+  echo Plotting bias in u, v, q at $plev hPa
+  ncl -Q $scrdir/plot_quv_bias.ncl
+done
 
 echo "#### plot complete! ####"
