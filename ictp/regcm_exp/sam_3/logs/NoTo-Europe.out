@@ -1794,50 +1794,50 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
   This is RegCM development version
    GIT Revision: 5.0.0-850-g3088d compiled at: data : Jan 20 2025  time: 15:44:38
 
- : this run start at  : 2025-02-07 16:32:17+0100
+ : this run start at  : 2025-02-07 16:57:49+0100
  : it is submitted by : mdasilva
- : it is running on   : lrdn3492.leonardo.local
+ : it is running on   : lrdn3646.leonardo.local
  : it is using        :         1792   processors
  : in directory       : 
- /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/eur_1
- 1/leonardo
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3
                        
  CPUS DIM1 =           56
  CPUS DIM2 =           32
  
  Reading model namelist file
- Using default non-hydrostatc parameters.
  Using default microphysical parameter.
- Initial date of the global simulation:  2000-01-01 00:00:00 UTC        
- Initial date of this run             :  2000-01-01 00:00:00 UTC        
- Final date of this run               :  2002-01-01 00:00:00 UTC        
- Total simulation length              :        17544  hours
- Timestep in seconds =   90.000000
+ Initial date of the global simulation:  2018-01-01 00:00:00 UTC        
+ Initial date of this run             :  2018-01-01 00:00:00 UTC        
+ Final date of this run               :  2021-12-31 00:00:00 UTC        
+ Total simulation length              :        35040  hours
+ Timestep in seconds =   45.000000
  Reading Domain file : 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc//EUR-11_DOMAIN00
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3/input/SAM-3km_DOMAIN00
  0.nc
- Advection timestep =    30.000 (factor  3)
- Max. Courant number for horizontal advection =    0.5203
- Sound waves timestep =     6.000 (factor  5)
- Courant number of horizontal sound waves =    0.2461
+ Advection timestep =    15.000 (factor  3)
+ Max. Courant number for horizontal advection =    0.9538
+ Sound waves timestep =     2.500 (factor  6)
+ Courant number of horizontal sound waves =    0.3760
  Setting IPCC scenario to SSP585  
- Load GHG for 200001 SSP585
+ Load GHG for 201801 SSP585
  Create SAV files :  T
  Create ATM files :  T
  Create RAD files :  T
  Create SRF files :  T
  Create STS files :  T
- Create SHF files :  T
+ Create SHF files :  F
+ Create LAK files :  F
  Monthly new files are created
  Monthly SAV files are written
  Frequency in hours to create ATM :    6.0
  Frequency in hours to create RAD :    6.0
- Frequency in hours to create SRF :    3.0
+ Frequency in hours to create SRF :    1.0
+ Frequency in hours to create LAK :    6.0
  Physical Parameterizations
   Lateral Boundary conditions :  5
   Semi-Lagrangian Advection   :  0
-  Land cumulus conv. scheme   :  5
-  Ocean cumulus conv. scheme  :  5
+  Land cumulus conv. scheme   :  0
+  Ocean cumulus conv. scheme  :  0
   Moisture schem              :  2
   Ocean Flux scheme           :  2
   Zeng roughness formula      :  1
@@ -1847,45 +1847,46 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
   Coupling with COP           :  0
   Pressure gradient force     :  0
   Prescribed LW emissivity    :  0
-  Lake model in BATS          :  0
+  Lake model in BATS          :  1
   Simulate diurnal sst cycle  :  0
-  Simulate sea ice cover      :  1
+  Simulate sea ice cover      :  0
   Enable chem/aerosol model   :  0
-  Large scale LWP as convect. :  0
+  Large scale LWP as convect. :  1
   Cloud fraction scheme       :  1
   Marine stratocumulus        :  0
-  Climate O3 dataset          :  1
-  Climate Aerosol dataset     :  2
+  Climate O3 dataset          :  0
+  Climate Aerosol dataset     :  3
  Boundary Pameterizations
-  Num. of bndy points cross  :  40
-  Num. of bndy points dot    :  40
-  Nudge value high range     :  8.000000
-  Nudge value medium range   :  4.000000
-  Nudge value low range      :  2.000000
+  Num. of bndy points cross  :  30
+  Num. of bndy points dot    :  30
+  Nudge value high range     :  9.000000
+  Nudge value medium range   :  6.000000
+  Nudge value low range      :  3.000000
   Nm paramter                : -1.000000
   Dm paramter                : -1.000000
  Model Timestep Pameterizations
-  time step for dynamical model in seconds :          90.000000
+  time step for dynamical model in seconds :          45.000000
   time step for surface   model in seconds :         450.000000
   time step for cumulus   model in seconds :         225.000000
   time step for radiation model in seconds :        1350.000000
   time step for emission  model in seconds :       48600.000000
- Nudging coefficients F1=    0.016667, F2=    0.000000
+ Nudging coefficients F1=    0.040000, F2=    0.000000
   # Nudging coefficient profile #
-     7.85       7.54       7.23       6.92       6.61       6.30       5.99    
-     5.69       5.38       5.07       4.77       4.46       4.15       3.94    
-     3.82       3.70       3.58       3.46       3.34       3.23       3.11    
-     2.99       2.87       2.76       2.64       2.52       2.41       2.29    
-     2.29       2.17       2.06    
- Model top at    30000.0000000000       m
+     8.91       8.73       8.56       8.38       8.20       8.03       7.85    
+     7.67       7.50       7.32       7.15       6.97       6.79       6.62    
+     6.44       6.26       6.09       5.94       5.81       5.69       5.56    
+     5.43       5.31       5.18       5.06       4.93       4.81       4.68    
+     4.56       4.43       4.31       4.18       4.06       3.93       3.81    
+     3.81       3.69       3.56       3.44       3.31       3.19       3.06    
+ Model top at    25000.0000000000       m
  Domain grid parameters:
   Map Projection        : ROTLLR
-  Dot Grid Full Extent  :  427x 415x 30
-  Model Grid Spacing    :   12.231882 km
-  Proj Center Latitude  :   48.000000 deg
-  Proj Center longitude :    9.750000 deg
-  Pole Latitude         :   39.250000 deg
-  Pole longitude        :  198.000000 deg
+  Dot Grid Full Extent  : 1231x 783x 41
+  Model Grid Spacing    :    3.335968 km
+  Proj Center Latitude  :  -24.000000 deg
+  Proj Center longitude :  303.000000 deg
+  Pole Latitude         :  -70.600000 deg
+  Pole longitude        :  123.940000 deg
  Holtslag PBL Scheme
   ricr_ocn     =    0.250000
   ricr_lnd     =    0.250000
@@ -1894,54 +1895,44 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
   ifaholtth10  =  2
   holtth10iter =    1
  Cloud fraction schemes parameters
-  # of bottom no cloud model levels :  0
+  # of bottom no cloud model levels :  1
   Maximum relative humidity         :    1.010000
   Minimum relative humidity         :    0.010000
-  Maximum total cloud cover for rad :    1.000000
+  Maximum total cloud cover for rad :    0.750000
   Conv. CF UMF factor deep cumulus  :    0.140000
   Conv. CF UMF factor deep cumulus  :    0.140000
   Conv. CF UMF factor k2            :  500.000000
   Surface radiation hack            :           F
   Vavrus-Waliser Arctic cloud fix   :           T
- Tiedtke (1986) Convection Scheme used.
-  Used Scheme                       :  4
-  Entrainment rate pen. conv. land  :    0.001750
-  Entrainment rate pen. conv. ocean :    0.001750
-  Entrainment rate shallow conv.    :    0.000300
-  Entrainment rate midlev conv.     :    0.000100
-  Entrainment rate cumulus downdraft:    0.000300
-  CLW to rain conversion factor     :    0.000100
-  Max entrainment                   :    0.001750
-  CAPE adjustment timescale         :  3600.000000
  Convective Cloud Cover parameters after resolution scaling
-  Maximum Convective Cloud Cover :    0.963263
+  Maximum Convective Cloud Cover :    1.000000
   Convective Cloud Water         :    0.000300
  The surface energy budget is used to calculate the ground temperature.
  The radiation is computed every   22. minutes.
  Relaxation boundary conditions (exponential method)
- READY IC DATA for  2000-01-01 00:00:00 UTC        
- SEARCH BC data for 2000010106 , step =        0
- READY  BC from     2000010100  to 2000010106 
- Computing weights, R =     348.80780029 .......... Done.
- Reading Initial Ozone Data...
-  # Updated ozone profile #
-    0.820E-05  0.641E-05  0.368E-05  0.147E-05  0.475E-06  0.160E-06  0.900E-07
-    0.627E-07  0.531E-07  0.502E-07  0.485E-07  0.478E-07  0.476E-07  0.478E-07
-    0.483E-07  0.485E-07  0.483E-07  0.481E-07  0.481E-07  0.482E-07  0.480E-07
-    0.470E-07  0.458E-07  0.439E-07  0.416E-07  0.394E-07  0.376E-07  0.360E-07
-    0.360E-07  0.347E-07  0.336E-07  0.326E-07
+ READY IC DATA for  2018-01-01 00:00:00 UTC        
+ SEARCH BC data for 2018010106 , step =        0
+ READY  BC from     2018010100  to 2018010106 
+  # Ozone profile #
+    0.842E-05  0.662E-05  0.536E-05  0.393E-05  0.269E-05  0.180E-05  0.131E-05
+    0.977E-06  0.704E-06  0.497E-06  0.354E-06  0.260E-06  0.201E-06  0.162E-06
+    0.135E-06  0.118E-06  0.104E-06  0.921E-07  0.842E-07  0.772E-07  0.722E-07
+    0.679E-07  0.643E-07  0.619E-07  0.596E-07  0.575E-07  0.562E-07  0.550E-07
+    0.538E-07  0.527E-07  0.521E-07  0.515E-07  0.510E-07  0.505E-07  0.501E-07
+    0.497E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07
+    0.496E-07
  Read solar forcing total irradiance data...
- Updating orbit parameters at  2000-01-01 00:00:00 UTC        
- At  2000-01-01 00:00:00 UTC        
- JDay      0.00000 solar declination angle = -23.13670592 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
+ Updating orbit parameters at  2018-01-01 00:00:00 UTC        
+ At  2018-01-01 00:00:00 UTC        
+ JDay      0.00000 solar declination angle = -23.09961944 degrees
+                   solar TSI irradiance    =    1355.9544 W/m^2
  CLM version: 4.5 - RegCM 5.0.0-850-g3088d
  Attempting to initialize the land model .....
- Mask given by RegCM model has a total of        97559  land points
+ Mask given by RegCM model has a total of       637837  land points
  Attempting to initialize run control settings .....
  Read in clm_inparm namelist from: 
- /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/eur_1
- 1/leonardo/EUR-11_NoTo.in
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3
+ /SAM-3_NoTo.in
  Read in clm_hydrology1_inparm namelist
  Read in clm_soilhydrology_inparm namelist
  Successfully initialized run control settings
@@ -1952,25 +1943,24 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     run type              = initial
     case title            = RegCM driven CLM4.5
     username              = mdasilva
-    hostname              = lrdn3492.leonardo.local
+    hostname              = lrdn3646.leonardo.local
  input data files:
     PFT physiology = 
- /leonardo_work/ICT24_ESP/RCMDATA//CLM45/pftdata/pft-physiology.c130503.nc
+ /leonardo_work/ICT24_ESP/RCMDATA/CLM45/pftdata/pft-physiology.c130503.nc
     surface data   = 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc//EUR-11_CLM45_su
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3/input/SAM-3km_CLM45_su
  rface.nc
     land frac data = 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc//EUR-11_DOMAIN00
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3/input/SAM-3km_DOMAIN00
  0.nc
     enable_megan_emission                                 :  F
     enable_urban_landunit                                 :  T
     enable_more_crop_pft                                  :  F
     SNICAR optical = 
- /leonardo_work/ICT24_ESP/RCMDATA//CLM45/snicardata/snicar_optics_5bnd_c090915.n
- c
+ /leonardo_work/ICT24_ESP/RCMDATA/CLM45/snicardata/snicar_optics_5bnd_c090915.nc
     SNICAR aging = 
- /leonardo_work/ICT24_ESP/RCMDATA//CLM45/snicardata/snicar_drdt_bst_fit_60_c0704
- 16.nc
+ /leonardo_work/ICT24_ESP/RCMDATA/CLM45/snicardata/snicar_drdt_bst_fit_60_c07041
+ 6.nc
     initial data is from RegCM atm model
     atmospheric forcing data is from RegCM atm model
  Large file support for output files is ON
@@ -1979,7 +1969,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     CO2 volume mixing ratio   (umol/mol)   =    355.000000000000     
     land albedos  (unitless 0-1)   =   0.800000000000000     
     ice albedos   (unitless 0-1)   =   0.550000000000000     
-    urban air conditioning/heating and wasteheat   = ON_WASTEHEAT    
+    urban air conditioning/heating and wasteheat   = OFF             
     urban traffic flux   =  F
     more vertical layers =  F
     maxpatch_pft         =           17
@@ -1993,25 +1983,25 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Albedo melting lakes (visible) :  0.100000000000000     
  Albedo melting lakes (NIR)     :  0.100000000000000     
  Attempting to read ldomain from 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc//EUR-11_DOMAIN00
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3/input/SAM-3km_DOMAIN00
  0.nc
    domain_check set       = domain_set
    domain_check decomped  =  T
-   domain_check ns        =       174688
-   domain_check ni,nj     =          424         412
+   domain_check ns        =       957840
+   domain_check ni,nj     =         1228         780
    domain_check clmlevel  = gridcell
-   domain_check nbeg,nend =            1          54
-   domain_check lonc      =   -9.74029571306985       -4.46385609645034     
-   domain_check latc      =    20.2360572776116        22.1520074715619     
+   domain_check nbeg,nend =            1         355
+   domain_check lonc      =   -72.1860395653004       -59.7013195554515     
+   domain_check latc      =   -35.6698297236995       -35.0647771095418     
    domain_check mask      =            1           1
    domain_check frac      =    100.000000000000        100.000000000000     
-   domain_check topo      =    242.228669691523        398.741314613371     
-   domain_check area      =    135.487523982398        135.487523982398     
+   domain_check topo      =    40.1628618666051        2989.68710312137     
+   domain_check area      =    10.6812384818869        10.6812384818869     
    domain_check pftm      =            1           1
   
   Reading in urban input data from surface data file ...
   UrbanInput : 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc//EUR-11_CLM45_su
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3/input/SAM-3km_CLM45_su
  rface.nc
   Sucessfully read urban input data
  
@@ -2022,10 +2012,10 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Successfully read surface boundary data
  
   Surface Grid Characteristics
-    total number of gridcells =        97559
-    total number of landunits =       229706
-    total number of columns   =       447183
-    total number of pfts      =      1812869
+    total number of gridcells =       637837
+    total number of landunits =      1346093
+    total number of columns   =      2213201
+    total number of pfts      =     11136913
   
  ---clm_ptrs_check:
     clm_ptrs_check: g index ranges - OK
@@ -2048,9 +2038,8 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  
  Attempting to read organic matter data .....
   organicrd : 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc//EUR-11_CLM45_su
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3/input/SAM-3km_CLM45_su
  rface.nc
- Set     4 100% special land-units points to zero slope
  Successfully read organic matter data
  
   # zsoi #
@@ -2066,16 +2055,131 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     0.554      0.913       1.51       2.48       4.09       6.75       11.1    
      11.1       13.9    
  dzsoi_decomp   1.00000000000000     
+ Set    28 100% special land-units points to zero slope
+ Set    29 100% special land-units points to zero slope
+ Set    16 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
- Attempting to read snow optical properties .....
+ Set    15 100% special land-units points to zero slope
  Set     4 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set    12 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
+ Set    12 100% special land-units points to zero slope
+ Set    11 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     6 100% special land-units points to zero slope
+ Set     6 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Attempting to read snow optical properties .....
+ Set     1 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
+ Set    18 100% special land-units points to zero slope
+ Set     9 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    13 100% special land-units points to zero slope
+ Set     6 100% special land-units points to zero slope
+ Set     7 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     7 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
  SnowOptics_init : 
- /leonardo_work/ICT24_ESP/RCMDATA//CLM45/snicardata/snicar_optics_5bnd_c090915.n
- c
+ /leonardo_work/ICT24_ESP/RCMDATA/CLM45/snicardata/snicar_optics_5bnd_c090915.nc
+ Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
  Successfully read snow optical properties
  Attempting to read snow aging parameters .....
+ Set    40 100% special land-units points to zero slope
  Successfully read snow aging properties
  Successfully initialized time invariant variables
+ Set    10 100% special land-units points to zero slope
  CLM_hist_printflds : number of master fields =          241
  Setting initial data to non-spun up values
  Attempting to initialize time invariant variables for lakes
@@ -2092,1336 +2196,131 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  hist tape =            1  written with dov2xy=  T
  Successfully initialized clm2 history files
  Successfully initialized the land model
- begin initial run at:  2000-01-01 00:00:00 UTC
+ begin initial run at:  2018-01-01 00:00:00 UTC
  Attempting to read monthly vegetation data .....
- At  2000-01-01 00:00:00 UTC
+ At  2018-01-01 00:00:00 UTC
  Month =            1  Day =            1
  Reading months :           12           1
+ Set    35 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Successfully read monthly vegetation data for
  month            1
  Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/NoTo-Europe//EUR-11_A
- TM.2000010100.nc
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3/output//SAM-3km_ATM.20
+ 18010100.nc
  Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/NoTo-Europe//EUR-11_S
- HF.2000010100.nc
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3/output//SAM-3km_SRF.20
+ 18010100.nc
  Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/NoTo-Europe//EUR-11_S
- RF.2000010100.nc
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3/output//SAM-3km_STS.20
+ 18010100.nc
  Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/NoTo-Europe//EUR-11_S
- TS.2000010100.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/NoTo-Europe//EUR-11_R
- AD.2000010100.nc
- ATM variables written at  2000-01-01 00:00:00 UTC        
- Computing weights, R =      89.00187683 .......... Done.
- Reading EXT,SSA,ASY Data...
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb3.199912.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb3.200001.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb6.199912.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb6.200001.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb10.199912.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb10.200001.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb13.199912.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb13.200001.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb19.199912.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb19.200001.nc
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3/output//SAM-3km_RAD.20
+ 18010100.nc
+ ATM variables written at  2018-01-01 00:00:00 UTC        
+ Updating aerosol optical properties...
   # Updated VIS ext profile #
-    0.141E-04  0.518E-04  0.136E-03  0.322E-03  0.801E-03  0.121E-02  0.183E-02
-    0.185E-02  0.164E-02  0.155E-02  0.143E-02  0.130E-02  0.139E-02  0.166E-02
-    0.288E-02  0.587E-02  0.781E-02  0.926E-02  0.119E-01  0.136E-01  0.144E-01
-    0.165E-01  0.198E-01  0.221E-01  0.221E-01  0.210E-01  0.198E-01  0.187E-01
-    0.187E-01  0.175E-01  0.161E-01
+     0.00       0.00       0.00       0.00       0.00       0.00      0.299E-14
+    0.420E-11  0.101E-09  0.725E-09  0.288E-08  0.808E-08  0.180E-07  0.339E-07
+    0.566E-07  0.861E-07  0.121E-06  0.161E-06  0.204E-06  0.247E-06  0.290E-06
+    0.329E-06  0.364E-06  0.393E-06  0.417E-06  0.434E-06  0.444E-06  0.448E-06
+    0.446E-06  0.439E-06  0.426E-06  0.410E-06  0.390E-06  0.367E-06  0.341E-06
+    0.341E-06  0.314E-06  0.284E-06  0.252E-06  0.217E-06  0.177E-06  0.120E-06
   # Updated VIS ssa profile #
-    0.896      0.884      0.879      0.870      0.893      0.903      0.917    
-    0.917      0.912      0.907      0.895      0.886      0.883      0.880    
-    0.882      0.883      0.887      0.894      0.900      0.906      0.911    
-    0.917      0.921      0.921      0.919      0.919      0.918      0.918    
-    0.918      0.917      0.917    
+     1.00       1.00       1.00       1.00       1.00       1.00      0.930    
+    0.930      0.930      0.930      0.930      0.930      0.930      0.930    
+    0.930      0.930      0.930      0.930      0.930      0.930      0.930    
+    0.930      0.930      0.930      0.930      0.930      0.930      0.930    
+    0.930      0.930      0.930      0.930      0.930      0.930      0.930    
+    0.930      0.930      0.930      0.930      0.930      0.929      0.929    
   # Updated VIS asy profile #
-    0.651      0.649      0.651      0.670      0.702      0.711      0.723    
-    0.722      0.716      0.710      0.701      0.694      0.690      0.684    
-    0.683      0.685      0.693      0.700      0.706      0.712      0.721    
-    0.732      0.741      0.745      0.747      0.748      0.749      0.749    
-    0.749      0.749      0.750    
- SHF variables written at  2000-01-01 01:00:00 UTC        
- SHF variables written at  2000-01-01 02:00:00 UTC        
- SRF variables written at  2000-01-01 03:00:00 UTC        
- SHF variables written at  2000-01-01 03:00:00 UTC        
- $$$  2000-01-01 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1031.80  708.37
- $$$ no. of points with active convection =   36619
- SHF variables written at  2000-01-01 04:00:00 UTC        
- SHF variables written at  2000-01-01 05:00:00 UTC        
- ATM variables written at  2000-01-01 06:00:00 UTC        
- SRF variables written at  2000-01-01 06:00:00 UTC        
- SHF variables written at  2000-01-01 06:00:00 UTC        
- RAD variables written at  2000-01-01 06:00:00 UTC        
- SEARCH BC data for 2000010112 , step =      240
- READY  BC from     2000010106  to 2000010112 
- $$$  2000-01-01 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.58  708.29
- $$$ no. of points with active convection =   41137
- SHF variables written at  2000-01-01 07:00:00 UTC        
- SHF variables written at  2000-01-01 08:00:00 UTC        
- SRF variables written at  2000-01-01 09:00:00 UTC        
- SHF variables written at  2000-01-01 09:00:00 UTC        
- $$$  2000-01-01 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.09  707.49
- $$$ no. of points with active convection =   45493
- SHF variables written at  2000-01-01 10:00:00 UTC        
- SHF variables written at  2000-01-01 11:00:00 UTC        
- ATM variables written at  2000-01-01 12:00:00 UTC        
- SRF variables written at  2000-01-01 12:00:00 UTC        
- SHF variables written at  2000-01-01 12:00:00 UTC        
- RAD variables written at  2000-01-01 12:00:00 UTC        
- SEARCH BC data for 2000010118 , step =      480
- READY  BC from     2000010112  to 2000010118 
- $$$  2000-01-01 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.52  707.18
- $$$ no. of points with active convection =   50944
- SHF variables written at  2000-01-01 13:00:00 UTC        
- SHF variables written at  2000-01-01 14:00:00 UTC        
- SRF variables written at  2000-01-01 15:00:00 UTC        
- SHF variables written at  2000-01-01 15:00:00 UTC        
- $$$  2000-01-01 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.45  707.39
- $$$ no. of points with active convection =   55721
- SHF variables written at  2000-01-01 16:00:00 UTC        
- SHF variables written at  2000-01-01 17:00:00 UTC        
- ATM variables written at  2000-01-01 18:00:00 UTC        
- SRF variables written at  2000-01-01 18:00:00 UTC        
- SHF variables written at  2000-01-01 18:00:00 UTC        
- RAD variables written at  2000-01-01 18:00:00 UTC        
- SEARCH BC data for 2000010200 , step =      720
- READY  BC from     2000010118  to 2000010200 
- $$$  2000-01-01 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.69  707.39
- $$$ no. of points with active convection =   58954
- SHF variables written at  2000-01-01 19:00:00 UTC        
- SHF variables written at  2000-01-01 20:00:00 UTC        
- SRF variables written at  2000-01-01 21:00:00 UTC        
- SHF variables written at  2000-01-01 21:00:00 UTC        
- $$$  2000-01-01 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.51  706.80
- $$$ no. of points with active convection =   60937
- SHF variables written at  2000-01-01 22:00:00 UTC        
- SHF variables written at  2000-01-01 23:00:00 UTC        
- At  2000-01-02 00:00:00 UTC        
- JDay      1.00000 solar declination angle = -23.06421056 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-02 00:00:00 UTC        
- SRF variables written at  2000-01-02 00:00:00 UTC        
- SHF variables written at  2000-01-02 00:00:00 UTC        
- STS variables written at  2000-01-02 00:00:00 UTC        
- RAD variables written at  2000-01-02 00:00:00 UTC        
- SEARCH BC data for 2000010206 , step =      960
- READY  BC from     2000010200  to 2000010206 
- $$$  2000-01-02 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.11  706.43
- $$$ no. of points with active convection =   63043
- SHF variables written at  2000-01-02 01:00:00 UTC        
- SHF variables written at  2000-01-02 02:00:00 UTC        
- SRF variables written at  2000-01-02 03:00:00 UTC        
- SHF variables written at  2000-01-02 03:00:00 UTC        
- $$$  2000-01-02 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.46  706.76
- $$$ no. of points with active convection =   66169
- SHF variables written at  2000-01-02 04:00:00 UTC        
- SHF variables written at  2000-01-02 05:00:00 UTC        
- ATM variables written at  2000-01-02 06:00:00 UTC        
- SRF variables written at  2000-01-02 06:00:00 UTC        
- SHF variables written at  2000-01-02 06:00:00 UTC        
- RAD variables written at  2000-01-02 06:00:00 UTC        
- SEARCH BC data for 2000010212 , step =     1200
- READY  BC from     2000010206  to 2000010212 
- $$$  2000-01-02 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.06  706.32
- $$$ no. of points with active convection =   71702
- SHF variables written at  2000-01-02 07:00:00 UTC        
- SHF variables written at  2000-01-02 08:00:00 UTC        
- SRF variables written at  2000-01-02 09:00:00 UTC        
- SHF variables written at  2000-01-02 09:00:00 UTC        
- $$$  2000-01-02 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.10  706.01
- $$$ no. of points with active convection =   73322
- SHF variables written at  2000-01-02 10:00:00 UTC        
- SHF variables written at  2000-01-02 11:00:00 UTC        
- ATM variables written at  2000-01-02 12:00:00 UTC        
- SRF variables written at  2000-01-02 12:00:00 UTC        
- SHF variables written at  2000-01-02 12:00:00 UTC        
- RAD variables written at  2000-01-02 12:00:00 UTC        
- SEARCH BC data for 2000010218 , step =     1440
- READY  BC from     2000010212  to 2000010218 
- $$$  2000-01-02 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.10  705.72
- $$$ no. of points with active convection =   75122
- SHF variables written at  2000-01-02 13:00:00 UTC        
- SHF variables written at  2000-01-02 14:00:00 UTC        
- SRF variables written at  2000-01-02 15:00:00 UTC        
- SHF variables written at  2000-01-02 15:00:00 UTC        
- $$$  2000-01-02 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.44  705.63
- $$$ no. of points with active convection =   75003
- SHF variables written at  2000-01-02 16:00:00 UTC        
- SHF variables written at  2000-01-02 17:00:00 UTC        
- ATM variables written at  2000-01-02 18:00:00 UTC        
- SRF variables written at  2000-01-02 18:00:00 UTC        
- SHF variables written at  2000-01-02 18:00:00 UTC        
- RAD variables written at  2000-01-02 18:00:00 UTC        
- SEARCH BC data for 2000010300 , step =     1680
- READY  BC from     2000010218  to 2000010300 
- $$$  2000-01-02 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.78  705.34
- $$$ no. of points with active convection =   73999
- SHF variables written at  2000-01-02 19:00:00 UTC        
- SHF variables written at  2000-01-02 20:00:00 UTC        
- SRF variables written at  2000-01-02 21:00:00 UTC        
- SHF variables written at  2000-01-02 21:00:00 UTC        
- $$$  2000-01-02 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1034.72  704.87
- $$$ no. of points with active convection =   73739
- SHF variables written at  2000-01-02 22:00:00 UTC        
- SHF variables written at  2000-01-02 23:00:00 UTC        
- At  2000-01-03 00:00:00 UTC        
- JDay      2.00000 solar declination angle = -22.98404693 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-03 00:00:00 UTC        
- SRF variables written at  2000-01-03 00:00:00 UTC        
- SHF variables written at  2000-01-03 00:00:00 UTC        
- STS variables written at  2000-01-03 00:00:00 UTC        
- RAD variables written at  2000-01-03 00:00:00 UTC        
- SEARCH BC data for 2000010306 , step =     1920
- READY  BC from     2000010300  to 2000010306 
- $$$  2000-01-03 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1035.62  704.28
- $$$ no. of points with active convection =   74706
- SHF variables written at  2000-01-03 01:00:00 UTC        
- SHF variables written at  2000-01-03 02:00:00 UTC        
- SRF variables written at  2000-01-03 03:00:00 UTC        
- SHF variables written at  2000-01-03 03:00:00 UTC        
- $$$  2000-01-03 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1036.20  703.93
- $$$ no. of points with active convection =   76590
- SHF variables written at  2000-01-03 04:00:00 UTC        
- SHF variables written at  2000-01-03 05:00:00 UTC        
- ATM variables written at  2000-01-03 06:00:00 UTC        
- SRF variables written at  2000-01-03 06:00:00 UTC        
- SHF variables written at  2000-01-03 06:00:00 UTC        
- RAD variables written at  2000-01-03 06:00:00 UTC        
- SEARCH BC data for 2000010312 , step =     2160
- READY  BC from     2000010306  to 2000010312 
- $$$  2000-01-03 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1035.91  703.26
- $$$ no. of points with active convection =   77784
- SHF variables written at  2000-01-03 07:00:00 UTC        
- SHF variables written at  2000-01-03 08:00:00 UTC        
- SRF variables written at  2000-01-03 09:00:00 UTC        
- SHF variables written at  2000-01-03 09:00:00 UTC        
- $$$  2000-01-03 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1035.93  702.58
- $$$ no. of points with active convection =   77999
- SHF variables written at  2000-01-03 10:00:00 UTC        
- SHF variables written at  2000-01-03 11:00:00 UTC        
- ATM variables written at  2000-01-03 12:00:00 UTC        
- SRF variables written at  2000-01-03 12:00:00 UTC        
- SHF variables written at  2000-01-03 12:00:00 UTC        
- RAD variables written at  2000-01-03 12:00:00 UTC        
- SEARCH BC data for 2000010318 , step =     2400
- READY  BC from     2000010312  to 2000010318 
- $$$  2000-01-03 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1035.29  702.21
- $$$ no. of points with active convection =   75097
- SHF variables written at  2000-01-03 13:00:00 UTC        
- SHF variables written at  2000-01-03 14:00:00 UTC        
- SRF variables written at  2000-01-03 15:00:00 UTC        
- SHF variables written at  2000-01-03 15:00:00 UTC        
- $$$  2000-01-03 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1034.42  701.67
- $$$ no. of points with active convection =   70489
- SHF variables written at  2000-01-03 16:00:00 UTC        
- SHF variables written at  2000-01-03 17:00:00 UTC        
- ATM variables written at  2000-01-03 18:00:00 UTC        
- SRF variables written at  2000-01-03 18:00:00 UTC        
- SHF variables written at  2000-01-03 18:00:00 UTC        
- RAD variables written at  2000-01-03 18:00:00 UTC        
- SEARCH BC data for 2000010400 , step =     2640
- READY  BC from     2000010318  to 2000010400 
- $$$  2000-01-03 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1034.07  700.99
- $$$ no. of points with active convection =   68798
- SHF variables written at  2000-01-03 19:00:00 UTC        
- SHF variables written at  2000-01-03 20:00:00 UTC        
- SRF variables written at  2000-01-03 21:00:00 UTC        
- SHF variables written at  2000-01-03 21:00:00 UTC        
- $$$  2000-01-03 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1034.14  700.52
- $$$ no. of points with active convection =   68189
- SHF variables written at  2000-01-03 22:00:00 UTC        
- SHF variables written at  2000-01-03 23:00:00 UTC        
- At  2000-01-04 00:00:00 UTC        
- JDay      3.00000 solar declination angle = -22.89625413 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-04 00:00:00 UTC        
- SRF variables written at  2000-01-04 00:00:00 UTC        
- SHF variables written at  2000-01-04 00:00:00 UTC        
- STS variables written at  2000-01-04 00:00:00 UTC        
- RAD variables written at  2000-01-04 00:00:00 UTC        
- SEARCH BC data for 2000010406 , step =     2880
- READY  BC from     2000010400  to 2000010406 
- $$$  2000-01-04 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1034.23  700.06
- $$$ no. of points with active convection =   68585
- SHF variables written at  2000-01-04 01:00:00 UTC        
- SHF variables written at  2000-01-04 02:00:00 UTC        
- SRF variables written at  2000-01-04 03:00:00 UTC        
- SHF variables written at  2000-01-04 03:00:00 UTC        
- $$$  2000-01-04 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.99  699.81
- $$$ no. of points with active convection =   69136
- SHF variables written at  2000-01-04 04:00:00 UTC        
- SHF variables written at  2000-01-04 05:00:00 UTC        
- ATM variables written at  2000-01-04 06:00:00 UTC        
- SRF variables written at  2000-01-04 06:00:00 UTC        
- SHF variables written at  2000-01-04 06:00:00 UTC        
- RAD variables written at  2000-01-04 06:00:00 UTC        
- SEARCH BC data for 2000010412 , step =     3120
- READY  BC from     2000010406  to 2000010412 
- $$$  2000-01-04 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.56  699.39
- $$$ no. of points with active convection =   69884
- SHF variables written at  2000-01-04 07:00:00 UTC        
- SHF variables written at  2000-01-04 08:00:00 UTC        
- SRF variables written at  2000-01-04 09:00:00 UTC        
- SHF variables written at  2000-01-04 09:00:00 UTC        
- $$$  2000-01-04 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1034.54  698.82
- $$$ no. of points with active convection =   72519
- SHF variables written at  2000-01-04 10:00:00 UTC        
- SHF variables written at  2000-01-04 11:00:00 UTC        
- ATM variables written at  2000-01-04 12:00:00 UTC        
- SRF variables written at  2000-01-04 12:00:00 UTC        
- SHF variables written at  2000-01-04 12:00:00 UTC        
- RAD variables written at  2000-01-04 12:00:00 UTC        
- SEARCH BC data for 2000010418 , step =     3360
- READY  BC from     2000010412  to 2000010418 
- $$$  2000-01-04 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.97  698.50
- $$$ no. of points with active convection =   74319
- SHF variables written at  2000-01-04 13:00:00 UTC        
- SHF variables written at  2000-01-04 14:00:00 UTC        
- SRF variables written at  2000-01-04 15:00:00 UTC        
- SHF variables written at  2000-01-04 15:00:00 UTC        
- $$$  2000-01-04 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.00  698.93
- $$$ no. of points with active convection =   74563
- SHF variables written at  2000-01-04 16:00:00 UTC        
- SHF variables written at  2000-01-04 17:00:00 UTC        
- ATM variables written at  2000-01-04 18:00:00 UTC        
- SRF variables written at  2000-01-04 18:00:00 UTC        
- SHF variables written at  2000-01-04 18:00:00 UTC        
- RAD variables written at  2000-01-04 18:00:00 UTC        
- SEARCH BC data for 2000010500 , step =     3600
- READY  BC from     2000010418  to 2000010500 
- $$$  2000-01-04 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.74  698.96
- $$$ no. of points with active convection =   75648
- SHF variables written at  2000-01-04 19:00:00 UTC        
- SHF variables written at  2000-01-04 20:00:00 UTC        
- SRF variables written at  2000-01-04 21:00:00 UTC        
- SHF variables written at  2000-01-04 21:00:00 UTC        
- $$$  2000-01-04 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.75  698.48
- $$$ no. of points with active convection =   76283
- SHF variables written at  2000-01-04 22:00:00 UTC        
- SHF variables written at  2000-01-04 23:00:00 UTC        
- At  2000-01-05 00:00:00 UTC        
- JDay      4.00000 solar declination angle = -22.80087506 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-05 00:00:00 UTC        
- SRF variables written at  2000-01-05 00:00:00 UTC        
- SHF variables written at  2000-01-05 00:00:00 UTC        
- STS variables written at  2000-01-05 00:00:00 UTC        
- RAD variables written at  2000-01-05 00:00:00 UTC        
- SEARCH BC data for 2000010506 , step =     3840
- READY  BC from     2000010500  to 2000010506 
- $$$  2000-01-05 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.74  698.22
- $$$ no. of points with active convection =   76350
- SHF variables written at  2000-01-05 01:00:00 UTC        
- SHF variables written at  2000-01-05 02:00:00 UTC        
- SRF variables written at  2000-01-05 03:00:00 UTC        
- SHF variables written at  2000-01-05 03:00:00 UTC        
- $$$  2000-01-05 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.48  698.09
- $$$ no. of points with active convection =   78075
- SHF variables written at  2000-01-05 04:00:00 UTC        
- SHF variables written at  2000-01-05 05:00:00 UTC        
- ATM variables written at  2000-01-05 06:00:00 UTC        
- SRF variables written at  2000-01-05 06:00:00 UTC        
- SHF variables written at  2000-01-05 06:00:00 UTC        
- RAD variables written at  2000-01-05 06:00:00 UTC        
- SEARCH BC data for 2000010512 , step =     4080
- READY  BC from     2000010506  to 2000010512 
- $$$  2000-01-05 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.10  698.01
- $$$ no. of points with active convection =   80293
- SHF variables written at  2000-01-05 07:00:00 UTC        
- SHF variables written at  2000-01-05 08:00:00 UTC        
- SRF variables written at  2000-01-05 09:00:00 UTC        
- SHF variables written at  2000-01-05 09:00:00 UTC        
- $$$  2000-01-05 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.37  697.72
- $$$ no. of points with active convection =   82485
- SHF variables written at  2000-01-05 10:00:00 UTC        
- SHF variables written at  2000-01-05 11:00:00 UTC        
- ATM variables written at  2000-01-05 12:00:00 UTC        
- SRF variables written at  2000-01-05 12:00:00 UTC        
- SHF variables written at  2000-01-05 12:00:00 UTC        
- RAD variables written at  2000-01-05 12:00:00 UTC        
- SEARCH BC data for 2000010518 , step =     4320
- READY  BC from     2000010512  to 2000010518 
- $$$  2000-01-05 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1031.40  698.00
- $$$ no. of points with active convection =   80932
- SHF variables written at  2000-01-05 13:00:00 UTC        
- SHF variables written at  2000-01-05 14:00:00 UTC        
- SRF variables written at  2000-01-05 15:00:00 UTC        
- SHF variables written at  2000-01-05 15:00:00 UTC        
- $$$  2000-01-05 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1030.26  698.88
- $$$ no. of points with active convection =   79922
- SHF variables written at  2000-01-05 16:00:00 UTC        
- SHF variables written at  2000-01-05 17:00:00 UTC        
- ATM variables written at  2000-01-05 18:00:00 UTC        
- SRF variables written at  2000-01-05 18:00:00 UTC        
- SHF variables written at  2000-01-05 18:00:00 UTC        
- RAD variables written at  2000-01-05 18:00:00 UTC        
- SEARCH BC data for 2000010600 , step =     4560
- READY  BC from     2000010518  to 2000010600 
- $$$  2000-01-05 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1029.87  699.15
- $$$ no. of points with active convection =   79172
- SHF variables written at  2000-01-05 19:00:00 UTC        
- SHF variables written at  2000-01-05 20:00:00 UTC        
- SRF variables written at  2000-01-05 21:00:00 UTC        
- SHF variables written at  2000-01-05 21:00:00 UTC        
- $$$  2000-01-05 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1030.25  699.09
- $$$ no. of points with active convection =   79253
- SHF variables written at  2000-01-05 22:00:00 UTC        
- SHF variables written at  2000-01-05 23:00:00 UTC        
- At  2000-01-06 00:00:00 UTC        
- JDay      5.00000 solar declination angle = -22.69795642 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-06 00:00:00 UTC        
- SRF variables written at  2000-01-06 00:00:00 UTC        
- SHF variables written at  2000-01-06 00:00:00 UTC        
- STS variables written at  2000-01-06 00:00:00 UTC        
- RAD variables written at  2000-01-06 00:00:00 UTC        
- SEARCH BC data for 2000010606 , step =     4800
- READY  BC from     2000010600  to 2000010606 
- $$$  2000-01-06 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1030.32  699.03
- $$$ no. of points with active convection =   79294
- SHF variables written at  2000-01-06 01:00:00 UTC        
- SHF variables written at  2000-01-06 02:00:00 UTC        
- SRF variables written at  2000-01-06 03:00:00 UTC        
- SHF variables written at  2000-01-06 03:00:00 UTC        
- $$$  2000-01-06 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1030.61  699.07
- $$$ no. of points with active convection =   78813
- SHF variables written at  2000-01-06 04:00:00 UTC        
- SHF variables written at  2000-01-06 05:00:00 UTC        
- ATM variables written at  2000-01-06 06:00:00 UTC        
- SRF variables written at  2000-01-06 06:00:00 UTC        
- SHF variables written at  2000-01-06 06:00:00 UTC        
- RAD variables written at  2000-01-06 06:00:00 UTC        
- SEARCH BC data for 2000010612 , step =     5040
- READY  BC from     2000010606  to 2000010612 
- $$$  2000-01-06 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1030.03  698.95
- $$$ no. of points with active convection =   80315
- SHF variables written at  2000-01-06 07:00:00 UTC        
- SHF variables written at  2000-01-06 08:00:00 UTC        
- SRF variables written at  2000-01-06 09:00:00 UTC        
- SHF variables written at  2000-01-06 09:00:00 UTC        
- $$$  2000-01-06 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1030.60  698.59
- $$$ no. of points with active convection =   80615
- SHF variables written at  2000-01-06 10:00:00 UTC        
- SHF variables written at  2000-01-06 11:00:00 UTC        
- ATM variables written at  2000-01-06 12:00:00 UTC        
- SRF variables written at  2000-01-06 12:00:00 UTC        
- SHF variables written at  2000-01-06 12:00:00 UTC        
- RAD variables written at  2000-01-06 12:00:00 UTC        
- SEARCH BC data for 2000010618 , step =     5280
- READY  BC from     2000010612  to 2000010618 
- $$$  2000-01-06 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1030.51  698.67
- $$$ no. of points with active convection =   78213
- SHF variables written at  2000-01-06 13:00:00 UTC        
- SHF variables written at  2000-01-06 14:00:00 UTC        
- SRF variables written at  2000-01-06 15:00:00 UTC        
- SHF variables written at  2000-01-06 15:00:00 UTC        
- $$$  2000-01-06 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1030.49  699.17
- $$$ no. of points with active convection =   76799
- SHF variables written at  2000-01-06 16:00:00 UTC        
- SHF variables written at  2000-01-06 17:00:00 UTC        
- ATM variables written at  2000-01-06 18:00:00 UTC        
- SRF variables written at  2000-01-06 18:00:00 UTC        
- SHF variables written at  2000-01-06 18:00:00 UTC        
- RAD variables written at  2000-01-06 18:00:00 UTC        
- SEARCH BC data for 2000010700 , step =     5520
- READY  BC from     2000010618  to 2000010700 
- $$$  2000-01-06 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1030.35  699.37
- $$$ no. of points with active convection =   78037
- SHF variables written at  2000-01-06 19:00:00 UTC        
- SHF variables written at  2000-01-06 20:00:00 UTC        
- SRF variables written at  2000-01-06 21:00:00 UTC        
- SHF variables written at  2000-01-06 21:00:00 UTC        
- $$$  2000-01-06 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1031.22  699.40
- $$$ no. of points with active convection =   78408
- SHF variables written at  2000-01-06 22:00:00 UTC        
- SHF variables written at  2000-01-06 23:00:00 UTC        
- At  2000-01-07 00:00:00 UTC        
- JDay      6.00000 solar declination angle = -22.58754860 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-07 00:00:00 UTC        
- SRF variables written at  2000-01-07 00:00:00 UTC        
- SHF variables written at  2000-01-07 00:00:00 UTC        
- STS variables written at  2000-01-07 00:00:00 UTC        
- RAD variables written at  2000-01-07 00:00:00 UTC        
- SEARCH BC data for 2000010706 , step =     5760
- READY  BC from     2000010700  to 2000010706 
- $$$  2000-01-07 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1031.86  699.64
- $$$ no. of points with active convection =   78359
- SHF variables written at  2000-01-07 01:00:00 UTC        
- SHF variables written at  2000-01-07 02:00:00 UTC        
- SRF variables written at  2000-01-07 03:00:00 UTC        
- SHF variables written at  2000-01-07 03:00:00 UTC        
- $$$  2000-01-07 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.46  700.52
- $$$ no. of points with active convection =   77860
- SHF variables written at  2000-01-07 04:00:00 UTC        
- SHF variables written at  2000-01-07 05:00:00 UTC        
- ATM variables written at  2000-01-07 06:00:00 UTC        
- SRF variables written at  2000-01-07 06:00:00 UTC        
- SHF variables written at  2000-01-07 06:00:00 UTC        
- RAD variables written at  2000-01-07 06:00:00 UTC        
- SEARCH BC data for 2000010712 , step =     6000
- READY  BC from     2000010706  to 2000010712 
- $$$  2000-01-07 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.78  700.98
- $$$ no. of points with active convection =   79330
- SHF variables written at  2000-01-07 07:00:00 UTC        
- SHF variables written at  2000-01-07 08:00:00 UTC        
- SRF variables written at  2000-01-07 09:00:00 UTC        
- SHF variables written at  2000-01-07 09:00:00 UTC        
- $$$  2000-01-07 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.29  701.17
- $$$ no. of points with active convection =   81084
- SHF variables written at  2000-01-07 10:00:00 UTC        
- SHF variables written at  2000-01-07 11:00:00 UTC        
- ATM variables written at  2000-01-07 12:00:00 UTC        
- SRF variables written at  2000-01-07 12:00:00 UTC        
- SHF variables written at  2000-01-07 12:00:00 UTC        
- RAD variables written at  2000-01-07 12:00:00 UTC        
- SEARCH BC data for 2000010718 , step =     6240
- READY  BC from     2000010712  to 2000010718 
- $$$  2000-01-07 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.51  701.50
- $$$ no. of points with active convection =   80215
- SHF variables written at  2000-01-07 13:00:00 UTC        
- SHF variables written at  2000-01-07 14:00:00 UTC        
- SRF variables written at  2000-01-07 15:00:00 UTC        
- SHF variables written at  2000-01-07 15:00:00 UTC        
- $$$  2000-01-07 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.31  702.53
- $$$ no. of points with active convection =   76090
- SHF variables written at  2000-01-07 16:00:00 UTC        
- SHF variables written at  2000-01-07 17:00:00 UTC        
- ATM variables written at  2000-01-07 18:00:00 UTC        
- SRF variables written at  2000-01-07 18:00:00 UTC        
- SHF variables written at  2000-01-07 18:00:00 UTC        
- RAD variables written at  2000-01-07 18:00:00 UTC        
- SEARCH BC data for 2000010800 , step =     6480
- READY  BC from     2000010718  to 2000010800 
- $$$  2000-01-07 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.27  703.01
- $$$ no. of points with active convection =   74687
- SHF variables written at  2000-01-07 19:00:00 UTC        
- SHF variables written at  2000-01-07 20:00:00 UTC        
- SRF variables written at  2000-01-07 21:00:00 UTC        
- SHF variables written at  2000-01-07 21:00:00 UTC        
- $$$  2000-01-07 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.95  703.20
- $$$ no. of points with active convection =   74874
- SHF variables written at  2000-01-07 22:00:00 UTC        
- SHF variables written at  2000-01-07 23:00:00 UTC        
- At  2000-01-08 00:00:00 UTC        
- JDay      7.00000 solar declination angle = -22.46970561 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-08 00:00:00 UTC        
- SRF variables written at  2000-01-08 00:00:00 UTC        
- SHF variables written at  2000-01-08 00:00:00 UTC        
- STS variables written at  2000-01-08 00:00:00 UTC        
- RAD variables written at  2000-01-08 00:00:00 UTC        
- SEARCH BC data for 2000010806 , step =     6720
- READY  BC from     2000010800  to 2000010806 
- $$$  2000-01-08 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.07  704.02
- $$$ no. of points with active convection =   76014
- SHF variables written at  2000-01-08 01:00:00 UTC        
- SHF variables written at  2000-01-08 02:00:00 UTC        
- SRF variables written at  2000-01-08 03:00:00 UTC        
- SHF variables written at  2000-01-08 03:00:00 UTC        
- $$$  2000-01-08 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.88  704.66
- $$$ no. of points with active convection =   78019
- SHF variables written at  2000-01-08 04:00:00 UTC        
- SHF variables written at  2000-01-08 05:00:00 UTC        
- ATM variables written at  2000-01-08 06:00:00 UTC        
- SRF variables written at  2000-01-08 06:00:00 UTC        
- SHF variables written at  2000-01-08 06:00:00 UTC        
- RAD variables written at  2000-01-08 06:00:00 UTC        
- SEARCH BC data for 2000010812 , step =     6960
- READY  BC from     2000010806  to 2000010812 
- $$$  2000-01-08 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.95  704.98
- $$$ no. of points with active convection =   80717
- SHF variables written at  2000-01-08 07:00:00 UTC        
- SHF variables written at  2000-01-08 08:00:00 UTC        
- SRF variables written at  2000-01-08 09:00:00 UTC        
- SHF variables written at  2000-01-08 09:00:00 UTC        
- $$$  2000-01-08 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.95  704.95
- $$$ no. of points with active convection =   82068
- SHF variables written at  2000-01-08 10:00:00 UTC        
- SHF variables written at  2000-01-08 11:00:00 UTC        
- ATM variables written at  2000-01-08 12:00:00 UTC        
- SRF variables written at  2000-01-08 12:00:00 UTC        
- SHF variables written at  2000-01-08 12:00:00 UTC        
- RAD variables written at  2000-01-08 12:00:00 UTC        
- SEARCH BC data for 2000010818 , step =     7200
- READY  BC from     2000010812  to 2000010818 
- $$$  2000-01-08 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.43  705.05
- $$$ no. of points with active convection =   81068
- SHF variables written at  2000-01-08 13:00:00 UTC        
- SHF variables written at  2000-01-08 14:00:00 UTC        
- SRF variables written at  2000-01-08 15:00:00 UTC        
- SHF variables written at  2000-01-08 15:00:00 UTC        
- $$$  2000-01-08 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.07  705.74
- $$$ no. of points with active convection =   78740
- SHF variables written at  2000-01-08 16:00:00 UTC        
- SHF variables written at  2000-01-08 17:00:00 UTC        
- ATM variables written at  2000-01-08 18:00:00 UTC        
- SRF variables written at  2000-01-08 18:00:00 UTC        
- SHF variables written at  2000-01-08 18:00:00 UTC        
- RAD variables written at  2000-01-08 18:00:00 UTC        
- SEARCH BC data for 2000010900 , step =     7440
- READY  BC from     2000010818  to 2000010900 
- $$$  2000-01-08 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1033.50  705.81
- $$$ no. of points with active convection =   79476
- SHF variables written at  2000-01-08 19:00:00 UTC        
- SHF variables written at  2000-01-08 20:00:00 UTC        
- SRF variables written at  2000-01-08 21:00:00 UTC        
- SHF variables written at  2000-01-08 21:00:00 UTC        
- $$$  2000-01-08 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1034.45  705.46
- $$$ no. of points with active convection =   79649
- SHF variables written at  2000-01-08 22:00:00 UTC        
- SHF variables written at  2000-01-08 23:00:00 UTC        
- At  2000-01-09 00:00:00 UTC        
- JDay      8.00000 solar declination angle = -22.34448496 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-09 00:00:00 UTC        
- SRF variables written at  2000-01-09 00:00:00 UTC        
- SHF variables written at  2000-01-09 00:00:00 UTC        
- STS variables written at  2000-01-09 00:00:00 UTC        
- RAD variables written at  2000-01-09 00:00:00 UTC        
- SEARCH BC data for 2000010906 , step =     7680
- READY  BC from     2000010900  to 2000010906 
- $$$  2000-01-09 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1034.70  705.16
- $$$ no. of points with active convection =   81312
- SHF variables written at  2000-01-09 01:00:00 UTC        
- SHF variables written at  2000-01-09 02:00:00 UTC        
- SRF variables written at  2000-01-09 03:00:00 UTC        
- SHF variables written at  2000-01-09 03:00:00 UTC        
- $$$  2000-01-09 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1035.26  705.44
- $$$ no. of points with active convection =   82659
- SHF variables written at  2000-01-09 04:00:00 UTC        
- SHF variables written at  2000-01-09 05:00:00 UTC        
- ATM variables written at  2000-01-09 06:00:00 UTC        
- SRF variables written at  2000-01-09 06:00:00 UTC        
- SHF variables written at  2000-01-09 06:00:00 UTC        
- RAD variables written at  2000-01-09 06:00:00 UTC        
- SEARCH BC data for 2000010912 , step =     7920
- READY  BC from     2000010906  to 2000010912 
- $$$  2000-01-09 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1035.33  705.52
- $$$ no. of points with active convection =   85917
- SHF variables written at  2000-01-09 07:00:00 UTC        
- SHF variables written at  2000-01-09 08:00:00 UTC        
- SRF variables written at  2000-01-09 09:00:00 UTC        
- SHF variables written at  2000-01-09 09:00:00 UTC        
- $$$  2000-01-09 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1036.47  705.28
- $$$ no. of points with active convection =   87604
- SHF variables written at  2000-01-09 10:00:00 UTC        
- SHF variables written at  2000-01-09 11:00:00 UTC        
- ATM variables written at  2000-01-09 12:00:00 UTC        
- SRF variables written at  2000-01-09 12:00:00 UTC        
- SHF variables written at  2000-01-09 12:00:00 UTC        
- RAD variables written at  2000-01-09 12:00:00 UTC        
- SEARCH BC data for 2000010918 , step =     8160
- READY  BC from     2000010912  to 2000010918 
- $$$  2000-01-09 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1037.59  705.52
- $$$ no. of points with active convection =   85227
- SHF variables written at  2000-01-09 13:00:00 UTC        
- SHF variables written at  2000-01-09 14:00:00 UTC        
- SRF variables written at  2000-01-09 15:00:00 UTC        
- SHF variables written at  2000-01-09 15:00:00 UTC        
- $$$  2000-01-09 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1037.98  705.84
- $$$ no. of points with active convection =   82667
- SHF variables written at  2000-01-09 16:00:00 UTC        
- SHF variables written at  2000-01-09 17:00:00 UTC        
- ATM variables written at  2000-01-09 18:00:00 UTC        
- SRF variables written at  2000-01-09 18:00:00 UTC        
- SHF variables written at  2000-01-09 18:00:00 UTC        
- RAD variables written at  2000-01-09 18:00:00 UTC        
- SEARCH BC data for 2000011000 , step =     8400
- READY  BC from     2000010918  to 2000011000 
- $$$  2000-01-09 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1038.46  706.01
- $$$ no. of points with active convection =   81773
- SHF variables written at  2000-01-09 19:00:00 UTC        
- SHF variables written at  2000-01-09 20:00:00 UTC        
- SRF variables written at  2000-01-09 21:00:00 UTC        
- SHF variables written at  2000-01-09 21:00:00 UTC        
- $$$  2000-01-09 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1039.06  705.77
- $$$ no. of points with active convection =   81579
- SHF variables written at  2000-01-09 22:00:00 UTC        
- SHF variables written at  2000-01-09 23:00:00 UTC        
- At  2000-01-10 00:00:00 UTC        
- JDay      9.00000 solar declination angle = -22.21194763 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-10 00:00:00 UTC        
- SRF variables written at  2000-01-10 00:00:00 UTC        
- SHF variables written at  2000-01-10 00:00:00 UTC        
- STS variables written at  2000-01-10 00:00:00 UTC        
- RAD variables written at  2000-01-10 00:00:00 UTC        
- SEARCH BC data for 2000011006 , step =     8640
- READY  BC from     2000011000  to 2000011006 
- $$$  2000-01-10 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1039.29  705.60
- $$$ no. of points with active convection =   81796
- SHF variables written at  2000-01-10 01:00:00 UTC        
- SHF variables written at  2000-01-10 02:00:00 UTC        
- SRF variables written at  2000-01-10 03:00:00 UTC        
- SHF variables written at  2000-01-10 03:00:00 UTC        
- $$$  2000-01-10 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1039.75  705.87
- $$$ no. of points with active convection =   82205
- SHF variables written at  2000-01-10 04:00:00 UTC        
- SHF variables written at  2000-01-10 05:00:00 UTC        
- ATM variables written at  2000-01-10 06:00:00 UTC        
- SRF variables written at  2000-01-10 06:00:00 UTC        
- SHF variables written at  2000-01-10 06:00:00 UTC        
- RAD variables written at  2000-01-10 06:00:00 UTC        
- SEARCH BC data for 2000011012 , step =     8880
- READY  BC from     2000011006  to 2000011012 
- $$$  2000-01-10 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1040.26  705.96
- $$$ no. of points with active convection =   82277
- SHF variables written at  2000-01-10 07:00:00 UTC        
- SHF variables written at  2000-01-10 08:00:00 UTC        
- SRF variables written at  2000-01-10 09:00:00 UTC        
- SHF variables written at  2000-01-10 09:00:00 UTC        
- $$$  2000-01-10 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.16  705.60
- $$$ no. of points with active convection =   81607
- SHF variables written at  2000-01-10 10:00:00 UTC        
- SHF variables written at  2000-01-10 11:00:00 UTC        
- ATM variables written at  2000-01-10 12:00:00 UTC        
- SRF variables written at  2000-01-10 12:00:00 UTC        
- SHF variables written at  2000-01-10 12:00:00 UTC        
- RAD variables written at  2000-01-10 12:00:00 UTC        
- SEARCH BC data for 2000011018 , step =     9120
- READY  BC from     2000011012  to 2000011018 
- $$$  2000-01-10 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.32  705.68
- $$$ no. of points with active convection =   79647
- SHF variables written at  2000-01-10 13:00:00 UTC        
- SHF variables written at  2000-01-10 14:00:00 UTC        
- SRF variables written at  2000-01-10 15:00:00 UTC        
- SHF variables written at  2000-01-10 15:00:00 UTC        
- $$$  2000-01-10 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.18  705.68
- $$$ no. of points with active convection =   77475
- SHF variables written at  2000-01-10 16:00:00 UTC        
- SHF variables written at  2000-01-10 17:00:00 UTC        
- ATM variables written at  2000-01-10 18:00:00 UTC        
- SRF variables written at  2000-01-10 18:00:00 UTC        
- SHF variables written at  2000-01-10 18:00:00 UTC        
- RAD variables written at  2000-01-10 18:00:00 UTC        
- SEARCH BC data for 2000011100 , step =     9360
- READY  BC from     2000011018  to 2000011100 
- $$$  2000-01-10 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.03  705.45
- $$$ no. of points with active convection =   77380
- SHF variables written at  2000-01-10 19:00:00 UTC        
- SHF variables written at  2000-01-10 20:00:00 UTC        
- SRF variables written at  2000-01-10 21:00:00 UTC        
- SHF variables written at  2000-01-10 21:00:00 UTC        
- $$$  2000-01-10 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.19  704.93
- $$$ no. of points with active convection =   77811
- SHF variables written at  2000-01-10 22:00:00 UTC        
- SHF variables written at  2000-01-10 23:00:00 UTC        
- At  2000-01-11 00:00:00 UTC        
- JDay     10.00000 solar declination angle = -22.07215794 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-11 00:00:00 UTC        
- SRF variables written at  2000-01-11 00:00:00 UTC        
- SHF variables written at  2000-01-11 00:00:00 UTC        
- STS variables written at  2000-01-11 00:00:00 UTC        
- RAD variables written at  2000-01-11 00:00:00 UTC        
- SEARCH BC data for 2000011106 , step =     9600
- READY  BC from     2000011100  to 2000011106 
- $$$  2000-01-11 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.10  704.49
- $$$ no. of points with active convection =   79605
- SHF variables written at  2000-01-11 01:00:00 UTC        
- SHF variables written at  2000-01-11 02:00:00 UTC        
- SRF variables written at  2000-01-11 03:00:00 UTC        
- SHF variables written at  2000-01-11 03:00:00 UTC        
- $$$  2000-01-11 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.03  704.70
- $$$ no. of points with active convection =   81651
- SHF variables written at  2000-01-11 04:00:00 UTC        
- SHF variables written at  2000-01-11 05:00:00 UTC        
- ATM variables written at  2000-01-11 06:00:00 UTC        
- SRF variables written at  2000-01-11 06:00:00 UTC        
- SHF variables written at  2000-01-11 06:00:00 UTC        
- RAD variables written at  2000-01-11 06:00:00 UTC        
- SEARCH BC data for 2000011112 , step =     9840
- READY  BC from     2000011106  to 2000011112 
- $$$  2000-01-11 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1040.92  704.81
- $$$ no. of points with active convection =   82747
- SHF variables written at  2000-01-11 07:00:00 UTC        
- SHF variables written at  2000-01-11 08:00:00 UTC        
- SRF variables written at  2000-01-11 09:00:00 UTC        
- SHF variables written at  2000-01-11 09:00:00 UTC        
- $$$  2000-01-11 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.43  704.34
- $$$ no. of points with active convection =   81732
- SHF variables written at  2000-01-11 10:00:00 UTC        
- SHF variables written at  2000-01-11 11:00:00 UTC        
- ATM variables written at  2000-01-11 12:00:00 UTC        
- SRF variables written at  2000-01-11 12:00:00 UTC        
- SHF variables written at  2000-01-11 12:00:00 UTC        
- RAD variables written at  2000-01-11 12:00:00 UTC        
- SEARCH BC data for 2000011118 , step =    10080
- READY  BC from     2000011112  to 2000011118 
- $$$  2000-01-11 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.08  704.23
- $$$ no. of points with active convection =   80986
- SHF variables written at  2000-01-11 13:00:00 UTC        
- SHF variables written at  2000-01-11 14:00:00 UTC        
- SRF variables written at  2000-01-11 15:00:00 UTC        
- SHF variables written at  2000-01-11 15:00:00 UTC        
- $$$  2000-01-11 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1040.30  704.22
- $$$ no. of points with active convection =   79199
- SHF variables written at  2000-01-11 16:00:00 UTC        
- SHF variables written at  2000-01-11 17:00:00 UTC        
- ATM variables written at  2000-01-11 18:00:00 UTC        
- SRF variables written at  2000-01-11 18:00:00 UTC        
- SHF variables written at  2000-01-11 18:00:00 UTC        
- RAD variables written at  2000-01-11 18:00:00 UTC        
- SEARCH BC data for 2000011200 , step =    10320
- READY  BC from     2000011118  to 2000011200 
- $$$  2000-01-11 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1039.67  703.92
- $$$ no. of points with active convection =   79014
- SHF variables written at  2000-01-11 19:00:00 UTC        
- SHF variables written at  2000-01-11 20:00:00 UTC        
- SRF variables written at  2000-01-11 21:00:00 UTC        
- SHF variables written at  2000-01-11 21:00:00 UTC        
- $$$  2000-01-11 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1039.62  703.34
- $$$ no. of points with active convection =   79601
- SHF variables written at  2000-01-11 22:00:00 UTC        
- SHF variables written at  2000-01-11 23:00:00 UTC        
- At  2000-01-12 00:00:00 UTC        
- JDay     11.00000 solar declination angle = -21.92518344 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-12 00:00:00 UTC        
- SRF variables written at  2000-01-12 00:00:00 UTC        
- SHF variables written at  2000-01-12 00:00:00 UTC        
- STS variables written at  2000-01-12 00:00:00 UTC        
- RAD variables written at  2000-01-12 00:00:00 UTC        
- SEARCH BC data for 2000011206 , step =    10560
- READY  BC from     2000011200  to 2000011206 
- $$$  2000-01-12 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1039.86  702.86
- $$$ no. of points with active convection =   80800
- SHF variables written at  2000-01-12 01:00:00 UTC        
- SHF variables written at  2000-01-12 02:00:00 UTC        
- SRF variables written at  2000-01-12 03:00:00 UTC        
- SHF variables written at  2000-01-12 03:00:00 UTC        
- $$$  2000-01-12 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1039.64  702.95
- $$$ no. of points with active convection =   82605
- SHF variables written at  2000-01-12 04:00:00 UTC        
- SHF variables written at  2000-01-12 05:00:00 UTC        
- ATM variables written at  2000-01-12 06:00:00 UTC        
- SRF variables written at  2000-01-12 06:00:00 UTC        
- SHF variables written at  2000-01-12 06:00:00 UTC        
- RAD variables written at  2000-01-12 06:00:00 UTC        
- SEARCH BC data for 2000011212 , step =    10800
- READY  BC from     2000011206  to 2000011212 
- $$$  2000-01-12 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1038.97  702.86
- $$$ no. of points with active convection =   84053
- SHF variables written at  2000-01-12 07:00:00 UTC        
- SHF variables written at  2000-01-12 08:00:00 UTC        
- SRF variables written at  2000-01-12 09:00:00 UTC        
- SHF variables written at  2000-01-12 09:00:00 UTC        
- $$$  2000-01-12 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1038.77  702.70
- $$$ no. of points with active convection =   83639
- SHF variables written at  2000-01-12 10:00:00 UTC        
- SHF variables written at  2000-01-12 11:00:00 UTC        
- ATM variables written at  2000-01-12 12:00:00 UTC        
- SRF variables written at  2000-01-12 12:00:00 UTC        
- SHF variables written at  2000-01-12 12:00:00 UTC        
- RAD variables written at  2000-01-12 12:00:00 UTC        
- SEARCH BC data for 2000011218 , step =    11040
- READY  BC from     2000011212  to 2000011218 
- $$$  2000-01-12 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1037.49  702.94
- $$$ no. of points with active convection =   82101
- SHF variables written at  2000-01-12 13:00:00 UTC        
- SHF variables written at  2000-01-12 14:00:00 UTC        
- SRF variables written at  2000-01-12 15:00:00 UTC        
- SHF variables written at  2000-01-12 15:00:00 UTC        
- $$$  2000-01-12 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1037.45  703.45
- $$$ no. of points with active convection =   79617
- SHF variables written at  2000-01-12 16:00:00 UTC        
- SHF variables written at  2000-01-12 17:00:00 UTC        
- ATM variables written at  2000-01-12 18:00:00 UTC        
- SRF variables written at  2000-01-12 18:00:00 UTC        
- SHF variables written at  2000-01-12 18:00:00 UTC        
- RAD variables written at  2000-01-12 18:00:00 UTC        
- SEARCH BC data for 2000011300 , step =    11280
- READY  BC from     2000011218  to 2000011300 
- $$$  2000-01-12 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1038.15  703.64
- $$$ no. of points with active convection =   78873
- SHF variables written at  2000-01-12 19:00:00 UTC        
- SHF variables written at  2000-01-12 20:00:00 UTC        
- SRF variables written at  2000-01-12 21:00:00 UTC        
- SHF variables written at  2000-01-12 21:00:00 UTC        
- $$$  2000-01-12 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1038.94  703.70
- $$$ no. of points with active convection =   77523
- SHF variables written at  2000-01-12 22:00:00 UTC        
- SHF variables written at  2000-01-12 23:00:00 UTC        
- At  2000-01-13 00:00:00 UTC        
- JDay     12.00000 solar declination angle = -21.77109483 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-13 00:00:00 UTC        
- SRF variables written at  2000-01-13 00:00:00 UTC        
- SHF variables written at  2000-01-13 00:00:00 UTC        
- STS variables written at  2000-01-13 00:00:00 UTC        
- RAD variables written at  2000-01-13 00:00:00 UTC        
- SEARCH BC data for 2000011306 , step =    11520
- READY  BC from     2000011300  to 2000011306 
- $$$  2000-01-13 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1039.80  703.67
- $$$ no. of points with active convection =   77082
- SHF variables written at  2000-01-13 01:00:00 UTC        
- SHF variables written at  2000-01-13 02:00:00 UTC        
- SRF variables written at  2000-01-13 03:00:00 UTC        
- SHF variables written at  2000-01-13 03:00:00 UTC        
- $$$  2000-01-13 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1039.77  704.21
- $$$ no. of points with active convection =   77894
- SHF variables written at  2000-01-13 04:00:00 UTC        
- SHF variables written at  2000-01-13 05:00:00 UTC        
- ATM variables written at  2000-01-13 06:00:00 UTC        
- SRF variables written at  2000-01-13 06:00:00 UTC        
- SHF variables written at  2000-01-13 06:00:00 UTC        
- RAD variables written at  2000-01-13 06:00:00 UTC        
- SEARCH BC data for 2000011312 , step =    11760
- READY  BC from     2000011306  to 2000011312 
- $$$  2000-01-13 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1040.48  704.45
- $$$ no. of points with active convection =   78596
- SHF variables written at  2000-01-13 07:00:00 UTC        
- SHF variables written at  2000-01-13 08:00:00 UTC        
- SRF variables written at  2000-01-13 09:00:00 UTC        
- SHF variables written at  2000-01-13 09:00:00 UTC        
- $$$  2000-01-13 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1040.98  704.38
- $$$ no. of points with active convection =   78453
- SHF variables written at  2000-01-13 10:00:00 UTC        
- SHF variables written at  2000-01-13 11:00:00 UTC        
- ATM variables written at  2000-01-13 12:00:00 UTC        
- SRF variables written at  2000-01-13 12:00:00 UTC        
- SHF variables written at  2000-01-13 12:00:00 UTC        
- RAD variables written at  2000-01-13 12:00:00 UTC        
- SEARCH BC data for 2000011318 , step =    12000
- READY  BC from     2000011312  to 2000011318 
- $$$  2000-01-13 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.21  704.58
- $$$ no. of points with active convection =   79105
- SHF variables written at  2000-01-13 13:00:00 UTC        
- SHF variables written at  2000-01-13 14:00:00 UTC        
- SRF variables written at  2000-01-13 15:00:00 UTC        
- SHF variables written at  2000-01-13 15:00:00 UTC        
- $$$  2000-01-13 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1040.98  704.96
- $$$ no. of points with active convection =   77345
- SHF variables written at  2000-01-13 16:00:00 UTC        
- SHF variables written at  2000-01-13 17:00:00 UTC        
- ATM variables written at  2000-01-13 18:00:00 UTC        
- SRF variables written at  2000-01-13 18:00:00 UTC        
- SHF variables written at  2000-01-13 18:00:00 UTC        
- RAD variables written at  2000-01-13 18:00:00 UTC        
- SEARCH BC data for 2000011400 , step =    12240
- READY  BC from     2000011318  to 2000011400 
- $$$  2000-01-13 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.03  705.08
- $$$ no. of points with active convection =   76817
- SHF variables written at  2000-01-13 19:00:00 UTC        
- SHF variables written at  2000-01-13 20:00:00 UTC        
- SRF variables written at  2000-01-13 21:00:00 UTC        
- SHF variables written at  2000-01-13 21:00:00 UTC        
- $$$  2000-01-13 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.56  704.77
- $$$ no. of points with active convection =   77007
- SHF variables written at  2000-01-13 22:00:00 UTC        
- SHF variables written at  2000-01-13 23:00:00 UTC        
- At  2000-01-14 00:00:00 UTC        
- JDay     13.00000 solar declination angle = -21.60996586 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-14 00:00:00 UTC        
- SRF variables written at  2000-01-14 00:00:00 UTC        
- SHF variables written at  2000-01-14 00:00:00 UTC        
- STS variables written at  2000-01-14 00:00:00 UTC        
- RAD variables written at  2000-01-14 00:00:00 UTC        
- SEARCH BC data for 2000011406 , step =    12480
- READY  BC from     2000011400  to 2000011406 
- $$$  2000-01-14 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.67  704.52
- $$$ no. of points with active convection =   76317
- SHF variables written at  2000-01-14 01:00:00 UTC        
- SHF variables written at  2000-01-14 02:00:00 UTC        
- SRF variables written at  2000-01-14 03:00:00 UTC        
- SHF variables written at  2000-01-14 03:00:00 UTC        
- $$$  2000-01-14 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.64  704.93
- $$$ no. of points with active convection =   75189
- SHF variables written at  2000-01-14 04:00:00 UTC        
- SHF variables written at  2000-01-14 05:00:00 UTC        
- ATM variables written at  2000-01-14 06:00:00 UTC        
- SRF variables written at  2000-01-14 06:00:00 UTC        
- SHF variables written at  2000-01-14 06:00:00 UTC        
- RAD variables written at  2000-01-14 06:00:00 UTC        
- SEARCH BC data for 2000011412 , step =    12720
- READY  BC from     2000011406  to 2000011412 
- $$$  2000-01-14 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.45  705.01
- $$$ no. of points with active convection =   74848
- SHF variables written at  2000-01-14 07:00:00 UTC        
- SHF variables written at  2000-01-14 08:00:00 UTC        
- SRF variables written at  2000-01-14 09:00:00 UTC        
- SHF variables written at  2000-01-14 09:00:00 UTC        
- $$$  2000-01-14 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.82  704.75
- $$$ no. of points with active convection =   72538
- SHF variables written at  2000-01-14 10:00:00 UTC        
- SHF variables written at  2000-01-14 11:00:00 UTC        
- ATM variables written at  2000-01-14 12:00:00 UTC        
- SRF variables written at  2000-01-14 12:00:00 UTC        
- SHF variables written at  2000-01-14 12:00:00 UTC        
- RAD variables written at  2000-01-14 12:00:00 UTC        
- SEARCH BC data for 2000011418 , step =    12960
- READY  BC from     2000011412  to 2000011418 
- $$$  2000-01-14 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1041.83  704.75
- $$$ no. of points with active convection =   71330
- SHF variables written at  2000-01-14 13:00:00 UTC        
- SHF variables written at  2000-01-14 14:00:00 UTC        
- SRF variables written at  2000-01-14 15:00:00 UTC        
- SHF variables written at  2000-01-14 15:00:00 UTC        
- $$$  2000-01-14 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1042.21  704.79
- $$$ no. of points with active convection =   69967
- SHF variables written at  2000-01-14 16:00:00 UTC        
- SHF variables written at  2000-01-14 17:00:00 UTC        
- ATM variables written at  2000-01-14 18:00:00 UTC        
- SRF variables written at  2000-01-14 18:00:00 UTC        
- SHF variables written at  2000-01-14 18:00:00 UTC        
- RAD variables written at  2000-01-14 18:00:00 UTC        
- SEARCH BC data for 2000011500 , step =    13200
- READY  BC from     2000011418  to 2000011500 
- $$$  2000-01-14 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1043.18  704.55
- $$$ no. of points with active convection =   68580
- SHF variables written at  2000-01-14 19:00:00 UTC        
- SHF variables written at  2000-01-14 20:00:00 UTC        
- SRF variables written at  2000-01-14 21:00:00 UTC        
- SHF variables written at  2000-01-14 21:00:00 UTC        
- $$$  2000-01-14 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1044.11  704.02
- $$$ no. of points with active convection =   66528
- SHF variables written at  2000-01-14 22:00:00 UTC        
- SHF variables written at  2000-01-14 23:00:00 UTC        
- At  2000-01-15 00:00:00 UTC        
- JDay     14.00000 solar declination angle = -21.44187320 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-15 00:00:00 UTC        
- SRF variables written at  2000-01-15 00:00:00 UTC        
- SHF variables written at  2000-01-15 00:00:00 UTC        
- STS variables written at  2000-01-15 00:00:00 UTC        
- RAD variables written at  2000-01-15 00:00:00 UTC        
- SEARCH BC data for 2000011506 , step =    13440
- READY  BC from     2000011500  to 2000011506 
- $$$  2000-01-15 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1044.87  703.43
- $$$ no. of points with active convection =   65446
- SHF variables written at  2000-01-15 01:00:00 UTC        
- SHF variables written at  2000-01-15 02:00:00 UTC        
- SRF variables written at  2000-01-15 03:00:00 UTC        
- SHF variables written at  2000-01-15 03:00:00 UTC        
- $$$  2000-01-15 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1046.15  703.10
- $$$ no. of points with active convection =   64808
- SHF variables written at  2000-01-15 04:00:00 UTC        
- SHF variables written at  2000-01-15 05:00:00 UTC        
- ATM variables written at  2000-01-15 06:00:00 UTC        
- SRF variables written at  2000-01-15 06:00:00 UTC        
- SHF variables written at  2000-01-15 06:00:00 UTC        
- RAD variables written at  2000-01-15 06:00:00 UTC        
- SEARCH BC data for 2000011512 , step =    13680
- READY  BC from     2000011506  to 2000011512 
- $$$  2000-01-15 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1047.34  702.61
- $$$ no. of points with active convection =   65041
- SHF variables written at  2000-01-15 07:00:00 UTC        
- SHF variables written at  2000-01-15 08:00:00 UTC        
- SRF variables written at  2000-01-15 09:00:00 UTC        
- SHF variables written at  2000-01-15 09:00:00 UTC        
- $$$  2000-01-15 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1048.33  701.82
- $$$ no. of points with active convection =   65106
- SHF variables written at  2000-01-15 10:00:00 UTC        
- SHF variables written at  2000-01-15 11:00:00 UTC        
- ATM variables written at  2000-01-15 12:00:00 UTC        
- SRF variables written at  2000-01-15 12:00:00 UTC        
- SHF variables written at  2000-01-15 12:00:00 UTC        
- RAD variables written at  2000-01-15 12:00:00 UTC        
- SEARCH BC data for 2000011518 , step =    13920
- READY  BC from     2000011512  to 2000011518 
- $$$  2000-01-15 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1049.57  701.21
- $$$ no. of points with active convection =   64358
- Update Ozone Data...
-  # Updated ozone profile #
-    0.806E-05  0.627E-05  0.365E-05  0.142E-05  0.460E-06  0.152E-06  0.898E-07
-    0.642E-07  0.556E-07  0.526E-07  0.502E-07  0.490E-07  0.484E-07  0.483E-07
-    0.487E-07  0.489E-07  0.490E-07  0.490E-07  0.495E-07  0.499E-07  0.496E-07
-    0.485E-07  0.471E-07  0.451E-07  0.427E-07  0.405E-07  0.386E-07  0.371E-07
-    0.371E-07  0.360E-07  0.349E-07  0.340E-07
- Reading EXT,SSA,ASY Data...
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb3.200002.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb6.200002.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb10.200002.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb13.200002.nc
- AEROPP file open 
- /leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH/MERRA2_OPPMONTH_wb19.200002.nc
+     0.00       0.00       0.00       0.00       0.00       0.00      0.630    
+    0.630      0.630      0.630      0.630      0.630      0.630      0.630    
+    0.630      0.630      0.630      0.630      0.630      0.630      0.630    
+    0.630      0.630      0.630      0.630      0.630      0.630      0.630    
+    0.630      0.630      0.630      0.630      0.630      0.630      0.630    
+    0.630      0.630      0.630      0.630      0.630      0.630      0.630    
+ SRF variables written at  2018-01-01 01:00:00 UTC        
+ SRF variables written at  2018-01-01 02:00:00 UTC        
+ SRF variables written at  2018-01-01 03:00:00 UTC        
+ $$$  2018-01-01 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.14  496.32
+ SRF variables written at  2018-01-01 04:00:00 UTC        
+ SRF variables written at  2018-01-01 05:00:00 UTC        
+ ATM variables written at  2018-01-01 06:00:00 UTC        
+ SRF variables written at  2018-01-01 06:00:00 UTC        
+ RAD variables written at  2018-01-01 06:00:00 UTC        
+ SEARCH BC data for 2018010112 , step =      480
+ READY  BC from     2018010106  to 2018010112 
+ $$$  2018-01-01 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.12  495.59
+ SRF variables written at  2018-01-01 07:00:00 UTC        
+ SRF variables written at  2018-01-01 08:00:00 UTC        
+ SRF variables written at  2018-01-01 09:00:00 UTC        
+ $$$  2018-01-01 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.51  495.54
+ SRF variables written at  2018-01-01 10:00:00 UTC        
+ SRF variables written at  2018-01-01 11:00:00 UTC        
+ ATM variables written at  2018-01-01 12:00:00 UTC        
+ SRF variables written at  2018-01-01 12:00:00 UTC        
+ RAD variables written at  2018-01-01 12:00:00 UTC        
+ SEARCH BC data for 2018010118 , step =      960
+ READY  BC from     2018010112  to 2018010118 
+ $$$  2018-01-01 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.90  495.31
+ SRF variables written at  2018-01-01 13:00:00 UTC        
+ SRF variables written at  2018-01-01 14:00:00 UTC        
+ SRF variables written at  2018-01-01 15:00:00 UTC        
+ $$$  2018-01-01 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.42  495.34
+ SRF variables written at  2018-01-01 16:00:00 UTC        
+ SRF variables written at  2018-01-01 17:00:00 UTC        
+ ATM variables written at  2018-01-01 18:00:00 UTC        
+ SRF variables written at  2018-01-01 18:00:00 UTC        
+ RAD variables written at  2018-01-01 18:00:00 UTC        
+ SEARCH BC data for 2018010200 , step =     1440
+ READY  BC from     2018010118  to 2018010200 
+ $$$  2018-01-01 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.81  495.63
+ SRF variables written at  2018-01-01 19:00:00 UTC        
+ SRF variables written at  2018-01-01 20:00:00 UTC        
+ SRF variables written at  2018-01-01 21:00:00 UTC        
+ $$$  2018-01-01 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.20  495.79
+ SRF variables written at  2018-01-01 22:00:00 UTC        
+ SRF variables written at  2018-01-01 23:00:00 UTC        
+ At  2018-01-02 00:00:00 UTC        
+ JDay      1.00000 solar declination angle = -23.02334906 degrees
+                   solar TSI irradiance    =    1355.9544 W/m^2
+ ATM variables written at  2018-01-02 00:00:00 UTC        
+ SRF variables written at  2018-01-02 00:00:00 UTC        
+ STS variables written at  2018-01-02 00:00:00 UTC        
+ RAD variables written at  2018-01-02 00:00:00 UTC        
+ SEARCH BC data for 2018010206 , step =     1920
+ READY  BC from     2018010200  to 2018010206 
+ $$$  2018-01-02 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.70  495.49
+ Updating aerosol optical properties...
   # Updated VIS ext profile #
-    0.127E-04  0.498E-04  0.124E-03  0.315E-03  0.857E-03  0.121E-02  0.198E-02
-    0.190E-02  0.152E-02  0.144E-02  0.148E-02  0.140E-02  0.157E-02  0.187E-02
-    0.421E-02  0.999E-02  0.126E-01  0.137E-01  0.169E-01  0.184E-01  0.191E-01
-    0.209E-01  0.230E-01  0.242E-01  0.232E-01  0.217E-01  0.203E-01  0.190E-01
-    0.190E-01  0.176E-01  0.160E-01
+     0.00       0.00       0.00       0.00       0.00       0.00      0.299E-14
+    0.420E-11  0.101E-09  0.725E-09  0.288E-08  0.808E-08  0.180E-07  0.339E-07
+    0.566E-07  0.861E-07  0.121E-06  0.161E-06  0.204E-06  0.247E-06  0.290E-06
+    0.329E-06  0.364E-06  0.393E-06  0.417E-06  0.434E-06  0.444E-06  0.448E-06
+    0.446E-06  0.439E-06  0.426E-06  0.410E-06  0.390E-06  0.367E-06  0.341E-06
+    0.341E-06  0.314E-06  0.284E-06  0.252E-06  0.217E-06  0.177E-06  0.120E-06
   # Updated VIS ssa profile #
-    0.896      0.884      0.879      0.869      0.901      0.904      0.913    
-    0.911      0.903      0.895      0.883      0.877      0.873      0.872    
-    0.881      0.887      0.895      0.903      0.907      0.909      0.913    
-    0.916      0.919      0.919      0.918      0.918      0.917      0.917    
-    0.917      0.917      0.917    
+     1.00       1.00       1.00       1.00       1.00       1.00      0.930    
+    0.930      0.930      0.930      0.930      0.930      0.930      0.930    
+    0.930      0.930      0.930      0.930      0.930      0.930      0.930    
+    0.930      0.930      0.930      0.930      0.930      0.930      0.930    
+    0.930      0.930      0.930      0.930      0.930      0.930      0.930    
+    0.930      0.930      0.930      0.930      0.930      0.929      0.929    
   # Updated VIS asy profile #
-    0.651      0.649      0.650      0.671      0.708      0.710      0.719    
-    0.718      0.710      0.704      0.694      0.690      0.685      0.679    
-    0.682      0.687      0.698      0.706      0.712      0.716      0.724    
-    0.733      0.740      0.744      0.746      0.748      0.748      0.748    
-    0.748      0.749      0.749    
- SHF variables written at  2000-01-15 13:00:00 UTC        
- SHF variables written at  2000-01-15 14:00:00 UTC        
- SRF variables written at  2000-01-15 15:00:00 UTC        
- SHF variables written at  2000-01-15 15:00:00 UTC        
- $$$  2000-01-15 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1050.09  700.89
- $$$ no. of points with active convection =   63635
- SHF variables written at  2000-01-15 16:00:00 UTC        
- SHF variables written at  2000-01-15 17:00:00 UTC        
- ATM variables written at  2000-01-15 18:00:00 UTC        
- SRF variables written at  2000-01-15 18:00:00 UTC        
- SHF variables written at  2000-01-15 18:00:00 UTC        
- RAD variables written at  2000-01-15 18:00:00 UTC        
- SEARCH BC data for 2000011600 , step =    14160
- READY  BC from     2000011518  to 2000011600 
- $$$  2000-01-15 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1049.95  700.40
- $$$ no. of points with active convection =   62187
- SHF variables written at  2000-01-15 19:00:00 UTC        
- SHF variables written at  2000-01-15 20:00:00 UTC        
- SRF variables written at  2000-01-15 21:00:00 UTC        
- SHF variables written at  2000-01-15 21:00:00 UTC        
- $$$  2000-01-15 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1050.37  699.82
- $$$ no. of points with active convection =   63057
- SHF variables written at  2000-01-15 22:00:00 UTC        
- SHF variables written at  2000-01-15 23:00:00 UTC        
- At  2000-01-16 00:00:00 UTC        
- JDay     15.00000 solar declination angle = -21.26689636 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-16 00:00:00 UTC        
- SRF variables written at  2000-01-16 00:00:00 UTC        
- SHF variables written at  2000-01-16 00:00:00 UTC        
- STS variables written at  2000-01-16 00:00:00 UTC        
- RAD variables written at  2000-01-16 00:00:00 UTC        
- SEARCH BC data for 2000011606 , step =    14400
- READY  BC from     2000011600  to 2000011606 
- $$$  2000-01-16 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1050.61  699.30
- $$$ no. of points with active convection =   64983
- SHF variables written at  2000-01-16 01:00:00 UTC        
- SHF variables written at  2000-01-16 02:00:00 UTC        
- SRF variables written at  2000-01-16 03:00:00 UTC        
- SHF variables written at  2000-01-16 03:00:00 UTC        
- $$$  2000-01-16 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1050.80  699.49
- $$$ no. of points with active convection =   65749
- SHF variables written at  2000-01-16 04:00:00 UTC        
- SHF variables written at  2000-01-16 05:00:00 UTC        
- ATM variables written at  2000-01-16 06:00:00 UTC        
- SRF variables written at  2000-01-16 06:00:00 UTC        
- SHF variables written at  2000-01-16 06:00:00 UTC        
- RAD variables written at  2000-01-16 06:00:00 UTC        
- SEARCH BC data for 2000011612 , step =    14640
- READY  BC from     2000011606  to 2000011612 
- $$$  2000-01-16 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1050.66  699.46
- $$$ no. of points with active convection =   66850
- SHF variables written at  2000-01-16 07:00:00 UTC        
- SHF variables written at  2000-01-16 08:00:00 UTC        
- SRF variables written at  2000-01-16 09:00:00 UTC        
- SHF variables written at  2000-01-16 09:00:00 UTC        
- $$$  2000-01-16 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1051.11  698.87
- $$$ no. of points with active convection =   67742
- SHF variables written at  2000-01-16 10:00:00 UTC        
- SHF variables written at  2000-01-16 11:00:00 UTC        
- ATM variables written at  2000-01-16 12:00:00 UTC        
- SRF variables written at  2000-01-16 12:00:00 UTC        
- SHF variables written at  2000-01-16 12:00:00 UTC        
- RAD variables written at  2000-01-16 12:00:00 UTC        
- SEARCH BC data for 2000011618 , step =    14880
- READY  BC from     2000011612  to 2000011618 
- $$$  2000-01-16 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1051.28  698.62
- $$$ no. of points with active convection =   69653
- Attempting to read monthly vegetation data .....
- At  2000-01-16 12:22:30 UTC
- Month =            1  Day =           16
- Reading months :            1           2
- Successfully read monthly vegetation data for
- month            2
- SHF variables written at  2000-01-16 13:00:00 UTC        
- SHF variables written at  2000-01-16 14:00:00 UTC        
- SRF variables written at  2000-01-16 15:00:00 UTC        
- SHF variables written at  2000-01-16 15:00:00 UTC        
- $$$  2000-01-16 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1051.06  698.65
- $$$ no. of points with active convection =   70092
- SHF variables written at  2000-01-16 16:00:00 UTC        
- SHF variables written at  2000-01-16 17:00:00 UTC        
- ATM variables written at  2000-01-16 18:00:00 UTC        
- SRF variables written at  2000-01-16 18:00:00 UTC        
- SHF variables written at  2000-01-16 18:00:00 UTC        
- RAD variables written at  2000-01-16 18:00:00 UTC        
- SEARCH BC data for 2000011700 , step =    15120
- READY  BC from     2000011618  to 2000011700 
- $$$  2000-01-16 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1051.06  698.42
- $$$ no. of points with active convection =   70920
- SHF variables written at  2000-01-16 19:00:00 UTC        
- SHF variables written at  2000-01-16 20:00:00 UTC        
- SRF variables written at  2000-01-16 21:00:00 UTC        
- SHF variables written at  2000-01-16 21:00:00 UTC        
- $$$  2000-01-16 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1051.39  697.45
- $$$ no. of points with active convection =   72089
- SHF variables written at  2000-01-16 22:00:00 UTC        
- SHF variables written at  2000-01-16 23:00:00 UTC        
- At  2000-01-17 00:00:00 UTC        
- JDay     16.00000 solar declination angle = -21.08511755 degrees
-                   solar TSI irradiance    =    1357.0268 W/m^2
- ATM variables written at  2000-01-17 00:00:00 UTC        
- SRF variables written at  2000-01-17 00:00:00 UTC        
- SHF variables written at  2000-01-17 00:00:00 UTC        
- STS variables written at  2000-01-17 00:00:00 UTC        
- RAD variables written at  2000-01-17 00:00:00 UTC        
- SEARCH BC data for 2000011706 , step =    15360
- READY  BC from     2000011700  to 2000011706 
- $$$  2000-01-17 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1051.58  696.49
- $$$ no. of points with active convection =   72956
- SHF variables written at  2000-01-17 01:00:00 UTC        
- SHF variables written at  2000-01-17 02:00:00 UTC        
- SRF variables written at  2000-01-17 03:00:00 UTC        
- SHF variables written at  2000-01-17 03:00:00 UTC        
- $$$  2000-01-17 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1051.53  696.27
- $$$ no. of points with active convection =   75035
- SHF variables written at  2000-01-17 04:00:00 UTC        
- SHF variables written at  2000-01-17 05:00:00 UTC        
- ATM variables written at  2000-01-17 06:00:00 UTC        
- SRF variables written at  2000-01-17 06:00:00 UTC        
- SHF variables written at  2000-01-17 06:00:00 UTC        
+     0.00       0.00       0.00       0.00       0.00       0.00      0.630    
+    0.630      0.630      0.630      0.630      0.630      0.630      0.630    
+    0.630      0.630      0.630      0.630      0.630      0.630      0.630    
+    0.630      0.630      0.630      0.630      0.630      0.630      0.630    
+    0.630      0.630      0.630      0.630      0.630      0.630      0.630    
+    0.630      0.630      0.630      0.630      0.630      0.630      0.630    
+ SRF variables written at  2018-01-02 01:00:00 UTC        
+ SRF variables written at  2018-01-02 02:00:00 UTC        
