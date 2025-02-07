@@ -25,7 +25,7 @@ for v in $vars; do
 
   yf=${vc}_${obs}_${ys}.nc
   sf=${hdir}/${vo}_ERA5*.nc
-  eval CDO chname,$vo,$vc -selvar,$vo -selyear,$fyr/$lyr $sf $yf
+  eval CDO chname,$vo,$v -selvar,$vo -selyear,$fyr/$lyr $sf $yf
 
 done
 echo "Done."

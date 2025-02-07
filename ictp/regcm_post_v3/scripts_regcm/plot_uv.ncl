@@ -1,4 +1,5 @@
 loadscript(getenv("scrdir")+"/"+"trimPNG.ncl")
+loadscript(getenv("scrdir")+"/"+"panel_two_sets.ncl")
 
 begin
 ;*************************
@@ -114,7 +115,7 @@ begin
 	vfname = dirp+"/quv/vwnd_ERA5_"+yr+"_"+seas+"_mean_0.25.nc"
 	uf = addfile(ufname, "r")
 	vf = addfile(vfname, "r")
-	lev1 = uf->level
+	lev1 = uf->pressure_level
 	lev_id1 = ind(lev1 .eq. plev)
 	uo = uf->ua(0, lev_id1, :, :)
 	vo = vf->va(0, lev_id1, :, :)

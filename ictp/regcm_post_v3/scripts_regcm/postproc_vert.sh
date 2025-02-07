@@ -103,12 +103,12 @@ vars="clw cli cl hus rh"
 seas="DJF MAM JJA SON"
 for v in $vars; do
   r4log=F
-  [[ $dom = CentralAmerica ]] && r4log=T
-  [[ $dom = SouthAmerica   ]] && r4log=T
-  [[ $dom = Europe         ]] && r4log=T
-  [[ $dom = Africa         ]] && r4log=T
-  [[ $dom = SouthEastAsia  ]] && r4log=T
-  [[ $dom = Australasia    ]] && r4log=T
+  [[ $dom = CentralAmerica ]] && r4log=F
+  [[ $dom = SouthAmerica   ]] && r4log=F
+  [[ $dom = Europe         ]] && r4log=F
+  [[ $dom = Africa         ]] && r4log=F
+  [[ $dom = SouthEastAsia  ]] && r4log=F
+  [[ $dom = Australasia    ]] && r4log=F
   [[ $v = cli ]] && r4log=F
 # [[ $path = MPI-Europe ]] && r4log=F
 # [[ $path = ERA5-Europe ]] && r4log=F

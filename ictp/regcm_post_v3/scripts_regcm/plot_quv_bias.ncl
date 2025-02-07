@@ -1,4 +1,5 @@
 loadscript(getenv("scrdir")+"/"+"trimPNG.ncl")
+loadscript(getenv("scrdir")+"/"+"panel_two_sets.ncl")
 
 begin
 ;*************************
@@ -119,7 +120,7 @@ begin
 		;-- open ERA5 file
 		ofname = dirp+"/quv/" + onam + "_ERA5_"+yr+"_"+seas+"_mean_0.25.nc"
 		of = addfile(ofname, "r")
-		lev1 = of->level
+		lev1 = of->pressure_level
 		lev_id1 = ind(lev1 .eq. plev)
 		vo = of->$var$(0, lev_id1, :, :)
 

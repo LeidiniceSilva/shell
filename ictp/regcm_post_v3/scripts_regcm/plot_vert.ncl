@@ -1,4 +1,5 @@
 loadscript(getenv("scrdir")+"/"+"trimPNG.ncl")
+loadscript(getenv("scrdir")+"/"+"panel_two_sets.ncl")
 
 begin
 ;*************************

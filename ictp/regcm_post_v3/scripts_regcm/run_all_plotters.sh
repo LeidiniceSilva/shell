@@ -20,14 +20,14 @@ rdir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11
 ddir=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc
 
 ys=2000-2001
- run_plots="1 1 1 1 0 0 0" # all
+#run_plots="1 1 1 1 0 0 0" # all
 #run_plots="1 0 0 0 0 0 0" # bias
 #run_plots="0 1 0 0 0 0 0" # p99
 #run_plots="0 0 1 0 0 0 0" # frq-int
 #run_plots="0 0 0 1 0 0 0" # pdf
 #run_plots="0 0 0 0 0 0 1" # urban mask
 #run_plots="0 0 0 0 1 0 0" # vert
-#run_plots="0 0 0 0 0 1 0" # wind
+ run_plots="0 0 0 0 0 1 0" # wind
 #0/1 = on/off switch: bias, %pr%, p99, prc/pr, pr-frq/int, pdfs, vertical, wind, taylor plots
 
 ##############################

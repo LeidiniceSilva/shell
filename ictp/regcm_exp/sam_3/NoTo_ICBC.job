@@ -2,7 +2,7 @@
 
 #SBATCH -A ICT23_ESP_1
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 4
+#SBATCH -N 8
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
 #SBATCH -o logs/ICBC_SLURM.out

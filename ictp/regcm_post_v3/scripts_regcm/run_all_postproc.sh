@@ -44,9 +44,9 @@ email="mda_silv@ictp.it"
 #run_postproc="0 0 0 1 0 0 0" # pr-frq/int
 #run_postproc="0 0 0 0 1 0 0" # p99
 #run_postproc="2 0 0 0 0 0 0" # sigma2p
- run_postproc="0 0 0 0 0 2 2" # vert + wind
+#run_postproc="0 0 0 0 0 2 2" # vert + wind
 #run_postproc="0 0 0 0 0 2 0" # vert
-#run_postproc="0 0 0 0 0 0 2" # wind
+ run_postproc="0 0 0 0 0 0 1" # wind
 # 1/0 = on/off switch for sigma, bias, pr(%), prc/pr, pdfs, pr-frq/int, p99, vert, day/night, wind 
 # last three are automatically switched off if submit-sigma is on
 # 2 = on but submitted as a job. submit-sigma should not be 2

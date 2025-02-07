@@ -20,7 +20,7 @@ path=$2-$1
 export snum=$1
 export conf=$2
 rdir=$3      
-scrdir=$4    
+export scrdir=$4    
 export ys=$5 
 
 ##############################
