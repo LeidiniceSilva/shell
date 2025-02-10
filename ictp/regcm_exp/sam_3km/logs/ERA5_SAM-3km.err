@@ -1,0 +1,9 @@
+ RSUB_TOP IS POSITIVE in Drainage!
+ clm model is stopping
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_clm_soilhydrology.F90 at line:     1832
+ clm now stopping
+ -------------------------------------------
+ Abort called by computing node         1754 at 2025-02-10 17:30:48.233 +0100
+ Execution terminated because of runtime error
+Abort(1) on node 1754 (rank 1754 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 1754

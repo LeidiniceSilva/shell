@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5
+base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2
 
 {
 set -eo pipefail

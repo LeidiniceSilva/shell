@@ -2,12 +2,12 @@
 
 #SBATCH -A ICT23_ESP_1
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 8
+#SBATCH -N 16
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -o logs/ICBC_SLURM.out
-#SBATCH -e logs/ICBC_SLURM.err
-#SBATCH -J ICBC
+#SBATCH -o logs/ERA5_SAM-3km.out
+#SBATCH -e logs/ERA5_SAM-3km.err
+#SBATCH -J ERA5_SAM-3km
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -18,13 +18,10 @@ set -eo pipefail
 # module purge
 source /leonardo/home/userexternal/ggiulian/modules
 
-NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3/SAM-3_NoTo.in
+NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km/ERA5_SAM-3km.in
 BINARIES=/leonardo/home/userexternal/mdasilva/RegCM/bin/
 EXTENSION=CLM45
 
 # run model
-$BINARIES/terrain$EXTENSION $NAMELIST
-$BINARIES/mksurfdata$EXTENSION $NAMELIST
-$BINARIES/sst$EXTENSION $NAMELIST
-$BINARIES/icbc$EXTENSION $NAMELIST
+mpirun $BINARIES/regcmMPI$EXTENSION $NAMELIST
 }
