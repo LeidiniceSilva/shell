@@ -51,10 +51,8 @@
                    ! 'ROTMER', Rotated Mercator.
  ds = -0.03,       ! Grid point horizontal resolution in km
  ptop = 10.0,      ! Pressure of model top in cbar
- clat = -24.0,     ! Central latitude  of model domain in degrees
-                   ! North hemisphere is positive
- clon = 303.0,     ! Central longitude of model domain in degrees
-                   ! West is negative.
+ clat = -25.0,     ! Central latitude  of model domain in degrees North hemisphere is positive
+ clon = 303.0,     ! Central longitude of model domain in degrees West is negative.
  plat = -70.60,    ! Pole latitude (only for rotated Mercator Proj)
  plon = 123.94,    ! Pole longitude (only for rotated Mercator Proj)
  truelatl = -30.,  ! Lambert true latitude (low latitude side)
@@ -67,26 +65,23 @@
 ! DOMAIN terrain generation parameters
 !
  &terrainparam
- domname     = 'SAM-3km',     ! Name of the domain/experiment.
-                              ! Controls naming of input files
+ domname     = 'CSAM-3',      ! Name of the domain/experiment. Controls naming of input files
  lresamp     = .false.,       ! Do a first resampling before interpolation
  smthbdy     = .true.,        ! Perform extra smoothing in boundaries
  ismthlev    = 2,             ! Smoothing level (additional 1-2-1 smoother)
  roidem      = 1.5,           ! Interpolation radius in ds unit for topography
  h2ohgt      = .true.,        ! Allow water points to have hgt greater than 0
  h2opct      = 50.0,          ! Surface min H2O percent to be considered water
- lakedpth    = .true.,        ! If using lakemod (see below), produce from
-                              ! terrain program the domain bathymetry
- lsmoist     = .false.,       ! Use Satellite Soil Moisture Dataset for
-                              ! initialization of soil moisture.
+ lakedpth    = .true.,        ! If using lakemod (see below), produce from terrain program the domain bathymetry
+ lsmoist     = .false.,       ! Use Satellite Soil Moisture Dataset for initialization of soil moisture.
  fudge_lnd   = .false.,       ! Fudging Control flag, for landuse of grid
  fudge_lnd_s = .false.,       ! Fudging Control flag, for landuse of subgrid
  fudge_tex   = .false.,       ! Fudging Control flag, for texture of grid
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/input',  ! Output directory for terrain files
- inpter = '/leonardo_work/ICT24_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/ERA5/icbc', ! Output directory for terrain files
+ inpter = '/leonardo_work/ICT24_ESP/RCMDATA/',                                    ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
                               ! when lsmoist option is True
@@ -134,16 +129,16 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = 2018010100,        ! Start date for ICBC data generation
- gdate2 = 2021123100,        ! End data for ICBC data generation
+ gdate1 = 2004010100,       ! Start date for ICBC data generation
+ gdate2 = 2005010100,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/input', ! Path for ICBC produced input files
- inpglob = '/leonardo_work/ICT24_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/ERA5/icbc/',  ! Path for ICBC produced input files
+ inpglob = '/leonardo_work/ICT24_ESP/RCMDATA/',                                      ! Path for ICBC global input datasets
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
                              ! ICBC controlled by the perturbparam stanza
-                   ! Look http://users.ictp.it/~pubregcm/RegCM4/globedat.htm
-                   ! on how to download them.
+                             ! Look http://users.ictp.it/~pubregcm/RegCM4/globedat.htm
+                             ! on how to download them.
  /
  
 !
@@ -178,10 +173,10 @@
 ! Model start/restart control
 !
  &restartparam
- ifrest  = False,       ! If a restart
- mdate0  = 2018010100,  ! Global start (is globidate1)
- mdate1  = 2018010100,  ! Start date of this run
- mdate2  = 2021123100,  ! End date for this run 
+ ifrest  = restLogic,   ! If a restart
+ mdate0  = 2004010100, ! Global start (is globidate1)
+ mdate1  = startDate,   ! Start date of this run
+ mdate2  = endDate,     ! End date for this run 
  /
  
 !
@@ -189,45 +184,46 @@
 ! All values except dt can be zero. Convenient values are chosen by the model.
 !
  &timeparam
- dt     =   45.,   ! time step in seconds
+ dt     =   45.,        ! time step in seconds
  /
  
 !
 ! Model Output control
 !
  &outparam
- outnwf  =     0.,            ! Day interval to open new files (0 = monthly)
- ifsave  = .true. ,           ! Create SAV files for restart
- savfrq  =     0.,            ! Frequency in days to create them (0 = monthly)
- ifatm   = .true. ,           ! Output ATM ?
- atmfrq  =     6.,            ! Frequency in hours to write to ATM
- ifrad   = .true. ,           ! Output RAD ?
- radfrq  =     6.,            ! Frequency in hours to write to RAD
- ifsts   = .true. ,           ! Output STS (frequence is daily) ?
- ifsrf   = .true. ,           ! Output SRF ?
- srffrq  =    1.0,            ! Frequency in hours to write to SRF
- ifsub   = .true. ,           ! Output SUB ?
- subfrq  =     6.,            ! Frequency in hours to write to SUB
- iflak   = .false.,           ! Output LAK ?
- lakfrq  =     6.,            ! Frequency in hours to write to LAK
- ifchem  = .false.,           ! Output CHE ?
- ifopt   = .false.,           ! Output OPT ?
- chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output', ! Path where all output will be placed
- lsync   = .true.,            ! If sync of output files at every timestep is
-                              ! requested. Note, it has a performance impact.
-                              ! Enabled by default if debug_level > 2
- icosp = 0,                   ! Enable COSP needed fields in output in the ATM
- idiag = 0,                   ! Enable tendency diagnostic output in the ATM
-                              ! file. NOTE: output file gets HUGE.
- do_parallel_netcdf_in  = .false., ! This enables paralell input
+ ifcordex  = .true.,            ! <- selects and reshuffle output fields
+ atmfrq    =     1.,            ! Frequency in hours to write to ATM
+ outnwf    =     1.,            ! Day interval to open new files   (0 = monthly)
+ ! ifsave  = .true.,            ! Create SAV files for restart
+ ! savfrq  =     0.,            ! Frequency in days to create them (0 = monthly)
+ ! ifatm   = .true.,            ! Output ATM ?
+ ! atmfrq  =     1.,            ! Frequency in hours to write to ATM
+ ! ifrad   = .true.,            ! Output RAD ?
+ ! radfrq  =     6.,            ! Frequency in hours to write to RAD
+ ! ifsts   = .true.,            ! Output STS (frequence is daily) ?
+ ! ifsrf   = .true.,            ! Output SRF ?
+ ! srffrq  =    1.0,            ! Frequency in hours to write to SRF
+ ! ifsub   = .true.,            ! Output SUB ?
+ ! subfrq  =     6.,            ! Frequency in hours to write to SUB
+ ! iflak   = .false.,           ! Output LAK ?
+ ! lakfrq  =     6.,            ! Frequency in hours to write to LAK
+ ! ifchem  = .false.,           ! Output CHE ?
+ ! ifopt   = .false.,           ! Output OPT ?
+ ! chemfrq =     6.,            ! Frequency in hours to write to CHE
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/ERA5/dpath/', ! Path where all output will be placed
+ lsync   = .false.,                ! If sync of output files at every timestep is requested. 
+                                   ! Note, it has a performance impact.
+                                   ! Enabled by default if debug_level > 2
+ icosp = 0,                        ! Enable COSP needed fields in output in the ATM
+ idiag = 0,                        ! Enable tendency diagnostic output in the ATM
+                                   ! file. NOTE: output file gets HUGE.
+ do_parallel_netcdf_in  = .true.,  ! This enables paralell input
                                    ! Each processors reads its slice in the
                                    ! input file. Enable ONLY in case of
                                    ! HUGE input bandwidth,
  do_parallel_netcdf_out = .false., ! This enables paralell output if the
                                    ! hdf5/netcdf libraries support it and
-                                   ! the model is compiled with :
-                                   !    --enable-nc4-parallel
+                                   ! the model is compiled with: --enable-nc4-parallel
  /
  
 !
@@ -241,8 +237,7 @@
                         !   3 => Time and inflow/outflow dependent.
                         !   4 => Sponge (Perkey & Kreitzberg, MWR 1976)
                         !   5 => Relaxation, exponential technique.
- isladvec =         0,  ! Semilagrangian advection scheme for tracers and
-                        ! humidity
+ isladvec =         0,  ! Semilagrangian advection scheme for tracers and humidity
                         !   0 => Disabled
                         !   1 => Enable Semi Lagrangian Scheme
  iqmsl =            1,  ! Quasi-monotonic Semi Lagrangian
@@ -260,8 +255,7 @@
                         !   4 => Emanuel (1991)
                         !   5 => Tiedtke (1996)
                         !   6 => Kain-Fritsch (1990), Kain (2004)
-                        !  -1 => MM5 Shallow cumulus scheme:
-                        !           No precipitation but only mixing.
+                        !  -1 => MM5 Shallow cumulus scheme: No precipitation but only mixing.
  ipptls  =          2,  ! Moisture scheme
                         !   1 => Explicit moisture (SUBEX; Pal et al 2000)
                         !   2 => Explicit moisture Nogherotto/Tompkins
@@ -284,7 +278,7 @@
                         !   1 => 2.67*(re**d_rfour) - 2.57
                         !   2 => min(4.0e-4, 2.0e-4*re**(-3.3))
                         !   3 => COARE formulation as in bulk flux above
- scenario =   'SSP585', ! IPCC Scenario 
+ scenario =   'SSP370', ! IPCC Scenario 
  ipgf    =          0,  ! Pressure gradient force scheme
                         !   0 => Use full fields
                         !   1 => Hydrostatic deduction with pert. temperature
@@ -315,7 +309,7 @@
  islab_ocean =      0,  ! Activate the SLAB ocean model
  itweak =           0,  ! Enable tweak scenario
  iclimaaer =        3,  ! x Aerosol
- radclimpath = '/leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH', ! x Aerosol
+ radclimpath = '/leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH', 
  /
  
 !
@@ -376,6 +370,11 @@
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
+ urban_hac = 'OFF',
+ hist_nhtfrq = 0, 1,
+ hist_fincl2(1:6) = 'EFLX_LH_TOT_U','FGR_U','FIRA_U','FSA_U','FSH_U','FSM_U',
+ hist_fincl2(7:11) = 'QRUNOFF_U','RH2M_U','SoilAlpha_U','TG_U','TREFMNAV_U',
+ hist_fincl2(12:13) = 'TREFMXAV_U','TSA_U'
  /
  
  &clm_soilhydrology_inparm

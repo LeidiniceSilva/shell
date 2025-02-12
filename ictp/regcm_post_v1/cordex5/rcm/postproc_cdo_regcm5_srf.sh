@@ -24,16 +24,17 @@ CDO(){
 
 FREQ="day"
 DOMAIN="CSAM-3"
+EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
 
-YR="1999-1999"
+YR="2000-2001"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 VAR_LIST="pr tas tasmax tasmin rsnl rsns cll clm clh clt evspsblpot"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_MOIST/ERA5/ERA5-CSAM-3"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_MOIST/postproc/rcm"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/ERA5/ERA5-CSAM-3_old"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/postproc/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo

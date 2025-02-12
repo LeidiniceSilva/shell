@@ -1,31 +1,26 @@
 #!/bin/bash
 
-#SBATCH -N 1 
-#SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --qos=qos_prio
-#SBATCH --mail-type=FAIL
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
-#__description__ = 'Calculate the freq/int of RegCM5 with CDO'
+#__description__ = 'Calculate the freq and int of RegCM5 with CDO'
  
 {
-
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
-
-YR="2000-2005"
-IYR=$( echo $YR | cut -d- -f1 )
-FYR=$( echo $YR | cut -d- -f2 )
-SEASON_LIST="DJF MAM JJA SON"
 
 TH=0.5
 VAR="pr"
@@ -33,9 +28,14 @@ FREQ="1hr"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/v1-r1/${FREQ}/${VAR}"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/rcm"
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+YR="2000-2001"
+IYR=$( echo $YR | cut -d- -f1 )
+FYR=$( echo $YR | cut -d- -f2 )
+SEASON_LIST="DJF MAM JJA SON"
+
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/v1-r1/${FREQ}/${VAR}"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/rcm"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
 cd ${DIR_OUT}

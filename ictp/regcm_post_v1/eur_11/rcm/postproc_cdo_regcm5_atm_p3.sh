@@ -16,6 +16,7 @@
  
 {
 set -eo pipefail
+
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
@@ -44,12 +45,12 @@ for FOLDER in ${FOLDER_LIST[@]}; do
 
     if [ ${FOLDER} = 'NoTo-Europe' ] || [ ${FOLDER} = 'WSM5-Europe' ]
     then
-    VAR_LIST="cl cli clr cls clw rh hus"
+    VAR_LIST="cl cli clr cls clw rh hus ua va"
     elif [ ${FOLDER} = 'WSM7-Europe' ]
     then
-    VAR_LIST="cl cli clr cls clw rh hus hail gra"
+    VAR_LIST="cl cli clr cls clw rh hus ua va hail gra"
     else
-    VAR_LIST="cl cli clr cls clw rh hus hail gra ncc ncn ncr"
+    VAR_LIST="cl cli clr cls clw rh hus ua va hail gra ncc ncn ncr"
     fi
 
     echo

@@ -22,10 +22,12 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
+VAR="pr"
 FREQ="1hr"
 DOMAIN="CSAM-3"
+EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
 
-YR="2000-2000"
+YR="2000-2001"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
@@ -33,11 +35,6 @@ SEASON_LIST="DJF MAM JJA SON"
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
-
-
-CDO(){
-  cdo -O -L -f nc4 -z zip $@
-}
 
 echo
 cd ${DIR_OUT}

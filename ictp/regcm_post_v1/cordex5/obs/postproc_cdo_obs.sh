@@ -25,13 +25,13 @@ CDO(){
 DATASET=$1
 EXP="CSAM-3"
 
-YR="1999-1999"
+YR="2000-2000"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v1/postproc/obs"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/postproc/obs"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -108,7 +108,7 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="pr tas tasmax tasmin clt clh clm cll"
+VAR_LIST="tp tas tasmax tasmin cc hcc mcc hcc msnlwrf msnswrf pev"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Select date"

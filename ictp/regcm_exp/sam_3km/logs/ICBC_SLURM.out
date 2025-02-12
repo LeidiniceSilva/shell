@@ -1,15 +1,16 @@
 
-  This is Terrain part of RegCM package version 5 
-   GIT Revision: 5.0.0-850-g3088d compiled at: data : Dec 19 2024  time: 16:29:22
+  This is Terrain part of RegCM package version 5
+   GIT Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:11
 
- : this run start at  : 2025-02-06 16:58:11+0100
+ : this run start at  : 2025-02-11 15:37:07+0100
  : it is submitted by : mdasilva
- : it is running on   : lrdn3952.leonardo.local
+ : it is running on   : lrdn3909.leonardo.local
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3
+ km
                       
  Using non hydrostatic Moloch dynamic
-  
+ 
  Doing Horizontal Grid with following parameters
  iy     =          783
  jx     =         1231
@@ -38,7 +39,7 @@
  Fudging data (if requested) succeeded
  Skip moisture creation, no moisture file to read
  Vertical Grid Description (mean over domain)
-  
+ 
  --------------------------------------------------
  k        sigma       p(mb)          h(m)      T(K)
  --------------------------------------------------
@@ -88,13 +89,14 @@
  Successfully completed terrain fields generation
 
   This is mksurfdata part of RegCM package version 5
-   GIT Revision: 5.0.0-850-g3088d compiled at: data : Jan 10 2025  time: 12:37:28
+   GIT Revision: 5.0.1 compiled at: data : Jan 27 2025  time: 11:58:15
 
- : this run start at  : 2025-02-06 16:58:17+0100
+ : this run start at  : 2025-02-11 15:37:40+0100
  : it is submitted by : mdasilva
- : it is running on   : lrdn3952.leonardo.local
+ : it is running on   : lrdn3909.leonardo.local
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3
+ km
                       
  Created topographic informations...
  Computing weights, R =      38.95526218 .......... Done.
@@ -122,13 +124,14 @@
  Successfully completed CLM preprocessing.
 
   This is sst part of the RegCM version 5
-   SVN Revision: 5.0.0-850-g3088d compiled at: data : Dec 19 2024  time: 16:29:36
+   SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
 
- : this run start at    : 2025-02-06 17:05:24+0100
+ : this run start at    : 2025-02-11 15:44:44+0100
  : it is submitted by   : mdasilva
- : it is running on     : lrdn3952.leonardo.local
+ : it is running on     : lrdn3909.leonardo.local
  : in directory         : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3
+ km
                        
  Opened /leonardo_work/ICT24_ESP/RCMDATA/ERA5/SSTD/sst_2018_01.nc
  Fill Value   =  -32767
@@ -1787,17 +1790,18 @@
  WRITEN OUT SST DATA :  2021-12-29 00:00:00 UTC        
  WRITEN OUT SST DATA :  2021-12-30 00:00:00 UTC        
  WRITEN OUT SST DATA :  2021-12-31 00:00:00 UTC        
- Input ready at : Thu Feb  6 17:06:52 2025
+ Input ready at : Tue Feb 11 15:46:08 2025
  Successfully generated SST
 
   This is icbc part of the RegCM version 5
-   SVN Revision: 5.0.0-850-g3088d compiled at: data : Dec 19 2024  time: 16:29:36
+   SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
 
- : this run start at    : 2025-02-06 17:06:52+0100
+ : this run start at    : 2025-02-11 15:46:08+0100
  : it is submitted by   : mdasilva
- : it is running on     : lrdn3952.leonardo.local
+ : it is running on     : lrdn3909.leonardo.local
  : in directory         : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3
+ km
                        
  Using Moloch non-hydrostatic dynamical core
  GLOBIDATE1 :  2018-01-01 00:00:00 UTC        
@@ -8127,5 +8131,5 @@
  READ IN fields at DATE: 2021-12-30 12:00:00 UTC        
  READ IN fields at DATE: 2021-12-30 18:00:00 UTC        
  READ IN fields at DATE: 2021-12-31 00:00:00 UTC        
- Input ready at : Fri Feb  7 16:54:12 2025
+ Input ready at : Wed Feb 12 13:46:24 2025
  Successfully completed ICBC

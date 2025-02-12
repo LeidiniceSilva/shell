@@ -5,7 +5,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -J Postproc
+#SBATCH -J Download
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -78,7 +78,7 @@ for YEAR in `seq -w ${YR0} ${YR1}`; do
 							
 				wget -N https://www.ncei.noaa.gov/data/cmorph-high-resolution-global-precipitation-estimates/access/30min/8km/${YEAR}/${MON}/${DAY}/CMORPH_V1.0_ADJ_8km-30min_${YEAR}${MON}${DAY}${HOUR}.nc
 
-				CDO sellonlatbox,-85,-30,-50,-10 CMORPH_V1.0_ADJ_8km-30min_${YEAR}${MON}${DAY}${HOUR}.nc CSAM-3_CMORPH_${YEAR}${MON}${DAY}${HOUR}.nc
+				CDO sellonlatbox,-85,-30,-42,-8 CMORPH_V1.0_ADJ_8km-30min_${YEAR}${MON}${DAY}${HOUR}.nc CSAM-3_CMORPH_${YEAR}${MON}${DAY}${HOUR}.nc
 				
 				CDO hourmean CSAM-3_CMORPH_${YEAR}${MON}${DAY}${HOUR}.nc cmorph_CSAM-3_CMORPH_${YEAR}${MON}${DAY}${HOUR}.nc
 				
@@ -88,6 +88,8 @@ for YEAR in `seq -w ${YR0} ${YR1}`; do
 		done
 	done	
 done
+
+break
 
 CDO mergetime cmorph_CSAM-3_CMORPH_2000*.nc cmorph_CSAM-3_CMORPH_1hr_2000.nc
 CDO mergetime cmorph_CSAM-3_CMORPH_2001*.nc cmorph_CSAM-3_CMORPH_1hr_2001.nc

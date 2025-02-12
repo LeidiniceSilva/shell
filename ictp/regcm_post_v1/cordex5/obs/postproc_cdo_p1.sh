@@ -77,6 +77,12 @@ for VAR in ${VAR_LIST[@]}; do
     rm ${DIR_OUT}/${VAR}_????.nc
 done
 
+elif [ ${DATASET} == 'GPCP' ]
+then
+FILE_OUT=GPCPMON_L3_198301-202209_V3.2.nc4
+FILE_IN=$( eval ls GPCPMON_L3_????_V3.2.nc4 )
+[[ ! -f $FILE_OUT ]] && CDO mergetime ${DIR_IN}/monthly/$FILE_IN ${DIR_OUT}/$FILE_OUT
+
 else
 FILE_OUT=mswep.day.1979-2020.nc
 FILE_IN=$( eval ls ????.nc )

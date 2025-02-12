@@ -14,6 +14,9 @@
 #__date__        = 'Mar 12, 2024'
 #__description__ = 'Posprocessing the RegCM5 output with CDO'
 
+{
+set -eo pipefail
+
 YR="2000-2001"
 
 IYR=$( echo $YR | cut -d- -f1 )
@@ -49,4 +52,5 @@ done
 echo
 echo "--------------- THE END POSTPROCESSING MODEL ----------------"
 
+}
 
