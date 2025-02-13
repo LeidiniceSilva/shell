@@ -50,7 +50,7 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="pr"
+VAR_LIST="pr tas tasmax tasmin clt"
 
 for VAR in ${VAR_LIST[@]}; do
     for YEAR in `seq -w ${IYR} ${FYR}`; do
@@ -79,14 +79,14 @@ done
 
 elif [ ${DATASET} == 'GPCP' ]
 then
-FILE_OUT=GPCPMON_L3_198301-202209_V3.2.nc4
-FILE_IN=$( eval ls GPCPMON_L3_????_V3.2.nc4 )
-[[ ! -f $FILE_OUT ]] && CDO mergetime ${DIR_IN}/monthly/$FILE_IN ${DIR_OUT}/$FILE_OUT
+FILE_OUT=${DIR_OUT}/GPCPMON_L3_198301-202209_V3.2.nc4
+FILE_IN=$( eval ls ${DIR_IN}/monthly/GPCPMON_L3_????_V3.2.nc4 )
+[[ ! -f $FILE_OUT ]] && CDO mergetime $FILE_IN $FILE_OUT
 
 else
-FILE_OUT=mswep.day.1979-2020.nc
-FILE_IN=$( eval ls ????.nc )
-[[ ! -f $FILE_OUT ]] && CDO mergetime ${DIR_IN}/$FILE_IN ${DIR_OUT}/$FILE_OUT
+FILE_OUT=${DIR_OUT}/mswep.day.1979-2020.nc
+FILE_IN=$( eval ls ${DIR_IN}/????.nc )
+[[ ! -f $FILE_OUT ]] && CDO mergetime $FILE_IN $FILE_OUT
 fi
 
 echo

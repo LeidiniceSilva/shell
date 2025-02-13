@@ -36,7 +36,7 @@ is_leap_year() {
 	fi
 }
 
-YR0=2000
+YR0=2005
 YR1=2009
 MN0=01
 MN1=12

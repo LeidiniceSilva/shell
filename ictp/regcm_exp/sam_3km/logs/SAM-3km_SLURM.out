@@ -1794,9 +1794,9 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
   This is RegCM 5
    GIT Revision: 5.0.1 compiled at: data : Jan 13 2025  time: 14:41:40
 
- : this run start at  : 2025-02-12 14:22:27+0100
+ : this run start at  : 2025-02-13 15:41:26+0100
  : it is submitted by : mdasilva
- : it is running on   : lrdn3524.leonardo.local
+ : it is running on   : lrdn3457.leonardo.local
  : it is using        :         1792   processors
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3
@@ -1808,9 +1808,9 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Reading model namelist file
  Using default microphysical parameter.
  Initial date of the global simulation:  2018-01-01 00:00:00 UTC        
- Initial date of this run             :  2018-01-01 00:00:00 UTC        
+ Initial date of this run             :  2018-05-01 00:00:00 UTC        
  Final date of this run               :  2021-12-31 00:00:00 UTC        
- Total simulation length              :        35040  hours
+ Total simulation length              :        32160  hours
  Timestep in seconds =   45.000000
  Reading Domain file : 
  /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/input/SAM-3km_DOMAIN
@@ -1820,7 +1820,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Sound waves timestep =     2.500 (factor  6)
  Courant number of horizontal sound waves =    0.3760
  Setting IPCC scenario to SSP585  
- Load GHG for 201801 SSP585
+ Load GHG for 201805 SSP585
  Create SAV files :  T
  Create ATM files :  T
  Create RAD files :  T
@@ -1911,14 +1911,23 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  The surface energy budget is used to calculate the ground temperature.
  The radiation is computed every   22. minutes.
  Relaxation boundary conditions (exponential method)
- READY IC DATA for  2018-01-01 00:00:00 UTC        
- SEARCH BC data for 2018010106 , step =        0
- READY  BC from     2018010100  to 2018010106 
+  # Ozone profiles restart #
+    0.842E-05  0.662E-05  0.536E-05  0.393E-05  0.269E-05  0.180E-05  0.131E-05
+    0.977E-06  0.704E-06  0.497E-06  0.354E-06  0.260E-06  0.201E-06  0.162E-06
+    0.135E-06  0.118E-06  0.104E-06  0.921E-07  0.842E-07  0.772E-07  0.722E-07
+    0.679E-07  0.643E-07  0.619E-07  0.596E-07  0.575E-07  0.562E-07  0.550E-07
+    0.538E-07  0.527E-07  0.521E-07  0.515E-07  0.510E-07  0.505E-07  0.501E-07
+    0.497E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07
+    0.496E-07
+ READY BC DATA for  2018-05-01 00:00:00 UTC        
+ SEARCH BC data for 2018050106 , step =   230400
+ READY  BC from     2018050100  to 2018050106 
+ Successfully read restart file at time =  2018-05-01 00:00:00 UTC        
  Read solar forcing total irradiance data...
- Updating orbit parameters at  2018-01-01 00:00:00 UTC        
- At  2018-01-01 00:00:00 UTC        
- JDay      0.00000 solar declination angle = -23.09961944 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
+ Updating orbit parameters at  2018-05-01 00:00:00 UTC        
+ At  2018-05-01 00:00:00 UTC        
+ JDay    120.00000 solar declination angle =  14.65843145 degrees
+                   solar TSI irradiance    =    1355.8433 W/m^2
  CLM version: 4.5 - RegCM 5.0.1
  Attempting to initialize the land model .....
  Mask given by RegCM model has a total of       637837  land points
@@ -1933,10 +1942,10 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  define run:
     source                = Community Land Model CLM4.5
     model_version         = 5.0.1
-    run type              = initial
+    run type              = restart
     case title            = RegCM driven CLM4.5
     username              = mdasilva
-    hostname              = lrdn3524.leonardo.local
+    hostname              = lrdn3457.leonardo.local
  input data files:
     PFT physiology = 
  /leonardo_work/ICT24_ESP/RCMDATA/CLM45/pftdata/pft-physiology.c130503.nc
@@ -1954,7 +1963,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     SNICAR aging = 
  /leonardo_work/ICT24_ESP/RCMDATA/CLM45/snicardata/snicar_drdt_bst_fit_60_c07041
  6.nc
-    initial data is from RegCM atm model
+    restart data   = using a restart file
     atmospheric forcing data is from RegCM atm model
  Large file support for output files is ON
  model physics parameters:
@@ -1965,6 +1974,9 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     urban air conditioning/heating and wasteheat   = OFF             
     urban traffic flux   =  F
     more vertical layers =  F
+ restart warning:
+    Namelist not checked for agreement with initial run.
+    Namelist should not differ except for ending time step and run type
     maxpatch_pft         =           17
     allocate_all_vegpfts =  T
     perchroot (PWS based on unfrozen layers only) =  F
@@ -2053,105 +2065,105 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Set    16 100% special land-units points to zero slope
  Set    15 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     4 100% special land-units points to zero slope
+ Set    12 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
- Set    15 100% special land-units points to zero slope
- Set    12 100% special land-units points to zero slope
- Set     6 100% special land-units points to zero slope
- Set     4 100% special land-units points to zero slope
- Set    12 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set    11 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
  Set     5 100% special land-units points to zero slope
+ Set    12 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
  Set     6 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     4 100% special land-units points to zero slope
+ Set     6 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set    13 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set    13 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set    18 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set     9 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
  Set     7 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
  Attempting to read snow optical properties .....
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     4 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set     6 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
  Set     7 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set    15 100% special land-units points to zero slope
- SnowOptics_init : 
- /leonardo_work/ICT24_ESP/RCMDATA/CLM45/snicardata/snicar_optics_5bnd_c090915.nc
- Set     2 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     4 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set    15 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
  Set     5 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ SnowOptics_init : 
+ /leonardo_work/ICT24_ESP/RCMDATA/CLM45/snicardata/snicar_optics_5bnd_c090915.nc
+ Set     4 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
  Set    20 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
@@ -2159,74 +2171,67 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Set     1 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
  Set    15 100% special land-units points to zero slope
  Set    20 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
- Set    20 100% special land-units points to zero slope
  Set    20 100% special land-units points to zero slope
  Set    15 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
  Successfully read snow optical properties
  Attempting to read snow aging parameters .....
  Set    40 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
  Successfully read snow aging properties
  Successfully initialized time invariant variables
  CLM_hist_printflds : number of master fields =          241
- Setting initial data to non-spun up values
+ There will be a total of            1  history tapes
+ History tape            1  write frequency is MONTHLY
+ All fields on history tape            1  are grid averaged
+ Output precision on history tape            1 =           2
+ Reading restart dataset at 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output//SAM-3km.clm.
+ regcm.r.2018050100.nc
+ Set    35 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Successfully read restart data for restart run
  Attempting to initialize time invariant variables for lakes
  CLM timestep appears to differ from 1800s. 
  Adjusting minimum snow layer thickness over lakes to maintain stability.
  New minimum thickness is   2.000000000000000E-002 .
  Successfully initialized time invariant variables for lakes
  Setting initial data to non-spun up values for lake points
- Initializing clm2 history files
- There will be a total of            1  history tapes
- History tape            1  write frequency is MONTHLY
- All fields on history tape            1  are grid averaged
- Output precision on history tape            1 =           2
- hist tape =            1  written with dov2xy=  T
- Successfully initialized clm2 history files
  Successfully initialized the land model
- begin initial run at:  2018-01-01 00:00:00 UTC
+ begin continuation run at: 2018-05-01 00:00:00 UTC
  Attempting to read monthly vegetation data .....
- At  2018-01-01 00:00:00 UTC
- Month =            1  Day =            1
- Reading months :           12           1
- Set    10 100% special land-units points to zero slope
- Set    35 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
+ At  2018-05-01 00:00:00 UTC
+ Month =            5  Day =            1
+ Reading months :            4           5
  Successfully read monthly vegetation data for
- month            1
+ month            5
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output//SAM-3km_ATM.
- 2018010100.nc
+ 2018050100.nc
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output//SAM-3km_SRF.
- 2018010100.nc
+ 2018050100.nc
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output//SAM-3km_STS.
- 2018010100.nc
+ 2018050100.nc
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output//SAM-3km_RAD.
- 2018010100.nc
- ATM variables written at  2018-01-01 00:00:00 UTC        
-  # Ozone profile #
-    0.842E-05  0.662E-05  0.536E-05  0.393E-05  0.269E-05  0.180E-05  0.131E-05
-    0.977E-06  0.704E-06  0.497E-06  0.354E-06  0.260E-06  0.201E-06  0.162E-06
-    0.135E-06  0.118E-06  0.104E-06  0.921E-07  0.842E-07  0.772E-07  0.722E-07
-    0.679E-07  0.643E-07  0.619E-07  0.596E-07  0.575E-07  0.562E-07  0.550E-07
-    0.538E-07  0.527E-07  0.521E-07  0.515E-07  0.510E-07  0.505E-07  0.501E-07
-    0.497E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07
-    0.496E-07
+ 2018050100.nc
+ $$$  2018-05-01 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.28  500.23
  Updating aerosol optical properties...
   # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.902E-16
-    0.127E-12  0.305E-11  0.219E-10  0.870E-10  0.244E-09  0.542E-09  0.102E-08
-    0.171E-08  0.260E-08  0.366E-08  0.487E-08  0.616E-08  0.747E-08  0.874E-08
-    0.992E-08  0.110E-07  0.119E-07  0.126E-07  0.131E-07  0.134E-07  0.135E-07
-    0.135E-07  0.132E-07  0.129E-07  0.124E-07  0.118E-07  0.111E-07  0.103E-07
-    0.103E-07  0.946E-08  0.856E-08  0.760E-08  0.655E-08  0.533E-08  0.363E-08
+     0.00       0.00       0.00       0.00       0.00       0.00      0.102E-15
+    0.144E-12  0.346E-11  0.248E-10  0.988E-10  0.277E-09  0.615E-09  0.116E-08
+    0.194E-08  0.295E-08  0.416E-08  0.553E-08  0.699E-08  0.847E-08  0.992E-08
+    0.113E-07  0.125E-07  0.135E-07  0.143E-07  0.148E-07  0.152E-07  0.153E-07
+    0.153E-07  0.150E-07  0.146E-07  0.140E-07  0.134E-07  0.126E-07  0.117E-07
+    0.117E-07  0.107E-07  0.971E-08  0.862E-08  0.743E-08  0.605E-08  0.412E-08
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
@@ -2241,74 +2246,74 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     0.312      0.312      0.312      0.312      0.312      0.312      0.312    
     0.312      0.312      0.312      0.312      0.312      0.312      0.312    
     0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-01 01:00:00 UTC        
- SRF variables written at  2018-01-01 02:00:00 UTC        
- SRF variables written at  2018-01-01 03:00:00 UTC        
- $$$  2018-01-01 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.16  496.37
- SRF variables written at  2018-01-01 04:00:00 UTC        
- SRF variables written at  2018-01-01 05:00:00 UTC        
- ATM variables written at  2018-01-01 06:00:00 UTC        
- SRF variables written at  2018-01-01 06:00:00 UTC        
- RAD variables written at  2018-01-01 06:00:00 UTC        
- SEARCH BC data for 2018010112 , step =      480
- READY  BC from     2018010106  to 2018010112 
- $$$  2018-01-01 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.13  495.65
- SRF variables written at  2018-01-01 07:00:00 UTC        
- SRF variables written at  2018-01-01 08:00:00 UTC        
- SRF variables written at  2018-01-01 09:00:00 UTC        
- $$$  2018-01-01 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.53  495.92
- SRF variables written at  2018-01-01 10:00:00 UTC        
- SRF variables written at  2018-01-01 11:00:00 UTC        
- ATM variables written at  2018-01-01 12:00:00 UTC        
- SRF variables written at  2018-01-01 12:00:00 UTC        
- RAD variables written at  2018-01-01 12:00:00 UTC        
- SEARCH BC data for 2018010118 , step =      960
- READY  BC from     2018010112  to 2018010118 
- $$$  2018-01-01 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.92  495.68
- SRF variables written at  2018-01-01 13:00:00 UTC        
- SRF variables written at  2018-01-01 14:00:00 UTC        
- SRF variables written at  2018-01-01 15:00:00 UTC        
- $$$  2018-01-01 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.44  495.59
- SRF variables written at  2018-01-01 16:00:00 UTC        
- SRF variables written at  2018-01-01 17:00:00 UTC        
- ATM variables written at  2018-01-01 18:00:00 UTC        
- SRF variables written at  2018-01-01 18:00:00 UTC        
- RAD variables written at  2018-01-01 18:00:00 UTC        
- SEARCH BC data for 2018010200 , step =     1440
- READY  BC from     2018010118  to 2018010200 
- $$$  2018-01-01 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.83  495.74
- SRF variables written at  2018-01-01 19:00:00 UTC        
- SRF variables written at  2018-01-01 20:00:00 UTC        
- SRF variables written at  2018-01-01 21:00:00 UTC        
- $$$  2018-01-01 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.22  495.62
- SRF variables written at  2018-01-01 22:00:00 UTC        
- SRF variables written at  2018-01-01 23:00:00 UTC        
- At  2018-01-02 00:00:00 UTC        
- JDay      1.00000 solar declination angle = -23.02334906 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
- ATM variables written at  2018-01-02 00:00:00 UTC        
- SRF variables written at  2018-01-02 00:00:00 UTC        
- STS variables written at  2018-01-02 00:00:00 UTC        
- RAD variables written at  2018-01-02 00:00:00 UTC        
- SEARCH BC data for 2018010206 , step =     1920
- READY  BC from     2018010200  to 2018010206 
- $$$  2018-01-02 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.69  495.49
+ SRF variables written at  2018-05-01 01:00:00 UTC        
+ SRF variables written at  2018-05-01 02:00:00 UTC        
+ SRF variables written at  2018-05-01 03:00:00 UTC        
+ $$$  2018-05-01 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.08  500.11
+ SRF variables written at  2018-05-01 04:00:00 UTC        
+ SRF variables written at  2018-05-01 05:00:00 UTC        
+ ATM variables written at  2018-05-01 06:00:00 UTC        
+ SRF variables written at  2018-05-01 06:00:00 UTC        
+ RAD variables written at  2018-05-01 06:00:00 UTC        
+ SEARCH BC data for 2018050112 , step =   230880
+ READY  BC from     2018050106  to 2018050112 
+ $$$  2018-05-01 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.96  500.09
+ SRF variables written at  2018-05-01 07:00:00 UTC        
+ SRF variables written at  2018-05-01 08:00:00 UTC        
+ SRF variables written at  2018-05-01 09:00:00 UTC        
+ $$$  2018-05-01 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.69  500.05
+ SRF variables written at  2018-05-01 10:00:00 UTC        
+ SRF variables written at  2018-05-01 11:00:00 UTC        
+ ATM variables written at  2018-05-01 12:00:00 UTC        
+ SRF variables written at  2018-05-01 12:00:00 UTC        
+ RAD variables written at  2018-05-01 12:00:00 UTC        
+ SEARCH BC data for 2018050118 , step =   231360
+ READY  BC from     2018050112  to 2018050118 
+ $$$  2018-05-01 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.49  499.90
+ SRF variables written at  2018-05-01 13:00:00 UTC        
+ SRF variables written at  2018-05-01 14:00:00 UTC        
+ SRF variables written at  2018-05-01 15:00:00 UTC        
+ $$$  2018-05-01 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.97  499.66
+ SRF variables written at  2018-05-01 16:00:00 UTC        
+ SRF variables written at  2018-05-01 17:00:00 UTC        
+ ATM variables written at  2018-05-01 18:00:00 UTC        
+ SRF variables written at  2018-05-01 18:00:00 UTC        
+ RAD variables written at  2018-05-01 18:00:00 UTC        
+ SEARCH BC data for 2018050200 , step =   231840
+ READY  BC from     2018050118  to 2018050200 
+ $$$  2018-05-01 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.45  499.77
+ SRF variables written at  2018-05-01 19:00:00 UTC        
+ SRF variables written at  2018-05-01 20:00:00 UTC        
+ SRF variables written at  2018-05-01 21:00:00 UTC        
+ $$$  2018-05-01 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.58  499.83
+ SRF variables written at  2018-05-01 22:00:00 UTC        
+ SRF variables written at  2018-05-01 23:00:00 UTC        
+ At  2018-05-02 00:00:00 UTC        
+ JDay    121.00000 solar declination angle =  14.96434683 degrees
+                   solar TSI irradiance    =    1355.8433 W/m^2
+ ATM variables written at  2018-05-02 00:00:00 UTC        
+ SRF variables written at  2018-05-02 00:00:00 UTC        
+ STS variables written at  2018-05-02 00:00:00 UTC        
+ RAD variables written at  2018-05-02 00:00:00 UTC        
+ SEARCH BC data for 2018050206 , step =   232320
+ READY  BC from     2018050200  to 2018050206 
+ $$$  2018-05-02 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.36  499.69
  Updating aerosol optical properties...
   # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.902E-16
-    0.127E-12  0.305E-11  0.219E-10  0.870E-10  0.244E-09  0.542E-09  0.102E-08
-    0.171E-08  0.260E-08  0.366E-08  0.487E-08  0.616E-08  0.747E-08  0.874E-08
-    0.992E-08  0.110E-07  0.119E-07  0.126E-07  0.131E-07  0.134E-07  0.135E-07
-    0.135E-07  0.132E-07  0.129E-07  0.124E-07  0.118E-07  0.111E-07  0.103E-07
-    0.103E-07  0.946E-08  0.856E-08  0.760E-08  0.655E-08  0.533E-08  0.363E-08
+     0.00       0.00       0.00       0.00       0.00       0.00      0.102E-15
+    0.144E-12  0.346E-11  0.248E-10  0.988E-10  0.277E-09  0.615E-09  0.116E-08
+    0.194E-08  0.295E-08  0.416E-08  0.553E-08  0.699E-08  0.847E-08  0.992E-08
+    0.113E-07  0.125E-07  0.135E-07  0.143E-07  0.148E-07  0.152E-07  0.153E-07
+    0.153E-07  0.150E-07  0.146E-07  0.140E-07  0.134E-07  0.126E-07  0.117E-07
+    0.117E-07  0.107E-07  0.971E-08  0.862E-08  0.743E-08  0.605E-08  0.412E-08
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
@@ -2323,74 +2328,74 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     0.312      0.312      0.312      0.312      0.312      0.312      0.312    
     0.312      0.312      0.312      0.312      0.312      0.312      0.312    
     0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-02 01:00:00 UTC        
- SRF variables written at  2018-01-02 02:00:00 UTC        
- SRF variables written at  2018-01-02 03:00:00 UTC        
- $$$  2018-01-02 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.32  495.06
- SRF variables written at  2018-01-02 04:00:00 UTC        
- SRF variables written at  2018-01-02 05:00:00 UTC        
- ATM variables written at  2018-01-02 06:00:00 UTC        
- SRF variables written at  2018-01-02 06:00:00 UTC        
- RAD variables written at  2018-01-02 06:00:00 UTC        
- SEARCH BC data for 2018010212 , step =     2400
- READY  BC from     2018010206  to 2018010212 
- $$$  2018-01-02 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.00  495.12
- SRF variables written at  2018-01-02 07:00:00 UTC        
- SRF variables written at  2018-01-02 08:00:00 UTC        
- SRF variables written at  2018-01-02 09:00:00 UTC        
- $$$  2018-01-02 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.72  495.41
- SRF variables written at  2018-01-02 10:00:00 UTC        
- SRF variables written at  2018-01-02 11:00:00 UTC        
- ATM variables written at  2018-01-02 12:00:00 UTC        
- SRF variables written at  2018-01-02 12:00:00 UTC        
- RAD variables written at  2018-01-02 12:00:00 UTC        
- SEARCH BC data for 2018010218 , step =     2880
- READY  BC from     2018010212  to 2018010218 
- $$$  2018-01-02 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.51  495.51
- SRF variables written at  2018-01-02 13:00:00 UTC        
- SRF variables written at  2018-01-02 14:00:00 UTC        
- SRF variables written at  2018-01-02 15:00:00 UTC        
- $$$  2018-01-02 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.43  495.78
- SRF variables written at  2018-01-02 16:00:00 UTC        
- SRF variables written at  2018-01-02 17:00:00 UTC        
- ATM variables written at  2018-01-02 18:00:00 UTC        
- SRF variables written at  2018-01-02 18:00:00 UTC        
- RAD variables written at  2018-01-02 18:00:00 UTC        
- SEARCH BC data for 2018010300 , step =     3360
- READY  BC from     2018010218  to 2018010300 
- $$$  2018-01-02 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.07  495.98
- SRF variables written at  2018-01-02 19:00:00 UTC        
- SRF variables written at  2018-01-02 20:00:00 UTC        
- SRF variables written at  2018-01-02 21:00:00 UTC        
- $$$  2018-01-02 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.99  496.35
- SRF variables written at  2018-01-02 22:00:00 UTC        
- SRF variables written at  2018-01-02 23:00:00 UTC        
- At  2018-01-03 00:00:00 UTC        
- JDay      2.00000 solar declination angle = -22.93943014 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
- ATM variables written at  2018-01-03 00:00:00 UTC        
- SRF variables written at  2018-01-03 00:00:00 UTC        
- STS variables written at  2018-01-03 00:00:00 UTC        
- RAD variables written at  2018-01-03 00:00:00 UTC        
- SEARCH BC data for 2018010306 , step =     3840
- READY  BC from     2018010300  to 2018010306 
- $$$  2018-01-03 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.92  496.89
+ SRF variables written at  2018-05-02 01:00:00 UTC        
+ SRF variables written at  2018-05-02 02:00:00 UTC        
+ SRF variables written at  2018-05-02 03:00:00 UTC        
+ $$$  2018-05-02 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.36  499.25
+ SRF variables written at  2018-05-02 04:00:00 UTC        
+ SRF variables written at  2018-05-02 05:00:00 UTC        
+ ATM variables written at  2018-05-02 06:00:00 UTC        
+ SRF variables written at  2018-05-02 06:00:00 UTC        
+ RAD variables written at  2018-05-02 06:00:00 UTC        
+ SEARCH BC data for 2018050212 , step =   232800
+ READY  BC from     2018050206  to 2018050212 
+ $$$  2018-05-02 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.40  498.95
+ SRF variables written at  2018-05-02 07:00:00 UTC        
+ SRF variables written at  2018-05-02 08:00:00 UTC        
+ SRF variables written at  2018-05-02 09:00:00 UTC        
+ $$$  2018-05-02 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.10  498.73
+ SRF variables written at  2018-05-02 10:00:00 UTC        
+ SRF variables written at  2018-05-02 11:00:00 UTC        
+ ATM variables written at  2018-05-02 12:00:00 UTC        
+ SRF variables written at  2018-05-02 12:00:00 UTC        
+ RAD variables written at  2018-05-02 12:00:00 UTC        
+ SEARCH BC data for 2018050218 , step =   233280
+ READY  BC from     2018050212  to 2018050218 
+ $$$  2018-05-02 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.79  498.52
+ SRF variables written at  2018-05-02 13:00:00 UTC        
+ SRF variables written at  2018-05-02 14:00:00 UTC        
+ SRF variables written at  2018-05-02 15:00:00 UTC        
+ $$$  2018-05-02 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.32  498.74
+ SRF variables written at  2018-05-02 16:00:00 UTC        
+ SRF variables written at  2018-05-02 17:00:00 UTC        
+ ATM variables written at  2018-05-02 18:00:00 UTC        
+ SRF variables written at  2018-05-02 18:00:00 UTC        
+ RAD variables written at  2018-05-02 18:00:00 UTC        
+ SEARCH BC data for 2018050300 , step =   233760
+ READY  BC from     2018050218  to 2018050300 
+ $$$  2018-05-02 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.64  499.01
+ SRF variables written at  2018-05-02 19:00:00 UTC        
+ SRF variables written at  2018-05-02 20:00:00 UTC        
+ SRF variables written at  2018-05-02 21:00:00 UTC        
+ $$$  2018-05-02 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.62  499.03
+ SRF variables written at  2018-05-02 22:00:00 UTC        
+ SRF variables written at  2018-05-02 23:00:00 UTC        
+ At  2018-05-03 00:00:00 UTC        
+ JDay    122.00000 solar declination angle =  15.26614655 degrees
+                   solar TSI irradiance    =    1355.8433 W/m^2
+ ATM variables written at  2018-05-03 00:00:00 UTC        
+ SRF variables written at  2018-05-03 00:00:00 UTC        
+ STS variables written at  2018-05-03 00:00:00 UTC        
+ RAD variables written at  2018-05-03 00:00:00 UTC        
+ SEARCH BC data for 2018050306 , step =   234240
+ READY  BC from     2018050300  to 2018050306 
+ $$$  2018-05-03 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.41  498.95
  Updating aerosol optical properties...
   # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.902E-16
-    0.127E-12  0.305E-11  0.219E-10  0.870E-10  0.244E-09  0.542E-09  0.102E-08
-    0.171E-08  0.260E-08  0.366E-08  0.487E-08  0.616E-08  0.747E-08  0.874E-08
-    0.992E-08  0.110E-07  0.119E-07  0.126E-07  0.131E-07  0.134E-07  0.135E-07
-    0.135E-07  0.132E-07  0.129E-07  0.124E-07  0.118E-07  0.111E-07  0.103E-07
-    0.103E-07  0.946E-08  0.856E-08  0.760E-08  0.655E-08  0.533E-08  0.363E-08
+     0.00       0.00       0.00       0.00       0.00       0.00      0.102E-15
+    0.144E-12  0.346E-11  0.248E-10  0.988E-10  0.277E-09  0.615E-09  0.116E-08
+    0.194E-08  0.295E-08  0.416E-08  0.553E-08  0.699E-08  0.847E-08  0.992E-08
+    0.113E-07  0.125E-07  0.135E-07  0.143E-07  0.148E-07  0.152E-07  0.153E-07
+    0.153E-07  0.150E-07  0.146E-07  0.140E-07  0.134E-07  0.126E-07  0.117E-07
+    0.117E-07  0.107E-07  0.971E-08  0.862E-08  0.743E-08  0.605E-08  0.412E-08
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
@@ -2405,702 +2410,45 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     0.312      0.312      0.312      0.312      0.312      0.312      0.312    
     0.312      0.312      0.312      0.312      0.312      0.312      0.312    
     0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-03 01:00:00 UTC        
- SRF variables written at  2018-01-03 02:00:00 UTC        
- SRF variables written at  2018-01-03 03:00:00 UTC        
- $$$  2018-01-03 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.15  496.67
- SRF variables written at  2018-01-03 04:00:00 UTC        
- SRF variables written at  2018-01-03 05:00:00 UTC        
- ATM variables written at  2018-01-03 06:00:00 UTC        
- SRF variables written at  2018-01-03 06:00:00 UTC        
- RAD variables written at  2018-01-03 06:00:00 UTC        
- SEARCH BC data for 2018010312 , step =     4320
- READY  BC from     2018010306  to 2018010312 
- $$$  2018-01-03 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.31  496.58
- SRF variables written at  2018-01-03 07:00:00 UTC        
- SRF variables written at  2018-01-03 08:00:00 UTC        
- SRF variables written at  2018-01-03 09:00:00 UTC        
- $$$  2018-01-03 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.21  496.88
- SRF variables written at  2018-01-03 10:00:00 UTC        
- SRF variables written at  2018-01-03 11:00:00 UTC        
- ATM variables written at  2018-01-03 12:00:00 UTC        
- SRF variables written at  2018-01-03 12:00:00 UTC        
- RAD variables written at  2018-01-03 12:00:00 UTC        
- SEARCH BC data for 2018010318 , step =     4800
- READY  BC from     2018010312  to 2018010318 
- $$$  2018-01-03 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.10  497.14
- SRF variables written at  2018-01-03 13:00:00 UTC        
- SRF variables written at  2018-01-03 14:00:00 UTC        
- SRF variables written at  2018-01-03 15:00:00 UTC        
- $$$  2018-01-03 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.21  497.10
- SRF variables written at  2018-01-03 16:00:00 UTC        
- SRF variables written at  2018-01-03 17:00:00 UTC        
- ATM variables written at  2018-01-03 18:00:00 UTC        
- SRF variables written at  2018-01-03 18:00:00 UTC        
- RAD variables written at  2018-01-03 18:00:00 UTC        
- SEARCH BC data for 2018010400 , step =     5280
- READY  BC from     2018010318  to 2018010400 
- $$$  2018-01-03 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.22  497.38
- SRF variables written at  2018-01-03 19:00:00 UTC        
- SRF variables written at  2018-01-03 20:00:00 UTC        
- SRF variables written at  2018-01-03 21:00:00 UTC        
- $$$  2018-01-03 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.16  496.82
- SRF variables written at  2018-01-03 22:00:00 UTC        
- SRF variables written at  2018-01-03 23:00:00 UTC        
- At  2018-01-04 00:00:00 UTC        
- JDay      3.00000 solar declination angle = -22.84790358 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
- ATM variables written at  2018-01-04 00:00:00 UTC        
- SRF variables written at  2018-01-04 00:00:00 UTC        
- STS variables written at  2018-01-04 00:00:00 UTC        
- RAD variables written at  2018-01-04 00:00:00 UTC        
- SEARCH BC data for 2018010406 , step =     5760
- READY  BC from     2018010400  to 2018010406 
- $$$  2018-01-04 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1018.26  498.11
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.902E-16
-    0.127E-12  0.305E-11  0.219E-10  0.870E-10  0.244E-09  0.542E-09  0.102E-08
-    0.171E-08  0.260E-08  0.366E-08  0.487E-08  0.616E-08  0.747E-08  0.874E-08
-    0.992E-08  0.110E-07  0.119E-07  0.126E-07  0.131E-07  0.134E-07  0.135E-07
-    0.135E-07  0.132E-07  0.129E-07  0.124E-07  0.118E-07  0.111E-07  0.103E-07
-    0.103E-07  0.946E-08  0.856E-08  0.760E-08  0.655E-08  0.533E-08  0.363E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-04 01:00:00 UTC        
- SRF variables written at  2018-01-04 02:00:00 UTC        
- SRF variables written at  2018-01-04 03:00:00 UTC        
- $$$  2018-01-04 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1017.84  498.00
- SRF variables written at  2018-01-04 04:00:00 UTC        
- SRF variables written at  2018-01-04 05:00:00 UTC        
- ATM variables written at  2018-01-04 06:00:00 UTC        
- SRF variables written at  2018-01-04 06:00:00 UTC        
- RAD variables written at  2018-01-04 06:00:00 UTC        
- SEARCH BC data for 2018010412 , step =     6240
- READY  BC from     2018010406  to 2018010412 
- $$$  2018-01-04 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1017.73  497.69
- SRF variables written at  2018-01-04 07:00:00 UTC        
- SRF variables written at  2018-01-04 08:00:00 UTC        
- SRF variables written at  2018-01-04 09:00:00 UTC        
- $$$  2018-01-04 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1018.21  498.03
- SRF variables written at  2018-01-04 10:00:00 UTC        
- SRF variables written at  2018-01-04 11:00:00 UTC        
- ATM variables written at  2018-01-04 12:00:00 UTC        
- SRF variables written at  2018-01-04 12:00:00 UTC        
- RAD variables written at  2018-01-04 12:00:00 UTC        
- SEARCH BC data for 2018010418 , step =     6720
- READY  BC from     2018010412  to 2018010418 
- $$$  2018-01-04 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.04  498.04
- SRF variables written at  2018-01-04 13:00:00 UTC        
- SRF variables written at  2018-01-04 14:00:00 UTC        
- SRF variables written at  2018-01-04 15:00:00 UTC        
- $$$  2018-01-04 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.67  498.36
- SRF variables written at  2018-01-04 16:00:00 UTC        
- SRF variables written at  2018-01-04 17:00:00 UTC        
- ATM variables written at  2018-01-04 18:00:00 UTC        
- SRF variables written at  2018-01-04 18:00:00 UTC        
- RAD variables written at  2018-01-04 18:00:00 UTC        
- SEARCH BC data for 2018010500 , step =     7200
- READY  BC from     2018010418  to 2018010500 
- $$$  2018-01-04 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.05  498.20
- SRF variables written at  2018-01-04 19:00:00 UTC        
- SRF variables written at  2018-01-04 20:00:00 UTC        
- SRF variables written at  2018-01-04 21:00:00 UTC        
- $$$  2018-01-04 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.11  498.38
- SRF variables written at  2018-01-04 22:00:00 UTC        
- SRF variables written at  2018-01-04 23:00:00 UTC        
- At  2018-01-05 00:00:00 UTC        
- JDay      4.00000 solar declination angle = -22.74881408 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
- ATM variables written at  2018-01-05 00:00:00 UTC        
- SRF variables written at  2018-01-05 00:00:00 UTC        
- STS variables written at  2018-01-05 00:00:00 UTC        
- RAD variables written at  2018-01-05 00:00:00 UTC        
- SEARCH BC data for 2018010506 , step =     7680
- READY  BC from     2018010500  to 2018010506 
- $$$  2018-01-05 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.59  498.35
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.902E-16
-    0.127E-12  0.305E-11  0.219E-10  0.870E-10  0.244E-09  0.542E-09  0.102E-08
-    0.171E-08  0.260E-08  0.366E-08  0.487E-08  0.616E-08  0.747E-08  0.874E-08
-    0.992E-08  0.110E-07  0.119E-07  0.126E-07  0.131E-07  0.134E-07  0.135E-07
-    0.135E-07  0.132E-07  0.129E-07  0.124E-07  0.118E-07  0.111E-07  0.103E-07
-    0.103E-07  0.946E-08  0.856E-08  0.760E-08  0.655E-08  0.533E-08  0.363E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-05 01:00:00 UTC        
- SRF variables written at  2018-01-05 02:00:00 UTC        
- SRF variables written at  2018-01-05 03:00:00 UTC        
- $$$  2018-01-05 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.82  497.60
- SRF variables written at  2018-01-05 04:00:00 UTC        
- SRF variables written at  2018-01-05 05:00:00 UTC        
- ATM variables written at  2018-01-05 06:00:00 UTC        
- SRF variables written at  2018-01-05 06:00:00 UTC        
- RAD variables written at  2018-01-05 06:00:00 UTC        
- SEARCH BC data for 2018010512 , step =     8160
- READY  BC from     2018010506  to 2018010512 
- $$$  2018-01-05 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.24  497.37
- SRF variables written at  2018-01-05 07:00:00 UTC        
- SRF variables written at  2018-01-05 08:00:00 UTC        
- SRF variables written at  2018-01-05 09:00:00 UTC        
- $$$  2018-01-05 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.51  497.81
- SRF variables written at  2018-01-05 10:00:00 UTC        
- SRF variables written at  2018-01-05 11:00:00 UTC        
- ATM variables written at  2018-01-05 12:00:00 UTC        
- SRF variables written at  2018-01-05 12:00:00 UTC        
- RAD variables written at  2018-01-05 12:00:00 UTC        
- SEARCH BC data for 2018010518 , step =     8640
- READY  BC from     2018010512  to 2018010518 
- $$$  2018-01-05 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.78  498.01
- SRF variables written at  2018-01-05 13:00:00 UTC        
- SRF variables written at  2018-01-05 14:00:00 UTC        
- SRF variables written at  2018-01-05 15:00:00 UTC        
- $$$  2018-01-05 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.75  498.22
- SRF variables written at  2018-01-05 16:00:00 UTC        
- SRF variables written at  2018-01-05 17:00:00 UTC        
- ATM variables written at  2018-01-05 18:00:00 UTC        
- SRF variables written at  2018-01-05 18:00:00 UTC        
- RAD variables written at  2018-01-05 18:00:00 UTC        
- SEARCH BC data for 2018010600 , step =     9120
- READY  BC from     2018010518  to 2018010600 
- $$$  2018-01-05 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.76  498.30
- SRF variables written at  2018-01-05 19:00:00 UTC        
- SRF variables written at  2018-01-05 20:00:00 UTC        
- SRF variables written at  2018-01-05 21:00:00 UTC        
- $$$  2018-01-05 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.85  498.95
- SRF variables written at  2018-01-05 22:00:00 UTC        
- SRF variables written at  2018-01-05 23:00:00 UTC        
- At  2018-01-06 00:00:00 UTC        
- JDay      5.00000 solar declination angle = -22.64221009 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
- ATM variables written at  2018-01-06 00:00:00 UTC        
- SRF variables written at  2018-01-06 00:00:00 UTC        
- STS variables written at  2018-01-06 00:00:00 UTC        
- RAD variables written at  2018-01-06 00:00:00 UTC        
- SEARCH BC data for 2018010606 , step =     9600
- READY  BC from     2018010600  to 2018010606 
- $$$  2018-01-06 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.91  499.16
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.902E-16
-    0.127E-12  0.305E-11  0.219E-10  0.870E-10  0.244E-09  0.542E-09  0.102E-08
-    0.171E-08  0.260E-08  0.366E-08  0.487E-08  0.616E-08  0.747E-08  0.874E-08
-    0.992E-08  0.110E-07  0.119E-07  0.126E-07  0.131E-07  0.134E-07  0.135E-07
-    0.135E-07  0.132E-07  0.129E-07  0.124E-07  0.118E-07  0.111E-07  0.103E-07
-    0.103E-07  0.946E-08  0.856E-08  0.760E-08  0.655E-08  0.533E-08  0.363E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-06 01:00:00 UTC        
- SRF variables written at  2018-01-06 02:00:00 UTC        
- SRF variables written at  2018-01-06 03:00:00 UTC        
- $$$  2018-01-06 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.47  498.69
- SRF variables written at  2018-01-06 04:00:00 UTC        
- SRF variables written at  2018-01-06 05:00:00 UTC        
- ATM variables written at  2018-01-06 06:00:00 UTC        
- SRF variables written at  2018-01-06 06:00:00 UTC        
- RAD variables written at  2018-01-06 06:00:00 UTC        
- SEARCH BC data for 2018010612 , step =    10080
- READY  BC from     2018010606  to 2018010612 
- $$$  2018-01-06 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.96  498.31
- SRF variables written at  2018-01-06 07:00:00 UTC        
- SRF variables written at  2018-01-06 08:00:00 UTC        
- SRF variables written at  2018-01-06 09:00:00 UTC        
- $$$  2018-01-06 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.13  498.67
- SRF variables written at  2018-01-06 10:00:00 UTC        
- SRF variables written at  2018-01-06 11:00:00 UTC        
- ATM variables written at  2018-01-06 12:00:00 UTC        
- SRF variables written at  2018-01-06 12:00:00 UTC        
- RAD variables written at  2018-01-06 12:00:00 UTC        
- SEARCH BC data for 2018010618 , step =    10560
- READY  BC from     2018010612  to 2018010618 
- $$$  2018-01-06 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.36  498.61
- SRF variables written at  2018-01-06 13:00:00 UTC        
- SRF variables written at  2018-01-06 14:00:00 UTC        
- SRF variables written at  2018-01-06 15:00:00 UTC        
- $$$  2018-01-06 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.69  498.53
- SRF variables written at  2018-01-06 16:00:00 UTC        
- SRF variables written at  2018-01-06 17:00:00 UTC        
- ATM variables written at  2018-01-06 18:00:00 UTC        
- SRF variables written at  2018-01-06 18:00:00 UTC        
- RAD variables written at  2018-01-06 18:00:00 UTC        
- SEARCH BC data for 2018010700 , step =    11040
- READY  BC from     2018010618  to 2018010700 
- $$$  2018-01-06 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.02  497.61
- SRF variables written at  2018-01-06 19:00:00 UTC        
- SRF variables written at  2018-01-06 20:00:00 UTC        
- SRF variables written at  2018-01-06 21:00:00 UTC        
- $$$  2018-01-06 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.01  499.01
- SRF variables written at  2018-01-06 22:00:00 UTC        
- SRF variables written at  2018-01-06 23:00:00 UTC        
- At  2018-01-07 00:00:00 UTC        
- JDay      6.00000 solar declination angle = -22.52814370 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
- ATM variables written at  2018-01-07 00:00:00 UTC        
- SRF variables written at  2018-01-07 00:00:00 UTC        
- STS variables written at  2018-01-07 00:00:00 UTC        
- RAD variables written at  2018-01-07 00:00:00 UTC        
- SEARCH BC data for 2018010706 , step =    11520
- READY  BC from     2018010700  to 2018010706 
- $$$  2018-01-07 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.07  499.31
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.902E-16
-    0.127E-12  0.305E-11  0.219E-10  0.870E-10  0.244E-09  0.542E-09  0.102E-08
-    0.171E-08  0.260E-08  0.366E-08  0.487E-08  0.616E-08  0.747E-08  0.874E-08
-    0.992E-08  0.110E-07  0.119E-07  0.126E-07  0.131E-07  0.134E-07  0.135E-07
-    0.135E-07  0.132E-07  0.129E-07  0.124E-07  0.118E-07  0.111E-07  0.103E-07
-    0.103E-07  0.946E-08  0.856E-08  0.760E-08  0.655E-08  0.533E-08  0.363E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-07 01:00:00 UTC        
- SRF variables written at  2018-01-07 02:00:00 UTC        
- SRF variables written at  2018-01-07 03:00:00 UTC        
- $$$  2018-01-07 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.47  498.69
- SRF variables written at  2018-01-07 04:00:00 UTC        
- SRF variables written at  2018-01-07 05:00:00 UTC        
- ATM variables written at  2018-01-07 06:00:00 UTC        
- SRF variables written at  2018-01-07 06:00:00 UTC        
- RAD variables written at  2018-01-07 06:00:00 UTC        
- SEARCH BC data for 2018010712 , step =    12000
- READY  BC from     2018010706  to 2018010712 
- $$$  2018-01-07 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.87  498.44
- SRF variables written at  2018-01-07 07:00:00 UTC        
- SRF variables written at  2018-01-07 08:00:00 UTC        
- SRF variables written at  2018-01-07 09:00:00 UTC        
- $$$  2018-01-07 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.55  498.41
- SRF variables written at  2018-01-07 10:00:00 UTC        
- SRF variables written at  2018-01-07 11:00:00 UTC        
- ATM variables written at  2018-01-07 12:00:00 UTC        
- SRF variables written at  2018-01-07 12:00:00 UTC        
- RAD variables written at  2018-01-07 12:00:00 UTC        
- SEARCH BC data for 2018010718 , step =    12480
- READY  BC from     2018010712  to 2018010718 
- $$$  2018-01-07 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.41  498.41
- SRF variables written at  2018-01-07 13:00:00 UTC        
- SRF variables written at  2018-01-07 14:00:00 UTC        
- SRF variables written at  2018-01-07 15:00:00 UTC        
- $$$  2018-01-07 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.08  498.64
- SRF variables written at  2018-01-07 16:00:00 UTC        
- SRF variables written at  2018-01-07 17:00:00 UTC        
- ATM variables written at  2018-01-07 18:00:00 UTC        
- SRF variables written at  2018-01-07 18:00:00 UTC        
- RAD variables written at  2018-01-07 18:00:00 UTC        
- SEARCH BC data for 2018010800 , step =    12960
- READY  BC from     2018010718  to 2018010800 
- $$$  2018-01-07 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.82  496.19
- SRF variables written at  2018-01-07 19:00:00 UTC        
- SRF variables written at  2018-01-07 20:00:00 UTC        
- SRF variables written at  2018-01-07 21:00:00 UTC        
- $$$  2018-01-07 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.84  497.91
- SRF variables written at  2018-01-07 22:00:00 UTC        
- SRF variables written at  2018-01-07 23:00:00 UTC        
- At  2018-01-08 00:00:00 UTC        
- JDay      7.00000 solar declination angle = -22.40667059 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
- ATM variables written at  2018-01-08 00:00:00 UTC        
- SRF variables written at  2018-01-08 00:00:00 UTC        
- STS variables written at  2018-01-08 00:00:00 UTC        
- RAD variables written at  2018-01-08 00:00:00 UTC        
- SEARCH BC data for 2018010806 , step =    13440
- READY  BC from     2018010800  to 2018010806 
- $$$  2018-01-08 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.68  498.69
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.902E-16
-    0.127E-12  0.305E-11  0.219E-10  0.870E-10  0.244E-09  0.542E-09  0.102E-08
-    0.171E-08  0.260E-08  0.366E-08  0.487E-08  0.616E-08  0.747E-08  0.874E-08
-    0.992E-08  0.110E-07  0.119E-07  0.126E-07  0.131E-07  0.134E-07  0.135E-07
-    0.135E-07  0.132E-07  0.129E-07  0.124E-07  0.118E-07  0.111E-07  0.103E-07
-    0.103E-07  0.946E-08  0.856E-08  0.760E-08  0.655E-08  0.533E-08  0.363E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-08 01:00:00 UTC        
- SRF variables written at  2018-01-08 02:00:00 UTC        
- SRF variables written at  2018-01-08 03:00:00 UTC        
- $$$  2018-01-08 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.40  498.39
- SRF variables written at  2018-01-08 04:00:00 UTC        
- SRF variables written at  2018-01-08 05:00:00 UTC        
- ATM variables written at  2018-01-08 06:00:00 UTC        
- SRF variables written at  2018-01-08 06:00:00 UTC        
- RAD variables written at  2018-01-08 06:00:00 UTC        
- SEARCH BC data for 2018010812 , step =    13920
- READY  BC from     2018010806  to 2018010812 
- $$$  2018-01-08 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.17  498.06
- SRF variables written at  2018-01-08 07:00:00 UTC        
- SRF variables written at  2018-01-08 08:00:00 UTC        
- SRF variables written at  2018-01-08 09:00:00 UTC        
- $$$  2018-01-08 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.51  498.07
- SRF variables written at  2018-01-08 10:00:00 UTC        
- SRF variables written at  2018-01-08 11:00:00 UTC        
- ATM variables written at  2018-01-08 12:00:00 UTC        
- SRF variables written at  2018-01-08 12:00:00 UTC        
- RAD variables written at  2018-01-08 12:00:00 UTC        
- SEARCH BC data for 2018010818 , step =    14400
- READY  BC from     2018010812  to 2018010818 
- $$$  2018-01-08 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.16  497.79
- SRF variables written at  2018-01-08 13:00:00 UTC        
- SRF variables written at  2018-01-08 14:00:00 UTC        
- SRF variables written at  2018-01-08 15:00:00 UTC        
- $$$  2018-01-08 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.10  498.08
- SRF variables written at  2018-01-08 16:00:00 UTC        
- SRF variables written at  2018-01-08 17:00:00 UTC        
- ATM variables written at  2018-01-08 18:00:00 UTC        
- SRF variables written at  2018-01-08 18:00:00 UTC        
- RAD variables written at  2018-01-08 18:00:00 UTC        
- SEARCH BC data for 2018010900 , step =    14880
- READY  BC from     2018010818  to 2018010900 
- $$$  2018-01-08 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.22  497.14
- SRF variables written at  2018-01-08 19:00:00 UTC        
- SRF variables written at  2018-01-08 20:00:00 UTC        
- SRF variables written at  2018-01-08 21:00:00 UTC        
- $$$  2018-01-08 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.90  497.60
- SRF variables written at  2018-01-08 22:00:00 UTC        
- SRF variables written at  2018-01-08 23:00:00 UTC        
- At  2018-01-09 00:00:00 UTC        
- JDay      8.00000 solar declination angle = -22.27784990 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
- ATM variables written at  2018-01-09 00:00:00 UTC        
- SRF variables written at  2018-01-09 00:00:00 UTC        
- STS variables written at  2018-01-09 00:00:00 UTC        
- RAD variables written at  2018-01-09 00:00:00 UTC        
- SEARCH BC data for 2018010906 , step =    15360
- READY  BC from     2018010900  to 2018010906 
- $$$  2018-01-09 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.58  497.77
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.900E-16
-    0.126E-12  0.304E-11  0.218E-10  0.867E-10  0.243E-09  0.540E-09  0.102E-08
-    0.170E-08  0.259E-08  0.365E-08  0.486E-08  0.614E-08  0.744E-08  0.871E-08
-    0.990E-08  0.109E-07  0.118E-07  0.125E-07  0.130E-07  0.134E-07  0.135E-07
-    0.134E-07  0.132E-07  0.128E-07  0.123E-07  0.117E-07  0.110E-07  0.103E-07
-    0.103E-07  0.944E-08  0.854E-08  0.758E-08  0.653E-08  0.532E-08  0.362E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-09 01:00:00 UTC        
- SRF variables written at  2018-01-09 02:00:00 UTC        
- SRF variables written at  2018-01-09 03:00:00 UTC        
- $$$  2018-01-09 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.10  497.50
- SRF variables written at  2018-01-09 04:00:00 UTC        
- SRF variables written at  2018-01-09 05:00:00 UTC        
- ATM variables written at  2018-01-09 06:00:00 UTC        
- SRF variables written at  2018-01-09 06:00:00 UTC        
- RAD variables written at  2018-01-09 06:00:00 UTC        
- SEARCH BC data for 2018010912 , step =    15840
- READY  BC from     2018010906  to 2018010912 
- $$$  2018-01-09 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.55  497.12
- SRF variables written at  2018-01-09 07:00:00 UTC        
- SRF variables written at  2018-01-09 08:00:00 UTC        
- SRF variables written at  2018-01-09 09:00:00 UTC        
- $$$  2018-01-09 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.19  497.21
- SRF variables written at  2018-01-09 10:00:00 UTC        
- SRF variables written at  2018-01-09 11:00:00 UTC        
- ATM variables written at  2018-01-09 12:00:00 UTC        
- SRF variables written at  2018-01-09 12:00:00 UTC        
- RAD variables written at  2018-01-09 12:00:00 UTC        
- SEARCH BC data for 2018010918 , step =    16320
- READY  BC from     2018010912  to 2018010918 
- $$$  2018-01-09 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1027.66  497.13
- SRF variables written at  2018-01-09 13:00:00 UTC        
- SRF variables written at  2018-01-09 14:00:00 UTC        
- SRF variables written at  2018-01-09 15:00:00 UTC        
- $$$  2018-01-09 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1027.73  497.37
- SRF variables written at  2018-01-09 16:00:00 UTC        
- SRF variables written at  2018-01-09 17:00:00 UTC        
- ATM variables written at  2018-01-09 18:00:00 UTC        
- SRF variables written at  2018-01-09 18:00:00 UTC        
- RAD variables written at  2018-01-09 18:00:00 UTC        
- SEARCH BC data for 2018011000 , step =    16800
- READY  BC from     2018010918  to 2018011000 
- $$$  2018-01-09 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1027.71  496.50
- SRF variables written at  2018-01-09 19:00:00 UTC        
- SRF variables written at  2018-01-09 20:00:00 UTC        
- SRF variables written at  2018-01-09 21:00:00 UTC        
- $$$  2018-01-09 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1027.63  497.07
- SRF variables written at  2018-01-09 22:00:00 UTC        
- SRF variables written at  2018-01-09 23:00:00 UTC        
- At  2018-01-10 00:00:00 UTC        
- JDay      9.00000 solar declination angle = -22.14174418 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
- ATM variables written at  2018-01-10 00:00:00 UTC        
- SRF variables written at  2018-01-10 00:00:00 UTC        
- STS variables written at  2018-01-10 00:00:00 UTC        
- RAD variables written at  2018-01-10 00:00:00 UTC        
- SEARCH BC data for 2018011006 , step =    17280
- READY  BC from     2018011000  to 2018011006 
- $$$  2018-01-10 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1027.90  497.24
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.900E-16
-    0.126E-12  0.304E-11  0.218E-10  0.867E-10  0.243E-09  0.540E-09  0.102E-08
-    0.170E-08  0.259E-08  0.365E-08  0.486E-08  0.614E-08  0.744E-08  0.871E-08
-    0.990E-08  0.109E-07  0.118E-07  0.125E-07  0.130E-07  0.134E-07  0.135E-07
-    0.134E-07  0.132E-07  0.128E-07  0.123E-07  0.117E-07  0.110E-07  0.103E-07
-    0.103E-07  0.944E-08  0.854E-08  0.758E-08  0.653E-08  0.532E-08  0.362E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-10 01:00:00 UTC        
- SRF variables written at  2018-01-10 02:00:00 UTC        
- SRF variables written at  2018-01-10 03:00:00 UTC        
- $$$  2018-01-10 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.78  496.81
- SRF variables written at  2018-01-10 04:00:00 UTC        
- SRF variables written at  2018-01-10 05:00:00 UTC        
- ATM variables written at  2018-01-10 06:00:00 UTC        
- SRF variables written at  2018-01-10 06:00:00 UTC        
- RAD variables written at  2018-01-10 06:00:00 UTC        
- SEARCH BC data for 2018011012 , step =    17760
- READY  BC from     2018011006  to 2018011012 
- $$$  2018-01-10 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.70  497.21
- SRF variables written at  2018-01-10 07:00:00 UTC        
- SRF variables written at  2018-01-10 08:00:00 UTC        
- SRF variables written at  2018-01-10 09:00:00 UTC        
- $$$  2018-01-10 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.70  497.45
- SRF variables written at  2018-01-10 10:00:00 UTC        
- SRF variables written at  2018-01-10 11:00:00 UTC        
- ATM variables written at  2018-01-10 12:00:00 UTC        
- SRF variables written at  2018-01-10 12:00:00 UTC        
- RAD variables written at  2018-01-10 12:00:00 UTC        
- SEARCH BC data for 2018011018 , step =    18240
- READY  BC from     2018011012  to 2018011018 
- $$$  2018-01-10 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1027.78  497.32
- SRF variables written at  2018-01-10 13:00:00 UTC        
- SRF variables written at  2018-01-10 14:00:00 UTC        
- SRF variables written at  2018-01-10 15:00:00 UTC        
- $$$  2018-01-10 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.51  497.87
- SRF variables written at  2018-01-10 16:00:00 UTC        
- SRF variables written at  2018-01-10 17:00:00 UTC        
- ATM variables written at  2018-01-10 18:00:00 UTC        
- SRF variables written at  2018-01-10 18:00:00 UTC        
- RAD variables written at  2018-01-10 18:00:00 UTC        
- SEARCH BC data for 2018011100 , step =    18720
- READY  BC from     2018011018  to 2018011100 
- $$$  2018-01-10 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.67  498.30
- SRF variables written at  2018-01-10 19:00:00 UTC        
- SRF variables written at  2018-01-10 20:00:00 UTC        
- SRF variables written at  2018-01-10 21:00:00 UTC        
- $$$  2018-01-10 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.66  498.61
- SRF variables written at  2018-01-10 22:00:00 UTC        
- SRF variables written at  2018-01-10 23:00:00 UTC        
- At  2018-01-11 00:00:00 UTC        
- JDay     10.00000 solar declination angle = -21.99841929 degrees
-                   solar TSI irradiance    =    1355.9544 W/m^2
- ATM variables written at  2018-01-11 00:00:00 UTC        
- SRF variables written at  2018-01-11 00:00:00 UTC        
- STS variables written at  2018-01-11 00:00:00 UTC        
- RAD variables written at  2018-01-11 00:00:00 UTC        
- SEARCH BC data for 2018011106 , step =    19200
- READY  BC from     2018011100  to 2018011106 
- $$$  2018-01-11 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.54  498.74
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.900E-16
-    0.126E-12  0.304E-11  0.218E-10  0.867E-10  0.243E-09  0.540E-09  0.102E-08
-    0.170E-08  0.259E-08  0.365E-08  0.486E-08  0.614E-08  0.744E-08  0.871E-08
-    0.990E-08  0.109E-07  0.118E-07  0.125E-07  0.130E-07  0.134E-07  0.135E-07
-    0.134E-07  0.132E-07  0.128E-07  0.123E-07  0.117E-07  0.110E-07  0.103E-07
-    0.103E-07  0.944E-08  0.854E-08  0.758E-08  0.653E-08  0.532E-08  0.362E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- SRF variables written at  2018-01-11 01:00:00 UTC        
- SRF variables written at  2018-01-11 02:00:00 UTC        
- SRF variables written at  2018-01-11 03:00:00 UTC        
- $$$  2018-01-11 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.66  498.53
- SRF variables written at  2018-01-11 04:00:00 UTC        
- SRF variables written at  2018-01-11 05:00:00 UTC        
- ATM variables written at  2018-01-11 06:00:00 UTC        
- SRF variables written at  2018-01-11 06:00:00 UTC        
- RAD variables written at  2018-01-11 06:00:00 UTC        
- SEARCH BC data for 2018011112 , step =    19680
- READY  BC from     2018011106  to 2018011112 
- $$$  2018-01-11 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.65  498.29
- SRF variables written at  2018-01-11 07:00:00 UTC        
- SRF variables written at  2018-01-11 08:00:00 UTC        
- SRF variables written at  2018-01-11 09:00:00 UTC        
- $$$  2018-01-11 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.34  498.32
- SRF variables written at  2018-01-11 10:00:00 UTC        
- SRF variables written at  2018-01-11 11:00:00 UTC        
- ATM variables written at  2018-01-11 12:00:00 UTC        
- SRF variables written at  2018-01-11 12:00:00 UTC        
- RAD variables written at  2018-01-11 12:00:00 UTC        
- SEARCH BC data for 2018011118 , step =    20160
- READY  BC from     2018011112  to 2018011118 
- $$$  2018-01-11 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.79  498.46
- SRF variables written at  2018-01-11 13:00:00 UTC        
- SRF variables written at  2018-01-11 14:00:00 UTC        
- SRF variables written at  2018-01-11 15:00:00 UTC        
- $$$  2018-01-11 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.04  499.00
- SRF variables written at  2018-01-11 16:00:00 UTC        
- SRF variables written at  2018-01-11 17:00:00 UTC        
- ATM variables written at  2018-01-11 18:00:00 UTC        
- SRF variables written at  2018-01-11 18:00:00 UTC        
- RAD variables written at  2018-01-11 18:00:00 UTC        
- SEARCH BC data for 2018011200 , step =    20640
- READY  BC from     2018011118  to 2018011200 
- $$$  2018-01-11 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.74  499.48
- SRF variables written at  2018-01-11 19:00:00 UTC        
+ SRF variables written at  2018-05-03 01:00:00 UTC        
+ SRF variables written at  2018-05-03 02:00:00 UTC        
+ SRF variables written at  2018-05-03 03:00:00 UTC        
+ $$$  2018-05-03 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.66  498.59
+ SRF variables written at  2018-05-03 04:00:00 UTC        
+ SRF variables written at  2018-05-03 05:00:00 UTC        
+ ATM variables written at  2018-05-03 06:00:00 UTC        
+ SRF variables written at  2018-05-03 06:00:00 UTC        
+ RAD variables written at  2018-05-03 06:00:00 UTC        
+ SEARCH BC data for 2018050312 , step =   234720
+ READY  BC from     2018050306  to 2018050312 
+ $$$  2018-05-03 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.11  498.30
+ SRF variables written at  2018-05-03 07:00:00 UTC        
+ SRF variables written at  2018-05-03 08:00:00 UTC        
+ SRF variables written at  2018-05-03 09:00:00 UTC        
+ $$$  2018-05-03 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.78  498.19
+ SRF variables written at  2018-05-03 10:00:00 UTC        
+ SRF variables written at  2018-05-03 11:00:00 UTC        
+ ATM variables written at  2018-05-03 12:00:00 UTC        
+ SRF variables written at  2018-05-03 12:00:00 UTC        
+ RAD variables written at  2018-05-03 12:00:00 UTC        
+ SEARCH BC data for 2018050318 , step =   235200
+ READY  BC from     2018050312  to 2018050318 
+ $$$  2018-05-03 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.71  498.01
+ SRF variables written at  2018-05-03 13:00:00 UTC        
+ SRF variables written at  2018-05-03 14:00:00 UTC        
+ SRF variables written at  2018-05-03 15:00:00 UTC        
+ $$$  2018-05-03 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.76  497.58
+ SRF variables written at  2018-05-03 16:00:00 UTC        
+ SRF variables written at  2018-05-03 17:00:00 UTC        
+ ATM variables written at  2018-05-03 18:00:00 UTC        
+ SRF variables written at  2018-05-03 18:00:00 UTC        
+ RAD variables written at  2018-05-03 18:00:00 UTC        
+ SEARCH BC data for 2018050400 , step =   235680
+ READY  BC from     2018050318  to 2018050400 
+ $$$  2018-05-03 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.97  497.59
