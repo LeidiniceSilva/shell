@@ -10,7 +10,7 @@
  &dimparam 
  iy     = 783,  ! This is number of points in the N/S direction
  jx     = 1231, ! This is number of points in the E/W direction
- kz     = 40,   ! Number of vertical levels
+ kz     = 41,   ! Number of vertical levels
  dsmin  = 0.01, ! Minimum sigma spacing (only used if kz is not 14, 18, 23, 41)
  dsmax  = 0.05, ! Maximum sigma spacing (only used if kz is not 14, 18, 23, 41)
  nsg    = 1,    ! For subgridding, number of points to decompose. If nsg=1,
@@ -173,10 +173,10 @@
 ! Model start/restart control
 !
  &restartparam
- ifrest  = .false.,   ! If a restart
+ ifrest  = .true.,   ! If a restart
  mdate0  = 1999010100, ! Global start (is globidate1)
- mdate1  = 1999010100,   ! Start date of this run
- mdate2  = 1999030100,     ! End date for this run 
+ mdate1  = 1999040100,   ! Start date of this run
+ mdate2  = 1999070100,     ! End date for this run 
  /
  
 !
