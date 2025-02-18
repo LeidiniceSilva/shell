@@ -30,7 +30,7 @@ echo ${DIR_OUT}
 echo
 echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
 
-VAR_LIST="clfrac clliq clice q r u v"
+VAR_LIST="cc ciwc clwc crwc cswc q r u v"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "1. Select date"
@@ -42,11 +42,12 @@ for VAR in ${VAR_LIST[@]}; do
         ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
 	CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_${SEASON}_${YR}_lonlat.nc
     done
-done
 
-echo 
-echo "Delete files"
-rm *_${YR}.nc
+   echo 
+   echo "Delete files"
+   rm *_${YR}.nc
+
+done
 
 echo
 echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"

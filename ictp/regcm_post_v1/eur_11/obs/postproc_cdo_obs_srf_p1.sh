@@ -36,7 +36,7 @@ VAR_LIST="precip"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cpc.day.1979-2021.nc ${VAR}_${DATASET}_day_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}.cpc.day.1979-2024.nc ${VAR}_${DATASET}_day_${YR}.nc
     echo
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
@@ -87,7 +87,7 @@ VAR_LIST="pr clt tas"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1999-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
     if [ ${VAR} == 'pr' ]
     then
     CDO mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_mon_${YR}.nc 

@@ -59,14 +59,14 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     echo "5. Regrid variable"
     ${BIN}/./regrid p99_${EXP}_${FOLDER}_RegCM5_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
 
-done
+    echo 
+    echo "6. Delete files"
+    rm *0100.nc
+    rm *${YR}.nc
+    rm *${YR}_min.nc
+    rm *${YR}_max.nc
 
-echo 
-echo "6. Delete files"
-rm *0100.nc
-rm *${YR}.nc
-rm *${YR}_min.nc
-rm *${YR}_max.nc
+done
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

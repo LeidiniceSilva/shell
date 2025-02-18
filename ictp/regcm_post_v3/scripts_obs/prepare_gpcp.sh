@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OBSDIR=/leonardo/home/userexternal/mdasilva/leonardo_work/OBS
+OBSDIR=/leonardo_work/ICT24_ESP/OBS
 wdir=$2
 cd $wdir
 

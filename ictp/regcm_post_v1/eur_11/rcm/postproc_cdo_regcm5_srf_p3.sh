@@ -48,7 +48,7 @@ for FOLDER in ${FOLDER_LIST[@]}; do
         echo "1. Select variable: ${VAR}"
         for YEAR in `seq -w ${IYR} ${FYR}`; do
             for MON in `seq -w 01 12`; do
-                CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
+                CDO selname,${VAR} ${DIR_IN}/${EXP}_SHF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
             done
         done
     
@@ -58,13 +58,16 @@ for FOLDER in ${FOLDER_LIST[@]}; do
            
         echo
         echo "3. Convert unit"
-        CDO -b f32 mulc,86400 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc
+        CDO -b f32 mulc,3600 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_1hr_${YR}.nc
+	CDO daysum ${VAR}_${EXP}_${FOLDER}_RegCM5_1hr_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc
 	CDO monmean ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_mon_${YR}.nc 
 
 	echo
 	echo "4. Regrid output"
+       	${BIN}/./regrid ${VAR}_${EXP}_${FOLDER}_RegCM5_1hr_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
        	${BIN}/./regrid ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
        	${BIN}/./regrid ${VAR}_${EXP}_${FOLDER}_RegCM5_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+	CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${FOLDER}_RegCM5_1hr_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${FOLDER}_RegCM5_1hr_${YR}_lonlat.nc 
 	CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${FOLDER}_RegCM5_day_${YR}_lonlat.nc 
 	CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${FOLDER}_RegCM5_mon_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${FOLDER}_RegCM5_mon_${YR}_lonlat.nc 
 

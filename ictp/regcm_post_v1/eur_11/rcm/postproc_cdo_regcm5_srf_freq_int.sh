@@ -60,12 +60,12 @@ for FOLDER in ${FOLDER_LIST[@]}; do
 	${BIN}/./regrid ${VAR}_int_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
     done
 
-done
+    echo 
+    echo "5. Delete files"
+    rm *0100.nc
+    rm *${YR}.nc
 
-echo 
-echo "5. Delete files"
-rm *0100.nc
-rm *${YR}.nc
+done
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

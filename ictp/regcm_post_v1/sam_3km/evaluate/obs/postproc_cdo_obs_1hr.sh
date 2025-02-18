@@ -1,12 +1,13 @@
 #!/bin/bash
 
-#SBATCH -N 1 
-#SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --qos=qos_prio
-#SBATCH --mail-type=FAIL
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
@@ -14,24 +15,23 @@
 #__description__ = 'Posprocessing the OBS datasets with CDO'
 
 {
-
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2018-2021"
+DATASET=$1
+EXP="SAM-3km"
+
+YR="2018-2018"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-DATASET="GPM"
-EXP="SAM-3km"
-
-DIR_IN="/marconi/home/userexternal/mdasilva/OBS"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/obs"
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/obs"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
 cd ${DIR_OUT}
