@@ -1,12 +1,11 @@
 #!/bin/bash
 
-#SBATCH -N 1 
+#SBATCH -N 1
 #SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --qos=qos_prio
-#SBATCH --mail-type=FAIL
+#SBATCH -J Postproc
+#SBATCH -p esp
+#SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
@@ -15,31 +14,42 @@
 
 {
 
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
-set -eo pipefail
+# load required modules
+module purge
+source /opt-ictp/ESMF/env202108
 
-dir_out=/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/gpm
+CDO(){
+  cdo -O -L -f nc4 -z zip $@
+}
 
-for year in $(seq 2018 2021); do
-	for mon in {01..12}; do
-		for day in {01..31}; do
+PATH_OUT="/home/mda_silv/scratch/GPM"
 
-			dir_in=/home/esp-shared-a/Observations/GPM/IMERG/FINAL/V07A/$year/$mon/$day
+echo
+cd ${PATH_OUT}
+echo ${PATH_OUT}
 
-			for min in $(seq -w 0000 30 1410); do
+for YEAR in $(seq 2018 2021); do
+	for MON in {01..12}; do
+		for DAY in {01..31}; do
+
+			PATH_IN=/home/esp-shared-a/Observations/GPM/IMERG/FINAL/V07A/$YEAR/$MON/$DAY
+
+			for MIN in $(seq -w 0000 30 1410); do
 				
-				file=3B-HHR.MS.MRG.3IMERG.${year}${mon}${day}-S*-E*.${min}.V07A.nc	
-      				ls $file
+				FILE="precipitation_SAM_GPM_3B-HHR_${YEAR}${MON}${DAY}_${MIN}_V07A.nc"	
+				if [ ! -f "$FILE" ]; then
       			
-      				cdo sellonlatbox,-79,-34,-36,-10 $dir_in/$file $dir_out/precipitation_SAM_GPM_3B-HHR_${year}${mon}${day}_${min}_V07A.nc
+      				CDO sellonlatbox,-85,-30,-42,-8 $PATH_IN/3B-HHR.MS.MRG.3IMERG.${YEAR}${MON}${DAY}-S*-E*.${MIN}.V07A.nc $FILE
+				
+				fi
       			done
     		done    		
 	done
 done
 
-cdo mergetime $dir_out/precipitation_SAM_GPM_3B-HHR_2018*_V07A.nc $dir_out/precipitation_SAM_GPM_3B-HHR_2018.nc
-cdo mergetime $dir_out/precipitation_SAM_GPM_3B-HHR_2019*_V07A.nc $dir_out/precipitation_SAM_GPM_3B-HHR_2019.nc
-cdo mergetime $dir_out/precipitation_SAM_GPM_3B-HHR_2020*_V07A.nc $dir_out/precipitation_SAM_GPM_3B-HHR_2020.nc
-cdo mergetime $dir_out/precipitation_SAM_GPM_3B-HHR_2021*_V07A.nc $dir_out/precipitation_SAM_GPM_3B-HHR_2021.nc
+CDO mergetime precipitation_SAM_GPM_3B-HHR_2018*_V07A.nc precipitation_SAM_GPM_3B-HHR_2018.nc
+CDO mergetime precipitation_SAM_GPM_3B-HHR_2019*_V07A.nc precipitation_SAM_GPM_3B-HHR_2019.nc
+CDO mergetime precipitation_SAM_GPM_3B-HHR_2020*_V07A.nc precipitation_SAM_GPM_3B-HHR_2020.nc
+CDO mergetime precipitation_SAM_GPM_3B-HHR_2021*_V07A.nc precipitation_SAM_GPM_3B-HHR_2021.nc
 
 }
