@@ -14358,3 +14358,2431 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  ATM variables written at  2000-06-15 23:00:00 UTC        
  SRF variables written at  2000-06-15 23:00:00 UTC        
+ RAD variables written at  2000-06-15 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-16 00:00:00 UTC        
+ JDay    167.00000 solar declination angle =  23.31287296 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-16 00:00:00 UTC        
+ SRF variables written at  2000-06-16 00:00:00 UTC        
+ STS variables written at  2000-06-16 00:00:00 UTC        
+ RAD variables written at  2000-06-16 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000061600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000061600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000061600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000061600.nc
+ Elapsed seconds of run for this period :    674.5625    
+ SEARCH BC data for 2000061606 , step =  1021440
+ READY  BC from     2000061600  to 2000061606 
+ $$$  2000-06-16 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.99  487.45
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.532E-16
+    0.747E-13  0.180E-11  0.129E-10  0.512E-10  0.143E-09  0.319E-09  0.602E-09
+    0.100E-08  0.153E-08  0.216E-08  0.287E-08  0.362E-08  0.439E-08  0.514E-08
+    0.584E-08  0.646E-08  0.698E-08  0.739E-08  0.769E-08  0.787E-08  0.794E-08
+    0.791E-08  0.778E-08  0.756E-08  0.727E-08  0.692E-08  0.651E-08  0.605E-08
+    0.605E-08  0.556E-08  0.503E-08  0.446E-08  0.385E-08  0.313E-08  0.213E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ Attempting to read monthly vegetation data .....
+ At  2000-06-16 00:22:30 UTC
+ Month =            6  Day =           16
+ Reading months :            6           7
+ Successfully read monthly vegetation data for
+ month            7
+ CLM History variables written
+ ATM variables written at  2000-06-16 01:00:00 UTC        
+ SRF variables written at  2000-06-16 01:00:00 UTC        
+ RAD variables written at  2000-06-16 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 02:00:00 UTC        
+ SRF variables written at  2000-06-16 02:00:00 UTC        
+ RAD variables written at  2000-06-16 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 03:00:00 UTC        
+ SRF variables written at  2000-06-16 03:00:00 UTC        
+ RAD variables written at  2000-06-16 03:00:00 UTC        
+ $$$  2000-06-16 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.18  487.59
+ CLM History variables written
+ ATM variables written at  2000-06-16 04:00:00 UTC        
+ SRF variables written at  2000-06-16 04:00:00 UTC        
+ RAD variables written at  2000-06-16 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 05:00:00 UTC        
+ SRF variables written at  2000-06-16 05:00:00 UTC        
+ RAD variables written at  2000-06-16 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 06:00:00 UTC        
+ SRF variables written at  2000-06-16 06:00:00 UTC        
+ RAD variables written at  2000-06-16 06:00:00 UTC        
+ SEARCH BC data for 2000061612 , step =  1021920
+ READY  BC from     2000061606  to 2000061612 
+ $$$  2000-06-16 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.32  487.56
+ CLM History variables written
+ ATM variables written at  2000-06-16 07:00:00 UTC        
+ SRF variables written at  2000-06-16 07:00:00 UTC        
+ RAD variables written at  2000-06-16 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 08:00:00 UTC        
+ SRF variables written at  2000-06-16 08:00:00 UTC        
+ RAD variables written at  2000-06-16 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 09:00:00 UTC        
+ SRF variables written at  2000-06-16 09:00:00 UTC        
+ RAD variables written at  2000-06-16 09:00:00 UTC        
+ $$$  2000-06-16 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.55  487.37
+ CLM History variables written
+ ATM variables written at  2000-06-16 10:00:00 UTC        
+ SRF variables written at  2000-06-16 10:00:00 UTC        
+ RAD variables written at  2000-06-16 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 11:00:00 UTC        
+ SRF variables written at  2000-06-16 11:00:00 UTC        
+ RAD variables written at  2000-06-16 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 12:00:00 UTC        
+ SRF variables written at  2000-06-16 12:00:00 UTC        
+ RAD variables written at  2000-06-16 12:00:00 UTC        
+ SEARCH BC data for 2000061618 , step =  1022400
+ READY  BC from     2000061612  to 2000061618 
+ $$$  2000-06-16 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.93  487.48
+ CLM History variables written
+ ATM variables written at  2000-06-16 13:00:00 UTC        
+ SRF variables written at  2000-06-16 13:00:00 UTC        
+ RAD variables written at  2000-06-16 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 14:00:00 UTC        
+ SRF variables written at  2000-06-16 14:00:00 UTC        
+ RAD variables written at  2000-06-16 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 15:00:00 UTC        
+ SRF variables written at  2000-06-16 15:00:00 UTC        
+ RAD variables written at  2000-06-16 15:00:00 UTC        
+ $$$  2000-06-16 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.58  487.29
+ CLM History variables written
+ ATM variables written at  2000-06-16 16:00:00 UTC        
+ SRF variables written at  2000-06-16 16:00:00 UTC        
+ RAD variables written at  2000-06-16 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 17:00:00 UTC        
+ SRF variables written at  2000-06-16 17:00:00 UTC        
+ RAD variables written at  2000-06-16 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 18:00:00 UTC        
+ SRF variables written at  2000-06-16 18:00:00 UTC        
+ RAD variables written at  2000-06-16 18:00:00 UTC        
+ SEARCH BC data for 2000061700 , step =  1022880
+ READY  BC from     2000061618  to 2000061700 
+ $$$  2000-06-16 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.22  487.17
+ CLM History variables written
+ ATM variables written at  2000-06-16 19:00:00 UTC        
+ SRF variables written at  2000-06-16 19:00:00 UTC        
+ RAD variables written at  2000-06-16 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 20:00:00 UTC        
+ SRF variables written at  2000-06-16 20:00:00 UTC        
+ RAD variables written at  2000-06-16 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 21:00:00 UTC        
+ SRF variables written at  2000-06-16 21:00:00 UTC        
+ RAD variables written at  2000-06-16 21:00:00 UTC        
+ $$$  2000-06-16 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.19  486.86
+ CLM History variables written
+ ATM variables written at  2000-06-16 22:00:00 UTC        
+ SRF variables written at  2000-06-16 22:00:00 UTC        
+ RAD variables written at  2000-06-16 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-16 23:00:00 UTC        
+ SRF variables written at  2000-06-16 23:00:00 UTC        
+ RAD variables written at  2000-06-16 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-17 00:00:00 UTC        
+ JDay    168.00000 solar declination angle =  23.35119102 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-17 00:00:00 UTC        
+ SRF variables written at  2000-06-17 00:00:00 UTC        
+ STS variables written at  2000-06-17 00:00:00 UTC        
+ RAD variables written at  2000-06-17 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000061700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000061700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000061700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000061700.nc
+ Elapsed seconds of run for this period :    720.8594    
+ SEARCH BC data for 2000061706 , step =  1023360
+ READY  BC from     2000061700  to 2000061706 
+ $$$  2000-06-17 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.14  486.41
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.532E-16
+    0.747E-13  0.180E-11  0.129E-10  0.512E-10  0.143E-09  0.319E-09  0.602E-09
+    0.100E-08  0.153E-08  0.216E-08  0.287E-08  0.362E-08  0.439E-08  0.514E-08
+    0.584E-08  0.646E-08  0.698E-08  0.739E-08  0.769E-08  0.787E-08  0.794E-08
+    0.791E-08  0.778E-08  0.756E-08  0.727E-08  0.692E-08  0.651E-08  0.605E-08
+    0.605E-08  0.556E-08  0.503E-08  0.446E-08  0.385E-08  0.313E-08  0.213E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-17 01:00:00 UTC        
+ SRF variables written at  2000-06-17 01:00:00 UTC        
+ RAD variables written at  2000-06-17 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 02:00:00 UTC        
+ SRF variables written at  2000-06-17 02:00:00 UTC        
+ RAD variables written at  2000-06-17 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 03:00:00 UTC        
+ SRF variables written at  2000-06-17 03:00:00 UTC        
+ RAD variables written at  2000-06-17 03:00:00 UTC        
+ $$$  2000-06-17 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.20  486.24
+ CLM History variables written
+ ATM variables written at  2000-06-17 04:00:00 UTC        
+ SRF variables written at  2000-06-17 04:00:00 UTC        
+ RAD variables written at  2000-06-17 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 05:00:00 UTC        
+ SRF variables written at  2000-06-17 05:00:00 UTC        
+ RAD variables written at  2000-06-17 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 06:00:00 UTC        
+ SRF variables written at  2000-06-17 06:00:00 UTC        
+ RAD variables written at  2000-06-17 06:00:00 UTC        
+ SEARCH BC data for 2000061712 , step =  1023840
+ READY  BC from     2000061706  to 2000061712 
+ $$$  2000-06-17 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.02  486.08
+ CLM History variables written
+ ATM variables written at  2000-06-17 07:00:00 UTC        
+ SRF variables written at  2000-06-17 07:00:00 UTC        
+ RAD variables written at  2000-06-17 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 08:00:00 UTC        
+ SRF variables written at  2000-06-17 08:00:00 UTC        
+ RAD variables written at  2000-06-17 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 09:00:00 UTC        
+ SRF variables written at  2000-06-17 09:00:00 UTC        
+ RAD variables written at  2000-06-17 09:00:00 UTC        
+ $$$  2000-06-17 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.43  485.53
+ CLM History variables written
+ ATM variables written at  2000-06-17 10:00:00 UTC        
+ SRF variables written at  2000-06-17 10:00:00 UTC        
+ RAD variables written at  2000-06-17 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 11:00:00 UTC        
+ SRF variables written at  2000-06-17 11:00:00 UTC        
+ RAD variables written at  2000-06-17 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 12:00:00 UTC        
+ SRF variables written at  2000-06-17 12:00:00 UTC        
+ RAD variables written at  2000-06-17 12:00:00 UTC        
+ SEARCH BC data for 2000061718 , step =  1024320
+ READY  BC from     2000061712  to 2000061718 
+ $$$  2000-06-17 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.91  484.96
+ CLM History variables written
+ ATM variables written at  2000-06-17 13:00:00 UTC        
+ SRF variables written at  2000-06-17 13:00:00 UTC        
+ RAD variables written at  2000-06-17 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 14:00:00 UTC        
+ SRF variables written at  2000-06-17 14:00:00 UTC        
+ RAD variables written at  2000-06-17 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 15:00:00 UTC        
+ SRF variables written at  2000-06-17 15:00:00 UTC        
+ RAD variables written at  2000-06-17 15:00:00 UTC        
+ $$$  2000-06-17 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.03  484.57
+ CLM History variables written
+ ATM variables written at  2000-06-17 16:00:00 UTC        
+ SRF variables written at  2000-06-17 16:00:00 UTC        
+ RAD variables written at  2000-06-17 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 17:00:00 UTC        
+ SRF variables written at  2000-06-17 17:00:00 UTC        
+ RAD variables written at  2000-06-17 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 18:00:00 UTC        
+ SRF variables written at  2000-06-17 18:00:00 UTC        
+ RAD variables written at  2000-06-17 18:00:00 UTC        
+ SEARCH BC data for 2000061800 , step =  1024800
+ READY  BC from     2000061718  to 2000061800 
+ $$$  2000-06-17 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.16  484.44
+ CLM History variables written
+ ATM variables written at  2000-06-17 19:00:00 UTC        
+ SRF variables written at  2000-06-17 19:00:00 UTC        
+ RAD variables written at  2000-06-17 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 20:00:00 UTC        
+ SRF variables written at  2000-06-17 20:00:00 UTC        
+ RAD variables written at  2000-06-17 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 21:00:00 UTC        
+ SRF variables written at  2000-06-17 21:00:00 UTC        
+ RAD variables written at  2000-06-17 21:00:00 UTC        
+ $$$  2000-06-17 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.05  483.65
+ CLM History variables written
+ ATM variables written at  2000-06-17 22:00:00 UTC        
+ SRF variables written at  2000-06-17 22:00:00 UTC        
+ RAD variables written at  2000-06-17 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-17 23:00:00 UTC        
+ SRF variables written at  2000-06-17 23:00:00 UTC        
+ RAD variables written at  2000-06-17 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-18 00:00:00 UTC        
+ JDay    169.00000 solar declination angle =  23.38265066 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-18 00:00:00 UTC        
+ SRF variables written at  2000-06-18 00:00:00 UTC        
+ STS variables written at  2000-06-18 00:00:00 UTC        
+ RAD variables written at  2000-06-18 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000061800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000061800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000061800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000061800.nc
+ Elapsed seconds of run for this period :    750.3438    
+ SEARCH BC data for 2000061806 , step =  1025280
+ READY  BC from     2000061800  to 2000061806 
+ $$$  2000-06-18 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.42  483.01
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.535E-16
+    0.751E-13  0.181E-11  0.130E-10  0.515E-10  0.144E-09  0.321E-09  0.605E-09
+    0.101E-08  0.154E-08  0.217E-08  0.288E-08  0.364E-08  0.442E-08  0.517E-08
+    0.587E-08  0.649E-08  0.702E-08  0.743E-08  0.773E-08  0.792E-08  0.799E-08
+    0.796E-08  0.782E-08  0.761E-08  0.731E-08  0.696E-08  0.655E-08  0.609E-08
+    0.609E-08  0.559E-08  0.506E-08  0.449E-08  0.387E-08  0.315E-08  0.215E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-18 01:00:00 UTC        
+ SRF variables written at  2000-06-18 01:00:00 UTC        
+ RAD variables written at  2000-06-18 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 02:00:00 UTC        
+ SRF variables written at  2000-06-18 02:00:00 UTC        
+ RAD variables written at  2000-06-18 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 03:00:00 UTC        
+ SRF variables written at  2000-06-18 03:00:00 UTC        
+ RAD variables written at  2000-06-18 03:00:00 UTC        
+ $$$  2000-06-18 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.07  483.00
+ CLM History variables written
+ ATM variables written at  2000-06-18 04:00:00 UTC        
+ SRF variables written at  2000-06-18 04:00:00 UTC        
+ RAD variables written at  2000-06-18 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 05:00:00 UTC        
+ SRF variables written at  2000-06-18 05:00:00 UTC        
+ RAD variables written at  2000-06-18 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 06:00:00 UTC        
+ SRF variables written at  2000-06-18 06:00:00 UTC        
+ RAD variables written at  2000-06-18 06:00:00 UTC        
+ SEARCH BC data for 2000061812 , step =  1025760
+ READY  BC from     2000061806  to 2000061812 
+ $$$  2000-06-18 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.97  483.50
+ CLM History variables written
+ ATM variables written at  2000-06-18 07:00:00 UTC        
+ SRF variables written at  2000-06-18 07:00:00 UTC        
+ RAD variables written at  2000-06-18 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 08:00:00 UTC        
+ SRF variables written at  2000-06-18 08:00:00 UTC        
+ RAD variables written at  2000-06-18 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 09:00:00 UTC        
+ SRF variables written at  2000-06-18 09:00:00 UTC        
+ RAD variables written at  2000-06-18 09:00:00 UTC        
+ $$$  2000-06-18 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.41  484.25
+ CLM History variables written
+ ATM variables written at  2000-06-18 10:00:00 UTC        
+ SRF variables written at  2000-06-18 10:00:00 UTC        
+ RAD variables written at  2000-06-18 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 11:00:00 UTC        
+ SRF variables written at  2000-06-18 11:00:00 UTC        
+ RAD variables written at  2000-06-18 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 12:00:00 UTC        
+ SRF variables written at  2000-06-18 12:00:00 UTC        
+ RAD variables written at  2000-06-18 12:00:00 UTC        
+ SEARCH BC data for 2000061818 , step =  1026240
+ READY  BC from     2000061812  to 2000061818 
+ $$$  2000-06-18 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.57  484.89
+ CLM History variables written
+ ATM variables written at  2000-06-18 13:00:00 UTC        
+ SRF variables written at  2000-06-18 13:00:00 UTC        
+ RAD variables written at  2000-06-18 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 14:00:00 UTC        
+ SRF variables written at  2000-06-18 14:00:00 UTC        
+ RAD variables written at  2000-06-18 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 15:00:00 UTC        
+ SRF variables written at  2000-06-18 15:00:00 UTC        
+ RAD variables written at  2000-06-18 15:00:00 UTC        
+ $$$  2000-06-18 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.53  484.74
+ CLM History variables written
+ ATM variables written at  2000-06-18 16:00:00 UTC        
+ SRF variables written at  2000-06-18 16:00:00 UTC        
+ RAD variables written at  2000-06-18 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 17:00:00 UTC        
+ SRF variables written at  2000-06-18 17:00:00 UTC        
+ RAD variables written at  2000-06-18 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 18:00:00 UTC        
+ SRF variables written at  2000-06-18 18:00:00 UTC        
+ RAD variables written at  2000-06-18 18:00:00 UTC        
+ SEARCH BC data for 2000061900 , step =  1026720
+ READY  BC from     2000061818  to 2000061900 
+ $$$  2000-06-18 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.34  484.54
+ CLM History variables written
+ ATM variables written at  2000-06-18 19:00:00 UTC        
+ SRF variables written at  2000-06-18 19:00:00 UTC        
+ RAD variables written at  2000-06-18 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 20:00:00 UTC        
+ SRF variables written at  2000-06-18 20:00:00 UTC        
+ RAD variables written at  2000-06-18 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 21:00:00 UTC        
+ SRF variables written at  2000-06-18 21:00:00 UTC        
+ RAD variables written at  2000-06-18 21:00:00 UTC        
+ $$$  2000-06-18 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.77  484.03
+ CLM History variables written
+ ATM variables written at  2000-06-18 22:00:00 UTC        
+ SRF variables written at  2000-06-18 22:00:00 UTC        
+ RAD variables written at  2000-06-18 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-18 23:00:00 UTC        
+ SRF variables written at  2000-06-18 23:00:00 UTC        
+ RAD variables written at  2000-06-18 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-19 00:00:00 UTC        
+ JDay    170.00000 solar declination angle =  23.40724201 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-19 00:00:00 UTC        
+ SRF variables written at  2000-06-19 00:00:00 UTC        
+ STS variables written at  2000-06-19 00:00:00 UTC        
+ RAD variables written at  2000-06-19 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000061900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000061900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000061900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000061900.nc
+ Elapsed seconds of run for this period :    829.7188    
+ SEARCH BC data for 2000061906 , step =  1027200
+ READY  BC from     2000061900  to 2000061906 
+ $$$  2000-06-19 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.63  483.28
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.535E-16
+    0.751E-13  0.181E-11  0.130E-10  0.515E-10  0.144E-09  0.321E-09  0.605E-09
+    0.101E-08  0.154E-08  0.217E-08  0.288E-08  0.364E-08  0.442E-08  0.517E-08
+    0.587E-08  0.649E-08  0.702E-08  0.743E-08  0.773E-08  0.792E-08  0.799E-08
+    0.796E-08  0.782E-08  0.761E-08  0.731E-08  0.696E-08  0.655E-08  0.609E-08
+    0.609E-08  0.559E-08  0.506E-08  0.449E-08  0.387E-08  0.315E-08  0.215E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-19 01:00:00 UTC        
+ SRF variables written at  2000-06-19 01:00:00 UTC        
+ RAD variables written at  2000-06-19 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 02:00:00 UTC        
+ SRF variables written at  2000-06-19 02:00:00 UTC        
+ RAD variables written at  2000-06-19 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 03:00:00 UTC        
+ SRF variables written at  2000-06-19 03:00:00 UTC        
+ RAD variables written at  2000-06-19 03:00:00 UTC        
+ $$$  2000-06-19 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.32  482.76
+ CLM History variables written
+ ATM variables written at  2000-06-19 04:00:00 UTC        
+ SRF variables written at  2000-06-19 04:00:00 UTC        
+ RAD variables written at  2000-06-19 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 05:00:00 UTC        
+ SRF variables written at  2000-06-19 05:00:00 UTC        
+ RAD variables written at  2000-06-19 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 06:00:00 UTC        
+ SRF variables written at  2000-06-19 06:00:00 UTC        
+ RAD variables written at  2000-06-19 06:00:00 UTC        
+ SEARCH BC data for 2000061912 , step =  1027680
+ READY  BC from     2000061906  to 2000061912 
+ $$$  2000-06-19 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.04  482.66
+ CLM History variables written
+ ATM variables written at  2000-06-19 07:00:00 UTC        
+ SRF variables written at  2000-06-19 07:00:00 UTC        
+ RAD variables written at  2000-06-19 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 08:00:00 UTC        
+ SRF variables written at  2000-06-19 08:00:00 UTC        
+ RAD variables written at  2000-06-19 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 09:00:00 UTC        
+ SRF variables written at  2000-06-19 09:00:00 UTC        
+ RAD variables written at  2000-06-19 09:00:00 UTC        
+ $$$  2000-06-19 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.28  484.39
+ CLM History variables written
+ ATM variables written at  2000-06-19 10:00:00 UTC        
+ SRF variables written at  2000-06-19 10:00:00 UTC        
+ RAD variables written at  2000-06-19 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 11:00:00 UTC        
+ SRF variables written at  2000-06-19 11:00:00 UTC        
+ RAD variables written at  2000-06-19 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 12:00:00 UTC        
+ SRF variables written at  2000-06-19 12:00:00 UTC        
+ RAD variables written at  2000-06-19 12:00:00 UTC        
+ SEARCH BC data for 2000061918 , step =  1028160
+ READY  BC from     2000061912  to 2000061918 
+ $$$  2000-06-19 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.52  485.69
+ CLM History variables written
+ ATM variables written at  2000-06-19 13:00:00 UTC        
+ SRF variables written at  2000-06-19 13:00:00 UTC        
+ RAD variables written at  2000-06-19 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 14:00:00 UTC        
+ SRF variables written at  2000-06-19 14:00:00 UTC        
+ RAD variables written at  2000-06-19 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 15:00:00 UTC        
+ SRF variables written at  2000-06-19 15:00:00 UTC        
+ RAD variables written at  2000-06-19 15:00:00 UTC        
+ $$$  2000-06-19 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.66  486.26
+ CLM History variables written
+ ATM variables written at  2000-06-19 16:00:00 UTC        
+ SRF variables written at  2000-06-19 16:00:00 UTC        
+ RAD variables written at  2000-06-19 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 17:00:00 UTC        
+ SRF variables written at  2000-06-19 17:00:00 UTC        
+ RAD variables written at  2000-06-19 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 18:00:00 UTC        
+ SRF variables written at  2000-06-19 18:00:00 UTC        
+ RAD variables written at  2000-06-19 18:00:00 UTC        
+ SEARCH BC data for 2000062000 , step =  1028640
+ READY  BC from     2000061918  to 2000062000 
+ $$$  2000-06-19 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.59  486.25
+ CLM History variables written
+ ATM variables written at  2000-06-19 19:00:00 UTC        
+ SRF variables written at  2000-06-19 19:00:00 UTC        
+ RAD variables written at  2000-06-19 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 20:00:00 UTC        
+ SRF variables written at  2000-06-19 20:00:00 UTC        
+ RAD variables written at  2000-06-19 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 21:00:00 UTC        
+ SRF variables written at  2000-06-19 21:00:00 UTC        
+ RAD variables written at  2000-06-19 21:00:00 UTC        
+ $$$  2000-06-19 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.77  486.32
+ CLM History variables written
+ ATM variables written at  2000-06-19 22:00:00 UTC        
+ SRF variables written at  2000-06-19 22:00:00 UTC        
+ RAD variables written at  2000-06-19 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-19 23:00:00 UTC        
+ SRF variables written at  2000-06-19 23:00:00 UTC        
+ RAD variables written at  2000-06-19 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-20 00:00:00 UTC        
+ JDay    171.00000 solar declination angle =  23.42495794 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-20 00:00:00 UTC        
+ SRF variables written at  2000-06-20 00:00:00 UTC        
+ STS variables written at  2000-06-20 00:00:00 UTC        
+ RAD variables written at  2000-06-20 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000062000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000062000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000062000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000062000.nc
+ Elapsed seconds of run for this period :    754.1172    
+ SEARCH BC data for 2000062006 , step =  1029120
+ READY  BC from     2000062000  to 2000062006 
+ $$$  2000-06-20 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.22  486.35
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.535E-16
+    0.751E-13  0.181E-11  0.130E-10  0.515E-10  0.144E-09  0.321E-09  0.605E-09
+    0.101E-08  0.154E-08  0.217E-08  0.288E-08  0.364E-08  0.442E-08  0.517E-08
+    0.587E-08  0.649E-08  0.702E-08  0.743E-08  0.773E-08  0.792E-08  0.799E-08
+    0.796E-08  0.782E-08  0.761E-08  0.731E-08  0.696E-08  0.655E-08  0.609E-08
+    0.609E-08  0.559E-08  0.506E-08  0.449E-08  0.387E-08  0.315E-08  0.215E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-20 01:00:00 UTC        
+ SRF variables written at  2000-06-20 01:00:00 UTC        
+ RAD variables written at  2000-06-20 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 02:00:00 UTC        
+ SRF variables written at  2000-06-20 02:00:00 UTC        
+ RAD variables written at  2000-06-20 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 03:00:00 UTC        
+ SRF variables written at  2000-06-20 03:00:00 UTC        
+ RAD variables written at  2000-06-20 03:00:00 UTC        
+ $$$  2000-06-20 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.38  486.12
+ CLM History variables written
+ ATM variables written at  2000-06-20 04:00:00 UTC        
+ SRF variables written at  2000-06-20 04:00:00 UTC        
+ RAD variables written at  2000-06-20 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 05:00:00 UTC        
+ SRF variables written at  2000-06-20 05:00:00 UTC        
+ RAD variables written at  2000-06-20 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 06:00:00 UTC        
+ SRF variables written at  2000-06-20 06:00:00 UTC        
+ RAD variables written at  2000-06-20 06:00:00 UTC        
+ SEARCH BC data for 2000062012 , step =  1029600
+ READY  BC from     2000062006  to 2000062012 
+ $$$  2000-06-20 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.56  486.65
+ CLM History variables written
+ ATM variables written at  2000-06-20 07:00:00 UTC        
+ SRF variables written at  2000-06-20 07:00:00 UTC        
+ RAD variables written at  2000-06-20 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 08:00:00 UTC        
+ SRF variables written at  2000-06-20 08:00:00 UTC        
+ RAD variables written at  2000-06-20 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 09:00:00 UTC        
+ SRF variables written at  2000-06-20 09:00:00 UTC        
+ RAD variables written at  2000-06-20 09:00:00 UTC        
+ $$$  2000-06-20 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.05  487.53
+ CLM History variables written
+ ATM variables written at  2000-06-20 10:00:00 UTC        
+ SRF variables written at  2000-06-20 10:00:00 UTC        
+ RAD variables written at  2000-06-20 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 11:00:00 UTC        
+ SRF variables written at  2000-06-20 11:00:00 UTC        
+ RAD variables written at  2000-06-20 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 12:00:00 UTC        
+ SRF variables written at  2000-06-20 12:00:00 UTC        
+ RAD variables written at  2000-06-20 12:00:00 UTC        
+ SEARCH BC data for 2000062018 , step =  1030080
+ READY  BC from     2000062012  to 2000062018 
+ $$$  2000-06-20 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.84  489.03
+ CLM History variables written
+ ATM variables written at  2000-06-20 13:00:00 UTC        
+ SRF variables written at  2000-06-20 13:00:00 UTC        
+ RAD variables written at  2000-06-20 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 14:00:00 UTC        
+ SRF variables written at  2000-06-20 14:00:00 UTC        
+ RAD variables written at  2000-06-20 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 15:00:00 UTC        
+ SRF variables written at  2000-06-20 15:00:00 UTC        
+ RAD variables written at  2000-06-20 15:00:00 UTC        
+ $$$  2000-06-20 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.05  489.97
+ CLM History variables written
+ ATM variables written at  2000-06-20 16:00:00 UTC        
+ SRF variables written at  2000-06-20 16:00:00 UTC        
+ RAD variables written at  2000-06-20 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 17:00:00 UTC        
+ SRF variables written at  2000-06-20 17:00:00 UTC        
+ RAD variables written at  2000-06-20 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 18:00:00 UTC        
+ SRF variables written at  2000-06-20 18:00:00 UTC        
+ RAD variables written at  2000-06-20 18:00:00 UTC        
+ SEARCH BC data for 2000062100 , step =  1030560
+ READY  BC from     2000062018  to 2000062100 
+ $$$  2000-06-20 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.51  490.94
+ CLM History variables written
+ ATM variables written at  2000-06-20 19:00:00 UTC        
+ SRF variables written at  2000-06-20 19:00:00 UTC        
+ RAD variables written at  2000-06-20 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 20:00:00 UTC        
+ SRF variables written at  2000-06-20 20:00:00 UTC        
+ RAD variables written at  2000-06-20 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 21:00:00 UTC        
+ SRF variables written at  2000-06-20 21:00:00 UTC        
+ RAD variables written at  2000-06-20 21:00:00 UTC        
+ $$$  2000-06-20 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.20  491.74
+ CLM History variables written
+ ATM variables written at  2000-06-20 22:00:00 UTC        
+ SRF variables written at  2000-06-20 22:00:00 UTC        
+ RAD variables written at  2000-06-20 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-20 23:00:00 UTC        
+ SRF variables written at  2000-06-20 23:00:00 UTC        
+ RAD variables written at  2000-06-20 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-21 00:00:00 UTC        
+ JDay    172.00000 solar declination angle =  23.43579400 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-21 00:00:00 UTC        
+ SRF variables written at  2000-06-21 00:00:00 UTC        
+ STS variables written at  2000-06-21 00:00:00 UTC        
+ RAD variables written at  2000-06-21 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000062100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000062100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000062100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000062100.nc
+ Elapsed seconds of run for this period :    700.6406    
+ SEARCH BC data for 2000062106 , step =  1031040
+ READY  BC from     2000062100  to 2000062106 
+ $$$  2000-06-21 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.45  492.39
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.535E-16
+    0.751E-13  0.181E-11  0.130E-10  0.515E-10  0.144E-09  0.321E-09  0.605E-09
+    0.101E-08  0.154E-08  0.217E-08  0.288E-08  0.364E-08  0.442E-08  0.517E-08
+    0.587E-08  0.649E-08  0.702E-08  0.743E-08  0.773E-08  0.792E-08  0.799E-08
+    0.796E-08  0.782E-08  0.761E-08  0.731E-08  0.696E-08  0.655E-08  0.609E-08
+    0.609E-08  0.559E-08  0.506E-08  0.449E-08  0.387E-08  0.315E-08  0.215E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-21 01:00:00 UTC        
+ SRF variables written at  2000-06-21 01:00:00 UTC        
+ RAD variables written at  2000-06-21 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 02:00:00 UTC        
+ SRF variables written at  2000-06-21 02:00:00 UTC        
+ RAD variables written at  2000-06-21 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 03:00:00 UTC        
+ SRF variables written at  2000-06-21 03:00:00 UTC        
+ RAD variables written at  2000-06-21 03:00:00 UTC        
+ $$$  2000-06-21 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.14  492.71
+ CLM History variables written
+ ATM variables written at  2000-06-21 04:00:00 UTC        
+ SRF variables written at  2000-06-21 04:00:00 UTC        
+ RAD variables written at  2000-06-21 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 05:00:00 UTC        
+ SRF variables written at  2000-06-21 05:00:00 UTC        
+ RAD variables written at  2000-06-21 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 06:00:00 UTC        
+ SRF variables written at  2000-06-21 06:00:00 UTC        
+ RAD variables written at  2000-06-21 06:00:00 UTC        
+ SEARCH BC data for 2000062112 , step =  1031520
+ READY  BC from     2000062106  to 2000062112 
+ $$$  2000-06-21 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.15  492.84
+ CLM History variables written
+ ATM variables written at  2000-06-21 07:00:00 UTC        
+ SRF variables written at  2000-06-21 07:00:00 UTC        
+ RAD variables written at  2000-06-21 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 08:00:00 UTC        
+ SRF variables written at  2000-06-21 08:00:00 UTC        
+ RAD variables written at  2000-06-21 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 09:00:00 UTC        
+ SRF variables written at  2000-06-21 09:00:00 UTC        
+ RAD variables written at  2000-06-21 09:00:00 UTC        
+ $$$  2000-06-21 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.54  493.05
+ CLM History variables written
+ ATM variables written at  2000-06-21 10:00:00 UTC        
+ SRF variables written at  2000-06-21 10:00:00 UTC        
+ RAD variables written at  2000-06-21 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 11:00:00 UTC        
+ SRF variables written at  2000-06-21 11:00:00 UTC        
+ RAD variables written at  2000-06-21 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 12:00:00 UTC        
+ SRF variables written at  2000-06-21 12:00:00 UTC        
+ RAD variables written at  2000-06-21 12:00:00 UTC        
+ SEARCH BC data for 2000062118 , step =  1032000
+ READY  BC from     2000062112  to 2000062118 
+ $$$  2000-06-21 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.54  493.22
+ CLM History variables written
+ ATM variables written at  2000-06-21 13:00:00 UTC        
+ SRF variables written at  2000-06-21 13:00:00 UTC        
+ RAD variables written at  2000-06-21 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 14:00:00 UTC        
+ SRF variables written at  2000-06-21 14:00:00 UTC        
+ RAD variables written at  2000-06-21 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 15:00:00 UTC        
+ SRF variables written at  2000-06-21 15:00:00 UTC        
+ RAD variables written at  2000-06-21 15:00:00 UTC        
+ $$$  2000-06-21 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.95  493.23
+ CLM History variables written
+ ATM variables written at  2000-06-21 16:00:00 UTC        
+ SRF variables written at  2000-06-21 16:00:00 UTC        
+ RAD variables written at  2000-06-21 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 17:00:00 UTC        
+ SRF variables written at  2000-06-21 17:00:00 UTC        
+ RAD variables written at  2000-06-21 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 18:00:00 UTC        
+ SRF variables written at  2000-06-21 18:00:00 UTC        
+ RAD variables written at  2000-06-21 18:00:00 UTC        
+ SEARCH BC data for 2000062200 , step =  1032480
+ READY  BC from     2000062118  to 2000062200 
+ $$$  2000-06-21 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.08  493.30
+ CLM History variables written
+ ATM variables written at  2000-06-21 19:00:00 UTC        
+ SRF variables written at  2000-06-21 19:00:00 UTC        
+ RAD variables written at  2000-06-21 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 20:00:00 UTC        
+ SRF variables written at  2000-06-21 20:00:00 UTC        
+ RAD variables written at  2000-06-21 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 21:00:00 UTC        
+ SRF variables written at  2000-06-21 21:00:00 UTC        
+ RAD variables written at  2000-06-21 21:00:00 UTC        
+ $$$  2000-06-21 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.12  492.90
+ CLM History variables written
+ ATM variables written at  2000-06-21 22:00:00 UTC        
+ SRF variables written at  2000-06-21 22:00:00 UTC        
+ RAD variables written at  2000-06-21 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-21 23:00:00 UTC        
+ SRF variables written at  2000-06-21 23:00:00 UTC        
+ RAD variables written at  2000-06-21 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-22 00:00:00 UTC        
+ JDay    173.00000 solar declination angle =  23.43974853 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-22 00:00:00 UTC        
+ SRF variables written at  2000-06-22 00:00:00 UTC        
+ STS variables written at  2000-06-22 00:00:00 UTC        
+ RAD variables written at  2000-06-22 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000062200.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000062200.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000062200.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000062200.nc
+ Elapsed seconds of run for this period :    699.0312    
+ SEARCH BC data for 2000062206 , step =  1032960
+ READY  BC from     2000062200  to 2000062206 
+ $$$  2000-06-22 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.79  492.69
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.535E-16
+    0.751E-13  0.181E-11  0.130E-10  0.515E-10  0.144E-09  0.321E-09  0.605E-09
+    0.101E-08  0.154E-08  0.217E-08  0.288E-08  0.364E-08  0.442E-08  0.517E-08
+    0.587E-08  0.649E-08  0.702E-08  0.743E-08  0.773E-08  0.792E-08  0.799E-08
+    0.796E-08  0.782E-08  0.761E-08  0.731E-08  0.696E-08  0.655E-08  0.609E-08
+    0.609E-08  0.559E-08  0.506E-08  0.449E-08  0.387E-08  0.315E-08  0.215E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-22 01:00:00 UTC        
+ SRF variables written at  2000-06-22 01:00:00 UTC        
+ RAD variables written at  2000-06-22 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 02:00:00 UTC        
+ SRF variables written at  2000-06-22 02:00:00 UTC        
+ RAD variables written at  2000-06-22 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 03:00:00 UTC        
+ SRF variables written at  2000-06-22 03:00:00 UTC        
+ RAD variables written at  2000-06-22 03:00:00 UTC        
+ $$$  2000-06-22 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.66  492.47
+ CLM History variables written
+ ATM variables written at  2000-06-22 04:00:00 UTC        
+ SRF variables written at  2000-06-22 04:00:00 UTC        
+ RAD variables written at  2000-06-22 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 05:00:00 UTC        
+ SRF variables written at  2000-06-22 05:00:00 UTC        
+ RAD variables written at  2000-06-22 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 06:00:00 UTC        
+ SRF variables written at  2000-06-22 06:00:00 UTC        
+ RAD variables written at  2000-06-22 06:00:00 UTC        
+ SEARCH BC data for 2000062212 , step =  1033440
+ READY  BC from     2000062206  to 2000062212 
+ $$$  2000-06-22 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.69  491.88
+ CLM History variables written
+ ATM variables written at  2000-06-22 07:00:00 UTC        
+ SRF variables written at  2000-06-22 07:00:00 UTC        
+ RAD variables written at  2000-06-22 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 08:00:00 UTC        
+ SRF variables written at  2000-06-22 08:00:00 UTC        
+ RAD variables written at  2000-06-22 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 09:00:00 UTC        
+ SRF variables written at  2000-06-22 09:00:00 UTC        
+ RAD variables written at  2000-06-22 09:00:00 UTC        
+ $$$  2000-06-22 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.88  491.38
+ CLM History variables written
+ ATM variables written at  2000-06-22 10:00:00 UTC        
+ SRF variables written at  2000-06-22 10:00:00 UTC        
+ RAD variables written at  2000-06-22 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 11:00:00 UTC        
+ SRF variables written at  2000-06-22 11:00:00 UTC        
+ RAD variables written at  2000-06-22 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 12:00:00 UTC        
+ SRF variables written at  2000-06-22 12:00:00 UTC        
+ RAD variables written at  2000-06-22 12:00:00 UTC        
+ SEARCH BC data for 2000062218 , step =  1033920
+ READY  BC from     2000062212  to 2000062218 
+ $$$  2000-06-22 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.52  491.18
+ CLM History variables written
+ ATM variables written at  2000-06-22 13:00:00 UTC        
+ SRF variables written at  2000-06-22 13:00:00 UTC        
+ RAD variables written at  2000-06-22 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 14:00:00 UTC        
+ SRF variables written at  2000-06-22 14:00:00 UTC        
+ RAD variables written at  2000-06-22 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 15:00:00 UTC        
+ SRF variables written at  2000-06-22 15:00:00 UTC        
+ RAD variables written at  2000-06-22 15:00:00 UTC        
+ $$$  2000-06-22 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.02  490.52
+ CLM History variables written
+ ATM variables written at  2000-06-22 16:00:00 UTC        
+ SRF variables written at  2000-06-22 16:00:00 UTC        
+ RAD variables written at  2000-06-22 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 17:00:00 UTC        
+ SRF variables written at  2000-06-22 17:00:00 UTC        
+ RAD variables written at  2000-06-22 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 18:00:00 UTC        
+ SRF variables written at  2000-06-22 18:00:00 UTC        
+ RAD variables written at  2000-06-22 18:00:00 UTC        
+ SEARCH BC data for 2000062300 , step =  1034400
+ READY  BC from     2000062218  to 2000062300 
+ $$$  2000-06-22 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.88  489.83
+ CLM History variables written
+ ATM variables written at  2000-06-22 19:00:00 UTC        
+ SRF variables written at  2000-06-22 19:00:00 UTC        
+ RAD variables written at  2000-06-22 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 20:00:00 UTC        
+ SRF variables written at  2000-06-22 20:00:00 UTC        
+ RAD variables written at  2000-06-22 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 21:00:00 UTC        
+ SRF variables written at  2000-06-22 21:00:00 UTC        
+ RAD variables written at  2000-06-22 21:00:00 UTC        
+ $$$  2000-06-22 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.78  489.04
+ CLM History variables written
+ ATM variables written at  2000-06-22 22:00:00 UTC        
+ SRF variables written at  2000-06-22 22:00:00 UTC        
+ RAD variables written at  2000-06-22 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-22 23:00:00 UTC        
+ SRF variables written at  2000-06-22 23:00:00 UTC        
+ RAD variables written at  2000-06-22 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-23 00:00:00 UTC        
+ JDay    174.00000 solar declination angle =  23.43682254 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-23 00:00:00 UTC        
+ SRF variables written at  2000-06-23 00:00:00 UTC        
+ STS variables written at  2000-06-23 00:00:00 UTC        
+ RAD variables written at  2000-06-23 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000062300.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000062300.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000062300.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000062300.nc
+ Elapsed seconds of run for this period :    671.3828    
+ SEARCH BC data for 2000062306 , step =  1034880
+ READY  BC from     2000062300  to 2000062306 
+ $$$  2000-06-23 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.46  488.47
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.535E-16
+    0.751E-13  0.181E-11  0.130E-10  0.515E-10  0.144E-09  0.321E-09  0.605E-09
+    0.101E-08  0.154E-08  0.217E-08  0.288E-08  0.364E-08  0.442E-08  0.517E-08
+    0.587E-08  0.649E-08  0.702E-08  0.743E-08  0.773E-08  0.792E-08  0.799E-08
+    0.796E-08  0.782E-08  0.761E-08  0.731E-08  0.696E-08  0.655E-08  0.609E-08
+    0.609E-08  0.559E-08  0.506E-08  0.449E-08  0.387E-08  0.315E-08  0.215E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-23 01:00:00 UTC        
+ SRF variables written at  2000-06-23 01:00:00 UTC        
+ RAD variables written at  2000-06-23 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 02:00:00 UTC        
+ SRF variables written at  2000-06-23 02:00:00 UTC        
+ RAD variables written at  2000-06-23 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 03:00:00 UTC        
+ SRF variables written at  2000-06-23 03:00:00 UTC        
+ RAD variables written at  2000-06-23 03:00:00 UTC        
+ $$$  2000-06-23 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.40  487.26
+ CLM History variables written
+ ATM variables written at  2000-06-23 04:00:00 UTC        
+ SRF variables written at  2000-06-23 04:00:00 UTC        
+ RAD variables written at  2000-06-23 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 05:00:00 UTC        
+ SRF variables written at  2000-06-23 05:00:00 UTC        
+ RAD variables written at  2000-06-23 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 06:00:00 UTC        
+ SRF variables written at  2000-06-23 06:00:00 UTC        
+ RAD variables written at  2000-06-23 06:00:00 UTC        
+ SEARCH BC data for 2000062312 , step =  1035360
+ READY  BC from     2000062306  to 2000062312 
+ $$$  2000-06-23 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.70  485.66
+ CLM History variables written
+ ATM variables written at  2000-06-23 07:00:00 UTC        
+ SRF variables written at  2000-06-23 07:00:00 UTC        
+ RAD variables written at  2000-06-23 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 08:00:00 UTC        
+ SRF variables written at  2000-06-23 08:00:00 UTC        
+ RAD variables written at  2000-06-23 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 09:00:00 UTC        
+ SRF variables written at  2000-06-23 09:00:00 UTC        
+ RAD variables written at  2000-06-23 09:00:00 UTC        
+ $$$  2000-06-23 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.48  483.70
+ CLM History variables written
+ ATM variables written at  2000-06-23 10:00:00 UTC        
+ SRF variables written at  2000-06-23 10:00:00 UTC        
+ RAD variables written at  2000-06-23 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 11:00:00 UTC        
+ SRF variables written at  2000-06-23 11:00:00 UTC        
+ RAD variables written at  2000-06-23 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 12:00:00 UTC        
+ SRF variables written at  2000-06-23 12:00:00 UTC        
+ RAD variables written at  2000-06-23 12:00:00 UTC        
+ SEARCH BC data for 2000062318 , step =  1035840
+ READY  BC from     2000062312  to 2000062318 
+ $$$  2000-06-23 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.39  481.68
+ CLM History variables written
+ ATM variables written at  2000-06-23 13:00:00 UTC        
+ SRF variables written at  2000-06-23 13:00:00 UTC        
+ RAD variables written at  2000-06-23 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 14:00:00 UTC        
+ SRF variables written at  2000-06-23 14:00:00 UTC        
+ RAD variables written at  2000-06-23 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 15:00:00 UTC        
+ SRF variables written at  2000-06-23 15:00:00 UTC        
+ RAD variables written at  2000-06-23 15:00:00 UTC        
+ $$$  2000-06-23 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.39  479.53
+ CLM History variables written
+ ATM variables written at  2000-06-23 16:00:00 UTC        
+ SRF variables written at  2000-06-23 16:00:00 UTC        
+ RAD variables written at  2000-06-23 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 17:00:00 UTC        
+ SRF variables written at  2000-06-23 17:00:00 UTC        
+ RAD variables written at  2000-06-23 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 18:00:00 UTC        
+ SRF variables written at  2000-06-23 18:00:00 UTC        
+ RAD variables written at  2000-06-23 18:00:00 UTC        
+ SEARCH BC data for 2000062400 , step =  1036320
+ READY  BC from     2000062318  to 2000062400 
+ $$$  2000-06-23 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.26  477.42
+ CLM History variables written
+ ATM variables written at  2000-06-23 19:00:00 UTC        
+ SRF variables written at  2000-06-23 19:00:00 UTC        
+ RAD variables written at  2000-06-23 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 20:00:00 UTC        
+ SRF variables written at  2000-06-23 20:00:00 UTC        
+ RAD variables written at  2000-06-23 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 21:00:00 UTC        
+ SRF variables written at  2000-06-23 21:00:00 UTC        
+ RAD variables written at  2000-06-23 21:00:00 UTC        
+ $$$  2000-06-23 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.07  474.69
+ CLM History variables written
+ ATM variables written at  2000-06-23 22:00:00 UTC        
+ SRF variables written at  2000-06-23 22:00:00 UTC        
+ RAD variables written at  2000-06-23 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-23 23:00:00 UTC        
+ SRF variables written at  2000-06-23 23:00:00 UTC        
+ RAD variables written at  2000-06-23 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-24 00:00:00 UTC        
+ JDay    175.00000 solar declination angle =  23.42701981 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-24 00:00:00 UTC        
+ SRF variables written at  2000-06-24 00:00:00 UTC        
+ STS variables written at  2000-06-24 00:00:00 UTC        
+ RAD variables written at  2000-06-24 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000062400.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000062400.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000062400.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000062400.nc
+ Elapsed seconds of run for this period :    679.9922    
+ SEARCH BC data for 2000062406 , step =  1036800
+ READY  BC from     2000062400  to 2000062406 
+ $$$  2000-06-24 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.83  471.47
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.535E-16
+    0.751E-13  0.181E-11  0.130E-10  0.515E-10  0.144E-09  0.321E-09  0.605E-09
+    0.101E-08  0.154E-08  0.217E-08  0.288E-08  0.364E-08  0.442E-08  0.517E-08
+    0.587E-08  0.649E-08  0.702E-08  0.743E-08  0.773E-08  0.792E-08  0.799E-08
+    0.796E-08  0.782E-08  0.761E-08  0.731E-08  0.696E-08  0.655E-08  0.609E-08
+    0.609E-08  0.559E-08  0.506E-08  0.449E-08  0.387E-08  0.315E-08  0.215E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-24 01:00:00 UTC        
+ SRF variables written at  2000-06-24 01:00:00 UTC        
+ RAD variables written at  2000-06-24 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 02:00:00 UTC        
+ SRF variables written at  2000-06-24 02:00:00 UTC        
+ RAD variables written at  2000-06-24 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 03:00:00 UTC        
+ SRF variables written at  2000-06-24 03:00:00 UTC        
+ RAD variables written at  2000-06-24 03:00:00 UTC        
+ $$$  2000-06-24 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.35  472.76
+ CLM History variables written
+ ATM variables written at  2000-06-24 04:00:00 UTC        
+ SRF variables written at  2000-06-24 04:00:00 UTC        
+ RAD variables written at  2000-06-24 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 05:00:00 UTC        
+ SRF variables written at  2000-06-24 05:00:00 UTC        
+ RAD variables written at  2000-06-24 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 06:00:00 UTC        
+ SRF variables written at  2000-06-24 06:00:00 UTC        
+ RAD variables written at  2000-06-24 06:00:00 UTC        
+ SEARCH BC data for 2000062412 , step =  1037280
+ READY  BC from     2000062406  to 2000062412 
+ $$$  2000-06-24 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.20  474.99
+ CLM History variables written
+ ATM variables written at  2000-06-24 07:00:00 UTC        
+ SRF variables written at  2000-06-24 07:00:00 UTC        
+ RAD variables written at  2000-06-24 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 08:00:00 UTC        
+ SRF variables written at  2000-06-24 08:00:00 UTC        
+ RAD variables written at  2000-06-24 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 09:00:00 UTC        
+ SRF variables written at  2000-06-24 09:00:00 UTC        
+ RAD variables written at  2000-06-24 09:00:00 UTC        
+ $$$  2000-06-24 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.05  477.58
+ CLM History variables written
+ ATM variables written at  2000-06-24 10:00:00 UTC        
+ SRF variables written at  2000-06-24 10:00:00 UTC        
+ RAD variables written at  2000-06-24 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 11:00:00 UTC        
+ SRF variables written at  2000-06-24 11:00:00 UTC        
+ RAD variables written at  2000-06-24 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 12:00:00 UTC        
+ SRF variables written at  2000-06-24 12:00:00 UTC        
+ RAD variables written at  2000-06-24 12:00:00 UTC        
+ SEARCH BC data for 2000062418 , step =  1037760
+ READY  BC from     2000062412  to 2000062418 
+ $$$  2000-06-24 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.02  479.89
+ CLM History variables written
+ ATM variables written at  2000-06-24 13:00:00 UTC        
+ SRF variables written at  2000-06-24 13:00:00 UTC        
+ RAD variables written at  2000-06-24 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 14:00:00 UTC        
+ SRF variables written at  2000-06-24 14:00:00 UTC        
+ RAD variables written at  2000-06-24 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 15:00:00 UTC        
+ SRF variables written at  2000-06-24 15:00:00 UTC        
+ RAD variables written at  2000-06-24 15:00:00 UTC        
+ $$$  2000-06-24 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.73  482.65
+ CLM History variables written
+ ATM variables written at  2000-06-24 16:00:00 UTC        
+ SRF variables written at  2000-06-24 16:00:00 UTC        
+ RAD variables written at  2000-06-24 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 17:00:00 UTC        
+ SRF variables written at  2000-06-24 17:00:00 UTC        
+ RAD variables written at  2000-06-24 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 18:00:00 UTC        
+ SRF variables written at  2000-06-24 18:00:00 UTC        
+ RAD variables written at  2000-06-24 18:00:00 UTC        
+ SEARCH BC data for 2000062500 , step =  1038240
+ READY  BC from     2000062418  to 2000062500 
+ $$$  2000-06-24 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.46  484.79
+ CLM History variables written
+ ATM variables written at  2000-06-24 19:00:00 UTC        
+ SRF variables written at  2000-06-24 19:00:00 UTC        
+ RAD variables written at  2000-06-24 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 20:00:00 UTC        
+ SRF variables written at  2000-06-24 20:00:00 UTC        
+ RAD variables written at  2000-06-24 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 21:00:00 UTC        
+ SRF variables written at  2000-06-24 21:00:00 UTC        
+ RAD variables written at  2000-06-24 21:00:00 UTC        
+ $$$  2000-06-24 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.27  485.66
+ CLM History variables written
+ ATM variables written at  2000-06-24 22:00:00 UTC        
+ SRF variables written at  2000-06-24 22:00:00 UTC        
+ RAD variables written at  2000-06-24 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-24 23:00:00 UTC        
+ SRF variables written at  2000-06-24 23:00:00 UTC        
+ RAD variables written at  2000-06-24 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-25 00:00:00 UTC        
+ JDay    176.00000 solar declination angle =  23.41034681 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-25 00:00:00 UTC        
+ SRF variables written at  2000-06-25 00:00:00 UTC        
+ STS variables written at  2000-06-25 00:00:00 UTC        
+ RAD variables written at  2000-06-25 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000062500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000062500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000062500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000062500.nc
+ Elapsed seconds of run for this period :    695.5312    
+ SEARCH BC data for 2000062506 , step =  1038720
+ READY  BC from     2000062500  to 2000062506 
+ $$$  2000-06-25 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.51  486.01
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.537E-16
+    0.754E-13  0.181E-11  0.130E-10  0.517E-10  0.145E-09  0.322E-09  0.608E-09
+    0.101E-08  0.154E-08  0.218E-08  0.289E-08  0.366E-08  0.444E-08  0.519E-08
+    0.590E-08  0.652E-08  0.705E-08  0.747E-08  0.777E-08  0.796E-08  0.803E-08
+    0.799E-08  0.786E-08  0.764E-08  0.735E-08  0.699E-08  0.658E-08  0.612E-08
+    0.612E-08  0.562E-08  0.508E-08  0.451E-08  0.389E-08  0.317E-08  0.216E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-25 01:00:00 UTC        
+ SRF variables written at  2000-06-25 01:00:00 UTC        
+ RAD variables written at  2000-06-25 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 02:00:00 UTC        
+ SRF variables written at  2000-06-25 02:00:00 UTC        
+ RAD variables written at  2000-06-25 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 03:00:00 UTC        
+ SRF variables written at  2000-06-25 03:00:00 UTC        
+ RAD variables written at  2000-06-25 03:00:00 UTC        
+ $$$  2000-06-25 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.68  485.68
+ CLM History variables written
+ ATM variables written at  2000-06-25 04:00:00 UTC        
+ SRF variables written at  2000-06-25 04:00:00 UTC        
+ RAD variables written at  2000-06-25 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 05:00:00 UTC        
+ SRF variables written at  2000-06-25 05:00:00 UTC        
+ RAD variables written at  2000-06-25 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 06:00:00 UTC        
+ SRF variables written at  2000-06-25 06:00:00 UTC        
+ RAD variables written at  2000-06-25 06:00:00 UTC        
+ SEARCH BC data for 2000062512 , step =  1039200
+ READY  BC from     2000062506  to 2000062512 
+ $$$  2000-06-25 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.95  484.96
+ CLM History variables written
+ ATM variables written at  2000-06-25 07:00:00 UTC        
+ SRF variables written at  2000-06-25 07:00:00 UTC        
+ RAD variables written at  2000-06-25 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 08:00:00 UTC        
+ SRF variables written at  2000-06-25 08:00:00 UTC        
+ RAD variables written at  2000-06-25 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 09:00:00 UTC        
+ SRF variables written at  2000-06-25 09:00:00 UTC        
+ RAD variables written at  2000-06-25 09:00:00 UTC        
+ $$$  2000-06-25 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.92  484.43
+ CLM History variables written
+ ATM variables written at  2000-06-25 10:00:00 UTC        
+ SRF variables written at  2000-06-25 10:00:00 UTC        
+ RAD variables written at  2000-06-25 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 11:00:00 UTC        
+ SRF variables written at  2000-06-25 11:00:00 UTC        
+ RAD variables written at  2000-06-25 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 12:00:00 UTC        
+ SRF variables written at  2000-06-25 12:00:00 UTC        
+ RAD variables written at  2000-06-25 12:00:00 UTC        
+ SEARCH BC data for 2000062518 , step =  1039680
+ READY  BC from     2000062512  to 2000062518 
+ $$$  2000-06-25 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.71  484.43
+ CLM History variables written
+ ATM variables written at  2000-06-25 13:00:00 UTC        
+ SRF variables written at  2000-06-25 13:00:00 UTC        
+ RAD variables written at  2000-06-25 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 14:00:00 UTC        
+ SRF variables written at  2000-06-25 14:00:00 UTC        
+ RAD variables written at  2000-06-25 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 15:00:00 UTC        
+ SRF variables written at  2000-06-25 15:00:00 UTC        
+ RAD variables written at  2000-06-25 15:00:00 UTC        
+ $$$  2000-06-25 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.36  484.56
+ CLM History variables written
+ ATM variables written at  2000-06-25 16:00:00 UTC        
+ SRF variables written at  2000-06-25 16:00:00 UTC        
+ RAD variables written at  2000-06-25 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 17:00:00 UTC        
+ SRF variables written at  2000-06-25 17:00:00 UTC        
+ RAD variables written at  2000-06-25 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 18:00:00 UTC        
+ SRF variables written at  2000-06-25 18:00:00 UTC        
+ RAD variables written at  2000-06-25 18:00:00 UTC        
+ SEARCH BC data for 2000062600 , step =  1040160
+ READY  BC from     2000062518  to 2000062600 
+ $$$  2000-06-25 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.16  484.77
+ CLM History variables written
+ ATM variables written at  2000-06-25 19:00:00 UTC        
+ SRF variables written at  2000-06-25 19:00:00 UTC        
+ RAD variables written at  2000-06-25 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 20:00:00 UTC        
+ SRF variables written at  2000-06-25 20:00:00 UTC        
+ RAD variables written at  2000-06-25 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 21:00:00 UTC        
+ SRF variables written at  2000-06-25 21:00:00 UTC        
+ RAD variables written at  2000-06-25 21:00:00 UTC        
+ $$$  2000-06-25 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.50  485.33
+ CLM History variables written
+ ATM variables written at  2000-06-25 22:00:00 UTC        
+ SRF variables written at  2000-06-25 22:00:00 UTC        
+ RAD variables written at  2000-06-25 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-25 23:00:00 UTC        
+ SRF variables written at  2000-06-25 23:00:00 UTC        
+ RAD variables written at  2000-06-25 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-26 00:00:00 UTC        
+ JDay    177.00000 solar declination angle =  23.38681275 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-26 00:00:00 UTC        
+ SRF variables written at  2000-06-26 00:00:00 UTC        
+ STS variables written at  2000-06-26 00:00:00 UTC        
+ RAD variables written at  2000-06-26 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000062600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000062600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000062600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000062600.nc
+ Elapsed seconds of run for this period :    685.6484    
+ SEARCH BC data for 2000062606 , step =  1040640
+ READY  BC from     2000062600  to 2000062606 
+ $$$  2000-06-26 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.39  485.84
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.537E-16
+    0.754E-13  0.181E-11  0.130E-10  0.517E-10  0.145E-09  0.322E-09  0.608E-09
+    0.101E-08  0.154E-08  0.218E-08  0.289E-08  0.366E-08  0.444E-08  0.519E-08
+    0.590E-08  0.652E-08  0.705E-08  0.747E-08  0.777E-08  0.796E-08  0.803E-08
+    0.799E-08  0.786E-08  0.764E-08  0.735E-08  0.699E-08  0.658E-08  0.612E-08
+    0.612E-08  0.562E-08  0.508E-08  0.451E-08  0.389E-08  0.317E-08  0.216E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-26 01:00:00 UTC        
+ SRF variables written at  2000-06-26 01:00:00 UTC        
+ RAD variables written at  2000-06-26 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 02:00:00 UTC        
+ SRF variables written at  2000-06-26 02:00:00 UTC        
+ RAD variables written at  2000-06-26 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 03:00:00 UTC        
+ SRF variables written at  2000-06-26 03:00:00 UTC        
+ RAD variables written at  2000-06-26 03:00:00 UTC        
+ $$$  2000-06-26 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.57  486.11
+ CLM History variables written
+ ATM variables written at  2000-06-26 04:00:00 UTC        
+ SRF variables written at  2000-06-26 04:00:00 UTC        
+ RAD variables written at  2000-06-26 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 05:00:00 UTC        
+ SRF variables written at  2000-06-26 05:00:00 UTC        
+ RAD variables written at  2000-06-26 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 06:00:00 UTC        
+ SRF variables written at  2000-06-26 06:00:00 UTC        
+ RAD variables written at  2000-06-26 06:00:00 UTC        
+ SEARCH BC data for 2000062612 , step =  1041120
+ READY  BC from     2000062606  to 2000062612 
+ $$$  2000-06-26 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.37  486.65
+ CLM History variables written
+ ATM variables written at  2000-06-26 07:00:00 UTC        
+ SRF variables written at  2000-06-26 07:00:00 UTC        
+ RAD variables written at  2000-06-26 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 08:00:00 UTC        
+ SRF variables written at  2000-06-26 08:00:00 UTC        
+ RAD variables written at  2000-06-26 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 09:00:00 UTC        
+ SRF variables written at  2000-06-26 09:00:00 UTC        
+ RAD variables written at  2000-06-26 09:00:00 UTC        
+ $$$  2000-06-26 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.94  487.85
+ CLM History variables written
+ ATM variables written at  2000-06-26 10:00:00 UTC        
+ SRF variables written at  2000-06-26 10:00:00 UTC        
+ RAD variables written at  2000-06-26 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 11:00:00 UTC        
+ SRF variables written at  2000-06-26 11:00:00 UTC        
+ RAD variables written at  2000-06-26 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 12:00:00 UTC        
+ SRF variables written at  2000-06-26 12:00:00 UTC        
+ RAD variables written at  2000-06-26 12:00:00 UTC        
+ SEARCH BC data for 2000062618 , step =  1041600
+ READY  BC from     2000062612  to 2000062618 
+ $$$  2000-06-26 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.13  489.15
+ CLM History variables written
+ ATM variables written at  2000-06-26 13:00:00 UTC        
+ SRF variables written at  2000-06-26 13:00:00 UTC        
+ RAD variables written at  2000-06-26 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 14:00:00 UTC        
+ SRF variables written at  2000-06-26 14:00:00 UTC        
+ RAD variables written at  2000-06-26 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 15:00:00 UTC        
+ SRF variables written at  2000-06-26 15:00:00 UTC        
+ RAD variables written at  2000-06-26 15:00:00 UTC        
+ $$$  2000-06-26 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.70  489.82
+ CLM History variables written
+ ATM variables written at  2000-06-26 16:00:00 UTC        
+ SRF variables written at  2000-06-26 16:00:00 UTC        
+ RAD variables written at  2000-06-26 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 17:00:00 UTC        
+ SRF variables written at  2000-06-26 17:00:00 UTC        
+ RAD variables written at  2000-06-26 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 18:00:00 UTC        
+ SRF variables written at  2000-06-26 18:00:00 UTC        
+ RAD variables written at  2000-06-26 18:00:00 UTC        
+ SEARCH BC data for 2000062700 , step =  1042080
+ READY  BC from     2000062618  to 2000062700 
+ $$$  2000-06-26 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.23  490.20
+ CLM History variables written
+ ATM variables written at  2000-06-26 19:00:00 UTC        
+ SRF variables written at  2000-06-26 19:00:00 UTC        
+ RAD variables written at  2000-06-26 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 20:00:00 UTC        
+ SRF variables written at  2000-06-26 20:00:00 UTC        
+ RAD variables written at  2000-06-26 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 21:00:00 UTC        
+ SRF variables written at  2000-06-26 21:00:00 UTC        
+ RAD variables written at  2000-06-26 21:00:00 UTC        
+ $$$  2000-06-26 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.69  490.34
+ CLM History variables written
+ ATM variables written at  2000-06-26 22:00:00 UTC        
+ SRF variables written at  2000-06-26 22:00:00 UTC        
+ RAD variables written at  2000-06-26 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-26 23:00:00 UTC        
+ SRF variables written at  2000-06-26 23:00:00 UTC        
+ RAD variables written at  2000-06-26 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-27 00:00:00 UTC        
+ JDay    178.00000 solar declination angle =  23.35642950 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-27 00:00:00 UTC        
+ SRF variables written at  2000-06-27 00:00:00 UTC        
+ STS variables written at  2000-06-27 00:00:00 UTC        
+ RAD variables written at  2000-06-27 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000062700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000062700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000062700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000062700.nc
+ Elapsed seconds of run for this period :    692.2656    
+ SEARCH BC data for 2000062706 , step =  1042560
+ READY  BC from     2000062700  to 2000062706 
+ $$$  2000-06-27 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.97  490.39
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.537E-16
+    0.754E-13  0.181E-11  0.130E-10  0.517E-10  0.145E-09  0.322E-09  0.608E-09
+    0.101E-08  0.154E-08  0.218E-08  0.289E-08  0.366E-08  0.444E-08  0.519E-08
+    0.590E-08  0.652E-08  0.705E-08  0.747E-08  0.777E-08  0.796E-08  0.803E-08
+    0.799E-08  0.786E-08  0.764E-08  0.735E-08  0.699E-08  0.658E-08  0.612E-08
+    0.612E-08  0.562E-08  0.508E-08  0.451E-08  0.389E-08  0.317E-08  0.216E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-27 01:00:00 UTC        
+ SRF variables written at  2000-06-27 01:00:00 UTC        
+ RAD variables written at  2000-06-27 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 02:00:00 UTC        
+ SRF variables written at  2000-06-27 02:00:00 UTC        
+ RAD variables written at  2000-06-27 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 03:00:00 UTC        
+ SRF variables written at  2000-06-27 03:00:00 UTC        
+ RAD variables written at  2000-06-27 03:00:00 UTC        
+ $$$  2000-06-27 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.95  490.47
+ CLM History variables written
+ ATM variables written at  2000-06-27 04:00:00 UTC        
+ SRF variables written at  2000-06-27 04:00:00 UTC        
+ RAD variables written at  2000-06-27 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 05:00:00 UTC        
+ SRF variables written at  2000-06-27 05:00:00 UTC        
+ RAD variables written at  2000-06-27 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 06:00:00 UTC        
+ SRF variables written at  2000-06-27 06:00:00 UTC        
+ RAD variables written at  2000-06-27 06:00:00 UTC        
+ SEARCH BC data for 2000062712 , step =  1043040
+ READY  BC from     2000062706  to 2000062712 
+ $$$  2000-06-27 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.06  490.51
+ CLM History variables written
+ ATM variables written at  2000-06-27 07:00:00 UTC        
+ SRF variables written at  2000-06-27 07:00:00 UTC        
+ RAD variables written at  2000-06-27 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 08:00:00 UTC        
+ SRF variables written at  2000-06-27 08:00:00 UTC        
+ RAD variables written at  2000-06-27 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 09:00:00 UTC        
+ SRF variables written at  2000-06-27 09:00:00 UTC        
+ RAD variables written at  2000-06-27 09:00:00 UTC        
+ $$$  2000-06-27 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.92  490.37
+ CLM History variables written
+ ATM variables written at  2000-06-27 10:00:00 UTC        
+ SRF variables written at  2000-06-27 10:00:00 UTC        
+ RAD variables written at  2000-06-27 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 11:00:00 UTC        
+ SRF variables written at  2000-06-27 11:00:00 UTC        
+ RAD variables written at  2000-06-27 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 12:00:00 UTC        
+ SRF variables written at  2000-06-27 12:00:00 UTC        
+ RAD variables written at  2000-06-27 12:00:00 UTC        
+ SEARCH BC data for 2000062718 , step =  1043520
+ READY  BC from     2000062712  to 2000062718 
+ $$$  2000-06-27 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.04  490.05
+ CLM History variables written
+ ATM variables written at  2000-06-27 13:00:00 UTC        
+ SRF variables written at  2000-06-27 13:00:00 UTC        
+ RAD variables written at  2000-06-27 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 14:00:00 UTC        
+ SRF variables written at  2000-06-27 14:00:00 UTC        
+ RAD variables written at  2000-06-27 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 15:00:00 UTC        
+ SRF variables written at  2000-06-27 15:00:00 UTC        
+ RAD variables written at  2000-06-27 15:00:00 UTC        
+ $$$  2000-06-27 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.83  489.32
+ CLM History variables written
+ ATM variables written at  2000-06-27 16:00:00 UTC        
+ SRF variables written at  2000-06-27 16:00:00 UTC        
+ RAD variables written at  2000-06-27 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 17:00:00 UTC        
+ SRF variables written at  2000-06-27 17:00:00 UTC        
+ RAD variables written at  2000-06-27 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 18:00:00 UTC        
+ SRF variables written at  2000-06-27 18:00:00 UTC        
+ RAD variables written at  2000-06-27 18:00:00 UTC        
+ SEARCH BC data for 2000062800 , step =  1044000
+ READY  BC from     2000062718  to 2000062800 
+ $$$  2000-06-27 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.88  488.42
+ CLM History variables written
+ ATM variables written at  2000-06-27 19:00:00 UTC        
+ SRF variables written at  2000-06-27 19:00:00 UTC        
+ RAD variables written at  2000-06-27 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 20:00:00 UTC        
+ SRF variables written at  2000-06-27 20:00:00 UTC        
+ RAD variables written at  2000-06-27 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 21:00:00 UTC        
+ SRF variables written at  2000-06-27 21:00:00 UTC        
+ RAD variables written at  2000-06-27 21:00:00 UTC        
+ $$$  2000-06-27 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.56  487.72
+ CLM History variables written
+ ATM variables written at  2000-06-27 22:00:00 UTC        
+ SRF variables written at  2000-06-27 22:00:00 UTC        
+ RAD variables written at  2000-06-27 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-27 23:00:00 UTC        
+ SRF variables written at  2000-06-27 23:00:00 UTC        
+ RAD variables written at  2000-06-27 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-28 00:00:00 UTC        
+ JDay    179.00000 solar declination angle =  23.31921165 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-28 00:00:00 UTC        
+ SRF variables written at  2000-06-28 00:00:00 UTC        
+ STS variables written at  2000-06-28 00:00:00 UTC        
+ RAD variables written at  2000-06-28 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000062800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000062800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000062800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000062800.nc
+ Elapsed seconds of run for this period :    704.8984    
+ SEARCH BC data for 2000062806 , step =  1044480
+ READY  BC from     2000062800  to 2000062806 
+ $$$  2000-06-28 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.80  487.37
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.537E-16
+    0.754E-13  0.181E-11  0.130E-10  0.517E-10  0.145E-09  0.322E-09  0.608E-09
+    0.101E-08  0.154E-08  0.218E-08  0.289E-08  0.366E-08  0.444E-08  0.519E-08
+    0.590E-08  0.652E-08  0.705E-08  0.747E-08  0.777E-08  0.796E-08  0.803E-08
+    0.799E-08  0.786E-08  0.764E-08  0.735E-08  0.699E-08  0.658E-08  0.612E-08
+    0.612E-08  0.562E-08  0.508E-08  0.451E-08  0.389E-08  0.317E-08  0.216E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-28 01:00:00 UTC        
+ SRF variables written at  2000-06-28 01:00:00 UTC        
+ RAD variables written at  2000-06-28 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 02:00:00 UTC        
+ SRF variables written at  2000-06-28 02:00:00 UTC        
+ RAD variables written at  2000-06-28 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 03:00:00 UTC        
+ SRF variables written at  2000-06-28 03:00:00 UTC        
+ RAD variables written at  2000-06-28 03:00:00 UTC        
+ $$$  2000-06-28 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.67  486.65
+ CLM History variables written
+ ATM variables written at  2000-06-28 04:00:00 UTC        
+ SRF variables written at  2000-06-28 04:00:00 UTC        
+ RAD variables written at  2000-06-28 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 05:00:00 UTC        
+ SRF variables written at  2000-06-28 05:00:00 UTC        
+ RAD variables written at  2000-06-28 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 06:00:00 UTC        
+ SRF variables written at  2000-06-28 06:00:00 UTC        
+ RAD variables written at  2000-06-28 06:00:00 UTC        
+ SEARCH BC data for 2000062812 , step =  1044960
+ READY  BC from     2000062806  to 2000062812 
+ $$$  2000-06-28 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.29  485.99
+ CLM History variables written
+ ATM variables written at  2000-06-28 07:00:00 UTC        
+ SRF variables written at  2000-06-28 07:00:00 UTC        
+ RAD variables written at  2000-06-28 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 08:00:00 UTC        
+ SRF variables written at  2000-06-28 08:00:00 UTC        
+ RAD variables written at  2000-06-28 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 09:00:00 UTC        
+ SRF variables written at  2000-06-28 09:00:00 UTC        
+ RAD variables written at  2000-06-28 09:00:00 UTC        
+ $$$  2000-06-28 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.34  485.88
+ CLM History variables written
+ ATM variables written at  2000-06-28 10:00:00 UTC        
+ SRF variables written at  2000-06-28 10:00:00 UTC        
+ RAD variables written at  2000-06-28 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 11:00:00 UTC        
+ SRF variables written at  2000-06-28 11:00:00 UTC        
+ RAD variables written at  2000-06-28 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 12:00:00 UTC        
+ SRF variables written at  2000-06-28 12:00:00 UTC        
+ RAD variables written at  2000-06-28 12:00:00 UTC        
+ SEARCH BC data for 2000062818 , step =  1045440
+ READY  BC from     2000062812  to 2000062818 
+ $$$  2000-06-28 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.47  486.18
+ CLM History variables written
+ ATM variables written at  2000-06-28 13:00:00 UTC        
+ SRF variables written at  2000-06-28 13:00:00 UTC        
+ RAD variables written at  2000-06-28 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 14:00:00 UTC        
+ SRF variables written at  2000-06-28 14:00:00 UTC        
+ RAD variables written at  2000-06-28 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 15:00:00 UTC        
+ SRF variables written at  2000-06-28 15:00:00 UTC        
+ RAD variables written at  2000-06-28 15:00:00 UTC        
+ $$$  2000-06-28 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.74  486.37
+ CLM History variables written
+ ATM variables written at  2000-06-28 16:00:00 UTC        
+ SRF variables written at  2000-06-28 16:00:00 UTC        
+ RAD variables written at  2000-06-28 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 17:00:00 UTC        
+ SRF variables written at  2000-06-28 17:00:00 UTC        
+ RAD variables written at  2000-06-28 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 18:00:00 UTC        
+ SRF variables written at  2000-06-28 18:00:00 UTC        
+ RAD variables written at  2000-06-28 18:00:00 UTC        
+ SEARCH BC data for 2000062900 , step =  1045920
+ READY  BC from     2000062818  to 2000062900 
+ $$$  2000-06-28 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.51  486.54
+ CLM History variables written
+ ATM variables written at  2000-06-28 19:00:00 UTC        
+ SRF variables written at  2000-06-28 19:00:00 UTC        
+ RAD variables written at  2000-06-28 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 20:00:00 UTC        
+ SRF variables written at  2000-06-28 20:00:00 UTC        
+ RAD variables written at  2000-06-28 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 21:00:00 UTC        
+ SRF variables written at  2000-06-28 21:00:00 UTC        
+ RAD variables written at  2000-06-28 21:00:00 UTC        
+ $$$  2000-06-28 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.72  486.62
+ CLM History variables written
+ ATM variables written at  2000-06-28 22:00:00 UTC        
+ SRF variables written at  2000-06-28 22:00:00 UTC        
+ RAD variables written at  2000-06-28 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-28 23:00:00 UTC        
+ SRF variables written at  2000-06-28 23:00:00 UTC        
+ RAD variables written at  2000-06-28 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-29 00:00:00 UTC        
+ JDay    180.00000 solar declination angle =  23.27517642 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-29 00:00:00 UTC        
+ SRF variables written at  2000-06-29 00:00:00 UTC        
+ STS variables written at  2000-06-29 00:00:00 UTC        
+ RAD variables written at  2000-06-29 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000062900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000062900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000062900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000062900.nc
+ Elapsed seconds of run for this period :    696.9219    
+ SEARCH BC data for 2000062906 , step =  1046400
+ READY  BC from     2000062900  to 2000062906 
+ $$$  2000-06-29 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.25  486.98
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.537E-16
+    0.754E-13  0.181E-11  0.130E-10  0.517E-10  0.145E-09  0.322E-09  0.608E-09
+    0.101E-08  0.154E-08  0.218E-08  0.289E-08  0.366E-08  0.444E-08  0.519E-08
+    0.590E-08  0.652E-08  0.705E-08  0.747E-08  0.777E-08  0.796E-08  0.803E-08
+    0.799E-08  0.786E-08  0.764E-08  0.735E-08  0.699E-08  0.658E-08  0.612E-08
+    0.612E-08  0.562E-08  0.508E-08  0.451E-08  0.389E-08  0.317E-08  0.216E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-29 01:00:00 UTC        
+ SRF variables written at  2000-06-29 01:00:00 UTC        
+ RAD variables written at  2000-06-29 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 02:00:00 UTC        
+ SRF variables written at  2000-06-29 02:00:00 UTC        
+ RAD variables written at  2000-06-29 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 03:00:00 UTC        
+ SRF variables written at  2000-06-29 03:00:00 UTC        
+ RAD variables written at  2000-06-29 03:00:00 UTC        
+ $$$  2000-06-29 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.58  486.39
+ CLM History variables written
+ ATM variables written at  2000-06-29 04:00:00 UTC        
+ SRF variables written at  2000-06-29 04:00:00 UTC        
+ RAD variables written at  2000-06-29 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 05:00:00 UTC        
+ SRF variables written at  2000-06-29 05:00:00 UTC        
+ RAD variables written at  2000-06-29 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 06:00:00 UTC        
+ SRF variables written at  2000-06-29 06:00:00 UTC        
+ RAD variables written at  2000-06-29 06:00:00 UTC        
+ SEARCH BC data for 2000062912 , step =  1046880
+ READY  BC from     2000062906  to 2000062912 
+ $$$  2000-06-29 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.43  486.21
+ CLM History variables written
+ ATM variables written at  2000-06-29 07:00:00 UTC        
+ SRF variables written at  2000-06-29 07:00:00 UTC        
+ RAD variables written at  2000-06-29 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 08:00:00 UTC        
+ SRF variables written at  2000-06-29 08:00:00 UTC        
+ RAD variables written at  2000-06-29 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 09:00:00 UTC        
+ SRF variables written at  2000-06-29 09:00:00 UTC        
+ RAD variables written at  2000-06-29 09:00:00 UTC        
+ $$$  2000-06-29 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.09  486.61
+ CLM History variables written
+ ATM variables written at  2000-06-29 10:00:00 UTC        
+ SRF variables written at  2000-06-29 10:00:00 UTC        
+ RAD variables written at  2000-06-29 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 11:00:00 UTC        
+ SRF variables written at  2000-06-29 11:00:00 UTC        
+ RAD variables written at  2000-06-29 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 12:00:00 UTC        
+ SRF variables written at  2000-06-29 12:00:00 UTC        
+ RAD variables written at  2000-06-29 12:00:00 UTC        
+ SEARCH BC data for 2000062918 , step =  1047360
+ READY  BC from     2000062912  to 2000062918 
+ $$$  2000-06-29 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.54  487.18
+ CLM History variables written
+ ATM variables written at  2000-06-29 13:00:00 UTC        
+ SRF variables written at  2000-06-29 13:00:00 UTC        
+ RAD variables written at  2000-06-29 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 14:00:00 UTC        
+ SRF variables written at  2000-06-29 14:00:00 UTC        
+ RAD variables written at  2000-06-29 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 15:00:00 UTC        
+ SRF variables written at  2000-06-29 15:00:00 UTC        
+ RAD variables written at  2000-06-29 15:00:00 UTC        
+ $$$  2000-06-29 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.23  488.02
+ CLM History variables written
+ ATM variables written at  2000-06-29 16:00:00 UTC        
+ SRF variables written at  2000-06-29 16:00:00 UTC        
+ RAD variables written at  2000-06-29 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 17:00:00 UTC        
+ SRF variables written at  2000-06-29 17:00:00 UTC        
+ RAD variables written at  2000-06-29 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 18:00:00 UTC        
+ SRF variables written at  2000-06-29 18:00:00 UTC        
+ RAD variables written at  2000-06-29 18:00:00 UTC        
+ SEARCH BC data for 2000063000 , step =  1047840
+ READY  BC from     2000062918  to 2000063000 
+ $$$  2000-06-29 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.71  489.65
+ CLM History variables written
+ ATM variables written at  2000-06-29 19:00:00 UTC        
+ SRF variables written at  2000-06-29 19:00:00 UTC        
+ RAD variables written at  2000-06-29 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 20:00:00 UTC        
+ SRF variables written at  2000-06-29 20:00:00 UTC        
+ RAD variables written at  2000-06-29 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 21:00:00 UTC        
+ SRF variables written at  2000-06-29 21:00:00 UTC        
+ RAD variables written at  2000-06-29 21:00:00 UTC        
+ $$$  2000-06-29 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.01  490.70
+ CLM History variables written
+ ATM variables written at  2000-06-29 22:00:00 UTC        
+ SRF variables written at  2000-06-29 22:00:00 UTC        
+ RAD variables written at  2000-06-29 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-29 23:00:00 UTC        
+ SRF variables written at  2000-06-29 23:00:00 UTC        
+ RAD variables written at  2000-06-29 23:00:00 UTC        
+ CLM History variables written
+ At  2000-06-30 00:00:00 UTC        
+ JDay    181.00000 solar declination angle =  23.22434368 degrees
+                   solar TSI irradiance    =    1356.6559 W/m^2
+ ATM variables written at  2000-06-30 00:00:00 UTC        
+ SRF variables written at  2000-06-30 00:00:00 UTC        
+ STS variables written at  2000-06-30 00:00:00 UTC        
+ RAD variables written at  2000-06-30 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2000063000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2000063000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2000063000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2000063000.nc
+ Elapsed seconds of run for this period :    686.2969    
+ SEARCH BC data for 2000063006 , step =  1048320
+ READY  BC from     2000063000  to 2000063006 
+ $$$  2000-06-30 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1018.88  491.80
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.537E-16
+    0.754E-13  0.181E-11  0.130E-10  0.517E-10  0.145E-09  0.322E-09  0.608E-09
+    0.101E-08  0.154E-08  0.218E-08  0.289E-08  0.366E-08  0.444E-08  0.519E-08
+    0.590E-08  0.652E-08  0.705E-08  0.747E-08  0.777E-08  0.796E-08  0.803E-08
+    0.799E-08  0.786E-08  0.764E-08  0.735E-08  0.699E-08  0.658E-08  0.612E-08
+    0.612E-08  0.562E-08  0.508E-08  0.451E-08  0.389E-08  0.317E-08  0.216E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2000-06-30 01:00:00 UTC        
+ SRF variables written at  2000-06-30 01:00:00 UTC        
+ RAD variables written at  2000-06-30 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 02:00:00 UTC        
+ SRF variables written at  2000-06-30 02:00:00 UTC        
+ RAD variables written at  2000-06-30 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 03:00:00 UTC        
+ SRF variables written at  2000-06-30 03:00:00 UTC        
+ RAD variables written at  2000-06-30 03:00:00 UTC        
+ $$$  2000-06-30 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.10  492.62
+ CLM History variables written
+ ATM variables written at  2000-06-30 04:00:00 UTC        
+ SRF variables written at  2000-06-30 04:00:00 UTC        
+ RAD variables written at  2000-06-30 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 05:00:00 UTC        
+ SRF variables written at  2000-06-30 05:00:00 UTC        
+ RAD variables written at  2000-06-30 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 06:00:00 UTC        
+ SRF variables written at  2000-06-30 06:00:00 UTC        
+ RAD variables written at  2000-06-30 06:00:00 UTC        
+ SEARCH BC data for 2000063012 , step =  1048800
+ READY  BC from     2000063006  to 2000063012 
+ $$$  2000-06-30 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.40  493.24
+ CLM History variables written
+ ATM variables written at  2000-06-30 07:00:00 UTC        
+ SRF variables written at  2000-06-30 07:00:00 UTC        
+ RAD variables written at  2000-06-30 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 08:00:00 UTC        
+ SRF variables written at  2000-06-30 08:00:00 UTC        
+ RAD variables written at  2000-06-30 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 09:00:00 UTC        
+ SRF variables written at  2000-06-30 09:00:00 UTC        
+ RAD variables written at  2000-06-30 09:00:00 UTC        
+ $$$  2000-06-30 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1018.97  493.73
+ CLM History variables written
+ ATM variables written at  2000-06-30 10:00:00 UTC        
+ SRF variables written at  2000-06-30 10:00:00 UTC        
+ RAD variables written at  2000-06-30 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 11:00:00 UTC        
+ SRF variables written at  2000-06-30 11:00:00 UTC        
+ RAD variables written at  2000-06-30 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 12:00:00 UTC        
+ SRF variables written at  2000-06-30 12:00:00 UTC        
+ RAD variables written at  2000-06-30 12:00:00 UTC        
+ SEARCH BC data for 2000063018 , step =  1049280
+ READY  BC from     2000063012  to 2000063018 
+ $$$  2000-06-30 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.84  494.12
+ CLM History variables written
+ ATM variables written at  2000-06-30 13:00:00 UTC        
+ SRF variables written at  2000-06-30 13:00:00 UTC        
+ RAD variables written at  2000-06-30 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 14:00:00 UTC        
+ SRF variables written at  2000-06-30 14:00:00 UTC        
+ RAD variables written at  2000-06-30 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 15:00:00 UTC        
+ SRF variables written at  2000-06-30 15:00:00 UTC        
+ RAD variables written at  2000-06-30 15:00:00 UTC        
+ $$$  2000-06-30 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1018.68  494.19
+ CLM History variables written
+ ATM variables written at  2000-06-30 16:00:00 UTC        
+ SRF variables written at  2000-06-30 16:00:00 UTC        
+ RAD variables written at  2000-06-30 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 17:00:00 UTC        
+ SRF variables written at  2000-06-30 17:00:00 UTC        
+ RAD variables written at  2000-06-30 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 18:00:00 UTC        
+ SRF variables written at  2000-06-30 18:00:00 UTC        
+ RAD variables written at  2000-06-30 18:00:00 UTC        
+ SEARCH BC data for 2000070100 , step =  1049760
+ READY  BC from     2000063018  to 2000070100 
+ $$$  2000-06-30 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1018.59  494.22
+ CLM History variables written
+ ATM variables written at  2000-06-30 19:00:00 UTC        
+ SRF variables written at  2000-06-30 19:00:00 UTC        
+ RAD variables written at  2000-06-30 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 20:00:00 UTC        
+ SRF variables written at  2000-06-30 20:00:00 UTC        
+ RAD variables written at  2000-06-30 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 21:00:00 UTC        
+ SRF variables written at  2000-06-30 21:00:00 UTC        
+ RAD variables written at  2000-06-30 21:00:00 UTC        
+ $$$  2000-06-30 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1018.10  494.19
+ CLM History variables written
+ ATM variables written at  2000-06-30 22:00:00 UTC        
+ SRF variables written at  2000-06-30 22:00:00 UTC        
+ RAD variables written at  2000-06-30 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2000-06-30 23:00:00 UTC        
+ SRF variables written at  2000-06-30 23:00:00 UTC        
+ RAD variables written at  2000-06-30 23:00:00 UTC        
+ Write restart file for CLM at  2000-07-01 00:00:00 UTC        
+ Creating history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3.clm.regcm.h0.200007.nc
+ CLM History variables written
+ CLM History variables written
+ Closing local history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3.clm.regcm.h0.200007.nc
+ Closing local history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3.clm.regcm.h1.20000601_03600.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CSA
+ M-3.clm.regcm.r.2000070100.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3.clm.regcm.rh0.2000070100.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3.clm.regcm.rh1.2000070100.nc
+ Successfully wrote out restart data for CLM 4.5
+ At  2000-07-01 00:00:00 UTC        
+ JDay    182.00000 solar declination angle =  23.16673589 degrees
+                   solar TSI irradiance    =    1356.7857 W/m^2
+ ATM variables written at  2000-07-01 00:00:00 UTC        
+ SRF variables written at  2000-07-01 00:00:00 UTC        
+ STS variables written at  2000-07-01 00:00:00 UTC        
+ RAD variables written at  2000-07-01 00:00:00 UTC        
+ SAV variables written at  2000-07-01 00:00:00 UTC        
+ Final time  2000-07-01 00:00:00 UTC reached.
+ Elapsed seconds of run for this final timeslice :    740.7812    
+ : this run stops at  : 2025-02-20 14:46:58+0100
+ : Run has been completed using         1792  processors.
+ : Total elapsed seconds of run :    79475.4583450959     
+ RegCM V5 simulation successfully reached end
