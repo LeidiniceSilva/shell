@@ -43,15 +43,14 @@ echo "------------------------------- PROCCESSING ${DATASET} DATASET -----------
 
 if [ ${DATASET} == 'CPC' ]
 then
-
 VAR="precip"
  
 echo
-echo "1.1. Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cpc.day.1979-2021.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+echo "Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}.cpc.day.1979-2024.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
 
 echo
-echo "1.2. Frequency and intensity by season"
+echo "Frequency and intensity by season"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
     
@@ -61,26 +60,22 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO histmean,1,100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc
     ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 done
-
-echo 
-echo "1.3. Delete files"
-rm *_${YR}.nc
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-
 VAR="tp"
 
 echo
-echo "2.1. Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2018-2021.nc ${VAR}_${DATASET}_${YR}.nc
+echo "Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_2018-2021.nc ${VAR}_${DATASET}_1hr_${YR}.nc
     
 echo
-echo "2.2. Convert unit"
-CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+echo "Convert unit"
+CDO -b f32 mulc,1000 ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
+CDO daysum ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
 
 echo
-echo "2.3. Frequency and intensity by season"
+echo "Frequency and intensity by season"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
     
@@ -90,25 +85,19 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO histmean,1,100000 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc
     ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 done
-
-echo 
-echo "2.4. Delete files"
-rm *_${YR}.nc
 
 else
-
-VAR="precipitation"
-
-echo
-echo "3.1. Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/precipitation_SAM-10km_GPM_3B-V0A7_1hr_2018-2021.nc ${VAR}_${DATASET}_${YR}.nc
-    
-echo
-echo "3.2. Convert unit"
-CDO daysum ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+VAR="cmorph"
 
 echo
-echo "3.3. Frequency and intensity by season"
+echo "Select date"
+FILE_IN=$( eval ls ${DIR_IN}/${DATASET}/${VAR}_CSAM-3_CMORPH_1hr_{${IYR}..${FYR}}.nc )
+FILE_OUT=${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
+[[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
+CDO daysum ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+
+echo
+echo "Frequency and intensity by season"
 for SEASON in ${SEASON_LIST[@]}; do
     CDO selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
     
@@ -119,10 +108,10 @@ for SEASON in ${SEASON_LIST[@]}; do
     ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_${SEASON}_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 done
 
-echo 
-echo "3.4. Delete files"
-rm *_${YR}.nc
-
 fi
+
+echo 
+echo "Delete files"
+rm *_${YR}.nc
 
 }

@@ -45,48 +45,50 @@ then
 VAR="tp"
 
 echo
-echo "1. Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/tp_ERA5_1hr_2018-2021.nc ${VAR}_${DATASET}_${YR}.nc
+echo "Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_2018-2021.nc ${VAR}_${DATASET}_${YR}.nc
     
 echo
-echo "2. Convert unit"
+echo "Convert unit"
 CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
     
 echo
-echo "3. Hourly mean"
+echo "Hourly mean"
 for HR in `seq -w 00 23`; do
     CDO selhour,${HR} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}.nc
     CDO timmean ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}_timmean.nc
 done
     
 echo
-echo "4. Diurnal cycle"
+echo "Diurnal cycle"
 CDO mergetime ${VAR}_${EXP}_${DATASET}_*hr_${YR}_timmean.nc ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc
    
 echo
-echo "5. Regrid output"
+echo "Regrid output"
 ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
                  
 else
-VAR="precipitation"
+VAR="cmorph"
 
 echo
-echo "1. Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/precipitation_SAM-10km_GPM_3B-V0A7_1hr_2018-2021.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+echo "Select date"
+FILE_IN=$( eval ls ${DIR_IN}/${DATASET}/${VAR}_CSAM-3_CMORPH_1hr_{${IYR}..${FYR}}.nc )
+FILE_OUT=${VAR}_${EXP}_${DATASET}_${YR}.nc
+[[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
 
 echo
-echo "2. Hourly mean"
+echo "Hourly mean"
 for HR in `seq -w 00 23`; do
     CDO selhour,${HR} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}.nc
     CDO timmean ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}_timmean.nc
 done
 
 echo
-echo "3. Diurnal cycle"
+echo "Diurnal cycle"
 CDO mergetime ${VAR}_${EXP}_${DATASET}_*hr_${YR}_timmean.nc ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc
    
 echo
-echo "4. Regrid output"
+echo "Regrid output"
 ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
   
 fi

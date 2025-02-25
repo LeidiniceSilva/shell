@@ -98,16 +98,17 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="tp t2m tasmax tasmin cc hcc mcc hcc msnlwrf msnswrf pev u v q r"
+VAR_LIST="tp t2m cc hcc mcc hcc msnlwrf msnswrf pev"
+
 for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "Select date"
     if [ ${VAR} == 'tp' ]
     then
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1hr_2018-2021.nc ${VAR}_${DATASET}_1hr_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_2018-2021.nc ${VAR}_${DATASET}_1hr_${YR}.nc
     else
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_2018-2021.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2018-2021.nc ${VAR}_${DATASET}_${YR}.nc
     fi
 
     echo
@@ -117,7 +118,7 @@ for VAR in ${VAR_LIST[@]}; do
     CDO -b f32 mulc,1000 ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
     CDO daysum ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc
     CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 't2m' ] || [ ${VAR} == 'tasmax' ] || [ ${VAR} == 'tasmin' ]
+    elif [ ${VAR} == 't2m' ] 
     then
     CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     elif [ ${VAR} == 'pev' ]
@@ -129,8 +130,14 @@ for VAR in ${VAR_LIST[@]}; do
    
     echo
     echo "Regrid and select subdomain"
+    if [ ${VAR} == 'tp' ]
+    then
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil 
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil  
+    else
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    fi  
+
     echo
     echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
@@ -160,19 +167,22 @@ done
 
 else
 echo
-echo "Average"
-CDO daysum ${DIR_IN}/${DATASET}/precipitation_SAM-10km_${DATASET}_3B-V0A7_1hr_2018-2021.nc precipitation_${EXP}_${DATASET}_3B-V0A7_day_${YR}.nc
-CDO monmean precipitation_${EXP}_${DATASET}_3B-V0A7_day_${YR}.nc precipitation_${EXP}_${DATASET}_3B-V0A7_mon_${YR}.nc
+echo "Select date"
+FILE_IN=$( eval ls ${DIR_IN}/${DATASET}/cmorph_CSAM-3_CMORPH_1hr_{${IYR}..${FYR}}.nc )
+FILE_OUT=cmorph_${EXP}_${DATASET}_1hr_${YR}.nc
+[[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
+CDO daysum cmorph_${EXP}_${DATASET}_1hr_${YR}.nc cmorph_${EXP}_${DATASET}_day_${YR}.nc
+CDO monmean cmorph_${EXP}_${DATASET}_day_${YR}.nc cmorph_${EXP}_${DATASET}_mon_${YR}.nc
 
 echo 
 echo "Regrid output"
-${BIN}/./regrid precipitation_${EXP}_${DATASET}_3B-V0A7_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-${BIN}/./regrid precipitation_${EXP}_${DATASET}_3B-V0A7_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid cmorph_${EXP}_${DATASET}_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+${BIN}/./regrid cmorph_${EXP}_${DATASET}_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
 echo
 echo "Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
-    CDO -timmean -selseas,${SEASON} precipitation_${EXP}_${DATASET}_3B-V0A7_mon_${YR}_lonlat.nc precipitation_${EXP}_${DATASET}_3B-V0A7_${SEASON}_${YR}_lonlat.nc
+    CDO -timmean -selseas,${SEASON} cmorph_${EXP}_${DATASET}_mon_${YR}_lonlat.nc cmorph_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 done
 fi
 

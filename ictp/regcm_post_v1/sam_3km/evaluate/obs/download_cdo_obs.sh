@@ -1,5 +1,19 @@
 #!/bin/bash
 
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Download
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+
+#__author__      = 'Leidinice Silva'
+#__email__       = 'leidinicesilva@gmail.com'
+#__date__        = 'Nov 20, 2023'
+#__description__ = 'Download OBS dataset with CDO'
+
 # Function to check the leap year
 is_leap_year() {
 	year=$1
@@ -61,7 +75,7 @@ for year in `seq -w 2018 2018`; do
 			 		fl="precipitation_SAM_GPM_3B-HHR_${year}${mon}${day}_${mins}_V07A.nc"
 				   	if [ ! -f "$fl" ]; then
 					echo ${fl}
-			        	wget --user="tompkins@ictp.it" --password='tompkins@ictp.it'  ${ftp}/${file} -O ${dir}/${file}
+			        	wget --user="mda_silv@ictp.it" --password='mda_silv@ictp.it'  ${ftp}/${file} -O ${dir}/${file}
 			        	fi
 					mod=`expr $mod + 30`
 				done

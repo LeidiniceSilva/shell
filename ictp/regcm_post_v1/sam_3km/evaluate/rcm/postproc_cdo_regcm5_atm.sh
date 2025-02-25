@@ -1,20 +1,28 @@
 #!/bin/bash
 
+#SBATCH -A ICT23_ESP_1
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
 #__description__ = 'Posprocessing the RegCM5 output with CDO'
- 
-{
 
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+{
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2018-2021"
+YR="2018-2018"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
@@ -22,10 +30,9 @@ SEASON_LIST="DJF MAM JJA SON"
 EXP="SAM-3km"
 VAR_LIST="cl cli clw hus ua va"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/NoTo-SAM/pressure"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_evaluate/rcm"
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
-
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
 cd ${DIR_OUT}
@@ -37,7 +44,7 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 for VAR in ${VAR_LIST[@]}; do
     
     echo
-    echo "1. Select variable: ${VAR}"
+    echo "Select variable: ${VAR}"
     for YEAR in `seq -w ${IYR} ${FYR}`; do
         for MON in `seq -w 01 12`; do
             if [ ${VAR} = 'cl'  ]
@@ -52,46 +59,24 @@ for VAR in ${VAR_LIST[@]}; do
     done	
 
     echo 
-    echo "2. Concatenate date: ${YR}"
+    echo "Concatenate date: ${YR}"
     CDO mergetime ${VAR}_${EXP}_mon_*0100.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc 
 
     echo 
-    echo "3. Regrid output"
+    echo "Regrid output"
     ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
     
     echo
-    echo "4. Seasonal avg"
+    echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
-        if [ ${VAR} = 'ua'  ]
-        then
-        CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_RegCM5_mon_${YR}_lonlat.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        CDO sellevel,200 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_200hPa_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        CDO sellevel,500 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_500hPa_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        CDO sellevel,850 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_850hPa_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        elif [ ${VAR} = 'va'  ]
-        then
-        CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_RegCM5_mon_${YR}_lonlat.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        CDO sellevel,200 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_200hPa_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        CDO sellevel,500 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_500hPa_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        CDO sellevel,850 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_850hPa_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        elif [ ${VAR} = 'hus'  ]
-        then
-        CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_RegCM5_mon_${YR}_lonlat.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        CDO sellevel,200 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_200hPa_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        CDO sellevel,500 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_500hPa_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-        CDO sellevel,850 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_850hPa_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-	else
-        CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_RegCM5_mon_${YR}_lonlat.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc
-	CDO sellonlatbox,-65,-52,-35,-24 ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_SESA-3km_RegCM5_${SEASON}_${YR}_lonlat.nc
-	fi      
+        CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_RegCM5_mon_${YR}_lonlat.nc ${VAR}_${EXP}_RegCM5_${SEASON}_${YR}_lonlat.nc  
     done   
 done
 
 echo 
-echo "5. Delete files"
+echo "Delete files"
 rm *_${EXP}_*0100.nc
-rm *_${EXP}_${YR}.nc
-rm *_${EXP}_RegCM5_mon_${YR}.nc
+rm *_${YR}.nc
     
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
