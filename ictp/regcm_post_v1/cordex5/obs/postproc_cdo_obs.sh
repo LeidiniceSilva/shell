@@ -43,17 +43,21 @@ echo "------------------------------- INIT POSTPROCESSING ${DATASET} -----------
 
 if [ ${DATASET} == 'CMORPH' ]
 then
+
 echo
 echo "Select date"
 CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cmorph_CSAM-3_CMORPH_1hr_2000-2009.nc cmorph_${EXP}_${DATASET}_1hr_${YR}.nc
+
 echo
 echo "Monthly avg"
 CDO daysum cmorph_${EXP}_${DATASET}_1hr_${YR}.nc cmorph_${EXP}_${DATASET}_day_${YR}.nc
 CDO monmean cmorph_${EXP}_${DATASET}_day_${YR}.nc cmorph_${EXP}_${DATASET}_mon_${YR}.nc
+
 echo 
 echo "Regrid output"
 ${BIN}/./regrid cmorph_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 ${BIN}/./regrid cmorph_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
 echo
 echo "Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
@@ -62,18 +66,22 @@ done
 
 elif [ ${DATASET} == 'CPC' ]
 then
+
 VAR_LIST="precip tmax tmin"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Select date"
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}.cpc.day.1979-2024.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc   
+
     echo
     echo "Monthly avg"
     CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+
     echo
     echo "Regrid output"
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
     echo
     echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
@@ -83,11 +91,13 @@ done
 
 elif [ ${DATASET} == 'CRU' ]
 then
+
 VAR_LIST="pre tmp tmx tmn cld"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Select date"
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_mon_${YR}.nc
+
     echo
     echo "Convert unit"
     if [ ${VAR} == 'pre' ]
@@ -96,9 +106,11 @@ for VAR in ${VAR_LIST[@]}; do
     else
     cp ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi    
+
     echo
     echo "Regrid"
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
     echo
     echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
@@ -108,7 +120,8 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="tp t2m tasmax tasmin cc hcc mcc hcc msnlwrf msnswrf pev u v q r"
+
+VAR_LIST="tp t2m tasmax tasmin cc tcc lcc mcc hcc msnlwrf msnswrf pev u v q r"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Select date"
@@ -118,6 +131,7 @@ for VAR in ${VAR_LIST[@]}; do
     else
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
     fi
+
     echo
     echo "convert unit"
     if [ ${VAR} == 'tp' ]
@@ -134,10 +148,17 @@ for VAR in ${VAR_LIST[@]}; do
     else
     cp ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi    
+
     echo
     echo "Regrid and select subdomain"
+    if [ ${VAR} == 'tp' ]
+    then
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil  
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil  
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil 
+    else
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil 
+    fi
+ 
     echo
     echo "Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
@@ -150,12 +171,15 @@ then
 echo
 echo "Select date"
 CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/GPCPMON_L3_198301-202209_V3.2.nc4 ${EXP}_${DATASET}_mon_${YR}.nc
+
 echo 
 echo "Select variable"
 CDO selvar,sat_gauge_precip ${EXP}_${DATASET}_mon_${YR}.nc sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}.nc
+
 echo 
 echo "Regrid output"
 ${BIN}/./regrid sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
 echo
 echo "Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do
@@ -166,13 +190,16 @@ else
 echo
 echo "Select date"
 CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/mswep.day.1979-2020.nc precipitation_${EXP}_${DATASET}_day_${YR}.nc
+
 echo
 echo "Monthly avg"
 CDO monmean precipitation_${EXP}_${DATASET}_day_${YR}.nc precipitation_${EXP}_${DATASET}_mon_${YR}.nc
+
 echo 
 echo "Regrid output"
 ${BIN}/./regrid precipitation_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 ${BIN}/./regrid precipitation_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+
 echo
 echo "Seasonal avg"
 for SEASON in ${SEASON_LIST[@]}; do

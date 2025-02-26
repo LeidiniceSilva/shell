@@ -98,7 +98,7 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="tp t2m cc hcc mcc hcc msnlwrf msnswrf pev"
+VAR_LIST="tp t2m cc tcc lcc mcc hcc msnlwrf msnswrf pev"
 
 for VAR in ${VAR_LIST[@]}; do
 

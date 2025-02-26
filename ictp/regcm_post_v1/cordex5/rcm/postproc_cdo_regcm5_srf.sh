@@ -26,15 +26,17 @@ FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
 
-YR="2000-2001"
+YR="2000-2000"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="pr tas tasmax tasmin rsnl rsns cll clm clh clt evspsblpot"
+VAR_LIST="cll clm clh clt evspsblpot rsnl rsns"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/ERA5/ERA5-CSAM-3_old"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/postproc/rcm"
+#VAR_LIST="pr tas tasmax tasmin rsnl rsns cll clm clh clt evspsblpot"
+
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo

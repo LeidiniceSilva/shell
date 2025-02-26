@@ -28,7 +28,7 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-3km"
-VAR_LIST="pr tas rsnl rsns clt cll clm clh evspsblpot"
+VAR_LIST="pr tas cll clm clh clt rsnl rsns evspsblpot"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm"
@@ -50,7 +50,7 @@ for VAR in ${VAR_LIST[@]}; do
             if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'tas'  ] 
             then
             CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-            elif [ ${VAR} = 'rsnl'  ] || [ ${VAR} = 'rsns'  ] || [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh'  ]
+            elif [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh'  ]
             then
             CDO selname,${VAR} ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
             else
@@ -73,6 +73,14 @@ for VAR in ${VAR_LIST[@]}; do
     then
     CDO -b f32 subc,273.15 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_day_${YR}.nc
     CDO monmean ${VAR}_${EXP}_RegCM5_day_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
+    elif [ ${VAR} = 'clt'  ] || [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh'  ]
+    then
+    CDO -b f32 divc,100 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc
+    CDO monmean ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
+    elif [ ${VAR} = 'evspsblpot'  ]
+    then
+    CDO -b f32 mulc,86400 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc
+    CDO monmean ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
     else
     CDO monmean ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
     fi
