@@ -15889,3 +15889,1059 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  $$$ max, min of ps (mb) =  1028.12  492.50
  CLM History variables written
  ATM variables written at  2001-08-25 10:00:00 UTC        
+ SRF variables written at  2001-08-25 10:00:00 UTC        
+ RAD variables written at  2001-08-25 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-25 11:00:00 UTC        
+ SRF variables written at  2001-08-25 11:00:00 UTC        
+ RAD variables written at  2001-08-25 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-25 12:00:00 UTC        
+ SRF variables written at  2001-08-25 12:00:00 UTC        
+ RAD variables written at  2001-08-25 12:00:00 UTC        
+ SEARCH BC data for 2001082518 , step =  1857600
+ READY  BC from     2001082512  to 2001082518 
+ $$$  2001-08-25 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.21  492.39
+ CLM History variables written
+ ATM variables written at  2001-08-25 13:00:00 UTC        
+ SRF variables written at  2001-08-25 13:00:00 UTC        
+ RAD variables written at  2001-08-25 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-25 14:00:00 UTC        
+ SRF variables written at  2001-08-25 14:00:00 UTC        
+ RAD variables written at  2001-08-25 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-25 15:00:00 UTC        
+ SRF variables written at  2001-08-25 15:00:00 UTC        
+ RAD variables written at  2001-08-25 15:00:00 UTC        
+ $$$  2001-08-25 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.96  492.23
+ CLM History variables written
+ ATM variables written at  2001-08-25 16:00:00 UTC        
+ SRF variables written at  2001-08-25 16:00:00 UTC        
+ RAD variables written at  2001-08-25 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-25 17:00:00 UTC        
+ SRF variables written at  2001-08-25 17:00:00 UTC        
+ RAD variables written at  2001-08-25 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-25 18:00:00 UTC        
+ SRF variables written at  2001-08-25 18:00:00 UTC        
+ RAD variables written at  2001-08-25 18:00:00 UTC        
+ SEARCH BC data for 2001082600 , step =  1858080
+ READY  BC from     2001082518  to 2001082600 
+ $$$  2001-08-25 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.81  491.91
+ CLM History variables written
+ ATM variables written at  2001-08-25 19:00:00 UTC        
+ SRF variables written at  2001-08-25 19:00:00 UTC        
+ RAD variables written at  2001-08-25 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-25 20:00:00 UTC        
+ SRF variables written at  2001-08-25 20:00:00 UTC        
+ RAD variables written at  2001-08-25 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-25 21:00:00 UTC        
+ SRF variables written at  2001-08-25 21:00:00 UTC        
+ RAD variables written at  2001-08-25 21:00:00 UTC        
+ $$$  2001-08-25 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.54  491.07
+ CLM History variables written
+ ATM variables written at  2001-08-25 22:00:00 UTC        
+ SRF variables written at  2001-08-25 22:00:00 UTC        
+ RAD variables written at  2001-08-25 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-25 23:00:00 UTC        
+ SRF variables written at  2001-08-25 23:00:00 UTC        
+ RAD variables written at  2001-08-25 23:00:00 UTC        
+ CLM History variables written
+ At  2001-08-26 00:00:00 UTC        
+ JDay    237.00000 solar declination angle =  10.82849883 degrees
+                   solar TSI irradiance    =    1356.6540 W/m^2
+ ATM variables written at  2001-08-26 00:00:00 UTC        
+ SRF variables written at  2001-08-26 00:00:00 UTC        
+ STS variables written at  2001-08-26 00:00:00 UTC        
+ RAD variables written at  2001-08-26 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2001082600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2001082600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2001082600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2001082600.nc
+ Elapsed seconds of run for this period :    913.3984    
+ SEARCH BC data for 2001082606 , step =  1858560
+ READY  BC from     2001082600  to 2001082606 
+ $$$  2001-08-26 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.26  490.08
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.548E-16
+    0.778E-13  0.189E-11  0.137E-10  0.548E-10  0.155E-09  0.346E-09  0.658E-09
+    0.111E-08  0.169E-08  0.240E-08  0.321E-08  0.408E-08  0.497E-08  0.584E-08
+    0.666E-08  0.740E-08  0.803E-08  0.854E-08  0.892E-08  0.917E-08  0.928E-08
+    0.928E-08  0.916E-08  0.893E-08  0.862E-08  0.823E-08  0.777E-08  0.726E-08
+    0.726E-08  0.670E-08  0.609E-08  0.543E-08  0.471E-08  0.388E-08  0.270E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.163      0.162      0.161      0.161      0.160      0.160    
+    0.159      0.159      0.158      0.158      0.158      0.157      0.157    
+    0.157      0.156      0.156      0.156      0.156      0.155      0.155    
+    0.155      0.155      0.154      0.154      0.154      0.154      0.153    
+    0.153      0.153      0.153      0.152      0.152      0.151      0.150    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2001-08-26 01:00:00 UTC        
+ SRF variables written at  2001-08-26 01:00:00 UTC        
+ RAD variables written at  2001-08-26 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 02:00:00 UTC        
+ SRF variables written at  2001-08-26 02:00:00 UTC        
+ RAD variables written at  2001-08-26 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 03:00:00 UTC        
+ SRF variables written at  2001-08-26 03:00:00 UTC        
+ RAD variables written at  2001-08-26 03:00:00 UTC        
+ $$$  2001-08-26 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.37  489.01
+ CLM History variables written
+ ATM variables written at  2001-08-26 04:00:00 UTC        
+ SRF variables written at  2001-08-26 04:00:00 UTC        
+ RAD variables written at  2001-08-26 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 05:00:00 UTC        
+ SRF variables written at  2001-08-26 05:00:00 UTC        
+ RAD variables written at  2001-08-26 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 06:00:00 UTC        
+ SRF variables written at  2001-08-26 06:00:00 UTC        
+ RAD variables written at  2001-08-26 06:00:00 UTC        
+ SEARCH BC data for 2001082612 , step =  1859040
+ READY  BC from     2001082606  to 2001082612 
+ $$$  2001-08-26 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.74  487.10
+ CLM History variables written
+ ATM variables written at  2001-08-26 07:00:00 UTC        
+ SRF variables written at  2001-08-26 07:00:00 UTC        
+ RAD variables written at  2001-08-26 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 08:00:00 UTC        
+ SRF variables written at  2001-08-26 08:00:00 UTC        
+ RAD variables written at  2001-08-26 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 09:00:00 UTC        
+ SRF variables written at  2001-08-26 09:00:00 UTC        
+ RAD variables written at  2001-08-26 09:00:00 UTC        
+ $$$  2001-08-26 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.72  485.25
+ CLM History variables written
+ ATM variables written at  2001-08-26 10:00:00 UTC        
+ SRF variables written at  2001-08-26 10:00:00 UTC        
+ RAD variables written at  2001-08-26 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 11:00:00 UTC        
+ SRF variables written at  2001-08-26 11:00:00 UTC        
+ RAD variables written at  2001-08-26 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 12:00:00 UTC        
+ SRF variables written at  2001-08-26 12:00:00 UTC        
+ RAD variables written at  2001-08-26 12:00:00 UTC        
+ SEARCH BC data for 2001082618 , step =  1859520
+ READY  BC from     2001082612  to 2001082618 
+ $$$  2001-08-26 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.35  484.31
+ CLM History variables written
+ ATM variables written at  2001-08-26 13:00:00 UTC        
+ SRF variables written at  2001-08-26 13:00:00 UTC        
+ RAD variables written at  2001-08-26 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 14:00:00 UTC        
+ SRF variables written at  2001-08-26 14:00:00 UTC        
+ RAD variables written at  2001-08-26 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 15:00:00 UTC        
+ SRF variables written at  2001-08-26 15:00:00 UTC        
+ RAD variables written at  2001-08-26 15:00:00 UTC        
+ $$$  2001-08-26 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.59  483.12
+ CLM History variables written
+ ATM variables written at  2001-08-26 16:00:00 UTC        
+ SRF variables written at  2001-08-26 16:00:00 UTC        
+ RAD variables written at  2001-08-26 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 17:00:00 UTC        
+ SRF variables written at  2001-08-26 17:00:00 UTC        
+ RAD variables written at  2001-08-26 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 18:00:00 UTC        
+ SRF variables written at  2001-08-26 18:00:00 UTC        
+ RAD variables written at  2001-08-26 18:00:00 UTC        
+ SEARCH BC data for 2001082700 , step =  1860000
+ READY  BC from     2001082618  to 2001082700 
+ $$$  2001-08-26 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.18  482.54
+ CLM History variables written
+ ATM variables written at  2001-08-26 19:00:00 UTC        
+ SRF variables written at  2001-08-26 19:00:00 UTC        
+ RAD variables written at  2001-08-26 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 20:00:00 UTC        
+ SRF variables written at  2001-08-26 20:00:00 UTC        
+ RAD variables written at  2001-08-26 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 21:00:00 UTC        
+ SRF variables written at  2001-08-26 21:00:00 UTC        
+ RAD variables written at  2001-08-26 21:00:00 UTC        
+ $$$  2001-08-26 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.52  483.57
+ CLM History variables written
+ ATM variables written at  2001-08-26 22:00:00 UTC        
+ SRF variables written at  2001-08-26 22:00:00 UTC        
+ RAD variables written at  2001-08-26 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-26 23:00:00 UTC        
+ SRF variables written at  2001-08-26 23:00:00 UTC        
+ RAD variables written at  2001-08-26 23:00:00 UTC        
+ CLM History variables written
+ At  2001-08-27 00:00:00 UTC        
+ JDay    238.00000 solar declination angle =  10.48300709 degrees
+                   solar TSI irradiance    =    1356.6540 W/m^2
+ ATM variables written at  2001-08-27 00:00:00 UTC        
+ SRF variables written at  2001-08-27 00:00:00 UTC        
+ STS variables written at  2001-08-27 00:00:00 UTC        
+ RAD variables written at  2001-08-27 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2001082700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2001082700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2001082700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2001082700.nc
+ Elapsed seconds of run for this period :    955.7578    
+ SEARCH BC data for 2001082706 , step =  1860480
+ READY  BC from     2001082700  to 2001082706 
+ $$$  2001-08-27 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.62  485.74
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.548E-16
+    0.778E-13  0.189E-11  0.137E-10  0.548E-10  0.155E-09  0.346E-09  0.658E-09
+    0.111E-08  0.169E-08  0.240E-08  0.321E-08  0.408E-08  0.497E-08  0.584E-08
+    0.666E-08  0.740E-08  0.803E-08  0.854E-08  0.892E-08  0.917E-08  0.928E-08
+    0.928E-08  0.916E-08  0.893E-08  0.862E-08  0.823E-08  0.777E-08  0.726E-08
+    0.726E-08  0.670E-08  0.609E-08  0.543E-08  0.471E-08  0.388E-08  0.270E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.163      0.162      0.161      0.161      0.160      0.160    
+    0.159      0.159      0.158      0.158      0.158      0.157      0.157    
+    0.157      0.156      0.156      0.156      0.156      0.155      0.155    
+    0.155      0.155      0.154      0.154      0.154      0.154      0.153    
+    0.153      0.153      0.153      0.152      0.152      0.151      0.150    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2001-08-27 01:00:00 UTC        
+ SRF variables written at  2001-08-27 01:00:00 UTC        
+ RAD variables written at  2001-08-27 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 02:00:00 UTC        
+ SRF variables written at  2001-08-27 02:00:00 UTC        
+ RAD variables written at  2001-08-27 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 03:00:00 UTC        
+ SRF variables written at  2001-08-27 03:00:00 UTC        
+ RAD variables written at  2001-08-27 03:00:00 UTC        
+ $$$  2001-08-27 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.27  487.49
+ CLM History variables written
+ ATM variables written at  2001-08-27 04:00:00 UTC        
+ SRF variables written at  2001-08-27 04:00:00 UTC        
+ RAD variables written at  2001-08-27 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 05:00:00 UTC        
+ SRF variables written at  2001-08-27 05:00:00 UTC        
+ RAD variables written at  2001-08-27 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 06:00:00 UTC        
+ SRF variables written at  2001-08-27 06:00:00 UTC        
+ RAD variables written at  2001-08-27 06:00:00 UTC        
+ SEARCH BC data for 2001082712 , step =  1860960
+ READY  BC from     2001082706  to 2001082712 
+ $$$  2001-08-27 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.05  488.33
+ CLM History variables written
+ ATM variables written at  2001-08-27 07:00:00 UTC        
+ SRF variables written at  2001-08-27 07:00:00 UTC        
+ RAD variables written at  2001-08-27 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 08:00:00 UTC        
+ SRF variables written at  2001-08-27 08:00:00 UTC        
+ RAD variables written at  2001-08-27 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 09:00:00 UTC        
+ SRF variables written at  2001-08-27 09:00:00 UTC        
+ RAD variables written at  2001-08-27 09:00:00 UTC        
+ $$$  2001-08-27 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.62  489.53
+ CLM History variables written
+ ATM variables written at  2001-08-27 10:00:00 UTC        
+ SRF variables written at  2001-08-27 10:00:00 UTC        
+ RAD variables written at  2001-08-27 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 11:00:00 UTC        
+ SRF variables written at  2001-08-27 11:00:00 UTC        
+ RAD variables written at  2001-08-27 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 12:00:00 UTC        
+ SRF variables written at  2001-08-27 12:00:00 UTC        
+ RAD variables written at  2001-08-27 12:00:00 UTC        
+ SEARCH BC data for 2001082718 , step =  1861440
+ READY  BC from     2001082712  to 2001082718 
+ $$$  2001-08-27 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.63  490.04
+ CLM History variables written
+ ATM variables written at  2001-08-27 13:00:00 UTC        
+ SRF variables written at  2001-08-27 13:00:00 UTC        
+ RAD variables written at  2001-08-27 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 14:00:00 UTC        
+ SRF variables written at  2001-08-27 14:00:00 UTC        
+ RAD variables written at  2001-08-27 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 15:00:00 UTC        
+ SRF variables written at  2001-08-27 15:00:00 UTC        
+ RAD variables written at  2001-08-27 15:00:00 UTC        
+ $$$  2001-08-27 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.26  490.41
+ CLM History variables written
+ ATM variables written at  2001-08-27 16:00:00 UTC        
+ SRF variables written at  2001-08-27 16:00:00 UTC        
+ RAD variables written at  2001-08-27 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 17:00:00 UTC        
+ SRF variables written at  2001-08-27 17:00:00 UTC        
+ RAD variables written at  2001-08-27 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 18:00:00 UTC        
+ SRF variables written at  2001-08-27 18:00:00 UTC        
+ RAD variables written at  2001-08-27 18:00:00 UTC        
+ SEARCH BC data for 2001082800 , step =  1861920
+ READY  BC from     2001082718  to 2001082800 
+ $$$  2001-08-27 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.10  490.54
+ CLM History variables written
+ ATM variables written at  2001-08-27 19:00:00 UTC        
+ SRF variables written at  2001-08-27 19:00:00 UTC        
+ RAD variables written at  2001-08-27 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 20:00:00 UTC        
+ SRF variables written at  2001-08-27 20:00:00 UTC        
+ RAD variables written at  2001-08-27 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 21:00:00 UTC        
+ SRF variables written at  2001-08-27 21:00:00 UTC        
+ RAD variables written at  2001-08-27 21:00:00 UTC        
+ $$$  2001-08-27 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.77  490.66
+ CLM History variables written
+ ATM variables written at  2001-08-27 22:00:00 UTC        
+ SRF variables written at  2001-08-27 22:00:00 UTC        
+ RAD variables written at  2001-08-27 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-27 23:00:00 UTC        
+ SRF variables written at  2001-08-27 23:00:00 UTC        
+ RAD variables written at  2001-08-27 23:00:00 UTC        
+ CLM History variables written
+ At  2001-08-28 00:00:00 UTC        
+ JDay    239.00000 solar declination angle =  10.13475039 degrees
+                   solar TSI irradiance    =    1356.6540 W/m^2
+ ATM variables written at  2001-08-28 00:00:00 UTC        
+ SRF variables written at  2001-08-28 00:00:00 UTC        
+ STS variables written at  2001-08-28 00:00:00 UTC        
+ RAD variables written at  2001-08-28 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2001082800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2001082800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2001082800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2001082800.nc
+ Elapsed seconds of run for this period :    881.1953    
+ SEARCH BC data for 2001082806 , step =  1862400
+ READY  BC from     2001082800  to 2001082806 
+ $$$  2001-08-28 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.28  491.18
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.545E-16
+    0.776E-13  0.189E-11  0.137E-10  0.551E-10  0.156E-09  0.350E-09  0.666E-09
+    0.112E-08  0.172E-08  0.244E-08  0.327E-08  0.416E-08  0.507E-08  0.597E-08
+    0.682E-08  0.759E-08  0.824E-08  0.878E-08  0.917E-08  0.944E-08  0.957E-08
+    0.957E-08  0.945E-08  0.923E-08  0.891E-08  0.852E-08  0.805E-08  0.753E-08
+    0.753E-08  0.695E-08  0.633E-08  0.566E-08  0.492E-08  0.406E-08  0.284E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.155      0.155    
+    0.155      0.154      0.154      0.154      0.153      0.153      0.153    
+    0.152      0.152      0.152      0.152      0.151      0.151      0.151    
+    0.151      0.150      0.150      0.150      0.149      0.148      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2001-08-28 01:00:00 UTC        
+ SRF variables written at  2001-08-28 01:00:00 UTC        
+ RAD variables written at  2001-08-28 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 02:00:00 UTC        
+ SRF variables written at  2001-08-28 02:00:00 UTC        
+ RAD variables written at  2001-08-28 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 03:00:00 UTC        
+ SRF variables written at  2001-08-28 03:00:00 UTC        
+ RAD variables written at  2001-08-28 03:00:00 UTC        
+ $$$  2001-08-28 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.75  491.70
+ CLM History variables written
+ ATM variables written at  2001-08-28 04:00:00 UTC        
+ SRF variables written at  2001-08-28 04:00:00 UTC        
+ RAD variables written at  2001-08-28 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 05:00:00 UTC        
+ SRF variables written at  2001-08-28 05:00:00 UTC        
+ RAD variables written at  2001-08-28 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 06:00:00 UTC        
+ SRF variables written at  2001-08-28 06:00:00 UTC        
+ RAD variables written at  2001-08-28 06:00:00 UTC        
+ SEARCH BC data for 2001082812 , step =  1862880
+ READY  BC from     2001082806  to 2001082812 
+ $$$  2001-08-28 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.76  492.70
+ CLM History variables written
+ ATM variables written at  2001-08-28 07:00:00 UTC        
+ SRF variables written at  2001-08-28 07:00:00 UTC        
+ RAD variables written at  2001-08-28 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 08:00:00 UTC        
+ SRF variables written at  2001-08-28 08:00:00 UTC        
+ RAD variables written at  2001-08-28 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 09:00:00 UTC        
+ SRF variables written at  2001-08-28 09:00:00 UTC        
+ RAD variables written at  2001-08-28 09:00:00 UTC        
+ $$$  2001-08-28 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.73  493.64
+ CLM History variables written
+ ATM variables written at  2001-08-28 10:00:00 UTC        
+ SRF variables written at  2001-08-28 10:00:00 UTC        
+ RAD variables written at  2001-08-28 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 11:00:00 UTC        
+ SRF variables written at  2001-08-28 11:00:00 UTC        
+ RAD variables written at  2001-08-28 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 12:00:00 UTC        
+ SRF variables written at  2001-08-28 12:00:00 UTC        
+ RAD variables written at  2001-08-28 12:00:00 UTC        
+ SEARCH BC data for 2001082818 , step =  1863360
+ READY  BC from     2001082812  to 2001082818 
+ $$$  2001-08-28 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.27  494.40
+ CLM History variables written
+ ATM variables written at  2001-08-28 13:00:00 UTC        
+ SRF variables written at  2001-08-28 13:00:00 UTC        
+ RAD variables written at  2001-08-28 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 14:00:00 UTC        
+ SRF variables written at  2001-08-28 14:00:00 UTC        
+ RAD variables written at  2001-08-28 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 15:00:00 UTC        
+ SRF variables written at  2001-08-28 15:00:00 UTC        
+ RAD variables written at  2001-08-28 15:00:00 UTC        
+ $$$  2001-08-28 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.56  495.05
+ CLM History variables written
+ ATM variables written at  2001-08-28 16:00:00 UTC        
+ SRF variables written at  2001-08-28 16:00:00 UTC        
+ RAD variables written at  2001-08-28 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 17:00:00 UTC        
+ SRF variables written at  2001-08-28 17:00:00 UTC        
+ RAD variables written at  2001-08-28 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 18:00:00 UTC        
+ SRF variables written at  2001-08-28 18:00:00 UTC        
+ RAD variables written at  2001-08-28 18:00:00 UTC        
+ SEARCH BC data for 2001082900 , step =  1863840
+ READY  BC from     2001082818  to 2001082900 
+ $$$  2001-08-28 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.03  495.51
+ CLM History variables written
+ ATM variables written at  2001-08-28 19:00:00 UTC        
+ SRF variables written at  2001-08-28 19:00:00 UTC        
+ RAD variables written at  2001-08-28 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 20:00:00 UTC        
+ SRF variables written at  2001-08-28 20:00:00 UTC        
+ RAD variables written at  2001-08-28 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 21:00:00 UTC        
+ SRF variables written at  2001-08-28 21:00:00 UTC        
+ RAD variables written at  2001-08-28 21:00:00 UTC        
+ $$$  2001-08-28 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.56  495.59
+ CLM History variables written
+ ATM variables written at  2001-08-28 22:00:00 UTC        
+ SRF variables written at  2001-08-28 22:00:00 UTC        
+ RAD variables written at  2001-08-28 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-28 23:00:00 UTC        
+ SRF variables written at  2001-08-28 23:00:00 UTC        
+ RAD variables written at  2001-08-28 23:00:00 UTC        
+ CLM History variables written
+ At  2001-08-29 00:00:00 UTC        
+ JDay    240.00000 solar declination angle =   9.78381746 degrees
+                   solar TSI irradiance    =    1356.6540 W/m^2
+ ATM variables written at  2001-08-29 00:00:00 UTC        
+ SRF variables written at  2001-08-29 00:00:00 UTC        
+ STS variables written at  2001-08-29 00:00:00 UTC        
+ RAD variables written at  2001-08-29 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2001082900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2001082900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2001082900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2001082900.nc
+ Elapsed seconds of run for this period :    871.4766    
+ SEARCH BC data for 2001082906 , step =  1864320
+ READY  BC from     2001082900  to 2001082906 
+ $$$  2001-08-29 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.31  495.42
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.545E-16
+    0.776E-13  0.189E-11  0.137E-10  0.551E-10  0.156E-09  0.350E-09  0.666E-09
+    0.112E-08  0.172E-08  0.244E-08  0.327E-08  0.416E-08  0.507E-08  0.597E-08
+    0.682E-08  0.759E-08  0.824E-08  0.878E-08  0.917E-08  0.944E-08  0.957E-08
+    0.957E-08  0.945E-08  0.923E-08  0.891E-08  0.852E-08  0.805E-08  0.753E-08
+    0.753E-08  0.695E-08  0.633E-08  0.566E-08  0.492E-08  0.406E-08  0.284E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.155      0.155    
+    0.155      0.154      0.154      0.154      0.153      0.153      0.153    
+    0.152      0.152      0.152      0.152      0.151      0.151      0.151    
+    0.151      0.150      0.150      0.150      0.149      0.148      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2001-08-29 01:00:00 UTC        
+ SRF variables written at  2001-08-29 01:00:00 UTC        
+ RAD variables written at  2001-08-29 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 02:00:00 UTC        
+ SRF variables written at  2001-08-29 02:00:00 UTC        
+ RAD variables written at  2001-08-29 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 03:00:00 UTC        
+ SRF variables written at  2001-08-29 03:00:00 UTC        
+ RAD variables written at  2001-08-29 03:00:00 UTC        
+ $$$  2001-08-29 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.44  495.20
+ CLM History variables written
+ ATM variables written at  2001-08-29 04:00:00 UTC        
+ SRF variables written at  2001-08-29 04:00:00 UTC        
+ RAD variables written at  2001-08-29 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 05:00:00 UTC        
+ SRF variables written at  2001-08-29 05:00:00 UTC        
+ RAD variables written at  2001-08-29 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 06:00:00 UTC        
+ SRF variables written at  2001-08-29 06:00:00 UTC        
+ RAD variables written at  2001-08-29 06:00:00 UTC        
+ SEARCH BC data for 2001082912 , step =  1864800
+ READY  BC from     2001082906  to 2001082912 
+ $$$  2001-08-29 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.22  494.79
+ CLM History variables written
+ ATM variables written at  2001-08-29 07:00:00 UTC        
+ SRF variables written at  2001-08-29 07:00:00 UTC        
+ RAD variables written at  2001-08-29 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 08:00:00 UTC        
+ SRF variables written at  2001-08-29 08:00:00 UTC        
+ RAD variables written at  2001-08-29 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 09:00:00 UTC        
+ SRF variables written at  2001-08-29 09:00:00 UTC        
+ RAD variables written at  2001-08-29 09:00:00 UTC        
+ $$$  2001-08-29 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.43  494.73
+ CLM History variables written
+ ATM variables written at  2001-08-29 10:00:00 UTC        
+ SRF variables written at  2001-08-29 10:00:00 UTC        
+ RAD variables written at  2001-08-29 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 11:00:00 UTC        
+ SRF variables written at  2001-08-29 11:00:00 UTC        
+ RAD variables written at  2001-08-29 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 12:00:00 UTC        
+ SRF variables written at  2001-08-29 12:00:00 UTC        
+ RAD variables written at  2001-08-29 12:00:00 UTC        
+ SEARCH BC data for 2001082918 , step =  1865280
+ READY  BC from     2001082912  to 2001082918 
+ $$$  2001-08-29 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.60  494.94
+ CLM History variables written
+ ATM variables written at  2001-08-29 13:00:00 UTC        
+ SRF variables written at  2001-08-29 13:00:00 UTC        
+ RAD variables written at  2001-08-29 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 14:00:00 UTC        
+ SRF variables written at  2001-08-29 14:00:00 UTC        
+ RAD variables written at  2001-08-29 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 15:00:00 UTC        
+ SRF variables written at  2001-08-29 15:00:00 UTC        
+ RAD variables written at  2001-08-29 15:00:00 UTC        
+ $$$  2001-08-29 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.40  494.92
+ CLM History variables written
+ ATM variables written at  2001-08-29 16:00:00 UTC        
+ SRF variables written at  2001-08-29 16:00:00 UTC        
+ RAD variables written at  2001-08-29 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 17:00:00 UTC        
+ SRF variables written at  2001-08-29 17:00:00 UTC        
+ RAD variables written at  2001-08-29 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 18:00:00 UTC        
+ SRF variables written at  2001-08-29 18:00:00 UTC        
+ RAD variables written at  2001-08-29 18:00:00 UTC        
+ SEARCH BC data for 2001083000 , step =  1865760
+ READY  BC from     2001082918  to 2001083000 
+ $$$  2001-08-29 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.98  495.26
+ CLM History variables written
+ ATM variables written at  2001-08-29 19:00:00 UTC        
+ SRF variables written at  2001-08-29 19:00:00 UTC        
+ RAD variables written at  2001-08-29 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 20:00:00 UTC        
+ SRF variables written at  2001-08-29 20:00:00 UTC        
+ RAD variables written at  2001-08-29 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 21:00:00 UTC        
+ SRF variables written at  2001-08-29 21:00:00 UTC        
+ RAD variables written at  2001-08-29 21:00:00 UTC        
+ $$$  2001-08-29 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.27  495.33
+ CLM History variables written
+ ATM variables written at  2001-08-29 22:00:00 UTC        
+ SRF variables written at  2001-08-29 22:00:00 UTC        
+ RAD variables written at  2001-08-29 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-29 23:00:00 UTC        
+ SRF variables written at  2001-08-29 23:00:00 UTC        
+ RAD variables written at  2001-08-29 23:00:00 UTC        
+ CLM History variables written
+ At  2001-08-30 00:00:00 UTC        
+ JDay    241.00000 solar declination angle =   9.43029716 degrees
+                   solar TSI irradiance    =    1356.6540 W/m^2
+ ATM variables written at  2001-08-30 00:00:00 UTC        
+ SRF variables written at  2001-08-30 00:00:00 UTC        
+ STS variables written at  2001-08-30 00:00:00 UTC        
+ RAD variables written at  2001-08-30 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2001083000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2001083000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2001083000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2001083000.nc
+ Elapsed seconds of run for this period :    921.4766    
+ SEARCH BC data for 2001083006 , step =  1866240
+ READY  BC from     2001083000  to 2001083006 
+ $$$  2001-08-30 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1031.96  495.51
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.545E-16
+    0.776E-13  0.189E-11  0.137E-10  0.551E-10  0.156E-09  0.350E-09  0.666E-09
+    0.112E-08  0.172E-08  0.244E-08  0.327E-08  0.416E-08  0.507E-08  0.597E-08
+    0.682E-08  0.759E-08  0.824E-08  0.878E-08  0.917E-08  0.944E-08  0.957E-08
+    0.957E-08  0.945E-08  0.923E-08  0.891E-08  0.852E-08  0.805E-08  0.753E-08
+    0.753E-08  0.695E-08  0.633E-08  0.566E-08  0.492E-08  0.406E-08  0.284E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.155      0.155    
+    0.155      0.154      0.154      0.154      0.153      0.153      0.153    
+    0.152      0.152      0.152      0.152      0.151      0.151      0.151    
+    0.151      0.150      0.150      0.150      0.149      0.148      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2001-08-30 01:00:00 UTC        
+ SRF variables written at  2001-08-30 01:00:00 UTC        
+ RAD variables written at  2001-08-30 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 02:00:00 UTC        
+ SRF variables written at  2001-08-30 02:00:00 UTC        
+ RAD variables written at  2001-08-30 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 03:00:00 UTC        
+ SRF variables written at  2001-08-30 03:00:00 UTC        
+ RAD variables written at  2001-08-30 03:00:00 UTC        
+ $$$  2001-08-30 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1031.70  495.07
+ CLM History variables written
+ ATM variables written at  2001-08-30 04:00:00 UTC        
+ SRF variables written at  2001-08-30 04:00:00 UTC        
+ RAD variables written at  2001-08-30 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 05:00:00 UTC        
+ SRF variables written at  2001-08-30 05:00:00 UTC        
+ RAD variables written at  2001-08-30 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 06:00:00 UTC        
+ SRF variables written at  2001-08-30 06:00:00 UTC        
+ RAD variables written at  2001-08-30 06:00:00 UTC        
+ SEARCH BC data for 2001083012 , step =  1866720
+ READY  BC from     2001083006  to 2001083012 
+ $$$  2001-08-30 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1031.58  494.76
+ CLM History variables written
+ ATM variables written at  2001-08-30 07:00:00 UTC        
+ SRF variables written at  2001-08-30 07:00:00 UTC        
+ RAD variables written at  2001-08-30 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 08:00:00 UTC        
+ SRF variables written at  2001-08-30 08:00:00 UTC        
+ RAD variables written at  2001-08-30 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 09:00:00 UTC        
+ SRF variables written at  2001-08-30 09:00:00 UTC        
+ RAD variables written at  2001-08-30 09:00:00 UTC        
+ $$$  2001-08-30 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1032.52  494.78
+ CLM History variables written
+ ATM variables written at  2001-08-30 10:00:00 UTC        
+ SRF variables written at  2001-08-30 10:00:00 UTC        
+ RAD variables written at  2001-08-30 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 11:00:00 UTC        
+ SRF variables written at  2001-08-30 11:00:00 UTC        
+ RAD variables written at  2001-08-30 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 12:00:00 UTC        
+ SRF variables written at  2001-08-30 12:00:00 UTC        
+ RAD variables written at  2001-08-30 12:00:00 UTC        
+ SEARCH BC data for 2001083018 , step =  1867200
+ READY  BC from     2001083012  to 2001083018 
+ $$$  2001-08-30 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1033.79  494.55
+ CLM History variables written
+ ATM variables written at  2001-08-30 13:00:00 UTC        
+ SRF variables written at  2001-08-30 13:00:00 UTC        
+ RAD variables written at  2001-08-30 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 14:00:00 UTC        
+ SRF variables written at  2001-08-30 14:00:00 UTC        
+ RAD variables written at  2001-08-30 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 15:00:00 UTC        
+ SRF variables written at  2001-08-30 15:00:00 UTC        
+ RAD variables written at  2001-08-30 15:00:00 UTC        
+ $$$  2001-08-30 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1032.87  494.19
+ CLM History variables written
+ ATM variables written at  2001-08-30 16:00:00 UTC        
+ SRF variables written at  2001-08-30 16:00:00 UTC        
+ RAD variables written at  2001-08-30 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 17:00:00 UTC        
+ SRF variables written at  2001-08-30 17:00:00 UTC        
+ RAD variables written at  2001-08-30 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 18:00:00 UTC        
+ SRF variables written at  2001-08-30 18:00:00 UTC        
+ RAD variables written at  2001-08-30 18:00:00 UTC        
+ SEARCH BC data for 2001083100 , step =  1867680
+ READY  BC from     2001083018  to 2001083100 
+ $$$  2001-08-30 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1032.16  494.19
+ CLM History variables written
+ ATM variables written at  2001-08-30 19:00:00 UTC        
+ SRF variables written at  2001-08-30 19:00:00 UTC        
+ RAD variables written at  2001-08-30 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 20:00:00 UTC        
+ SRF variables written at  2001-08-30 20:00:00 UTC        
+ RAD variables written at  2001-08-30 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 21:00:00 UTC        
+ SRF variables written at  2001-08-30 21:00:00 UTC        
+ RAD variables written at  2001-08-30 21:00:00 UTC        
+ $$$  2001-08-30 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1032.45  494.25
+ CLM History variables written
+ ATM variables written at  2001-08-30 22:00:00 UTC        
+ SRF variables written at  2001-08-30 22:00:00 UTC        
+ RAD variables written at  2001-08-30 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-30 23:00:00 UTC        
+ SRF variables written at  2001-08-30 23:00:00 UTC        
+ RAD variables written at  2001-08-30 23:00:00 UTC        
+ CLM History variables written
+ At  2001-08-31 00:00:00 UTC        
+ JDay    242.00000 solar declination angle =   9.07427846 degrees
+                   solar TSI irradiance    =    1356.6540 W/m^2
+ ATM variables written at  2001-08-31 00:00:00 UTC        
+ SRF variables written at  2001-08-31 00:00:00 UTC        
+ STS variables written at  2001-08-31 00:00:00 UTC        
+ RAD variables written at  2001-08-31 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_ATM.2001083100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_SRF.2001083100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_STS.2001083100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3_RAD.2001083100.nc
+ Elapsed seconds of run for this period :    889.9531    
+ SEARCH BC data for 2001083106 , step =  1868160
+ READY  BC from     2001083100  to 2001083106 
+ $$$  2001-08-31 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1032.87  494.18
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.545E-16
+    0.776E-13  0.189E-11  0.137E-10  0.551E-10  0.156E-09  0.350E-09  0.666E-09
+    0.112E-08  0.172E-08  0.244E-08  0.327E-08  0.416E-08  0.507E-08  0.597E-08
+    0.682E-08  0.759E-08  0.824E-08  0.878E-08  0.917E-08  0.944E-08  0.957E-08
+    0.957E-08  0.945E-08  0.923E-08  0.891E-08  0.852E-08  0.805E-08  0.753E-08
+    0.753E-08  0.695E-08  0.633E-08  0.566E-08  0.492E-08  0.406E-08  0.284E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.155      0.155    
+    0.155      0.154      0.154      0.154      0.153      0.153      0.153    
+    0.152      0.152      0.152      0.152      0.151      0.151      0.151    
+    0.151      0.150      0.150      0.150      0.149      0.148      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2001-08-31 01:00:00 UTC        
+ SRF variables written at  2001-08-31 01:00:00 UTC        
+ RAD variables written at  2001-08-31 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 02:00:00 UTC        
+ SRF variables written at  2001-08-31 02:00:00 UTC        
+ RAD variables written at  2001-08-31 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 03:00:00 UTC        
+ SRF variables written at  2001-08-31 03:00:00 UTC        
+ RAD variables written at  2001-08-31 03:00:00 UTC        
+ $$$  2001-08-31 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1032.27  493.91
+ CLM History variables written
+ ATM variables written at  2001-08-31 04:00:00 UTC        
+ SRF variables written at  2001-08-31 04:00:00 UTC        
+ RAD variables written at  2001-08-31 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 05:00:00 UTC        
+ SRF variables written at  2001-08-31 05:00:00 UTC        
+ RAD variables written at  2001-08-31 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 06:00:00 UTC        
+ SRF variables written at  2001-08-31 06:00:00 UTC        
+ RAD variables written at  2001-08-31 06:00:00 UTC        
+ SEARCH BC data for 2001083112 , step =  1868640
+ READY  BC from     2001083106  to 2001083112 
+ $$$  2001-08-31 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1031.62  493.72
+ CLM History variables written
+ ATM variables written at  2001-08-31 07:00:00 UTC        
+ SRF variables written at  2001-08-31 07:00:00 UTC        
+ RAD variables written at  2001-08-31 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 08:00:00 UTC        
+ SRF variables written at  2001-08-31 08:00:00 UTC        
+ RAD variables written at  2001-08-31 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 09:00:00 UTC        
+ SRF variables written at  2001-08-31 09:00:00 UTC        
+ RAD variables written at  2001-08-31 09:00:00 UTC        
+ $$$  2001-08-31 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1031.71  493.46
+ CLM History variables written
+ ATM variables written at  2001-08-31 10:00:00 UTC        
+ SRF variables written at  2001-08-31 10:00:00 UTC        
+ RAD variables written at  2001-08-31 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 11:00:00 UTC        
+ SRF variables written at  2001-08-31 11:00:00 UTC        
+ RAD variables written at  2001-08-31 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 12:00:00 UTC        
+ SRF variables written at  2001-08-31 12:00:00 UTC        
+ RAD variables written at  2001-08-31 12:00:00 UTC        
+ SEARCH BC data for 2001083118 , step =  1869120
+ READY  BC from     2001083112  to 2001083118 
+ $$$  2001-08-31 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1031.95  493.15
+ CLM History variables written
+ ATM variables written at  2001-08-31 13:00:00 UTC        
+ SRF variables written at  2001-08-31 13:00:00 UTC        
+ RAD variables written at  2001-08-31 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 14:00:00 UTC        
+ SRF variables written at  2001-08-31 14:00:00 UTC        
+ RAD variables written at  2001-08-31 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 15:00:00 UTC        
+ SRF variables written at  2001-08-31 15:00:00 UTC        
+ RAD variables written at  2001-08-31 15:00:00 UTC        
+ $$$  2001-08-31 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.76  492.70
+ CLM History variables written
+ ATM variables written at  2001-08-31 16:00:00 UTC        
+ SRF variables written at  2001-08-31 16:00:00 UTC        
+ RAD variables written at  2001-08-31 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 17:00:00 UTC        
+ SRF variables written at  2001-08-31 17:00:00 UTC        
+ RAD variables written at  2001-08-31 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 18:00:00 UTC        
+ SRF variables written at  2001-08-31 18:00:00 UTC        
+ RAD variables written at  2001-08-31 18:00:00 UTC        
+ SEARCH BC data for 2001090100 , step =  1869600
+ READY  BC from     2001083118  to 2001090100 
+ $$$  2001-08-31 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.66  492.65
+ CLM History variables written
+ ATM variables written at  2001-08-31 19:00:00 UTC        
+ SRF variables written at  2001-08-31 19:00:00 UTC        
+ RAD variables written at  2001-08-31 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 20:00:00 UTC        
+ SRF variables written at  2001-08-31 20:00:00 UTC        
+ RAD variables written at  2001-08-31 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 21:00:00 UTC        
+ SRF variables written at  2001-08-31 21:00:00 UTC        
+ RAD variables written at  2001-08-31 21:00:00 UTC        
+ $$$  2001-08-31 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.18  492.26
+ CLM History variables written
+ ATM variables written at  2001-08-31 22:00:00 UTC        
+ SRF variables written at  2001-08-31 22:00:00 UTC        
+ RAD variables written at  2001-08-31 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2001-08-31 23:00:00 UTC        
+ SRF variables written at  2001-08-31 23:00:00 UTC        
+ RAD variables written at  2001-08-31 23:00:00 UTC        
+ Write restart file for CLM at  2001-09-01 00:00:00 UTC        
+ Creating history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3.clm.regcm.h0.200109.nc
+ CLM History variables written
+ CLM History variables written
+ Closing local history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3.clm.regcm.h0.200109.nc
+ Closing local history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3.clm.regcm.h1.20010801_03600.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CSA
+ M-3.clm.regcm.r.2001090100.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3.clm.regcm.rh0.2001090100.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
+ AM-3.clm.regcm.rh1.2001090100.nc
+ Successfully wrote out restart data for CLM 4.5
+ At  2001-09-01 00:00:00 UTC        
+ JDay    243.00000 solar declination angle =   8.71585045 degrees
+                   solar TSI irradiance    =    1356.4864 W/m^2
+ ATM variables written at  2001-09-01 00:00:00 UTC        
+ SRF variables written at  2001-09-01 00:00:00 UTC        
+ STS variables written at  2001-09-01 00:00:00 UTC        
+ RAD variables written at  2001-09-01 00:00:00 UTC        
+ SAV variables written at  2001-09-01 00:00:00 UTC        
+ Final time  2001-09-01 00:00:00 UTC reached.
+ Elapsed seconds of run for this final timeslice :    957.0625    
+ : this run stops at  : 2025-02-26 21:02:05+0100
+ : Run has been completed using         1792  processors.
+ : Total elapsed seconds of run :    77994.8547280803     
+ RegCM V5 simulation successfully reached end

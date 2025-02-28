@@ -48,7 +48,7 @@
  &restartparam
  ifrest  = True,       ! If a restart
  mdate0  = 2000010100, ! Global start (is globidate1)
- mdate1  = 2003040100, ! Start date of this run
+ mdate1  = 2004070100, ! Start date of this run
  mdate2  = 2005010100, ! End date for this run
  /
 

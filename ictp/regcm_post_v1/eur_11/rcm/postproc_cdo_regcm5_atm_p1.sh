@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT23_ESP_1
+#SBATCH -A ICT25_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -17,13 +17,15 @@
 {
 set -eo pipefail
 
-YR="2000-2001"
+YR="2000-2004"
 
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 EXP="EUR-11"
-FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
+FOLDER_LIST="NoTo-Europe WSM5-Europe"
+#FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
+
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
