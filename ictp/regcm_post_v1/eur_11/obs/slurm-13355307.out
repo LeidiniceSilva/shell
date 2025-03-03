@@ -1,0 +1,13 @@
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/obs
+
+------------------------------- INIT POSTPROCESSING ERA5 -------------------------------
+
+1. Select date
+
+cdo (Abort): 
+selyear,2000/2004 /leonardo/home/userexternal/mdasilva/leonardo_work/OBS/ERA5/cc_ERA5_2000-2009.nc [4m/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/ERA5/cc_ERA5_2018-2021.nc[0m cc_ERA5_mon_2000-2004.nc  
+                                                                                                                                           ^ Operator cannot be assigned.
+       Reason:
+         No Operators with missing input left.
+

@@ -23,7 +23,7 @@ dep=$3
 
 dpath=$( echo $nl | cut -d. -f1 )
 
-nnod=16
+nnod=12
 dmon=3
 
 driv=$( echo $nl | cut -d- -f1 )

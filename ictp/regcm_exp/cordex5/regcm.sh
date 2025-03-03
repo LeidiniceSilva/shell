@@ -2,7 +2,7 @@
 
 #SBATCH -o logs/rcm_SLURM.out
 #SBATCH -e logs/rcm_SLURM.err
-#SBATCH -N 16 
+#SBATCH -N 12 
 #SBATCH --ntasks-per-node=108
 #SBATCH -t 1-00:00:00
 #SBATCH -J CSAM-3

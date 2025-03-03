@@ -1,0 +1,16 @@
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/obs
+
+------------------------------- INIT POSTPROCESSING MSWEP -------------------------------
+
+1. Select date
+
+2. Seasonal avg
+cdo    remapbil: Bilinear weights from lonlat (3600x1800) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (3600x1800) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (3600x1800) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (3600x1800) to lonlat (949x461) grid
+
+Delete files
+
+------------------------------- THE END POSTPROCESSING MSWEP -------------------------------

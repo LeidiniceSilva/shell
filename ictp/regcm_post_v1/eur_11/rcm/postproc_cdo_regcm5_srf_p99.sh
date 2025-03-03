@@ -13,7 +13,7 @@ CDO(){
 
 EXP="EUR-11"
 
-YR="2000-2001"
+YR="2000-2004"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 

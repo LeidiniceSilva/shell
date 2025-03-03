@@ -23,8 +23,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 EXP="EUR-11"
-FOLDER_LIST="NoTo-Europe WSM5-Europe"
-#FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
+FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
 
 
 echo
