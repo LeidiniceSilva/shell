@@ -28,7 +28,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
+FOLDER_LIST="WSM5-Europe WDM7-Europe"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -43,14 +43,11 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     cd ${DIR_OUT}
     echo ${DIR_OUT}
 
-    if [ ${FOLDER} = 'NoTo-Europe' ] || [ ${FOLDER} = 'WSM5-Europe' ]
+    if [ ${FOLDER} = 'WSM5-Europe' ]
     then
-    VAR_LIST="cl cli clr cls clw rh hus ua va"
-    elif [ ${FOLDER} = 'WSM7-Europe' ]
-    then
-    VAR_LIST="cl cli clr cls clw rh hus ua va hail gra"
+    VAR_LIST="va"
     else
-    VAR_LIST="cl cli clr cls clw rh hus ua va hail gra ncc ncn ncr"
+    VAR_LIST="ncr"
     fi
 
     echo

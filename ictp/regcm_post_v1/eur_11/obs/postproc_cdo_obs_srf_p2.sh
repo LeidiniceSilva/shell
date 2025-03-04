@@ -57,7 +57,7 @@ echo "3. Diurnal cycle"
 CDO mergetime ${VAR}_${EXP}_${DATASET}_*_${YR}_timmean.nc ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc
 
 echo
-echo "3. Regrid variable"
+echo "4. Regrid variable"
 ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
 ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
 CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_diurnal_cycle_${YR}_lonlat.nc

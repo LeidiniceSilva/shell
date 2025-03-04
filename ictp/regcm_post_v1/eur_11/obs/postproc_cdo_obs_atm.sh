@@ -39,8 +39,7 @@ echo ${DIR_OUT}
 echo
 echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
 
-VAR_LIST="u v"
-#VAR_LIST="cc ciwc clwc crwc cswc q r u v"
+VAR_LIST="cc ciwc clwc crwc cswc q r u v"
 
 for VAR in ${VAR_LIST[@]}; do
     echo
