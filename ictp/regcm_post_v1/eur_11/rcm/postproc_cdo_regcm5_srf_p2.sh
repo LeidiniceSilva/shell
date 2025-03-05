@@ -5,7 +5,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -J diurnal_cycle
+#SBATCH -J Postproc
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -59,12 +59,12 @@ for FOLDER in ${FOLDER_LIST[@]}; do
            
         echo
         echo "3. Convert unit"
-        CDO -b f32 mulc,3600 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_hr_${YR}.nc
+        CDO -b f32 mulc,3600 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_1hr_${YR}.nc
 	
 	echo
 	echo "4. Hourly mean"
 	for HR in `seq -w 00 23`; do
-            CDO selhour,${HR} ${VAR}_${EXP}_${FOLDER}_RegCM5_hr_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_${HR}hr_${YR}.nc
+            CDO selhour,${HR} ${VAR}_${EXP}_${FOLDER}_RegCM5_1hr_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_${HR}hr_${YR}.nc
             CDO timmean ${VAR}_${EXP}_${FOLDER}_RegCM5_${HR}hr_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_${HR}hr_${YR}_timmean.nc
 	done
        

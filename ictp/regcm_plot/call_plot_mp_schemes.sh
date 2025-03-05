@@ -1,9 +1,11 @@
 #!/bin/bash
 
+#SBATCH -A ICT25_ESP
+#SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
-#SBATCH -t 24:00:00
-#SBATCH -J Testing
-#SBATCH -p long # esp
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Plot
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -13,15 +15,15 @@
 #__description__ = 'Call python code to plot'
 
 {
-
-# load required modules
-module purge
-source /opt-ictp/ESMF/env202108
+set -eo pipefail
 
 echo
 echo "--------------- INIT PLOT ----------------"
 
-python3 test.py
+DIR_IN="/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/eur_11"
+cd ${DIR_IN}
+
+python3 plot_graph_pdf_hourly.py
 
 echo
 echo "--------------- THE END PLOT ----------------"

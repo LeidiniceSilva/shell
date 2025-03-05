@@ -99,7 +99,7 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="pr"
+VAR_LIST="tp"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "1. Select date"
