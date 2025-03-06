@@ -3,13 +3,13 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Mar 15, 2024'
-#__description__ = 'Preprocess RegCM5 output to track cyclone'
+#__description__ = 'Postprocessing the RegCM5 output with CDO'
 
 {
 
 # Change directory
-PATH_NC="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/regcm5/postproc"
-PATH_BIN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/regcm5/ncp"
+PATH_NC="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/regcm"
+PATH_BIN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/regcm/ncp"
 
 mkdir ${PATH_BIN}
 

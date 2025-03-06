@@ -8,8 +8,8 @@
 {
 
 # Change directory
-PATH_NC="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/postproc"
-PATH_BIN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/ncp"
+PATH_NC="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/wrf"
+PATH_BIN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/wrf/ncp"
 
 mkdir ${PATH_BIN}
 

@@ -3,11 +3,11 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Mar 15, 2024'
-#__description__ = 'Preprocess dataset to track cyclone'
+#__description__ = 'Postprocessing the dataset with CDO'
 
 # Change directory
-PATH_NC="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/era5/postproc"
-PATH_BIN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/era5/ncp"
+PATH_NC="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/obs/era5"
+PATH_BIN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/obs/era5/ncp"
 
 mkdir ${PATH_BIN}
 

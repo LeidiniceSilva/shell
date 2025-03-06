@@ -1,26 +1,38 @@
 #!/bin/bash
 
+#SBATCH -A ICT25_ESP
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = 'May 28, 2024'
-#__description__ = 'Posprocessing the WRF output with CDO'
- 
-{
+#__date__        = 'Nov 20, 2023'
+#__description__ = 'Postprocessing the WRF output with CDO'
 
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+{
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="PSL U10e V10e"
 EXP="SAM-3km"
-MODEL="ECMWF-ERA5_evaluation_r1i1p1f1_UCAR-WRF"
+MODEL="WRF"
 DT="2018-2021"
+VAR_LIST="PSL U10 V10"
 
-DIR="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/wrf/WRF"
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/wrf"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
+
+echo
+cd ${DIR_OUT}
+echo ${DIR_OUT}
 
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
@@ -28,35 +40,25 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 echo
 echo "1. Select variable"
 for VAR in ${VAR_LIST[@]}; do
-    
-    DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/wrf/wrf/${VAR}"
-    
-    echo
-    cd ${DIR_IN}
-    echo ${DIR_IN}
-    
     for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
+
+	    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/WRF/${VAR}"
 	    
 	    echo
 	    echo "2. Regrid"
-            if [ ${VAR} == "PSL" ]
-	    then
-	    	cp ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
-	    	${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
-	    else
-	    	CDO -setgrid,${DIR}/xlonlat.nc ${VAR}_wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
-	    	${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
-	    fi
+	    ${BIN}/./regrid ${DIR_IN}/${YEAR}${MON}_${VAR}_SouthAmerica.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
 	    
 	    echo
 	    echo "3. Smooth"
-	    CDO smooth ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_lonlat.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_smooth.nc
+	    CDO smooth ${YEAR}${MON}_${VAR}_SouthAmerica_lonlat.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_smooth.nc
 	    CDO smooth ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_smooth.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}_smooth2.nc
 	    	
         done
     done	
-    
+
+    echo
+    echo "4. Merge files"   
     CDO mergetime ${VAR}_${EXP}_${MODEL}_*_smooth2.nc ${VAR}_${EXP}_${MODEL}_${DT}_smooth2.nc
     
 done

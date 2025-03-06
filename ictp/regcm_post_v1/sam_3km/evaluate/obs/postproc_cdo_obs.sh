@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT23_ESP_1
+#SBATCH -A ICT25_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -25,7 +25,7 @@ CDO(){
 DATASET=$1
 EXP="SAM-3km"
 
-YR="2018-2018"
+YR="2018-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
@@ -98,7 +98,7 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="tp t2m cc tcc lcc mcc hcc msnlwrf msnswrf pev"
+VAR_LIST="tp t2m cc tcc lcc mcc hcc msnlwrf pev"
 
 for VAR in ${VAR_LIST[@]}; do
 
@@ -121,9 +121,6 @@ for VAR in ${VAR_LIST[@]}; do
     elif [ ${VAR} == 't2m' ] 
     then
     CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 'pev' ]
-    then
-    CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
     cp ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi 
@@ -132,6 +129,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo "Regrid and select subdomain"
     if [ ${VAR} == 'tp' ]
     then
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil 
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil 
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil  
     else
@@ -176,6 +174,7 @@ CDO monmean cmorph_${EXP}_${DATASET}_day_${YR}.nc cmorph_${EXP}_${DATASET}_mon_$
 
 echo 
 echo "Regrid output"
+${BIN}/./regrid cmorph_${EXP}_${DATASET}_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 ${BIN}/./regrid cmorph_${EXP}_${DATASET}_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 ${BIN}/./regrid cmorph_${EXP}_${DATASET}_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 

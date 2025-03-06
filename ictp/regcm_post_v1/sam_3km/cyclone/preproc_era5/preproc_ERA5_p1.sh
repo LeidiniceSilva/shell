@@ -1,13 +1,21 @@
 #!/bin/bash
 
+#SBATCH -A ICT25_ESP
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Mar 15, 2024'
-#__description__ = 'Posprocessing the dataset with CDO'
+#__description__ = 'Postprocessing the dataset with CDO'
  
 {
-
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 CDO(){
@@ -18,12 +26,13 @@ EXP="SAM-25km"
 DATASET="ERA5"
 VAR_LIST="msl u10 v10"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/era5/era5"
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
-    
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/ERA5"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/obs/era5"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
+
 echo
-cd ${DIR_IN}
-echo ${DIR_IN}
+cd ${DIR_OUT}
+echo ${DIR_OUT}
 
 echo
 echo "--------------- INIT POSPROCESSING DATASET ----------------"
@@ -32,9 +41,9 @@ for VAR in ${VAR_LIST[@]}; do
    
     echo
     echo "1. Regrid and smooth"
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
-    CDO smooth ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100_lonlat.nc ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100_smooth.nc
-    CDO smooth ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100_smooth.nc ${VAR}_${EXP}_${DATASET}_1hr_2018010100-2021123100_smooth2.nc
+    ${BIN}/./regrid ${DIR_IN}/${VAR}_${EXP}_${DATASET}_1hr_2018-2021.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
+    CDO smooth ${VAR}_${EXP}_${DATASET}_1hr_2018-2021_lonlat.nc ${VAR}_${EXP}_${DATASET}_1hr_2018-2021_smooth.nc
+    CDO smooth ${VAR}_${EXP}_${DATASET}_1hr_2018-2021_smooth.nc ${VAR}_${EXP}_${DATASET}_1hr_2018-2021_smooth2.nc
 
 done
     

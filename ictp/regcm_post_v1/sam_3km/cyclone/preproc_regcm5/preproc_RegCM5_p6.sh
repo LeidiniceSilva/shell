@@ -1,12 +1,13 @@
 #!/bin/bash
 
-#SBATCH -N 1 
-#SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --qos=qos_prio
-#SBATCH --mail-type=FAIL
+#SBATCH -A ICT25_ESP
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
@@ -14,33 +15,31 @@
 #__description__ = 'Posprocessing the RegCM5 output with CDO'
  
 {
-
-source /marconi/home/userexternal/ggiulian/STACK22/env2022
+source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-VAR_LIST="CAPE CIN"
 EXP="SAM-3km"
 MODEL="RegCM5"
 DT="2018-2021"
+VAR_LIST="CAPE CIN"
 
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/regcm"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
+
+echo
+cd ${DIR_OUT}
+echo ${DIR_OUT}
 
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 for VAR in ${VAR_LIST[@]}; do
     
-    DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/output/CORDEX/CMIP6/DD/NONE/ICTP/NONE/none/NN/RegCM5-0/v1-r1/6hr/${VAR}"
-    DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/regcm5/regcm5/${VAR}"
-    
-    echo
-    cd ${DIR_OUT}
-    echo ${DIR_OUT}
-    
+    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output/CORDEX/CMIP6/DD/NONE/ICTP/NONE/none/NN/RegCM5-0/v1-r1/6hr/${VAR}"    
     CDO mergetime ${DIR_IN}/${VAR}_NONE_NONE_none_NN_ICTP_RegCM5-0_v1-r1_6hr_*.nc ${VAR}_${EXP}_${MODEL}_6hr_${DT}.nc
     ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_6hr_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
     
