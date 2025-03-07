@@ -25,7 +25,7 @@ CDO(){
 EXP="SAM-3km"
 MODEL="RegCM5"
 DT="2018-2021"
-VAR_LIST="psl tas uas vas"
+VAR_LIST="psl uas vas"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/regcm"

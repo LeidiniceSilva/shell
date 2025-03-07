@@ -12,7 +12,7 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
-#__description__ = 'Posprocessing the RegCM5 output with CDO'
+#__description__ = 'Postprocessing the RegCM5 output with CDO'
 
 {
 source /leonardo/home/userexternal/ggiulian/modules_gfortran

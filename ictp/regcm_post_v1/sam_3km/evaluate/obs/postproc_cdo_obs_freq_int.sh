@@ -31,7 +31,7 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/obs"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo

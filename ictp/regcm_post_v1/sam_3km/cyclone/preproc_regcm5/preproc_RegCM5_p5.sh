@@ -21,7 +21,7 @@ set -eo pipefail
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
-PYCORDEX="/leonardo/home/userexternal/ggiulian"
+PYCORDEX="/leonardo/home/userexternal/ggiulian/pycordexer"
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
 
 echo ${DIR_IN}
@@ -38,7 +38,7 @@ MN1=03
 for YEAR in `seq -w ${YR0} ${YR1}`; do
     for MON in `seq -w ${MN0} ${MN1}`; do
     
-    	python3 ${PYCORDEX}/pycordexer.py SAM-3km_ATM.${YEAR}${MON}0100.nc capecin
+    	python3 ${PYCORDEX}/pycordexer.py SAM-3km_ATM.${YEAR}${MON}0100.nc cape
 	
     done
 done

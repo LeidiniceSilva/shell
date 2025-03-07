@@ -28,12 +28,10 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-# Set file name
-VAR_LIST="msl u10 v10"
 EXP="SAM-25km"
 DATASET="ERA5"
+VAR_LIST="msl u10 v10"
 
-# Datetime
 ANO_I=2018
 ANO_F=2021 
 

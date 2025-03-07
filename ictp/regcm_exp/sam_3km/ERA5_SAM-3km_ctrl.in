@@ -196,26 +196,24 @@
 ! Model Output control
 !
  &outparam
- ifcordex  = .true.,            ! <- selects and reshuffle output fields
- atmfrq    =     1.,            ! Frequency in hours to write to ATM
- outnwf    =     1.,            ! Day interval to open new files   (0 = monthly)
- ! ifsave  = .true.,            ! Create SAV files for restart
- ! savfrq  =     0.,            ! Frequency in days to create them (0 = monthly)
- ! ifatm   = .true.,            ! Output ATM ?
- ! atmfrq  =     1.,            ! Frequency in hours to write to ATM
- ! ifrad   = .true.,            ! Output RAD ?
- ! radfrq  =     6.,            ! Frequency in hours to write to RAD
- ! ifsts   = .true.,            ! Output STS (frequence is daily) ?
- ! ifsrf   = .true.,            ! Output SRF ?
- ! srffrq  =    1.0,            ! Frequency in hours to write to SRF
- ! ifsub   = .true.,            ! Output SUB ?
- ! subfrq  =     6.,            ! Frequency in hours to write to SUB
- ! iflak   = .false.,           ! Output LAK ?
- ! lakfrq  =     6.,            ! Frequency in hours to write to LAK
- ! ifchem  = .false.,           ! Output CHE ?
- ! ifopt   = .false.,           ! Output OPT ?
- ! chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/dpath', ! Path where all output will be placed
+ outnwf  =     0.,            ! Day interval to open new files (0 = monthly)
+ ifsave  = .true. ,           ! Create SAV files for restart
+ savfrq  =     0.,            ! Frequency in days to create them (0 = monthly)
+ ifatm   = .true. ,           ! Output ATM ?
+ atmfrq  =     6.,            ! Frequency in hours to write to ATM
+ ifrad   = .true. ,           ! Output RAD ?
+ radfrq  =     6.,            ! Frequency in hours to write to RAD
+ ifsts   = .true. ,           ! Output STS (frequence is daily) ?
+ ifsrf   = .true. ,           ! Output SRF ?
+ srffrq  =    1.0,            ! Frequency in hours to write to SRF
+ ifsub   = .true. ,           ! Output SUB ?
+ subfrq  =     6.,            ! Frequency in hours to write to SUB
+ iflak   = .false.,           ! Output LAK ?
+ lakfrq  =     6.,            ! Frequency in hours to write to LAK
+ ifchem  = .false.,           ! Output CHE ?
+ ifopt   = .false.,           ! Output OPT ?
+ chemfrq =     6.,            ! Frequency in hours to write to CHE
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output', ! Path where all output will be placed
  lsync   = .true.,            ! If sync of output files at every timestep is
                               ! requested. Note, it has a performance impact.
                               ! Enabled by default if debug_level > 2
@@ -319,11 +317,7 @@
  iclimaaer =        3,  ! x Aerosol
  radclimpath = '/leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH', ! x Aerosol
  /
-
- &microparam
- vfqi = 0.15,
- /
-
+ 
 !
 ! Non-hydrostatic core option
 !
@@ -382,11 +376,6 @@
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
- urban_hac = 'ON_WASTEHEAT',
- hist_nhtfrq = 0, 1,
- hist_fincl2(1:6) = 'EFLX_LH_TOT_U','FGR_U','FIRA_U','FSA_U','FSH_U','FSM_U',
- hist_fincl2(7:11) = 'QRUNOFF_U','RH2M_U','SoilAlpha_U','TG_U','TREFMNAV_U',
- hist_fincl2(12:13) = 'TREFMXAV_U','TSA_U'
  /
  
  &clm_soilhydrology_inparm
