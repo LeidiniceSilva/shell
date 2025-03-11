@@ -70,19 +70,16 @@
  /
  
  &restartparam
- ifrest  = restLogic,   ! If a restart
- mdate0  = 1999010100, ! Global start (is globidate1)
- mdate1  = 1999010100, ! Start date of this run
- mdate2  = 2010010100, ! End date for this run
+ ifrest  = False,      ! If a restart
+ mdate0  = 2007020100, ! Global start (is globidate1)
+ mdate1  = 2007020100, ! Start date of this run
+ mdate2  = 2007030100, ! End date for this run
  
  &timeparam
  dt     =   45.,        ! time step in seconds
  /
  
- &outparam
- ifcordex  = .false.,            
- atmfrq    =     1.,        
- outnwf    =     1.,         
+ &outparam     
  ifsave  = .true.,       
  savfrq  =     0.,          
  ifatm   = .true.,    
@@ -103,8 +100,10 @@
  lsync   = .false., 
  icosp = 0,
  idiag = 0,
+ lsync   = .true.,
  do_parallel_netcdf_in  = .true.,  
  do_parallel_netcdf_out = .false., 
+ dirout  = 'output'
  /
  
  &physicsparam

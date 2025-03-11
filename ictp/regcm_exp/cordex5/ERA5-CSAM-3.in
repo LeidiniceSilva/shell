@@ -211,7 +211,7 @@
  ! ifopt   = .false.,           ! Output OPT ?
  ! chemfrq =     6.,            ! Frequency in hours to write to CHE
  dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/dpath/', ! Path where all output will be placed
- lsync   = .false.,                ! If sync of output files at every timestep is requested. 
+ lsync   = .true.,                 ! If sync of output files at every timestep is requested. 
                                    ! Note, it has a performance impact.
                                    ! Enabled by default if debug_level > 2
  icosp = 0,                        ! Enable COSP needed fields in output in the ATM

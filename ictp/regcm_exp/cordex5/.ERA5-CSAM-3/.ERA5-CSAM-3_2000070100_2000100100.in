@@ -311,7 +311,11 @@
  iclimaaer =        3,  ! x Aerosol
  radclimpath = '/leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH', 
  /
- 
+
+ &microparam
+ vfqi = 0.15,
+ /
+
 !
 ! Non-hydrostatic core option
 !
@@ -370,7 +374,7 @@
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
- urban_hac = 'OFF',
+ urban_hac = 'ON_WASTEHEAT',
  hist_nhtfrq = 0, 1,
  hist_fincl2(1:6) = 'EFLX_LH_TOT_U','FGR_U','FIRA_U','FSA_U','FSH_U','FSM_U',
  hist_fincl2(7:11) = 'QRUNOFF_U','RH2M_U','SoilAlpha_U','TG_U','TREFMNAV_U',

@@ -46,14 +46,15 @@
  /
 
  &restartparam
- ifrest  = True,       ! If a restart
+ ifrest  = False,      ! If a restart
  mdate0  = 2000010100, ! Global start (is globidate1)
- mdate1  = 2004070100, ! Start date of this run
+ mdate1  = 2000010100, ! Start date of this run
  mdate2  = 2005010100, ! End date for this run
  /
 
  &timeparam
- dt     =    90,   ! time step in seconds
+ dt     =    90,  
+ dtabem =     1
  /
 
  &outparam
@@ -66,10 +67,9 @@
  ifsts   = .true. ,           ! Output STS (frequence is daily) ?
  ifshf   = .true. ,           ! Output SHF (pr hourly)
  ifsrf   = .true. ,           ! Output SRF ?
- srffrq  =     3.,            ! Frequency in hours to write to SRF
+ srffrq  =     1.,            ! Frequency in hours to write to SRF
  dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/NoTo-Europe/',       
  lsync   = .true.,            ! If sync of output files at every timestep is
- icosp = 1,                   ! Enable COSP needed fields in output in the ATM
  do_parallel_netcdf_in  = .true.,  ! This enables paralell input
  do_parallel_netcdf_out = .false., ! This enables paralell output if the
  /
@@ -83,7 +83,7 @@
  iocnflx =           2, ! Ocean Flux scheme
    iocnrough =       1, ! Zeng Ocean model roughness formula to use.
    iocnzoq =         1, ! Zeng Ocean model factors for t,q roughness
- scenario =   'SSP585', ! IPCC Scenario to use in A1B,A2,B1,B2
+ scenario =   'SSP370', ! IPCC Scenario to use in A1B,A2,B1,B2
  idcsst   =          0, ! Use diurnal cycle sst scheme
  iseaice  =          1, ! Model seaice effects
  iconvlwp =          0, ! Use convective algo for lwp in the large-scale
@@ -111,10 +111,15 @@
  /
 
  &clm_inparm
+ create_crop_landunit = .false.
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
  urban_hac = 'ON_WASTEHEAT',
+ hist_nhtfrq = 0, 1,
+ hist_fincl2(1:6) = 'EFLX_LH_TOT_U','FGR_U','FIRA_U','FSA_U','FSH_U','FSM_U',
+ hist_fincl2(7:11) = 'QRUNOFF_U','RH2M_U','SoilAlpha_U','TG_U','TREFMNAV_U',
+ hist_fincl2(12:13) = 'TREFMXAV_U','TSA_U'
  /
 
  &clm_soilhydrology_inparm
