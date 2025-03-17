@@ -18,14 +18,14 @@ lat2=-1.5
 'sdfopen 'pathnc'/PSL.'ano'.06.nc'  
 'sdfopen 'pathnc'/PSL.'ano'.12.nc'  
 'sdfopen 'pathnc'/PSL.'ano'.18.nc'  
-'sdfopen 'pathnc'/U10e.'ano'.00.nc' 
-'sdfopen 'pathnc'/U10e.'ano'.06.nc' 
-'sdfopen 'pathnc'/U10e.'ano'.12.nc' 
-'sdfopen 'pathnc'/U10e.'ano'.18.nc' 
-'sdfopen 'pathnc'/V10e.'ano'.00.nc' 
-'sdfopen 'pathnc'/V10e.'ano'.06.nc' 
-'sdfopen 'pathnc'/V10e.'ano'.12.nc' 
-'sdfopen 'pathnc'/V10e.'ano'.18.nc' 
+'sdfopen 'pathnc'/U10.'ano'.00.nc' 
+'sdfopen 'pathnc'/U10.'ano'.06.nc' 
+'sdfopen 'pathnc'/U10.'ano'.12.nc' 
+'sdfopen 'pathnc'/U10.'ano'.18.nc' 
+'sdfopen 'pathnc'/V10.'ano'.00.nc' 
+'sdfopen 'pathnc'/V10.'ano'.06.nc' 
+'sdfopen 'pathnc'/V10.'ano'.12.nc' 
+'sdfopen 'pathnc'/V10.'ano'.18.nc' 
 
 
 mes=1
@@ -110,14 +110,14 @@ i=i+1
 'set dfile 5'
 'set t 'i
 'set z 1'
-*'define xu=regrid2(U10e,1.5,1.5,bl_p1,'lon1','lat1')'
-'d U10e'
+*'define xu=regrid2(U10,1.5,1.5,bl_p1,'lon1','lat1')'
+'d U10'
 
 'set dfile 9'
 'set t 'i
 'set z 1'
-*'define xv=regrid2(V10e,1.5,1.5,bl_p1,'lon1','lat1')'
-'d V10e'
+*'define xv=regrid2(V10,1.5,1.5,bl_p1,'lon1','lat1')'
+'d V10'
 
 'set dfile 2'
 'set t 'i
@@ -129,14 +129,14 @@ i=i+1
 'set dfile 6'
 'set t 'i
 'set z 1'
-*'define xu=regrid2(U10e,1.5,1.5,bl_p1,'lon1','lat1')'
-'d U10e'
+*'define xu=regrid2(U10,1.5,1.5,bl_p1,'lon1','lat1')'
+'d U10'
 
 'set dfile 10'
 'set t 'i
 'set z 1'
-*'define xv=regrid2(V10e,1.5,1.5,bl_p1,'lon1','lat1')'
-'d V10e'
+*'define xv=regrid2(V10,1.5,1.5,bl_p1,'lon1','lat1')'
+'d V10'
 
 'set dfile 3'
 'set t 'i
@@ -148,14 +148,14 @@ i=i+1
 'set dfile 7'
 'set t 'i
 'set z 1'
-*'define xu=regrid2(U10e,1.5,1.5,bl_p1,'lon1','lat1')'
-'d U10e'
+*'define xu=regrid2(U10,1.5,1.5,bl_p1,'lon1','lat1')'
+'d U10'
 
 'set dfile 11'
 'set t 'i
 'set z 1'
-*'define xv=regrid2(V10e,1.5,1.5,bl_p1,'lon1','lat1')'
-'d V10e'
+*'define xv=regrid2(V10,1.5,1.5,bl_p1,'lon1','lat1')'
+'d V10'
 
 'set dfile 4'
 'set t 'i
@@ -167,14 +167,14 @@ i=i+1
 'set dfile 8'
 'set t 'i
 'set z 1'
-*'define xu=regrid2(U10e,1.5,1.5,bl_p1,'lon1','lat1')'
-'d U10e'
+*'define xu=regrid2(U10,1.5,1.5,bl_p1,'lon1','lat1')'
+'d U10'
 
 'set dfile 12'
 'set t 'i
 'set z 1'
-*'define xv=regrid2(V10e,1.5,1.5,bl_p1,'lon1','lat1')'
-'d V10e'
+*'define xv=regrid2(V10,1.5,1.5,bl_p1,'lon1','lat1')'
+'d V10'
 
 endwhile
 'disable fwrite'

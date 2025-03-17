@@ -1298,9 +1298,9 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
   This is RegCM 5
    GIT Revision: 5.0.1 compiled at: data : Jan 13 2025  time: 14:41:40
 
- : this run start at  : 2025-03-05 15:13:41+0100
+ : this run start at  : 2025-03-12 11:54:23+0100
  : it is submitted by : mdasilva
- : it is running on   : lrdn3501.leonardo.local
+ : it is running on   : lrdn3548.leonardo.local
  : it is using        :         1296   processors
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/corde
@@ -1448,7 +1448,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     run type              = restart
     case title            = RegCM driven CLM4.5
     username              = mdasilva
-    hostname              = lrdn3501.leonardo.local
+    hostname              = lrdn3548.leonardo.local
  input data files:
     PFT physiology = 
  /leonardo_work/ICT24_ESP/RCMDATA//CLM45/pftdata/pft-physiology.c130503.nc
@@ -1570,38 +1570,40 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Set     3 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set    18 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set    16 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set    16 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set    16 100% special land-units points to zero slope
+ Set     8 100% special land-units points to zero slope
  Set     5 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set    20 100% special land-units points to zero slope
  Set     4 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
- Set    11 100% special land-units points to zero slope
- Set     8 100% special land-units points to zero slope
- Attempting to read snow optical properties .....
+ Set     3 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    11 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Attempting to read snow optical properties .....
+ Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set    12 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     5 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
  Set    14 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set    14 100% special land-units points to zero slope
  Set    17 100% special land-units points to zero slope
@@ -1611,77 +1613,75 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Set     2 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set     5 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     6 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
+ Set    11 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  SnowOptics_init : 
  /leonardo_work/ICT24_ESP/RCMDATA//CLM45/snicardata/snicar_optics_5bnd_c090915.n
  c
- Set    11 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     5 100% special land-units points to zero slope
  Set    15 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set    20 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set    15 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
  Set     6 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     4 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     4 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
  Set    40 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set     5 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
- Set    20 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
- Set    20 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
  Set    27 100% special land-units points to zero slope
  Set    25 100% special land-units points to zero slope
@@ -1691,6 +1691,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Set    10 100% special land-units points to zero slope
  Successfully read snow optical properties
  Attempting to read snow aging parameters .....
+ Set    20 100% special land-units points to zero slope
  Successfully read snow aging properties
  Successfully initialized time invariant variables
  CLM_hist_printflds : number of master fields =          241
@@ -1701,7 +1702,6 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  History tape            2  write frequency =            1
  All fields on history tape            2  are grid averaged
  Output precision on history tape            2 =           2
- Set    20 100% special land-units points to zero slope
  Reading restart dataset at 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3.clm.regcm.r.1999040100.nc
@@ -1893,7 +1893,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999040200.nc
- Elapsed seconds of run for this period :    704.1843    
+ Elapsed seconds of run for this period :    781.2187    
  SEARCH BC data for 1999040206 , step =   174720
  READY  BC from     1999040200  to 1999040206 
  $$$  1999-04-02 00:00:00 UTC        
@@ -2052,7 +2052,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999040300.nc
- Elapsed seconds of run for this period :    670.0923    
+ Elapsed seconds of run for this period :    753.8898    
  SEARCH BC data for 1999040306 , step =   176640
  READY  BC from     1999040300  to 1999040306 
  $$$  1999-04-03 00:00:00 UTC        
@@ -2211,7 +2211,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999040400.nc
- Elapsed seconds of run for this period :    696.1648    
+ Elapsed seconds of run for this period :    709.1956    
  SEARCH BC data for 1999040406 , step =   178560
  READY  BC from     1999040400  to 1999040406 
  $$$  1999-04-04 00:00:00 UTC        
@@ -2370,7 +2370,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999040500.nc
- Elapsed seconds of run for this period :    703.8877    
+ Elapsed seconds of run for this period :    746.8125    
  SEARCH BC data for 1999040506 , step =   180480
  READY  BC from     1999040500  to 1999040506 
  $$$  1999-04-05 00:00:00 UTC        
@@ -2529,7 +2529,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999040600.nc
- Elapsed seconds of run for this period :    694.9331    
+ Elapsed seconds of run for this period :    766.8984    
  SEARCH BC data for 1999040606 , step =   182400
  READY  BC from     1999040600  to 1999040606 
  $$$  1999-04-06 00:00:00 UTC        
@@ -2688,7 +2688,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999040700.nc
- Elapsed seconds of run for this period :    700.9180    
+ Elapsed seconds of run for this period :    725.0886    
  SEARCH BC data for 1999040706 , step =   184320
  READY  BC from     1999040700  to 1999040706 
  $$$  1999-04-07 00:00:00 UTC        
@@ -2847,7 +2847,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999040800.nc
- Elapsed seconds of run for this period :    707.1313    
+ Elapsed seconds of run for this period :    724.3696    
  SEARCH BC data for 1999040806 , step =   186240
  READY  BC from     1999040800  to 1999040806 
  $$$  1999-04-08 00:00:00 UTC        
@@ -3006,7 +3006,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999040900.nc
- Elapsed seconds of run for this period :    711.5366    
+ Elapsed seconds of run for this period :    724.6860    
  SEARCH BC data for 1999040906 , step =   188160
  READY  BC from     1999040900  to 1999040906 
  $$$  1999-04-09 00:00:00 UTC        
@@ -3165,7 +3165,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999041000.nc
- Elapsed seconds of run for this period :    708.3662    
+ Elapsed seconds of run for this period :    760.5161    
  SEARCH BC data for 1999041006 , step =   190080
  READY  BC from     1999041000  to 1999041006 
  $$$  1999-04-10 00:00:00 UTC        
@@ -3324,7 +3324,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999041100.nc
- Elapsed seconds of run for this period :    711.5015    
+ Elapsed seconds of run for this period :    709.1465    
  SEARCH BC data for 1999041106 , step =   192000
  READY  BC from     1999041100  to 1999041106 
  $$$  1999-04-11 00:00:00 UTC        
@@ -3483,7 +3483,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999041200.nc
- Elapsed seconds of run for this period :    709.3628    
+ Elapsed seconds of run for this period :    747.6738    
  SEARCH BC data for 1999041206 , step =   193920
  READY  BC from     1999041200  to 1999041206 
  $$$  1999-04-12 00:00:00 UTC        
@@ -3642,7 +3642,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999041300.nc
- Elapsed seconds of run for this period :    709.5557    
+ Elapsed seconds of run for this period :    739.4995    
  SEARCH BC data for 1999041306 , step =   195840
  READY  BC from     1999041300  to 1999041306 
  $$$  1999-04-13 00:00:00 UTC        
@@ -3801,7 +3801,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999041400.nc
- Elapsed seconds of run for this period :    705.9697    
+ Elapsed seconds of run for this period :    723.5986    
  SEARCH BC data for 1999041406 , step =   197760
  READY  BC from     1999041400  to 1999041406 
  $$$  1999-04-14 00:00:00 UTC        
@@ -3960,7 +3960,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999041500.nc
- Elapsed seconds of run for this period :    707.2969    
+ Elapsed seconds of run for this period :    737.4658    
  SEARCH BC data for 1999041506 , step =   199680
  READY  BC from     1999041500  to 1999041506 
  $$$  1999-04-15 00:00:00 UTC        
@@ -4119,7 +4119,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999041600.nc
- Elapsed seconds of run for this period :    706.5527    
+ Elapsed seconds of run for this period :    726.4258    
  SEARCH BC data for 1999041606 , step =   201600
  READY  BC from     1999041600  to 1999041606 
  $$$  1999-04-16 00:00:00 UTC        
@@ -4284,7 +4284,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999041700.nc
- Elapsed seconds of run for this period :    718.7539    
+ Elapsed seconds of run for this period :    740.8008    
  SEARCH BC data for 1999041706 , step =   203520
  READY  BC from     1999041700  to 1999041706 
  $$$  1999-04-17 00:00:00 UTC        
@@ -4443,7 +4443,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999041800.nc
- Elapsed seconds of run for this period :    708.9102    
+ Elapsed seconds of run for this period :    742.1631    
  SEARCH BC data for 1999041806 , step =   205440
  READY  BC from     1999041800  to 1999041806 
  $$$  1999-04-18 00:00:00 UTC        
@@ -4602,7 +4602,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999041900.nc
- Elapsed seconds of run for this period :    730.3301    
+ Elapsed seconds of run for this period :    746.2617    
  SEARCH BC data for 1999041906 , step =   207360
  READY  BC from     1999041900  to 1999041906 
  $$$  1999-04-19 00:00:00 UTC        
@@ -4761,7 +4761,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999042000.nc
- Elapsed seconds of run for this period :    729.6436    
+ Elapsed seconds of run for this period :    747.7803    
  SEARCH BC data for 1999042006 , step =   209280
  READY  BC from     1999042000  to 1999042006 
  $$$  1999-04-20 00:00:00 UTC        
@@ -4920,7 +4920,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999042100.nc
- Elapsed seconds of run for this period :    743.0439    
+ Elapsed seconds of run for this period :    774.7451    
  SEARCH BC data for 1999042106 , step =   211200
  READY  BC from     1999042100  to 1999042106 
  $$$  1999-04-21 00:00:00 UTC        
@@ -5079,7 +5079,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999042200.nc
- Elapsed seconds of run for this period :    765.9160    
+ Elapsed seconds of run for this period :    754.3271    
  SEARCH BC data for 1999042206 , step =   213120
  READY  BC from     1999042200  to 1999042206 
  $$$  1999-04-22 00:00:00 UTC        
@@ -5238,7 +5238,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999042300.nc
- Elapsed seconds of run for this period :    735.7549    
+ Elapsed seconds of run for this period :    757.4141    
  SEARCH BC data for 1999042306 , step =   215040
  READY  BC from     1999042300  to 1999042306 
  $$$  1999-04-23 00:00:00 UTC        
@@ -5397,7 +5397,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999042400.nc
- Elapsed seconds of run for this period :    721.2842    
+ Elapsed seconds of run for this period :    791.0801    
  SEARCH BC data for 1999042406 , step =   216960
  READY  BC from     1999042400  to 1999042406 
  $$$  1999-04-24 00:00:00 UTC        
@@ -5556,7 +5556,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999042500.nc
- Elapsed seconds of run for this period :    727.9297    
+ Elapsed seconds of run for this period :    971.7617    
  SEARCH BC data for 1999042506 , step =   218880
  READY  BC from     1999042500  to 1999042506 
  $$$  1999-04-25 00:00:00 UTC        
@@ -5715,7 +5715,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999042600.nc
- Elapsed seconds of run for this period :    753.1172    
+ Elapsed seconds of run for this period :    839.2285    
  SEARCH BC data for 1999042606 , step =   220800
  READY  BC from     1999042600  to 1999042606 
  $$$  1999-04-26 00:00:00 UTC        
@@ -5874,7 +5874,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999042700.nc
- Elapsed seconds of run for this period :    765.7832    
+ Elapsed seconds of run for this period :    825.7930    
  SEARCH BC data for 1999042706 , step =   222720
  READY  BC from     1999042700  to 1999042706 
  $$$  1999-04-27 00:00:00 UTC        
@@ -6033,7 +6033,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999042800.nc
- Elapsed seconds of run for this period :    742.6504    
+ Elapsed seconds of run for this period :    819.4297    
  SEARCH BC data for 1999042806 , step =   224640
  READY  BC from     1999042800  to 1999042806 
  $$$  1999-04-28 00:00:00 UTC        
@@ -6192,7 +6192,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999042900.nc
- Elapsed seconds of run for this period :    748.6523    
+ Elapsed seconds of run for this period :    830.6152    
  SEARCH BC data for 1999042906 , step =   226560
  READY  BC from     1999042900  to 1999042906 
  $$$  1999-04-29 00:00:00 UTC        
@@ -6351,7 +6351,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999043000.nc
- Elapsed seconds of run for this period :    758.0664    
+ Elapsed seconds of run for this period :    837.0117    
  SEARCH BC data for 1999043006 , step =   228480
  READY  BC from     1999043000  to 1999043006 
  $$$  1999-04-30 00:00:00 UTC        
@@ -6532,7 +6532,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999050100.nc
- Elapsed seconds of run for this period :    816.2207    
+ Elapsed seconds of run for this period :    913.1094    
  SEARCH BC data for 1999050106 , step =   230400
  READY  BC from     1999050100  to 1999050106 
  $$$  1999-05-01 00:00:00 UTC        
@@ -6695,7 +6695,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999050200.nc
- Elapsed seconds of run for this period :    760.6602    
+ Elapsed seconds of run for this period :    821.4766    
  SEARCH BC data for 1999050206 , step =   232320
  READY  BC from     1999050200  to 1999050206 
  $$$  1999-05-02 00:00:00 UTC        
@@ -6854,7 +6854,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999050300.nc
- Elapsed seconds of run for this period :    747.5977    
+ Elapsed seconds of run for this period :    847.6660    
  SEARCH BC data for 1999050306 , step =   234240
  READY  BC from     1999050300  to 1999050306 
  $$$  1999-05-03 00:00:00 UTC        
@@ -7013,7 +7013,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999050400.nc
- Elapsed seconds of run for this period :    743.7461    
+ Elapsed seconds of run for this period :    840.9609    
  SEARCH BC data for 1999050406 , step =   236160
  READY  BC from     1999050400  to 1999050406 
  $$$  1999-05-04 00:00:00 UTC        
@@ -7172,7 +7172,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999050500.nc
- Elapsed seconds of run for this period :    759.6465    
+ Elapsed seconds of run for this period :    837.9473    
  SEARCH BC data for 1999050506 , step =   238080
  READY  BC from     1999050500  to 1999050506 
  $$$  1999-05-05 00:00:00 UTC        
@@ -7331,7 +7331,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999050600.nc
- Elapsed seconds of run for this period :    772.0137    
+ Elapsed seconds of run for this period :    843.2520    
  SEARCH BC data for 1999050606 , step =   240000
  READY  BC from     1999050600  to 1999050606 
  $$$  1999-05-06 00:00:00 UTC        
@@ -7490,7 +7490,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999050700.nc
- Elapsed seconds of run for this period :    767.3574    
+ Elapsed seconds of run for this period :    850.0430    
  SEARCH BC data for 1999050706 , step =   241920
  READY  BC from     1999050700  to 1999050706 
  $$$  1999-05-07 00:00:00 UTC        
@@ -7649,7 +7649,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999050800.nc
- Elapsed seconds of run for this period :    768.9629    
+ Elapsed seconds of run for this period :    830.7246    
  SEARCH BC data for 1999050806 , step =   243840
  READY  BC from     1999050800  to 1999050806 
  $$$  1999-05-08 00:00:00 UTC        
@@ -7808,7 +7808,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999050900.nc
- Elapsed seconds of run for this period :    780.3145    
+ Elapsed seconds of run for this period :    883.5605    
  SEARCH BC data for 1999050906 , step =   245760
  READY  BC from     1999050900  to 1999050906 
  $$$  1999-05-09 00:00:00 UTC        
@@ -7967,7 +7967,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999051000.nc
- Elapsed seconds of run for this period :    788.0898    
+ Elapsed seconds of run for this period :    867.2246    
  SEARCH BC data for 1999051006 , step =   247680
  READY  BC from     1999051000  to 1999051006 
  $$$  1999-05-10 00:00:00 UTC        
@@ -8126,7 +8126,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999051100.nc
- Elapsed seconds of run for this period :    808.7832    
+ Elapsed seconds of run for this period :    871.0098    
  SEARCH BC data for 1999051106 , step =   249600
  READY  BC from     1999051100  to 1999051106 
  $$$  1999-05-11 00:00:00 UTC        
@@ -8285,7 +8285,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999051200.nc
- Elapsed seconds of run for this period :    820.4648    
+ Elapsed seconds of run for this period :    849.7441    
  SEARCH BC data for 1999051206 , step =   251520
  READY  BC from     1999051200  to 1999051206 
  $$$  1999-05-12 00:00:00 UTC        
@@ -8444,7 +8444,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999051300.nc
- Elapsed seconds of run for this period :    839.3828    
+ Elapsed seconds of run for this period :    882.8555    
  SEARCH BC data for 1999051306 , step =   253440
  READY  BC from     1999051300  to 1999051306 
  $$$  1999-05-13 00:00:00 UTC        
@@ -8603,7 +8603,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999051400.nc
- Elapsed seconds of run for this period :    827.6797    
+ Elapsed seconds of run for this period :    862.9102    
  SEARCH BC data for 1999051406 , step =   255360
  READY  BC from     1999051400  to 1999051406 
  $$$  1999-05-14 00:00:00 UTC        
@@ -8762,7 +8762,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999051500.nc
- Elapsed seconds of run for this period :    793.6953    
+ Elapsed seconds of run for this period :    856.9766    
  SEARCH BC data for 1999051506 , step =   257280
  READY  BC from     1999051500  to 1999051506 
  $$$  1999-05-15 00:00:00 UTC        
@@ -8921,7 +8921,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999051600.nc
- Elapsed seconds of run for this period :    770.0000    
+ Elapsed seconds of run for this period :    841.6562    
  SEARCH BC data for 1999051606 , step =   259200
  READY  BC from     1999051600  to 1999051606 
  $$$  1999-05-16 00:00:00 UTC        
@@ -9086,7 +9086,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999051700.nc
- Elapsed seconds of run for this period :    769.8047    
+ Elapsed seconds of run for this period :    822.3320    
  SEARCH BC data for 1999051706 , step =   261120
  READY  BC from     1999051700  to 1999051706 
  $$$  1999-05-17 00:00:00 UTC        
@@ -9245,7 +9245,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999051800.nc
- Elapsed seconds of run for this period :    761.2070    
+ Elapsed seconds of run for this period :    795.4883    
  SEARCH BC data for 1999051806 , step =   263040
  READY  BC from     1999051800  to 1999051806 
  $$$  1999-05-18 00:00:00 UTC        
@@ -9404,7 +9404,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999051900.nc
- Elapsed seconds of run for this period :    767.8633    
+ Elapsed seconds of run for this period :    787.9688    
  SEARCH BC data for 1999051906 , step =   264960
  READY  BC from     1999051900  to 1999051906 
  $$$  1999-05-19 00:00:00 UTC        
@@ -9563,7 +9563,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999052000.nc
- Elapsed seconds of run for this period :    786.6211    
+ Elapsed seconds of run for this period :    831.3281    
  SEARCH BC data for 1999052006 , step =   266880
  READY  BC from     1999052000  to 1999052006 
  $$$  1999-05-20 00:00:00 UTC        
@@ -9722,7 +9722,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999052100.nc
- Elapsed seconds of run for this period :    770.4492    
+ Elapsed seconds of run for this period :    787.6875    
  SEARCH BC data for 1999052106 , step =   268800
  READY  BC from     1999052100  to 1999052106 
  $$$  1999-05-21 00:00:00 UTC        
@@ -9881,7 +9881,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999052200.nc
- Elapsed seconds of run for this period :    772.1758    
+ Elapsed seconds of run for this period :    790.3594    
  SEARCH BC data for 1999052206 , step =   270720
  READY  BC from     1999052200  to 1999052206 
  $$$  1999-05-22 00:00:00 UTC        
@@ -10040,7 +10040,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999052300.nc
- Elapsed seconds of run for this period :    760.6055    
+ Elapsed seconds of run for this period :    767.4023    
  SEARCH BC data for 1999052306 , step =   272640
  READY  BC from     1999052300  to 1999052306 
  $$$  1999-05-23 00:00:00 UTC        
@@ -10199,7 +10199,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999052400.nc
- Elapsed seconds of run for this period :    764.3125    
+ Elapsed seconds of run for this period :    787.6992    
  SEARCH BC data for 1999052406 , step =   274560
  READY  BC from     1999052400  to 1999052406 
  $$$  1999-05-24 00:00:00 UTC        
@@ -10358,7 +10358,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999052500.nc
- Elapsed seconds of run for this period :    759.4297    
+ Elapsed seconds of run for this period :    763.6172    
  SEARCH BC data for 1999052506 , step =   276480
  READY  BC from     1999052500  to 1999052506 
  $$$  1999-05-25 00:00:00 UTC        
@@ -10517,7 +10517,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999052600.nc
- Elapsed seconds of run for this period :    759.9219    
+ Elapsed seconds of run for this period :    758.3516    
  SEARCH BC data for 1999052606 , step =   278400
  READY  BC from     1999052600  to 1999052606 
  $$$  1999-05-26 00:00:00 UTC        
@@ -10676,7 +10676,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999052700.nc
- Elapsed seconds of run for this period :    778.5820    
+ Elapsed seconds of run for this period :    770.0234    
  SEARCH BC data for 1999052706 , step =   280320
  READY  BC from     1999052700  to 1999052706 
  $$$  1999-05-27 00:00:00 UTC        
@@ -10835,7 +10835,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999052800.nc
- Elapsed seconds of run for this period :    776.3594    
+ Elapsed seconds of run for this period :    747.1719    
  SEARCH BC data for 1999052806 , step =   282240
  READY  BC from     1999052800  to 1999052806 
  $$$  1999-05-28 00:00:00 UTC        
@@ -10994,7 +10994,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999052900.nc
- Elapsed seconds of run for this period :    764.1289    
+ Elapsed seconds of run for this period :    746.6914    
  SEARCH BC data for 1999052906 , step =   284160
  READY  BC from     1999052900  to 1999052906 
  $$$  1999-05-29 00:00:00 UTC        
@@ -11153,7 +11153,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999053000.nc
- Elapsed seconds of run for this period :    742.9805    
+ Elapsed seconds of run for this period :    746.0352    
  SEARCH BC data for 1999053006 , step =   286080
  READY  BC from     1999053000  to 1999053006 
  $$$  1999-05-30 00:00:00 UTC        
@@ -11312,7 +11312,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999053100.nc
- Elapsed seconds of run for this period :    740.0156    
+ Elapsed seconds of run for this period :    746.1953    
  SEARCH BC data for 1999053106 , step =   288000
  READY  BC from     1999053100  to 1999053106 
  $$$  1999-05-31 00:00:00 UTC        
@@ -11493,7 +11493,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999060100.nc
- Elapsed seconds of run for this period :    822.3242    
+ Elapsed seconds of run for this period :    797.3281    
  SEARCH BC data for 1999060106 , step =   289920
  READY  BC from     1999060100  to 1999060106 
  $$$  1999-06-01 00:00:00 UTC        
@@ -11656,7 +11656,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999060200.nc
- Elapsed seconds of run for this period :    727.7734    
+ Elapsed seconds of run for this period :    713.3477    
  SEARCH BC data for 1999060206 , step =   291840
  READY  BC from     1999060200  to 1999060206 
  $$$  1999-06-02 00:00:00 UTC        
@@ -11815,7 +11815,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999060300.nc
- Elapsed seconds of run for this period :    722.7070    
+ Elapsed seconds of run for this period :    703.7109    
  SEARCH BC data for 1999060306 , step =   293760
  READY  BC from     1999060300  to 1999060306 
  $$$  1999-06-03 00:00:00 UTC        
@@ -11974,7 +11974,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999060400.nc
- Elapsed seconds of run for this period :    722.1836    
+ Elapsed seconds of run for this period :    720.8672    
  SEARCH BC data for 1999060406 , step =   295680
  READY  BC from     1999060400  to 1999060406 
  $$$  1999-06-04 00:00:00 UTC        
@@ -12133,7 +12133,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999060500.nc
- Elapsed seconds of run for this period :    717.6211    
+ Elapsed seconds of run for this period :    703.4648    
  SEARCH BC data for 1999060506 , step =   297600
  READY  BC from     1999060500  to 1999060506 
  $$$  1999-06-05 00:00:00 UTC        
@@ -12292,7 +12292,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999060600.nc
- Elapsed seconds of run for this period :    716.4258    
+ Elapsed seconds of run for this period :    699.5781    
  SEARCH BC data for 1999060606 , step =   299520
  READY  BC from     1999060600  to 1999060606 
  $$$  1999-06-06 00:00:00 UTC        
@@ -12451,7 +12451,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999060700.nc
- Elapsed seconds of run for this period :    696.3945    
+ Elapsed seconds of run for this period :    695.4727    
  SEARCH BC data for 1999060706 , step =   301440
  READY  BC from     1999060700  to 1999060706 
  $$$  1999-06-07 00:00:00 UTC        
@@ -12610,7 +12610,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999060800.nc
- Elapsed seconds of run for this period :    690.2148    
+ Elapsed seconds of run for this period :    687.6641    
  SEARCH BC data for 1999060806 , step =   303360
  READY  BC from     1999060800  to 1999060806 
  $$$  1999-06-08 00:00:00 UTC        
@@ -12769,7 +12769,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999060900.nc
- Elapsed seconds of run for this period :    692.1797    
+ Elapsed seconds of run for this period :    674.1133    
  SEARCH BC data for 1999060906 , step =   305280
  READY  BC from     1999060900  to 1999060906 
  $$$  1999-06-09 00:00:00 UTC        
@@ -12928,7 +12928,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999061000.nc
- Elapsed seconds of run for this period :    685.9688    
+ Elapsed seconds of run for this period :    683.1484    
  SEARCH BC data for 1999061006 , step =   307200
  READY  BC from     1999061000  to 1999061006 
  $$$  1999-06-10 00:00:00 UTC        
@@ -13087,7 +13087,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999061100.nc
- Elapsed seconds of run for this period :    676.9648    
+ Elapsed seconds of run for this period :    672.6758    
  SEARCH BC data for 1999061106 , step =   309120
  READY  BC from     1999061100  to 1999061106 
  $$$  1999-06-11 00:00:00 UTC        
@@ -13246,7 +13246,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999061200.nc
- Elapsed seconds of run for this period :    686.0547    
+ Elapsed seconds of run for this period :    663.9805    
  SEARCH BC data for 1999061206 , step =   311040
  READY  BC from     1999061200  to 1999061206 
  $$$  1999-06-12 00:00:00 UTC        
@@ -13405,7 +13405,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999061300.nc
- Elapsed seconds of run for this period :    670.9180    
+ Elapsed seconds of run for this period :    650.4805    
  SEARCH BC data for 1999061306 , step =   312960
  READY  BC from     1999061300  to 1999061306 
  $$$  1999-06-13 00:00:00 UTC        
@@ -13564,7 +13564,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999061400.nc
- Elapsed seconds of run for this period :    667.9844    
+ Elapsed seconds of run for this period :    688.4180    
  SEARCH BC data for 1999061406 , step =   314880
  READY  BC from     1999061400  to 1999061406 
  $$$  1999-06-14 00:00:00 UTC        
@@ -13723,7 +13723,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999061500.nc
- Elapsed seconds of run for this period :    666.8555    
+ Elapsed seconds of run for this period :    692.0977    
  SEARCH BC data for 1999061506 , step =   316800
  READY  BC from     1999061500  to 1999061506 
  $$$  1999-06-15 00:00:00 UTC        
@@ -13882,7 +13882,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999061600.nc
- Elapsed seconds of run for this period :    664.4570    
+ Elapsed seconds of run for this period :    685.1992    
  SEARCH BC data for 1999061606 , step =   318720
  READY  BC from     1999061600  to 1999061606 
  $$$  1999-06-16 00:00:00 UTC        
@@ -14047,7 +14047,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999061700.nc
- Elapsed seconds of run for this period :    665.6875    
+ Elapsed seconds of run for this period :    686.5273    
  SEARCH BC data for 1999061706 , step =   320640
  READY  BC from     1999061700  to 1999061706 
  $$$  1999-06-17 00:00:00 UTC        
@@ -14206,7 +14206,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999061800.nc
- Elapsed seconds of run for this period :    671.8242    
+ Elapsed seconds of run for this period :    701.5703    
  SEARCH BC data for 1999061806 , step =   322560
  READY  BC from     1999061800  to 1999061806 
  $$$  1999-06-18 00:00:00 UTC        
@@ -14365,7 +14365,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999061900.nc
- Elapsed seconds of run for this period :    664.1953    
+ Elapsed seconds of run for this period :    703.2148    
  SEARCH BC data for 1999061906 , step =   324480
  READY  BC from     1999061900  to 1999061906 
  $$$  1999-06-19 00:00:00 UTC        
@@ -14524,7 +14524,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999062000.nc
- Elapsed seconds of run for this period :    670.4023    
+ Elapsed seconds of run for this period :    706.7383    
  SEARCH BC data for 1999062006 , step =   326400
  READY  BC from     1999062000  to 1999062006 
  $$$  1999-06-20 00:00:00 UTC        
@@ -14683,7 +14683,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999062100.nc
- Elapsed seconds of run for this period :    673.6562    
+ Elapsed seconds of run for this period :    698.1836    
  SEARCH BC data for 1999062106 , step =   328320
  READY  BC from     1999062100  to 1999062106 
  $$$  1999-06-21 00:00:00 UTC        
@@ -14842,7 +14842,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999062200.nc
- Elapsed seconds of run for this period :    655.9844    
+ Elapsed seconds of run for this period :    689.9922    
  SEARCH BC data for 1999062206 , step =   330240
  READY  BC from     1999062200  to 1999062206 
  $$$  1999-06-22 00:00:00 UTC        
@@ -15001,7 +15001,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999062300.nc
- Elapsed seconds of run for this period :    654.5156    
+ Elapsed seconds of run for this period :    706.3750    
  SEARCH BC data for 1999062306 , step =   332160
  READY  BC from     1999062300  to 1999062306 
  $$$  1999-06-23 00:00:00 UTC        
@@ -15160,7 +15160,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999062400.nc
- Elapsed seconds of run for this period :    664.9258    
+ Elapsed seconds of run for this period :    697.6758    
  SEARCH BC data for 1999062406 , step =   334080
  READY  BC from     1999062400  to 1999062406 
  $$$  1999-06-24 00:00:00 UTC        
@@ -15319,7 +15319,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999062500.nc
- Elapsed seconds of run for this period :    657.6562    
+ Elapsed seconds of run for this period :    707.6211    
  SEARCH BC data for 1999062506 , step =   336000
  READY  BC from     1999062500  to 1999062506 
  $$$  1999-06-25 00:00:00 UTC        
@@ -15478,7 +15478,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999062600.nc
- Elapsed seconds of run for this period :    657.3555    
+ Elapsed seconds of run for this period :    705.7266    
  SEARCH BC data for 1999062606 , step =   337920
  READY  BC from     1999062600  to 1999062606 
  $$$  1999-06-26 00:00:00 UTC        
@@ -15637,7 +15637,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999062700.nc
- Elapsed seconds of run for this period :    661.8672    
+ Elapsed seconds of run for this period :    707.4062    
  SEARCH BC data for 1999062706 , step =   339840
  READY  BC from     1999062700  to 1999062706 
  $$$  1999-06-27 00:00:00 UTC        
@@ -15796,7 +15796,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999062800.nc
- Elapsed seconds of run for this period :    655.8594    
+ Elapsed seconds of run for this period :    699.3828    
  SEARCH BC data for 1999062806 , step =   341760
  READY  BC from     1999062800  to 1999062806 
  $$$  1999-06-28 00:00:00 UTC        
@@ -15955,7 +15955,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999062900.nc
- Elapsed seconds of run for this period :    655.7070    
+ Elapsed seconds of run for this period :    704.0000    
  SEARCH BC data for 1999062906 , step =   343680
  READY  BC from     1999062900  to 1999062906 
  $$$  1999-06-29 00:00:00 UTC        
@@ -16114,7 +16114,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999063000.nc
- Elapsed seconds of run for this period :    671.1250    
+ Elapsed seconds of run for this period :    702.4297    
  SEARCH BC data for 1999063006 , step =   345600
  READY  BC from     1999063000  to 1999063006 
  $$$  1999-06-30 00:00:00 UTC        
@@ -16284,8 +16284,8 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  RAD variables written at  1999-07-01 00:00:00 UTC        
  SAV variables written at  1999-07-01 00:00:00 UTC        
  Final time  1999-07-01 00:00:00 UTC reached.
- Elapsed seconds of run for this final timeslice :    757.9062    
- : this run stops at  : 2025-03-06 10:01:40+0100
+ Elapsed seconds of run for this final timeslice :    774.9844    
+ : this run stops at  : 2025-03-13 07:34:35+0100
  : Run has been completed using         1296  processors.
- : Total elapsed seconds of run :    66202.6282749985     
+ : Total elapsed seconds of run :    69328.3011340366     
  RegCM V5 simulation successfully reached end

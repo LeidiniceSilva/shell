@@ -29,11 +29,11 @@ cd ${DIR_IN}
 
 # start and end year(s)
 YR0=2018
-YR1=2018
+YR1=2021
 
 # start and end month(s)
 MN0=01
-MN1=03
+MN1=12
 
 for YEAR in `seq -w ${YR0} ${YR1}`; do
     for MON in `seq -w ${MN0} ${MN1}`; do

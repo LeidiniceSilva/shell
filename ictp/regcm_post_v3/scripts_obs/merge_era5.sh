@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT23_ESP_1
+#SBATCH -A ICT25_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -14,8 +14,8 @@ source /leonardo/home/userexternal/ggiulian/modules_gfortran
 dir0=/leonardo_work/ICT24_ESP/OBS/ERA5/hourly
 dir1=/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/ERA5
 
-fyr=2018
-lyr=2021
+fyr=1970
+lyr=1979
 
 {
 set -eo pipefail
@@ -30,7 +30,7 @@ for v in $var; do
 		[[ ! -f $ff ]] && CDO -b f32 mergetime $dir0/${v}_${y}_*.nc $ff
 	done
 
-	yf=$dir1/tp_ERA5_1hr_2018-2021.nc
+	yf=$dir1/tp_ERA5_1hr_1970-1979.nc
 	ff=$( eval ls $dir1/${v}_????.nc )
 	CDO -b f32 mergetime $ff $yf
 	

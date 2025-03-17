@@ -1298,9 +1298,9 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
   This is RegCM 5
    GIT Revision: 5.0.1 compiled at: data : Jan 13 2025  time: 14:41:40
 
- : this run start at  : 2025-03-06 10:09:42+0100
+ : this run start at  : 2025-03-13 09:48:28+0100
  : it is submitted by : mdasilva
- : it is running on   : lrdn3977.leonardo.local
+ : it is running on   : lrdn4123.leonardo.local
  : it is using        :         1296   processors
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/corde
@@ -1448,7 +1448,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     run type              = restart
     case title            = RegCM driven CLM4.5
     username              = mdasilva
-    hostname              = lrdn3977.leonardo.local
+    hostname              = lrdn4123.leonardo.local
  input data files:
     PFT physiology = 
  /leonardo_work/ICT24_ESP/RCMDATA//CLM45/pftdata/pft-physiology.c130503.nc
@@ -1565,123 +1565,123 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
      11.1       13.9    
  dzsoi_decomp   1.00000000000000     
  Set    30 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set    12 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
+ Attempting to read snow optical properties .....
  Set     1 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set    18 100% special land-units points to zero slope
- Set    16 100% special land-units points to zero slope
- Set    16 100% special land-units points to zero slope
- Set     5 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     8 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
  Set    20 100% special land-units points to zero slope
  Set     4 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Attempting to read snow optical properties .....
- Set    11 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     5 100% special land-units points to zero slope
- Set    14 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set    14 100% special land-units points to zero slope
- Set     7 100% special land-units points to zero slope
- Set     5 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    16 100% special land-units points to zero slope
+ Set    16 100% special land-units points to zero slope
+ Set     8 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set    12 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     5 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
- Set    17 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     6 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
+ Set    14 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set    15 100% special land-units points to zero slope
- Set     3 100% special land-units points to zero slope
+ Set    11 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     5 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
- Set    11 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
+ Set    14 100% special land-units points to zero slope
+ Set     6 100% special land-units points to zero slope
+ Set    17 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     7 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  SnowOptics_init : 
  /leonardo_work/ICT24_ESP/RCMDATA//CLM45/snicardata/snicar_optics_5bnd_c090915.n
  c
- Set    20 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set    15 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    11 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     3 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set    15 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set    40 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     6 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
+ Set     6 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set     4 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
  Set     3 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
  Set     1 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
+ Set     2 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
  Set     5 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
+ Set     1 100% special land-units points to zero slope
+ Set    20 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
  Set    20 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
- Set    20 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
  Set     2 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
- Set    10 100% special land-units points to zero slope
  Set    10 100% special land-units points to zero slope
  Set    27 100% special land-units points to zero slope
  Set    25 100% special land-units points to zero slope
@@ -1893,7 +1893,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999070200.nc
- Elapsed seconds of run for this period :    782.5955    
+ Elapsed seconds of run for this period :    2268.211    
  SEARCH BC data for 1999070206 , step =   349440
  READY  BC from     1999070200  to 1999070206 
  $$$  1999-07-02 00:00:00 UTC        
@@ -2052,7 +2052,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999070300.nc
- Elapsed seconds of run for this period :    711.2548    
+ Elapsed seconds of run for this period :    2480.504    
  SEARCH BC data for 1999070306 , step =   351360
  READY  BC from     1999070300  to 1999070306 
  $$$  1999-07-03 00:00:00 UTC        
@@ -2211,7 +2211,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999070400.nc
- Elapsed seconds of run for this period :    687.1920    
+ Elapsed seconds of run for this period :    1853.782    
  SEARCH BC data for 1999070406 , step =   353280
  READY  BC from     1999070400  to 1999070406 
  $$$  1999-07-04 00:00:00 UTC        
@@ -2370,7 +2370,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999070500.nc
- Elapsed seconds of run for this period :    735.3206    
+ Elapsed seconds of run for this period :    689.5312    
  SEARCH BC data for 1999070506 , step =   355200
  READY  BC from     1999070500  to 1999070506 
  $$$  1999-07-05 00:00:00 UTC        
@@ -2529,7 +2529,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999070600.nc
- Elapsed seconds of run for this period :    731.6101    
+ Elapsed seconds of run for this period :    700.3740    
  SEARCH BC data for 1999070606 , step =   357120
  READY  BC from     1999070600  to 1999070606 
  $$$  1999-07-06 00:00:00 UTC        
@@ -2688,7 +2688,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999070700.nc
- Elapsed seconds of run for this period :    753.8286    
+ Elapsed seconds of run for this period :    671.0835    
  SEARCH BC data for 1999070706 , step =   359040
  READY  BC from     1999070700  to 1999070706 
  $$$  1999-07-07 00:00:00 UTC        
@@ -2847,7 +2847,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999070800.nc
- Elapsed seconds of run for this period :    710.4800    
+ Elapsed seconds of run for this period :    684.1465    
  SEARCH BC data for 1999070806 , step =   360960
  READY  BC from     1999070800  to 1999070806 
  $$$  1999-07-08 00:00:00 UTC        
@@ -3006,7 +3006,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999070900.nc
- Elapsed seconds of run for this period :    779.5981    
+ Elapsed seconds of run for this period :    696.9375    
  SEARCH BC data for 1999070906 , step =   362880
  READY  BC from     1999070900  to 1999070906 
  $$$  1999-07-09 00:00:00 UTC        
@@ -3165,7 +3165,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999071000.nc
- Elapsed seconds of run for this period :    754.0288    
+ Elapsed seconds of run for this period :    680.7334    
  SEARCH BC data for 1999071006 , step =   364800
  READY  BC from     1999071000  to 1999071006 
  $$$  1999-07-10 00:00:00 UTC        
@@ -3324,7 +3324,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999071100.nc
- Elapsed seconds of run for this period :    793.9404    
+ Elapsed seconds of run for this period :    682.3418    
  SEARCH BC data for 1999071106 , step =   366720
  READY  BC from     1999071100  to 1999071106 
  $$$  1999-07-11 00:00:00 UTC        
@@ -3483,7 +3483,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999071200.nc
- Elapsed seconds of run for this period :    821.2388    
+ Elapsed seconds of run for this period :    709.7217    
  SEARCH BC data for 1999071206 , step =   368640
  READY  BC from     1999071200  to 1999071206 
  $$$  1999-07-12 00:00:00 UTC        
@@ -3642,7 +3642,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999071300.nc
- Elapsed seconds of run for this period :    744.1582    
+ Elapsed seconds of run for this period :    681.0771    
  SEARCH BC data for 1999071306 , step =   370560
  READY  BC from     1999071300  to 1999071306 
  $$$  1999-07-13 00:00:00 UTC        
@@ -3801,7 +3801,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999071400.nc
- Elapsed seconds of run for this period :    794.9580    
+ Elapsed seconds of run for this period :    698.5566    
  SEARCH BC data for 1999071406 , step =   372480
  READY  BC from     1999071400  to 1999071406 
  $$$  1999-07-14 00:00:00 UTC        
@@ -3960,7 +3960,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999071500.nc
- Elapsed seconds of run for this period :    793.0586    
+ Elapsed seconds of run for this period :    782.5742    
  SEARCH BC data for 1999071506 , step =   374400
  READY  BC from     1999071500  to 1999071506 
  $$$  1999-07-15 00:00:00 UTC        
@@ -4119,7 +4119,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999071600.nc
- Elapsed seconds of run for this period :    794.0742    
+ Elapsed seconds of run for this period :    779.1328    
  SEARCH BC data for 1999071606 , step =   376320
  READY  BC from     1999071600  to 1999071606 
  $$$  1999-07-16 00:00:00 UTC        
@@ -4284,7 +4284,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999071700.nc
- Elapsed seconds of run for this period :    802.7520    
+ Elapsed seconds of run for this period :    809.4072    
  SEARCH BC data for 1999071706 , step =   378240
  READY  BC from     1999071700  to 1999071706 
  $$$  1999-07-17 00:00:00 UTC        
@@ -4443,7 +4443,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999071800.nc
- Elapsed seconds of run for this period :    778.7363    
+ Elapsed seconds of run for this period :    829.6699    
  SEARCH BC data for 1999071806 , step =   380160
  READY  BC from     1999071800  to 1999071806 
  $$$  1999-07-18 00:00:00 UTC        
@@ -4602,7 +4602,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999071900.nc
- Elapsed seconds of run for this period :    808.4297    
+ Elapsed seconds of run for this period :    702.5352    
  SEARCH BC data for 1999071906 , step =   382080
  READY  BC from     1999071900  to 1999071906 
  $$$  1999-07-19 00:00:00 UTC        
@@ -4761,7 +4761,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999072000.nc
- Elapsed seconds of run for this period :    837.1729    
+ Elapsed seconds of run for this period :    718.2949    
  SEARCH BC data for 1999072006 , step =   384000
  READY  BC from     1999072000  to 1999072006 
  $$$  1999-07-20 00:00:00 UTC        
@@ -4920,7 +4920,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999072100.nc
- Elapsed seconds of run for this period :    848.4463    
+ Elapsed seconds of run for this period :    700.6328    
  SEARCH BC data for 1999072106 , step =   385920
  READY  BC from     1999072100  to 1999072106 
  $$$  1999-07-21 00:00:00 UTC        
@@ -5079,7 +5079,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999072200.nc
- Elapsed seconds of run for this period :    811.9326    
+ Elapsed seconds of run for this period :    669.4863    
  SEARCH BC data for 1999072206 , step =   387840
  READY  BC from     1999072200  to 1999072206 
  $$$  1999-07-22 00:00:00 UTC        
@@ -5238,7 +5238,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999072300.nc
- Elapsed seconds of run for this period :    854.4893    
+ Elapsed seconds of run for this period :    714.3398    
  SEARCH BC data for 1999072306 , step =   389760
  READY  BC from     1999072300  to 1999072306 
  $$$  1999-07-23 00:00:00 UTC        
@@ -5397,7 +5397,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999072400.nc
- Elapsed seconds of run for this period :    858.2754    
+ Elapsed seconds of run for this period :    729.8438    
  SEARCH BC data for 1999072406 , step =   391680
  READY  BC from     1999072400  to 1999072406 
  $$$  1999-07-24 00:00:00 UTC        
@@ -5556,7 +5556,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999072500.nc
- Elapsed seconds of run for this period :    871.4141    
+ Elapsed seconds of run for this period :    738.6270    
  SEARCH BC data for 1999072506 , step =   393600
  READY  BC from     1999072500  to 1999072506 
  $$$  1999-07-25 00:00:00 UTC        
@@ -5715,7 +5715,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999072600.nc
- Elapsed seconds of run for this period :    831.8066    
+ Elapsed seconds of run for this period :    739.1348    
  SEARCH BC data for 1999072606 , step =   395520
  READY  BC from     1999072600  to 1999072606 
  $$$  1999-07-26 00:00:00 UTC        
@@ -5874,7 +5874,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999072700.nc
- Elapsed seconds of run for this period :    842.9883    
+ Elapsed seconds of run for this period :    747.3574    
  SEARCH BC data for 1999072706 , step =   397440
  READY  BC from     1999072700  to 1999072706 
  $$$  1999-07-27 00:00:00 UTC        
@@ -6033,7 +6033,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999072800.nc
- Elapsed seconds of run for this period :    857.5430    
+ Elapsed seconds of run for this period :    755.7168    
  SEARCH BC data for 1999072806 , step =   399360
  READY  BC from     1999072800  to 1999072806 
  $$$  1999-07-28 00:00:00 UTC        
@@ -6192,7 +6192,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999072900.nc
- Elapsed seconds of run for this period :    864.8223    
+ Elapsed seconds of run for this period :    761.4570    
  SEARCH BC data for 1999072906 , step =   401280
  READY  BC from     1999072900  to 1999072906 
  $$$  1999-07-29 00:00:00 UTC        
@@ -6351,7 +6351,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999073000.nc
- Elapsed seconds of run for this period :    875.1465    
+ Elapsed seconds of run for this period :    764.0195    
  SEARCH BC data for 1999073006 , step =   403200
  READY  BC from     1999073000  to 1999073006 
  $$$  1999-07-30 00:00:00 UTC        
@@ -6510,7 +6510,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999073100.nc
- Elapsed seconds of run for this period :    834.8730    
+ Elapsed seconds of run for this period :    762.5156    
  SEARCH BC data for 1999073106 , step =   405120
  READY  BC from     1999073100  to 1999073106 
  $$$  1999-07-31 00:00:00 UTC        
@@ -6691,7 +6691,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999080100.nc
- Elapsed seconds of run for this period :    967.3008    
+ Elapsed seconds of run for this period :    829.8105    
  SEARCH BC data for 1999080106 , step =   407040
  READY  BC from     1999080100  to 1999080106 
  $$$  1999-08-01 00:00:00 UTC        
@@ -6854,7 +6854,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999080200.nc
- Elapsed seconds of run for this period :    891.4570    
+ Elapsed seconds of run for this period :    763.3984    
  SEARCH BC data for 1999080206 , step =   408960
  READY  BC from     1999080200  to 1999080206 
  $$$  1999-08-02 00:00:00 UTC        
@@ -7013,7 +7013,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999080300.nc
- Elapsed seconds of run for this period :    892.7871    
+ Elapsed seconds of run for this period :    790.8535    
  SEARCH BC data for 1999080306 , step =   410880
  READY  BC from     1999080300  to 1999080306 
  $$$  1999-08-03 00:00:00 UTC        
@@ -7172,7 +7172,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999080400.nc
- Elapsed seconds of run for this period :    848.2363    
+ Elapsed seconds of run for this period :    806.9219    
  SEARCH BC data for 1999080406 , step =   412800
  READY  BC from     1999080400  to 1999080406 
  $$$  1999-08-04 00:00:00 UTC        
@@ -7331,7 +7331,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999080500.nc
- Elapsed seconds of run for this period :    867.9492    
+ Elapsed seconds of run for this period :    805.1309    
  SEARCH BC data for 1999080506 , step =   414720
  READY  BC from     1999080500  to 1999080506 
  $$$  1999-08-05 00:00:00 UTC        
@@ -7490,7 +7490,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999080600.nc
- Elapsed seconds of run for this period :    887.5820    
+ Elapsed seconds of run for this period :    817.8730    
  SEARCH BC data for 1999080606 , step =   416640
  READY  BC from     1999080600  to 1999080606 
  $$$  1999-08-06 00:00:00 UTC        
@@ -7649,7 +7649,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999080700.nc
- Elapsed seconds of run for this period :    891.9062    
+ Elapsed seconds of run for this period :    870.5332    
  SEARCH BC data for 1999080706 , step =   418560
  READY  BC from     1999080700  to 1999080706 
  $$$  1999-08-07 00:00:00 UTC        
@@ -7808,7 +7808,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999080800.nc
- Elapsed seconds of run for this period :    881.2988    
+ Elapsed seconds of run for this period :    882.8809    
  SEARCH BC data for 1999080806 , step =   420480
  READY  BC from     1999080800  to 1999080806 
  $$$  1999-08-08 00:00:00 UTC        
@@ -7967,7 +7967,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999080900.nc
- Elapsed seconds of run for this period :    889.0898    
+ Elapsed seconds of run for this period :    878.9062    
  SEARCH BC data for 1999080906 , step =   422400
  READY  BC from     1999080900  to 1999080906 
  $$$  1999-08-09 00:00:00 UTC        
@@ -8126,7 +8126,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999081000.nc
- Elapsed seconds of run for this period :    914.4922    
+ Elapsed seconds of run for this period :    853.1680    
  SEARCH BC data for 1999081006 , step =   424320
  READY  BC from     1999081000  to 1999081006 
  $$$  1999-08-10 00:00:00 UTC        
@@ -8285,7 +8285,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999081100.nc
- Elapsed seconds of run for this period :    932.3164    
+ Elapsed seconds of run for this period :    860.8555    
  SEARCH BC data for 1999081106 , step =   426240
  READY  BC from     1999081100  to 1999081106 
  $$$  1999-08-11 00:00:00 UTC        
@@ -8444,7 +8444,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999081200.nc
- Elapsed seconds of run for this period :    903.8086    
+ Elapsed seconds of run for this period :    880.3711    
  SEARCH BC data for 1999081206 , step =   428160
  READY  BC from     1999081200  to 1999081206 
  $$$  1999-08-12 00:00:00 UTC        
@@ -8603,7 +8603,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999081300.nc
- Elapsed seconds of run for this period :    882.9648    
+ Elapsed seconds of run for this period :    884.3516    
  SEARCH BC data for 1999081306 , step =   430080
  READY  BC from     1999081300  to 1999081306 
  $$$  1999-08-13 00:00:00 UTC        
@@ -8762,7 +8762,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999081400.nc
- Elapsed seconds of run for this period :    872.5117    
+ Elapsed seconds of run for this period :    884.9453    
  SEARCH BC data for 1999081406 , step =   432000
  READY  BC from     1999081400  to 1999081406 
  $$$  1999-08-14 00:00:00 UTC        
@@ -8921,7 +8921,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999081500.nc
- Elapsed seconds of run for this period :    878.9805    
+ Elapsed seconds of run for this period :    894.8633    
  SEARCH BC data for 1999081506 , step =   433920
  READY  BC from     1999081500  to 1999081506 
  $$$  1999-08-15 00:00:00 UTC        
@@ -9080,7 +9080,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999081600.nc
- Elapsed seconds of run for this period :    876.2617    
+ Elapsed seconds of run for this period :    877.6133    
  SEARCH BC data for 1999081606 , step =   435840
  READY  BC from     1999081600  to 1999081606 
  $$$  1999-08-16 00:00:00 UTC        
@@ -9245,7 +9245,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999081700.nc
- Elapsed seconds of run for this period :    860.9727    
+ Elapsed seconds of run for this period :    878.1992    
  SEARCH BC data for 1999081706 , step =   437760
  READY  BC from     1999081700  to 1999081706 
  $$$  1999-08-17 00:00:00 UTC        
@@ -9404,7 +9404,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999081800.nc
- Elapsed seconds of run for this period :    862.9727    
+ Elapsed seconds of run for this period :    873.7227    
  SEARCH BC data for 1999081806 , step =   439680
  READY  BC from     1999081800  to 1999081806 
  $$$  1999-08-18 00:00:00 UTC        
@@ -9563,7 +9563,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999081900.nc
- Elapsed seconds of run for this period :    856.3711    
+ Elapsed seconds of run for this period :    866.8633    
  SEARCH BC data for 1999081906 , step =   441600
  READY  BC from     1999081900  to 1999081906 
  $$$  1999-08-19 00:00:00 UTC        
@@ -9722,7 +9722,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999082000.nc
- Elapsed seconds of run for this period :    840.7734    
+ Elapsed seconds of run for this period :    874.5859    
  SEARCH BC data for 1999082006 , step =   443520
  READY  BC from     1999082000  to 1999082006 
  $$$  1999-08-20 00:00:00 UTC        
@@ -9881,7 +9881,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999082100.nc
- Elapsed seconds of run for this period :    852.4766    
+ Elapsed seconds of run for this period :    873.2031    
  SEARCH BC data for 1999082106 , step =   445440
  READY  BC from     1999082100  to 1999082106 
  $$$  1999-08-21 00:00:00 UTC        
@@ -10040,7 +10040,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999082200.nc
- Elapsed seconds of run for this period :    841.2578    
+ Elapsed seconds of run for this period :    870.4492    
  SEARCH BC data for 1999082206 , step =   447360
  READY  BC from     1999082200  to 1999082206 
  $$$  1999-08-22 00:00:00 UTC        
@@ -10199,7 +10199,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999082300.nc
- Elapsed seconds of run for this period :    855.6953    
+ Elapsed seconds of run for this period :    878.0859    
  SEARCH BC data for 1999082306 , step =   449280
  READY  BC from     1999082300  to 1999082306 
  $$$  1999-08-23 00:00:00 UTC        
@@ -10358,7 +10358,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999082400.nc
- Elapsed seconds of run for this period :    851.5547    
+ Elapsed seconds of run for this period :    864.1914    
  SEARCH BC data for 1999082406 , step =   451200
  READY  BC from     1999082400  to 1999082406 
  $$$  1999-08-24 00:00:00 UTC        
@@ -10517,7 +10517,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999082500.nc
- Elapsed seconds of run for this period :    843.5898    
+ Elapsed seconds of run for this period :    865.2617    
  SEARCH BC data for 1999082506 , step =   453120
  READY  BC from     1999082500  to 1999082506 
  $$$  1999-08-25 00:00:00 UTC        
@@ -10676,7 +10676,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999082600.nc
- Elapsed seconds of run for this period :    850.2383    
+ Elapsed seconds of run for this period :    863.3633    
  SEARCH BC data for 1999082606 , step =   455040
  READY  BC from     1999082600  to 1999082606 
  $$$  1999-08-26 00:00:00 UTC        
@@ -10835,7 +10835,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999082700.nc
- Elapsed seconds of run for this period :    843.5742    
+ Elapsed seconds of run for this period :    868.8164    
  SEARCH BC data for 1999082706 , step =   456960
  READY  BC from     1999082700  to 1999082706 
  $$$  1999-08-27 00:00:00 UTC        
@@ -10994,7 +10994,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999082800.nc
- Elapsed seconds of run for this period :    826.8594    
+ Elapsed seconds of run for this period :    860.4570    
  SEARCH BC data for 1999082806 , step =   458880
  READY  BC from     1999082800  to 1999082806 
  $$$  1999-08-28 00:00:00 UTC        
@@ -11153,7 +11153,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999082900.nc
- Elapsed seconds of run for this period :    829.1016    
+ Elapsed seconds of run for this period :    858.7070    
  SEARCH BC data for 1999082906 , step =   460800
  READY  BC from     1999082900  to 1999082906 
  $$$  1999-08-29 00:00:00 UTC        
@@ -11312,7 +11312,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999083000.nc
- Elapsed seconds of run for this period :    836.9727    
+ Elapsed seconds of run for this period :    867.6992    
  SEARCH BC data for 1999083006 , step =   462720
  READY  BC from     1999083000  to 1999083006 
  $$$  1999-08-30 00:00:00 UTC        
@@ -11471,7 +11471,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999083100.nc
- Elapsed seconds of run for this period :    837.6523    
+ Elapsed seconds of run for this period :    862.5977    
  SEARCH BC data for 1999083106 , step =   464640
  READY  BC from     1999083100  to 1999083106 
  $$$  1999-08-31 00:00:00 UTC        
@@ -11652,7 +11652,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999090100.nc
- Elapsed seconds of run for this period :    882.6953    
+ Elapsed seconds of run for this period :    905.9883    
  SEARCH BC data for 1999090106 , step =   466560
  READY  BC from     1999090100  to 1999090106 
  $$$  1999-09-01 00:00:00 UTC        
@@ -11815,7 +11815,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999090200.nc
- Elapsed seconds of run for this period :    832.8516    
+ Elapsed seconds of run for this period :    860.5117    
  SEARCH BC data for 1999090206 , step =   468480
  READY  BC from     1999090200  to 1999090206 
  $$$  1999-09-02 00:00:00 UTC        
@@ -11974,7 +11974,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999090300.nc
- Elapsed seconds of run for this period :    827.6758    
+ Elapsed seconds of run for this period :    848.4844    
  SEARCH BC data for 1999090306 , step =   470400
  READY  BC from     1999090300  to 1999090306 
  $$$  1999-09-03 00:00:00 UTC        
@@ -12133,7 +12133,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999090400.nc
- Elapsed seconds of run for this period :    816.8594    
+ Elapsed seconds of run for this period :    863.5078    
  SEARCH BC data for 1999090406 , step =   472320
  READY  BC from     1999090400  to 1999090406 
  $$$  1999-09-04 00:00:00 UTC        
@@ -12292,7 +12292,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999090500.nc
- Elapsed seconds of run for this period :    805.9531    
+ Elapsed seconds of run for this period :    849.7227    
  SEARCH BC data for 1999090506 , step =   474240
  READY  BC from     1999090500  to 1999090506 
  $$$  1999-09-05 00:00:00 UTC        
@@ -12451,7 +12451,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999090600.nc
- Elapsed seconds of run for this period :    783.6992    
+ Elapsed seconds of run for this period :    857.3477    
  SEARCH BC data for 1999090606 , step =   476160
  READY  BC from     1999090600  to 1999090606 
  $$$  1999-09-06 00:00:00 UTC        
@@ -12610,7 +12610,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999090700.nc
- Elapsed seconds of run for this period :    767.6367    
+ Elapsed seconds of run for this period :    868.9062    
  SEARCH BC data for 1999090706 , step =   478080
  READY  BC from     1999090700  to 1999090706 
  $$$  1999-09-07 00:00:00 UTC        
@@ -12769,7 +12769,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999090800.nc
- Elapsed seconds of run for this period :    754.8281    
+ Elapsed seconds of run for this period :    860.8828    
  SEARCH BC data for 1999090806 , step =   480000
  READY  BC from     1999090800  to 1999090806 
  $$$  1999-09-08 00:00:00 UTC        
@@ -12928,7 +12928,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999090900.nc
- Elapsed seconds of run for this period :    742.9805    
+ Elapsed seconds of run for this period :    872.8438    
  SEARCH BC data for 1999090906 , step =   481920
  READY  BC from     1999090900  to 1999090906 
  $$$  1999-09-09 00:00:00 UTC        
@@ -13087,7 +13087,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999091000.nc
- Elapsed seconds of run for this period :    722.7461    
+ Elapsed seconds of run for this period :    863.5820    
  SEARCH BC data for 1999091006 , step =   483840
  READY  BC from     1999091000  to 1999091006 
  $$$  1999-09-10 00:00:00 UTC        
@@ -13246,7 +13246,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999091100.nc
- Elapsed seconds of run for this period :    721.3438    
+ Elapsed seconds of run for this period :    861.4492    
  SEARCH BC data for 1999091106 , step =   485760
  READY  BC from     1999091100  to 1999091106 
  $$$  1999-09-11 00:00:00 UTC        
@@ -13405,7 +13405,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999091200.nc
- Elapsed seconds of run for this period :    716.0742    
+ Elapsed seconds of run for this period :    865.9727    
  SEARCH BC data for 1999091206 , step =   487680
  READY  BC from     1999091200  to 1999091206 
  $$$  1999-09-12 00:00:00 UTC        
@@ -13564,7 +13564,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999091300.nc
- Elapsed seconds of run for this period :    713.7695    
+ Elapsed seconds of run for this period :    848.6406    
  SEARCH BC data for 1999091306 , step =   489600
  READY  BC from     1999091300  to 1999091306 
  $$$  1999-09-13 00:00:00 UTC        
@@ -13723,7 +13723,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999091400.nc
- Elapsed seconds of run for this period :    712.5312    
+ Elapsed seconds of run for this period :    847.0547    
  SEARCH BC data for 1999091406 , step =   491520
  READY  BC from     1999091400  to 1999091406 
  $$$  1999-09-14 00:00:00 UTC        
@@ -13882,7 +13882,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999091500.nc
- Elapsed seconds of run for this period :    688.9102    
+ Elapsed seconds of run for this period :    839.0508    
  SEARCH BC data for 1999091506 , step =   493440
  READY  BC from     1999091500  to 1999091506 
  $$$  1999-09-15 00:00:00 UTC        
@@ -14041,7 +14041,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999091600.nc
- Elapsed seconds of run for this period :    696.4336    
+ Elapsed seconds of run for this period :    838.6172    
  SEARCH BC data for 1999091606 , step =   495360
  READY  BC from     1999091600  to 1999091606 
  $$$  1999-09-16 00:00:00 UTC        
@@ -14206,7 +14206,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999091700.nc
- Elapsed seconds of run for this period :    705.0859    
+ Elapsed seconds of run for this period :    850.8047    
  SEARCH BC data for 1999091706 , step =   497280
  READY  BC from     1999091700  to 1999091706 
  $$$  1999-09-17 00:00:00 UTC        
@@ -14365,7 +14365,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999091800.nc
- Elapsed seconds of run for this period :    693.3516    
+ Elapsed seconds of run for this period :    835.9531    
  SEARCH BC data for 1999091806 , step =   499200
  READY  BC from     1999091800  to 1999091806 
  $$$  1999-09-18 00:00:00 UTC        
@@ -14524,7 +14524,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999091900.nc
- Elapsed seconds of run for this period :    690.0039    
+ Elapsed seconds of run for this period :    850.5547    
  SEARCH BC data for 1999091906 , step =   501120
  READY  BC from     1999091900  to 1999091906 
  $$$  1999-09-19 00:00:00 UTC        
@@ -14683,7 +14683,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999092000.nc
- Elapsed seconds of run for this period :    704.2188    
+ Elapsed seconds of run for this period :    844.9609    
  SEARCH BC data for 1999092006 , step =   503040
  READY  BC from     1999092000  to 1999092006 
  $$$  1999-09-20 00:00:00 UTC        
@@ -14842,7 +14842,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999092100.nc
- Elapsed seconds of run for this period :    694.6641    
+ Elapsed seconds of run for this period :    838.7188    
  SEARCH BC data for 1999092106 , step =   504960
  READY  BC from     1999092100  to 1999092106 
  $$$  1999-09-21 00:00:00 UTC        
@@ -15001,7 +15001,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999092200.nc
- Elapsed seconds of run for this period :    691.2969    
+ Elapsed seconds of run for this period :    841.6641    
  SEARCH BC data for 1999092206 , step =   506880
  READY  BC from     1999092200  to 1999092206 
  $$$  1999-09-22 00:00:00 UTC        
@@ -15160,7 +15160,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999092300.nc
- Elapsed seconds of run for this period :    702.7500    
+ Elapsed seconds of run for this period :    846.5312    
  SEARCH BC data for 1999092306 , step =   508800
  READY  BC from     1999092300  to 1999092306 
  $$$  1999-09-23 00:00:00 UTC        
@@ -15319,7 +15319,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
  AM-3_RAD.1999092400.nc
- Elapsed seconds of run for this period :    694.0078    
+ Elapsed seconds of run for this period :    843.6641    
  SEARCH BC data for 1999092406 , step =   510720
  READY  BC from     1999092400  to 1999092406 
  $$$  1999-09-24 00:00:00 UTC        
@@ -15440,1011 +15440,3 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  ATM variables written at  1999-09-24 19:00:00 UTC        
  SRF variables written at  1999-09-24 19:00:00 UTC        
  RAD variables written at  1999-09-24 19:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-24 20:00:00 UTC        
- SRF variables written at  1999-09-24 20:00:00 UTC        
- RAD variables written at  1999-09-24 20:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-24 21:00:00 UTC        
- SRF variables written at  1999-09-24 21:00:00 UTC        
- RAD variables written at  1999-09-24 21:00:00 UTC        
- $$$  1999-09-24 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.36  494.86
- CLM History variables written
- ATM variables written at  1999-09-24 22:00:00 UTC        
- SRF variables written at  1999-09-24 22:00:00 UTC        
- RAD variables written at  1999-09-24 22:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-24 23:00:00 UTC        
- SRF variables written at  1999-09-24 23:00:00 UTC        
- RAD variables written at  1999-09-24 23:00:00 UTC        
- CLM History variables written
- At  1999-09-25 00:00:00 UTC        
- JDay    267.00000 solar declination angle =  -0.18027893 degrees
-                   solar TSI irradiance    =    1356.9103 W/m^2
- ATM variables written at  1999-09-25 00:00:00 UTC        
- SRF variables written at  1999-09-25 00:00:00 UTC        
- STS variables written at  1999-09-25 00:00:00 UTC        
- RAD variables written at  1999-09-25 00:00:00 UTC        
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_ATM.1999092500.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_SRF.1999092500.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_STS.1999092500.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_RAD.1999092500.nc
- Elapsed seconds of run for this period :    694.7578    
- SEARCH BC data for 1999092506 , step =   512640
- READY  BC from     1999092500  to 1999092506 
- $$$  1999-09-25 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1032.04  494.53
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.500E-16
-    0.715E-13  0.175E-11  0.127E-10  0.512E-10  0.145E-09  0.326E-09  0.622E-09
-    0.105E-08  0.161E-08  0.229E-08  0.307E-08  0.391E-08  0.478E-08  0.564E-08
-    0.644E-08  0.717E-08  0.780E-08  0.831E-08  0.870E-08  0.895E-08  0.908E-08
-    0.909E-08  0.899E-08  0.879E-08  0.849E-08  0.812E-08  0.769E-08  0.719E-08
-    0.719E-08  0.665E-08  0.606E-08  0.542E-08  0.472E-08  0.390E-08  0.274E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.163      0.161      0.160      0.159      0.159      0.158      0.157    
-    0.156      0.156      0.155      0.155      0.154      0.154      0.153    
-    0.153      0.152      0.152      0.152      0.151      0.151      0.151    
-    0.150      0.150      0.150      0.149      0.149      0.149      0.148    
-    0.148      0.148      0.147      0.147      0.146      0.146      0.144    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- CLM History variables written
- ATM variables written at  1999-09-25 01:00:00 UTC        
- SRF variables written at  1999-09-25 01:00:00 UTC        
- RAD variables written at  1999-09-25 01:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 02:00:00 UTC        
- SRF variables written at  1999-09-25 02:00:00 UTC        
- RAD variables written at  1999-09-25 02:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 03:00:00 UTC        
- SRF variables written at  1999-09-25 03:00:00 UTC        
- RAD variables written at  1999-09-25 03:00:00 UTC        
- $$$  1999-09-25 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1030.11  493.85
- CLM History variables written
- ATM variables written at  1999-09-25 04:00:00 UTC        
- SRF variables written at  1999-09-25 04:00:00 UTC        
- RAD variables written at  1999-09-25 04:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 05:00:00 UTC        
- SRF variables written at  1999-09-25 05:00:00 UTC        
- RAD variables written at  1999-09-25 05:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 06:00:00 UTC        
- SRF variables written at  1999-09-25 06:00:00 UTC        
- RAD variables written at  1999-09-25 06:00:00 UTC        
- SEARCH BC data for 1999092512 , step =   513120
- READY  BC from     1999092506  to 1999092512 
- $$$  1999-09-25 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1028.16  493.11
- CLM History variables written
- ATM variables written at  1999-09-25 07:00:00 UTC        
- SRF variables written at  1999-09-25 07:00:00 UTC        
- RAD variables written at  1999-09-25 07:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 08:00:00 UTC        
- SRF variables written at  1999-09-25 08:00:00 UTC        
- RAD variables written at  1999-09-25 08:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 09:00:00 UTC        
- SRF variables written at  1999-09-25 09:00:00 UTC        
- RAD variables written at  1999-09-25 09:00:00 UTC        
- $$$  1999-09-25 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1028.32  492.98
- CLM History variables written
- ATM variables written at  1999-09-25 10:00:00 UTC        
- SRF variables written at  1999-09-25 10:00:00 UTC        
- RAD variables written at  1999-09-25 10:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 11:00:00 UTC        
- SRF variables written at  1999-09-25 11:00:00 UTC        
- RAD variables written at  1999-09-25 11:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 12:00:00 UTC        
- SRF variables written at  1999-09-25 12:00:00 UTC        
- RAD variables written at  1999-09-25 12:00:00 UTC        
- SEARCH BC data for 1999092518 , step =   513600
- READY  BC from     1999092512  to 1999092518 
- $$$  1999-09-25 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1028.42  492.77
- CLM History variables written
- ATM variables written at  1999-09-25 13:00:00 UTC        
- SRF variables written at  1999-09-25 13:00:00 UTC        
- RAD variables written at  1999-09-25 13:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 14:00:00 UTC        
- SRF variables written at  1999-09-25 14:00:00 UTC        
- RAD variables written at  1999-09-25 14:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 15:00:00 UTC        
- SRF variables written at  1999-09-25 15:00:00 UTC        
- RAD variables written at  1999-09-25 15:00:00 UTC        
- $$$  1999-09-25 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.82  492.78
- CLM History variables written
- ATM variables written at  1999-09-25 16:00:00 UTC        
- SRF variables written at  1999-09-25 16:00:00 UTC        
- RAD variables written at  1999-09-25 16:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 17:00:00 UTC        
- SRF variables written at  1999-09-25 17:00:00 UTC        
- RAD variables written at  1999-09-25 17:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 18:00:00 UTC        
- SRF variables written at  1999-09-25 18:00:00 UTC        
- RAD variables written at  1999-09-25 18:00:00 UTC        
- SEARCH BC data for 1999092600 , step =   514080
- READY  BC from     1999092518  to 1999092600 
- $$$  1999-09-25 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.80  493.11
- CLM History variables written
- ATM variables written at  1999-09-25 19:00:00 UTC        
- SRF variables written at  1999-09-25 19:00:00 UTC        
- RAD variables written at  1999-09-25 19:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 20:00:00 UTC        
- SRF variables written at  1999-09-25 20:00:00 UTC        
- RAD variables written at  1999-09-25 20:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 21:00:00 UTC        
- SRF variables written at  1999-09-25 21:00:00 UTC        
- RAD variables written at  1999-09-25 21:00:00 UTC        
- $$$  1999-09-25 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.85  492.98
- CLM History variables written
- ATM variables written at  1999-09-25 22:00:00 UTC        
- SRF variables written at  1999-09-25 22:00:00 UTC        
- RAD variables written at  1999-09-25 22:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-25 23:00:00 UTC        
- SRF variables written at  1999-09-25 23:00:00 UTC        
- RAD variables written at  1999-09-25 23:00:00 UTC        
- CLM History variables written
- At  1999-09-26 00:00:00 UTC        
- JDay    268.00000 solar declination angle =  -0.56950016 degrees
-                   solar TSI irradiance    =    1356.9103 W/m^2
- ATM variables written at  1999-09-26 00:00:00 UTC        
- SRF variables written at  1999-09-26 00:00:00 UTC        
- STS variables written at  1999-09-26 00:00:00 UTC        
- RAD variables written at  1999-09-26 00:00:00 UTC        
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_ATM.1999092600.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_SRF.1999092600.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_STS.1999092600.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_RAD.1999092600.nc
- Elapsed seconds of run for this period :    691.3438    
- SEARCH BC data for 1999092606 , step =   514560
- READY  BC from     1999092600  to 1999092606 
- $$$  1999-09-26 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.95  492.69
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.500E-16
-    0.715E-13  0.175E-11  0.127E-10  0.512E-10  0.145E-09  0.326E-09  0.622E-09
-    0.105E-08  0.161E-08  0.229E-08  0.307E-08  0.391E-08  0.478E-08  0.564E-08
-    0.644E-08  0.717E-08  0.780E-08  0.831E-08  0.870E-08  0.895E-08  0.908E-08
-    0.909E-08  0.899E-08  0.879E-08  0.849E-08  0.812E-08  0.769E-08  0.719E-08
-    0.719E-08  0.665E-08  0.606E-08  0.542E-08  0.472E-08  0.390E-08  0.274E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.163      0.161      0.160      0.159      0.159      0.158      0.157    
-    0.156      0.156      0.155      0.155      0.154      0.154      0.153    
-    0.153      0.152      0.152      0.152      0.151      0.151      0.151    
-    0.150      0.150      0.150      0.149      0.149      0.149      0.148    
-    0.148      0.148      0.147      0.147      0.146      0.146      0.144    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- CLM History variables written
- ATM variables written at  1999-09-26 01:00:00 UTC        
- SRF variables written at  1999-09-26 01:00:00 UTC        
- RAD variables written at  1999-09-26 01:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 02:00:00 UTC        
- SRF variables written at  1999-09-26 02:00:00 UTC        
- RAD variables written at  1999-09-26 02:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 03:00:00 UTC        
- SRF variables written at  1999-09-26 03:00:00 UTC        
- RAD variables written at  1999-09-26 03:00:00 UTC        
- $$$  1999-09-26 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.40  492.15
- CLM History variables written
- ATM variables written at  1999-09-26 04:00:00 UTC        
- SRF variables written at  1999-09-26 04:00:00 UTC        
- RAD variables written at  1999-09-26 04:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 05:00:00 UTC        
- SRF variables written at  1999-09-26 05:00:00 UTC        
- RAD variables written at  1999-09-26 05:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 06:00:00 UTC        
- SRF variables written at  1999-09-26 06:00:00 UTC        
- RAD variables written at  1999-09-26 06:00:00 UTC        
- SEARCH BC data for 1999092612 , step =   515040
- READY  BC from     1999092606  to 1999092612 
- $$$  1999-09-26 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.74  491.58
- CLM History variables written
- ATM variables written at  1999-09-26 07:00:00 UTC        
- SRF variables written at  1999-09-26 07:00:00 UTC        
- RAD variables written at  1999-09-26 07:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 08:00:00 UTC        
- SRF variables written at  1999-09-26 08:00:00 UTC        
- RAD variables written at  1999-09-26 08:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 09:00:00 UTC        
- SRF variables written at  1999-09-26 09:00:00 UTC        
- RAD variables written at  1999-09-26 09:00:00 UTC        
- $$$  1999-09-26 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.71  491.49
- CLM History variables written
- ATM variables written at  1999-09-26 10:00:00 UTC        
- SRF variables written at  1999-09-26 10:00:00 UTC        
- RAD variables written at  1999-09-26 10:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 11:00:00 UTC        
- SRF variables written at  1999-09-26 11:00:00 UTC        
- RAD variables written at  1999-09-26 11:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 12:00:00 UTC        
- SRF variables written at  1999-09-26 12:00:00 UTC        
- RAD variables written at  1999-09-26 12:00:00 UTC        
- SEARCH BC data for 1999092618 , step =   515520
- READY  BC from     1999092612  to 1999092618 
- $$$  1999-09-26 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.82  491.55
- CLM History variables written
- ATM variables written at  1999-09-26 13:00:00 UTC        
- SRF variables written at  1999-09-26 13:00:00 UTC        
- RAD variables written at  1999-09-26 13:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 14:00:00 UTC        
- SRF variables written at  1999-09-26 14:00:00 UTC        
- RAD variables written at  1999-09-26 14:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 15:00:00 UTC        
- SRF variables written at  1999-09-26 15:00:00 UTC        
- RAD variables written at  1999-09-26 15:00:00 UTC        
- $$$  1999-09-26 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.22  492.05
- CLM History variables written
- ATM variables written at  1999-09-26 16:00:00 UTC        
- SRF variables written at  1999-09-26 16:00:00 UTC        
- RAD variables written at  1999-09-26 16:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 17:00:00 UTC        
- SRF variables written at  1999-09-26 17:00:00 UTC        
- RAD variables written at  1999-09-26 17:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 18:00:00 UTC        
- SRF variables written at  1999-09-26 18:00:00 UTC        
- RAD variables written at  1999-09-26 18:00:00 UTC        
- SEARCH BC data for 1999092700 , step =   516000
- READY  BC from     1999092618  to 1999092700 
- $$$  1999-09-26 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.78  492.89
- CLM History variables written
- ATM variables written at  1999-09-26 19:00:00 UTC        
- SRF variables written at  1999-09-26 19:00:00 UTC        
- RAD variables written at  1999-09-26 19:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 20:00:00 UTC        
- SRF variables written at  1999-09-26 20:00:00 UTC        
- RAD variables written at  1999-09-26 20:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 21:00:00 UTC        
- SRF variables written at  1999-09-26 21:00:00 UTC        
- RAD variables written at  1999-09-26 21:00:00 UTC        
- $$$  1999-09-26 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.49  493.36
- CLM History variables written
- ATM variables written at  1999-09-26 22:00:00 UTC        
- SRF variables written at  1999-09-26 22:00:00 UTC        
- RAD variables written at  1999-09-26 22:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-26 23:00:00 UTC        
- SRF variables written at  1999-09-26 23:00:00 UTC        
- RAD variables written at  1999-09-26 23:00:00 UTC        
- CLM History variables written
- At  1999-09-27 00:00:00 UTC        
- JDay    269.00000 solar declination angle =  -0.95879990 degrees
-                   solar TSI irradiance    =    1356.9103 W/m^2
- ATM variables written at  1999-09-27 00:00:00 UTC        
- SRF variables written at  1999-09-27 00:00:00 UTC        
- STS variables written at  1999-09-27 00:00:00 UTC        
- RAD variables written at  1999-09-27 00:00:00 UTC        
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_ATM.1999092700.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_SRF.1999092700.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_STS.1999092700.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_RAD.1999092700.nc
- Elapsed seconds of run for this period :    691.4141    
- SEARCH BC data for 1999092706 , step =   516480
- READY  BC from     1999092700  to 1999092706 
- $$$  1999-09-27 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.67  493.55
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.500E-16
-    0.715E-13  0.175E-11  0.127E-10  0.512E-10  0.145E-09  0.326E-09  0.622E-09
-    0.105E-08  0.161E-08  0.229E-08  0.307E-08  0.391E-08  0.478E-08  0.564E-08
-    0.644E-08  0.717E-08  0.780E-08  0.831E-08  0.870E-08  0.895E-08  0.908E-08
-    0.909E-08  0.899E-08  0.879E-08  0.849E-08  0.812E-08  0.769E-08  0.719E-08
-    0.719E-08  0.665E-08  0.606E-08  0.542E-08  0.472E-08  0.390E-08  0.274E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.163      0.161      0.160      0.159      0.159      0.158      0.157    
-    0.156      0.156      0.155      0.155      0.154      0.154      0.153    
-    0.153      0.152      0.152      0.152      0.151      0.151      0.151    
-    0.150      0.150      0.150      0.149      0.149      0.149      0.148    
-    0.148      0.148      0.147      0.147      0.146      0.146      0.144    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- CLM History variables written
- ATM variables written at  1999-09-27 01:00:00 UTC        
- SRF variables written at  1999-09-27 01:00:00 UTC        
- RAD variables written at  1999-09-27 01:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 02:00:00 UTC        
- SRF variables written at  1999-09-27 02:00:00 UTC        
- RAD variables written at  1999-09-27 02:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 03:00:00 UTC        
- SRF variables written at  1999-09-27 03:00:00 UTC        
- RAD variables written at  1999-09-27 03:00:00 UTC        
- $$$  1999-09-27 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.57  493.38
- CLM History variables written
- ATM variables written at  1999-09-27 04:00:00 UTC        
- SRF variables written at  1999-09-27 04:00:00 UTC        
- RAD variables written at  1999-09-27 04:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 05:00:00 UTC        
- SRF variables written at  1999-09-27 05:00:00 UTC        
- RAD variables written at  1999-09-27 05:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 06:00:00 UTC        
- SRF variables written at  1999-09-27 06:00:00 UTC        
- RAD variables written at  1999-09-27 06:00:00 UTC        
- SEARCH BC data for 1999092712 , step =   516960
- READY  BC from     1999092706  to 1999092712 
- $$$  1999-09-27 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.82  493.34
- CLM History variables written
- ATM variables written at  1999-09-27 07:00:00 UTC        
- SRF variables written at  1999-09-27 07:00:00 UTC        
- RAD variables written at  1999-09-27 07:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 08:00:00 UTC        
- SRF variables written at  1999-09-27 08:00:00 UTC        
- RAD variables written at  1999-09-27 08:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 09:00:00 UTC        
- SRF variables written at  1999-09-27 09:00:00 UTC        
- RAD variables written at  1999-09-27 09:00:00 UTC        
- $$$  1999-09-27 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.81  493.37
- CLM History variables written
- ATM variables written at  1999-09-27 10:00:00 UTC        
- SRF variables written at  1999-09-27 10:00:00 UTC        
- RAD variables written at  1999-09-27 10:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 11:00:00 UTC        
- SRF variables written at  1999-09-27 11:00:00 UTC        
- RAD variables written at  1999-09-27 11:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 12:00:00 UTC        
- SRF variables written at  1999-09-27 12:00:00 UTC        
- RAD variables written at  1999-09-27 12:00:00 UTC        
- SEARCH BC data for 1999092718 , step =   517440
- READY  BC from     1999092712  to 1999092718 
- $$$  1999-09-27 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.97  493.26
- CLM History variables written
- ATM variables written at  1999-09-27 13:00:00 UTC        
- SRF variables written at  1999-09-27 13:00:00 UTC        
- RAD variables written at  1999-09-27 13:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 14:00:00 UTC        
- SRF variables written at  1999-09-27 14:00:00 UTC        
- RAD variables written at  1999-09-27 14:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 15:00:00 UTC        
- SRF variables written at  1999-09-27 15:00:00 UTC        
- RAD variables written at  1999-09-27 15:00:00 UTC        
- $$$  1999-09-27 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.56  493.64
- CLM History variables written
- ATM variables written at  1999-09-27 16:00:00 UTC        
- SRF variables written at  1999-09-27 16:00:00 UTC        
- RAD variables written at  1999-09-27 16:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 17:00:00 UTC        
- SRF variables written at  1999-09-27 17:00:00 UTC        
- RAD variables written at  1999-09-27 17:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 18:00:00 UTC        
- SRF variables written at  1999-09-27 18:00:00 UTC        
- RAD variables written at  1999-09-27 18:00:00 UTC        
- SEARCH BC data for 1999092800 , step =   517920
- READY  BC from     1999092718  to 1999092800 
- $$$  1999-09-27 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.61  494.09
- CLM History variables written
- ATM variables written at  1999-09-27 19:00:00 UTC        
- SRF variables written at  1999-09-27 19:00:00 UTC        
- RAD variables written at  1999-09-27 19:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 20:00:00 UTC        
- SRF variables written at  1999-09-27 20:00:00 UTC        
- RAD variables written at  1999-09-27 20:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 21:00:00 UTC        
- SRF variables written at  1999-09-27 21:00:00 UTC        
- RAD variables written at  1999-09-27 21:00:00 UTC        
- $$$  1999-09-27 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.58  494.19
- CLM History variables written
- ATM variables written at  1999-09-27 22:00:00 UTC        
- SRF variables written at  1999-09-27 22:00:00 UTC        
- RAD variables written at  1999-09-27 22:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-27 23:00:00 UTC        
- SRF variables written at  1999-09-27 23:00:00 UTC        
- RAD variables written at  1999-09-27 23:00:00 UTC        
- CLM History variables written
- At  1999-09-28 00:00:00 UTC        
- JDay    270.00000 solar declination angle =  -1.34808297 degrees
-                   solar TSI irradiance    =    1356.9103 W/m^2
- ATM variables written at  1999-09-28 00:00:00 UTC        
- SRF variables written at  1999-09-28 00:00:00 UTC        
- STS variables written at  1999-09-28 00:00:00 UTC        
- RAD variables written at  1999-09-28 00:00:00 UTC        
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_ATM.1999092800.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_SRF.1999092800.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_STS.1999092800.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_RAD.1999092800.nc
- Elapsed seconds of run for this period :    704.4219    
- SEARCH BC data for 1999092806 , step =   518400
- READY  BC from     1999092800  to 1999092806 
- $$$  1999-09-28 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.58  494.14
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.500E-16
-    0.715E-13  0.175E-11  0.127E-10  0.512E-10  0.145E-09  0.326E-09  0.622E-09
-    0.105E-08  0.161E-08  0.229E-08  0.307E-08  0.391E-08  0.478E-08  0.564E-08
-    0.644E-08  0.717E-08  0.780E-08  0.831E-08  0.870E-08  0.895E-08  0.908E-08
-    0.909E-08  0.899E-08  0.879E-08  0.849E-08  0.812E-08  0.769E-08  0.719E-08
-    0.719E-08  0.665E-08  0.606E-08  0.542E-08  0.472E-08  0.390E-08  0.274E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.163      0.161      0.160      0.159      0.159      0.158      0.157    
-    0.156      0.156      0.155      0.155      0.154      0.154      0.153    
-    0.153      0.152      0.152      0.152      0.151      0.151      0.151    
-    0.150      0.150      0.150      0.149      0.149      0.149      0.148    
-    0.148      0.148      0.147      0.147      0.146      0.146      0.144    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- CLM History variables written
- ATM variables written at  1999-09-28 01:00:00 UTC        
- SRF variables written at  1999-09-28 01:00:00 UTC        
- RAD variables written at  1999-09-28 01:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 02:00:00 UTC        
- SRF variables written at  1999-09-28 02:00:00 UTC        
- RAD variables written at  1999-09-28 02:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 03:00:00 UTC        
- SRF variables written at  1999-09-28 03:00:00 UTC        
- RAD variables written at  1999-09-28 03:00:00 UTC        
- $$$  1999-09-28 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.50  493.78
- CLM History variables written
- ATM variables written at  1999-09-28 04:00:00 UTC        
- SRF variables written at  1999-09-28 04:00:00 UTC        
- RAD variables written at  1999-09-28 04:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 05:00:00 UTC        
- SRF variables written at  1999-09-28 05:00:00 UTC        
- RAD variables written at  1999-09-28 05:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 06:00:00 UTC        
- SRF variables written at  1999-09-28 06:00:00 UTC        
- RAD variables written at  1999-09-28 06:00:00 UTC        
- SEARCH BC data for 1999092812 , step =   518880
- READY  BC from     1999092806  to 1999092812 
- $$$  1999-09-28 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.73  493.34
- CLM History variables written
- ATM variables written at  1999-09-28 07:00:00 UTC        
- SRF variables written at  1999-09-28 07:00:00 UTC        
- RAD variables written at  1999-09-28 07:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 08:00:00 UTC        
- SRF variables written at  1999-09-28 08:00:00 UTC        
- RAD variables written at  1999-09-28 08:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 09:00:00 UTC        
- SRF variables written at  1999-09-28 09:00:00 UTC        
- RAD variables written at  1999-09-28 09:00:00 UTC        
- $$$  1999-09-28 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.24  493.19
- CLM History variables written
- ATM variables written at  1999-09-28 10:00:00 UTC        
- SRF variables written at  1999-09-28 10:00:00 UTC        
- RAD variables written at  1999-09-28 10:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 11:00:00 UTC        
- SRF variables written at  1999-09-28 11:00:00 UTC        
- RAD variables written at  1999-09-28 11:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 12:00:00 UTC        
- SRF variables written at  1999-09-28 12:00:00 UTC        
- RAD variables written at  1999-09-28 12:00:00 UTC        
- SEARCH BC data for 1999092818 , step =   519360
- READY  BC from     1999092812  to 1999092818 
- $$$  1999-09-28 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.07  493.41
- CLM History variables written
- ATM variables written at  1999-09-28 13:00:00 UTC        
- SRF variables written at  1999-09-28 13:00:00 UTC        
- RAD variables written at  1999-09-28 13:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 14:00:00 UTC        
- SRF variables written at  1999-09-28 14:00:00 UTC        
- RAD variables written at  1999-09-28 14:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 15:00:00 UTC        
- SRF variables written at  1999-09-28 15:00:00 UTC        
- RAD variables written at  1999-09-28 15:00:00 UTC        
- $$$  1999-09-28 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.31  493.92
- CLM History variables written
- ATM variables written at  1999-09-28 16:00:00 UTC        
- SRF variables written at  1999-09-28 16:00:00 UTC        
- RAD variables written at  1999-09-28 16:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 17:00:00 UTC        
- SRF variables written at  1999-09-28 17:00:00 UTC        
- RAD variables written at  1999-09-28 17:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 18:00:00 UTC        
- SRF variables written at  1999-09-28 18:00:00 UTC        
- RAD variables written at  1999-09-28 18:00:00 UTC        
- SEARCH BC data for 1999092900 , step =   519840
- READY  BC from     1999092818  to 1999092900 
- $$$  1999-09-28 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.55  494.63
- CLM History variables written
- ATM variables written at  1999-09-28 19:00:00 UTC        
- SRF variables written at  1999-09-28 19:00:00 UTC        
- RAD variables written at  1999-09-28 19:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 20:00:00 UTC        
- SRF variables written at  1999-09-28 20:00:00 UTC        
- RAD variables written at  1999-09-28 20:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 21:00:00 UTC        
- SRF variables written at  1999-09-28 21:00:00 UTC        
- RAD variables written at  1999-09-28 21:00:00 UTC        
- $$$  1999-09-28 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.01  495.33
- CLM History variables written
- ATM variables written at  1999-09-28 22:00:00 UTC        
- SRF variables written at  1999-09-28 22:00:00 UTC        
- RAD variables written at  1999-09-28 22:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-28 23:00:00 UTC        
- SRF variables written at  1999-09-28 23:00:00 UTC        
- RAD variables written at  1999-09-28 23:00:00 UTC        
- CLM History variables written
- At  1999-09-29 00:00:00 UTC        
- JDay    271.00000 solar declination angle =  -1.73725377 degrees
-                   solar TSI irradiance    =    1356.9103 W/m^2
- ATM variables written at  1999-09-29 00:00:00 UTC        
- SRF variables written at  1999-09-29 00:00:00 UTC        
- STS variables written at  1999-09-29 00:00:00 UTC        
- RAD variables written at  1999-09-29 00:00:00 UTC        
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_ATM.1999092900.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_SRF.1999092900.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_STS.1999092900.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_RAD.1999092900.nc
- Elapsed seconds of run for this period :    698.7266    
- SEARCH BC data for 1999092906 , step =   520320
- READY  BC from     1999092900  to 1999092906 
- $$$  1999-09-29 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.47  495.85
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.500E-16
-    0.715E-13  0.175E-11  0.127E-10  0.512E-10  0.145E-09  0.326E-09  0.622E-09
-    0.105E-08  0.161E-08  0.229E-08  0.307E-08  0.391E-08  0.478E-08  0.564E-08
-    0.644E-08  0.717E-08  0.780E-08  0.831E-08  0.870E-08  0.895E-08  0.908E-08
-    0.909E-08  0.899E-08  0.879E-08  0.849E-08  0.812E-08  0.769E-08  0.719E-08
-    0.719E-08  0.665E-08  0.606E-08  0.542E-08  0.472E-08  0.390E-08  0.274E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.163      0.161      0.160      0.159      0.159      0.158      0.157    
-    0.156      0.156      0.155      0.155      0.154      0.154      0.153    
-    0.153      0.152      0.152      0.152      0.151      0.151      0.151    
-    0.150      0.150      0.150      0.149      0.149      0.149      0.148    
-    0.148      0.148      0.147      0.147      0.146      0.146      0.144    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- CLM History variables written
- ATM variables written at  1999-09-29 01:00:00 UTC        
- SRF variables written at  1999-09-29 01:00:00 UTC        
- RAD variables written at  1999-09-29 01:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 02:00:00 UTC        
- SRF variables written at  1999-09-29 02:00:00 UTC        
- RAD variables written at  1999-09-29 02:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 03:00:00 UTC        
- SRF variables written at  1999-09-29 03:00:00 UTC        
- RAD variables written at  1999-09-29 03:00:00 UTC        
- $$$  1999-09-29 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.41  495.85
- CLM History variables written
- ATM variables written at  1999-09-29 04:00:00 UTC        
- SRF variables written at  1999-09-29 04:00:00 UTC        
- RAD variables written at  1999-09-29 04:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 05:00:00 UTC        
- SRF variables written at  1999-09-29 05:00:00 UTC        
- RAD variables written at  1999-09-29 05:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 06:00:00 UTC        
- SRF variables written at  1999-09-29 06:00:00 UTC        
- RAD variables written at  1999-09-29 06:00:00 UTC        
- SEARCH BC data for 1999092912 , step =   520800
- READY  BC from     1999092906  to 1999092912 
- $$$  1999-09-29 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.17  495.84
- CLM History variables written
- ATM variables written at  1999-09-29 07:00:00 UTC        
- SRF variables written at  1999-09-29 07:00:00 UTC        
- RAD variables written at  1999-09-29 07:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 08:00:00 UTC        
- SRF variables written at  1999-09-29 08:00:00 UTC        
- RAD variables written at  1999-09-29 08:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 09:00:00 UTC        
- SRF variables written at  1999-09-29 09:00:00 UTC        
- RAD variables written at  1999-09-29 09:00:00 UTC        
- $$$  1999-09-29 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.93  496.02
- CLM History variables written
- ATM variables written at  1999-09-29 10:00:00 UTC        
- SRF variables written at  1999-09-29 10:00:00 UTC        
- RAD variables written at  1999-09-29 10:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 11:00:00 UTC        
- SRF variables written at  1999-09-29 11:00:00 UTC        
- RAD variables written at  1999-09-29 11:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 12:00:00 UTC        
- SRF variables written at  1999-09-29 12:00:00 UTC        
- RAD variables written at  1999-09-29 12:00:00 UTC        
- SEARCH BC data for 1999092918 , step =   521280
- READY  BC from     1999092912  to 1999092918 
- $$$  1999-09-29 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.71  496.30
- CLM History variables written
- ATM variables written at  1999-09-29 13:00:00 UTC        
- SRF variables written at  1999-09-29 13:00:00 UTC        
- RAD variables written at  1999-09-29 13:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 14:00:00 UTC        
- SRF variables written at  1999-09-29 14:00:00 UTC        
- RAD variables written at  1999-09-29 14:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 15:00:00 UTC        
- SRF variables written at  1999-09-29 15:00:00 UTC        
- RAD variables written at  1999-09-29 15:00:00 UTC        
- $$$  1999-09-29 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.05  496.23
- CLM History variables written
- ATM variables written at  1999-09-29 16:00:00 UTC        
- SRF variables written at  1999-09-29 16:00:00 UTC        
- RAD variables written at  1999-09-29 16:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 17:00:00 UTC        
- SRF variables written at  1999-09-29 17:00:00 UTC        
- RAD variables written at  1999-09-29 17:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 18:00:00 UTC        
- SRF variables written at  1999-09-29 18:00:00 UTC        
- RAD variables written at  1999-09-29 18:00:00 UTC        
- SEARCH BC data for 1999093000 , step =   521760
- READY  BC from     1999092918  to 1999093000 
- $$$  1999-09-29 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.30  496.59
- CLM History variables written
- ATM variables written at  1999-09-29 19:00:00 UTC        
- SRF variables written at  1999-09-29 19:00:00 UTC        
- RAD variables written at  1999-09-29 19:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 20:00:00 UTC        
- SRF variables written at  1999-09-29 20:00:00 UTC        
- RAD variables written at  1999-09-29 20:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 21:00:00 UTC        
- SRF variables written at  1999-09-29 21:00:00 UTC        
- RAD variables written at  1999-09-29 21:00:00 UTC        
- $$$  1999-09-29 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.03  496.39
- CLM History variables written
- ATM variables written at  1999-09-29 22:00:00 UTC        
- SRF variables written at  1999-09-29 22:00:00 UTC        
- RAD variables written at  1999-09-29 22:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-29 23:00:00 UTC        
- SRF variables written at  1999-09-29 23:00:00 UTC        
- RAD variables written at  1999-09-29 23:00:00 UTC        
- CLM History variables written
- At  1999-09-30 00:00:00 UTC        
- JDay    272.00000 solar declination angle =  -2.12621627 degrees
-                   solar TSI irradiance    =    1356.9103 W/m^2
- ATM variables written at  1999-09-30 00:00:00 UTC        
- SRF variables written at  1999-09-30 00:00:00 UTC        
- STS variables written at  1999-09-30 00:00:00 UTC        
- RAD variables written at  1999-09-30 00:00:00 UTC        
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_ATM.1999093000.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_SRF.1999093000.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_STS.1999093000.nc
- Opening new output file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3_RAD.1999093000.nc
- Elapsed seconds of run for this period :    699.5312    
- SEARCH BC data for 1999093006 , step =   522240
- READY  BC from     1999093000  to 1999093006 
- $$$  1999-09-30 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.03  495.91
- Updating aerosol optical properties...
-  # Updated VIS ext profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.500E-16
-    0.715E-13  0.175E-11  0.127E-10  0.512E-10  0.145E-09  0.326E-09  0.622E-09
-    0.105E-08  0.161E-08  0.229E-08  0.307E-08  0.391E-08  0.478E-08  0.564E-08
-    0.644E-08  0.717E-08  0.780E-08  0.831E-08  0.870E-08  0.895E-08  0.908E-08
-    0.909E-08  0.899E-08  0.879E-08  0.849E-08  0.812E-08  0.769E-08  0.719E-08
-    0.719E-08  0.665E-08  0.606E-08  0.542E-08  0.472E-08  0.390E-08  0.274E-08
-  # Updated VIS ssa profile #
-     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
-    0.163      0.161      0.160      0.159      0.159      0.158      0.157    
-    0.156      0.156      0.155      0.155      0.154      0.154      0.153    
-    0.153      0.152      0.152      0.152      0.151      0.151      0.151    
-    0.150      0.150      0.150      0.149      0.149      0.149      0.148    
-    0.148      0.148      0.147      0.147      0.146      0.146      0.144    
-  # Updated VIS asy profile #
-     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
-    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
- CLM History variables written
- ATM variables written at  1999-09-30 01:00:00 UTC        
- SRF variables written at  1999-09-30 01:00:00 UTC        
- RAD variables written at  1999-09-30 01:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 02:00:00 UTC        
- SRF variables written at  1999-09-30 02:00:00 UTC        
- RAD variables written at  1999-09-30 02:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 03:00:00 UTC        
- SRF variables written at  1999-09-30 03:00:00 UTC        
- RAD variables written at  1999-09-30 03:00:00 UTC        
- $$$  1999-09-30 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.80  495.35
- CLM History variables written
- ATM variables written at  1999-09-30 04:00:00 UTC        
- SRF variables written at  1999-09-30 04:00:00 UTC        
- RAD variables written at  1999-09-30 04:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 05:00:00 UTC        
- SRF variables written at  1999-09-30 05:00:00 UTC        
- RAD variables written at  1999-09-30 05:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 06:00:00 UTC        
- SRF variables written at  1999-09-30 06:00:00 UTC        
- RAD variables written at  1999-09-30 06:00:00 UTC        
- SEARCH BC data for 1999093012 , step =   522720
- READY  BC from     1999093006  to 1999093012 
- $$$  1999-09-30 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.16  494.73
- CLM History variables written
- ATM variables written at  1999-09-30 07:00:00 UTC        
- SRF variables written at  1999-09-30 07:00:00 UTC        
- RAD variables written at  1999-09-30 07:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 08:00:00 UTC        
- SRF variables written at  1999-09-30 08:00:00 UTC        
- RAD variables written at  1999-09-30 08:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 09:00:00 UTC        
- SRF variables written at  1999-09-30 09:00:00 UTC        
- RAD variables written at  1999-09-30 09:00:00 UTC        
- $$$  1999-09-30 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.72  494.27
- CLM History variables written
- ATM variables written at  1999-09-30 10:00:00 UTC        
- SRF variables written at  1999-09-30 10:00:00 UTC        
- RAD variables written at  1999-09-30 10:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 11:00:00 UTC        
- SRF variables written at  1999-09-30 11:00:00 UTC        
- RAD variables written at  1999-09-30 11:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 12:00:00 UTC        
- SRF variables written at  1999-09-30 12:00:00 UTC        
- RAD variables written at  1999-09-30 12:00:00 UTC        
- SEARCH BC data for 1999093018 , step =   523200
- READY  BC from     1999093012  to 1999093018 
- $$$  1999-09-30 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.22  493.92
- CLM History variables written
- ATM variables written at  1999-09-30 13:00:00 UTC        
- SRF variables written at  1999-09-30 13:00:00 UTC        
- RAD variables written at  1999-09-30 13:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 14:00:00 UTC        
- SRF variables written at  1999-09-30 14:00:00 UTC        
- RAD variables written at  1999-09-30 14:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 15:00:00 UTC        
- SRF variables written at  1999-09-30 15:00:00 UTC        
- RAD variables written at  1999-09-30 15:00:00 UTC        
- $$$  1999-09-30 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.10  493.50
- CLM History variables written
- ATM variables written at  1999-09-30 16:00:00 UTC        
- SRF variables written at  1999-09-30 16:00:00 UTC        
- RAD variables written at  1999-09-30 16:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 17:00:00 UTC        
- SRF variables written at  1999-09-30 17:00:00 UTC        
- RAD variables written at  1999-09-30 17:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 18:00:00 UTC        
- SRF variables written at  1999-09-30 18:00:00 UTC        
- RAD variables written at  1999-09-30 18:00:00 UTC        
- SEARCH BC data for 1999100100 , step =   523680
- READY  BC from     1999093018  to 1999100100 
- $$$  1999-09-30 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.01  493.33
- CLM History variables written
- ATM variables written at  1999-09-30 19:00:00 UTC        
- SRF variables written at  1999-09-30 19:00:00 UTC        
- RAD variables written at  1999-09-30 19:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 20:00:00 UTC        
- SRF variables written at  1999-09-30 20:00:00 UTC        
- RAD variables written at  1999-09-30 20:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 21:00:00 UTC        
- SRF variables written at  1999-09-30 21:00:00 UTC        
- RAD variables written at  1999-09-30 21:00:00 UTC        
- $$$  1999-09-30 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.10  492.99
- CLM History variables written
- ATM variables written at  1999-09-30 22:00:00 UTC        
- SRF variables written at  1999-09-30 22:00:00 UTC        
- RAD variables written at  1999-09-30 22:00:00 UTC        
- CLM History variables written
- ATM variables written at  1999-09-30 23:00:00 UTC        
- SRF variables written at  1999-09-30 23:00:00 UTC        
- RAD variables written at  1999-09-30 23:00:00 UTC        
- Write restart file for CLM at  1999-10-01 00:00:00 UTC        
- Creating history file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3.clm.regcm.h0.199910.nc
- CLM History variables written
- CLM History variables written
- Closing local history file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3.clm.regcm.h0.199910.nc
- Closing local history file 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3.clm.regcm.h1.19990901_03600.nc
- Writing restart dataset on 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CSA
- M-3.clm.regcm.r.1999100100.nc
- Writing restart dataset on 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3.clm.regcm.rh0.1999100100.nc
- Writing restart dataset on 
- /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3//CS
- AM-3.clm.regcm.rh1.1999100100.nc
- Successfully wrote out restart data for CLM 4.5
- At  1999-10-01 00:00:00 UTC        
- JDay    273.00000 solar declination angle =  -2.51487400 degrees
-                   solar TSI irradiance    =    1356.4900 W/m^2
- ATM variables written at  1999-10-01 00:00:00 UTC        
- SRF variables written at  1999-10-01 00:00:00 UTC        
- STS variables written at  1999-10-01 00:00:00 UTC        
- RAD variables written at  1999-10-01 00:00:00 UTC        
- SAV variables written at  1999-10-01 00:00:00 UTC        
- Final time  1999-10-01 00:00:00 UTC reached.
- Elapsed seconds of run for this final timeslice :    762.8984    
- : this run stops at  : 2025-03-07 07:40:24+0100
- : Run has been completed using         1296  processors.
- : Total elapsed seconds of run :    73641.2048918935     
- RegCM V5 simulation successfully reached end

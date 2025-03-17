@@ -24,7 +24,7 @@ CDO(){
 
 DATASET=$1
 
-YR="2000-2009"
+YR="1970-1979"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 

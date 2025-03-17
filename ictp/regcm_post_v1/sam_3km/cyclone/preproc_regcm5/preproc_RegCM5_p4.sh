@@ -25,9 +25,10 @@ CDO(){
 EXP="SAM-3km"
 MODEL="RegCM5"
 DT="2018-2021"
-VAR_LIST="psl uas vas"
+VAR_LIST="pr psl uas vas"
+#VAR_LIST="cape cin psl uas vas"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/dpath"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/regcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
@@ -42,15 +43,24 @@ for VAR in ${VAR_LIST[@]}; do
     for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
 	    
-	    CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100.nc
+	    CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc
 	    
         done
     done
-    
-    CDO mergetime ${VAR}_${EXP}_${MODEL}_1hr_*.nc  ${VAR}_${EXP}_${MODEL}_1hr_${DT}.nc
-    CDO selhour,00,06,12,18 ${VAR}_${EXP}_${MODEL}_1hr_${DT}.nc ${VAR}_${EXP}_${MODEL}_6hr_${DT}.nc
-    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_6hr_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
-    
+
+    if [ ${VAR} == "pr" ]
+    then
+    CDO mergetime ${VAR}_${MODEL}_1hr_*0100.nc ${VAR}_${DATASET}_1hr_${DT}.nc
+    CDO -b f32 mulc,3600 ${VAR}_${DATASET}_1hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc
+    CDO daysum ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_day_${DT}.nc
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    else
+    CDO mergetime ${VAR}_${MODEL}_1hr_*0100.nc ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc
+    CDO selhour,00,06,12,18 ${VAR}_${EXP}_${DATASET}_1hr_${DT}.nc ${VAR}_${EXP}_${DATASET}_6hr_${DT}.nc
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_6hr_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    fi
+   
 done
     
 echo

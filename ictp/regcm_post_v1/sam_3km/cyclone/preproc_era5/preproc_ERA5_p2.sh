@@ -22,7 +22,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/SAM-3km/post_cyclone/obs/era5/postproc"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/obs/era5"
 
 echo
 cd ${DIR_OUT}

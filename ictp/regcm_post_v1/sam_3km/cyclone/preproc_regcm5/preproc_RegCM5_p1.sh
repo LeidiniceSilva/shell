@@ -60,7 +60,7 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "4. Merge files"  
-    CDO mergetime ${VAR}_${EXP}_${MODEL}_1hr_*_smooth2.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_smooth2.nc
+    CDO mergetime ${VAR}_${EXP}_${MODEL}_1hr_*0100_smooth2.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_smooth2.nc
     	
 done
     

@@ -10,7 +10,7 @@
  &dimparam 
  iy     = 783,  ! This is number of points in the N/S direction
  jx     = 1231, ! This is number of points in the E/W direction
- kz     = 40,   ! Number of vertical levels
+ kz     = 41,   ! Number of vertical levels
  dsmin  = 0.01, ! Minimum sigma spacing (only used if kz is not 14, 18, 23, 41)
  dsmax  = 0.05, ! Maximum sigma spacing (only used if kz is not 14, 18, 23, 41)
  nsg    = 1,    ! For subgridding, number of points to decompose. If nsg=1,
@@ -80,7 +80,7 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/ERA5/icbc', ! Output directory for terrain files
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/icbc', ! Output directory for terrain files
  inpter = '/leonardo_work/ICT24_ESP/RCMDATA/',                                    ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
@@ -132,7 +132,7 @@
  gdate1 = 1999010100,       ! Start date for ICBC data generation
  gdate2 = 2010010100,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/ERA5/icbc/',  ! Path for ICBC produced input files
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/icbc/',  ! Path for ICBC produced input files
  inpglob = '/leonardo_work/ICT24_ESP/RCMDATA/',                                      ! Path for ICBC global input datasets
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
@@ -210,8 +210,8 @@
  ! ifchem  = .false.,           ! Output CHE ?
  ! ifopt   = .false.,           ! Output OPT ?
  ! chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5_v2/ERA5/ERA5-CSAM-3/', ! Path where all output will be placed
- lsync   = .false.,                ! If sync of output files at every timestep is requested. 
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/', ! Path where all output will be placed
+ lsync   = .true.,                 ! If sync of output files at every timestep is requested. 
                                    ! Note, it has a performance impact.
                                    ! Enabled by default if debug_level > 2
  icosp = 0,                        ! Enable COSP needed fields in output in the ATM
@@ -311,7 +311,11 @@
  iclimaaer =        3,  ! x Aerosol
  radclimpath = '/leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH', 
  /
- 
+
+ &microparam
+ vfqi = 0.15,
+ /
+
 !
 ! Non-hydrostatic core option
 !
@@ -370,7 +374,7 @@
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
- urban_hac = 'OFF',
+ urban_hac = 'ON_WASTEHEAT',
  hist_nhtfrq = 0, 1,
  hist_fincl2(1:6) = 'EFLX_LH_TOT_U','FGR_U','FIRA_U','FSA_U','FSH_U','FSM_U',
  hist_fincl2(7:11) = 'QRUNOFF_U','RH2M_U','SoilAlpha_U','TG_U','TREFMNAV_U',

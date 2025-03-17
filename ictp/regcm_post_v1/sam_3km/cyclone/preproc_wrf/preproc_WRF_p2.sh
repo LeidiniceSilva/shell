@@ -22,7 +22,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-EXP="SAM-3km"
+EXP="SAM-4km"
 MODEL="WRF"
 DT="2018-2021"
 VAR_LIST="PSL U10 V10"
