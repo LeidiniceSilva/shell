@@ -103,7 +103,7 @@ VAR_LIST="tp"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/tp_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/tp_ERA5_1hr_1970-1979.nc ${VAR}_${DATASET}_${YR}.nc
     echo
     echo "2. Monthly avg"
     CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_1hr_${YR}.nc

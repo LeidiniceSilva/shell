@@ -98,16 +98,16 @@ for VAR in ${VAR_LIST[@]}; do
     echo "1. Select date"
     if [ ${VAR} == 'tp' ]
     then
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1hr_1970-1979.nc ${VAR}_${DATASET}_1hr_${YR}.nc
     CDO mulc,1000 ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc 
     CDO daysum ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc 
     CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc 
     elif [ ${VAR} == 't2m' ]
     then
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${DATASET}_${YR}.nc
     CDO subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${DATASET}_${YR}.nc
     CDO mulc,100 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi
     echo

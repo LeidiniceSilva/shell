@@ -22,13 +22,13 @@ CDO(){
 
 EXP="EUR-11"
 
-YR="2000-2004"
+YR="1970-1973"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 VAR_LIST="pr"
-FOLDER_LIST="NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
+FOLDER_LIST="NoTo-Europe_cordex5 NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"

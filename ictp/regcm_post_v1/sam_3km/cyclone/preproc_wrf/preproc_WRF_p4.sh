@@ -45,7 +45,7 @@ for VAR in ${VAR_LIST[@]}; do
 
 	    if [ ${VAR} == "CAPE" ]
 	    then
-            CDO -setgrid,${DIR}/xlonlat.nc wrf2d_cape_saag_ml_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+            CDO -setgrid,${DIR}/xlonlat.nc ${DIR_IN}/${VAR}/wrf2d_cape_saag_ml_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
 	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 	    elif [ ${VAR} == "CIN_MU" ] || [ ${VAR} == "PSL" ] || [ ${VAR} == "U10" ] || [ ${VAR} == "V10" ]
 	    then

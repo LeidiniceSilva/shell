@@ -1,0 +1,10 @@
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/wrf
+
+--------------- INIT POSPROCESSING MODEL ----------------
+cdi  warning (cdfScanVarAttr): NetCDF: Variable not found - >XLONG<
+cdi  warning (cdfScanVarAttr): NetCDF: Variable not found - >XLAT<
+cdi  warning (cdf_check_variables): Unsupported data type (char/string), skipped variable Times!
+cdi  warning (cdfInqContents): Coordinates variable XTIME can't be assigned!
+
+cdo    setgrid (Abort): Open failed on /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/sam_3km/cyclone/preproc_wrf/xlonlat.nc!

@@ -23,7 +23,7 @@ CDO(){
 DATASET=$1
 EXP="EUR-11"
 
-YR="2000-2004"
+YR="1970-1973"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
@@ -42,7 +42,7 @@ VAR="tp"
 
 echo
 echo "1. Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/tp_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_${YR}.nc
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/tp_ERA5_1hr_1970-1979.nc ${VAR}_${DATASET}_1hr_${YR}.nc
 CDO mulc,1000 ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
 
 echo

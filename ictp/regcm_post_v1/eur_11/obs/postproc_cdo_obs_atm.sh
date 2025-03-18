@@ -23,13 +23,13 @@ CDO(){
 DATASET=$1
 EXP="EUR-11"
 
-YR="2000-2004"
+YR="1970-1979"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/obs"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -39,12 +39,12 @@ echo ${DIR_OUT}
 echo
 echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
 
-VAR_LIST="cc ciwc clwc crwc cswc q r u v"
+VAR_LIST="cc ciwc clwc q r u v"
 
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_2000-2009.nc ${VAR}_${DATASET}_mon_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${DATASET}_mon_${YR}.nc
     echo
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
