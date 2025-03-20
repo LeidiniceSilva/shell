@@ -1,0 +1,32 @@
+
+--------------- INIT POSTPROCESSING MODEL ----------------
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/rcm
+
+1. Select variable: tas
+
+2. Concatenate data
+
+3. Convert unit
+
+4. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+1. Select variable: clt
+
+2. Concatenate data
+
+3. Convert unit
+
+4. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+5. Delete files
+
+--------------- THE END POSTPROCESSING MODEL ----------------

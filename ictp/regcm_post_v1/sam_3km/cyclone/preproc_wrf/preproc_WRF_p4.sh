@@ -25,10 +25,11 @@ CDO(){
 EXP="SAM-3km"
 MODEL="WRF"
 DT="2018-2021"
-VAR_LIST="CAPE CIN PSL U10 V10 PREC_ACC_NC" 
+VAR_LIST="PREC_ACC_NC CIN_MU PSL U10 V10" 
+#VAR_LIST="CAPE CIN_MU PSL U10 V10 PREC_ACC_NC" 
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/WRF"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/wrf"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/WRF415"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 DIR="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/sam_3km/cyclone/preproc_wrf"
 

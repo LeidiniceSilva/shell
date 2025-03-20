@@ -1,0 +1,36 @@
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/obs
+
+------------------------------- INIT POSTPROCESSING ERA5 -------------------------------
+
+1. Select date
+
+2. Seasonal avg
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+
+1. Select date
+cdi  warning (cdfInqContents): Coordinates variable number can't be assigned!
+cdi  warning (cdfInqContents): Coordinates variable expver can't be assigned!
+
+2. Seasonal avg
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+
+1. Select date
+cdi  warning (cdfInqContents): Coordinates variable number can't be assigned!
+cdi  warning (cdfInqContents): Coordinates variable expver can't be assigned!
+
+2. Seasonal avg
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (949x461) grid
+
+Delete files
+
+------------------------------- THE END POSTPROCESSING ERA5 -------------------------------
