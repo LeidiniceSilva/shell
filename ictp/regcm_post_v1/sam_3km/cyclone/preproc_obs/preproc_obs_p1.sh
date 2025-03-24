@@ -23,14 +23,14 @@ CDO(){
 }
 
 EXP="SAM-3km"
-DATASET="CMORPH"
+DATASET=$1
 
 YR="2018-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/CMORPH"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/CMORPH"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/${DATASET}"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/${DATASET}"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -40,6 +40,8 @@ echo ${DIR_OUT}
 echo
 echo "--------------- INIT POSPROCESSING DATASET ----------------"
 
+if [ ${DATASET} == 'CMORPH' ]
+then
 echo 
 echo "Merge files"
 FILE_IN=$( eval ls ${DIR_IN}/${DATASET}/cmorph_CSAM-3_CMORPH_1hr_{${IYR}..${FYR}}.nc )
@@ -52,4 +54,20 @@ echo "Regrid output"
 ${BIN}/./regrid cmorph_${EXP}_${DATASET}_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
 ${BIN}/./regrid cmorph_${EXP}_${DATASET}_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
 
+else
+echo 
+echo "Merge files"
+FILE_IN=$( eval ls ${DIR_IN}/${DATASET}/precipitation_SAM_GPM_3B-HHR_{${IYR}..${FYR}}.nc )
+FILE_OUT=precipitation_${EXP}_${DATASET}_30min_${YR}.nc
+[[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
+CDO hourmean precipitation_${EXP}_${DATASET}_30min_${YR}.nc precipitation_${EXP}_${DATASET}_1hr_${YR}.nc
+CDO daysum precipitation_${EXP}_${DATASET}_1hr_${YR}.nc precipitation_${EXP}_${DATASET}_day_${YR}.nc
+
+echo 
+echo "Regrid output"
+${BIN}/./regrid precipitation_${EXP}_${DATASET}_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
+${BIN}/./regrid precipitation_${EXP}_${DATASET}_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
+fi
+
 }
+

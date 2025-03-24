@@ -23,12 +23,12 @@ CDO(){
 }
 
 EXP="SAM-3km"
-MODEL="WRF"
+MODEL="WRF415"
 DT="2018-2021"
-VAR_LIST="PREC_ACC_NC CIN_MU PSL U10 V10" 
+VAR_LIST="AFWA_CIN_MU PSL U10 V10" 
 #VAR_LIST="CAPE CIN_MU PSL U10 V10 PREC_ACC_NC" 
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/WRF"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/WRF415"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/WRF415"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 DIR="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/sam_3km/cyclone/preproc_wrf"
@@ -48,7 +48,7 @@ for VAR in ${VAR_LIST[@]}; do
 	    then
             CDO -setgrid,${DIR}/xlonlat.nc ${DIR_IN}/${VAR}/wrf2d_cape_saag_ml_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
 	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-	    elif [ ${VAR} == "CIN_MU" ] || [ ${VAR} == "PSL" ] || [ ${VAR} == "U10" ] || [ ${VAR} == "V10" ]
+	    elif [ ${VAR} == "AFWA_CIN_MU" ] || [ ${VAR} == "PSL" ] || [ ${VAR} == "U10" ] || [ ${VAR} == "V10" ]
 	    then
 	    ${BIN}/./regrid ${DIR_IN}/${VAR}/${YEAR}${MON}_${VAR}_SouthAmerica.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 	    else
@@ -63,7 +63,7 @@ for VAR in ${VAR_LIST[@]}; do
     CDO mergetime *_${VAR}_SouthAmerica_on-IMERG-grid_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
     CDO daysum ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_day_${DT}_lonlat.nc
     else
-    CDO mergetime ${VAR}_${EXP}_${MODEL}_*_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
+    CDO mergetime *_${VAR}_SouthAmerica_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
     CDO selhour,00,06,12,18 ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_6hr_${DT}_lonlat.nc
     fi 
 
