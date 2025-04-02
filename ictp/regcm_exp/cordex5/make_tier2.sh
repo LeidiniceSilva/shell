@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --account             ICT23_ESP_1
+#SBATCH --account             ICT25_ESP
 #SBATCH --job-name            CSAM-3_POST
 #SBATCH --mail-type           ALL
 #SBATCH --mail-user           mda_silv@ictp.it
@@ -61,7 +61,7 @@ do
   var=`basename $vars`
   mkdir -p $var
   cd $var
-  $pycordex/means.py ../../day/$var/*
+  $pycordex/means.py ../../day/$var/* mon
   cd ../
 done
 

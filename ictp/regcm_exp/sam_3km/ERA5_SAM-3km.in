@@ -81,7 +81,7 @@
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
  dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/input',  ! Output directory for terrain files
- inpter = '/leonardo_work/ICT24_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
+ inpter = '/leonardo_work/ICT25_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
                               ! when lsmoist option is True
@@ -133,7 +133,7 @@
  gdate2 = 2021123100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/input', ! Path for ICBC produced input files
- inpglob = '/leonardo_work/ICT24_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
+ inpglob = '/leonardo_work/ICT25_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
                              ! ICBC controlled by the perturbparam stanza
@@ -175,7 +175,7 @@
  &restartparam
  ifrest  = True,        ! If a restart
  mdate0  = 2018010100,  ! Global start (is globidate1)
- mdate1  = 2021050100,  ! Start date of this run
+ mdate1  = 2021120100,  ! Start date of this run
  mdate2  = 2021123100,  ! End date for this run 
  /
  
@@ -309,7 +309,7 @@
  islab_ocean =      0,  ! Activate the SLAB ocean model
  itweak =           0,  ! Enable tweak scenario
  iclimaaer =        3,  ! x Aerosol
- radclimpath = '/leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH', 
+ radclimpath = '/leonardo_work/ICT25_ESP/RCMDATA/MERRA2/OPPMONTH', 
  /
 
  &microparam
