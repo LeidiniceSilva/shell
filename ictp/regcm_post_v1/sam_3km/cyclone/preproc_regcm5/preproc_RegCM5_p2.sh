@@ -30,7 +30,7 @@ VAR_LIST="psl uas vas"
 ANO_I=2018
 ANO_F=2021 
 
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/regcm"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/RegCM5"
     
 echo
 cd ${DIR_OUT}

@@ -23,6 +23,8 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 PYCORDEX="/leonardo/home/userexternal/ggiulian/pycordexer"
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/regcm"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo ${DIR_IN}
 cd ${DIR_IN}
@@ -41,6 +43,16 @@ for YEAR in `seq -w ${YR0} ${YR1}`; do
     	python3 ${PYCORDEX}/pycordexer.py SAM-3km_ATM.${YEAR}${MON}0100.nc cape
 	
     done
+done
+
+# List of variables
+VAR_LIST="CAPE CIN"
+
+for VAR in ${VAR_LIST[@]}; do
+        
+    CDO mergetime /CORDEX/CMIP6/DD/NONE/ICTP/NONE/none/NN/RegCM5-0/v1-r1/6hr/${VAR}/${VAR}_NONE_NONE_none_NN_ICTP_RegCM5-0_v1-r1_6hr_*.nc ${DIR_OUT}/${VAR}_${EXP}_${MODEL}_6hr_${DT}.nc
+    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_6hr_${DT}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
+    
 done
 
 echo

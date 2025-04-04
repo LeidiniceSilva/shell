@@ -23,7 +23,7 @@
  h2opct = 50.,                 ! Surface min H2O percent to be considered water
  h2ohgt = .false.,             ! Allow water points to have hgt greater than 0
  dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc/', ! Output directory for terrain files
- inpter = '/leonardo_work/ICT24_ESP/RCMDATA/',                               ! Input directory for SURFACE dataset
+ inpter = '/leonardo_work/ICT25_ESP/RCMDATA/',                               ! Input directory for SURFACE dataset
  /
 
  &boundaryparam
@@ -39,17 +39,17 @@
  ssttyp = 'ERA5D',           ! Type of Sea Surface Temperature used
  dattyp = 'ERA5',            ! Type of global analysis datasets used
  gdate1 = 1970010100,        ! Start date for ICBC data generation
- gdate2 = 1974010100,        ! End data for ICBC data generation
+ gdate2 = 1976010100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc/', ! Path for ICBC produced input files
- inpglob = '/leonardo_work/ICT24_ESP/RCMDATA/',                               ! Path for ICBC global input datasets.
+ inpglob = '/leonardo_work/ICT25_ESP/RCMDATA/',                               ! Path for ICBC global input datasets.
  /
 
  &restartparam
- ifrest  = True,       ! If a restart
+ ifrest  = False,      ! If a restart
  mdate0  = 1970010100, ! Global start (is globidate1)
- mdate1  = 1972120100, ! Start date of this run
- mdate2  = 1974010100, ! End date for this run
+ mdate1  = 1970010100, ! Start date of this run
+ mdate2  = 1976010100, ! End date for this run
  /
 
  &timeparam
@@ -92,7 +92,7 @@
  iclimao3 =          1, ! Use O3 climatic dataset from SPARC CMIP5
  isolconst =         0, ! Use a constant 1367 W/m^2 instead of the prescribed
  iclimaaer =         2, ! Use AEROSOL climatic dataset from AERGLOB for non
- radclimpath = '/leonardo_work/ICT24_ESP/RCMDATA/MERRA2/OPPMONTH',
+ radclimpath = '/leonardo_work/ICT25_ESP/RCMDATA/MERRA2/OPPMONTH',
  /
 
  &cldparam

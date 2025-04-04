@@ -28,7 +28,7 @@ MODEL="RegCM5"
 DT="2018-2021"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/regcm"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/RegCM5"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
     
 echo
@@ -43,7 +43,7 @@ for VAR in ${VAR_LIST[@]}; do
         for MON in `seq -w 01 12`; do
 	    
 	    echo
-	    echo "1. Select variable: ${VAR}"
+	    echo "1. Select variable"
 	    CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${MODEL}_1hr_${YEAR}${MON}0100.nc
 
 	    echo

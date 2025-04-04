@@ -2,7 +2,7 @@
 
 #SBATCH -A ICT25_ESP
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 1
+#SBATCH -N 4
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
 #SBATCH -J Postproc
@@ -25,11 +25,10 @@ CDO(){
 EXP="SAM-3km"
 MODEL="RegCM5"
 DT="2018-2021"
-VAR_LIST="pr psl uas vas"
-#VAR_LIST="cape cin psl uas vas"
+VAR_LIST="cape cin pr psl uas vas"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/dpath"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/regcm"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/RegCM5"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo

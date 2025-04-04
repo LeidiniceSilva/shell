@@ -12,11 +12,10 @@
 #SBATCH --mail-user=mda_silv@ictp.it
 
 {
-set -eo pipefail
-
 # load required modules
 # module purge
 source /leonardo/home/userexternal/ggiulian/modules
+set -eo pipefail
 
 NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/eur_11/leonardo/EUR-11_WDM7.in
 BINARIES=/leonardo/home/userexternal/mdasilva/RegCM/bin/
