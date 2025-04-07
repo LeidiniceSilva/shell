@@ -24,24 +24,25 @@ CDO(){
 
 EXP="SAM-3km"
 MODEL="RegCM5"
-DT="2018-2021"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/RegCM5"
-    
+WIND="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm"
+
 echo
-cd ${DIR_OUT}
-echo ${DIR_OUT}
+cd ${DIR_IN}
+echo ${DIR_IN}
 
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
-for YEAR in `seq -w 2018 2021`; do
-    for MON in `seq -w 01 12`; do
+for YEAR in `seq -w 2018 2018`; do
+    for MON in `seq -w 12 12`; do
 	    
         echo
 	echo "1. Rotate wind"
 	python3 ${WIND}/rotatewinds.py ${EXP}_SRF.${YEAR}${MON}0100.nc
+
+    done
 done
     
 echo
