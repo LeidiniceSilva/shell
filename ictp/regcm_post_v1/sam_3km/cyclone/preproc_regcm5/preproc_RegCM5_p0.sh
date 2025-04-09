@@ -35,8 +35,8 @@ echo ${DIR_IN}
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
-for YEAR in `seq -w 2018 2018`; do
-    for MON in `seq -w 12 12`; do
+for YEAR in `seq -w 2021 2021`; do
+    for MON in `seq -w 11 12`; do
 	    
         echo
 	echo "1. Rotate wind"
