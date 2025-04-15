@@ -211,4 +211,7 @@ echo
 echo "Delete files"
 rm *_${YR}.nc
 
+echo 
+echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"
+
 }
