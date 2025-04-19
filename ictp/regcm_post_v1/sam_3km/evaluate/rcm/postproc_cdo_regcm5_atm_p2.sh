@@ -38,8 +38,9 @@ echo "1. Convert to sigma to pressure"
 for YEAR in `seq -w ${IYR} ${FYR}`; do
     for MON in `seq -w 01 12`; do
 
+	#python3 ${WIND}/rotatewinds.py ${EXP}_SRF.${YEAR}${MON}0100.nc
 	python3 ${WIND}/rotatewinds.py ${EXP}_ATM.${YEAR}${MON}0100_pressure.nc
-	    
+
     done
 done
     

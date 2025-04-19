@@ -25,8 +25,8 @@ CDO(){
 EXP="SAM-3km"
 MODEL="WRF415"
 DT="2018-2021"
-VAR_LIST="AFWA_CIN_MU PSL U10 V10" 
-#VAR_LIST="CAPE CIN_MU PSL U10 V10 PREC_ACC_NC" 
+VAR_LIST=" U10e V10e" 
+#VAR_LIST="CAPE CIN_MU PSL U10 V10  U10e V10e PREC_ACC_NC" 
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/WRF415"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/WRF415"
@@ -48,11 +48,12 @@ for VAR in ${VAR_LIST[@]}; do
 	    then
             CDO -setgrid,${DIR}/xlonlat.nc ${DIR_IN}/${VAR}/wrf2d_cape_saag_ml_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
 	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-	    elif [ ${VAR} == "AFWA_CIN_MU" ] || [ ${VAR} == "PSL" ] || [ ${VAR} == "U10" ] || [ ${VAR} == "V10" ]
+	    elif [ ${VAR} == "U10e" ] || [ ${VAR} == "V10e" ] || [ ${VAR} == "U10" ] || [ ${VAR} == "V10" ] || [ ${VAR} == "PREC_ACC_NC" ]
 	    then
-	    ${BIN}/./regrid ${DIR_IN}/${VAR}/${YEAR}${MON}_${VAR}_SouthAmerica.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+            CDO -setgrid,${DIR}/xlonlat.nc ${DIR_IN}/WRF2d/wrf2d_ml_saag_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 	    else
-	    ${BIN}/./regrid ${DIR_IN}/${VAR}/${YEAR}${MON}_${VAR}_SouthAmerica_on-IMERG-grid.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
+	    ${BIN}/./regrid ${DIR_IN}/${VAR}/${YEAR}${MON}_${VAR}_SouthAmerica.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 	    fi
 
         done
@@ -60,10 +61,14 @@ for VAR in ${VAR_LIST[@]}; do
 
     if [ ${VAR} == "PREC_ACC_NC" ]
     then
-    CDO mergetime *_${VAR}_SouthAmerica_on-IMERG-grid_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
+    CDO mergetime ${VAR}_${EXP}_${MODEL}_*.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
     CDO daysum ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_day_${DT}_lonlat.nc
-    else
+    elif [ ${VAR} == "PSL" ]
+    then
     CDO mergetime *_${VAR}_SouthAmerica_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
+    CDO selhour,00,06,12,18 ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_6hr_${DT}_lonlat.nc
+    else
+    CDO mergetime ${VAR}_${EXP}_${MODEL}_*.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
     CDO selhour,00,06,12,18 ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_6hr_${DT}_lonlat.nc
     fi 
 
