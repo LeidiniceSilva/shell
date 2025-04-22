@@ -39,11 +39,11 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 for VAR in ${VAR_LIST[@]}; do
-    for YEAR in `seq -w 2018 2021`; do
-        for MON in `seq -w 01 12`; do
+    #for YEAR in `seq -w 2018 2021`; do
+        #for MON in `seq -w 01 12`; do
 	    #CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc	    
-        done
-    done
+        #done
+    #done
 
     if [ ${VAR} == "pr" ]
     then

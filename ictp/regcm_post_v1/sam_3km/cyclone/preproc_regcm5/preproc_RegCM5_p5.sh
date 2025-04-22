@@ -12,7 +12,7 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Aug 23, 2024'
-#__description__ = 'Create CAPE and CIN variables using PyCordex code'
+#__description__ = 'Create CAPE and CIN variables using Pycordex code'
 
 {
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
@@ -37,6 +37,9 @@ YR1=2021
 MN0=01
 MN1=12
 
+# List of variables
+VAR_LIST="CAPE CIN"
+
 for YEAR in `seq -w ${YR0} ${YR1}`; do
     for MON in `seq -w ${MN0} ${MN1}`; do
     
@@ -44,9 +47,6 @@ for YEAR in `seq -w ${YR0} ${YR1}`; do
 	
     done
 done
-
-# List of variables
-VAR_LIST="CAPE CIN"
 
 for VAR in ${VAR_LIST[@]}; do
         

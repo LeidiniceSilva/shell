@@ -28,7 +28,8 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-3km"
-VAR_LIST="pr tas cll clm clh clt rsnl"
+VAR_LIST="evspsblpot"
+#VAR_LIST="pr tas cll clm clh clt evspsblpot rsnl"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm"
@@ -104,8 +105,8 @@ done
 
 echo 
 echo "Delete files"
-#rm *_${EXP}_*0100.nc
-#rm *_${YR}.nc
+rm *_${EXP}_*0100.nc
+rm *_${YR}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
