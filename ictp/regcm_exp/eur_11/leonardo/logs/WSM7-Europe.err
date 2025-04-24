@@ -1,0 +1,69 @@
+ WARNING:  snow balance error 
+  CLM step  =                    691
+  indexc    =       177984
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.378229512305237E-002
+ WARNING:  snow balance error 
+  CLM step  =                    721
+  indexc    =       176841
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.348275470185248E-002
+ WARNING:  snow balance error 
+  CLM step  =                    766
+  indexc    =       175646
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.264870848652030E-002
+ WARNING:  snow balance error 
+  CLM step  =                    977
+  indexc    =       169231
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.477762053377131E-002
+ WARNING:  snow balance error 
+  CLM step  =                    987
+  indexc    =       175525
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.709022908951685E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1000
+  indexc    =       169246
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.351061296756454E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1012
+  indexc    =       167883
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.531654034729310E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1026
+  indexc    =       167922
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.139136208121990E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1369
+  indexc    =       179039
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.510454032529380E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1472
+  indexc    =       173232
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.099980768695350E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1473
+  indexc    =       173238
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.118953142562505E-002
+slurmstepd: error: *** STEP 15082157.0 ON lrdn3817 CANCELLED AT 2025-04-23T23:39:06 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+slurmstepd: error: *** JOB 15082157 ON lrdn3817 CANCELLED AT 2025-04-23T23:39:06 DUE TO TIME LIMIT ***

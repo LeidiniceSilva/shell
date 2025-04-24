@@ -22,13 +22,13 @@ CDO(){
 
 EXP="EUR-11"
 
-YR="1970-1973"
+YR="1970-1970"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 VAR_LIST="pr"
-FOLDER_LIST="NoTo-Europe_cordex5 NoTo-Europe WSM5-Europe WSM7-Europe WDM7-Europe"
+FOLDER_LIST="NoTo-Europe_cordex5 NoTo-Europe WDM7-Europe WSM7-Europe WSM5-Europe"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -49,7 +49,7 @@ for FOLDER in ${FOLDER_LIST[@]}; do
         echo "1. Select variable: ${VAR}"
         for YEAR in `seq -w ${IYR} ${FYR}`; do
             for MON in `seq -w 01 12`; do
-                CDO selname,${VAR} ${DIR_IN}/${EXP}_SHF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
+                CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
             done
         done
     

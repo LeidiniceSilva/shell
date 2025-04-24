@@ -23,7 +23,7 @@ CDO(){
 DATASET=$1
 EXP="EUR-11"
 
-YR="1970-1973"
+YR="1970-1970"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"

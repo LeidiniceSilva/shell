@@ -31,8 +31,7 @@ VAR_LIST="PREC_ACC_NC"
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/WRF415"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/WRF415"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
-DIR="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/sam_3km/cyclone/preproc_wrf"
-
+DIR="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/sam_3km/cyclone/preproc_wrf415"
 echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
@@ -41,30 +40,30 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 for VAR in ${VAR_LIST[@]}; do
-    for YEAR in `seq -w 2018 2021`; do
-        for MON in `seq -w 01 12`; do
+    #for YEAR in `seq -w 2018 2021`; do
+        #for MON in `seq -w 01 12`; do
 
-	    if [ ${VAR} == "AFWA_CAPE_MU" ] || [ ${VAR} == "PREC_ACC_NC" ]
-	    then
-            CDO -setgrid,${DIR}/xlonlat.nc ${DIR_IN}/${VAR}/${VAR}_WRF415_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
-	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-	    else
-	    ${BIN}/./regrid ${DIR_IN}/${VAR}/${YEAR}${MON}_${VAR}_SouthAmerica.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-	    fi
+	    #if [ ${VAR} == "AFWA_CAPE_MU" ] || [ ${VAR} == "PREC_ACC_NC" ]
+	    #then
+            #CDO -setgrid,${DIR}/xlonlat.nc ${DIR_IN}/${VAR}/${VAR}_WRF415_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    #${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+	    #else
+	    #${BIN}/./regrid ${DIR_IN}/${VAR}/${YEAR}${MON}_${VAR}_SouthAmerica.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+	    #fi
 
-        done
-    done
+        #done
+    #done
 
     if [ ${VAR} == "PREC_ACC_NC" ]
     then
-    CDO mergetime ${VAR}_${EXP}_${MODEL}_*.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
+    CDO mergetime ${VAR}_${EXP}_${MODEL}_*_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
     CDO daysum ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_day_${DT}_lonlat.nc
     elif [ ${VAR} == "AFWA_CAPE_MU" ]
     then
-    CDO mergetime ${VAR}_${EXP}_${MODEL}_*.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
+    CDO mergetime ${VAR}_${EXP}_${MODEL}_*_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
     CDO selhour,00,06,12,18 ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_6hr_${DT}_lonlat.nc
     else
-    CDO mergetime *_${VAR}_SouthAmerica.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
+    CDO mergetime *_${VAR}_SouthAmerica_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
     CDO selhour,00,06,12,18 ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_6hr_${DT}_lonlat.nc
     fi 
 

@@ -1,0 +1,33 @@
+ WARNING:  snow balance error 
+  CLM step  =                    714
+  indexc    =       176841
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.341523832519082E-002
+ WARNING:  snow balance error 
+  CLM step  =                    937
+  indexc    =       169231
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.261654002103341E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1468
+  indexc    =       173226
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.013339061448788E-002
+ WARNING:  snow balance error 
+  CLM step  =                   1470
+  indexc    =       173232
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   2.091652184780785E-002
+ WARNING:  snow balance error 
+  CLM step  =                   3030
+  indexc    =       171969
+  ctype     =           65
+  ltype     =            6
+  errh2osno =   1.120871570818604E-002
+slurmstepd: error: *** JOB 15082151 ON lrdn4513 CANCELLED AT 2025-04-23T17:05:51 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+slurmstepd: error: *** STEP 15082151.0 ON lrdn4513 CANCELLED AT 2025-04-23T17:05:51 DUE TO TIME LIMIT ***
