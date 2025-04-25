@@ -22,13 +22,13 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2018-2021"
+YR="2021-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-3km"
-VAR_LIST="hus ua va"
+VAR_LIST="va"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm"
@@ -46,7 +46,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Select variable: ${VAR}"
     for YEAR in `seq -w ${IYR} ${FYR}`; do
-        for MON in `seq -w 01 12`; do
+        for MON in `seq -w 05 12`; do
             if [ ${VAR} = 'cl'  ]
             then
             CDO selname,${VAR} ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc

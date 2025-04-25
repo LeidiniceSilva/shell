@@ -40,11 +40,11 @@ echo "--------------- INIT POSPROCESSING DATASET ----------------"
 
 for VAR in ${VAR_LIST[@]}; do
 
-    #echo
-    #echo "Merge files"
-    #FILE_IN=$( eval ls ${VAR}_${DATASET}_1hr_{2018..2021}.nc )
-    #FILE_OUT=${VAR}_${DATASET}_1hr_${YR}.nc
-    #[[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
+    echo
+    echo "Merge files"
+    FILE_IN=$( eval ls ${VAR}_${DATASET}_1hr_{2018..2021}.nc )
+    FILE_OUT=${VAR}_${DATASET}_1hr_${YR}.nc
+    [[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
 
     echo
     echo "Regrid files"

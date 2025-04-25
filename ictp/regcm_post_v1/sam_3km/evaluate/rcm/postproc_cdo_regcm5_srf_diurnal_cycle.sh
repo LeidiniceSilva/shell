@@ -72,6 +72,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Regrid output"
     ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_diurnal_cycle_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
     echo
     echo "Delete files"
