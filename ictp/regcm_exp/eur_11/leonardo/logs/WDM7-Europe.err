@@ -4,3 +4,6 @@
   ctype     =           65
   ltype     =            6
   errh2osno =   1.388475558449907E-002
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+slurmstepd: error: *** JOB 15207461 ON lrdn4020 CANCELLED AT 2025-04-26T22:42:39 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 15207461.0 ON lrdn4020 CANCELLED AT 2025-04-26T22:42:39 DUE TO TIME LIMIT ***
