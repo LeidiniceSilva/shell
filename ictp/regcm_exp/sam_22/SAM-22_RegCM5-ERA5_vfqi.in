@@ -21,7 +21,7 @@
  domname  = 'SAM-22',         ! Name of the domain/experiment.
  h2opct = 50.,                ! Surface min H2O percent to be considered water
  h2ohgt = .false.,            ! Allow water points to have hgt greater than 0
- dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-12/icbc',
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-22/icbc',
  inpter = '/leonardo_work/ICT25_ESP/RCMDATA',
  /
 
@@ -40,7 +40,7 @@
  gdate1 = 1970010100,        ! Start date for ICBC data generation
  gdate2 = 1976010100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-12/icbc',
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-22/icbc',
  inpglob = '/leonardo_work/ICT25_ESP/RCMDATA',
  /
 
@@ -66,7 +66,7 @@
  ifshf   = .true. ,           ! Output SHF (pr hourly)
  ifsrf   = .true. ,           ! Output SRF ?
  srffrq  =     3.,            ! Frequency in hours to write to SRF
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-12/vfqi',        ! Path where all output will be placed
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-22/vfqi',        ! Path where all output will be placed
  lsync   = .true.,            ! If sync of output files at every timestep is
  uvrotate = .false.,          ! Rotate projected wind to S-N, W-E direction
  icosp = 1,                   ! Enable COSP needed fields in output in the ATM
