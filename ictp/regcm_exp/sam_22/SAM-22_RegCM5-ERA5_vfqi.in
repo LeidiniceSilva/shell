@@ -21,8 +21,8 @@
  domname  = 'SAM-22',         ! Name of the domain/experiment.
  h2opct = 50.,                ! Surface min H2O percent to be considered water
  h2ohgt = .false.,            ! Allow water points to have hgt greater than 0
- dirter = '/home/mda_silv/scratch/test1/input',
- inpter = '/home/esp-shared-b/RegCM_Data',
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-12/icbc',
+ inpter = '/leonardo_work/ICT25_ESP/RCMDATA',
  /
 
  &boundaryparam
@@ -37,18 +37,18 @@
  ibdyfrq =     6,            ! boundary condition interval (hours)
  ssttyp = 'ERA5D',           ! Type of Sea Surface Temperature used
  dattyp = 'ERA5',            ! Type of global analysis datasets used
- gdate1 = 2000010100,        ! Start date for ICBC data generation
- gdate2 = 2001010100,        ! End data for ICBC data generation
+ gdate1 = 1970010100,        ! Start date for ICBC data generation
+ gdate2 = 1976010100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/home/mda_silv/scratch/test1/input',
- inpglob = '/home/esp-shared-b/RegCM_Data',
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-12/icbc',
+ inpglob = '/leonardo_work/ICT25_ESP/RCMDATA',
  /
 
  &restartparam
- ifrest  = .true.,  ! If a restart
- mdate0  = 2000010100, ! Global start (is globidate1) 197001-197501 run on A1
- mdate1  = 2000110100, ! Start date of this run
- mdate2  = 2001010100, ! End date for this run
+ ifrest  = .false.,    ! If a restart
+ mdate0  = 1970010100, ! Global start (is globidate1) 197001-197501 run on A1
+ mdate1  = 1970010100, ! Start date of this run
+ mdate2  = 1976010100, ! End date for this run
  /
 
  &timeparam
@@ -66,7 +66,7 @@
  ifshf   = .true. ,           ! Output SHF (pr hourly)
  ifsrf   = .true. ,           ! Output SRF ?
  srffrq  =     3.,            ! Frequency in hours to write to SRF
- dirout  = '/home/mda_silv/scratch/test1/output',        ! Path where all output will be placed
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-12/vfqi',        ! Path where all output will be placed
  lsync   = .true.,            ! If sync of output files at every timestep is
  uvrotate = .false.,          ! Rotate projected wind to S-N, W-E direction
  icosp = 1,                   ! Enable COSP needed fields in output in the ATM
@@ -78,8 +78,8 @@
 
  iboudy  =          5,  ! Lateral Boundary conditions scheme
  ibltyp  =          1,  ! Boundary layer scheme
- icup_lnd =         5, ! Cumulus convection scheme Over Land
- icup_ocn =         5, ! Cumulus convection scheme Over Ocean
+ icup_lnd =         5,  ! Cumulus convection scheme Over Land
+ icup_ocn =         5,  ! Cumulus convection scheme Over Ocean
  ipptls  =          2,  ! Moisture scheme
  iocnflx =          2,  ! Ocean Flux scheme
    iocnrough =      1,  ! Zeng Ocean model roughness formula to use.
@@ -93,21 +93,16 @@
  iclimao3 =          1, ! Use O3 climatic dataset from SPARC CMIP5
  isolconst =         0, ! Use a constant 1367 W/m^2 instead of the prescribed
  iclimaaer =         2, ! Use AEROSOL climatic dataset from AERGLOB for non
- radclimpath = '/home/esp-shared-b/RegCM_Data/MERRA2/OPPMONTH',
+ radclimpath = '/leonardo_work/ICT25_ESP/RCMDATA/MERRA2/OPPMONTH',
  /
 
  &cldparam
  ncld      = 3,       ! of bottom model levels with no clouds
-
- cftotmax = 1.0,
+ cftotmax  = 1.0,
  clfrcvmax = 1.0,
  /
 
  &subexparam
- /
-
- &microparam
- vfqi = 0.015,        ! Ice fall speed (default is 0.15 m/s)
  /
 
  &tiedtkeparam
@@ -120,6 +115,11 @@
  fpftcon = 'pft-physiology.c130503.nc',
  fsnowoptics = 'snicar_optics_5bnd_c090915.nc',
  fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc',
+ urban_hac = 'ON_WASTEHEAT',
+ hist_nhtfrq = 0, 24,
+ hist_fincl2(1:6) = 'EFLX_LH_TOT_U','FGR_U','FIRA_U','FSA_U','FSH_U','FSM_U',
+ hist_fincl2(7:11) = 'QRUNOFF_U','RH2M_U','SoilAlpha_U','TG_U','TREFMNAV_U',
+ hist_fincl2(12:13) = 'TREFMXAV_U','TSA_U'
  /
 
  &clm_soilhydrology_inparm

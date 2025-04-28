@@ -1,9 +1,0 @@
-
---------------- INIT PLOT ----------------
-/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper/plot_maps_cape_cin_v2.py:127: RuntimeWarning: Mean of empty slice
-  mean_i = np.nanmean(var_i, axis=0)
-/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper/plot_maps_cape_cin_v2.py:128: RuntimeWarning: Mean of empty slice
-  mean_ii = np.nanmean(var_ii, axis=0)
-/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper/plot_maps_cape_cin_v2.py:129: RuntimeWarning: Mean of empty slice
-  mean_iii = np.nanmean(var_iii, axis=0)
-slurmstepd: error: *** JOB 15258244 ON lrdn4701 CANCELLED AT 2025-04-27T15:55:58 ***
