@@ -17,7 +17,7 @@
 source /leonardo/home/userexternal/ggiulian/modules
 set -eo pipefail
 
-NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_22/SAM-22_RegCM5-ERA5_ctrl.in
+NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_22/SAM-22_RegCM5-ERA5_vfqi.in
 BINARIES=/leonardo/home/userexternal/mdasilva/RegCM/bin/
 EXTENSION=CLM45
 
