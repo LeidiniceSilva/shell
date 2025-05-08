@@ -21,14 +21,15 @@ CDO(){
 }
 
 DATASET=$1
-EXP="EUR-11"
+EXP="SAM-22"
 
-YR="1970-1970"
+YR="1970-1971"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
+SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/obs"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/${EXP}/postproc/obs"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -50,51 +51,26 @@ for VAR in ${VAR_LIST[@]}; do
     CDO monmean ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${DATASET}_mon_${YR}.nc
     echo
     echo "3. Regrid variable"
-    ${BIN}/./regrid ${VAR}_${DATASET}_day_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    ${BIN}/./regrid ${VAR}_${DATASET}_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${DATASET}_day_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_day_${YR}_lonlat.nc
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${DATASET}_mon_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_mon_${YR}_lonlat.nc
+    ${BIN}/./regrid ${VAR}_${DATASET}_day_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
+    ${BIN}/./regrid ${VAR}_${DATASET}_mon_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
 done
 
 elif [ ${DATASET} == 'CRU' ]
 then
-VAR_LIST="pre tmp"
+VAR_LIST="pre tmp cld"
 for VAR in ${VAR_LIST[@]}; do    
     echo
     echo "1. Select date"
     if [ ${VAR} == 'pre' ]
     then
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_mon_${YR}.nc
-    echo
-    echo "2. Monthly avg"
     CDO -b f32 divc,30.5 ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_FPS_${DATASET}_mon_${YR}_lonlat.nc 
     else
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    echo
-    echo "3. Regrid variable"
-    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_FPS_${DATASET}_mon_${YR}_lonlat.nc
     fi
-done
-
-elif [ ${DATASET} == 'EOBS' ]
-then
-VAR_LIST="rr"
-for VAR in ${VAR_LIST[@]}; do    
     echo
-    echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/rr.nc ${VAR}_${DATASET}_day_${YR}.nc
-    echo
-    echo "2. Monthly avg"
-    CDO monmean ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${DATASET}_mon_${YR}.nc
-    echo
-    echo "3. Regrid variable"
-    ${BIN}/./regrid ${VAR}_${DATASET}_day_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    ${BIN}/./regrid ${VAR}_${DATASET}_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${DATASET}_day_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_day_${YR}_lonlat.nc
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${DATASET}_mon_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_mon_${YR}_lonlat.nc
+    echo "2. Regrid variable"
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
 done
 
 elif [ ${DATASET} == 'ERA5' ]
@@ -111,12 +87,9 @@ for VAR in ${VAR_LIST[@]}; do
     CDO monmean ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${DATASET}_mon_${YR}.nc
     echo
     echo "3. Regrid variable"
-    ${BIN}/./regrid ${VAR}_${DATASET}_1hr_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    ${BIN}/./regrid ${VAR}_${DATASET}_day_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    ${BIN}/./regrid ${VAR}_${DATASET}_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${DATASET}_1hr_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_1hr_${YR}_lonlat.nc
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${DATASET}_day_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_day_${YR}_lonlat.nc
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${DATASET}_mon_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_mon_${YR}_lonlat.nc
+    ${BIN}/./regrid ${VAR}_${DATASET}_1hr_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
+    ${BIN}/./regrid ${VAR}_${DATASET}_day_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
+    ${BIN}/./regrid ${VAR}_${DATASET}_mon_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
 done
   
 else
@@ -130,10 +103,8 @@ for VAR in ${VAR_LIST[@]}; do
     CDO monmean ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${DATASET}_mon_${YR}.nc
     echo
     echo "3. Regrid variable"
-    ${BIN}/./regrid ${VAR}_${DATASET}_day_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    ${BIN}/./regrid ${VAR}_${DATASET}_mon_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${DATASET}_day_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_day_${YR}_lonlat.nc
-    CDO sellonlatbox,1,16,40,50 ${VAR}_${DATASET}_mon_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_mon_${YR}_lonlat.nc
+    ${BIN}/./regrid ${VAR}_${DATASET}_day_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
+    ${BIN}/./regrid ${VAR}_${DATASET}_mon_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
 done
 fi
 

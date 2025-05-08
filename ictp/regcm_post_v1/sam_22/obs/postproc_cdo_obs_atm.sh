@@ -21,15 +21,15 @@ CDO(){
 }
 
 DATASET=$1
-EXP="EUR-11"
+EXP="SAM-22"
 
-YR="1970-1979"
+YR="1970-1971"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/${EXP}/postproc/obs"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -49,8 +49,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
         CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-        ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-	CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_${SEASON}_${YR}_lonlat.nc
+        ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
     done
 done
 

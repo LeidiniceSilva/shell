@@ -50,7 +50,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
         CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 
+	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil 
     done
 done
 
@@ -71,22 +71,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
         CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-    done
-done
-
-elif [ ${DATASET} == 'EOBS' ]
-then
-VAR_LIST="rr"
-for VAR in ${VAR_LIST[@]}; do
-    echo
-    echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/rr.nc ${VAR}_${DATASET}_day_${YR}.nc
-    echo
-    echo "2. Seasonal avg"
-    for SEASON in ${SEASON_LIST[@]}; do
-        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
     done
 done
 
@@ -114,7 +99,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
         CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-        ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+        ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
     done
 done
   
@@ -128,7 +113,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
         CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
     done
 done
 fi

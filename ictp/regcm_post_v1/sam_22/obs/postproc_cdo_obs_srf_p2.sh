@@ -21,14 +21,14 @@ CDO(){
 }
 
 DATASET=$1
-EXP="EUR-11"
+EXP="SAM-22"
 
-YR="1970-1973"
+YR="1970-1971"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/obs"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/${EXP}/postproc/obs"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -54,12 +54,11 @@ done
 
 echo
 echo "3. Diurnal cycle"
-CDO mergetime ${VAR}_${EXP}_${DATASET}_*_${YR}_timmean.nc ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc
+CDO mergetime ${VAR}_${EXP}_${DATASET}_*hr_${YR}_timmean.nc ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc
 
 echo
 echo "4. Regrid variable"
-${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${DATASET}_diurnal_cycle_${YR}_lonlat.nc
+${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
 
 echo
 echo "Delete files"
