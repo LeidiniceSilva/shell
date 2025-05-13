@@ -5,9 +5,9 @@
 #SBATCH -N 16 
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -o logs/NoTo-CTRL.out
-#SBATCH -e logs/NoTo-CTRL.err
-#SBATCH -J CTRL
+#SBATCH -o logs/NoTo-VFQR.out
+#SBATCH -e logs/NoTo-VFQR.err
+#SBATCH -J VFQR
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -17,7 +17,7 @@
 source /leonardo/home/userexternal/ggiulian/modules
 set -eo pipefail
 
-NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_22/SAM-22_RegCM5-ERA5_ctrl.in
+NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_22/SAM-22_RegCM5-ERA5_vfqr.in
 BINARIES=/leonardo/home/userexternal/mdasilva/RegCM/bin/
 EXTENSION=CLM45
 
