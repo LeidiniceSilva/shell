@@ -23,7 +23,7 @@ YR="1970-1971"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-FOLDER_LIST="ctrl vfqi"
+FOLDER_LIST="vfqr"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"

@@ -28,7 +28,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-FOLDER_LIST="ctrl vfqi"
+FOLDER_LIST="vfqr"
 VAR_LIST="cl cli clr cls clw rh hus ua va"
 
 echo

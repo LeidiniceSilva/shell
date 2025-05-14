@@ -1,0 +1,31 @@
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
+
+ : this run start at    : 2025-05-14 18:08:19+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : lrdn4793.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3
+ km
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2019-01-01 00:00:00 UTC        
+ GLOBIDATE2 :  2020-01-01 00:00:00 UTC        
+ NSTEPS     :         1461
+ Computing weights, R =      38.96331406 .......... Done.
+ Computing weights, R =      38.96331406 .......... Done.
+ Computing weights, R =      38.96331406 .......... Done.
+      131072 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2019/tatm_2019_01.nc
+  2.279041585933447E-003   245.318524480672     
+      196608 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2019/geop_2019_01.nc
+   7.62665005131003        244249.932768724     
+      262144 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2019/qhum_2019_01.nc
+  3.929557681790616E-007  1.280590241574995E-002
+      327680 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2019/uwnd_2019_01.nc
+  4.392734879352888E-003   19.3324822824627     
+      393216 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2019/vwnd_2019_01.nc
+  3.305025816549487E-003   12.9578201433417     
+ READ IN fields at DATE: 2019-01-01 00:00:00 UTC        
+ READ IN fields at DATE: 2019-01-01 06:00:00 UTC        
+ READ IN fields at DATE: 2019-01-01 12:00:00 UTC        
