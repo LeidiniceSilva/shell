@@ -1,0 +1,57 @@
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
+
+ : this run start at    : 2025-05-15 17:05:27+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : lrdn4511.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3
+ km
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2021-01-01 00:00:00 UTC        
+ GLOBIDATE2 :  2022-01-01 00:00:00 UTC        
+ NSTEPS     :         1461
+ Computing weights, R =      38.96331406 .......... Done.
+ Computing weights, R =      38.96331406 .......... Done.
+ Computing weights, R =      38.96331406 .......... Done.
+      131072 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2021/tatm_2021_01.nc
+  2.338013535403919E-003   258.627355773506     
+      196608 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2021/geop_2021_01.nc
+   7.63647495584286        244024.875121897     
+      262144 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2021/qhum_2021_01.nc
+  4.010931599598920E-007  1.256236354011289E-002
+      327680 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2021/uwnd_2021_01.nc
+  5.063148787141951E-003  -5.48863844695216     
+      393216 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2021/vwnd_2021_01.nc
+  4.954445660964705E-003 -0.871007496267982     
+ READ IN fields at DATE: 2021-01-01 00:00:00 UTC        
+ READ IN fields at DATE: 2021-01-01 06:00:00 UTC        
+ READ IN fields at DATE: 2021-01-01 12:00:00 UTC        
+ READ IN fields at DATE: 2021-01-01 18:00:00 UTC        
+ READ IN fields at DATE: 2021-01-02 00:00:00 UTC        
+ READ IN fields at DATE: 2021-01-02 06:00:00 UTC        
+ READ IN fields at DATE: 2021-01-02 12:00:00 UTC        
+ READ IN fields at DATE: 2021-01-02 18:00:00 UTC        
+ READ IN fields at DATE: 2021-01-03 00:00:00 UTC        
+ READ IN fields at DATE: 2021-01-03 06:00:00 UTC        
+ READ IN fields at DATE: 2021-01-03 12:00:00 UTC        
+ READ IN fields at DATE: 2021-01-03 18:00:00 UTC        
+ READ IN fields at DATE: 2021-01-04 00:00:00 UTC        
+ READ IN fields at DATE: 2021-01-04 06:00:00 UTC        
+ READ IN fields at DATE: 2021-01-04 12:00:00 UTC        
+ READ IN fields at DATE: 2021-01-04 18:00:00 UTC        
+ READ IN fields at DATE: 2021-01-05 00:00:00 UTC        
+ READ IN fields at DATE: 2021-01-05 06:00:00 UTC        
+ READ IN fields at DATE: 2021-01-05 12:00:00 UTC        
+ READ IN fields at DATE: 2021-01-05 18:00:00 UTC        
+ READ IN fields at DATE: 2021-01-06 00:00:00 UTC        
+ READ IN fields at DATE: 2021-01-06 06:00:00 UTC        
+ READ IN fields at DATE: 2021-01-06 12:00:00 UTC        
+ READ IN fields at DATE: 2021-01-06 18:00:00 UTC        
+ READ IN fields at DATE: 2021-01-07 00:00:00 UTC        
+ READ IN fields at DATE: 2021-01-07 06:00:00 UTC        
+ READ IN fields at DATE: 2021-01-07 12:00:00 UTC        
+ READ IN fields at DATE: 2021-01-07 18:00:00 UTC        
+ READ IN fields at DATE: 2021-01-08 00:00:00 UTC        
