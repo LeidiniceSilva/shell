@@ -4,3 +4,21 @@
 --------------- INIT POSPROCESSING MODEL ----------------
 
 Select variable: pr
+
+Concatenate date: 2018-2021
+
+Convert unit
+
+Frequency and intensity by season
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
+
+Delete files
+
+--------------- THE END POSPROCESSING MODEL ----------------
