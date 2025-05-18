@@ -29,7 +29,7 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 VAR_LIST="pr tas clt"
-FOLDER_LIST="vfqr"
+FOLDER_LIST="rclcrit"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"

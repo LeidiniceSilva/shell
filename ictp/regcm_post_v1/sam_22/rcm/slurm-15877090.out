@@ -1,0 +1,24 @@
+
+--------------- INIT POSTPROCESSING MODEL ----------------
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-22/postproc/rcm
+
+1. Select variable: pr
+
+2. Concatenate data
+
+3. Convert unit
+
+4. Hourly mean
+
+5. Diurnal cycle
+
+6. Regrid output
+cdo    remapbil: Bilinear weights from curvilinear (292x334) to lonlat (406x348) grid
+cdo    remapbil: Bilinear weights from curvilinear (292x334) to lonlat (406x348) grid
+cdo    remapbil: Bilinear weights from curvilinear (292x334) to lonlat (406x348) grid
+cdo    remapbil: Bilinear weights from curvilinear (292x334) to lonlat (406x348) grid
+
+7. Delete files
+
+--------------- THE END POSTPROCESSING MODEL ----------------
