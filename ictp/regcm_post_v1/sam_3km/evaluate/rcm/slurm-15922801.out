@@ -1,0 +1,19 @@
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm
+
+--------------- INIT POSPROCESSING MODEL ----------------
+
+Select variable: mrsos
+
+Concatenate date: 2018-2021
+
+Convert unit
+
+Regrid output
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid, with source mask (637837)
+
+Seasonal avg
+
+Delete files
+
+--------------- THE END POSPROCESSING MODEL ----------------

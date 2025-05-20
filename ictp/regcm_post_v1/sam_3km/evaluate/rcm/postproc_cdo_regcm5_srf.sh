@@ -28,8 +28,7 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-3km"
-VAR_LIST="evspsblpot"
-#VAR_LIST="pr tas cll clm clh clt evspsblpot rsnl"
+VAR_LIST="pr tas cll clm clh clt evspsblpot mrsos rsnl sfcWindmax"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm"
@@ -48,7 +47,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo "Select variable: ${VAR}"
     for YEAR in `seq -w ${IYR} ${FYR}`; do
         for MON in `seq -w 01 12`; do
-            if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'tas'  ] 
+            if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'tas'  ] || [ ${VAR} = 'sfcWindmax'  ] 
             then
             CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
             elif [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh'  ]
