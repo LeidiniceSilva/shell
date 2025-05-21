@@ -28,7 +28,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 VAR="pr"
-FOLDER_LIST="rclcrit"
+FOLDER_LIST="restclm"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"

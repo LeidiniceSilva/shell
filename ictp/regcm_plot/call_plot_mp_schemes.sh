@@ -23,21 +23,21 @@ echo "--------------- INIT PLOT ----------------"
 DIR_IN="/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_22"
 cd ${DIR_IN}
 
-python3 plot_maps_bias_atm.py --var uv --level 200hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_RegCM5
-python3 plot_maps_bias_atm.py --var uv --level 500hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_RegCM5
-python3 plot_maps_bias_atm.py --var uv --level 850hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_RegCM5
+python3 plot_maps_clim_atm.py --var uv --level 200hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
+python3 plot_maps_clim_atm.py --var uv --level 500hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
+python3 plot_maps_clim_atm.py --var uv --level 850hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
 
-python3 plot_maps_bias_atm.py --var uv --level 200hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_land_RegCM5
-python3 plot_maps_bias_atm.py --var uv --level 500hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_land_RegCM5
-python3 plot_maps_bias_atm.py --var uv --level 850hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_land_RegCM5
+python3 plot_maps_clim_atm.py --var q --level 200hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
+python3 plot_maps_clim_atm.py --var q --level 500hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
+python3 plot_maps_clim_atm.py --var q --level 850hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
 
-python3 plot_maps_bias_atm.py --var q --level 200hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_RegCM5
-python3 plot_maps_bias_atm.py --var q --level 500hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_RegCM5
-python3 plot_maps_bias_atm.py --var q --level 850hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_RegCM5
+python3 plot_maps_bias_atm.py --var uv --level 200hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
+python3 plot_maps_bias_atm.py --var uv --level 500hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
+python3 plot_maps_bias_atm.py --var uv --level 850hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
 
-python3 plot_maps_bias_atm.py --var q --level 200hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_land_RegCM5
-python3 plot_maps_bias_atm.py --var q --level 500hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_land_RegCM5
-python3 plot_maps_bias_atm.py --var q --level 850hPa --exp_i ctrl_RegCM5 --exp_ii rclcrit_land_RegCM5
+python3 plot_maps_bias_atm.py --var q --level 200hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
+python3 plot_maps_bias_atm.py --var q --level 500hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
+python3 plot_maps_bias_atm.py --var q --level 850hPa --exp_i ctrl_RegCM5 --exp_ii restclm_RegCM5
 
 echo
 echo "--------------- THE END PLOT ----------------"
