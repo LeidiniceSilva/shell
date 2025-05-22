@@ -98,7 +98,8 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="tp t2m tcc lcc mcc hcc msnlwrf avg_pevr pev cc ciwc clwc u v q r"
+VAR_LIST="u10max v10max"
+#VAR_LIST="tp t2m tcc lcc mcc hcc msnlwrf pev cape cin swvl1 u u10max v v10max q r"
 
 for VAR in ${VAR_LIST[@]}; do
 
@@ -107,6 +108,9 @@ for VAR in ${VAR_LIST[@]}; do
     if [ ${VAR} == 'tp' ]
     then
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_2018-2021.nc ${VAR}_${DATASET}_1hr_${YR}.nc
+    elif [ ${VAR} == 'u10max' ] || [ ${VAR} == 'v10max' ]
+    then
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_day_2018-2021.nc ${VAR}_${DATASET}_day_${YR}.nc
     else
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2018-2021.nc ${VAR}_${DATASET}_${YR}.nc
     fi
@@ -121,6 +125,9 @@ for VAR in ${VAR_LIST[@]}; do
     elif [ ${VAR} == 't2m' ] 
     then
     CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    elif [ ${VAR} == 'u10max' ] || [ ${VAR} == 'v10max' ]
+    then
+    CDO monmean ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
     cp ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi 
@@ -132,6 +139,10 @@ for VAR in ${VAR_LIST[@]}; do
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil 
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil 
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil  
+    elif [ ${VAR} == 'u10max' ] || [ ${VAR} == 'v10max' ]
+    then
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
     else
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
     fi  

@@ -25,13 +25,14 @@ CDO(){
 EXP="SAM-3km"
 MODEL="WRF415"
 DT="2018-2021"
-VAR_LIST="PREC_ACC_NC" 
-#VAR_LIST="AFWA_CAPE_MU AFWA_CIN_MU PSL U10 V10 PREC_ACC_NC" 
+VAR_LIST="U10MAX V10MAX" 
+#VAR_LIST="AFWA_CAPE_MU AFWA_CIN_MU PSL U10 U10MAX V10 V10MAX PREC_ACC_NC" 
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/WRF415"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/WRF415"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 DIR="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/sam_3km/cyclone/preproc_wrf415"
+
 echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
@@ -40,28 +41,33 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 for VAR in ${VAR_LIST[@]}; do
-    #for YEAR in `seq -w 2018 2021`; do
-        #for MON in `seq -w 01 12`; do
+    for YEAR in `seq -w 2018 2021`; do
+        for MON in `seq -w 01 12`; do
 
-	    #if [ ${VAR} == "AFWA_CAPE_MU" ] || [ ${VAR} == "PREC_ACC_NC" ]
-	    #then
-            #CDO -setgrid,${DIR}/xlonlat.nc ${DIR_IN}/${VAR}/${VAR}_WRF415_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
-	    #${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-	    #else
-	    #${BIN}/./regrid ${DIR_IN}/${VAR}/${YEAR}${MON}_${VAR}_SouthAmerica.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
-	    #fi
+	    if [ ${VAR} == "AFWA_CAPE_MU" ] || [ ${VAR} == "PREC_ACC_NC" ]
+	    then
+            CDO -setgrid,${DIR}/xlonlat_csam.nc ${DIR_IN}/${VAR}/${VAR}_WRF415_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+            elif [ ${VAR} == "U10MAX" ] || [ ${VAR} == "V10MAX" ]
+            then
+            CDO settaxis,${YEAR}-${MON}-01,00:00:00,1day ${DIR_IN}/${VAR}/${VAR}_${YEAR}${MON}_SouthAmerica.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+            CDO setgrid,${DIR}/xlonlat_sam.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc ${VAR}_${EXP}_${MODEL}_day_${YEAR}${MON}.nc
+	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_day_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+	    else
+            cp ${DIR_IN}/${VAR}/${YEAR}${MON}_${VAR}_SouthAmerica.nc ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc
+	    ${BIN}/./regrid ${VAR}_${EXP}_${MODEL}_${YEAR}${MON}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+	    fi
 
-        #done
-    #done
+        done
+    done
 
     if [ ${VAR} == "PREC_ACC_NC" ]
     then
     CDO mergetime ${VAR}_${EXP}_${MODEL}_*_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
     CDO daysum ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_day_${DT}_lonlat.nc
-    elif [ ${VAR} == "AFWA_CAPE_MU" ]
+    elif [ ${VAR} == "U10MAX" ] || [ ${VAR} == "V10MAX" ]
     then
-    CDO mergetime ${VAR}_${EXP}_${MODEL}_*_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
-    CDO selhour,00,06,12,18 ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_6hr_${DT}_lonlat.nc
+    CDO mergetime ${VAR}_${EXP}_${MODEL}_day_*_lonlat.nc ${VAR}_${EXP}_${MODEL}_day_${DT}_lonlat.nc
     else
     CDO mergetime *_${VAR}_SouthAmerica_lonlat.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc
     CDO selhour,00,06,12,18 ${VAR}_${EXP}_${MODEL}_1hr_${DT}_lonlat.nc ${VAR}_${EXP}_${MODEL}_6hr_${DT}_lonlat.nc

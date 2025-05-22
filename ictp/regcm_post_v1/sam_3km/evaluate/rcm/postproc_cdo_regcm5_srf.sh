@@ -28,7 +28,8 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-3km"
-VAR_LIST="pr tas cll clm clh clt evspsblpot mrsos rsnl sfcWindmax"
+VAR_LIST="cape cin sfcWindmax"
+#VAR_LIST="pr tas cll clm clh clt cape cin evspsblpot mrsos rsnl sfcWindmax"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm"
