@@ -1,0 +1,6 @@
+
+--------------- INIT PLOT ----------------
+/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper/plot_graph_histogram_wind10m.py:19: DeprecationWarning: scipy.misc is deprecated and will be removed in 2.0.0
+  from scipy import signal, misc
+/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper/plot_graph_histogram_wind10m.py:173: RuntimeWarning: invalid value encountered in sqrt
+  uv10_regcm5 = np.sqrt(regcm5_uas**2 + regcm5_vas**2)

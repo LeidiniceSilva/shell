@@ -77,7 +77,8 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-VAR_LIST="tp t2m tcc"
+VAR_LIST="swvl1"
+#VAR_LIST="tp t2m tcc swvl1"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "1. Select date"
@@ -91,9 +92,12 @@ for VAR in ${VAR_LIST[@]}; do
     then
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${DATASET}_${YR}.nc
     CDO subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    else
+    elif [ ${VAR} == 't2m' ]
+    then
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${DATASET}_${YR}.nc
     CDO mulc,100 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    else
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi
     echo
     echo "2. Seasonal avg"

@@ -31,7 +31,7 @@ cd ${DIR_IN}
 #python3 plot_maps_cape_cin_v2.py
 #python3 plot_graph_pdf_precipitation_day.py
 #python3 plot_graph_pdf_precipitation_1hr.py
-python3 plot_graph_histogram_wind_speed.py 
+python3 plot_graph_histogram_wind10m.py 
 
 echo
 echo "--------------- THE END PLOT ----------------"
