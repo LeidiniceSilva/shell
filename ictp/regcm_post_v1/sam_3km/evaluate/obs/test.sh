@@ -31,16 +31,7 @@ echo ${DIR_OUT}
 echo
 echo "--------------- INIT POSPROCESSING DATASET ----------------"
 
-CDO mergetime swvl1_ERA5_1hr_2018.nc swvl1_ERA5_1hr_2019.nc swvl1_ERA5_1hr_2020.nc swvl1_ERA5_1hr_2021.nc swvl1_ERA5_1hr_2018-2021.nc
-CDO mergetime swvl2_ERA5_1hr_2018.nc swvl2_ERA5_1hr_2019.nc swvl2_ERA5_1hr_2020.nc swvl2_ERA5_1hr_2021.nc swvl2_ERA5_1hr_2018-2021.nc
-CDO mergetime swvl3_ERA5_1hr_2018.nc swvl3_ERA5_1hr_2019.nc swvl3_ERA5_1hr_2020.nc swvl3_ERA5_1hr_2021.nc swvl3_ERA5_1hr_2018-2021.nc
-CDO mergetime swvl4_ERA5_1hr_2018.nc swvl4_ERA5_1hr_2019.nc swvl4_ERA5_1hr_2020.nc swvl4_ERA5_1hr_2021.nc swvl4_ERA5_1hr_2018-2021.nc
-
-CDO mergetime u10max_ERA5_day_2018.nc u10max_ERA5_day_2019.nc u10max_ERA5_day_2020.nc u10max_ERA5_day_2021.nc u10m_ERA5_day_2018-2021.nc
-CDO mergetime v10max_ERA5_day_2018.nc v10max_ERA5_day_2019.nc v10max_ERA5_day_2020.nc v10max_ERA5_day_2021.nc v10m_ERA5_day_2018-2021.nc
-
-CDO chname,u10,u10max u10m_ERA5_day_2018-2021.nc u10max_ERA5_day_2018-2021.nc
-CDO chname,v10,v10max v10m_ERA5_day_2018-2021.nc v10max_ERA5_day_2018-2021.nc
+CDO mergetime fg10_ERA5_2018.nc fg10_ERA5_2019.nc fg10_ERA5_2020.nc fg10_ERA5_2021.nc fg10_ERA5_day_2018-2021.nc
 
 echo "--------------- THE END POSPROCESSING DATASET ----------------"
 
