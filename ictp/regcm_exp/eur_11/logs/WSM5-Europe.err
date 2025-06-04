@@ -1,9 +1,0 @@
- WARNING:  snow balance error 
-  CLM step  =                 143282
-  indexc    =       120610
-  ctype     =           65
-  ltype     =            6
-  errh2osno =   1.499952624075900E-002
-srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
-slurmstepd: error: *** STEP 15207459.0 ON lrdn3811 CANCELLED AT 2025-04-26T22:42:39 DUE TO TIME LIMIT ***
-slurmstepd: error: *** JOB 15207459 ON lrdn3811 CANCELLED AT 2025-04-26T22:42:39 DUE TO TIME LIMIT ***

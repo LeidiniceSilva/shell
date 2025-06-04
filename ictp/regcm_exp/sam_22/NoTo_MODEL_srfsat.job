@@ -5,8 +5,8 @@
 #SBATCH -N 12 
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -o logs/NoTo-srfsat.out
-#SBATCH -e logs/NoTo-srfsat.err
+#SBATCH -o logs/NoTo-DoSurfaceSat.out
+#SBATCH -e logs/NoTo-DoSurfaceSat.err
 #SBATCH -J DoSurfaceSat
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it

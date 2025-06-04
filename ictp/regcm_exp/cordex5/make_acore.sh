@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #SBATCH --account             ICT25_ESP
-#SBATCH --job-name            CSAM-3_POST
-#SBATCH --mail-type           ALL
+#SBATCH --job-name            PyCordex
+#SBATCH --mail-type           FAIL
 #SBATCH --mail-user           mda_silv@ictp.it
 #SBATCH --nodes               1
 #SBATCH --ntasks-per-node     64
@@ -21,7 +21,7 @@ ensemble=r0i0p0f0
 notes="None"
 output="."
 proc=20
-regcm_release=5.0.0
+regcm_release=5.0
 regcm_version_id=v1-r1
 srfvars=tas,pr,evspsbl,huss,hurs,ps,psl,sfcWind,uas,vas,clt,rsds,rlds
 stsvars=prmean,psmean,tasmean,tasmax,tasmin
@@ -42,18 +42,18 @@ $pycordex/pycordexer.py \
 	--regcm-version-id $regcm_version_id $stsfile $stsvars
 }
 
-mondir=$output/output/$domain/ICTP/$global/$experiment/$ensemble
-mondir=$mondir/ICTP-RegCM$regcm_release/$regcm_version_id/mon
+#dirnow=$PWD
 
-dirnow=$PWD
-mkdir -p $mondir && cd $mondir
-for vars in ../day/*
-do
-  var=`basename $vars`
-  mkdir -p $var
-  cd $var
-  $pycordex/means.py ../../day/$var/* mon
-  cd ../
-done
+#daydir=$output/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day
+#mondir=$output/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/mon
 
-cd $dirnow
+#mkdir -p $mondir && cd $mondir || exit 1
+#for vars in "$daydir"/*; do
+#  var=$(basename "$vars")
+#  mkdir -p "$var"
+#  cd "$var" || continue
+#  python3 $pycordex/means.py "$daydir/$var"/* .
+#  cd ../
+#done
+
+#cd $dirnow

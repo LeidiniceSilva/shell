@@ -38,18 +38,18 @@
  ibdyfrq =     6,            ! boundary condition interval (hours)
  ssttyp = 'ERA5D',           ! Type of Sea Surface Temperature used
  dattyp = 'ERA5',            ! Type of global analysis datasets used
- gdate1 = 1970010100,        ! Start date for ICBC data generation
- gdate2 = 1976010100,        ! End data for ICBC data generation
+ gdate1 = 1999010100,        ! Start date for ICBC data generation
+ gdate2 = 2010010100,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/icbc/', ! Path for ICBC produced input files
  inpglob = '/leonardo_work/ICT25_ESP/RCMDATA/',                               ! Path for ICBC global input datasets.
  /
 
  &restartparam
- ifrest  = True,       ! If a restart
- mdate0  = 1970010100, ! Global start (is globidate1)
- mdate1  = 1971090100, ! Start date of this run
- mdate2  = 1976010100, ! End date for this run
+ ifrest  = False,      ! If a restart
+ mdate0  = 1999010100, ! Global start (is globidate1)
+ mdate1  = 1999010100, ! Start date of this run
+ mdate2  = 2010010100, ! End date for this run
  /
 
  &timeparam

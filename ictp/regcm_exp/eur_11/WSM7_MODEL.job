@@ -17,9 +17,9 @@
 source /leonardo/home/userexternal/ggiulian/modules
 set -eo pipefail
 
-NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/eur_11/leonardo/EUR-11_WSM7.in
-BINARIES=/leonardo/home/userexternal/mdasilva/RegCM/bin/
-EXTENSION=CLM45
+NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/eur_11/EUR-11_WSM7.in
+BINARIES=/leonardo/home/userexternal/mdasilva/RegCM/bin
+EXTENSION=CLM45_SKL
 
 # run model
 mpirun $BINARIES/regcmMPI$EXTENSION $NAMELIST

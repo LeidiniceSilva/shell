@@ -17,7 +17,7 @@ ensemble="r0i0p0f0"
 notes="None"
 output="."
 proc=20
-regcm_release="5.0.0"
+regcm_release="5.0"
 regcm_version_id="v1-r1" 
 
 # base directory to the data 
@@ -31,7 +31,7 @@ yr0=2000
 yr1=2000
 # start and end month(s)
 mn0=1
-mn1=1
+mn1=6
 
 ########################
 ##### end of input #####

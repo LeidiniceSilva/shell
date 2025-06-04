@@ -2,7 +2,7 @@
 
 #SBATCH -A ICT25_ESP
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 16 
+#SBATCH -N 12
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
 #SBATCH -o logs/NoTo-CTRL.out
