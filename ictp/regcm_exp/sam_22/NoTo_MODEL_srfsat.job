@@ -5,9 +5,9 @@
 #SBATCH -N 12 
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -o logs/NoTo-DoSurfaceSat.out
-#SBATCH -e logs/NoTo-DoSurfaceSat.err
-#SBATCH -J DoSurfaceSat
+#SBATCH -o logs/NoTo-PBL.out
+#SBATCH -e logs/NoTo-PBL.err
+#SBATCH -J PBL
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -17,7 +17,7 @@
 source /leonardo/home/userexternal/ggiulian/modules
 set -eo pipefail
 
-NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_22/SAM-22_RegCM5-ERA5_srfsat.in
+NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_22/SAM-22_RegCM5-ERA5_pbl.in
 BINARIES=/leonardo/home/userexternal/mdasilva/RegCM/bin/
 EXTENSION=CLM45
 

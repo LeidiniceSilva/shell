@@ -22,16 +22,15 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2018-2021"
+YR="2017-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-3km"
-VAR_LIST="cape cin sfcWindmax"
-#VAR_LIST="pr tas cll clm clh clt cape cin evspsblpot mrsos rsnl sfcWindmax"
+VAR_LIST="pr tas cll clm clh clt cape cin evspsblpot mrsos rsnl sfcWindmax"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/test/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
@@ -48,7 +47,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo "Select variable: ${VAR}"
     for YEAR in `seq -w ${IYR} ${FYR}`; do
         for MON in `seq -w 01 12`; do
-            if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'tas'  ] || [ ${VAR} = 'sfcWindmax'  ] 
+            if [ ${VAR} = 'tas'  ] || [ ${VAR} = 'sfcWindmax'  ] 
             then
             CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
             elif [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh'  ]
@@ -62,8 +61,9 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo 
     echo "Concatenate date: ${YR}"
-    CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_${YR}.nc
-        
+    CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_2017-2021.nc
+    CDO selyear,2018,2021 ${VAR}_${EXP}_2017-2021.nc ${VAR}_${EXP}_${YR}.nc
+
     echo
     echo "Convert unit"
     if [ ${VAR} = 'pr'  ]

@@ -27,8 +27,8 @@ base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5
 hdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex5
 
 # start and end year(s)
-yr0=2000
-yr1=2000
+yr0=2008
+yr1=2008
 # start and end month(s)
 mn0=1
 mn1=6

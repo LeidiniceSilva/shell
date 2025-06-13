@@ -69,3 +69,26 @@ INFO - Subordinate 9: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA
 INFO - Subordinate 9: Variable uas saved using action number 0
 INFO - Subordinate 10: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/vas/vas_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
 INFO - Subordinate 10: Variable vas saved using action number 0
+INFO - Subordinate 13: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/rlds/rlds_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 13: Variable rlds saved using action number 0
+INFO - MainProcess: Execution started
+INFO - Subordinate 1: Saving variable prmean
+INFO - Subordinate 2: Saving variable psmean
+INFO - Subordinate 3: Saving variable tasmean
+INFO - Subordinate 4: Saving variable tasmax
+INFO - Subordinate 5: Saving variable tasmin
+INFO - Subordinate 2: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/ps/ps_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 1: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/pr/pr_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 3: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/tas/tas_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 5: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/tasmin/tasmin_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 4: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/tasmax/tasmax_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 5: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/tasmin/tasmin_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 5: Variable tasmin saved using action number 0
+INFO - Subordinate 4: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/tasmax/tasmax_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 4: Variable tasmax saved using action number 0
+INFO - Subordinate 3: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/tas/tas_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 3: Variable tasmean saved using action number 0
+INFO - Subordinate 2: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/ps/ps_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 2: Variable psmean saved using action number 0
+INFO - Subordinate 1: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/pr/pr_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000331-20000331.nc
+INFO - Subordinate 1: Variable prmean saved using action number 0

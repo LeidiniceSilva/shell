@@ -12,7 +12,7 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Mar 15, 2024'
-#__description__ = 'Postprocessing the dataset with CDO'
+#__description__ = 'Postprocessing the RegCM5 output with CDO'
  
 {
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
@@ -29,11 +29,11 @@ cd ${DIR_OUT}
 echo ${DIR_OUT}
 
 echo
-echo "--------------- INIT POSPROCESSING DATASET ----------------"
+echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
-CDO selhour,00,06,12,18 pr_SAM-3km_RegCM5_1hr_2018-2021_lonlat.nc pr_SAM-3km_RegCM5_6hr_2018-2021_lonlat.nc
-    
+CDO daysum pr_SAM-3km_RegCM5_1hr_2018-2021_lonlat.nc pr_SAM-3km_RegCM5_day_2018-2021_lonlat.nc
+
 echo
-echo "--------------- THE END POSPROCESSING DATASET ----------------"
+echo "--------------- THE END POSPROCESSING MODEL ----------------"
 
 }

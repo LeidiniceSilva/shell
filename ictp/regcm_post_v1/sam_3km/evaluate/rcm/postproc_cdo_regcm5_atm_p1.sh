@@ -17,13 +17,13 @@
 {
 set -eo pipefail
 
-YR="2018-2021"
+YR="2017-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 EXP="SAM-3km"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/test/output"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo

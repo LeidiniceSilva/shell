@@ -442,3 +442,15 @@ INFO - Subordinate 2: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA
 INFO - Subordinate 2: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va700/va700_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
 INFO - Subordinate 2: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va700/va700_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
 INFO - Subordinate 2: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va600/va600_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va600/va600_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va500/va500_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va500/va500_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va400/va400_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va400/va400_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va300/va300_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va300/va300_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va250/va250_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va250/va250_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va200/va200_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Finished writing on file ./CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/va200/va200_CSAM-3_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_20000310-20000310.nc
+INFO - Subordinate 2: Variable va saved using action number 0
