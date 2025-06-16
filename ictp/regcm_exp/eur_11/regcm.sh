@@ -16,5 +16,5 @@ source /leonardo/home/userexternal/ggiulian/modules
 set -eo pipefail
 
 nl=$1
-mpirun ./bin/regcmMPICLM45 $nl
+mpirun ./bin/regcmMPICLM45_SKL $nl
 }
