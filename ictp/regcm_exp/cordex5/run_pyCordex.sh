@@ -30,8 +30,8 @@ hdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/c
 yr0=2009
 yr1=2009
 # start and end month(s)
-mn0=1
-mn1=6
+mn0=7
+mn1=12
 
 ########################
 ##### end of input #####

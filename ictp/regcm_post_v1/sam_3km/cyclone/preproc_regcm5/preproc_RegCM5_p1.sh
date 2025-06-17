@@ -45,12 +45,12 @@ for VAR in ${VAR_LIST[@]}; do
 	    
 	    echo
 	    echo "1. Select variable"
-	    #CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc
+	    CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc
 
 	    echo
 	    echo "2. Regrid"
-	    #${BIN}/./regrid ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc -34.5,-16,1.5 -76,-38.5,1.5 bil
-	    CDO remapbil,${MASK}/gridded.txt ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100_lonlat.nc
+	    ${BIN}/./regrid ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
+	    #CDO remapbil,${MASK}/gridded.txt ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100_lonlat.nc
 
 	    echo
 	    echo "3. Smooth"
