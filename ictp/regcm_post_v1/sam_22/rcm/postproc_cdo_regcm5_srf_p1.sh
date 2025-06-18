@@ -28,9 +28,8 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="mrsos"
-#VAR_LIST="pr tas clt mrsos"
-FOLDER_LIST="ctrl"
+VAR_LIST="pr tas clt mrsos"
+FOLDER_LIST="pbl"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"

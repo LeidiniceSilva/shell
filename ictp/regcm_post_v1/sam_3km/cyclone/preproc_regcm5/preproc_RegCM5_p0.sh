@@ -17,11 +17,10 @@
 {
 set -eo pipefail
 
-YR="2017-2021"
+EXP="SAM-3km"
+YR="2017-2017"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
-
-EXP="SAM-3km"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/test/output"
 WIND="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm"
@@ -36,9 +35,9 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 echo
 echo "1. Convert to sigma to pressure"
 for YEAR in `seq -w ${IYR} ${FYR}`; do
-    for MON in `seq -w 01 12`; do
+    for MON in `seq -w 02 12`; do
 
-	python3 ${WIND}/rotatewinds.py ${EXP}_SRF.${YEAR}${MON}0100.nc
+	python3 ${WIND}/rotatewinds.py ${EXP}_SRF.${YEAR}${MON}0100.nc 
 
     done
 done

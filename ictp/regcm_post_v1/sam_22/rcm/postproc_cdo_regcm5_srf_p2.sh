@@ -28,7 +28,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 VAR_LIST="pr"
-FOLDER_LIST="srfsat"
+FOLDER_LIST="pbl"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -36,7 +36,7 @@ echo "--------------- INIT POSTPROCESSING MODEL ----------------"
 for FOLDER in ${FOLDER_LIST[@]}; do
 
     DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/${EXP}/${FOLDER}"
-    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/${EXP}/postproc"
+    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/${EXP}/postproc/rcm"
     BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
     echo
