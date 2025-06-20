@@ -25,8 +25,8 @@ echo "--------------- INIT PLOT ----------------"
 DIR_IN="/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/evaluate"
 cd ${DIR_IN}
 
-#python3 plot_graph_annual_cycle.py
-#python3 plot_graph_pdf_function.py
+python3 plot_graph_annual_cycle.py
+python3 plot_graph_pdf_function.py
 python3 plot_graph_pdf_function_1hr.py
 
 echo

@@ -1,0 +1,10 @@
+
+--------------- INIT PLOT ----------------
+/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper/plot_maps_mslp_wind10m.py:254: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper/plot_maps_cape_cin_v2.py:127: RuntimeWarning: Mean of empty slice
+  mean_i = np.nanmean(var_i, axis=0)
+/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper/plot_maps_cape_cin_v2.py:128: RuntimeWarning: Mean of empty slice
+  mean_ii = np.nanmean(var_ii, axis=0)
+/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper/plot_maps_cape_cin_v2.py:129: RuntimeWarning: Mean of empty slice
+  mean_iii = np.nanmean(var_iii, axis=0)
