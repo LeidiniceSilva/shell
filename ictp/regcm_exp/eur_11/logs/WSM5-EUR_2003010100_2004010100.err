@@ -1,0 +1,12 @@
+ Permission denied                                                              
+  
+ Abort called by computing node           53 at 2025-06-21 06:06:33.314 +0200
+ Execution terminated because of runtime error
+Abort(1) on node 53 (rank 53 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 53
+ Permission denied                                                              
+  
+ Abort called by computing node           17 at 2025-06-21 06:06:33.315 +0200
+ Execution terminated because of runtime error
+Abort(1) on node 17 (rank 17 in comm 496): application called MPI_Abort(comm=0x84000002, 1) - process 17
+ERROR: Simulation ended abruptly!!!
+Unknown ERROR Detected at 2003-09-30 18!

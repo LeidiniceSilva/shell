@@ -22,17 +22,25 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/ERA5"
+EXP="SAM-25km"
+DATASET="ERA5"
+YR="2018-2021"
+
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
-cd ${DIR_OUT}
-echo ${DIR_OUT}
+cd ${DIR_IN}
+echo ${DIR_IN}
 
 echo
 echo "--------------- INIT POSPROCESSING DATASET ----------------"
 
-CDO selhour,00,06,12,18 tp_SAM-3km_ERA5_1hr_2018-2021_lonlat.nc tp_SAM-3km_ERA5_6hr_2018-2021_lonlat.nc
-      
+${BIN}/./regrid ${DIR_IN}/CMORPH/cmorph_SAM-3km_CMORPH_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil
+${BIN}/./regrid ${DIR_IN}/ERA5/tp_SAM-3km_ERA5_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil	
+${BIN}/./regrid ${DIR_IN}/RegCM5/pr_SAM-3km_RegCM5_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil
+${BIN}/./regrid ${DIR_IN}/WRF415/PREC_ACC_NC_SAM-3km_WRF415_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil
+
 echo
 echo "--------------- THE END POSPROCESSING DATASET ----------------"
 
