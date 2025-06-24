@@ -29,7 +29,7 @@ FYR=$( echo $YR | cut -d- -f2 )
 EXP="SAM-3km"
 VAR_LIST="pr"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/output"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/test/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
@@ -71,8 +71,8 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo
     echo "Regrid output"
-    ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_diurnal_cycle_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
     ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
+    ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_diurnal_cycle_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
 
     echo
     echo "Delete files"

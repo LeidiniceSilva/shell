@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT23_ESP_1
+#SBATCH -A ICT25_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -25,15 +25,15 @@ CDO(){
 VAR="pr"
 FREQ="day"
 DOMAIN="CSAM-3"
-EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
+EXP="ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1"
 
-YR="2000-2001"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/v1-r1/${FREQ}/${VAR}"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/rcm"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/${FREQ}/${VAR}"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -45,11 +45,11 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
 echo "Concatenate date"
-CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_v1-r1_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${YR}.nc
+CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
 echo
 echo "Convert unit"
-CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${YR}.nc
+CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${YR}.nc
 
 echo
 echo "Frequency and intensity by season"
@@ -67,7 +67,11 @@ done
 
 echo 
 echo "Delete files"
-rm *_${YR}.nc
+rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_*_${YR}.nc
+rm ${VAR}_freq_${DOMAIN}_RegCM5_*_${YR}.nc
+rm ${VAR}_int_${DOMAIN}_RegCM5_*_${YR}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

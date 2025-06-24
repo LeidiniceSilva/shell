@@ -1,0 +1,15 @@
+Last Save is 2009090100
+2
+
+    #### SUBMITTING NEW SIMULATION ####
+sim-id    : NoTo-EUR
+startTarg : 1999010100
+startDate : 2009090100
+endDate   : 2010010100
+restLogic : .true.
+dependency: 
+
+SUBMIT command:
+sbatch -J NoTo-EUR_2009090100_2010010100 -o logs/NoTo-EUR_2009090100_2010010100.out -e logs/NoTo-EUR_2009090100_2010010100.err  regcm.sh .NoTo-EUR/.NoTo-EUR_2009090100_2010010100.in
+Submitted simulation with job i.d. 16984188 !!!
+Submitted control with job i.d. 16984190 !!!

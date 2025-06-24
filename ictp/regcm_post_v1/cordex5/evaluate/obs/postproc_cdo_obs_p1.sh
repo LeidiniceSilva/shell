@@ -25,13 +25,13 @@ CDO(){
 DATASET=$1
 EXP="CSAM-3"
 
-YR="2000-2000"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/obs"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -55,6 +55,7 @@ CDO monmean cmorph_${EXP}_${DATASET}_day_${YR}.nc cmorph_${EXP}_${DATASET}_mon_$
 
 echo 
 echo "Regrid output"
+${BIN}/./regrid cmorph_${EXP}_${DATASET}_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 ${BIN}/./regrid cmorph_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 ${BIN}/./regrid cmorph_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
@@ -95,16 +96,13 @@ then
 VAR_LIST="pre tmp tmx tmn cld"
 for VAR in ${VAR_LIST[@]}; do
     echo
-    echo "Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_mon_${YR}.nc
-
-    echo
     echo "Convert unit"
     if [ ${VAR} == 'pre' ]
     then
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_mon_${YR}.nc
     CDO -b f32 divc,30.5 ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
-    cp ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi    
 
     echo
@@ -121,7 +119,7 @@ done
 elif [ ${DATASET} == 'ERA5' ]
 then
 
-VAR_LIST="tp t2m tasmax tasmin cc tcc lcc mcc hcc msnlwrf msnswrf pev u v q r"
+VAR_LIST="tp t2m tasmax tasmin cc tcc lcc mcc hcc msdwlwrf pev u v q r cape cin"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "Select date"
@@ -153,6 +151,7 @@ for VAR in ${VAR_LIST[@]}; do
     echo "Regrid and select subdomain"
     if [ ${VAR} == 'tp' ]
     then
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil  
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil  
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil 
     else

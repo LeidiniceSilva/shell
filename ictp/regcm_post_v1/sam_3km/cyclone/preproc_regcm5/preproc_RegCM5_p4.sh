@@ -39,7 +39,7 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 for VAR in ${VAR_LIST[@]}; do
-    for YEAR in `seq -w 2018 2021`; do
+    for YEAR in `seq -w 2017 2021`; do
         for MON in `seq -w 01 12`; do
     	    if [ ${VAR} == "sfcWindmax" ]
     	    then

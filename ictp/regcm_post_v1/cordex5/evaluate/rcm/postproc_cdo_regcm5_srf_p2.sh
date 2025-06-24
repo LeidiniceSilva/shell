@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT23_ESP_1
+#SBATCH -A ICT25_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -12,7 +12,7 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
-#__description__ = 'Calculate the diurnal cycle of RegCM5 with CDO'
+#__description__ = 'Posprocessing the RegCM5 output with CDO'
  
 {
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
@@ -25,15 +25,14 @@ CDO(){
 VAR="pr"
 FREQ="1hr"
 DOMAIN="CSAM-3"
-EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5"
+EXP="ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1"
 
-YR="2000-2001"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
-SEASON_LIST="DJF MAM JJA SON"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5/v1-r1/${FREQ}/${VAR}"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/rcm"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/${FREQ}/${VAR}"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -45,11 +44,12 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
 echo "Concatenate date: ${YR}"
-CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_0_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
 echo
 echo "Convert unit"
 CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
+CDO daysum ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc
 
 echo
 echo "Hourly mean"
@@ -64,16 +64,22 @@ CDO mergetime ${VAR}_${DOMAIN}_RegCM5_*_${YR}_timmean.nc ${VAR}_${DOMAIN}_RegCM5
     
 echo
 echo "Regrid output"
+${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_diurnal_cycle_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo 
 echo "Delete files"
-rm *0100.nc
-rm *hr_${YR}.nc
-rm *_timmean.nc
-rm *_diurnal_cycle_${YR}.nc
+rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_*hr_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_*hr_${YR}_timmean.nc
+rm ${VAR}_${DOMAIN}_RegCM5_diurnal_cycle_${YR}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
 
 }
+
+
+

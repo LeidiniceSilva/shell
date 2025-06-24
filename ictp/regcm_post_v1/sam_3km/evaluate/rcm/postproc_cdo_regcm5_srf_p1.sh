@@ -22,13 +22,13 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-YR="2017-2021"
+YR="2018-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 EXP="SAM-3km"
-VAR_LIST="pr tas cll clm clh clt cape cin evspsblpot mrsos rsnl sfcWindmax"
+VAR_LIST="pr tas clt cape cin evspsblpot rsnl mrsos sfcWindmax"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/test/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm"
@@ -44,15 +44,12 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 for VAR in ${VAR_LIST[@]}; do
     
     echo
-    echo "Select variable: ${VAR}"
+    echo "Select variable"
     for YEAR in `seq -w ${IYR} ${FYR}`; do
         for MON in `seq -w 01 12`; do
-            if [ ${VAR} = 'tas'  ] || [ ${VAR} = 'sfcWindmax'  ] 
+            if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'tas'  ] || [ ${VAR} = 'sfcWindmax'  ] 
             then
             CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-            elif [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh'  ]
-            then
-            CDO selname,${VAR} ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
             else
             CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
 	    fi   
@@ -60,13 +57,12 @@ for VAR in ${VAR_LIST[@]}; do
     done
     
     echo 
-    echo "Concatenate date: ${YR}"
-    CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_2017-2021.nc
-    CDO selyear,2018,2021 ${VAR}_${EXP}_2017-2021.nc ${VAR}_${EXP}_${YR}.nc
+    echo "Concatenate date"
+    CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_${YR}.nc
 
     echo
     echo "Convert unit"
-    if [ ${VAR} = 'pr'  ]
+    if [ ${VAR} = 'pr'  ] 
     then
     CDO -b f32 mulc,86400 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_day_${YR}.nc
     CDO monmean ${VAR}_${EXP}_RegCM5_day_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
@@ -74,21 +70,21 @@ for VAR in ${VAR_LIST[@]}; do
     then
     CDO -b f32 subc,273.15 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_day_${YR}.nc
     CDO monmean ${VAR}_${EXP}_RegCM5_day_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
-    elif [ ${VAR} = 'clt'  ] || [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh'  ]
+    elif [ ${VAR} = 'clt'  ] 
     then
-    CDO -b f32 divc,100 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc
-    CDO monmean ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
+    CDO -b f32 divc,100 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_${YR}.nc
+    CDO monmean ${VAR}_${EXP}_RegCM5_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
     elif [ ${VAR} = 'evspsblpot'  ]
     then
-    CDO -b f32 mulc,86400 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc
-    CDO monmean ${VAR}_${EXP}_RegCM5_1hr_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
+    CDO -b f32 mulc,86400 ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_${YR}.nc
+    CDO monmean ${VAR}_${EXP}_RegCM5_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
     else
     CDO monmean ${VAR}_${EXP}_${YR}.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
     fi
-    
+  
     echo
     echo "Regrid output"
-    if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'tas'  ]
+    if [ ${VAR} = 'pr'  ] 
     then
     ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
     ${BIN}/./regrid ${VAR}_${EXP}_RegCM5_mon_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil
