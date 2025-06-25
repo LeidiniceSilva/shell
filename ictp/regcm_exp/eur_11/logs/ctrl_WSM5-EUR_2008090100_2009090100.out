@@ -1,1 +1,15 @@
-$*£&! Empty log!
+Last Save is 2009090100
+2
+
+    #### SUBMITTING NEW SIMULATION ####
+sim-id    : WSM5-EUR
+startTarg : 1999010100
+startDate : 2009090100
+endDate   : 2010010100
+restLogic : .true.
+dependency: 
+
+SUBMIT command:
+sbatch -J WSM5-EUR_2009090100_2010010100 -o logs/WSM5-EUR_2009090100_2010010100.out -e logs/WSM5-EUR_2009090100_2010010100.err  regcm.sh .WSM5-EUR/.WSM5-EUR_2009090100_2010010100.in
+Submitted simulation with job i.d. 16995260 !!!
+Submitted control with job i.d. 16995261 !!!
