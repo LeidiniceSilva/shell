@@ -1,11 +1,12 @@
-[mpiexec@lrdn3495.leonardo.local] check_exit_codes (../../../../../src/pm/i_hydra/libhydra/demux/hydra_demux_poll.c:121): unable to run bstrap_proxy (pid 97039, exit code 59648)
-[mpiexec@lrdn3495.leonardo.local] poll_for_event (../../../../../src/pm/i_hydra/libhydra/demux/hydra_demux_poll.c:159): check exit codes error
-[mpiexec@lrdn3495.leonardo.local] HYD_dmx_poll_wait_for_proxy_event (../../../../../src/pm/i_hydra/libhydra/demux/hydra_demux_poll.c:212): poll for event error
-[mpiexec@lrdn3495.leonardo.local] HYD_bstrap_setup (../../../../../src/pm/i_hydra/libhydra/bstrap/src/intel/i_hydra_bstrap.c:1065): error waiting for event
-[mpiexec@lrdn3495.leonardo.local] HYD_print_bstrap_setup_error_message (../../../../../src/pm/i_hydra/mpiexec/intel/i_mpiexec.c:1026): error setting up the bootstrap proxies
-[mpiexec@lrdn3495.leonardo.local] Possible reasons:
-[mpiexec@lrdn3495.leonardo.local] 1. Host is unavailable. Please check that all hosts are available.
-[mpiexec@lrdn3495.leonardo.local] 2. Cannot launch hydra_bstrap_proxy or it crashed on one of the hosts. Make sure hydra_bstrap_proxy is available on all hosts and it has right permissions.
-[mpiexec@lrdn3495.leonardo.local] 3. Firewall refused connection. Check that enough ports are allowed in the firewall and specify them with the I_MPI_PORT_RANGE variable.
-[mpiexec@lrdn3495.leonardo.local] 4. slurm bootstrap cannot launch processes on remote host. You may try using -bootstrap option to select alternative launcher.
+[lrdn4553:624738:0:624738] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn4553:624738:0:624738] ib_mlx5_log.c:177  DCI QP 0x1e033 wqe[44756]: SEND s-e [rqpn 0x329a rlid 12405] [inl len 18] 
+[lrdn4553:624770:0:624770] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn4553:624770:0:624770] ib_mlx5_log.c:177  DCI QP 0x1e0b3 wqe[64481]: SEND s-e [rqpn 0x3420 rlid 12405] [inl len 18] 
+[lrdn4406:1823141:0:1823141] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn4406:1823141:0:1823141] ib_mlx5_log.c:177  DCI QP 0x700b wqe[26554]: SEND s-e [rqpn 0x15e74 rlid 12213] [va 0x1539a6641d00 len 522 lkey 0x17e03b7] 
+[lrdn4406:1823205:0:1823205] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn4406:1823205:0:1823205] ib_mlx5_log.c:177  DCI QP 0x70cd wqe[64831]: SEND s-e [rqpn 0x15d64 rlid 12213] [inl len 138] 
+[mpiexec@lrdn3586.leonardo.local] check_downstream_work_complition (../../../../../src/pm/i_hydra/mpiexec/mpiexec.c:1303): downstream from host lrdn4498 exited abnormally
+[mpiexec@lrdn3586.leonardo.local] check_downstream_work_complition (../../../../../src/pm/i_hydra/mpiexec/mpiexec.c:1307): trying to close other downstreams
 ERROR: Simulation ended abruptly!!!
+Unknown ERROR Detected at 2007-09-05 18!
