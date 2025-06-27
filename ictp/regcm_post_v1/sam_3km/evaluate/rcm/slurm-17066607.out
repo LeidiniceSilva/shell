@@ -3,105 +3,21 @@
 
 --------------- INIT POSPROCESSING MODEL ----------------
 
-Select variable
+Select variable: pr
 
-Concatenate date
-
-Convert unit
-
-Regrid output
-cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
-cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
-
-Seasonal avg
-
-Select variable
-
-Concatenate date
+Concatenate date: 2018-2021
 
 Convert unit
 
-Regrid output
+Frequency and intensity by season
 cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
-
-Seasonal avg
-
-Select variable
-
-Concatenate date
-
-Convert unit
-
-Regrid output
 cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
-
-Seasonal avg
-
-Select variable
-
-Concatenate date
-
-Convert unit
-
-Regrid output
 cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
-
-Seasonal avg
-
-Select variable
-
-Concatenate date
-
-Convert unit
-
-Regrid output
 cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
-
-Seasonal avg
-
-Select variable
-
-Concatenate date
-
-Convert unit
-
-Regrid output
 cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
-
-Seasonal avg
-
-Select variable
-
-Concatenate date
-
-Convert unit
-
-Regrid output
 cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
-
-Seasonal avg
-
-Select variable
-
-Concatenate date
-
-Convert unit
-
-Regrid output
-cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid, with source mask (637837)
-
-Seasonal avg
-
-Select variable
-
-Concatenate date
-
-Convert unit
-
-Regrid output
 cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
-
-Seasonal avg
+cdo    remapbil: Bilinear weights from curvilinear (1228x780) to lonlat (1440x816) grid
 
 Delete files
 

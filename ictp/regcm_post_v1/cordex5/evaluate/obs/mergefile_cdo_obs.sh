@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT23_ESP_1
+#SBATCH -A ICT25_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -24,11 +24,11 @@ CDO(){
 
 DATASET=$1
 
-YR="1970-1979"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-DIR_IN="/leonardo_work/ICT24_ESP/OBS/${DATASET}"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/${DATASET}"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/${DATASET}"
 
 echo
@@ -47,6 +47,12 @@ for VAR in ${VAR_LIST[@]}; do
     fi
     [[ ! -f $FILE_OUT ]] && CDO mergetime $FILE_IN ${DIR_OUT}/$FILE_OUT
 done
+
+elif [ ${DATASET} == 'CMORPH' ]
+then
+FILE_OUT=${DIR_OUT}/cmorph_CSAM-3_CMORPH_1hr_2000-2009.nc
+FILE_IN=$( eval ls ${DIR_IN}/cmorph_CSAM-3_CMORPH_1hr_????.nc )
+[[ ! -f $FILE_OUT ]] && CDO mergetime $FILE_IN $FILE_OUT
 
 elif [ ${DATASET} == 'ERA5' ]
 then

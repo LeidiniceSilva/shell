@@ -1,12 +1,13 @@
 #!/bin/bash
 
-#SBATCH -N 1 
-#SBATCH -t 24:00:00
-#SBATCH -A ICT23_ESP
-#SBATCH --qos=qos_prio
-#SBATCH --mail-type=FAIL
+#SBATCH -A ICT25_ESP
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
-#SBATCH -p skl_usr_prod
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
@@ -29,7 +30,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/obs"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
