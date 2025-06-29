@@ -70,14 +70,14 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     
         echo 
         echo "2. Concatenate data"
-        CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_${FOLDER}_${YR}.nc
+        CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${FOLDER}_${YR}.nc
 
         echo
         echo "3. Seasonal avg and Regrid"
         for SEASON in ${SEASON_LIST[@]}; do
-            CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc
-	    ${BIN}/./regrid ${VAR}_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-	    CDO sellonlatbox,1,16,40,50 ${VAR}_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}_lonlat.nc ${VAR}_${EXP}_FPS_${FOLDER}_${SEASON}_${YR}_lonlat.nc
+            CDO -timmean -selseas,${SEASON} ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_${SEASON}_${YR}.nc
+	    ${BIN}/./regrid ${VAR}_RegCM5_${FOLDER}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+	    CDO sellonlatbox,1,16,40,50 ${VAR}_RegCM5_${FOLDER}_${SEASON}_${YR}_lonlat.nc ${VAR}_RegCM5_${FOLDER}-FPS_${SEASON}_${YR}_lonlat.nc
         done
     done
     

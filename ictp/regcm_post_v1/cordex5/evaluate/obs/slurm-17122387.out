@@ -1,0 +1,62 @@
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs
+
+------------------------------- INIT POSTPROCESSING CMORPH -------------------------------
+
+Select date
+
+Convert unit
+
+Calculate p99
+
+Regrid variable
+cdo    remapbil: Bilinear weights from lonlat (756x468) to lonlat (1450x816) grid
+
+Delete files
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs
+
+------------------------------- PROCCESSING ERA5 DATASET -------------------------------
+
+Select date
+
+Convert unit
+
+Calculate p99
+
+Regrid variable
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (1450x816) grid
+
+Delete files
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs
+
+------------------------------- PROCCESSING MSWEP DATASET -------------------------------
+
+Select date
+
+Calculate p99
+
+Regrid variable
+cdo    remapbil: Bilinear weights from lonlat (3600x1800) to lonlat (1450x816) grid
+
+Delete files
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs
+
+------------------------------- PROCCESSING CMORPH DATASET -------------------------------
+
+Select date
+
+Calculate p99
+
+Regrid variable
+cdo    remapbil: Bilinear weights from lonlat (756x468) to lonlat (1450x816) grid
+
+Delete files
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs
+
+------------------------------- PROCCESSING ERA5 DATASET -------------------------------
+
+Select date

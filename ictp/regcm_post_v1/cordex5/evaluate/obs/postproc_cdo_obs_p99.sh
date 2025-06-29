@@ -37,11 +37,10 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-echo 
-echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
-
 if [ ${DATASET} == 'CMORPH' ]
 then
+echo 
+echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
 VAR="cmorph"
 
 echo
@@ -71,7 +70,7 @@ VAR="precip"
     
 echo
 echo "Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cpc.day.1979-2021.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/precip.cpc.day.1979-2024.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
 
 echo
 echo "Calculate p99"
@@ -88,11 +87,11 @@ then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
-VAR="pr"
+VAR="tp"
 
 echo
 echo "Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_2000-2009.nc
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/tp_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_2000-2009.nc
     
 echo
 echo "Convert unit"
@@ -109,8 +108,7 @@ echo
 echo "Regrid variable"
 ${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
-elif [ ${DATASET} == 'MSWEP' ]
-then
+else
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
@@ -118,7 +116,7 @@ VAR="precipitation"
 
 echo
 echo "Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/precipitation_MSWEP_1979-2020.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/mswep.day.1979-2020.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
 
 echo
 echo "Calculate p99"
@@ -129,32 +127,6 @@ CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_
 echo
 echo "Regrid variable"
 ${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-
-else
-echo 
-echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
-
-VAR="hrf"
-
-echo
-echo "Select date"
-FILE=$( eval ls ${DIR_IN}/${DATASET}/TRMM.day.mean.????.nc )
-CDO mergetime ${FILE} ${VAR}_${DATASET}_1998-2009.nc
-
-echo
-echo "Select date"
-CDO selyear,${IYR}/${FYR} ${VAR}_${DATASET}_1998-2009.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
-
-echo
-echo "Calculate p99"
-CDO timmin ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
-CDO timmax ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc p99_${EXP}_${DATASET}_${YR}.nc
-  
-echo
-echo "Regrid variable"
-${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-
 fi
 
 echo 

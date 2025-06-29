@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT23_ESP_1
+#SBATCH -A ICT25_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -26,14 +26,14 @@ DATASET=$1
 EXP="CSAM-3"
 TH=0.5
 
-YR="2000-2000"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/user/mdasilva/OBS"
-DIR_OUT="/marconi/home/userexternal/mdasilva/user/mdasilva/CORDEX/post_evaluate/obs"
-BIN="/marconi/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts/bin"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
 cd ${DIR_OUT}
@@ -66,11 +66,11 @@ else
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
-VAR="pr"
+VAR="tp"
 
 echo
 echo "Select date"
-CDO mulc,1000 ${DIR_IN}/${DATASET}/pr_ERA5_1hr_2000-2009.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
+CDO mulc,1000 ${DIR_IN}/${DATASET}/tp_ERA5_1hr_2000-2009.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
  
 echo
 echo "Frequency and intensity by season"
@@ -88,7 +88,7 @@ fi
 
 echo 
 echo "Delete files"
-#rm *${YR}.nc
-#rm *th${TH}.nc
+rm *${YR}.nc
+rm *th${TH}.nc
 
 }

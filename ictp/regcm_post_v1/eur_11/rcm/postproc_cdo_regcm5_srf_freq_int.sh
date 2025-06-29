@@ -22,13 +22,13 @@ CDO(){
 
 EXP="EUR-11"
 
-YR="1970-1970"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 VAR="pr"
-FOLDER_LIST="NoTo-Europe_cordex5 NoTo-Europe WDM7-Europe WSM7-Europe WSM5-Europe"
+FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -53,20 +53,24 @@ for FOLDER in ${FOLDER_LIST[@]}; do
 
     echo 
     echo "2. Concatenate data"
-    CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_${FOLDER}_${YR}.nc
+    CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${FOLDER}_${YR}.nc
     
     echo
     echo "3. Convert unit"
-    CDO -b f32 mulc,86400 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_${YR}.nc
+    CDO -b f32 mulc,86400 ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_${YR}.nc
     
     echo
     echo "4. Frequency and intensity by season"
     for SEASON in ${SEASON_LIST[@]}; do
-	CDO selseas,${SEASON} ${VAR}_${EXP}_${FOLDER}_RegCM5_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc
-        CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc ${VAR}_freq_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc
-        ${BIN}/./regrid ${VAR}_freq_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-        CDO histmean,1,100000 ${VAR}_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_int_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+
+	CDO selseas,${SEASON} ${VAR}_RegCM5_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_${SEASON}_${YR}.nc
+
+        CDO mulc,100 -histfreq,1,100000 ${VAR}_RegCM5_${FOLDER}_${SEASON}_${YR}.nc ${VAR}_freq_RegCM5_${FOLDER}_${SEASON}_${YR}.nc
+        ${BIN}/./regrid ${VAR}_freq_RegCM5_${FOLDER}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+
+        CDO histmean,1,100000 ${VAR}_RegCM5_${FOLDER}_${SEASON}_${YR}.nc ${VAR}_int_RegCM5_${FOLDER}_${SEASON}_${YR}.nc
+	${BIN}/./regrid ${VAR}_int_RegCM5_${FOLDER}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+
     done
 
     echo 

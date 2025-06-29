@@ -5,7 +5,7 @@
 #SBATCH -N 12 
 #SBATCH --ntasks-per-node=108
 #SBATCH -t 1-00:00:00
-#SBATCH -J SAM-3km
+#SBATCH -J EUR-11
 #SBATCH -A ICT25_ESP
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it

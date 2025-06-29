@@ -43,39 +43,48 @@ echo "------------------------------- INIT POSTPROCESSING ${DATASET} -----------
 if [ ${DATASET} == 'CMORPH' ]
 then
 VAR="cmorph"
+
 echo
 echo "Select date"
 CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cmorph_CSAM-3_CMORPH_1hr_2000-2009.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+
 echo
 echo "Hourly mean"
 for HR in `seq -w 00 23`; do
     CDO selhour,${HR} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}.nc
     CDO timmean ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}_timmean.nc
 done
+
 echo
 echo "Diurnal cycle"
 CDO mergetime ${VAR}_${EXP}_${DATASET}_*hr_${YR}_timmean.nc ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc
+
 echo
 echo "Regrid output"
 ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 else
 VAR="tp"
+
 echo
 echo "Select date"
 CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/tp_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc 
+
 echo
 echo "Convert unit"
 CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc    
+
 echo
 echo "Hourly mean"
 for HR in `seq -w 00 23`; do
     CDO selhour,${HR} ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}.nc
     CDO timmean ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_${HR}hr_${YR}_timmean.nc
 done
+
 echo
 echo "Diurnal cycle"
 CDO mergetime ${VAR}_${EXP}_${DATASET}_*hr_${YR}_timmean.nc ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc  
+
 echo
 echo "Regrid output"
 ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_diurnal_cycle_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil

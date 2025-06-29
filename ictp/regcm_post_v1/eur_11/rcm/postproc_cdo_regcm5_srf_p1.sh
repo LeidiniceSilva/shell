@@ -22,13 +22,13 @@ CDO(){
 
 EXP="EUR-11"
 
-YR="1970-1970"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 VAR_LIST="pr tas clt"
-FOLDER_LIST="NoTo-Europe_cordex5 NoTo-Europe WDM7-Europe WSM7-Europe WSM5-Europe"
+FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -60,25 +60,25 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     
         echo 
         echo "2. Concatenate data"
-        CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_${FOLDER}_${YR}.nc
+        CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${FOLDER}_${YR}.nc
            
         echo
         echo "3. Convert unit"
         if [ ${VAR} = 'pr' ]
         then
-        CDO -b f32 mulc,86400 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc
+        CDO -b f32 mulc,86400 ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_${YR}.nc
         elif [ ${VAR} = 'tas' ]
         then
-        CDO -b f32 subc,273.15 ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc
+        CDO -b f32 subc,273.15 ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_${YR}.nc
 	else
-	CDO daymean ${VAR}_${EXP}_${FOLDER}_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc
+        CDO -b f32 divc,100 ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_${YR}.nc
         fi
 
         echo
         echo "4. Seasonal avg and Regrid"
         for SEASON in ${SEASON_LIST[@]}; do
-            CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${FOLDER}_RegCM5_day_${YR}.nc ${VAR}_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc
-	    ${BIN}/./regrid ${VAR}_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+            CDO -timmean -selseas,${SEASON} ${VAR}_RegCM5_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_${SEASON}_${YR}.nc
+	    ${BIN}/./regrid ${VAR}_RegCM5_${FOLDER}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
         done
     done
     
