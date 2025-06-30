@@ -19,12 +19,11 @@ set -eo pipefail
 
 EXP="EUR-11"
 
-YR="2002-2009"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-FOLDER_LIST="WSM5-EUR"
-#FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
+FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"

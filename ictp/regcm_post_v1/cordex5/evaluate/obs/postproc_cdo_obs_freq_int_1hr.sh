@@ -39,11 +39,11 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-if [ ${DATASET} == 'CMORPH' ]
-then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
+if [ ${DATASET} == 'CMORPH' ]
+then
 VAR="cmorph"
 
 echo
@@ -63,9 +63,6 @@ for SEASON in ${SEASON_LIST[@]}; do
 done
 
 else
-echo 
-echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
-
 VAR="tp"
 
 echo
@@ -83,12 +80,14 @@ for SEASON in ${SEASON_LIST[@]}; do
     CDO histmean,${TH},100000 ${VAR}_${EXP}_${DATASET}_1hr_${SEASON}_${YR}.nc ${VAR}_int_${EXP}_${DATASET}_1hr_${SEASON}_${YR}_th${TH}.nc
     ${BIN}/./regrid ${VAR}_int_${EXP}_${DATASET}_1hr_${SEASON}_${YR}_th${TH}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 done
-
 fi
 
 echo 
 echo "Delete files"
 rm *${YR}.nc
 rm *th${TH}.nc
+
+echo 
+echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"
 
 }

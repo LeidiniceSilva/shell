@@ -33,14 +33,15 @@ DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
-echo
+
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
+echo
+echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
+
 if [ ${DATASET} == 'CMORPH' ]
 then
-echo 
-echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
 VAR="cmorph"
 
 echo
@@ -63,9 +64,6 @@ ${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc -36.70233,-12.24439,0.03 -78.8196
 
 elif [ ${DATASET} == 'CPC' ]
 then
-echo 
-echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
-
 VAR="precip"
     
 echo
@@ -84,9 +82,6 @@ ${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc -36.70233,-12.24439,0.03 -78.8196
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-echo 
-echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
-
 VAR="tp"
 
 echo
@@ -109,9 +104,6 @@ echo "Regrid variable"
 ${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 else
-echo 
-echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
-
 VAR="precipitation"
 
 echo
@@ -134,5 +126,8 @@ echo "Delete files"
 rm *_${YR}.nc
 rm *_min.nc
 rm *_max.nc
+
+echo 
+echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"
 
 }

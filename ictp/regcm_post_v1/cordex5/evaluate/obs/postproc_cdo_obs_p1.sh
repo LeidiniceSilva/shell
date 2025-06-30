@@ -101,6 +101,10 @@ for VAR in ${VAR_LIST[@]}; do
     then
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_mon_${YR}.nc
     CDO -b f32 divc,30.5 ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    elif [ ${VAR} == 'cld' ]
+    then
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_mon_${YR}.nc
+    CDO -b f32 divc,100 ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     else
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     fi    
@@ -137,7 +141,7 @@ for VAR in ${VAR_LIST[@]}; do
     CDO -b f32 mulc,1000 ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
     CDO daysum ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc
     CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
-    elif [ ${VAR} == 'tas' ] || [ ${VAR} == 'tasmax' ] || [ ${VAR} == 'tasmin' ]
+    elif [ ${VAR} == 't2m' ] || [ ${VAR} == 'tasmax' ] || [ ${VAR} == 'tasmin' ]
     then
     CDO -b f32 subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
     elif [ ${VAR} == 'pev' ]
@@ -163,26 +167,6 @@ for VAR in ${VAR_LIST[@]}; do
     for SEASON in ${SEASON_LIST[@]}; do
 	CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${YR}_lonlat.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
     done       
-done
-
-elif [ ${DATASET} == 'GPCP' ]
-then
-echo
-echo "Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/GPCPMON_L3_198301-202209_V3.2.nc4 ${EXP}_${DATASET}_mon_${YR}.nc
-
-echo 
-echo "Select variable"
-CDO selvar,sat_gauge_precip ${EXP}_${DATASET}_mon_${YR}.nc sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}.nc
-
-echo 
-echo "Regrid output"
-${BIN}/./regrid sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-
-echo
-echo "Seasonal avg"
-for SEASON in ${SEASON_LIST[@]}; do
-    CDO -timmean -selseas,${SEASON} sat_gauge_precip_${EXP}_${DATASET}_mon_${YR}_lonlat.nc sat_gauge_precip_${EXP}_${DATASET}_${SEASON}_${YR}_lonlat.nc
 done
 
 else

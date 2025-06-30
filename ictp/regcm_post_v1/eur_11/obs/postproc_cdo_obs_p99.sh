@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT23_ESP_1
+#SBATCH -A ICT25_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -23,7 +23,7 @@ CDO(){
 DATASET=$1
 EXP="EUR-11"
 
-YR="1970-1970"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
@@ -38,80 +38,42 @@ echo ${DIR_OUT}
 echo 
 echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
 
-if [ ${DATASET} == 'CPC' ]
+if [ ${DATASET} == 'EOBS' ]
 then
-VAR="precip"
-
-echo
-echo "1. Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cpc.day.1979-2021.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
-
-echo
-echo "2. Calculate p99"
-CDO timmin ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
-CDO timmax ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc p99_${EXP}_${DATASET}_${YR}.nc
-  
-echo
-echo "3. Regrid variable"
-${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-
-elif [ ${DATASET} == 'ERA5' ]
-then
-VAR="pr"
-
-echo
-echo "1. Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/pr_ERA5_hr_2000-2009.nc ${VAR}_${DATASET}_hr_${YR}.nc
-CDO daysum ${VAR}_${DATASET}_hr_${YR}.nc ${VAR}_${DATASET}_${YR}.nc
-CDO mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
-
-echo
-echo "2. Calculate p99"
-CDO timmin ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
-CDO timmax ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc p99_${EXP}_${DATASET}_${YR}.nc
-
-echo
-echo "3. Regrid variable"
-${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-
-
-elif [ ${DATASET} == 'MSWEP' ]
-then
-VAR="precipitation"
-
-echo
-echo "1. Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/mswep.day.1979-2020.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
-
-echo
-echo "2. Calculate p99"
-CDO timmin ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
-CDO timmax ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc p99_${EXP}_${DATASET}_${YR}.nc
-
-echo
-echo "3. Regrid variable"
-${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
-
-else
 VAR="rr"
 
 echo
 echo "1. Select date"
-CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/rr.nc ${VAR}_${EXP}_${DATASET}_${YR}.nc
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/rr.nc ${VAR}_${DATASET}_${EXP}_${YR}.nc
 
 echo
 echo "2. Calculate p99"
-CDO timmin ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
-CDO timmax ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
-CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_${YR}_min.nc ${VAR}_${EXP}_${DATASET}_${YR}_max.nc p99_${EXP}_${DATASET}_${YR}.nc
+CDO timmin ${VAR}_${DATASET}_${EXP}_${YR}.nc ${VAR}_${DATASET}_${EXP}_${YR}_min.nc
+CDO timmax ${VAR}_${DATASET}_${EXP}_${YR}.nc ${VAR}_${DATASET}_${EXP}_${YR}_max.nc
+CDO timpctl,99 ${VAR}_${DATASET}_${EXP}_${YR}.nc ${VAR}_${DATASET}_${EXP}_${YR}_min.nc ${VAR}_${DATASET}_${EXP}_${YR}_max.nc p99_${DATASET}_${EXP}_${YR}.nc
   
 echo
 echo "3. Regrid variable"
-${BIN}/./regrid p99_${EXP}_${DATASET}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+${BIN}/./regrid p99_${DATASET}_${EXP}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
 
+else
+VAR="tp"
+
+echo
+echo "1. Select date"
+CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/tp_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_${YR}.nc
+CDO daysum ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${DATASET}_${YR}.nc
+CDO mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_${EXP}_${YR}.nc 
+
+echo
+echo "2. Calculate p99"
+CDO timmin ${VAR}_${DATASET}_${EXP}_${YR}.nc ${VAR}_${DATASET}_${EXP}_${YR}_min.nc
+CDO timmax ${VAR}_${DATASET}_${EXP}_${YR}.nc ${VAR}_${DATASET}_${EXP}_${YR}_max.nc
+CDO timpctl,99 ${VAR}_${DATASET}_${EXP}_${YR}.nc ${VAR}_${DATASET}_${EXP}_${YR}_min.nc ${VAR}_${DATASET}_${EXP}_${YR}_max.nc p99_${DATASET}_${EXP}_${YR}.nc
+
+echo
+echo "3. Regrid variable"
+${BIN}/./regrid p99_${DATASET}_${EXP}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
 fi
 
 echo 
@@ -121,6 +83,6 @@ rm ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
 rm ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
 
 echo
-echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"
+echo "------------------------------- END POSTPROCESSING ${DATASET} -------------------------------"
 
 }

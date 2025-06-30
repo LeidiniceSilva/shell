@@ -17,7 +17,7 @@
 {
 set -eo pipefail
 
-YR="2020-2020"
+YR="2021-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 

@@ -18,21 +18,18 @@
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
-#bash postproc_cdo_obs_p99.sh CMORPH 
-#bash postproc_cdo_obs_p99.sh ERA5 
-#bash postproc_cdo_obs_p99.sh MSWEP
+#bash postproc_cdo_obs_srf_p1.sh EOBS
+#bash postproc_cdo_obs_srf_p1.sh ERA5
 
-#bash postproc_cdo_obs_p99_1hr.sh CMORPH 
-#bash postproc_cdo_obs_p99_1hr.sh ERA5 
+bash postproc_cdo_obs_srf_p2.sh ERA5
 
-bash postproc_cdo_obs_freq_int.sh CMORPH 
-bash postproc_cdo_obs_freq_int.sh ERA5 
-bash postproc_cdo_obs_freq_int.sh MSWEP
+bash postproc_cdo_obs_srf_p3.sh EOBS
+bash postproc_cdo_obs_srf_p3.sh ERA5
 
-bash postproc_cdo_obs_freq_int_1hr.sh CMORPH 
-bash postproc_cdo_obs_freq_int_1hr.sh ERA5 
+bash postproc_cdo_obs_p99.sh EOBS
+bash postproc_cdo_obs_p99.sh ERA5
 
-bash postproc_cdo_obs_p2.sh CMORPH
-#bash postproc_cdo_obs_p2.sh ERA5
+bash postproc_cdo_obs_freq_int.sh EOBS
+bash postproc_cdo_obs_freq_int.sh ERA5
 
 }

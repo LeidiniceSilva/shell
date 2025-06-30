@@ -37,11 +37,10 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-if [ ${DATASET} == 'CMORPH' ]
-then
-echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
+if [ ${DATASET} == 'CMORPH' ]
+then
 VAR="cmorph"
 
 echo
@@ -59,9 +58,6 @@ echo "Regrid variable"
 ${BIN}/./regrid p99_${EXP}_${DATASET}_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil 
 
 else
-echo 
-echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
-
 VAR="tp"
 
 echo
@@ -77,7 +73,6 @@ CDO timpctl,99 ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1h
 echo
 echo "Regrid variable"
 ${BIN}/./regrid p99_${EXP}_${DATASET}_1hr_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-
 fi
 
 echo 
@@ -86,5 +81,8 @@ rm ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
 rm ${VAR}_${EXP}_${DATASET}_1hr_${YR}_min.nc
 rm ${VAR}_${EXP}_${DATASET}_1hr_${YR}_max.nc
 rm p99_${EXP}_${DATASET}_1hr_${YR}.nc
+
+echo 
+echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"
 
 }

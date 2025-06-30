@@ -28,7 +28,8 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
+FOLDER_LIST="WSM7-EUR WDM7-EUR"
+#FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -36,17 +37,17 @@ echo "--------------- INIT POSTPROCESSING MODEL ----------------"
 for FOLDER in ${FOLDER_LIST[@]}; do
 
     DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/${FOLDER}"
-    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/rcm"
+    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc"
     BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
     echo
     cd ${DIR_OUT}
     echo ${DIR_OUT}
 
-    if [ ${FOLDER} = 'NoTo-Europe' ] || [ ${FOLDER} = 'WSM5-Europe' ]
+    if [ ${FOLDER} = 'NoTo-EUR' ] || [ ${FOLDER} = 'WSM5-EUR' ]
     then
     VAR_LIST="cl cli clr cls clw rh hus ua va"
-    elif [ ${FOLDER} = 'WSM7-Europe' ]
+    elif [ ${FOLDER} = 'WSM7-EUR' ]
     then
     VAR_LIST="cl cli clr cls clw rh hus ua va hail gra"
     else

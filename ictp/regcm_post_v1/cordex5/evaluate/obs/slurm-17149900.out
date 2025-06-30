@@ -1,0 +1,54 @@
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs
+
+------------------------------- PROCCESSING CMORPH DATASET -------------------------------
+
+Select date
+
+Frequency and intensity by season
+cdo    remapbil: Bilinear weights from lonlat (756x468) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (756x468) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (756x468) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (756x468) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (756x468) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (756x468) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (756x468) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (756x468) to lonlat (1450x816) grid
+
+Delete files
+
+------------------------------- THE END POSTPROCESSING CMORPH -------------------------------
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs
+
+------------------------------- PROCCESSING ERA5 DATASET -------------------------------
+
+Select date
+
+Convert unit
+
+Frequency and intensity by season
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (1440x721) to lonlat (1450x816) grid
+
+Delete files
+
+------------------------------- THE END POSTPROCESSING ERA5 -------------------------------
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/obs
+
+------------------------------- PROCCESSING MSWEP DATASET -------------------------------
+
+Select date
+
+Frequency and intensity by season
+cdo    remapbil: Bilinear weights from lonlat (3600x1800) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (3600x1800) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (3600x1800) to lonlat (1450x816) grid
+cdo    remapbil: Bilinear weights from lonlat (3600x1800) to lonlat (1450x816) grid

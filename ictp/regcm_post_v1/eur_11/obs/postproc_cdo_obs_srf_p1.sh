@@ -23,7 +23,7 @@ CDO(){
 DATASET=$1
 EXP="EUR-11"
 
-YR="1970-1970"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
@@ -49,8 +49,8 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
-        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${DATASET}_${EXP}_${SEASON}_${YR}.nc
+	${BIN}/./regrid ${VAR}_${DATASET}_${EXP}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
     done
 done
 
@@ -70,8 +70,8 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
-        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_mon_${YR}.nc ${VAR}_${DATASET}_${EXP}_${SEASON}_${YR}.nc
+	${BIN}/./regrid ${VAR}_${DATASET}_${EXP}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
     done
 done
 
@@ -85,8 +85,8 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
-        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${DATASET}_${EXP}_${SEASON}_${YR}.nc
+	${BIN}/./regrid ${VAR}_${DATASET}_${EXP}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
     done
 done
 
@@ -98,23 +98,23 @@ for VAR in ${VAR_LIST[@]}; do
     echo "1. Select date"
     if [ ${VAR} == 'tp' ]
     then
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1hr_1970-1979.nc ${VAR}_${DATASET}_1hr_${YR}.nc
-    CDO mulc,1000 ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc 
-    CDO daysum ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc 
-    CDO monmean ${VAR}_${EXP}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc 
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_1hr_2000-2009.nc ${VAR}_${DATASET}_1hr_${YR}.nc
+    CDO mulc,1000 ${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${DATASET}_${EXP}_1hr_${YR}.nc 
+    CDO daysum ${VAR}_${DATASET}_${EXP}_1hr_${YR}.nc ${VAR}_${DATASET}_${EXP}_day_${YR}.nc 
+    CDO monmean ${VAR}_${DATASET}_${EXP}_day_${YR}.nc ${VAR}_${DATASET}_${EXP}_mon_${YR}.nc 
     elif [ ${VAR} == 't2m' ]
     then
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${DATASET}_${YR}.nc
-    CDO subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_${EXP}_mon_${YR}.nc
     else
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${DATASET}_${YR}.nc
-    CDO mulc,100 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO mulc,100 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_${EXP}_mon_${YR}.nc
     fi
     echo
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
-        CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${DATASET}_mon_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-        ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_${EXP}_mon_${YR}.nc ${VAR}_${DATASET}_${EXP}_${SEASON}_${YR}.nc
+        ${BIN}/./regrid ${VAR}_${DATASET}_${EXP}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
     done
 done
   
@@ -127,8 +127,8 @@ for VAR in ${VAR_LIST[@]}; do
     echo
     echo "2. Seasonal avg"
     for SEASON in ${SEASON_LIST[@]}; do
-        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
+        CDO -timmean -selseas,${SEASON} ${VAR}_${DATASET}_day_${YR}.nc ${VAR}_${DATASET}_${EXP}_${SEASON}_${YR}.nc
+	${BIN}/./regrid ${VAR}_${DATASET}_${EXP}_${SEASON}_${YR}.nc 20.23606,70.85755,0.11 -42.69011,61.59245,0.11 bil
     done
 done
 fi
@@ -138,6 +138,6 @@ echo "Delete files"
 rm *_${YR}.nc
 
 echo
-echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"
+echo "------------------------------- END POSTPROCESSING ${DATASET} -------------------------------"
 
 }

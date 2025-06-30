@@ -38,11 +38,11 @@ echo
 cd ${DIR_OUT}
 echo ${DIR_OUT}
 
-if [ ${DATASET} == 'CMORPH' ]
-then
 echo 
 echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
 
+if [ ${DATASET} == 'CMORPH' ]
+then
 VAR="cmorph"
  
 echo
@@ -64,9 +64,6 @@ done
 
 elif [ ${DATASET} == 'CPC' ]
 then
-echo 
-echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
-
 VAR="precip"
  
 echo
@@ -87,9 +84,6 @@ done
 
 elif [ ${DATASET} == 'ERA5' ]
 then
-echo 
-echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
-
 VAR="tp"
 
 echo
@@ -114,9 +108,6 @@ for SEASON in ${SEASON_LIST[@]}; do
 done
 
 else
-echo 
-echo "------------------------------- PROCCESSING ${DATASET} DATASET -------------------------------"
-
 VAR="precipitation"
 
 echo
@@ -139,5 +130,8 @@ fi
 echo 
 echo "Delete files"
 rm *${YR}.nc
+
+echo 
+echo "------------------------------- THE END POSTPROCESSING ${DATASET} -------------------------------"
 
 }
