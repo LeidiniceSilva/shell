@@ -46,12 +46,12 @@ for FOLDER in ${FOLDER_LIST[@]}; do
 
     if [ ${FOLDER} = 'NoTo-EUR' ] || [ ${FOLDER} = 'WSM5-EUR' ]
     then
-    VAR_LIST="cl cli clr cls clw rh hus ua va"
+    VAR_LIST="cl cli clw rh hus ua va"
     elif [ ${FOLDER} = 'WSM7-EUR' ]
     then
-    VAR_LIST="cl cli clr cls clw rh hus ua va hail gra"
+    VAR_LIST="cl cli clw rh hus ua va"
     else
-    VAR_LIST="cl cli clr cls clw rh hus ua va hail gra ncc ncn ncr"
+    VAR_LIST="cl cli clw rh hus ua va"
     fi
 
     echo
