@@ -65,7 +65,8 @@ for VAR in ${VAR_LIST[@]}; do
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_${YR}.nc
     CDO divc,30.5 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_mon_${YR}.nc 
     else
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_mon_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO divc,100 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_mon_${YR}.nc 
     fi
     echo
     echo "2. Seasonal avg"
@@ -107,8 +108,7 @@ for VAR in ${VAR_LIST[@]}; do
     CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
     CDO subc,273.15 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_${EXP}_mon_${YR}.nc
     else
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
-    CDO mulc,100 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_${EXP}_mon_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/${VAR}_${DATASET}_2000-2009.nc ${VAR}_${DATASET}_${EXP}_mon_${YR}.nc
     fi
     echo
     echo "2. Seasonal avg"

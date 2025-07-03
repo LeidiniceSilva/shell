@@ -22,7 +22,6 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1"
 
@@ -31,7 +30,8 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="pr tas tasmax tasmin cll clm clh clt evspsblpot rlds cape cin"
+VAR_LIST="evspsblpot"
+#VAR_LIST="pr tas tasmax tasmin cll clm clh clt evspsblpot rlds cape cin"
 
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
@@ -47,6 +47,13 @@ echo
 echo "Select variable"
 for VAR in ${VAR_LIST[@]}; do
 
+    if [ ${VAR} = 'evspsblpot'  ]
+    then
+        FREQ="1hr"
+    else
+        FREQ="day"
+    fi
+
     DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/${FREQ}/${VAR}"
 
     echo
@@ -55,7 +62,7 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "Convert unit"
-    if [ ${VAR} = 'pr'  ] || [ ${VAR} = 'evspsblpot'  ]
+    if [ ${VAR} = 'pr'  ]
     then
     CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc
     CDO monmean ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
@@ -68,6 +75,12 @@ for VAR in ${VAR_LIST[@]}; do
     elif [ ${VAR} = 'clt'  ] || [ ${VAR} = 'cll'  ] || [ ${VAR} = 'clm'  ] || [ ${VAR} = 'clh'  ]
     then
     CDO -b f32 divc,100 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc
+    CDO monmean ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
+    ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
+    elif [ ${VAR} = 'evspsblpot'  ]
+    then
+    CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
+    CDO daysum ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc
     CDO monmean ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
     ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
     else
@@ -83,8 +96,7 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo 
     echo "Delete files"
-    rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
-    rm ${VAR}_${DOMAIN}_RegCM5_*_${YR}.nc
+    rm *_${YR}.nc
     rm ${VAR}_${DOMAIN}_RegCM5_mon_${YR}_lonlat.nc
       
 done

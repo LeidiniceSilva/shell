@@ -29,7 +29,7 @@ FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -39,7 +39,7 @@ echo ${DIR_OUT}
 echo
 echo "------------------------------- INIT POSTPROCESSING ${DATASET} -------------------------------"
 
-VAR_LIST="cc ciwc clwc q r u v"
+VAR_LIST="cc ciwc clwc q u v"
 
 for VAR in ${VAR_LIST[@]}; do
     echo

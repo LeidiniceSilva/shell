@@ -79,8 +79,8 @@ fi
 echo 
 echo "Delete files"
 rm *_${YR}.nc
-rm ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
-rm ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
+rm *_${YR}_min.nc
+rm *_${YR}_max.nc
 
 echo
 echo "------------------------------- END POSTPROCESSING ${DATASET} -------------------------------"

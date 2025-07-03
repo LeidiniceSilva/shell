@@ -28,7 +28,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-FOLDER_LIST="WSM7-EUR WDM7-EUR"
+FOLDER_LIST="NoTo-EUR"
 #FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
 
 echo
@@ -44,15 +44,8 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     cd ${DIR_OUT}
     echo ${DIR_OUT}
 
-    if [ ${FOLDER} = 'NoTo-EUR' ] || [ ${FOLDER} = 'WSM5-EUR' ]
-    then
-    VAR_LIST="cl cli clw rh hus ua va"
-    elif [ ${FOLDER} = 'WSM7-EUR' ]
-    then
-    VAR_LIST="cl cli clw rh hus ua va"
-    else
-    VAR_LIST="cl cli clw rh hus ua va"
-    fi
+    VAR_LIST="va"
+    #VAR_LIST="cl cli clw hus ua va"
 
     echo
     echo "1. Select variable"

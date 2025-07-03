@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -N 4 
+#SBATCH -N 4
 #SBATCH -t 24:00:00
 #SBATCH -A ICT23_ESP
 #SBATCH --qos=qos_prio
@@ -21,10 +21,11 @@ set -eo pipefail
 echo
 echo "--------------- INIT PLOT ----------------"
 
-DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/adaptabr_mcti/paper_cmip6"
+DIR_IN="/marconi/home/userexternal/mdasilva/github_projects/pypostdoc/ws-sa"
 cd ${DIR_IN}
 
-python3 plot_cmip6_obs_portrait_stats_metrics.py
+python3 plot_dendrogram_stations_sam_v2.py
+python3 plot_cluster_stations_sam_v2.py
 
 echo
 echo "--------------- THE END PLOT ----------------"
