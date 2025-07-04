@@ -1,0 +1,15 @@
+
+--------------- INIT PLOT ----------------
+/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/eur_11/plot_graph_pdf_daily.py:103: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/eur_11/plot_graph_pdf_hourly.py:104: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+Traceback (most recent call last):
+  File "/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/eur_11/plot_maps_clim_atm.py", line 95, in <module>
+    lat, lon, u_noto_djf = import_rcm(dict_var[var][3], 'RegCM5_NoTo-EUR', 'DJF')
+                           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/eur_11/plot_maps_clim_atm.py", line 57, in import_rcm
+    data  = netCDF4.Dataset(arq)
+  File "src/netCDF4/_netCDF4.pyx", line 2521, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 2158, in netCDF4._netCDF4._ensure_nc_success
+FileNotFoundError: [Errno 2] No such file or directory: '/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/rcm/ua_RegCM5_NoTo-EUR_DJF_2000-2009_lonlat.nc'

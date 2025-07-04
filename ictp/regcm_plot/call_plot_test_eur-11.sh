@@ -35,7 +35,7 @@ python3 plot_maps_bias_srf_p99.py
 python3 plot_maps_bias_srf_int_freq.py --stats int
 python3 plot_maps_bias_srf_int_freq.py --stats freq
 
-python3 plot_graph_pdf_day.py
+python3 plot_graph_pdf_daily.py
 python3 plot_graph_pdf_hourly.py
 
 python3 plot_maps_clim_atm.py --var uv --level 200hPa
