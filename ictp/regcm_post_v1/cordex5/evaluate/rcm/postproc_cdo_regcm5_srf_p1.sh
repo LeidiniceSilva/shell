@@ -30,8 +30,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="evspsblpot"
-#VAR_LIST="pr tas tasmax tasmin cll clm clh clt evspsblpot rlds cape cin"
+VAR_LIST="pr tas tasmax tasmin cll clm clh clt evspsblpot rlds cape cin"
 
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"

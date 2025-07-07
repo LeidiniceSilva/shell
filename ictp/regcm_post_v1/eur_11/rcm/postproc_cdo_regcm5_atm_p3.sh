@@ -28,8 +28,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-FOLDER_LIST="NoTo-EUR"
-#FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
+FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -44,8 +43,7 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     cd ${DIR_OUT}
     echo ${DIR_OUT}
 
-    VAR_LIST="cl cli clw hus ua"
-    #VAR_LIST="cl cli clw hus ua va"
+    VAR_LIST="cl cli clw hus ua va"
 
     echo
     echo "1. Select variable"
