@@ -27,8 +27,9 @@ MODEL="WRF"
 DT="2018-2021"
 VAR_LIST="PSL U10 V10"
 
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/wrf"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/WRF415"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
+MASK="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/sam_3km/cyclone/mask"
 
 echo
 cd ${DIR_OUT}
@@ -43,11 +44,12 @@ for VAR in ${VAR_LIST[@]}; do
     for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
 
-	    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/WRF/${VAR}"
+	    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/WRF415/${VAR}"
 	    
 	    echo
 	    echo "2. Regrid"
-	    ${BIN}/./regrid ${DIR_IN}/${YEAR}${MON}_${VAR}_SouthAmerica.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
+	    #${BIN}/./regrid ${DIR_IN}/${YEAR}${MON}_${VAR}_SouthAmerica.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
+	    CDO remapbil,${MASK}/gridded.txt ${DIR_IN}/${YEAR}${MON}_${VAR}_SouthAmerica.nc ${YEAR}${MON}_${VAR}_SouthAmerica_lonlat.nc 
 	    
 	    echo
 	    echo "3. Smooth"

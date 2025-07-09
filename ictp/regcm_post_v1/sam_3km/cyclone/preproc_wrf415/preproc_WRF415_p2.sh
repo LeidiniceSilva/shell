@@ -27,7 +27,7 @@ MODEL="WRF"
 DT="2018-2021"
 VAR_LIST="PSL U10 V10"
 
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/wrf"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/WRF415"
 
 echo
 cd ${DIR_OUT}

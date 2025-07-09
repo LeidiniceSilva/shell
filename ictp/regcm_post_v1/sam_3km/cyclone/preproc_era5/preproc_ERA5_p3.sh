@@ -6,8 +6,8 @@
 #__description__ = 'Postprocessing the dataset with CDO'
 
 # Change directory
-PATH_NC="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/obs/era5"
-PATH_BIN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/obs/era5/ncp"
+PATH_NC="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/ERA5"
+PATH_BIN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/ERA5/ncp"
 
 mkdir ${PATH_BIN}
 

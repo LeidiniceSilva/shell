@@ -25,8 +25,7 @@ CDO(){
 EXP="SAM-3km"
 DATASET="ERA5"
 YR="2018-2021"
-VAR_LIST="u10max v10max"
-#VAR_LIST="cape cin tp msl u10 v10"
+VAR_LIST="cape cin tp msl u10 v10"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/ERA5"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/ERA5"

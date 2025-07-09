@@ -25,8 +25,7 @@ CDO(){
 EXP="SAM-3km"
 MODEL="WRF415"
 DT="2018-2021"
-VAR_LIST="U10MAX V10MAX" 
-#VAR_LIST="AFWA_CAPE_MU AFWA_CIN_MU PSL U10 U10MAX V10 V10MAX PREC_ACC_NC" 
+VAR_LIST="AFWA_CAPE_MU AFWA_CIN_MU PSL U10 U10MAX V10 V10MAX PREC_ACC_NC" 
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/WRF415"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/WRF415"

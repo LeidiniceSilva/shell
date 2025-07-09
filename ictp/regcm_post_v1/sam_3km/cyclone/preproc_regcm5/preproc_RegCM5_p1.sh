@@ -27,7 +27,7 @@ EXP="SAM-3km"
 MODEL="RegCM5"
 DT="2018-2021"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/test/output"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/rcm/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/RegCM5"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 MASK="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/sam_3km/cyclone/mask"
@@ -40,7 +40,7 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 for VAR in ${VAR_LIST[@]}; do
-    for YEAR in `seq -w 2017 2021`; do
+    for YEAR in `seq -w 2018 2021`; do
         for MON in `seq -w 01 12`; do
 	    
 	    echo
@@ -49,7 +49,7 @@ for VAR in ${VAR_LIST[@]}; do
 
 	    echo
 	    echo "2. Regrid"
-	    ${BIN}/./regrid ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
+	    #${BIN}/./regrid ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc -34.5,-15,1.5 -76,-38.5,1.5 bil
 	    CDO remapbil,${MASK}/gridded.txt ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100.nc ${VAR}_${MODEL}_1hr_${YEAR}${MON}0100_lonlat.nc
 
 	    echo
@@ -62,8 +62,8 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "4. Merge files"  
-    CDO mergetime ${VAR}_${EXP}_${MODEL}_1hr_*0100_smooth2.nc ${VAR}_${EXP}_${MODEL}_1hr_2017-2021_smooth2.nc
-    CDO selyear,2018/2021 ${VAR}_${EXP}_${MODEL}_1hr_2017-2021_smooth2.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_smooth2.nc
+    CDO mergetime ${VAR}_${EXP}_${MODEL}_1hr_*0100_smooth2.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_smooth2.nc
+    #CDO selyear,2018/2021 ${VAR}_${EXP}_${MODEL}_1hr_2017-2021_smooth2.nc ${VAR}_${EXP}_${MODEL}_1hr_${DT}_smooth2.nc
 
 done
     
