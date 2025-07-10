@@ -1,6 +1,6 @@
 'reinit'
 'sdfopen mask.nc'
-'set lat -34.5 -15'
+'set lat -34.5 -16.5'
 'set lon -76 -38.5'
 'set gxout fwrite'
 'set fwrite -le mask.gra'

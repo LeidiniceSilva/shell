@@ -36,10 +36,10 @@ echo ${DIR_IN}
 echo
 echo "--------------- INIT POSPROCESSING DATASET ----------------"
 
-${BIN}/./regrid ${DIR_IN}/CMORPH/cmorph_SAM-3km_CMORPH_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil
-${BIN}/./regrid ${DIR_IN}/ERA5/tp_SAM-3km_ERA5_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil	
+#${BIN}/./regrid ${DIR_IN}/CMORPH/cmorph_SAM-3km_CMORPH_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil
+#${BIN}/./regrid ${DIR_IN}/ERA5/tp_SAM-3km_ERA5_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil	
 ${BIN}/./regrid ${DIR_IN}/RegCM5/pr_SAM-3km_RegCM5_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil
-${BIN}/./regrid ${DIR_IN}/WRF415/PREC_ACC_NC_SAM-3km_WRF415_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil
+#${BIN}/./regrid ${DIR_IN}/WRF415/PREC_ACC_NC_SAM-3km_WRF415_1hr_2018-2021_lonlat.nc -35.70235,-11.25009,0.22 -78.66277,-35.48362,0.22 bil
 
 echo
 echo "--------------- THE END POSPROCESSING DATASET ----------------"
