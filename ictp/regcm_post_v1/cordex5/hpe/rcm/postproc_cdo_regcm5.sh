@@ -23,9 +23,9 @@ CDO(){
 }
 
 VAR="pr"
-YR="2000-2009"
 EXP="CORDEX-RegCM5"
-DOMAINS="EURR-3 CSAM-3"
+DOMAINS="CSAM-3 EURR-3"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
@@ -49,7 +49,8 @@ echo "Select variable"
 for DOMAIN in ${DOMAINS[@]}; do
 
     DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-${DOMAIN}"
-    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/storm/rcm/${DOMAIN}"
+    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/hpe/rcm/${DOMAIN}/RegCM5"
+
     cd ${DIR_OUT}
     echo ${DIR_OUT}
 
@@ -74,16 +75,28 @@ for DOMAIN in ${DOMAINS[@]}; do
 	    for DAY in `seq -w 01 ${DAYS}`; do
 
 		CDO selname,${VAR} ${DIR_IN}/${DOMAIN}_SRF.${YEAR}${MON}${DAY}00.nc ${VAR}_${DOMAIN}_${YEAR}${MON}${DAY}.nc
-		CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${YEAR}${MON}${DAY}.nc ${VAR}_${DOMAIN}_${EXP}_${YEAR}${MON}${DAY}.nc 
+		CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${YEAR}${MON}${DAY}.nc ${VAR}_${DOMAIN}_${EXP}_${YEAR}${MON}${DAY}.nc
+
+		if [ ${DOMAIN} == 'CSAM-3' ]
+		then
+		${BIN}/./regrid ${VAR}_${DOMAIN}_${EXP}_${YEAR}${MON}${DAY}.nc -35.25,-22.25,0.0275 -60.25,-50.25,0.0275 bil
+		else
+		${BIN}/./regrid ${VAR}_${DOMAIN}_${EXP}_${YEAR}${MON}${DAY}.nc 40,50,0.0275 1,17,0.0275 bil
+		fi
 
 	    done
 	done
+
+    	echo
+   	echo "Merge files"
+	if [ ${DOMAIN} == 'CSAM-3' ]
+	then
+    	CDO mergetime ${VAR}_${DOMAIN}_${EXP}_${YEAR}*_lonlat.nc ${VAR}_SESA-3_${EXP}_1hr_${YEAR}_lonlat.nc
+	else
+    	CDO mergetime ${VAR}_${DOMAIN}_${EXP}_${YEAR}*_lonlat.nc ${VAR}_ALP-3_${EXP}_1hr_${YEAR}_lonlat.nc
+	fi
+
     done
-
-    echo
-    echo "Merge files"
-    CDO mergetime ${VAR}_${DOMAIN}_${EXP}_*.nc ${VAR}_${DOMAIN}_${EXP}_1hr_${YR}.nc
-
 done
 
 echo
