@@ -45,8 +45,10 @@ for VAR in ${VAR_LIST[@]}; do
     if [ ${VAR} == "tp" ]
     then
     CDO -b f32 mulc,1000 ${DIR_IN}/${VAR}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc
+    CDO selhour,00,06,12,18 ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_6hr_${YR}.nc
     CDO daysum ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc ${VAR}_${EXP}_${DATASET}_day_${YR}.nc
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_1hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
+    ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_6hr_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
     ${BIN}/./regrid ${VAR}_${EXP}_${DATASET}_day_${YR}.nc -35.70235,-11.25009,0.03 -78.66277,-35.48362,0.03 bil	
     elif [ ${VAR} == "u10max" ] || [ ${VAR} == "v10max" ]
     then

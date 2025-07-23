@@ -29,7 +29,7 @@ YR="2018-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/${DATASET}"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/${DATASET}"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
@@ -44,7 +44,7 @@ if [ ${DATASET} == 'CMORPH' ]
 then
 echo 
 echo "Merge files"
-FILE_IN=$( eval ls ${DIR_IN}/${DATASET}/cmorph_CSAM-3_CMORPH_1hr_{${IYR}..${FYR}}.nc )
+FILE_IN=$( eval ls ${DIR_IN}/${DATASET}/cmorph_SAM-3km_CMORPH_1hr_{${IYR}..${FYR}}.nc )
 FILE_OUT=cmorph_${EXP}_${DATASET}_1hr_${YR}.nc
 [[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
 CDO daysum cmorph_${EXP}_${DATASET}_1hr_${YR}.nc cmorph_${EXP}_${DATASET}_day_${YR}.nc

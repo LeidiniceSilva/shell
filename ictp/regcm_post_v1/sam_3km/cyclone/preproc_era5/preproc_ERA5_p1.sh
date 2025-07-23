@@ -43,9 +43,9 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "1. Merge files"
-    #FILE_IN=$( eval ls ${DIR_IN}/${VAR}_${DATASET}_1hr_{2018..2021}.nc )
-    #FILE_OUT=${VAR}_${DATASET}_1hr_${YR}.nc
-    #[[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
+    FILE_IN=$( eval ls ${DIR_IN}/${VAR}_${DATASET}_1hr_{2018..2021}.nc )
+    FILE_OUT=${VAR}_${DATASET}_1hr_${YR}.nc
+    [[ ! -f $FILE_OUT ]] && CDO -b f32 mergetime $FILE_IN $FILE_OUT
 
     echo
     echo "2. Regrid and smooth"
