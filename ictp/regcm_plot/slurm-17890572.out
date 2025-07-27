@@ -1,7 +1,0 @@
-
---------------- INIT PLOT ----------------
-Traceback (most recent call last):
-  File "/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/sam_3km/cyclone/paper/plot_maps_mslp_wind10m.py", line 186, in <module>
-    cmap_color = LinearSegmentedColormap.from_list("wind_gradient", colors)
-                 ^^^^^^^^^^^^^^^^^^^^^^^
-NameError: name 'LinearSegmentedColormap' is not defined
