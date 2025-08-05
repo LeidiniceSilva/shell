@@ -64,12 +64,11 @@ def parse_dtg(time_str):
 
 # Read the time variable
 times      = f.variables['time']
-valid_time = num2date(times[time_index]-15., times.units, times.calendar)
+valid_time = num2date(times[time_index], times.units, times.calendar)
 init_time  = valid_time
 accum_time = "000000"
 
 print("Valid Time =", valid_time)
-print("Valid Time strftime=")
 print("Accum Time =", accum_time)
 
 # Determine LatLon grid information
