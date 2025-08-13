@@ -35,13 +35,21 @@ cd ${DIR_IN}
 #python3 plot_maps_bias_srf_int_freq.py --stats int
 #python3 plot_maps_bias_srf_int_freq.py --stats freq
 
-python3 plot_maps_clim_atm.py --var uv --level 200hPa
-python3 plot_maps_clim_atm.py --var uv --level 500hPa
-python3 plot_maps_clim_atm.py --var uv --level 850hPa
+#python3 plot_maps_clim_atm.py --var uv --level 200hPa
+#python3 plot_maps_clim_atm.py --var uv --level 500hPa
+#python3 plot_maps_clim_atm.py --var uv --level 850hPa
 
-python3 plot_maps_clim_atm.py --var q --level 200hPa
-python3 plot_maps_clim_atm.py --var q --level 500hPa
-python3 plot_maps_clim_atm.py --var q --level 850hPa
+#python3 plot_maps_clim_atm.py --var q --level 200hPa
+#python3 plot_maps_clim_atm.py --var q --level 500hPa
+#python3 plot_maps_clim_atm.py --var q --level 850hPa
+
+python3 plot_maps_bias_atm.py --var uv --level 200hPa
+python3 plot_maps_bias_atm.py --var uv --level 500hPa
+python3 plot_maps_bias_atm.py --var uv --level 850hPa
+
+python3 plot_maps_bias_atm.py --var q --level 200hPa
+python3 plot_maps_bias_atm.py --var q --level 500hPa
+python3 plot_maps_bias_atm.py --var q --level 850hPa
 
 #python3 plot_graph_pdf_daily.py
 #python3 plot_graph_pdf_hourly.py

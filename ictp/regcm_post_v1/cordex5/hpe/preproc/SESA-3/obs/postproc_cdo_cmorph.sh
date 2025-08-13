@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT25_ESP
+#SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -36,14 +36,14 @@ echo "Select variable"
 for DOMAIN in ${DOMAINS[@]}; do
 
 	DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/${DATASET}"
-	DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/hpe/obs/SESA-3/CMORPH"
+	DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/hpe/input/${DOMAIN}/${DATASET}"
 
 	cd ${DIR_OUT}
 	echo ${DIR_OUT}
 
 	for YEAR in `seq -w 2000 2009`; do
 
-		${BIN}/./regrid ${DIR_IN}/${VAR}_CSAM-3_CMORPH_1hr_${YEAR}.nc -35.25,-22.25,0.0275 -60.25,-50.25,0.0275 bil
+		${BIN}/./regrid ${DIR_IN}/${VAR}_CSAM-3_CMORPH_1hr_${YEAR}.nc -36.25,-20.25,0.0275 -65.25,-45.25,0.0275 bil
 		mv ${VAR}_CSAM-3_CMORPH_1hr_${YEAR}_lonlat.nc ${VAR}_${DOMAIN}_${DATASET}_1hr_${YEAR}_lonlat.nc
 
 	done

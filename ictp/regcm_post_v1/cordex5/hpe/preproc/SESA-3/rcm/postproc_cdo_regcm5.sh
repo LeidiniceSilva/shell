@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT25_ESP
+#SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -24,7 +24,7 @@ CDO(){
 
 VAR="pr"
 EXP="CORDEX-RegCM5"
-DOMAINS="CSAM-3 EURR-3"
+DOMAINS="CSAM-3" # EURR-3
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -49,7 +49,13 @@ echo "Select variable"
 for DOMAIN in ${DOMAINS[@]}; do
 
     DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-${DOMAIN}"
-    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/hpe/rcm/${DOMAIN}/RegCM5"
+
+    if [ ${DOMAIN} == 'CSAM-3' ]
+    then
+    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/hpe/input/SESA-3/RegCM5"
+    else
+    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/hpe/input/ALP-3/RegCM5"
+    fi
 
     cd ${DIR_OUT}
     echo ${DIR_OUT}
@@ -79,7 +85,7 @@ for DOMAIN in ${DOMAINS[@]}; do
 
 		if [ ${DOMAIN} == 'CSAM-3' ]
 		then
-		${BIN}/./regrid ${VAR}_${DOMAIN}_${EXP}_${YEAR}${MON}${DAY}.nc -35.25,-22.25,0.0275 -60.25,-50.25,0.0275 bil
+		${BIN}/./regrid ${VAR}_${DOMAIN}_${EXP}_${YEAR}${MON}${DAY}.nc -36.25,-20.25,0.0275 -65.25,-45.25,0.0275 bil
 		else
 		${BIN}/./regrid ${VAR}_${DOMAIN}_${EXP}_${YEAR}${MON}${DAY}.nc 40,50,0.0275 1,17,0.0275 bil
 		fi
