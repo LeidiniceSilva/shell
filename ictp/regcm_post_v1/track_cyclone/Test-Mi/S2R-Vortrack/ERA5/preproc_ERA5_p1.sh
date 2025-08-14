@@ -42,7 +42,7 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "1. Regrid and smooth"
-    ${BIN}/./regrid ${DIR_IN}/${VAR}_${DATASET}_${YR}.nc -55,-20,1.5 -8,-30,1.5 bil
+    ${BIN}/./regrid ${DIR_IN}/${VAR}_${DATASET}_${YR}.nc -55,-20,1.5 -88,-30,1.5 bil
     CDO smooth ${VAR}_${DATASET}_${YR}_lonlat.nc ${VAR}_${DATASET}_${YR}_smooth.nc
     CDO smooth ${VAR}_${DATASET}_${YR}_smooth.nc ${VAR}_${EXP}_${DATASET}_${YR}_smooth2.nc
 
