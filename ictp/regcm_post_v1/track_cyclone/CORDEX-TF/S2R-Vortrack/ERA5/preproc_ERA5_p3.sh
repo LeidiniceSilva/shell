@@ -5,16 +5,19 @@
 #__date__        = 'Mar 15, 2024'
 #__description__ = 'Postprocessing the dataset with CDO'
 
-# Change directory
-PATH_NC="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/obs/era5"
-PATH_BIN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/cyclone/obs/era5/ncp"
+DATASET="ERA5"
+DOMAIN_LIST="AUS CAM EUR NAM SAM WAS"
 
-mkdir ${PATH_BIN}
+for DOMAIN in ${DOMAIN_LIST[@]}; do
 
-echo
-echo "Running GrADS script to select"
-echo ${PATH_NC}
-   
-grads -lbc "run preproc.gs ${PATH_NC} ${PATH_BIN}"
+    # Change directory
+    PATH_NC="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/${DATASET}/S2R-Vortrack/${DOMAIN}/postproc"
+    PATH_BIN="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/${DATASET}/S2R-Vortrack/${DOMAIN}/ncp"
+    mkdir ${PATH_BIN}
 
-#ncdump -h ${arqnc} |grep "currently)"|awk -Fcurrently '{print $1}'|awk -F\( '{print $2}'
+    echo
+    echo "Running GrADS script to select"
+    echo ${PATH_NC}
+    grads -lbc "run preproc.gs ${PATH_NC} ${PATH_BIN}"
+
+done

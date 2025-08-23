@@ -22,20 +22,19 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DATASET="ERA5"
+GCM="NorESM-2MM" # EC-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
 YR="2000-2009"
-VAR_LIST="msl u10 v10"
+VAR_LIST="psl uas vas"
 DOMAIN_LIST="AUS CAM EUR NAM SAM WAS"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/${DATASET}/S2R-Vortrack"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/GCMs/${GCM}/S2R-Vortrack"
 REMAP="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/track_cyclone/CORDEX-TF/S2R-Vortrack/Mask"
 
-echo
 echo "--------------- INIT POSPROCESSING DATASET ----------------"
 
 for DOMAIN in ${DOMAIN_LIST[@]}; do
 
-    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/${DATASET}/S2R-Vortrack/${DOMAIN}/postproc"
+    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/GCMs/${GCM}/S2R-Vortrack/${DOMAIN}/postproc"
 
     echo
     cd ${DIR_OUT}
@@ -45,9 +44,16 @@ for DOMAIN in ${DOMAIN_LIST[@]}; do
 
 	echo
 	echo "Regrid and smooth"
-	CDO remapbil,${REMAP}/grid_${DOMAIN}.txt ${DIR_IN}/${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_6hr_${YR}_lonlat.nc
-	CDO smooth ${VAR}_${DATASET}_6hr_${YR}_lonlat.nc ${VAR}_${DATASET}_6hr_${YR}_smooth.nc
-	CDO smooth ${VAR}_${DATASET}_6hr_${YR}_smooth.nc ${VAR}_${DATASET}_6hr_${YR}_smooth2.nc
+
+        if [ ${VAR} == 'psl' ]
+        then
+        CDO remapbil,${REMAP}/grid_${DOMAIN}.txt ${DIR_IN}/${VAR}_6hrPlevPt_${GCM}_historical_r1i1p1f1_gn_200001010000-200912311800.nc ${VAR}_${GCM}_6hr_${YR}_lonlat.nc
+        else
+	CDO remapbil,${REMAP}/grid_${DOMAIN}.txt ${DIR_IN}/${VAR}_6hrPlevPt_${GCM}_historical_r1i1p1f1_gn_200001010000-200912311800.nc ${VAR}_${GCM}_6hr_${YR}_lonlat.nc
+	fi
+
+	CDO smooth ${VAR}_${GCM}_6hr_${YR}_lonlat.nc ${VAR}_${GCM}_6hr_${YR}_smooth.nc
+	CDO smooth ${VAR}_${GCM}_6hr_${YR}_smooth.nc ${VAR}_${GCM}_6hr_${YR}_smooth2.nc
 
     done
 done

@@ -22,8 +22,8 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DATASET="ERA5"
-VAR_LIST="msl u10 v10"
+GCM="NorESM-2MM" # EC-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
+VAR_LIST="psl uas vas"
 DOMAIN_LIST="AUS CAM EUR NAM SAM WAS"
 
 ANO_I=2000
@@ -31,7 +31,7 @@ ANO_F=2009
 
 for DOMAIN in ${DOMAIN_LIST[@]}; do
 	
-    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/${DATASET}/S2R-Vortrack/${DOMAIN}/postproc"
+    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/GCMs/${GCM}/S2R-Vortrack/${DOMAIN}/postproc"
 
     echo
     cd ${DIR_OUT}
@@ -39,10 +39,10 @@ for DOMAIN in ${DOMAIN_LIST[@]}; do
 
     for VAR in ${VAR_LIST[@]}; do
         for YR in $(seq $ANO_I $ANO_F); do
-            CDO selyear,$YR ${VAR}_${DATASET}_6hr_2000-2009_smooth2.nc ${VAR}_${DATASET}_6hr_${YR}.nc
+            CDO selyear,$YR ${VAR}_${GCM}_6hr_2000-2009_smooth2.nc ${VAR}_${GCM}_6hr_${YR}.nc
    	
-	    for HR in 00 06 12 18; do
-                CDO selhour,$HR ${VAR}_${DATASET}_6hr_${YR}.nc ${VAR}.${YR}.${HR}.nc
+	    for HR in 03 09 15 21; do # 00 06 12 18; do
+                CDO selhour,$HR ${VAR}_${GCM}_6hr_${YR}.nc ${VAR}.${YR}.${HR}.nc
 	    done		
 	done
     done

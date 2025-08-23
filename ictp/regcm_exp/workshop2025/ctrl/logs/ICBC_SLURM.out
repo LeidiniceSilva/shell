@@ -1,0 +1,118 @@
+
+  This is Terrain part of RegCM package version 5 
+   GIT Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 07 2025  time: 14:11:50
+
+ : this run start at  : 2025-08-23 11:51:45+0200
+ : it is submitted by : mdasilva
+ : it is running on   : lrdn4760.leonardo.local
+ : in directory       : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/works
+ hop2025/ctrl
+                      
+ Using non hydrostatic Moloch dynamic
+  
+ Doing Horizontal Grid with following parameters
+ iy     =          644
+ jx     =          644
+ kz     =           51
+ ds     =    4.44795693794183     
+ clat   =    13.0000000000000     
+ clon   =   -100.000000000000     
+ iproj  = ROTLLR
+ Grid setup done
+ Geo mapping done
+ Calculated large extrema:
+          MINLAT =   -3.00000000000000     
+          MAXLAT =    29.0000000000000     
+          MINLON =   -116.000000000000     
+          MAXLON =   -85.0000000000000     
+ Determined Grid coordinate range
+ No resampling used.
+ Static DEM data successfully read in
+ Interpolated DEM on model GRID
+ Static landcover BATS data successfully read in
+ Interpolated landcover on model GRID
+ Static texture data successfully read in
+ Interpolated texture on model GRID
+ Static bathymetry data successfully read in
+ Interpolated bathymetry on model GRID
+ Fudging data (if requested) succeeded
+ Skip moisture creation, no moisture file to read
+ Vertical Grid Description (mean over domain)
+  
+ --------------------------------------------------
+ k        sigma       p(mb)          h(m)      T(K)
+ --------------------------------------------------
+ 52       1.000     1013.25          0.00     288.1
+ 51       0.980     1005.80         62.19     287.7
+ 50       0.961      997.96        128.06     287.3
+ 49       0.941      989.70        197.93     286.9
+ 48       0.922      980.99        272.11     286.4
+ 47       0.902      971.79        350.95     285.9
+ 46       0.882      962.09        434.82     285.3
+ 45       0.863      951.85        524.11     284.7
+ 44       0.843      941.04        619.25     284.1
+ 43       0.824      929.62        720.67     283.5
+ 42       0.804      917.56        828.84     282.8
+ 41       0.784      904.84        944.28     282.0
+ 40       0.765      891.41       1067.50     281.2
+ 39       0.745      877.25       1199.09     280.4
+ 38       0.725      862.33       1339.65     279.5
+ 37       0.706      846.62       1489.83     278.5
+ 36       0.686      830.08       1650.31     277.4
+ 35       0.667      812.70       1821.83     276.3
+ 34       0.647      794.44       2005.17     275.1
+ 33       0.627      775.30       2201.16     273.9
+ 32       0.608      755.24       2410.69     272.5
+ 31       0.588      734.27       2634.71     271.1
+ 30       0.569      712.37       2874.22     269.5
+ 29       0.549      689.55       3130.30     267.8
+ 28       0.529      665.80       3404.10     266.1
+ 27       0.510      641.15       3696.83     264.2
+ 26       0.490      615.61       4009.81     262.1
+ 25       0.471      589.23       4344.42     260.0
+ 24       0.451      562.05       4702.14     257.6
+ 23       0.431      534.12       5084.55     255.2
+ 22       0.412      505.52       5493.34     252.5
+ 21       0.392      476.34       5930.32     249.7
+ 20       0.373      446.66       6397.39     246.6
+ 19       0.353      416.62       6896.60     243.4
+ 18       0.333      386.34       7430.14     239.9
+ 17       0.314      355.98       8000.34     236.2
+ 16       0.294      325.70       8609.68     232.3
+ 15       0.275      295.68       9260.81     228.0
+ 14       0.255      266.13       9956.56     223.5
+ 13       0.235      237.24      10699.96     218.7
+ 12       0.216      209.23      11494.21     216.6
+ 11       0.196      182.33      12342.77     217.6
+ 10       0.176      156.76      13249.30     218.0
+  9       0.157      132.74      14217.70     218.4
+  8       0.137      110.46      15252.17     218.9
+  7       0.118       90.11      16357.15     219.4
+  6       0.098       71.84      17537.41     219.9
+  5       0.078       55.77      18798.01     220.5
+  4       0.059       41.95      20144.39     221.1
+  3       0.039       30.40      21582.33     221.7
+  2       0.020       21.05      23117.98     222.4
+  1      -0.000       13.79      24757.96     223.2
+ Grid data written to output file
+ Successfully completed terrain fields generation
+
+  This is mksurfdata part of RegCM package version 5
+   GIT Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 22 2025  time: 18:43:18
+
+ : this run start at  : 2025-08-23 11:51:48+0200
+ : it is submitted by : mdasilva
+ : it is running on   : lrdn4760.leonardo.local
+ : in directory       : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/works
+ hop2025/ctrl
+                      
+ Created topographic informations...
+ Computing weights, R =      39.31474972 .......... Done.
+ Computing weights, R =      11.79514432 .......... Done.
+ Computing weights, R =      11.79442692 .......... Done.
+ Computing weights, R =      11.79514432 .......... Done.
+ Created special categories informations...
+ Created pft informations...
+ Computing weights, R =     117.94408035 .......... Done.
