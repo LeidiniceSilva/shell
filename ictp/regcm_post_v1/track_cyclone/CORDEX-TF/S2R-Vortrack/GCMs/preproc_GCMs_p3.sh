@@ -5,7 +5,7 @@
 #__date__        = 'Mar 15, 2024'
 #__description__ = 'Postprocessing the dataset with CDO'
 
-GCM_LIST="MPI-ESM1-2-HR" #EC-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
+GCM_LIST="CNRM-ESM2-1" # CNRM-ESM2-1 EC-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
 DOMAIN_LIST="AUS CAM EUR NAM SAM WAS"
 
 for GCM in ${GCM_LIST[@]}; do

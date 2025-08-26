@@ -22,7 +22,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-GCM="NorESM-2MM" # EC-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
+GCM="CNRM-ESM2-1" # ECNRM-ESM2-1 C-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
 YR="2000-2009"
 VAR_LIST="psl uas vas"
 DOMAIN_LIST="AUS CAM EUR NAM SAM WAS"
@@ -47,9 +47,9 @@ for DOMAIN in ${DOMAIN_LIST[@]}; do
 
         if [ ${VAR} == 'psl' ]
         then
-        CDO remapbil,${REMAP}/grid_${DOMAIN}.txt ${DIR_IN}/${VAR}_6hrPlevPt_${GCM}_historical_r1i1p1f1_gn_200001010000-200912311800.nc ${VAR}_${GCM}_6hr_${YR}_lonlat.nc
+        CDO remapbil,${REMAP}/grid_${DOMAIN}.txt ${DIR_IN}/${VAR}_6hrPlevPt_${GCM}_historical_r1i1p1f2_gr_200001010000-200912311800.nc ${VAR}_${GCM}_6hr_${YR}_lonlat.nc
         else
-	CDO remapbil,${REMAP}/grid_${DOMAIN}.txt ${DIR_IN}/${VAR}_6hrPlevPt_${GCM}_historical_r1i1p1f1_gn_200001010000-200912311800.nc ${VAR}_${GCM}_6hr_${YR}_lonlat.nc
+	CDO remapbil,${REMAP}/grid_${DOMAIN}.txt ${DIR_IN}/${VAR}_6hrPlevPt_${GCM}_historical_r1i1p1f2_gr_200001010000-200912311800.nc ${VAR}_${GCM}_6hr_${YR}_lonlat.nc
 	fi
 
 	CDO smooth ${VAR}_${GCM}_6hr_${YR}_lonlat.nc ${VAR}_${GCM}_6hr_${YR}_smooth.nc

@@ -52,7 +52,7 @@
  ds = -0.04,       ! Grid point horizontal resolution in km
  ptop = 10.0,      ! Pressure of model top in cbar
  clat = 13.0,      ! Central latitude  of model domain in degrees North hemisphere is positive
- clon = 260.0,     ! Central longitude of model domain in degrees West is negative.
+ clon = 265.0,     ! Central longitude of model domain in degrees West is negative.
  plat = -70.60,    ! Pole latitude (only for rotated Mercator Proj)
  plon = 123.94,    ! Pole longitude (only for rotated Mercator Proj)
  truelatl = -30.,  ! Lambert true latitude (low latitude side)
@@ -129,8 +129,8 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = 2023101900,       ! Start date for ICBC data generation
- gdate2 = 2023102700,         ! End data for ICBC data generation
+ gdate1 = 2023101900,        ! Start date for ICBC data generation
+ gdate2 = 2023102700,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/WORKSHOP2025/ctrl/input', ! Path for ICBC produced input files
  inpglob = '/leonardo_work/ICT25_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
@@ -208,7 +208,7 @@
  ifchem  = .false.,           ! Output CHE ?
  ifopt   = .false.,           ! Output OPT ?
  chemfrq =      6.,           ! Frequency in hours to write to CHE
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/test/output', ! Path where all output will be placed
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/WORKSHOP2025/ctrl/output', ! Path where all output will be placed
  lsync   = .true.,                 ! If sync of output files at every timestep is requested.
                                    ! Note, it has a performance impact.
                                    ! Enabled by default if debug_level > 2
@@ -241,7 +241,7 @@
  iqmsl =            1,  ! Quasi-monotonic Semi Lagrangian
                         !   0 => Standard Semi-Lagrangian
                         !   1 => Bermejo and Staniforth 1992 QMSL scheme
- ibltyp  =          1,  ! Boundary layer scheme
+ ibltyp  =          2,  ! Boundary layer scheme
                         !   0 => Frictionless
                         !   1 => Holtslag PBL (Holtslag, 1990)
                         !   2 => UW PBL (Bretherton and McCaa, 2004)
@@ -266,7 +266,7 @@
                         !   1 => Use BATS1e Monin-Obukhov
                         !   2 => Zeng et al (1998)
                         !   3 => Coare bulk flux algorithm
- iocnrough =        1,  ! Zeng Ocean model roughness formula to use.
+ iocnrough =        3,  ! Zeng Ocean model roughness formula to use.
                         !   1 => (0.0065*ustar*ustar)/egrav
                         !   2 => (0.013*ustar*ustar)/egrav + 0.11*visa/ustar
                         !   3 => (0.017*ustar*ustar)/egrav

@@ -22,7 +22,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-GCM="NorESM-2MM" # EC-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
+GCM="CNRM-ESM2-1" # CNRM-ESM2-1 EC-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
 VAR_LIST="psl uas vas"
 DOMAIN_LIST="AUS CAM EUR NAM SAM WAS"
 
@@ -41,7 +41,7 @@ for DOMAIN in ${DOMAIN_LIST[@]}; do
         for YR in $(seq $ANO_I $ANO_F); do
             CDO selyear,$YR ${VAR}_${GCM}_6hr_2000-2009_smooth2.nc ${VAR}_${GCM}_6hr_${YR}.nc
    	
-	    for HR in 03 09 15 21; do # 00 06 12 18; do
+	    for HR in 00 06 12 18; do # 03 09 15 21
                 CDO selhour,$HR ${VAR}_${GCM}_6hr_${YR}.nc ${VAR}.${YR}.${HR}.nc
 	    done		
 	done

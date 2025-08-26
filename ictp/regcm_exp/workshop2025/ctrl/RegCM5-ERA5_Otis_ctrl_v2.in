@@ -65,7 +65,7 @@
 ! DOMAIN terrain generation parameters
 !
  &terrainparam
- domname     = 'Otis_sst'     ! Name of the domain/experiment. Controls naming of input files
+ domname     = 'Otis_ctrl'    ! Name of the domain/experiment. Controls naming of input files
  lresamp     = .false.,       ! Do a first resampling before interpolation
  smthbdy     = .true.,        ! Perform extra smoothing in boundaries
  ismthlev    = 2,             ! Smoothing level (additional 1-2-1 smoother)
@@ -80,7 +80,7 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/WORKSHOP2025/sst/input',  ! Output directory for terrain files
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/WORKSHOP2025/ctrl/input',  ! Output directory for terrain files
  inpter = '/leonardo_work/ICT25_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
@@ -132,7 +132,7 @@
  gdate1 = 2023101900,        ! Start date for ICBC data generation
  gdate2 = 2023102700,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/WORKSHOP2025/sst/input', ! Path for ICBC produced input files
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/WORKSHOP2025/ctrl/input', ! Path for ICBC produced input files
  inpglob = '/leonardo_work/ICT25_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
@@ -208,7 +208,7 @@
  ifchem  = .false.,           ! Output CHE ?
  ifopt   = .false.,           ! Output OPT ?
  chemfrq =      6.,           ! Frequency in hours to write to CHE
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/WORKSHOP2025/sst/output', ! Path where all output will be placed
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/WORKSHOP2025/ctrl/output', ! Path where all output will be placed
  lsync   = .true.,                 ! If sync of output files at every timestep is requested.
                                    ! Note, it has a performance impact.
                                    ! Enabled by default if debug_level > 2
@@ -241,7 +241,7 @@
  iqmsl =            1,  ! Quasi-monotonic Semi Lagrangian
                         !   0 => Standard Semi-Lagrangian
                         !   1 => Bermejo and Staniforth 1992 QMSL scheme
- ibltyp  =          1,  ! Boundary layer scheme
+ ibltyp  =          2,  ! Boundary layer scheme
                         !   0 => Frictionless
                         !   1 => Holtslag PBL (Holtslag, 1990)
                         !   2 => UW PBL (Bretherton and McCaa, 2004)
@@ -305,7 +305,7 @@
  isolconst =        0,  ! Use a constant 1367 W/m^2 instead of the prescribed
                         ! TSI recommended CMIP5 solar forcing data.
  islab_ocean =      0,  ! Activate the SLAB ocean model
- itweak =           1,  ! Enable tweak scenario
+ itweak =           0,  ! Enable tweak scenario
  iclimaaer =        3,  ! x Aerosol
  radclimpath = '/leonardo_work/ICT25_ESP/RCMDATA/MERRA2/OPPMONTH', 
  /
@@ -363,21 +363,6 @@
  &holtslagparam
  ifaholtth10 = 2,
  ifaholt = 0,
- /
-
-!
-! Tweaking parameters
-!
- &tweakparam
- itweak_sst = 1,              ! Enable adding sst_tweak to input TS
- itweak_temperature = 0,      ! Enable adding temperature_tweak to input T
- itweak_solar_irradiance = 0, ! Add solar_tweak to solar constant
- itweak_greenhouse_gases = 0, ! Multiply gas_tweak_factors to GG concentrations
- sst_tweak = -1.0,            ! In K
- temperature_tweak = 0.0,     ! In K
- solar_tweak = 0.0,           ! In W m-2 (1367.0 is default solar)
- gas_tweak_factors = 1.0, 1.0 , 1.0 , 1.0 , 1.0,
- !                   CO2  CH4   N2O   CFC11 CFC12
  /
  
 !
