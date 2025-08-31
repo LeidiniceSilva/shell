@@ -22,7 +22,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-GCM="CNRM-ESM2-1" # CNRM-ESM2-1 EC-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
+GCM="MPI-ESM1-2-HR" # CNRM-ESM2-1 EC-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
 VAR_LIST="psl uas vas"
 DOMAIN_LIST="AUS CAM EUR NAM SAM WAS"
 
@@ -31,7 +31,7 @@ ANO_F=2009
 
 for DOMAIN in ${DOMAIN_LIST[@]}; do
 	
-    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/GCMs/${GCM}/S2R-Vortrack/${DOMAIN}/postproc"
+    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/${GCM}/S2R-Vortrack/${DOMAIN}/postproc"
 
     echo
     cd ${DIR_OUT}
