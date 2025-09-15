@@ -25,7 +25,7 @@ CDO(){
 DATASET="ERA5"
 YR="2000-2009"
 VAR_LIST="msl u10 v10"
-DOMAIN_LIST="AUS CAM EUR NAM SAM WAS"
+DOMAIN_LIST="AFR AUS CAM EAS EUR NAM SAM WAS"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/${DATASET}/S2R-Vortrack"
 REMAP="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/track_cyclone/CORDEX-TF/S2R-Vortrack/Mask"

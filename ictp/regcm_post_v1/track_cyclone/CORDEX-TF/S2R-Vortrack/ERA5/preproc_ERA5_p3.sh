@@ -6,7 +6,8 @@
 #__description__ = 'Postprocessing the dataset with CDO'
 
 DATASET="ERA5"
-DOMAIN_LIST="AUS CAM EUR NAM SAM WAS"
+DOMAIN_LIST="EAS"
+#DOMAIN_LIST="AFR AUS CAM EAS EUR NAM SAM WAS"
 
 for DOMAIN in ${DOMAIN_LIST[@]}; do
 
