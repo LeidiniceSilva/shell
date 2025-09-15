@@ -22,27 +22,32 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-GCM="MPI-ESM1-2-HR" # CNRM-ESM2-1 EC-Earth3-Veg MPI-ESM1-2-HR NorESM-2MM
-VAR_LIST="psl uas vas"
-DOMAIN_LIST="AUS CAM EUR NAM SAM WAS"
-
 ANO_I=2000
 ANO_F=2009 
 
-for DOMAIN in ${DOMAIN_LIST[@]}; do
+VAR_LIST="psl uas vas"
+DOMAIN_LIST="AFR AUS CAM EAS EUR NAM SAM WAS"
+GCM_LIST="GFDL-ESM4 HadGEM3-GC31-MM MPI-ESM1-2-LR"
+#GCM_LIST="CNRM-ESM2-1 EC-Earth3-Veg GFDL-ESM4 HadGEM3-GC31-MM MPI-ESM1-2-HR MPI-ESM1-2-LR NorESM-2MM UKESM1-0-LL"
+
+for GCM in ${GCM_LIST[@]}; do
+
+    for DOMAIN in ${DOMAIN_LIST[@]}; do
 	
-    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/${GCM}/S2R-Vortrack/${DOMAIN}/postproc"
+        DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/${GCM}/S2R-Vortrack/${DOMAIN}/postproc"
 
-    echo
-    cd ${DIR_OUT}
-    echo ${DIR_OUT}
+    	echo
+    	cd ${DIR_OUT}
+    	echo ${DIR_OUT}
 
-    for VAR in ${VAR_LIST[@]}; do
-        for YR in $(seq $ANO_I $ANO_F); do
-            CDO selyear,$YR ${VAR}_${GCM}_6hr_2000-2009_smooth2.nc ${VAR}_${GCM}_6hr_${YR}.nc
+    	for VAR in ${VAR_LIST[@]}; do
+            for YR in $(seq $ANO_I $ANO_F); do
+                CDO selyear,$YR ${VAR}_${GCM}_6hr_2000-2009_smooth2.nc ${VAR}_${GCM}_6hr_${YR}.nc
    	
-	    for HR in 00 06 12 18; do # 03 09 15 21
-                CDO selhour,$HR ${VAR}_${GCM}_6hr_${YR}.nc ${VAR}.${YR}.${HR}.nc
+	        for HR in 00 06 12 18; do # 03 09 15 21
+                    CDO selhour,$HR ${VAR}_${GCM}_6hr_${YR}.nc ${VAR}.${YR}.${HR}.nc
+
+		done
 	    done		
 	done
     done
