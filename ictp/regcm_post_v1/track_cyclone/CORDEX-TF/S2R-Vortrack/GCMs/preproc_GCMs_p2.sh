@@ -27,7 +27,7 @@ ANO_F=2009
 
 VAR_LIST="psl uas vas"
 DOMAIN_LIST="AFR AUS CAM EAS EUR NAM SAM WAS"
-GCM_LIST="GFDL-ESM4 HadGEM3-GC31-MM MPI-ESM1-2-LR"
+GCM_LIST="HadGEM3-GC31-MM"
 #GCM_LIST="CNRM-ESM2-1 EC-Earth3-Veg GFDL-ESM4 HadGEM3-GC31-MM MPI-ESM1-2-HR MPI-ESM1-2-LR NorESM-2MM UKESM1-0-LL"
 
 for GCM in ${GCM_LIST[@]}; do
@@ -42,6 +42,8 @@ for GCM in ${GCM_LIST[@]}; do
 
     	for VAR in ${VAR_LIST[@]}; do
             for YR in $(seq $ANO_I $ANO_F); do
+		CDO setcalendar,standard ${VAR}_${GCM}_6hr_2000-2009_smooth2.nc ${VAR}_${GCM}_6hr_2000-2009_smooth2_calendar.nc
+		mv ${VAR}_${GCM}_6hr_2000-2009_smooth2_calendar.nc ${VAR}_${GCM}_6hr_2000-2009_smooth2.nc
                 CDO selyear,$YR ${VAR}_${GCM}_6hr_2000-2009_smooth2.nc ${VAR}_${GCM}_6hr_${YR}.nc
    	
 	        for HR in 00 06 12 18; do # 03 09 15 21

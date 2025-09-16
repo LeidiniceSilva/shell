@@ -1,9 +1,0 @@
---------------- INIT POSPROCESSING DATASET ----------------
-
-/leonardo/home/userexternal/mdasilva/leonardo_work/TRACK-CYCLONE/CORDEX-TF/GFDL-ESM4/S2R-Vortrack/AFR/postproc
-
-Regrid and smooth
-cdo    remapbil: Bilinear weights from lonlat (288x180) to lonlat (54x27) grid
-
-Regrid and smooth
-cdo    remapbil: Bilinear weights from lonlat (288x180) to lonlat (54x27) grid
