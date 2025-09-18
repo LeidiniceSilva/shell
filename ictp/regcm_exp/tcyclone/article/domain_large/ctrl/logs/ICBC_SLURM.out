@@ -1,0 +1,227 @@
+
+  This is Terrain part of RegCM package version 5 
+   GIT Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:38:17
+
+ : this run start at  : 2025-09-18 12:25:56+0200
+ : it is submitted by : mdasilva
+ : it is running on   : lrdn3634.leonardo.local
+ : in directory       : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
+ one/article/domain_large/ctrl
+                      
+ Using non hydrostatic Moloch dynamic
+  
+ Doing Horizontal Grid with following parameters
+ iy     =         1074
+ jx     =         1288
+ kz     =           51
+ ds     =    4.44795693794183     
+ clat   =    20.0000000000000     
+ clon   =   -95.0000000000000     
+ iproj  = ROTLLR
+ Grid setup done
+ Geo mapping done
+ Calculated large extrema:
+          MINLAT =   -6.00000000000000     
+          MAXLAT =    47.0000000000000     
+          MINLON =   -125.000000000000     
+          MAXLON =   -70.0000000000000     
+ Determined Grid coordinate range
+ No resampling used.
+ Static DEM data successfully read in
+ Interpolated DEM on model GRID
+ Static landcover BATS data successfully read in
+ Interpolated landcover on model GRID
+ Static texture data successfully read in
+ Interpolated texture on model GRID
+ Static bathymetry data successfully read in
+ Interpolated bathymetry on model GRID
+ Fudging data (if requested) succeeded
+ Skip moisture creation, no moisture file to read
+ Vertical Grid Description (mean over domain)
+  
+ --------------------------------------------------
+ k        sigma       p(mb)          h(m)      T(K)
+ --------------------------------------------------
+ 52       1.000     1013.25          0.00     288.1
+ 51       0.980     1005.81         62.13     287.7
+ 50       0.961      997.99        127.83     287.3
+ 49       0.941      989.76        197.41     286.9
+ 48       0.922      981.09        271.20     286.4
+ 47       0.902      971.96        349.55     285.9
+ 46       0.882      962.32        432.84     285.3
+ 45       0.863      952.16        521.45     284.8
+ 44       0.843      941.42        615.82     284.2
+ 43       0.824      930.10        716.40     283.5
+ 42       0.804      918.14        823.65     282.8
+ 41       0.784      905.52        938.08     282.1
+ 40       0.765      892.20       1060.25     281.3
+ 39       0.745      878.15       1190.71     280.4
+ 38       0.725      863.34       1330.08     279.5
+ 37       0.706      847.74       1479.02     278.6
+ 36       0.686      831.32       1638.21     277.5
+ 35       0.667      814.05       1808.40     276.4
+ 34       0.647      795.90       1990.36     275.2
+ 33       0.627      776.87       2184.94     274.0
+ 32       0.608      756.92       2393.04     272.6
+ 31       0.588      736.04       2615.59     271.2
+ 30       0.569      714.24       2853.61     269.6
+ 29       0.549      691.49       3108.19     268.0
+ 28       0.529      667.82       3380.47     266.2
+ 27       0.510      643.24       3671.69     264.3
+ 26       0.490      617.76       3983.14     262.3
+ 25       0.471      591.42       4316.23     260.1
+ 24       0.451      564.27       4672.43     257.8
+ 23       0.431      536.36       5053.34     255.4
+ 22       0.412      507.76       5460.65     252.7
+ 21       0.392      478.57       5896.16     249.9
+ 20       0.373      448.87       6361.79     246.9
+ 19       0.353      418.79       6859.60     243.6
+ 18       0.333      388.46       7391.76     240.2
+ 17       0.314      358.03       7960.63     236.5
+ 16       0.294      327.67       8568.67     232.5
+ 15       0.275      297.56       9218.57     228.3
+ 14       0.255      267.90       9913.13     223.8
+ 13       0.235      238.89      10655.40     219.0
+ 12       0.216      210.76      11448.59     213.8
+ 11       0.196      183.73      12296.15     216.6
+ 10       0.176      158.03      13201.76     217.8
+  9       0.157      133.86      14169.32     218.2
+  8       0.137      111.44      15203.02     218.7
+  7       0.118       90.96      16307.32     219.2
+  6       0.098       72.55      17486.99     219.7
+  5       0.078       56.35      18747.11     220.3
+  4       0.059       42.42      20093.10     220.9
+  3       0.039       30.76      21530.75     221.5
+  2       0.020       21.32      23066.23     222.2
+  1      -0.000       13.98      24706.14     222.9
+ Grid data written to output file
+ Successfully completed terrain fields generation
+
+  This is mksurfdata part of RegCM package version 5
+   GIT Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:39:51
+
+ : this run start at  : 2025-09-18 12:26:05+0200
+ : it is submitted by : mdasilva
+ : it is running on   : lrdn3634.leonardo.local
+ : in directory       : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
+ one/article/domain_large/ctrl
+                      
+ Created topographic informations...
+ Computing weights, R =      39.31474972 .......... Done.
+ Computing weights, R =      11.79514432 .......... Done.
+ Computing weights, R =      11.79442692 .......... Done.
+ Computing weights, R =      11.79514432 .......... Done.
+ Created special categories informations...
+ Created pft informations...
+ Computing weights, R =     117.94408035 .......... Done.
+ Created lai/sai informations...
+ Computing weights, R =      29.48606300 .......... Done.
+ Computing weights, R =     117.94408035 .......... Done.
+ Computing weights, R =      19.65767813 .......... Done.
+ Created soil texture/color informations...
+ Computing weights, R =     117.94408035 .......... Done.
+ Computing weights, R =     117.94408035 .......... Done.
+ Computing weights, R =     117.94408035 .......... Done.
+ Created human population informations...
+ Computing weights, R =     117.94408035 .......... Done.
+ Computing weights, R =      19.65767670 .......... Done.
+ Created VOC/horganic informations...
+ Computing weights, R =      11.79514432 .......... Done.
+ Computing weights, R =      11.79442692 .......... Done.
+ Created LAKE/URBAN informations...
+ Successfully completed CLM preprocessing.
+
+  This is sst part of the RegCM version 5
+   SVN Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:38:34
+
+ : this run start at    : 2025-09-18 12:38:59+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : lrdn3634.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
+ one/article/domain_large/ctrl
+                       
+ Opened /leonardo_work/ICT25_ESP/RCMDATA/ERA5/SSTD/sst_2023_10.nc
+ Fill Value   =  -32767
+ Add offset   =    289.042056362288     
+ Scale factor =   6.040722982600369E-004
+ Computing weights, R =      39.31469345 .......... Done.
+ GLOBIDATE1 :  2023-10-19 00:00:00 UTC        
+ GLOBIDATE2 :  2023-10-27 00:00:00 UTC        
+ NSTEPS =            9
+ WRITEN OUT SST DATA :  2023-10-19 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2023-10-20 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2023-10-21 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2023-10-22 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2023-10-23 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2023-10-24 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2023-10-25 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2023-10-26 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2023-10-27 00:00:00 UTC        
+ Input ready at : Thu Sep 18 12:39:02 2025
+ Successfully generated SST
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:38:34
+
+ : this run start at    : 2025-09-18 12:39:02+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : lrdn3634.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
+ one/article/domain_large/ctrl
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2023-10-19 00:00:00 UTC        
+ GLOBIDATE2 :  2023-10-27 00:00:00 UTC        
+ NSTEPS     :           33
+ Computing weights, R =      39.31469345 .......... Done.
+ Computing weights, R =      39.31469345 .......... Done.
+ Computing weights, R =      39.31469345 .......... Done.
+      131072 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2023/tatm_2023_10.nc
+  2.061811361603481E-003   251.632628457112     
+      196608 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2023/geop_2023_10.nc
+   7.38400786626585        235635.714246067     
+      262144 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2023/qhum_2023_10.nc
+  4.024191313448453E-007  1.308834570112860E-002
+      327680 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2023/uwnd_2023_10.nc
+  3.369716814086629E-003   25.2393048266516     
+      393216 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2023/vwnd_2023_10.nc
+  2.907983430849009E-003   4.57844102781583     
+ READ IN fields at DATE: 2023-10-19 00:00:00 UTC        
+ READ IN fields at DATE: 2023-10-19 06:00:00 UTC        
+ READ IN fields at DATE: 2023-10-19 12:00:00 UTC        
+ READ IN fields at DATE: 2023-10-19 18:00:00 UTC        
+ READ IN fields at DATE: 2023-10-20 00:00:00 UTC        
+ READ IN fields at DATE: 2023-10-20 06:00:00 UTC        
+ READ IN fields at DATE: 2023-10-20 12:00:00 UTC        
+ READ IN fields at DATE: 2023-10-20 18:00:00 UTC        
+ READ IN fields at DATE: 2023-10-21 00:00:00 UTC        
+ READ IN fields at DATE: 2023-10-21 06:00:00 UTC        
+ READ IN fields at DATE: 2023-10-21 12:00:00 UTC        
+ READ IN fields at DATE: 2023-10-21 18:00:00 UTC        
+ READ IN fields at DATE: 2023-10-22 00:00:00 UTC        
+ READ IN fields at DATE: 2023-10-22 06:00:00 UTC        
+ READ IN fields at DATE: 2023-10-22 12:00:00 UTC        
+ READ IN fields at DATE: 2023-10-22 18:00:00 UTC        
+ READ IN fields at DATE: 2023-10-23 00:00:00 UTC        
+ READ IN fields at DATE: 2023-10-23 06:00:00 UTC        
+ READ IN fields at DATE: 2023-10-23 12:00:00 UTC        
+ READ IN fields at DATE: 2023-10-23 18:00:00 UTC        
+ READ IN fields at DATE: 2023-10-24 00:00:00 UTC        
+ READ IN fields at DATE: 2023-10-24 06:00:00 UTC        
+ READ IN fields at DATE: 2023-10-24 12:00:00 UTC        
+ READ IN fields at DATE: 2023-10-24 18:00:00 UTC        
+ READ IN fields at DATE: 2023-10-25 00:00:00 UTC        
+ READ IN fields at DATE: 2023-10-25 06:00:00 UTC        
+ READ IN fields at DATE: 2023-10-25 12:00:00 UTC        
+ READ IN fields at DATE: 2023-10-25 18:00:00 UTC        
+ READ IN fields at DATE: 2023-10-26 00:00:00 UTC        
+ READ IN fields at DATE: 2023-10-26 06:00:00 UTC        
+ READ IN fields at DATE: 2023-10-26 12:00:00 UTC        
+ READ IN fields at DATE: 2023-10-26 18:00:00 UTC        
+ READ IN fields at DATE: 2023-10-27 00:00:00 UTC        
+ Input ready at : Thu Sep 18 12:47:53 2025
+ Successfully completed ICBC
