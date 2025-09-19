@@ -1,0 +1,9 @@
+ Permission denied                                                              
+  
+ In File mod_ncstream.F90 at line:          377
+ nc_stream : 
+ Cannot create or open file /leonardo/home/userexternal/mdasilva/leonardo_work/O
+ tis_exp/domain_small/ctrl/output//Otis_exp_ATM.2023101900.nc:            1
+ Abort called by computing node            0 at 2025-09-19 13:11:47.112 +0200
+ Execution terminated because of runtime error
+Abort(1) on node 0 (rank 0 in comm 496): application called MPI_Abort(comm=0x84000003, 1) - process 0

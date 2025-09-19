@@ -80,7 +80,7 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/domain_large/ctrl/input',  ! Output directory for terrain files
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/domain_large/ctrl/input',  ! Output directory for terrain files
  inpter = '/leonardo_work/ICT25_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
@@ -132,7 +132,7 @@
  gdate1 = 2023101900,        ! Start date for ICBC data generation
  gdate2 = 2023102700,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/domain_large/ctrl/input', ! Path for ICBC produced input files
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/domain_large/ctrl/input', ! Path for ICBC produced input files
  inpglob = '/leonardo_work/ICT25_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
@@ -208,7 +208,7 @@
  ifchem  = .false.,           ! Output CHE ?
  ifopt   = .false.,           ! Output OPT ?
  chemfrq =      6.,           ! Frequency in hours to write to CHE
- dirout  = /leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/domain_large/ctrl/output', ! Path where all output will be placed
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/domain_large/ctrl/output', ! Path where all output will be placed
  lsync   = .true.,                 ! If sync of output files at every timestep is requested.
                                    ! Note, it has a performance impact.
                                    ! Enabled by default if debug_level > 2
