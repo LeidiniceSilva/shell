@@ -2,9 +2,9 @@
   This is Terrain part of RegCM package version 5 
    GIT Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:38:17
 
- : this run start at  : 2025-09-18 12:25:56+0200
+ : this run start at  : 2025-09-21 07:55:35+0200
  : it is submitted by : mdasilva
- : it is running on   : lrdn3634.leonardo.local
+ : it is running on   : lrdn4888.leonardo.local
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -101,9 +101,9 @@
   This is mksurfdata part of RegCM package version 5
    GIT Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:39:51
 
- : this run start at  : 2025-09-18 12:26:05+0200
+ : this run start at  : 2025-09-21 07:55:44+0200
  : it is submitted by : mdasilva
- : it is running on   : lrdn3634.leonardo.local
+ : it is running on   : lrdn4888.leonardo.local
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -136,9 +136,9 @@
   This is sst part of the RegCM version 5
    SVN Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:38:34
 
- : this run start at    : 2025-09-18 12:38:59+0200
+ : this run start at    : 2025-09-21 08:08:37+0200
  : it is submitted by   : mdasilva
- : it is running on     : lrdn3634.leonardo.local
+ : it is running on     : lrdn4888.leonardo.local
  : in directory         : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -160,15 +160,15 @@
  WRITEN OUT SST DATA :  2023-10-25 00:00:00 UTC        
  WRITEN OUT SST DATA :  2023-10-26 00:00:00 UTC        
  WRITEN OUT SST DATA :  2023-10-27 00:00:00 UTC        
- Input ready at : Thu Sep 18 12:39:02 2025
+ Input ready at : Sun Sep 21 08:08:39 2025
  Successfully generated SST
 
   This is icbc part of the RegCM version 5
    SVN Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:38:34
 
- : this run start at    : 2025-09-18 12:39:02+0200
+ : this run start at    : 2025-09-21 08:08:39+0200
  : it is submitted by   : mdasilva
- : it is running on     : lrdn3634.leonardo.local
+ : it is running on     : lrdn4888.leonardo.local
  : in directory         : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -223,5 +223,5 @@
  READ IN fields at DATE: 2023-10-26 12:00:00 UTC        
  READ IN fields at DATE: 2023-10-26 18:00:00 UTC        
  READ IN fields at DATE: 2023-10-27 00:00:00 UTC        
- Input ready at : Thu Sep 18 12:47:53 2025
+ Input ready at : Sun Sep 21 08:17:20 2025
  Successfully completed ICBC
