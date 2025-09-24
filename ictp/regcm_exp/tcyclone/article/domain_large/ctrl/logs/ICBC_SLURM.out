@@ -1,16 +1,16 @@
 
-  This is Terrain part of RegCM package version 5 
-   GIT Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:38:17
+  This is Terrain part of RegCM package version 5
+   GIT Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:11
 
- : this run start at  : 2025-09-21 07:55:35+0200
+ : this run start at  : 2025-09-24 08:27:57+0200
  : it is submitted by : mdasilva
- : it is running on   : lrdn4888.leonardo.local
+ : it is running on   : lrdn3996.leonardo.local
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
                       
  Using non hydrostatic Moloch dynamic
-  
+ 
  Doing Horizontal Grid with following parameters
  iy     =         1074
  jx     =         1288
@@ -39,7 +39,7 @@
  Fudging data (if requested) succeeded
  Skip moisture creation, no moisture file to read
  Vertical Grid Description (mean over domain)
-  
+ 
  --------------------------------------------------
  k        sigma       p(mb)          h(m)      T(K)
  --------------------------------------------------
@@ -99,11 +99,11 @@
  Successfully completed terrain fields generation
 
   This is mksurfdata part of RegCM package version 5
-   GIT Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:39:51
+   GIT Revision: 5.0.1 compiled at: data : Jan 27 2025  time: 11:58:15
 
- : this run start at  : 2025-09-21 07:55:44+0200
+ : this run start at  : 2025-09-24 08:28:06+0200
  : it is submitted by : mdasilva
- : it is running on   : lrdn4888.leonardo.local
+ : it is running on   : lrdn3996.leonardo.local
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -134,11 +134,11 @@
  Successfully completed CLM preprocessing.
 
   This is sst part of the RegCM version 5
-   SVN Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:38:34
+   SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
 
- : this run start at    : 2025-09-21 08:08:37+0200
+ : this run start at    : 2025-09-24 08:41:02+0200
  : it is submitted by   : mdasilva
- : it is running on     : lrdn4888.leonardo.local
+ : it is running on     : lrdn3996.leonardo.local
  : in directory         : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -160,15 +160,15 @@
  WRITEN OUT SST DATA :  2023-10-25 00:00:00 UTC        
  WRITEN OUT SST DATA :  2023-10-26 00:00:00 UTC        
  WRITEN OUT SST DATA :  2023-10-27 00:00:00 UTC        
- Input ready at : Sun Sep 21 08:08:39 2025
+ Input ready at : Wed Sep 24 08:41:06 2025
  Successfully generated SST
 
   This is icbc part of the RegCM version 5
-   SVN Revision: 4.7.1-1870-ge1fff compiled at: data : Aug 26 2025  time: 09:38:34
+   SVN Revision: 5.0.1 compiled at: data : Aug 07 2025  time: 12:17:06
 
- : this run start at    : 2025-09-21 08:08:39+0200
+ : this run start at    : 2025-09-24 08:41:06+0200
  : it is submitted by   : mdasilva
- : it is running on     : lrdn4888.leonardo.local
+ : it is running on     : lrdn3996.leonardo.local
  : in directory         : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -223,5 +223,5 @@
  READ IN fields at DATE: 2023-10-26 12:00:00 UTC        
  READ IN fields at DATE: 2023-10-26 18:00:00 UTC        
  READ IN fields at DATE: 2023-10-27 00:00:00 UTC        
- Input ready at : Sun Sep 21 08:17:20 2025
+ Input ready at : Wed Sep 24 08:50:54 2025
  Successfully completed ICBC
