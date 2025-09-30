@@ -45,7 +45,7 @@ for GCM in ${GCM_LIST[@]}; do
 		mv ${VAR}_${GCM}_6hr_2000-2009_smooth2_calendar.nc ${VAR}_${GCM}_6hr_2000-2009_smooth2.nc
                 CDO selyear,$YR ${VAR}_${GCM}_6hr_2000-2009_smooth2.nc ${VAR}_${GCM}_6hr_${YR}.nc
    	
-	        for HR in 00 06 12 18; do # 03 09 15 21
+	        for HR in 00 06 12 18; do 
                     CDO selhour,$HR ${VAR}_${GCM}_6hr_${YR}.nc ${VAR}.${YR}.${HR}.nc
 
 		done

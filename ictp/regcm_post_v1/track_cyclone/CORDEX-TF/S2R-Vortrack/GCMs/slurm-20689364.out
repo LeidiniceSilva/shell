@@ -1,7 +1,0 @@
---------------- INIT POSPROCESSING DATASET ----------------
-
-Processing file
-
-Processing file
-/var/spool/slurmd/job20689364/slurm_script: line 31: 1445617 Killed                  python3 comp_sigam2plev.py
-slurmstepd: error: Detected 1 oom_kill event in StepId=20689364.batch. Some of the step tasks have been OOM Killed.

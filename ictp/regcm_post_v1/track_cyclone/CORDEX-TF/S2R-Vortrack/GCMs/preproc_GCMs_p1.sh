@@ -49,7 +49,7 @@ for GCM in ${GCM_LIST[@]}; do
     elif [ ${GCM} == "NorESM-2MM" ]; then
         EXP="historical_r1i1p1f1_gr1"
     else
-        EXP="historical_r1i1p1f1_gr1"
+        EXP="historical_r1i1p1f2_gn"
     fi
 
     for DOMAIN in ${DOMAIN_LIST[@]}; do
