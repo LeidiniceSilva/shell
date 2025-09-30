@@ -7,7 +7,7 @@
 #SBATCH -t 1-00:00:00
 #SBATCH -o logs/MODEL_SLURM.out
 #SBATCH -e logs/MODEL_SLURM.err
-#SBATCH -J Otis_ctrl
+#SBATCH -J Otis_uw_r3
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 

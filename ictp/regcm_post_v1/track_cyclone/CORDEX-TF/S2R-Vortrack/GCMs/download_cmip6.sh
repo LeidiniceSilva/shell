@@ -18,7 +18,7 @@
 source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
-mdl="HadGEM3-GC31-MM"
+mdl="UKESM1-0-LL"
 
 if [ ${mdl} == "GFDL-ESM4" ]; then
         mdl_family="NOAA-GFDL"
@@ -28,7 +28,7 @@ if [ ${mdl} == "GFDL-ESM4" ]; then
         freq="3hr"
         version="v20190726"
         declare -a YEARS=("201001010300-201501010000")
-else #HadGEM3-GC31-MM
+elif [ ${mdl} == "HadGEM3-GC31-MM" ]; then
         mdl_family="MOHC"
         exp="historical"
         member="r1i1p1f3"
@@ -36,9 +36,17 @@ else #HadGEM3-GC31-MM
         freq="6hrPlevPt"
         version="v20200720"
         declare -a YEARS=("199901010600-200001010000" "200001010600-200101010000" "200201010600-200301010000" "200301010600-200401010000" "200401010600-200501010000" "200501010600-200601010000" "200601010600-200701010000" "200701010600-200801010000" "200801010600-200901010000" "200901010600-201001010000")
+else # UKESM1-0-LL
+        mdl_family="MOHC"
+        exp="historical"
+        member="r1i1p1f2"
+        type="gn"
+        freq="6hrPlev"
+        version="v20200504"
+        declare -a YEARS=("199901010600-200001010000" "200001010600-200101010000" "200201010600-200301010000" "200301010600-200401010000" "200401010600-200501010000" "200501010600-200601010000" "200601010600-200701010000" "200701010600-200801010000" "200801010600-200901010000" "200901010600-201001010000")
 fi
 
-var_list="psl uas vas"
+var_list="ua va"
 
 echo "Starting download"
 for var in ${var_list[@]}; do
