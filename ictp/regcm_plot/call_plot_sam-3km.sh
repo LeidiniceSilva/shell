@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT25_ESP
+#SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -28,10 +28,10 @@ cd ${DIR_IN}
 #python3 plot_maps_precipitation_99th-day.py
 #python3 plot_maps_precipitation_99th-1hr.py
 #python3 plot_maps_mslp_wind10m.py
-python3 plot_maps_cape-cin_v2.py
-python3 plot_graph_histogram_wind10m.py 
+#python3 plot_maps_cape-cin_v2.py
+#python3 plot_graph_histogram_wind10m.py 
 #python3 plot_graph_pdf_precipitation_day.py
-#python3 plot_graph_pdf_precipitation_1hr.py
+python3 plot_graph_pdf_precipitation_1hr.py
 
 
 
