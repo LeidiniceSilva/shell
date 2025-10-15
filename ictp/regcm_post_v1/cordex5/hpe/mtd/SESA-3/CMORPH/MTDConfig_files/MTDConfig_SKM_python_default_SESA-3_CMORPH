@@ -56,7 +56,7 @@ grid_res = 3;
 fcst = {
    file_type = PYTHON_NUMPY;
    field = {
-      name ="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/cordex5/hpe/mtd/SESA-3/CMORPH/scripts/read_cmorph_timestep_SESA-3_CMORPH.py cmorph_SESA-3_CMORPH_1hr_20000101_lonlat.nc MET_PYTHON_INPUT_ARG";
+      name ="/home/mda_silv/github_projects/shell/ictp/regcm_post_v1/cordex5/hpe/mtd/SESA-3/CMORPH/scripts/read_cmorph_timestep_SESA-3_CMORPH.py cmorph_SESA-3_CMORPH_1hr_20000101_lonlat.nc MET_PYTHON_INPUT_ARG";
    }
 
    censor_thresh     = [];

@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH -p esp # partition
+#SBATCH -N 1
+#SBATCH -t 24:00:00 # wall clock limit
+#SBATCH -J SESA-3_CMORPH_historical_prTH05_rsmoo8_tsmoo1_minvol1000_00 # jobname
+#SBATCH -o outerr_story/o_SESA-3_CMORPH_historical_prTH05_rsmoo8_tsmoo1_minvol1000_00.out
+#SBATCH -e outerr_story/e_SESA-3_CMORPH_historical_prTH05_rsmoo8_tsmoo1_minvol1000_00.err
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+source /opt-ictp/ESMF/env202108
+python3 /home/mda_silv/github_projects/shell/ictp/regcm_post_v1/cordex5/hpe/mtd/SESA-3/CMORPH/run_jobs/run_file_SESA-3_CMORPH_historical_prTH05_rsmoo8_tsmoo1_minvol1000_00.py

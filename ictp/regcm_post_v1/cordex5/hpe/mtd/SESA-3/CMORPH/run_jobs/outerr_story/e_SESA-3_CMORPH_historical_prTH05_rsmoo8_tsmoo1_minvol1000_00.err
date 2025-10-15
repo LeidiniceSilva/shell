@@ -1,0 +1,29 @@
+Could not find platform independent libraries <prefix>
+Could not find platform dependent libraries <exec_prefix>
+Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
+Python path configuration:
+  PYTHONHOME = (not set)
+  PYTHONPATH = (not set)
+  program name = '/opt-ictp/ESMF/202108/bin/python3'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/opt-ictp/ESMF/202108/bin/python3'
+  sys.base_prefix = '/opt-ictp/ESMF/202108'
+  sys.base_exec_prefix = '/opt-ictp/ESMF/202108'
+  sys.platlibdir = 'lib'
+  sys.executable = '/opt-ictp/ESMF/202108/bin/python3'
+  sys.prefix = '/opt-ictp/ESMF/202108'
+  sys.exec_prefix = '/opt-ictp/ESMF/202108'
+  sys.path = [
+    '/opt-ictp/ESMF/202108/lib/python39.zip',
+    '/opt-ictp/ESMF/202108/lib/python3.9',
+    '/opt-ictp/ESMF/202108/lib/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00002b60f635f080 (most recent call first):
+<no Python frame>
