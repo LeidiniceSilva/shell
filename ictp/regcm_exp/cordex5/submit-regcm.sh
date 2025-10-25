@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5
+base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5
 
 {
 set -eo pipefail
@@ -24,10 +24,10 @@ dep=$3
 dpath=$( echo $nl | cut -d. -f1 )
 
 nnod=12
-dmon=3
+dmon=2
 
 driv=$( echo $nl | cut -d- -f1 )
-tdir=$base/$driv/$dpath
+tdir=$base/$dpath
 mkdir -p $tdir
 
 startTarget=1999010100
