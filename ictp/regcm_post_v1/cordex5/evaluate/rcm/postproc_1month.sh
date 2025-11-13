@@ -26,8 +26,8 @@ VAR="pr"
 DOMAIN="CSAM-3"
 YEAR="2000"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/test_bin/era5-csam"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/test_bin/era5-csam-3"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -37,11 +37,11 @@ echo ${DIR_OUT}
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
-for DAY in `seq -w 01 31`; do
-    CDO selname,${VAR} ${DIR_IN}/${DOMAIN}_SRF.${YEAR}01${DAY}00.nc ${VAR}_${DOMAIN}_${YEAR}01${DAY}00.nc
-done
+#for DAY in `seq -w 01 31`; do
+    #CDO selname,${VAR} ${DIR_IN}/${DOMAIN}_SRF.${YEAR}01${DAY}00.nc ${VAR}_${DOMAIN}_${YEAR}01${DAY}00.nc
+#done
 
-CDO mergetime ${VAR}_${DOMAIN}_${YEAR}01${DAY}00.nc ${VAR}_${DOMAIN}_${YEAR}01.nc 
+CDO mergetime ${VAR}_${DOMAIN}_${YEAR}01*00.nc ${VAR}_${DOMAIN}_${YEAR}01.nc 
 CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${YEAR}01.nc ${VAR}_${DOMAIN}_1hr_${YEAR}01.nc 
 CDO daysum ${VAR}_${DOMAIN}_1hr_${YEAR}01.nc ${VAR}_${DOMAIN}_day_${YEAR}01.nc
 CDO monmean ${VAR}_${DOMAIN}_day_${YEAR}01.nc ${VAR}_${DOMAIN}_mon_${YEAR}01.nc
