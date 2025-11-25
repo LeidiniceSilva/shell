@@ -898,9 +898,9 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
   This is RegCM 5
    GIT Revision: 5.0.1 compiled at: data : Jan 13 2025  time: 14:41:40
 
- : this run start at  : 2025-09-24 16:46:17+0200
+ : this run start at  : 2025-11-25 16:21:17+0100
  : it is submitted by : mdasilva
- : it is running on   : lrdn3621.leonardo.local
+ : it is running on   : lrdn4745.leonardo.local
  : it is using        :          896   processors
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
@@ -946,7 +946,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
   Moisture schem              :  2
   Ocean Flux scheme           :  2
   Zeng roughness formula      :  3
-  Zeng roughness method       :  1
+  Zeng roughness method       :  2
   Coupling with ocean         :  0
   Coupling with wave          :  0
   Coupling with COP           :  0
@@ -990,7 +990,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
   Map Projection        : ROTLLR
   Dot Grid Full Extent  :  644x 644x 51
   Model Grid Spacing    :    4.447957 km
-  Proj Center Latitude  :   20.000000 deg
+  Proj Center Latitude  :   15.000000 deg
   Proj Center longitude :  265.000000 deg
   Pole Latitude         :  -70.600000 deg
   Pole longitude        :  123.940000 deg
@@ -1026,7 +1026,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
                    solar TSI irradiance    =    1356.8508 W/m^2
  CLM version: 4.5 - RegCM 5.0.1
  Attempting to initialize the land model .....
- Mask given by RegCM model has a total of       152487  land points
+ Mask given by RegCM model has a total of       103158  land points
  Attempting to initialize run control settings .....
  Read in clm_inparm namelist from: 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
@@ -1041,7 +1041,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     run type              = initial
     case title            = RegCM driven CLM4.5
     username              = mdasilva
-    hostname              = lrdn3621.leonardo.local
+    hostname              = lrdn4745.leonardo.local
  input data files:
     PFT physiology = 
  /leonardo_work/ICT25_ESP/RCMDATA/CLM45/pftdata/pft-physiology.c130503.nc
@@ -1088,13 +1088,13 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
    domain_check ns        =       410881
    domain_check ni,nj     =          641         641
    domain_check clmlevel  = gridcell
-   domain_check nbeg,nend =            1         170
-   domain_check lonc      =   -85.8445622190215       -85.4519116479812     
-   domain_check latc      =    9.93712317529151        11.0904411153167     
+   domain_check nbeg,nend =            1         115
+   domain_check lonc      =   -85.6709811759939       -84.3568822605298     
+   domain_check latc      =    9.54015735281051        9.97498943132193     
    domain_check mask      =            1           1
    domain_check frac      =    100.000000000000        100.000000000000     
-   domain_check topo      =    29.4272652152196        662.021817018363     
-   domain_check area      =    17.5187635004078        17.6951080852655     
+   domain_check topo      =    40.2619995607075        483.814981918608     
+   domain_check area      =    17.6898389015874        17.7329226872239     
    domain_check pftm      =            1           1
   
   Reading in urban input data from surface data file ...
@@ -1110,10 +1110,10 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Successfully read surface boundary data
  
   Surface Grid Characteristics
-    total number of gridcells =       152487
-    total number of landunits =       338807
-    total number of columns   =       620720
-    total number of pfts      =      2755398
+    total number of gridcells =       103158
+    total number of landunits =       235742
+    total number of columns   =       453321
+    total number of pfts      =      1897491
   
  ---clm_ptrs_check:
     clm_ptrs_check: g index ranges - OK
@@ -1154,17 +1154,13 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
      11.1       13.9    
  dzsoi_decomp   1.00000000000000     
  Attempting to read snow optical properties .....
- Set     1 100% special land-units points to zero slope
- Set     2 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
- Set     1 100% special land-units points to zero slope
  SnowOptics_init : 
  /leonardo_work/ICT25_ESP/RCMDATA/CLM45/snicardata/snicar_optics_5bnd_c090915.nc
- Set    20 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set     5 100% special land-units points to zero slope
+ Set    10 100% special land-units points to zero slope
  Successfully read snow optical properties
  Attempting to read snow aging parameters .....
- Set    15 100% special land-units points to zero slope
- Set     5 100% special land-units points to zero slope
  Successfully read snow aging properties
  Successfully initialized time invariant variables
  CLM_hist_printflds : number of master fields =          241
@@ -1208,30 +1204,30 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  r3/output//Otis_exp_RAD.2023101900.nc
  ATM variables written at  2023-10-19 00:00:00 UTC        
   # Ozone profile #
-    0.860E-05  0.691E-05  0.592E-05  0.477E-05  0.358E-05  0.260E-05  0.185E-05
-    0.138E-05  0.108E-05  0.829E-06  0.617E-06  0.463E-06  0.359E-06  0.281E-06
-    0.223E-06  0.186E-06  0.160E-06  0.137E-06  0.124E-06  0.110E-06  0.101E-06
-    0.922E-07  0.858E-07  0.802E-07  0.751E-07  0.716E-07  0.683E-07  0.650E-07
-    0.631E-07  0.612E-07  0.595E-07  0.578E-07  0.567E-07  0.557E-07  0.548E-07
-    0.539E-07  0.530E-07  0.524E-07  0.520E-07  0.516E-07  0.512E-07  0.508E-07
-    0.505E-07  0.502E-07  0.499E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07
+    0.862E-05  0.692E-05  0.592E-05  0.476E-05  0.357E-05  0.259E-05  0.185E-05
+    0.138E-05  0.108E-05  0.829E-06  0.618E-06  0.463E-06  0.358E-06  0.280E-06
+    0.222E-06  0.186E-06  0.160E-06  0.137E-06  0.124E-06  0.110E-06  0.101E-06
+    0.921E-07  0.857E-07  0.801E-07  0.750E-07  0.715E-07  0.682E-07  0.650E-07
+    0.630E-07  0.612E-07  0.594E-07  0.577E-07  0.567E-07  0.557E-07  0.548E-07
+    0.538E-07  0.530E-07  0.524E-07  0.520E-07  0.516E-07  0.512E-07  0.508E-07
+    0.505E-07  0.501E-07  0.498E-07  0.496E-07  0.496E-07  0.496E-07  0.496E-07
     0.496E-07  0.496E-07  0.496E-07  0.496E-07
  Updating aerosol optical properties...
   # Updated VIS ext profile #
      0.00       0.00       0.00       0.00       0.00       0.00       0.00    
-    0.880E-29  0.632E-18  0.105E-15  0.404E-14  0.131E-12  0.226E-11  0.219E-10
-    0.138E-09  0.636E-09  0.230E-08  0.685E-08  0.175E-07  0.394E-07  0.799E-07
-    0.148E-06  0.254E-06  0.409E-06  0.620E-06  0.895E-06  0.123E-05  0.163E-05
-    0.209E-05  0.259E-05  0.311E-05  0.364E-05  0.415E-05  0.464E-05  0.508E-05
-    0.545E-05  0.574E-05  0.595E-05  0.606E-05  0.608E-05  0.600E-05  0.583E-05
-    0.557E-05  0.522E-05  0.480E-05  0.431E-05  0.375E-05  0.313E-05  0.245E-05
-    0.245E-05  0.169E-05  0.770E-06
+    0.117E-28  0.840E-18  0.134E-15  0.349E-14  0.784E-13  0.123E-11  0.117E-10
+    0.734E-10  0.337E-09  0.122E-08  0.362E-08  0.927E-08  0.209E-07  0.424E-07
+    0.787E-07  0.135E-06  0.218E-06  0.332E-06  0.479E-06  0.661E-06  0.876E-06
+    0.112E-05  0.138E-05  0.166E-05  0.194E-05  0.221E-05  0.247E-05  0.270E-05
+    0.289E-05  0.305E-05  0.315E-05  0.321E-05  0.322E-05  0.318E-05  0.308E-05
+    0.294E-05  0.276E-05  0.254E-05  0.228E-05  0.198E-05  0.166E-05  0.130E-05
+    0.130E-05  0.894E-06  0.407E-06
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00       1.00    
-    0.902E-01  0.903E-01  0.957E-01  0.133      0.158      0.163      0.164    
+    0.902E-01  0.902E-01  0.924E-01  0.117      0.150      0.160      0.163    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.163      0.163      0.163      0.163    
+    0.163      0.163      0.163      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164    
@@ -1254,7 +1250,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-19 03:00:00 UTC        
  $$$  2023-10-19 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.74  653.66
+ $$$ max, min of ps (mb) =  1018.10  651.90
  CLM History variables written
  SRF variables written at  2023-10-19 04:00:00 UTC        
  CLM History variables written
@@ -1266,7 +1262,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023101912 , step =      480
  READY  BC from     2023101906  to 2023101912 
  $$$  2023-10-19 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.88  654.50
+ $$$ max, min of ps (mb) =  1018.15  652.57
  CLM History variables written
  SRF variables written at  2023-10-19 07:00:00 UTC        
  CLM History variables written
@@ -1274,7 +1270,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-19 09:00:00 UTC        
  $$$  2023-10-19 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.95  654.08
+ $$$ max, min of ps (mb) =  1018.13  652.22
  CLM History variables written
  SRF variables written at  2023-10-19 10:00:00 UTC        
  CLM History variables written
@@ -1286,7 +1282,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023101918 , step =      960
  READY  BC from     2023101912  to 2023101918 
  $$$  2023-10-19 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.26  653.91
+ $$$ max, min of ps (mb) =  1018.15  651.99
  CLM History variables written
  SRF variables written at  2023-10-19 13:00:00 UTC        
  CLM History variables written
@@ -1294,7 +1290,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-19 15:00:00 UTC        
  $$$  2023-10-19 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.54  654.53
+ $$$ max, min of ps (mb) =  1017.60  652.57
  CLM History variables written
  SRF variables written at  2023-10-19 16:00:00 UTC        
  CLM History variables written
@@ -1306,7 +1302,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102000 , step =     1440
  READY  BC from     2023101918  to 2023102000 
  $$$  2023-10-19 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1018.65  654.48
+ $$$ max, min of ps (mb) =  1017.27  652.95
  CLM History variables written
  SRF variables written at  2023-10-19 19:00:00 UTC        
  CLM History variables written
@@ -1314,7 +1310,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-19 21:00:00 UTC        
  $$$  2023-10-19 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1018.12  654.12
+ $$$ max, min of ps (mb) =  1016.94  652.85
  CLM History variables written
  SRF variables written at  2023-10-19 22:00:00 UTC        
  CLM History variables written
@@ -1330,23 +1326,23 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102006 , step =     1920
  READY  BC from     2023102000  to 2023102006 
  $$$  2023-10-20 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1017.30  654.71
+ $$$ max, min of ps (mb) =  1016.09  653.02
  Updating aerosol optical properties...
   # Updated VIS ext profile #
      0.00       0.00       0.00       0.00       0.00       0.00       0.00    
-    0.880E-29  0.632E-18  0.105E-15  0.404E-14  0.131E-12  0.226E-11  0.219E-10
-    0.138E-09  0.636E-09  0.230E-08  0.685E-08  0.175E-07  0.394E-07  0.799E-07
-    0.148E-06  0.254E-06  0.409E-06  0.620E-06  0.895E-06  0.123E-05  0.163E-05
-    0.209E-05  0.259E-05  0.311E-05  0.364E-05  0.415E-05  0.464E-05  0.508E-05
-    0.545E-05  0.574E-05  0.595E-05  0.606E-05  0.608E-05  0.600E-05  0.583E-05
-    0.557E-05  0.522E-05  0.480E-05  0.431E-05  0.375E-05  0.313E-05  0.245E-05
-    0.245E-05  0.169E-05  0.770E-06
+    0.117E-28  0.840E-18  0.134E-15  0.349E-14  0.784E-13  0.123E-11  0.117E-10
+    0.734E-10  0.337E-09  0.122E-08  0.362E-08  0.927E-08  0.209E-07  0.424E-07
+    0.787E-07  0.135E-06  0.218E-06  0.332E-06  0.479E-06  0.661E-06  0.876E-06
+    0.112E-05  0.138E-05  0.166E-05  0.194E-05  0.221E-05  0.247E-05  0.270E-05
+    0.289E-05  0.305E-05  0.315E-05  0.321E-05  0.322E-05  0.318E-05  0.308E-05
+    0.294E-05  0.276E-05  0.254E-05  0.228E-05  0.198E-05  0.166E-05  0.130E-05
+    0.130E-05  0.894E-06  0.407E-06
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00       1.00    
-    0.902E-01  0.903E-01  0.957E-01  0.133      0.158      0.163      0.164    
+    0.902E-01  0.902E-01  0.924E-01  0.117      0.150      0.160      0.163    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.163      0.163      0.163      0.163    
+    0.163      0.163      0.163      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164    
@@ -1366,7 +1362,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-20 03:00:00 UTC        
  $$$  2023-10-20 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.83  655.01
+ $$$ max, min of ps (mb) =  1015.95  653.14
  CLM History variables written
  SRF variables written at  2023-10-20 04:00:00 UTC        
  CLM History variables written
@@ -1378,7 +1374,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102012 , step =     2400
  READY  BC from     2023102006  to 2023102012 
  $$$  2023-10-20 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.39  655.26
+ $$$ max, min of ps (mb) =  1016.16  653.53
  CLM History variables written
  SRF variables written at  2023-10-20 07:00:00 UTC        
  CLM History variables written
@@ -1386,7 +1382,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-20 09:00:00 UTC        
  $$$  2023-10-20 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.24  654.95
+ $$$ max, min of ps (mb) =  1016.22  653.41
  CLM History variables written
  SRF variables written at  2023-10-20 10:00:00 UTC        
  CLM History variables written
@@ -1398,7 +1394,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102018 , step =     2880
  READY  BC from     2023102012  to 2023102018 
  $$$  2023-10-20 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.24  654.73
+ $$$ max, min of ps (mb) =  1016.64  652.99
  CLM History variables written
  SRF variables written at  2023-10-20 13:00:00 UTC        
  CLM History variables written
@@ -1406,7 +1402,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-20 15:00:00 UTC        
  $$$  2023-10-20 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.65  655.03
+ $$$ max, min of ps (mb) =  1016.62  653.27
  CLM History variables written
  SRF variables written at  2023-10-20 16:00:00 UTC        
  CLM History variables written
@@ -1418,7 +1414,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102100 , step =     3360
  READY  BC from     2023102018  to 2023102100 
  $$$  2023-10-20 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.10  655.04
+ $$$ max, min of ps (mb) =  1016.19  653.27
  CLM History variables written
  SRF variables written at  2023-10-20 19:00:00 UTC        
  CLM History variables written
@@ -1426,7 +1422,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-20 21:00:00 UTC        
  $$$  2023-10-20 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1014.76  654.78
+ $$$ max, min of ps (mb) =  1014.94  653.29
  CLM History variables written
  SRF variables written at  2023-10-20 22:00:00 UTC        
  CLM History variables written
@@ -1442,23 +1438,23 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102106 , step =     3840
  READY  BC from     2023102100  to 2023102106 
  $$$  2023-10-21 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1014.20  654.91
+ $$$ max, min of ps (mb) =  1013.98  653.00
  Updating aerosol optical properties...
   # Updated VIS ext profile #
      0.00       0.00       0.00       0.00       0.00       0.00       0.00    
-    0.880E-29  0.632E-18  0.105E-15  0.404E-14  0.131E-12  0.226E-11  0.219E-10
-    0.138E-09  0.636E-09  0.230E-08  0.685E-08  0.175E-07  0.394E-07  0.799E-07
-    0.148E-06  0.254E-06  0.409E-06  0.620E-06  0.895E-06  0.123E-05  0.163E-05
-    0.209E-05  0.259E-05  0.311E-05  0.364E-05  0.415E-05  0.464E-05  0.508E-05
-    0.545E-05  0.574E-05  0.595E-05  0.606E-05  0.608E-05  0.600E-05  0.583E-05
-    0.557E-05  0.522E-05  0.480E-05  0.431E-05  0.375E-05  0.313E-05  0.245E-05
-    0.245E-05  0.169E-05  0.770E-06
+    0.117E-28  0.840E-18  0.134E-15  0.349E-14  0.784E-13  0.123E-11  0.117E-10
+    0.734E-10  0.337E-09  0.122E-08  0.362E-08  0.927E-08  0.209E-07  0.424E-07
+    0.787E-07  0.135E-06  0.218E-06  0.332E-06  0.479E-06  0.661E-06  0.876E-06
+    0.112E-05  0.138E-05  0.166E-05  0.194E-05  0.221E-05  0.247E-05  0.270E-05
+    0.289E-05  0.305E-05  0.315E-05  0.321E-05  0.322E-05  0.318E-05  0.308E-05
+    0.294E-05  0.276E-05  0.254E-05  0.228E-05  0.198E-05  0.166E-05  0.130E-05
+    0.130E-05  0.894E-06  0.407E-06
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00       1.00    
-    0.902E-01  0.903E-01  0.957E-01  0.133      0.158      0.163      0.164    
+    0.902E-01  0.902E-01  0.924E-01  0.117      0.150      0.160      0.163    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.163      0.163      0.163      0.163    
+    0.163      0.163      0.163      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164    
@@ -1478,7 +1474,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-21 03:00:00 UTC        
  $$$  2023-10-21 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1014.24  654.82
+ $$$ max, min of ps (mb) =  1013.90  652.87
  CLM History variables written
  SRF variables written at  2023-10-21 04:00:00 UTC        
  CLM History variables written
@@ -1490,7 +1486,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102112 , step =     4320
  READY  BC from     2023102106  to 2023102112 
  $$$  2023-10-21 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1014.87  654.81
+ $$$ max, min of ps (mb) =  1014.74  652.78
  CLM History variables written
  SRF variables written at  2023-10-21 07:00:00 UTC        
  CLM History variables written
@@ -1498,7 +1494,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-21 09:00:00 UTC        
  $$$  2023-10-21 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1015.44  654.45
+ $$$ max, min of ps (mb) =  1014.78  652.63
  CLM History variables written
  SRF variables written at  2023-10-21 10:00:00 UTC        
  CLM History variables written
@@ -1510,7 +1506,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102118 , step =     4800
  READY  BC from     2023102112  to 2023102118 
  $$$  2023-10-21 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1015.11  654.21
+ $$$ max, min of ps (mb) =  1015.20  652.55
  CLM History variables written
  SRF variables written at  2023-10-21 13:00:00 UTC        
  CLM History variables written
@@ -1518,7 +1514,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-21 15:00:00 UTC        
  $$$  2023-10-21 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1015.44  654.53
+ $$$ max, min of ps (mb) =  1015.37  652.68
  CLM History variables written
  SRF variables written at  2023-10-21 16:00:00 UTC        
  CLM History variables written
@@ -1530,7 +1526,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102200 , step =     5280
  READY  BC from     2023102118  to 2023102200 
  $$$  2023-10-21 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1015.85  654.38
+ $$$ max, min of ps (mb) =  1015.20  652.62
  CLM History variables written
  SRF variables written at  2023-10-21 19:00:00 UTC        
  CLM History variables written
@@ -1538,7 +1534,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-21 21:00:00 UTC        
  $$$  2023-10-21 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1015.17  653.94
+ $$$ max, min of ps (mb) =  1014.67  652.19
  CLM History variables written
  SRF variables written at  2023-10-21 22:00:00 UTC        
  CLM History variables written
@@ -1554,23 +1550,23 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102206 , step =     5760
  READY  BC from     2023102200  to 2023102206 
  $$$  2023-10-22 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1015.40  654.02
+ $$$ max, min of ps (mb) =  1014.60  652.25
  Updating aerosol optical properties...
   # Updated VIS ext profile #
      0.00       0.00       0.00       0.00       0.00       0.00       0.00    
-    0.880E-29  0.632E-18  0.105E-15  0.404E-14  0.131E-12  0.226E-11  0.219E-10
-    0.138E-09  0.636E-09  0.230E-08  0.685E-08  0.175E-07  0.394E-07  0.799E-07
-    0.148E-06  0.254E-06  0.409E-06  0.620E-06  0.895E-06  0.123E-05  0.163E-05
-    0.209E-05  0.259E-05  0.311E-05  0.364E-05  0.415E-05  0.464E-05  0.508E-05
-    0.545E-05  0.574E-05  0.595E-05  0.606E-05  0.608E-05  0.600E-05  0.583E-05
-    0.557E-05  0.522E-05  0.480E-05  0.431E-05  0.375E-05  0.313E-05  0.245E-05
-    0.245E-05  0.169E-05  0.770E-06
+    0.117E-28  0.840E-18  0.134E-15  0.349E-14  0.784E-13  0.123E-11  0.117E-10
+    0.734E-10  0.337E-09  0.122E-08  0.362E-08  0.927E-08  0.209E-07  0.424E-07
+    0.787E-07  0.135E-06  0.218E-06  0.332E-06  0.479E-06  0.661E-06  0.876E-06
+    0.112E-05  0.138E-05  0.166E-05  0.194E-05  0.221E-05  0.247E-05  0.270E-05
+    0.289E-05  0.305E-05  0.315E-05  0.321E-05  0.322E-05  0.318E-05  0.308E-05
+    0.294E-05  0.276E-05  0.254E-05  0.228E-05  0.198E-05  0.166E-05  0.130E-05
+    0.130E-05  0.894E-06  0.407E-06
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00       1.00    
-    0.902E-01  0.903E-01  0.957E-01  0.133      0.158      0.163      0.164    
+    0.902E-01  0.902E-01  0.924E-01  0.117      0.150      0.160      0.163    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.163      0.163      0.163      0.163    
+    0.163      0.163      0.163      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164    
@@ -1590,7 +1586,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-22 03:00:00 UTC        
  $$$  2023-10-22 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1015.40  654.11
+ $$$ max, min of ps (mb) =  1015.01  652.18
  CLM History variables written
  SRF variables written at  2023-10-22 04:00:00 UTC        
  CLM History variables written
@@ -1602,7 +1598,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102212 , step =     6240
  READY  BC from     2023102206  to 2023102212 
  $$$  2023-10-22 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1015.31  654.19
+ $$$ max, min of ps (mb) =  1015.00  652.36
  CLM History variables written
  SRF variables written at  2023-10-22 07:00:00 UTC        
  CLM History variables written
@@ -1610,7 +1606,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-22 09:00:00 UTC        
  $$$  2023-10-22 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1015.70  654.00
+ $$$ max, min of ps (mb) =  1015.47  652.03
  CLM History variables written
  SRF variables written at  2023-10-22 10:00:00 UTC        
  CLM History variables written
@@ -1622,7 +1618,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102218 , step =     6720
  READY  BC from     2023102212  to 2023102218 
  $$$  2023-10-22 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.10  653.62
+ $$$ max, min of ps (mb) =  1016.06  651.78
  CLM History variables written
  SRF variables written at  2023-10-22 13:00:00 UTC        
  CLM History variables written
@@ -1630,7 +1626,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-22 15:00:00 UTC        
  $$$  2023-10-22 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.48  653.54
+ $$$ max, min of ps (mb) =  1016.07  651.63
  CLM History variables written
  SRF variables written at  2023-10-22 16:00:00 UTC        
  CLM History variables written
@@ -1642,7 +1638,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102300 , step =     7200
  READY  BC from     2023102218  to 2023102300 
  $$$  2023-10-22 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.83  653.56
+ $$$ max, min of ps (mb) =  1016.09  651.83
  CLM History variables written
  SRF variables written at  2023-10-22 19:00:00 UTC        
  CLM History variables written
@@ -1650,7 +1646,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-22 21:00:00 UTC        
  $$$  2023-10-22 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.31  652.87
+ $$$ max, min of ps (mb) =  1015.67  651.23
  CLM History variables written
  SRF variables written at  2023-10-22 22:00:00 UTC        
  CLM History variables written
@@ -1666,23 +1662,23 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102306 , step =     7680
  READY  BC from     2023102300  to 2023102306 
  $$$  2023-10-23 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.10  652.69
+ $$$ max, min of ps (mb) =  1015.54  650.79
  Updating aerosol optical properties...
   # Updated VIS ext profile #
      0.00       0.00       0.00       0.00       0.00       0.00       0.00    
-    0.677E-29  0.486E-18  0.823E-16  0.357E-14  0.123E-12  0.216E-11  0.210E-10
-    0.133E-09  0.612E-09  0.221E-08  0.659E-08  0.168E-07  0.380E-07  0.770E-07
-    0.143E-06  0.245E-06  0.395E-06  0.599E-06  0.865E-06  0.119E-05  0.158E-05
-    0.202E-05  0.250E-05  0.300E-05  0.351E-05  0.401E-05  0.448E-05  0.490E-05
-    0.525E-05  0.553E-05  0.573E-05  0.584E-05  0.586E-05  0.578E-05  0.561E-05
-    0.536E-05  0.502E-05  0.462E-05  0.414E-05  0.361E-05  0.302E-05  0.236E-05
-    0.236E-05  0.163E-05  0.741E-06
+    0.900E-29  0.646E-18  0.104E-15  0.292E-14  0.725E-13  0.117E-11  0.112E-10
+    0.706E-10  0.324E-09  0.117E-08  0.349E-08  0.893E-08  0.202E-07  0.410E-07
+    0.763E-07  0.132E-06  0.213E-06  0.324E-06  0.469E-06  0.648E-06  0.859E-06
+    0.110E-05  0.135E-05  0.162E-05  0.189E-05  0.215E-05  0.240E-05  0.261E-05
+    0.280E-05  0.294E-05  0.304E-05  0.310E-05  0.310E-05  0.306E-05  0.297E-05
+    0.283E-05  0.266E-05  0.244E-05  0.219E-05  0.191E-05  0.159E-05  0.125E-05
+    0.125E-05  0.861E-06  0.392E-06
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00       1.00    
-    0.902E-01  0.903E-01  0.969E-01  0.137      0.159      0.163      0.164    
+    0.902E-01  0.902E-01  0.930E-01  0.121      0.152      0.161      0.163    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.163      0.163      0.163      0.162      0.162      0.162      0.162    
+    0.162      0.162      0.162      0.163      0.163      0.163      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164    
@@ -1702,7 +1698,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-23 03:00:00 UTC        
  $$$  2023-10-23 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.23  652.71
+ $$$ max, min of ps (mb) =  1015.55  650.46
  CLM History variables written
  SRF variables written at  2023-10-23 04:00:00 UTC        
  CLM History variables written
@@ -1714,7 +1710,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102312 , step =     8160
  READY  BC from     2023102306  to 2023102312 
  $$$  2023-10-23 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1016.45  653.18
+ $$$ max, min of ps (mb) =  1015.62  650.87
  CLM History variables written
  SRF variables written at  2023-10-23 07:00:00 UTC        
  CLM History variables written
@@ -1722,7 +1718,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-23 09:00:00 UTC        
  $$$  2023-10-23 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1017.39  652.79
+ $$$ max, min of ps (mb) =  1016.27  651.08
  CLM History variables written
  SRF variables written at  2023-10-23 10:00:00 UTC        
  CLM History variables written
@@ -1734,7 +1730,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102318 , step =     8640
  READY  BC from     2023102312  to 2023102318 
  $$$  2023-10-23 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1018.44  652.62
+ $$$ max, min of ps (mb) =  1016.80  650.95
  CLM History variables written
  SRF variables written at  2023-10-23 13:00:00 UTC        
  CLM History variables written
@@ -1742,7 +1738,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-23 15:00:00 UTC        
  $$$  2023-10-23 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.18  653.21
+ $$$ max, min of ps (mb) =  1017.05  651.23
  CLM History variables written
  SRF variables written at  2023-10-23 16:00:00 UTC        
  CLM History variables written
@@ -1754,7 +1750,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102400 , step =     9120
  READY  BC from     2023102318  to 2023102400 
  $$$  2023-10-23 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.22  653.55
+ $$$ max, min of ps (mb) =  1017.27  651.55
  CLM History variables written
  SRF variables written at  2023-10-23 19:00:00 UTC        
  CLM History variables written
@@ -1762,7 +1758,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-23 21:00:00 UTC        
  $$$  2023-10-23 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1019.72  652.72
+ $$$ max, min of ps (mb) =  1016.66  650.51
  CLM History variables written
  SRF variables written at  2023-10-23 22:00:00 UTC        
  CLM History variables written
@@ -1778,23 +1774,23 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102406 , step =     9600
  READY  BC from     2023102400  to 2023102406 
  $$$  2023-10-24 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.20  650.22
+ $$$ max, min of ps (mb) =  1016.71  649.98
  Updating aerosol optical properties...
   # Updated VIS ext profile #
      0.00       0.00       0.00       0.00       0.00       0.00       0.00    
-    0.677E-29  0.486E-18  0.823E-16  0.357E-14  0.123E-12  0.216E-11  0.210E-10
-    0.133E-09  0.612E-09  0.221E-08  0.659E-08  0.168E-07  0.380E-07  0.770E-07
-    0.143E-06  0.245E-06  0.395E-06  0.599E-06  0.865E-06  0.119E-05  0.158E-05
-    0.202E-05  0.250E-05  0.300E-05  0.351E-05  0.401E-05  0.448E-05  0.490E-05
-    0.525E-05  0.553E-05  0.573E-05  0.584E-05  0.586E-05  0.578E-05  0.561E-05
-    0.536E-05  0.502E-05  0.462E-05  0.414E-05  0.361E-05  0.302E-05  0.236E-05
-    0.236E-05  0.163E-05  0.741E-06
+    0.900E-29  0.646E-18  0.104E-15  0.292E-14  0.725E-13  0.117E-11  0.112E-10
+    0.706E-10  0.324E-09  0.117E-08  0.349E-08  0.893E-08  0.202E-07  0.410E-07
+    0.763E-07  0.132E-06  0.213E-06  0.324E-06  0.469E-06  0.648E-06  0.859E-06
+    0.110E-05  0.135E-05  0.162E-05  0.189E-05  0.215E-05  0.240E-05  0.261E-05
+    0.280E-05  0.294E-05  0.304E-05  0.310E-05  0.310E-05  0.306E-05  0.297E-05
+    0.283E-05  0.266E-05  0.244E-05  0.219E-05  0.191E-05  0.159E-05  0.125E-05
+    0.125E-05  0.861E-06  0.392E-06
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00       1.00    
-    0.902E-01  0.903E-01  0.969E-01  0.137      0.159      0.163      0.164    
+    0.902E-01  0.902E-01  0.930E-01  0.121      0.152      0.161      0.163    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.163      0.163      0.163      0.162      0.162      0.162      0.162    
+    0.162      0.162      0.162      0.163      0.163      0.163      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164    
@@ -1814,7 +1810,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-24 03:00:00 UTC        
  $$$  2023-10-24 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1020.45  652.53
+ $$$ max, min of ps (mb) =  1016.95  650.49
  CLM History variables written
  SRF variables written at  2023-10-24 04:00:00 UTC        
  CLM History variables written
@@ -1826,7 +1822,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102412 , step =    10080
  READY  BC from     2023102406  to 2023102412 
  $$$  2023-10-24 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.15  653.09
+ $$$ max, min of ps (mb) =  1016.93  651.17
  CLM History variables written
  SRF variables written at  2023-10-24 07:00:00 UTC        
  CLM History variables written
@@ -1834,7 +1830,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-24 09:00:00 UTC        
  $$$  2023-10-24 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.39  653.12
+ $$$ max, min of ps (mb) =  1017.91  651.42
  CLM History variables written
  SRF variables written at  2023-10-24 10:00:00 UTC        
  CLM History variables written
@@ -1846,7 +1842,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102418 , step =    10560
  READY  BC from     2023102412  to 2023102418 
  $$$  2023-10-24 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.44  653.48
+ $$$ max, min of ps (mb) =  1018.69  651.46
  CLM History variables written
  SRF variables written at  2023-10-24 13:00:00 UTC        
  CLM History variables written
@@ -1854,7 +1850,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-24 15:00:00 UTC        
  $$$  2023-10-24 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.27  653.93
+ $$$ max, min of ps (mb) =  1018.48  651.99
  CLM History variables written
  SRF variables written at  2023-10-24 16:00:00 UTC        
  CLM History variables written
@@ -1866,7 +1862,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102500 , step =    11040
  READY  BC from     2023102418  to 2023102500 
  $$$  2023-10-24 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.15  654.26
+ $$$ max, min of ps (mb) =  1018.49  652.29
  CLM History variables written
  SRF variables written at  2023-10-24 19:00:00 UTC        
  CLM History variables written
@@ -1874,7 +1870,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-24 21:00:00 UTC        
  $$$  2023-10-24 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.04  653.69
+ $$$ max, min of ps (mb) =  1018.29  651.24
  CLM History variables written
  SRF variables written at  2023-10-24 22:00:00 UTC        
  CLM History variables written
@@ -1890,23 +1886,23 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102506 , step =    11520
  READY  BC from     2023102500  to 2023102506 
  $$$  2023-10-25 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.88  652.76
+ $$$ max, min of ps (mb) =  1018.38  650.86
  Updating aerosol optical properties...
   # Updated VIS ext profile #
      0.00       0.00       0.00       0.00       0.00       0.00       0.00    
-    0.677E-29  0.486E-18  0.823E-16  0.357E-14  0.123E-12  0.216E-11  0.210E-10
-    0.133E-09  0.612E-09  0.221E-08  0.659E-08  0.168E-07  0.380E-07  0.770E-07
-    0.143E-06  0.245E-06  0.395E-06  0.599E-06  0.865E-06  0.119E-05  0.158E-05
-    0.202E-05  0.250E-05  0.300E-05  0.351E-05  0.401E-05  0.448E-05  0.490E-05
-    0.525E-05  0.553E-05  0.573E-05  0.584E-05  0.586E-05  0.578E-05  0.561E-05
-    0.536E-05  0.502E-05  0.462E-05  0.414E-05  0.361E-05  0.302E-05  0.236E-05
-    0.236E-05  0.163E-05  0.741E-06
+    0.900E-29  0.646E-18  0.104E-15  0.292E-14  0.725E-13  0.117E-11  0.112E-10
+    0.706E-10  0.324E-09  0.117E-08  0.349E-08  0.893E-08  0.202E-07  0.410E-07
+    0.763E-07  0.132E-06  0.213E-06  0.324E-06  0.469E-06  0.648E-06  0.859E-06
+    0.110E-05  0.135E-05  0.162E-05  0.189E-05  0.215E-05  0.240E-05  0.261E-05
+    0.280E-05  0.294E-05  0.304E-05  0.310E-05  0.310E-05  0.306E-05  0.297E-05
+    0.283E-05  0.266E-05  0.244E-05  0.219E-05  0.191E-05  0.159E-05  0.125E-05
+    0.125E-05  0.861E-06  0.392E-06
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00       1.00    
-    0.902E-01  0.903E-01  0.969E-01  0.137      0.159      0.163      0.164    
+    0.902E-01  0.902E-01  0.930E-01  0.121      0.152      0.161      0.163    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.163      0.163      0.163      0.162      0.162      0.162      0.162    
+    0.162      0.162      0.162      0.163      0.163      0.163      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164    
@@ -1926,7 +1922,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-25 03:00:00 UTC        
  $$$  2023-10-25 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.06  653.64
+ $$$ max, min of ps (mb) =  1018.20  651.88
  CLM History variables written
  SRF variables written at  2023-10-25 04:00:00 UTC        
  CLM History variables written
@@ -1938,7 +1934,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102512 , step =    12000
  READY  BC from     2023102506  to 2023102512 
  $$$  2023-10-25 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.39  654.52
+ $$$ max, min of ps (mb) =  1018.52  652.23
  CLM History variables written
  SRF variables written at  2023-10-25 07:00:00 UTC        
  CLM History variables written
@@ -1946,7 +1942,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-25 09:00:00 UTC        
  $$$  2023-10-25 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.93  654.51
+ $$$ max, min of ps (mb) =  1018.99  652.73
  CLM History variables written
  SRF variables written at  2023-10-25 10:00:00 UTC        
  CLM History variables written
@@ -1958,7 +1954,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102518 , step =    12480
  READY  BC from     2023102512  to 2023102518 
  $$$  2023-10-25 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.21  654.22
+ $$$ max, min of ps (mb) =  1019.16  652.39
  CLM History variables written
  SRF variables written at  2023-10-25 13:00:00 UTC        
  CLM History variables written
@@ -1966,7 +1962,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-25 15:00:00 UTC        
  $$$  2023-10-25 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.75  654.63
+ $$$ max, min of ps (mb) =  1018.80  652.88
  CLM History variables written
  SRF variables written at  2023-10-25 16:00:00 UTC        
  CLM History variables written
@@ -1978,7 +1974,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102600 , step =    12960
  READY  BC from     2023102518  to 2023102600 
  $$$  2023-10-25 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1023.22  654.66
+ $$$ max, min of ps (mb) =  1018.56  652.89
  CLM History variables written
  SRF variables written at  2023-10-25 19:00:00 UTC        
  CLM History variables written
@@ -1986,7 +1982,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-25 21:00:00 UTC        
  $$$  2023-10-25 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.81  654.16
+ $$$ max, min of ps (mb) =  1018.67  652.38
  CLM History variables written
  SRF variables written at  2023-10-25 22:00:00 UTC        
  CLM History variables written
@@ -2002,23 +1998,23 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102606 , step =    13440
  READY  BC from     2023102600  to 2023102606 
  $$$  2023-10-26 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.84  652.99
+ $$$ max, min of ps (mb) =  1018.68  651.65
  Updating aerosol optical properties...
   # Updated VIS ext profile #
      0.00       0.00       0.00       0.00       0.00       0.00       0.00    
-    0.677E-29  0.486E-18  0.823E-16  0.357E-14  0.123E-12  0.216E-11  0.210E-10
-    0.133E-09  0.612E-09  0.221E-08  0.659E-08  0.168E-07  0.380E-07  0.770E-07
-    0.143E-06  0.245E-06  0.395E-06  0.599E-06  0.865E-06  0.119E-05  0.158E-05
-    0.202E-05  0.250E-05  0.300E-05  0.351E-05  0.401E-05  0.448E-05  0.490E-05
-    0.525E-05  0.553E-05  0.573E-05  0.584E-05  0.586E-05  0.578E-05  0.561E-05
-    0.536E-05  0.502E-05  0.462E-05  0.414E-05  0.361E-05  0.302E-05  0.236E-05
-    0.236E-05  0.163E-05  0.741E-06
+    0.900E-29  0.646E-18  0.104E-15  0.292E-14  0.725E-13  0.117E-11  0.112E-10
+    0.706E-10  0.324E-09  0.117E-08  0.349E-08  0.893E-08  0.202E-07  0.410E-07
+    0.763E-07  0.132E-06  0.213E-06  0.324E-06  0.469E-06  0.648E-06  0.859E-06
+    0.110E-05  0.135E-05  0.162E-05  0.189E-05  0.215E-05  0.240E-05  0.261E-05
+    0.280E-05  0.294E-05  0.304E-05  0.310E-05  0.310E-05  0.306E-05  0.297E-05
+    0.283E-05  0.266E-05  0.244E-05  0.219E-05  0.191E-05  0.159E-05  0.125E-05
+    0.125E-05  0.861E-06  0.392E-06
   # Updated VIS ssa profile #
      1.00       1.00       1.00       1.00       1.00       1.00       1.00    
-    0.902E-01  0.903E-01  0.969E-01  0.137      0.159      0.163      0.164    
+    0.902E-01  0.902E-01  0.930E-01  0.121      0.152      0.161      0.163    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
-    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.163      0.163      0.163      0.162      0.162      0.162      0.162    
+    0.162      0.162      0.162      0.163      0.163      0.163      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164      0.164      0.164      0.164      0.164    
     0.164      0.164      0.164    
@@ -2038,7 +2034,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-26 03:00:00 UTC        
  $$$  2023-10-26 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.58  654.29
+ $$$ max, min of ps (mb) =  1018.32  652.66
  CLM History variables written
  SRF variables written at  2023-10-26 04:00:00 UTC        
  CLM History variables written
@@ -2050,7 +2046,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102612 , step =    13920
  READY  BC from     2023102606  to 2023102612 
  $$$  2023-10-26 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.68  654.58
+ $$$ max, min of ps (mb) =  1018.11  653.03
  CLM History variables written
  SRF variables written at  2023-10-26 07:00:00 UTC        
  CLM History variables written
@@ -2058,7 +2054,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-26 09:00:00 UTC        
  $$$  2023-10-26 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.70  653.97
+ $$$ max, min of ps (mb) =  1018.04  652.53
  CLM History variables written
  SRF variables written at  2023-10-26 10:00:00 UTC        
  CLM History variables written
@@ -2070,7 +2066,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102618 , step =    14400
  READY  BC from     2023102612  to 2023102618 
  $$$  2023-10-26 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.43  654.06
+ $$$ max, min of ps (mb) =  1017.92  652.62
  CLM History variables written
  SRF variables written at  2023-10-26 13:00:00 UTC        
  CLM History variables written
@@ -2078,7 +2074,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-26 15:00:00 UTC        
  $$$  2023-10-26 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1022.29  654.61
+ $$$ max, min of ps (mb) =  1017.79  652.86
  CLM History variables written
  SRF variables written at  2023-10-26 16:00:00 UTC        
  CLM History variables written
@@ -2090,7 +2086,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SEARCH BC data for 2023102700 , step =    14880
  READY  BC from     2023102618  to 2023102700 
  $$$  2023-10-26 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.83  654.81
+ $$$ max, min of ps (mb) =  1017.96  653.30
  CLM History variables written
  SRF variables written at  2023-10-26 19:00:00 UTC        
  CLM History variables written
@@ -2098,7 +2094,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2023-10-26 21:00:00 UTC        
  $$$  2023-10-26 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1021.48  654.64
+ $$$ max, min of ps (mb) =  1017.79  652.61
  CLM History variables written
  SRF variables written at  2023-10-26 22:00:00 UTC        
  CLM History variables written
@@ -2128,8 +2124,8 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  RAD variables written at  2023-10-27 00:00:00 UTC        
  SAV variables written at  2023-10-27 00:00:00 UTC        
  Final time  2023-10-27 00:00:00 UTC reached.
- Elapsed seconds of run for this final timeslice :    4029.215    
- : this run stops at  : 2025-09-24 17:56:08+0200
+ Elapsed seconds of run for this final timeslice :    2947.189    
+ : this run stops at  : 2025-11-25 17:11:32+0100
  : Run has been completed using          896  processors.
- : Total elapsed seconds of run :    4029.56180899633     
+ : Total elapsed seconds of run :    2947.53581495957     
  RegCM V5 simulation successfully reached end

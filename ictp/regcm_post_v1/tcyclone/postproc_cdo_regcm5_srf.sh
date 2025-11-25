@@ -21,9 +21,9 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DOMAIN_LIST="large small"
+DOMAIN_LIST="small"
 EXP_LIST="ctrl holt_r2 holt_r3 uw_r2 uw_r3"
-VAR_LIST="pr psl"
+VAR_LIST="pr psl uas vas"
 
 echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"

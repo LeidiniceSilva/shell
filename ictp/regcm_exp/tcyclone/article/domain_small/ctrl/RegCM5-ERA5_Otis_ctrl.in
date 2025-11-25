@@ -51,7 +51,7 @@
                    ! 'ROTMER', Rotated Mercator.
  ds = -0.04,       ! Grid point horizontal resolution in km
  ptop = 10.0,      ! Pressure of model top in cbar
- clat = 20.0,      ! Central latitude  of model domain in degrees North hemisphere is positive
+ clat = 15.0,      ! Central latitude  of model domain in degrees North hemisphere is positive
  clon = 265.0,     ! Central longitude of model domain in degrees West is negative.
  plat = -70.60,    ! Pole latitude (only for rotated Mercator Proj)
  plon = 123.94,    ! Pole longitude (only for rotated Mercator Proj)
@@ -272,7 +272,7 @@
                         !   3 => (0.017*ustar*ustar)/egrav
                         !   4 => Huang 2012 free convection and swell effects
                         !   5 => four regime formulation
- iocnzoq =          1,  ! Zeng Ocean model factors for t,q roughness
+ iocnzoq =          2,  ! Zeng Ocean model factors for t,q roughness
                         !   1 => 2.67*(re**d_rfour) - 2.57
                         !   2 => min(4.0e-4, 2.0e-4*re**(-3.3))
                         !   3 => COARE formulation as in bulk flux above

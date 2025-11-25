@@ -2,9 +2,9 @@
   This is Terrain part of RegCM package version 5
    GIT Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:11
 
- : this run start at  : 2025-09-24 08:27:57+0200
+ : this run start at  : 2025-11-25 15:19:39+0100
  : it is submitted by : mdasilva
- : it is running on   : lrdn3996.leonardo.local
+ : it is running on   : lrdn4360.leonardo.local
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -13,19 +13,19 @@
  
  Doing Horizontal Grid with following parameters
  iy     =         1074
- jx     =         1288
+ jx     =         1074
  kz     =           51
  ds     =    4.44795693794183     
- clat   =    20.0000000000000     
+ clat   =    15.0000000000000     
  clon   =   -95.0000000000000     
  iproj  = ROTLLR
  Grid setup done
  Geo mapping done
  Calculated large extrema:
-          MINLAT =   -6.00000000000000     
-          MAXLAT =    47.0000000000000     
-          MINLON =   -125.000000000000     
-          MAXLON =   -70.0000000000000     
+          MINLAT =   -10.0000000000000     
+          MAXLAT =    41.0000000000000     
+          MINLON =   -121.000000000000     
+          MAXLON =   -72.0000000000000     
  Determined Grid coordinate range
  No resampling used.
  Static DEM data successfully read in
@@ -44,66 +44,66 @@
  k        sigma       p(mb)          h(m)      T(K)
  --------------------------------------------------
  52       1.000     1013.25          0.00     288.1
- 51       0.980     1005.81         62.13     287.7
- 50       0.961      997.99        127.83     287.3
- 49       0.941      989.76        197.41     286.9
- 48       0.922      981.09        271.20     286.4
- 47       0.902      971.96        349.55     285.9
- 46       0.882      962.32        432.84     285.3
- 45       0.863      952.16        521.45     284.8
- 44       0.843      941.42        615.82     284.2
- 43       0.824      930.10        716.40     283.5
- 42       0.804      918.14        823.65     282.8
- 41       0.784      905.52        938.08     282.1
- 40       0.765      892.20       1060.25     281.3
- 39       0.745      878.15       1190.71     280.4
- 38       0.725      863.34       1330.08     279.5
- 37       0.706      847.74       1479.02     278.6
- 36       0.686      831.32       1638.21     277.5
- 35       0.667      814.05       1808.40     276.4
- 34       0.647      795.90       1990.36     275.2
- 33       0.627      776.87       2184.94     274.0
- 32       0.608      756.92       2393.04     272.6
- 31       0.588      736.04       2615.59     271.2
- 30       0.569      714.24       2853.61     269.6
- 29       0.549      691.49       3108.19     268.0
- 28       0.529      667.82       3380.47     266.2
- 27       0.510      643.24       3671.69     264.3
- 26       0.490      617.76       3983.14     262.3
- 25       0.471      591.42       4316.23     260.1
- 24       0.451      564.27       4672.43     257.8
- 23       0.431      536.36       5053.34     255.4
- 22       0.412      507.76       5460.65     252.7
- 21       0.392      478.57       5896.16     249.9
- 20       0.373      448.87       6361.79     246.9
- 19       0.353      418.79       6859.60     243.6
- 18       0.333      388.46       7391.76     240.2
- 17       0.314      358.03       7960.63     236.5
- 16       0.294      327.67       8568.67     232.5
- 15       0.275      297.56       9218.57     228.3
- 14       0.255      267.90       9913.13     223.8
- 13       0.235      238.89      10655.40     219.0
- 12       0.216      210.76      11448.59     213.8
- 11       0.196      183.73      12296.15     216.6
- 10       0.176      158.03      13201.76     217.8
-  9       0.157      133.86      14169.32     218.2
-  8       0.137      111.44      15203.02     218.7
-  7       0.118       90.96      16307.32     219.2
-  6       0.098       72.55      17486.99     219.7
-  5       0.078       56.35      18747.11     220.3
-  4       0.059       42.42      20093.10     220.9
-  3       0.039       30.76      21530.75     221.5
-  2       0.020       21.32      23066.23     222.2
-  1      -0.000       13.98      24706.14     222.9
+ 51       0.980     1005.80         62.23     287.7
+ 50       0.961      997.94        128.20     287.3
+ 49       0.941      989.66        198.23     286.9
+ 48       0.922      980.92        272.63     286.4
+ 47       0.902      971.70        351.76     285.9
+ 46       0.882      961.96        435.97     285.3
+ 45       0.863      951.68        525.66     284.7
+ 44       0.843      940.81        621.23     284.1
+ 43       0.824      929.34        723.14     283.5
+ 42       0.804      917.23        831.85     282.8
+ 41       0.784      904.44        947.86     282.0
+ 40       0.765      890.96       1071.71     281.2
+ 39       0.745      876.73       1203.95     280.3
+ 38       0.725      861.75       1345.20     279.4
+ 37       0.706      845.97       1496.09     278.4
+ 36       0.686      829.36       1657.32     277.4
+ 35       0.667      811.91       1829.61     276.3
+ 34       0.647      793.60       2013.75     275.1
+ 33       0.627      774.39       2210.56     273.8
+ 32       0.608      754.28       2420.92     272.4
+ 31       0.588      733.25       2645.79     271.0
+ 30       0.569      711.29       2886.16     269.4
+ 29       0.549      688.42       3143.11     267.8
+ 28       0.529      664.63       3417.79     266.0
+ 27       0.510      639.94       3711.40     264.1
+ 26       0.490      614.38       4025.26     262.0
+ 25       0.471      587.97       4360.75     259.8
+ 24       0.451      560.77       4719.35     257.5
+ 23       0.431      532.83       5102.64     255.0
+ 22       0.412      504.23       5512.29     252.4
+ 21       0.392      475.05       5950.11     249.5
+ 20       0.373      445.39       6418.02     246.5
+ 19       0.353      415.37       6918.05     243.3
+ 18       0.333      385.12       7452.38     239.8
+ 17       0.314      354.80       8023.35     236.1
+ 16       0.294      324.56       8633.44     232.1
+ 15       0.275      294.60       9285.29     227.9
+ 14       0.255      265.10       9981.73     223.4
+ 13       0.235      236.28      10725.78     218.5
+ 12       0.216      208.35      11520.65     216.6
+ 11       0.196      181.52      12369.79     216.6
+ 10       0.176      156.03      13276.85     217.9
+  9       0.157      132.09      14245.74     218.4
+  8       0.137      109.89      15280.65     218.8
+  7       0.118       89.62      16386.03     219.3
+  6       0.098       71.43      17566.62     219.9
+  5       0.078       55.43      18827.52     220.4
+  4       0.059       41.68      20174.12     221.0
+  3       0.039       30.19      21612.22     221.7
+  2       0.020       20.89      23147.98     222.4
+  1      -0.000       13.68      24787.98     223.1
  Grid data written to output file
  Successfully completed terrain fields generation
 
   This is mksurfdata part of RegCM package version 5
    GIT Revision: 5.0.1 compiled at: data : Jan 27 2025  time: 11:58:15
 
- : this run start at  : 2025-09-24 08:28:06+0200
+ : this run start at  : 2025-11-25 15:19:48+0100
  : it is submitted by : mdasilva
- : it is running on   : lrdn3996.leonardo.local
+ : it is running on   : lrdn4360.leonardo.local
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -136,9 +136,9 @@
   This is sst part of the RegCM version 5
    SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
 
- : this run start at    : 2025-09-24 08:41:02+0200
+ : this run start at    : 2025-11-25 15:32:35+0100
  : it is submitted by   : mdasilva
- : it is running on     : lrdn3996.leonardo.local
+ : it is running on     : lrdn4360.leonardo.local
  : in directory         : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -160,15 +160,15 @@
  WRITEN OUT SST DATA :  2023-10-25 00:00:00 UTC        
  WRITEN OUT SST DATA :  2023-10-26 00:00:00 UTC        
  WRITEN OUT SST DATA :  2023-10-27 00:00:00 UTC        
- Input ready at : Wed Sep 24 08:41:06 2025
+ Input ready at : Tue Nov 25 15:32:40 2025
  Successfully generated SST
 
   This is icbc part of the RegCM version 5
    SVN Revision: 5.0.1 compiled at: data : Aug 07 2025  time: 12:17:06
 
- : this run start at    : 2025-09-24 08:41:06+0200
+ : this run start at    : 2025-11-25 15:32:40+0100
  : it is submitted by   : mdasilva
- : it is running on     : lrdn3996.leonardo.local
+ : it is running on     : lrdn4360.leonardo.local
  : in directory         : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
  one/article/domain_large/ctrl
@@ -223,5 +223,5 @@
  READ IN fields at DATE: 2023-10-26 12:00:00 UTC        
  READ IN fields at DATE: 2023-10-26 18:00:00 UTC        
  READ IN fields at DATE: 2023-10-27 00:00:00 UTC        
- Input ready at : Wed Sep 24 08:50:54 2025
+ Input ready at : Tue Nov 25 15:41:22 2025
  Successfully completed ICBC
