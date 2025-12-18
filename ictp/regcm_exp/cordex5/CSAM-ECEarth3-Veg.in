@@ -1,0 +1,150 @@
+&dimparam
+    iy = 1003
+    jx = 1003
+    kz = 50
+/
+
+&coreparam
+    idynamic = 3
+/
+
+&geoparam
+    iproj = 'ROTLLR'
+    ds = -0.03
+    clat = 50.0
+    clon = 6.6
+    plat = 40.0
+    plon = 186.6
+/
+
+&terrainparam
+    domname = 'EURR-3'
+    smthbdy = .false.
+    lakedpth = .false.
+    lsmoist = .false.
+    fudge_lnd = .false.
+    fudge_lnd_s = .false.
+    fudge_tex = .false.
+    fudge_tex_s = .false.
+    fudge_lak = .false.
+    fudge_lak_s = .false.
+    h2opct = 50.0
+    h2ohgt = .false.
+    dirter = '/leonardo_work/ICT25_ESP/jdeleeuw/EURR-3/ECEarth/high_soil_moisture_GWL3/FNEST/EURR-3/input'
+    inpter = '/leonardo_work/ICT25_ESP/RCMDATA'
+/
+
+&boundaryparam
+    nspgx = 31
+    nspgd = 31
+    high_nudge = 6.0
+    medium_nudge = 4.0
+    low_nudge = 2.0
+/
+
+&cldparam
+    ncld = 0
+/
+
+&globdatparam
+    ibdyfrq = 6
+    ssttyp = 'CMIP6'
+    dattyp = 'FNEST'
+    gdate1 = 2048010100
+    gdate2 = 2048030100
+    calendar = 'gregorian'
+    dirglob = '/leonardo_work/ICT25_ESP/jdeleeuw/EURR-3/ECEarth/high_soil_moisture_GWL3/FNEST/EURR-3/input'
+    inpglob = '/leonardo_work/ICT25_ESP/RCMDATA'
+/
+
+&cmip6param
+    cmip6_model = 'EC-Earth3-Veg'
+    cmip6_inp = '/leonardo_work/ICT25_ESP/RCMDATA/cmip6'
+    cmip6_experiment = 'ssp370'
+    cmip6_variant = 'r1i1p1f1'
+    cmip6_grid = 'gr'
+/
+
+&fnestparam
+    coarse_outdir = '/leonardo_work/ICT25_ESP/jdeleeuw/EUR-11/ECEarth/ctrl/CMIP6/EUR-11/output'
+    coarse_domname = 'EUR-11'
+/
+
+&restartparam
+    ifrest = .true.
+    mdate0 = 2047120100
+    mdate1 = 2048010100
+    mdate2 = 2048030100
+/
+
+&timeparam
+    dt = 30
+    dtabem = 1
+/
+
+&outparam
+    ifcordex = .true.
+    outnwf = 1.0
+    ifsave = .true.
+    savfrq = 0.0
+    ifatm = .true.
+    atmfrq = 1.0
+    ifrad = .true.
+    radfrq = 1.0
+    ifsts = .true.
+    ifshf = .true.
+    ifsrf = .true.
+    srffrq = 1.0
+    ifsub = .true.
+    subfrq = 1.0
+    iflak = .true.
+    lakfrq = 1.0
+    ifchem = .true.
+    ifopt = .false.
+    chemfrq = 1.0
+    dirout = '/leonardo_work/ICT25_ESP/jdeleeuw/EURR-3/ECEarth/high_soil_moisture_GWL3/FNEST/EURR-3/output'
+    lsync = .true.
+    do_parallel_netcdf_in = .true.
+    do_parallel_netcdf_out = .false.
+/
+
+&physicsparam
+    iboudy = 5
+    ibltyp = 1
+    icup_lnd = 0
+    icup_ocn = 0
+    ipptls = 2
+    iwavcpl = 0
+    iocnflx = 2
+    iocnrough = 1
+    iocnzoq = 1
+    scenario = 'SSP370'
+    idcsst = 0
+    iseaice = 1
+    iconvlwp = 1
+    icldfrac = 0
+    iclimao3 = 1
+    isolconst = 0
+    iclimaaer = 3
+    radclimpath = '/leonardo_work/ICT25_ESP/RCMDATA/MERRA2/OPPMONTH'
+/
+
+&clm_inparm
+    fpftcon = 'pft-physiology.c130503.nc'
+    fsnowoptics = 'snicar_optics_5bnd_c090915.nc'
+    fsnowaging = 'snicar_drdt_bst_fit_60_c070416.nc'
+    urban_hac = 'ON_WASTEHEAT'
+    hist_nhtfrq = 0, 1
+    hist_fincl2(1:13) = 'EFLX_LH_TOT_U', 'FGR_U', 'FIRA_U', 'FSA_U', 'FSH_U',
+                        'FSM_U', 'QRUNOFF_U', 'RH2M_U', 'SoilAlpha_U', 'TG_U',
+                        'TREFMNAV_U', 'TREFMXAV_U', 'TSA_U'
+/
+
+&clm_soilhydrology_inparm
+    h2osfcflag = 1
+    origflag = 0
+/
+
+&clm_hydrology1_inparm
+    oldfflag = 0
+/
