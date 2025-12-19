@@ -1,0 +1,9 @@
+ Not implemented in this version of RegCM.
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_params.F90 at line:      872
+ INPUT NAMELIST IPPTLS NOT IMPLEMENTED
+ -------------------------------------------
+ mod_params.F90 :      872:            1
+ Abort called by computing node            0 at 2025-12-19 23:25:26.772 +0100
+ Execution terminated because of runtime error
+Abort(1) on node 0 (rank 0 in comm 496): application called MPI_Abort(comm=0x84000003, 1) - process 0
