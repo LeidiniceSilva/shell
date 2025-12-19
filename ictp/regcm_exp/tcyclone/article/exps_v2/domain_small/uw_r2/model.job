@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#SBATCH -A CMPNS_ictpclim
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 8
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -o logs/MODEL_SLURM.out
+#SBATCH -e logs/MODEL_SLURM.err
+#SBATCH -J Otis_uw_r2
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+
+{
+set -eo pipefail
+
+# load required modules
+# module purge
+source /leonardo/home/userexternal/ggiulian/modules
+
+NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcyclone/article/domain_small/uw_r2/RegCM5-ERA5_Otis.in
+BINARIES=/leonardo/home/userexternal/ggiulian/binaries_CORDEX5
+EXTENSION=CLM45
+
+# run model
+mpirun $BINARIES/regcmMPI$EXTENSION $NAMELIST
+
+}

@@ -21,7 +21,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DOMAIN_LIST="large small"
+DOMAIN_LIST="small large"
 EXP_LIST="ctrl holt_r2 holt_r3 uw_r2 uw_r3"
 VAR_LIST="hus ta ua va wa"
 

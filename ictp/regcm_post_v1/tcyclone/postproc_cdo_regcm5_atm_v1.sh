@@ -18,7 +18,7 @@
 source /leonardo/home/userexternal/ggiulian/modules
 set -eo pipefail
 
-DOMAIN_LIST="large small"
+DOMAIN_LIST="small large"
 EXP_LIST="ctrl holt_r2 holt_r3 uw_r2 uw_r3"
 
 DIR_BIN="/leonardo/home/userexternal/ggiulian/binaries_CORDEX5"
