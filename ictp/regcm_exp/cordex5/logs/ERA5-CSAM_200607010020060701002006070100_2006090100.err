@@ -1,0 +1,9 @@
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_params.F90 at line:     2969
+ Error reading RESTARTPARAM
+ -------------------------------------------
+ mod_params.F90 :     2969:            1
+ Abort called by computing node            0 at 2026-01-01 12:33:50.358 +0100
+ Execution terminated because of runtime error
+Abort(1) on node 0 (rank 0 in comm 496): application called MPI_Abort(comm=0x84000003, 1) - process 0
+ERROR: Simulation ended abruptly!!!

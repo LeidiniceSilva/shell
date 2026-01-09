@@ -1,10 +1,2 @@
- NetCDF: HDF error                                                              
-  
- mod_clm_nchelper.F90 : 
-     3975:Error write pftmask to file /leonardo/home/userexternal/mdasilva/leona
- rdo_work/CORDEX5/ERA5/ERA5-CSAM//CSAM-3.clm.regcm.h1.20051201_03600.nc: 
-        -101
- Abort called by computing node            0 at 2025-12-28 21:35:56.826 +0100
- Execution terminated because of runtime error
-Abort(1) on node 0 (rank 0 in comm 496): application called MPI_Abort(comm=0x84000003, 1) - process 0
-ERROR: Simulation ended abruptly!!!
+slurmstepd: error: *** JOB 31594273 ON lrdn4135 CANCELLED AT 2025-12-29T10:04:50 ***
+slurmstepd: error: *** STEP 31594273.0 ON lrdn4135 CANCELLED AT 2025-12-29T10:04:50 ***
