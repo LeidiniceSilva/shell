@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km
+base=/leonardo/home/userexternal/mdasilva/leonardo_scratch/SAM-3km
 
 {
 set -eo pipefail
@@ -11,7 +11,7 @@ then
   echo $0: Not enough arguments.
   echo $0: Need at least namelist file.
   echo $0: Can receive start date, terrain/icbc flag and dependency.
-  echo $0: START DATE : YYYYMMDD00 - default 1999010100
+  echo $0: START DATE : YYYYMMDD00 - default 2018010100
   echo $0: WORK FLAG  : true icbc, false terrain/mksurfdata/sst
   echo $0: DEPENDENCY : -d afterany:JOBID
   echo $0: Example:
@@ -20,7 +20,7 @@ then
 fi
 
 nl=$1 #namelist
-sD="${2:-2017010100}" #start Date
+sD="${2:-2018010100}" #start Date
 cL="${3:-false}"      #control Logic
 dep=$4
 
@@ -36,7 +36,7 @@ ter=true
 sst=true 
 icb=false
 
-mkdir -p $base/test/input
+mkdir -p $base/input
 
 if [ $cL = true ]; then
   ter=false

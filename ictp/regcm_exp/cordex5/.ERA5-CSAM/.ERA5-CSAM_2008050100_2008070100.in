@@ -51,7 +51,7 @@
                    ! 'ROTMER', Rotated Mercator.
  ds = -0.03,       ! Grid point horizontal resolution in km
  ptop = 10.0,      ! Pressure of model top in cbar
- clat = -24.0,     ! Central latitude  of model domain in degrees North hemisphere is positive
+ clat = -25.0,     ! Central latitude  of model domain in degrees North hemisphere is positive
  clon = 303.0,     ! Central longitude of model domain in degrees West is negative.
  plat = -70.60,    ! Pole latitude (only for rotated Mercator Proj)
  plon = 123.94,    ! Pole longitude (only for rotated Mercator Proj)
@@ -65,7 +65,7 @@
 ! DOMAIN terrain generation parameters
 !
  &terrainparam
- domname     = 'SAM-3km',     ! Name of the domain/experiment. Controls naming of input files
+ domname     = 'CSAM-3',      ! Name of the domain/experiment. Controls naming of input files
  lresamp     = .false.,       ! Do a first resampling before interpolation
  smthbdy     = .true.,        ! Perform extra smoothing in boundaries
  ismthlev    = 2,             ! Smoothing level (additional 1-2-1 smoother)
@@ -80,8 +80,8 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/SAM-3km/input',  ! Output directory for terrain files
- inpter = '/leonardo_work/ICT25_ESP/RCMDATA',                                     ! Input directory for SURFACE dataset
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/icbc', ! Output directory for terrain files
+ inpter = '/leonardo_work/ICT25_ESP/RCMDATA/',                                    ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
                               ! when lsmoist option is True
@@ -129,11 +129,11 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = startTarget,       ! Start date for ICBC data generation
- gdate2 = endTarget,         ! End data for ICBC data generation
+ gdate1 = 1999010100,       ! Start date for ICBC data generation
+ gdate2 = 2010010100,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/SAM-3km/input', ! Path for ICBC produced input files
- inpglob = '/leonardo_work/ICT25_ESP/RCMDATA',                                    ! Path for ICBC global input datasets.
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/icbc',  ! Path for ICBC produced input files
+ inpglob = '/leonardo_work/ICT25_ESP/RCMDATA/',                                      ! Path for ICBC global input datasets
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
                              ! ICBC controlled by the perturbparam stanza
@@ -173,10 +173,10 @@
 ! Model start/restart control
 !
  &restartparam
- ifrest  = restLogic,       ! If a restart
- mdate0  = startTarget,     ! Global start (is globidate1)
- mdate1  = startDate,       ! Start date of this run
- mdate2  = endDate,         ! End date for this run 
+ ifrest  = .true.,   ! If a restart
+ mdate0  = 1999010100, ! Global start (is globidate1)
+ mdate1  = 2008050100,   ! Start date of this run
+ mdate2  = 2008070100,     ! End date for this run 
  /
  
 !
@@ -192,8 +192,8 @@
 !
  &outparam
  ifcordex  = .true.,            ! <- selects and reshuffle output fields
- atmfrq    =     6.,            ! Frequency in hours to write to ATM
- outnwf    =     0.,            ! Day interval to open new files   (0 = monthly)
+ atmfrq    =     1.,            ! Frequency in hours to write to ATM
+ outnwf    =     1.,            ! Day interval to open new files   (0 = monthly)
  ! ifsave  = .true.,            ! Create SAV files for restart
  ! savfrq  =     0.,            ! Frequency in days to create them (0 = monthly)
  ! ifatm   = .true.,            ! Output ATM ?
@@ -210,14 +210,14 @@
  ! ifchem  = .false.,           ! Output CHE ?
  ! ifopt   = .false.,           ! Output OPT ?
  ! chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/SAM-3km/output', ! Path where all output will be placed
- lsync   = .true.,                 ! If sync of output files at every timestep is requested.
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM', ! Path where all output will be placed
+ lsync   = .true.,                 ! If sync of output files at every timestep is requested. 
                                    ! Note, it has a performance impact.
                                    ! Enabled by default if debug_level > 2
  icosp = 0,                        ! Enable COSP needed fields in output in the ATM
  idiag = 0,                        ! Enable tendency diagnostic output in the ATM
                                    ! file. NOTE: output file gets HUGE.
- do_parallel_netcdf_in  = .true.,  ! This enables paralell input
+ do_parallel_netcdf_in  = .false., ! This enables paralell input
                                    ! Each processors reads its slice in the
                                    ! input file. Enable ONLY in case of
                                    ! HUGE input bandwidth,
@@ -336,7 +336,7 @@
  &molochparam
  mo_ztop = 25000.0, ! Atmosphere top lid in meters
  mo_a0 = 0.0,       ! Vertical stretching in model level equations
- mo_h = 7500.0,     
+ mo_h = 7500.0,     !
  /
  
 !
@@ -358,7 +358,7 @@
  coef_ccn  = 2.5e+20, ! Coefficient determined by assuming a lognormal PMD
  abulk     = 0.9,     ! Bulk activation ratio
  /
- 
+
 !
 ! Holtslag PBL scheme control
 !

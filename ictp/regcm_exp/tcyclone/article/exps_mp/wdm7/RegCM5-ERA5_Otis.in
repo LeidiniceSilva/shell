@@ -184,7 +184,7 @@
 ! All values except dt can be zero. Convenient values are chosen by the model.
 !
  &timeparam
- dt     =   30.,        ! time step in seconds
+ dt     =   45.,        ! time step in seconds
  /
  
 !
