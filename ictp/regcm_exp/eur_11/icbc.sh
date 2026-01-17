@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT25_ESP
+#SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1 
 #SBATCH --ntasks-per-node=112
@@ -11,7 +11,7 @@
 #SBATCH --mail-user=mda_silv@ictp.it
 
 {
-source /leonardo/home/userexternal/ggiulian/modules
+source /leonardo/home/userexternal/ggiulian/modules_new
 set -eo pipefail
 
 nl=$1
@@ -33,9 +33,9 @@ cp $nl $nnl
 sed -i "s/startTarget/${startDate}/g" $nnl
 sed -i "s/endTarget/${endTarget}/g" $nnl
 
-[[ $ter = true ]] && ./bin/terrainCLM45_SKL $nnl
-[[ $ter = true ]] && ./bin/mksurfdataCLM45_SKL $nnl
-[[ $sst = true ]] && ./bin/sstCLM45_SKL $nnl
-[[ $icb = true ]] && ./bin/icbcCLM45_SKL $nnl
+[[ $ter = true ]] && ./bin/terrainCLM45 $nnl
+[[ $ter = true ]] && ./bin/mksurfdataCLM45 $nnl
+[[ $sst = true ]] && ./bin/sstCLM45 $nnl
+[[ $icb = true ]] && ./bin/icbcCLM45 $nnl
 echo "icbc script complete"
 }

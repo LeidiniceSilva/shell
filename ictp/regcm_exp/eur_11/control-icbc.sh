@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH -N 1
-#SBATCH -A ICT25_ESP
+#SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 00:01:00
@@ -79,6 +79,8 @@ if [ $prevstartdate = $restartdate ]; then
     echo $(( $nlog + 1 )) > $looplog
     echo " >>> re-attempting, n=$(( $nlog + 1 ))"
   fi
+#  echo "no resubmission allowed"
+#  exit 1
 fi
 
 nl=$( echo $cjn | cut -d'_' -f2 ).in

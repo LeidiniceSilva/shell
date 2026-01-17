@@ -2,7 +2,7 @@
 
 #SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 12
+#SBATCH -N 16
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
 #SBATCH -o logs/MODEL_SLURM.out

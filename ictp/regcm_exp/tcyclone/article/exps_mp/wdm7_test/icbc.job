@@ -2,12 +2,12 @@
 
 #SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 12
+#SBATCH -N 4
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -o logs/MODEL_SLURM.out
-#SBATCH -e logs/MODEL_SLURM.err
-#SBATCH -J Otis_wdm7
+#SBATCH -o logs/ICBC_SLURM.out
+#SBATCH -e logs/ICBC_SLURM.err
+#SBATCH -J ICBC
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -22,6 +22,8 @@ BINARIES=/leonardo/home/userexternal/mdasilva/RegCM/bin
 EXTENSION=CLM45
 
 # run model
-mpirun $BINARIES/regcmMPI$EXTENSION $NAMELIST
-
+$BINARIES/terrain$EXTENSION $NAMELIST
+$BINARIES/mksurfdata$EXTENSION $NAMELIST
+$BINARIES/sst$EXTENSION $NAMELIST
+$BINARIES/icbc$EXTENSION $NAMELIST
 }
