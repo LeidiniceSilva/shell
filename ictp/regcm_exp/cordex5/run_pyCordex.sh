@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source /leonardo/home/userexternal/ggiulian/modules_gfortran
-
 #################
 ##### input #####
 #################
@@ -13,7 +11,7 @@ email="mda_silv@ictp.it"
 domain="CSAM-3"
 global="ERA5"
 experiment="evaluation"
-ensemble="r0i0p0f0"
+ensemble="r1i1p1f1"
 notes="None"
 output="."
 proc=20
@@ -27,8 +25,8 @@ base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5
 hdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex5
 
 # start and end year(s)
-yr0=2009
-yr1=2009
+yr0=2000
+yr1=2000
 # start and end month(s)
 mn0=7
 mn1=12
@@ -38,7 +36,7 @@ mn1=12
 ########################
 
 # working directory for pycordex 
-wdir=${base}/ERA5/ERA5-CSAM-3
+wdir=${base}/ERA5/ERA5-CSAM
 
 # path to run pycordex scripts
 sdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex5

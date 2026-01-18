@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --account             ICT25_ESP
+#SBATCH --account             CMPNS_ictpclim
 #SBATCH --job-name            PyCordex
 #SBATCH --mail-type           FAIL
 #SBATCH --mail-user           mda_silv@ictp.it
@@ -17,7 +17,7 @@ mail=mda_silv@ictp.it
 domain=CSAM-3
 global=ERA5
 experiment=evaluation
-ensemble=r0i0p0f0
+ensemble=r1i1p1f1
 notes="None"
 output="."
 proc=20

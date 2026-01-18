@@ -65,7 +65,7 @@ rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
 rm ${VAR}_${DOMAIN}_RegCM5_${YR}.nc
 rm ${VAR}_${DOMAIN}_RegCM5_${YR}_min.nc
 rm ${VAR}_${DOMAIN}_RegCM5_${YR}_max.nc
-rm p99_${DOMAIN}_RegCM5_${YR}.nc
+rm p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
