@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH -N 1 
-#SBATCH -A ICT25_ESP
+#SBATCH -A CMPNS_ictpclim 
 #SBATCH -p dcgp_usr_prod
 #SBATCH --ntasks-per-node=108
 #SBATCH -t 00:01:00

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11
+base=/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11
 
 {
 set -eo pipefail
