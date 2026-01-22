@@ -19,7 +19,7 @@ set -eo pipefail
 source /leonardo/home/userexternal/ggiulian/modules
 
 NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km/ERA5_SAM-3km.in
-BINARIES=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sam_3km/bin/
+BINARIES=/leonardo/home/userexternal/ggiulian/binaries_CORDEX5/
 EXTENSION=CLM45
 
 # run model
