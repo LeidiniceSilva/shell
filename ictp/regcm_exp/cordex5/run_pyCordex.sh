@@ -25,11 +25,11 @@ base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5
 hdir=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/cordex5
 
 # start and end year(s)
-yr0=2001
-yr1=2001
+yr0=2002
+yr1=2002
 # start and end month(s)
-mn0=7
-mn1=12
+mn0=1
+mn1=6
 
 ########################
 ##### end of input #####
