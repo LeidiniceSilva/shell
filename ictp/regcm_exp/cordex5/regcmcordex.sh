@@ -3,7 +3,7 @@
 #SBATCH --account             CMPNS_ictpclim
 #SBATCH --job-name            CSAM-3_POST
 #SBATCH --mail-type           FAIL
-#SBATCH --mail-user           ggiulian@ictp.it
+#SBATCH --mail-user           mda_silv@ictp.it
 #SBATCH --nodes               1
 #SBATCH --ntasks-per-node     112
 #SBATCH --partition           dcgp_usr_prod
@@ -15,7 +15,7 @@ datadir=$PWD
 idates=`ls CSAM-3_SRF.${1}* | cut -d "." -f 2`
 
 pycordex=/leonardo/home/userexternal/ggiulian/RegCM-CORDEX5/Tools/Scripts/pycordexer
-mail=ggiulian@ictp.it
+mail=mda_silv@ictp.it
 domain=CSAM-3
 global=ERA5
 experiment=evaluation
