@@ -1298,9 +1298,9 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
   This is RegCM development version
    GIT Revision: 5.0.0-1072-gae0d7 compiled at: data : Jan 20 2026  time: 12:48:07
 
- : this run start at  : 2026-01-25 19:16:12+0100
+ : this run start at  : 2026-01-26 17:41:27+0100
  : it is submitted by : mdasilva
- : it is running on   : lrdn3593.leonardo.local
+ : it is running on   : lrdn4421.leonardo.local
  : it is using        :         1296   processors
  : in directory       : 
  /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/eur_1
@@ -1453,7 +1453,7 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
     run type              = restart
     case title            = RegCM driven CLM4.5
     username              = mdasilva
-    hostname              = lrdn3593.leonardo.local
+    hostname              = lrdn4421.leonardo.local
  input data files:
     PFT physiology = 
  /leonardo_work/ICT25_ESP/RCMDATA//CLM45/pftdata/pft-physiology.c130503.nc
@@ -2038,116 +2038,3 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  CLM History variables written
  SRF variables written at  2004-01-04 04:00:00 UTC        
  SHF variables written at  2004-01-04 04:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-04 05:00:00 UTC        
- SHF variables written at  2004-01-04 05:00:00 UTC        
- CLM History variables written
- ATM variables written at  2004-01-04 06:00:00 UTC        
- SRF variables written at  2004-01-04 06:00:00 UTC        
- SHF variables written at  2004-01-04 06:00:00 UTC        
- RAD variables written at  2004-01-04 06:00:00 UTC        
- SEARCH BC data for 2004010412 , step =  1756080
- READY  BC from     2004010406  to 2004010412 
- $$$  2004-01-04 06:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.43  694.82
- $$$ no. of points with active convection =   62829
- CLM History variables written
- SRF variables written at  2004-01-04 07:00:00 UTC        
- SHF variables written at  2004-01-04 07:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-04 08:00:00 UTC        
- SHF variables written at  2004-01-04 08:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-04 09:00:00 UTC        
- SHF variables written at  2004-01-04 09:00:00 UTC        
- $$$  2004-01-04 09:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.90  694.72
- $$$ no. of points with active convection =   62953
- CLM History variables written
- SRF variables written at  2004-01-04 10:00:00 UTC        
- SHF variables written at  2004-01-04 10:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-04 11:00:00 UTC        
- SHF variables written at  2004-01-04 11:00:00 UTC        
- CLM History variables written
- ATM variables written at  2004-01-04 12:00:00 UTC        
- SRF variables written at  2004-01-04 12:00:00 UTC        
- SHF variables written at  2004-01-04 12:00:00 UTC        
- RAD variables written at  2004-01-04 12:00:00 UTC        
- SEARCH BC data for 2004010418 , step =  1756320
- READY  BC from     2004010412  to 2004010418 
- $$$  2004-01-04 12:00:00 UTC        
- $$$ max, min of ps (mb) =  1026.78  694.81
- $$$ no. of points with active convection =   63051
- CLM History variables written
- SRF variables written at  2004-01-04 13:00:00 UTC        
- SHF variables written at  2004-01-04 13:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-04 14:00:00 UTC        
- SHF variables written at  2004-01-04 14:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-04 15:00:00 UTC        
- SHF variables written at  2004-01-04 15:00:00 UTC        
- $$$  2004-01-04 15:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.94  694.96
- $$$ no. of points with active convection =   63329
- CLM History variables written
- SRF variables written at  2004-01-04 16:00:00 UTC        
- SHF variables written at  2004-01-04 16:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-04 17:00:00 UTC        
- SHF variables written at  2004-01-04 17:00:00 UTC        
- CLM History variables written
- ATM variables written at  2004-01-04 18:00:00 UTC        
- SRF variables written at  2004-01-04 18:00:00 UTC        
- SHF variables written at  2004-01-04 18:00:00 UTC        
- RAD variables written at  2004-01-04 18:00:00 UTC        
- SEARCH BC data for 2004010500 , step =  1756560
- READY  BC from     2004010418  to 2004010500 
- $$$  2004-01-04 18:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.52  694.87
- $$$ no. of points with active convection =   62571
- CLM History variables written
- SRF variables written at  2004-01-04 19:00:00 UTC        
- SHF variables written at  2004-01-04 19:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-04 20:00:00 UTC        
- SHF variables written at  2004-01-04 20:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-04 21:00:00 UTC        
- SHF variables written at  2004-01-04 21:00:00 UTC        
- $$$  2004-01-04 21:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.64  694.79
- $$$ no. of points with active convection =   61149
- CLM History variables written
- SRF variables written at  2004-01-04 22:00:00 UTC        
- SHF variables written at  2004-01-04 22:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-04 23:00:00 UTC        
- SHF variables written at  2004-01-04 23:00:00 UTC        
- CLM History variables written
- At  2004-01-05 00:00:00 UTC        
- JDay      4.00000 solar declination angle = -22.80052589 degrees
-                   solar TSI irradiance    =    1356.2449 W/m^2
- ATM variables written at  2004-01-05 00:00:00 UTC        
- SRF variables written at  2004-01-05 00:00:00 UTC        
- SHF variables written at  2004-01-05 00:00:00 UTC        
- STS variables written at  2004-01-05 00:00:00 UTC        
- RAD variables written at  2004-01-05 00:00:00 UTC        
- SEARCH BC data for 2004010506 , step =  1756800
- READY  BC from     2004010500  to 2004010506 
- $$$  2004-01-05 00:00:00 UTC        
- $$$ max, min of ps (mb) =  1025.76  694.47
- $$$ no. of points with active convection =   59631
- CLM History variables written
- SRF variables written at  2004-01-05 01:00:00 UTC        
- SHF variables written at  2004-01-05 01:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-05 02:00:00 UTC        
- SHF variables written at  2004-01-05 02:00:00 UTC        
- CLM History variables written
- SRF variables written at  2004-01-05 03:00:00 UTC        
- SHF variables written at  2004-01-05 03:00:00 UTC        
- $$$  2004-01-05 03:00:00 UTC        
- $$$ max, min of ps (mb) =  1024.94  694.37
- $$$ no. of points with active convection =   58072
