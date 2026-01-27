@@ -26,7 +26,7 @@ FREQ="1hr"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 
-YR="2000-2000"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
@@ -62,9 +62,9 @@ ${BIN}/./regrid p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -36.70233,-12.24439,0.03 -
 echo 
 echo "Delete files"
 rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
-rm ${VAR}_${DOMAIN}_RegCM5_${YR}.nc
-rm ${VAR}_${DOMAIN}_RegCM5_${YR}_min.nc
-rm ${VAR}_${DOMAIN}_RegCM5_${YR}_max.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_min.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}_max.nc
 rm p99_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
 
 echo

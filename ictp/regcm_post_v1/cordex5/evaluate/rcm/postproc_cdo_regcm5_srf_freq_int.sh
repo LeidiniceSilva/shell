@@ -26,7 +26,7 @@ FREQ="day"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 
-YR="2000-2000"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
@@ -44,7 +44,7 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
 echo "Concatenate date"
-CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_${FREQ}_2000*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
 echo
 echo "Convert unit"
@@ -66,9 +66,8 @@ done
 
 echo 
 echo "Delete files"
-rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
-rm ${VAR}_${DOMAIN}_RegCM5_${YR}.nc
-rm ${VAR}_${DOMAIN}_RegCM5_*_${YR}.nc
+
+rm *_${YR}.nc
 rm ${VAR}_freq_${DOMAIN}_RegCM5_*_${YR}.nc
 rm ${VAR}_int_${DOMAIN}_RegCM5_*_${YR}.nc
 

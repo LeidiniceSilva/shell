@@ -27,7 +27,7 @@ FREQ="1hr"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 
-YR="2000-2000"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
@@ -67,9 +67,7 @@ done
 
 echo 
 echo "Delete files"
-rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
-rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
-rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_*_${YR}.nc
+rm *_${YR}.nc
 rm ${VAR}_freq_${DOMAIN}_RegCM5_${FREQ}_*_${YR}_th${TH}.nc
 rm ${VAR}_int_${DOMAIN}_RegCM5_${FREQ}_*_${YR}_th${TH}.nc
 

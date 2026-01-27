@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT25_ESP
+#SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -15,7 +15,6 @@
 #__description__ = 'Posprocessing the RegCM5 output with CDO'
  
 {
-source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 CDO(){
@@ -24,7 +23,7 @@ CDO(){
 
 FREQ="day"
 DOMAIN="CSAM-3"
-EXP="ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1"
+EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 VAR_LIST="hus200 hus850 ua200 ua850 va200 va850"
 
 YR="2000-2009"
@@ -44,7 +43,7 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 	
 for VAR in ${VAR_LIST[@]}; do
 
-    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/${FREQ}/${VAR}"
+    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/${FREQ}/${VAR}"
 
     echo
     echo "Select variable"

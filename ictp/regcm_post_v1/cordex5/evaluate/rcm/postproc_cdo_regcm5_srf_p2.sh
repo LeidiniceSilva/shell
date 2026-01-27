@@ -26,7 +26,7 @@ FREQ="1hr"
 DOMAIN="CSAM-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 
-YR="2000-2000"
+YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
