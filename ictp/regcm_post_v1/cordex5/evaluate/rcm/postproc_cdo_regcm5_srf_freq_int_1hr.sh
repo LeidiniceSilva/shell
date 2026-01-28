@@ -67,7 +67,9 @@ done
 
 echo 
 echo "Delete files"
-rm *_${YR}.nc
+rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
+rm ${VAR}_${DOMAIN}_RegCM5_${FREQ}_*_${YR}.nc
 rm ${VAR}_freq_${DOMAIN}_RegCM5_${FREQ}_*_${YR}_th${TH}.nc
 rm ${VAR}_int_${DOMAIN}_RegCM5_${FREQ}_*_${YR}_th${TH}.nc
 

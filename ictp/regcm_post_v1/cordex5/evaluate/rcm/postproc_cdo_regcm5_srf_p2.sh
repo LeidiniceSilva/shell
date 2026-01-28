@@ -43,12 +43,11 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 echo 
 echo "Concatenate date: ${YR}"
-CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_${FREQ}_2000*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_${EXP}_${FREQ}_*.nc ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
     
 echo
 echo "Convert unit"
 CDO -b f32 mulc,3600 ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc
-CDO daysum ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc
 
 echo
 echo "Hourly mean"
@@ -63,8 +62,6 @@ CDO mergetime ${VAR}_${DOMAIN}_RegCM5_*_${YR}_timmean.nc ${VAR}_${DOMAIN}_RegCM5
     
 echo
 echo "Regrid output"
-${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_${FREQ}_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
-${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 ${BIN}/./regrid ${VAR}_${DOMAIN}_RegCM5_diurnal_cycle_${YR}.nc -36.70233,-12.24439,0.03 -78.81965,-35.32753,0.03 bil
 
 echo 

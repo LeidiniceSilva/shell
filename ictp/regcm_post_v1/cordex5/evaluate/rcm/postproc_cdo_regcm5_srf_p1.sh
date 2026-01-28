@@ -93,8 +93,9 @@ for VAR in ${VAR_LIST[@]}; do
     
     echo 
     echo "Delete files"
-    rm *_${YR}.nc
-    rm ${VAR}_${DOMAIN}_RegCM5_mon_${YR}_lonlat.nc
+    rm ${VAR}_${DOMAIN}_${EXP}_${FREQ}_${YR}.nc
+    rm ${VAR}_${DOMAIN}_RegCM5_day_${YR}.nc
+    rm ${VAR}_${DOMAIN}_RegCM5_mon_${YR}.nc
       
 done
 
