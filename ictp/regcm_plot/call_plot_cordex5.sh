@@ -23,21 +23,21 @@ echo "--------------- INIT PLOT ----------------"
 DIR_IN="/leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/cordex5/evaluate"
 cd ${DIR_IN}
 
-#for varc in pr tas tasmax tasmin clt cll clm clh evspsblpot rlds cape cin; do
-#    python3 plot_maps_clim_srf.py --var "${varc}" --domain CSAM-3 --idt 2000 --fdt 2009
-#done
+for varc in pr tas tasmax tasmin clt cll clm clh evspsblpot rlds cape cin; do
+    python3 plot_maps_clim_srf.py --var "${varc}" --domain CSAM-3 --idt 2000 --fdt 2009
+done
 
-#for varb in pr tas tasmax tasmin clt cll clm clh evspsblpot rlds; do
-#    python3 plot_maps_bias_srf.py --var "${varb}" --domain CSAM-3 --idt 2000 --fdt 2009
-#done
+for varb in pr tas tasmax tasmin clt cll clm clh evspsblpot rlds; do
+    python3 plot_maps_bias_srf.py --var "${varb}" --domain CSAM-3 --idt 2000 --fdt 2009
+done
 
 python3 plot_maps_bias_srf_p99.py --var p99 --freq daily --domain CSAM-3 --idt 2000 --fdt 2009
-#python3 plot_maps_bias_srf_p99.py --var p99 --freq hourly --domain CSAM-3 --idt 2000 --fdt 2009
+python3 plot_maps_bias_srf_p99.py --var p99 --freq hourly --domain CSAM-3 --idt 2000 --fdt 2009
 
 python3 plot_maps_bias_srf_freq_int.py --var pr --stats int --freq daily --domain CSAM-3 --idt 2000 --fdt 2009
 python3 plot_maps_bias_srf_freq_int.py --var pr --stats freq --freq daily --domain CSAM-3 --idt 2000 --fdt 2009
-#python3 plot_maps_bias_srf_freq_int.py --var pr --stats int --freq hourly --domain CSAM-3 --idt 2000 --fdt 2009
-#python3 plot_maps_bias_srf_freq_int.py --var pr --stats freq --freq hourly --domain CSAM-3 --idt 2000 --fdt 2009
+python3 plot_maps_bias_srf_freq_int.py --var pr --stats int --freq hourly --domain CSAM-3 --idt 2000 --fdt 2009
+python3 plot_maps_bias_srf_freq_int.py --var pr --stats freq --freq hourly --domain CSAM-3 --idt 2000 --fdt 2009
 
 python3 plot_maps_trend_srf.py --var pr --domain CSAM-3 --idt 2000 --fdt 2009
 python3 plot_maps_trend_srf.py --var tas --domain CSAM-3 --idt 2000 --fdt 2009
