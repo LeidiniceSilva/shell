@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#SBATCH -A ICT25_ESP
+#SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 1
+#SBATCH -N 4
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
 #SBATCH -J sigma2p
@@ -23,14 +23,15 @@ YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
+FOLDER_LIST="NoTo-EUR WSM5-EUR"
+#FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
 
 for FOLDER in ${FOLDER_LIST[@]}; do
 
-    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/${FOLDER}"
+    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/${FOLDER}"
     BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
  
     echo

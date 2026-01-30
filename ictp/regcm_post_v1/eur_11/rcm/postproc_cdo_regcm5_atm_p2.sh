@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#SBATCH -A ICT25_ESP
+#SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 1
+#SBATCH -N 4
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
 #SBATCH -J rotate_wind
@@ -30,7 +30,7 @@ echo "--------------- INIT POSTPROCESSING MODEL ----------------"
 
 for FOLDER in ${FOLDER_LIST[@]}; do
 
-    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/${FOLDER}"
+    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/${FOLDER}"
     WIND="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm"
 
     echo

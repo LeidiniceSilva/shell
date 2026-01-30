@@ -23,7 +23,7 @@ CDO(){
 
 FREQ="1hr"
 DOMAIN="CSAM-3"
-MODEL="RegCM5"
+MODEL="RegCM5-urb"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 
 YR="2000-2000"
@@ -31,8 +31,8 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="uas vas"
-# VAR_LIST="hfls hfss uas vas"
+VAR_LIST="sfcWind"
+# VAR_LIST="hfls hfss sfcWind"
 
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/urb"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
