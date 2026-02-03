@@ -21,20 +21,14 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-INST="RegCM5-ERA5_ICTP"
+INST="RegCM5-Nor_USP" # RegCM5-Nor_USP
 EXP="SAM-12"
 
-YR="1970-1971"
+YR="1971-1972"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-if [ ${INST} == 'RegCM5-ERA5_ICTP' ]
-then
-DIR_IN="/leonardo/home/userexternal/mdasilva/reg-nor"
-else
-DIR_IN="/leonardo_work/ICT25_ESP/nzazulie/SAM-12/ERA5/NoTo-SouthAmerica"
-fi
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/${EXP}/postproc/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
@@ -49,15 +43,23 @@ echo
 echo "Select variables"    
 VAR_LIST="pr tas"
 for VAR in ${VAR_LIST[@]}; do
+
+    if [ ${INST} == 'RegCM5-Nor_USP' ]; then
+    DIR_IN="/leonardo/home/userexternal/mdasilva/reg-nor"
+    else
+    DIR_IN="/leonardo_work/ICT25_ESP/nzazulie/CORDEX/CORDEX-CMIP6/DD/SAM-12/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/${VAR}"
+    fi
+
+    if [ ${INST} = "RegCM5-Nor_USP" ]; then
     for YEAR in `seq -w ${IYR} ${FYR}`; do
         for MON in `seq -w 01 12`; do
-            CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc  
+            CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}01.nc 
 	done
     done
-
-    echo 
-    echo "Concatenate data"
-    CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${EXP}_${INST}_${YR}.nc
+    CDO mergetime ${VAR}_${EXP}_*01.nc ${VAR}_${EXP}_${INST}_${YR}.nc
+    else
+    CDO mergetime ${DIR_IN}/${VAR}_${EXP}_*_${IYR}*.nc ${DIR_IN}/${VAR}_${EXP}_*_${FYR}*.nc ${VAR}_${EXP}_${INST}_${YR}.nc 
+    fi
 
     if [ ${VAR} == 'pr' ]
     then
@@ -67,17 +69,10 @@ for VAR in ${VAR_LIST[@]}; do
     fi
     CDO monmean ${VAR}_${EXP}_${INST}_day_${YR}.nc ${VAR}_${EXP}_${INST}_mon_${YR}.nc
 
-    echo
-    echo "Seasonal avg and Regrid"
     for SEASON in ${SEASON_LIST[@]}; do
         CDO -timmean -selseas,${SEASON} ${VAR}_${EXP}_${INST}_mon_${YR}.nc ${VAR}_${EXP}_${INST}_${SEASON}_${YR}.nc
-	${BIN}/./regrid ${VAR}_${EXP}_${FOLDER}_RegCM5_${SEASON}_${YR}.nc -57.89861,18.49594,0.22 -105.8313,-16.58986,0.22 bil
+	${BIN}/./regrid ${VAR}_${EXP}_${INST}_${SEASON}_${YR}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     done
-    
-    echo 
-    echo "Delete files"
-    rm *0100.nc
-    rm *${YR}.nc
 
 done
 

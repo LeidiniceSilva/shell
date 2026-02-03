@@ -23,12 +23,13 @@ CDO(){
 DATASET="ERA5"
 DOMAIN="SAM-12"
 
-YR="1970-1971"
+YR="1971-1972"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
+SEASON_LIST="DJF MAM JJA SON"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/${DOMAIN}/postproc"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/${DOMAIN}/postproc/obs"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -61,7 +62,6 @@ done
 
 echo 
 echo "Delete files"
-rm *_${YR}.nc
 rm ${VAR}_${EXP}_${DATASET}_${YR}_min.nc
 rm ${VAR}_${EXP}_${DATASET}_${YR}_max.nc
 

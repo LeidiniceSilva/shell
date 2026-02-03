@@ -49,15 +49,15 @@ for VAR in ${VAR_LIST[@]}; do
     CDO monmean ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}01.nc
     CDO timmin ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01_min.nc
     CDO timmax ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01_max.nc
-    CDO timpctl,99 ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01_min.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01_max.nc p99_${DOMAIN}_${DATASET}_day_${YEAR}01.nc
-    CDO mulc,100 -histfreq,1,100000 ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_freq_${DOMAIN}_${DATASET}_day_${YEAR}01_th1.nc
-    CDO histmean,1,100000 ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_int_${DOMAIN}_${DATASET}_day_${YEAR}01_th1.nc
+    CDO timpctl,99 ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01_min.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01_max.nc p99_${DOMAIN}_${DATASET}_${YEAR}01.nc
+    CDO mulc,100 -histfreq,1,100000 ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_freq_${DOMAIN}_${DATASET}_day_${YEAR}01.nc
+    CDO histmean,1,100000 ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_int_${DOMAIN}_${DATASET}_day_${YEAR}01.nc
     ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_1hr_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
-    ${BIN}/./regrid p99_${DOMAIN}_${DATASET}_day_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
-    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_${DATASET}_day_${YEAR}01_th1.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
-    ${BIN}/./regrid ${VAR}_int_${DOMAIN}_${DATASET}_day_${YEAR}01_th1.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
+    ${BIN}/./regrid p99_${DOMAIN}_${DATASET}_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
+    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_${DATASET}_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
+    ${BIN}/./regrid ${VAR}_int_${DOMAIN}_${DATASET}_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     else
     CDO selyear,${YEAR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${DATASET}_${YEAR}.nc
     CDO selmon,1 ${VAR}_${DATASET}_${YEAR}.nc ${VAR}_${DATASET}_mon_${YEAR}01.nc

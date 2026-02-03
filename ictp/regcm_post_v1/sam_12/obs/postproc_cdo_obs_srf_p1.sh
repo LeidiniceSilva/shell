@@ -23,7 +23,7 @@ CDO(){
 DATASET=$1
 DOMAIN="SAM-12"
 
-YR="1970-1971"
+YR="1971-1972"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
