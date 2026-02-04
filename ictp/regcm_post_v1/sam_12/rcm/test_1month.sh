@@ -25,7 +25,7 @@ INST="RegCM5-ERA5_ICTP"
 EXP="SAM-12"
 
 YEAR="1970"
-MON="01"
+MON="01-02"
 
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/${EXP}/postproc/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
@@ -50,42 +50,46 @@ for VAR in ${VAR_LIST[@]}; do
 
     if [ "${INST}" = "RegCM5-ERA5_USP" ]; then
     if [ ${VAR} == 'pr' ]; then
-    CDO -b f32 mulc,3600 ${DIR_IN}/pr_SAM-12_SRF.1970020100.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}01.nc
-    CDO daysum ${VAR}_${EXP}_${INST}_${YEAR}${MON}01.nc ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc
+    CDO mergetime ${DIR_IN}/${VAR}_SAM-12_SRF.1970010100.nc ${DIR_IN}/${VAR}_SAM-12_SRF.1970020100.nc ${VAR}_${EXP}_${YEAR}${MON}.nc
+    CDO -b f32 mulc,3600 ${VAR}_${EXP}_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}.nc
+    CDO daysum ${VAR}_${EXP}_${INST}_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc
     CDO monmean ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc
-    CDO timmin ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_min.nc
-    CDO timmax ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_max.nc
-    CDO timpctl,99 ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_min.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_max.nc p99_${EXP}_${INST}_${YEAR}${MON}.nc
-    CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc ${VAR}_freq_${EXP}_${INST}_${YEAR}${MON}.nc
-    CDO histmean,1,100000 ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc ${VAR}_int_${EXP}_${INST}_${YEAR}${MON}.nc
+    CDO timmin ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_min.nc
+    CDO timmax ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_max.nc
+    CDO timpctl,99 ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_min.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_max.nc p99_${EXP}_${INST}_${YEAR}${MON}.nc
+    CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_freq_${EXP}_${INST}_${YEAR}${MON}.nc
+    CDO histmean,1,100000 ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_int_${EXP}_${INST}_${YEAR}${MON}.nc
     ${BIN}/./regrid ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     ${BIN}/./regrid ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     ${BIN}/./regrid p99_${EXP}_${INST}_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     ${BIN}/./regrid ${VAR}_freq_${EXP}_${INST}_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     ${BIN}/./regrid ${VAR}_int_${EXP}_${INST}_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     else
-    CDO -b f32 subc,273.15 ${DIR_IN}/tas_SAM-12_SRF.1970020100.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}01.nc 
-    CDO monmean ${VAR}_${EXP}_${INST}_${YEAR}${MON}01.nc ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc 
+    CDO mergetime ${DIR_IN}/${VAR}_SAM-12_SRF.1970010100.nc ${DIR_IN}/${VAR}_SAM-12_SRF.1970020100.nc ${VAR}_${EXP}_${YEAR}${MON}.nc
+    CDO -b f32 subc,273.15 ${VAR}_${EXP}_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}.nc 
+    CDO monmean ${VAR}_${EXP}_${INST}_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc 
     ${BIN}/./regrid ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     fi
 
     else
     if [ ${VAR} == 'pr' ]
     then
-    CDO -b f32 mulc,86400 ${DIR_IN}/pr_SAM-12_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_19700101-19700131.nc ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc 
+    CDO mergetime ${DIR_IN}/${VAR}_*_19700101-19700131.nc ${DIR_IN}/${VAR}_*_19700201-19700228.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}.nc
+    CDO -b f32 mulc,86400 ${VAR}_${EXP}_${INST}_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc 
     CDO monmean ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc
-    CDO timmin ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_min.nc
-    CDO timmax ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_max.nc
-    CDO timpctl,99 ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_min.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_max.nc p99_${EXP}_${INST}_${YEAR}${MON}.nc
-    CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc ${VAR}_freq_${EXP}_${INST}_${YEAR}${MON}.nc
-    CDO histmean,1,100000 ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc ${VAR}_int_${EXP}_${INST}_${YEAR}${MON}.nc
+    CDO timmin ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_min.nc
+    CDO timmax ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_max.nc
+    CDO timpctl,99 ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_min.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}_max.nc p99_${EXP}_${INST}_${YEAR}${MON}.nc
+    CDO mulc,100 -histfreq,1,100000 ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_freq_${EXP}_${INST}_${YEAR}${MON}.nc
+    CDO histmean,1,100000 ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_int_${EXP}_${INST}_${YEAR}${MON}.nc
     ${BIN}/./regrid ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     ${BIN}/./regrid ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     ${BIN}/./regrid p99_${EXP}_${INST}_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     ${BIN}/./regrid ${VAR}_freq_${EXP}_${INST}_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     ${BIN}/./regrid ${VAR}_int_${EXP}_${INST}_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     else
-    CDO -b f32 subc,273.15 ${DIR_IN}/tas_SAM-12_ERA5_evaluation_r0i0p0f0_ICTP_RegCM5-0_v1-r1_day_19700101-19700131.nc ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc
+    CDO mergetime ${DIR_IN}/${VAR}_*_19700101-19700131.nc ${DIR_IN}/${VAR}_*_19700201-19700228.nc ${VAR}_${EXP}_${INST}_${YEAR}${MON}.nc
+    CDO -b f32 subc,273.15 ${VAR}_${EXP}_${INST}_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc
     CDO monmean ${VAR}_${EXP}_${INST}_day_${YEAR}${MON}.nc ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc 
     ${BIN}/./regrid ${VAR}_${EXP}_${INST}_mon_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     fi

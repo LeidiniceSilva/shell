@@ -12,7 +12,7 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Jan 30, 2026'
-#__description__ = 'Calculate the p99 of OBS datasets with CDO'
+#__description__ = 'Calculate the p99/freq/int of OBS datasets with CDO'
 
 {
 set -eo pipefail

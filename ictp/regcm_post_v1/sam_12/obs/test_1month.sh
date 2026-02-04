@@ -24,6 +24,7 @@ CDO(){
 DATASET=$1
 DOMAIN="SAM-12"
 YEAR="1970"
+MON="01-02"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/${DOMAIN}/postproc/obs"
@@ -42,42 +43,37 @@ VAR_LIST="tp t2m"
 for VAR in ${VAR_LIST[@]}; do
     if [ ${VAR} == 'tp' ]
     then
-    CDO selyear,${YEAR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1hr_1970-1979.nc ${VAR}_${DATASET}_1hr_${YEAR}.nc
-    CDO selmon,1 ${VAR}_${DATASET}_1hr_${YEAR}.nc ${VAR}_${DATASET}_1hr_${YEAR}01.nc
-    CDO mulc,1000 ${VAR}_${DATASET}_1hr_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_1hr_${YEAR}01.nc
-    CDO daysum ${VAR}_${DOMAIN}_${DATASET}_1hr_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc
-    CDO monmean ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}01.nc
-    CDO timmin ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01_min.nc
-    CDO timmax ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01_max.nc
-    CDO timpctl,99 ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01_min.nc ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01_max.nc p99_${DOMAIN}_${DATASET}_${YEAR}01.nc
-    CDO mulc,100 -histfreq,1,100000 ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_freq_${DOMAIN}_${DATASET}_day_${YEAR}01.nc
-    CDO histmean,1,100000 ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc ${VAR}_int_${DOMAIN}_${DATASET}_day_${YEAR}01.nc
-    ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_1hr_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
-    ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_day_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
-    ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
-    ${BIN}/./regrid p99_${DOMAIN}_${DATASET}_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
-    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_${DATASET}_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
-    ${BIN}/./regrid ${VAR}_int_${DOMAIN}_${DATASET}_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
+    CDO selmonth,1/2 -selyear,${YEAR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1hr_1970-1979.nc ${VAR}_${DATASET}_1hr_${YEAR}${MON}.nc
+    CDO mulc,1000 ${VAR}_${DATASET}_1hr_${YEAR}${MON}.nc ${VAR}_${DOMAIN}_${DATASET}_1hr_${YEAR}${MON}.nc
+    CDO daysum ${VAR}_${DOMAIN}_${DATASET}_1hr_${YEAR}${MON}.nc ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc
+    CDO monmean ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}${MON}.nc
+    CDO timmin ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}_min.nc
+    CDO timmax ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}_max.nc
+    CDO timpctl,99 ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}_min.nc ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}_max.nc p99_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc
+    CDO mulc,100 -histfreq,1,100000 ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc ${VAR}_freq_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc
+    CDO histmean,1,100000 ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc ${VAR}_int_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc
+    ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
+    ${BIN}/./regrid p99_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
+    ${BIN}/./regrid ${VAR}_freq_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
+    ${BIN}/./regrid ${VAR}_int_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     else
-    CDO selyear,${YEAR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${DATASET}_${YEAR}.nc
-    CDO selmon,1 ${VAR}_${DATASET}_${YEAR}.nc ${VAR}_${DATASET}_mon_${YEAR}01.nc
-    CDO subc,273.15 ${VAR}_${DATASET}_mon_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}01.nc
-    ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
+    CDO selmonth,1/2 -selyear,${YEAR} ${DIR_IN}/${DATASET}/${VAR}_ERA5_1970-1979.nc ${VAR}_${DATASET}_mon_${YEAR}${MON}.nc
+    CDO subc,273.15 ${VAR}_${DATASET}_mon_${YEAR}${MON}.nc ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}${MON}.nc
+    ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
     fi
 done
 
 else
 VAR_LIST="pre tmp"
 for VAR in ${VAR_LIST[@]}; do
-    CDO selyear,${YEAR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DOMAIN}_${DATASET}_${YEAR}.nc
-    CDO selmon,1 ${VAR}_${DOMAIN}_${DATASET}_${YEAR}.nc ${VAR}_${DOMAIN}_${DATASET}_${YEAR}01.nc
+    CDO selmonth,1/2 -selyear,${YEAR} ${DIR_IN}/${DATASET}/cru_ts4.08.1901.2023.${VAR}.dat.nc ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc
     if [ ${VAR} == 'pre' ]
     then
-    CDO divc,30.5 ${VAR}_${DOMAIN}_${DATASET}_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}01.nc
+    CDO divc,30.5 ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}${MON}.nc
     else
-    cp ${VAR}_${DOMAIN}_${DATASET}_${YEAR}01.nc ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}01.nc
+    cp ${VAR}_${DOMAIN}_${DATASET}_${YEAR}${MON}.nc ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}${MON}.nc
     fi
-    ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}01.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
+    ${BIN}/./regrid ${VAR}_${DOMAIN}_${DATASET}_mon_${YEAR}${MON}.nc -57.89861,18.49594,0.11 -105.8313,-16.58986,0.11 bil
 done
 fi
 

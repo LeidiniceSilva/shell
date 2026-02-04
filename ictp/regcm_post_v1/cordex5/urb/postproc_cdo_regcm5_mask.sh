@@ -31,8 +31,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="sfcWind"
-# VAR_LIST="hfls hfss sfcWind"
+VAR_LIST="hfls hfss sfcWind"
 
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/urb"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
@@ -62,11 +61,9 @@ for VAR in ${VAR_LIST[@]}; do
     CDO monmean ${VAR}_${DOMAIN}_${MODEL}_day_${YR}.nc ${VAR}_${DOMAIN}_${MODEL}_mon_${YR}.nc
 
     echo
-    echo "Seasonal average"
-    for SEASON in ${SEASON_LIST[@]}; do
-	CDO -timmean -selseas,${SEASON} ${VAR}_${DOMAIN}_${MODEL}_mon_${YR}.nc ${VAR}_${DOMAIN}_${MODEL}_${SEASON}_${YR}.nc
-    done
-    
+    echo "Mask files"
+    CDO remapdis,grid_ctrl_sp.txt ${VAR}_${DOMAIN}_${MODEL}_day_${YR}.nc ${VAR}_SP_${DOMAIN}_${MODEL}_day_${YR}.nc
+    CDO remapdis,grid_ctrl_ba.txt ${VAR}_${DOMAIN}_${MODEL}_day_${YR}.nc ${VAR}_BA_${DOMAIN}_${MODEL}_day_${YR}.nc
     CDO remapdis,grid_ctrl_sp.txt ${VAR}_${DOMAIN}_${MODEL}_mon_${YR}.nc ${VAR}_SP_${DOMAIN}_${MODEL}_mon_${YR}.nc
     CDO remapdis,grid_ctrl_ba.txt ${VAR}_${DOMAIN}_${MODEL}_mon_${YR}.nc ${VAR}_BA_${DOMAIN}_${MODEL}_mon_${YR}.nc
 
