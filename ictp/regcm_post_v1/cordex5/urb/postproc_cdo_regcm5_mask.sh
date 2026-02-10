@@ -1,4 +1,4 @@
-#!/bin/bSPh
+#!/bin/bash
 
 #SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
@@ -27,11 +27,8 @@ MODEL="RegCM5-urb"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 
 YR="2000-2000"
-IYR=$( echo $YR | cut -d- -f1 )
-FYR=$( echo $YR | cut -d- -f2 )
-SEASON_LIST="DJF MAM JJA SON"
 
-VAR_LIST="hfls hfss sfcWind"
+VAR_LIST="hfls hfss sfcWind tas"
 
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/urb"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
@@ -51,7 +48,7 @@ for VAR in ${VAR_LIST[@]}; do
     then
     DIR_IN="/leonardo/home/userexternal/ggiulian/scratch/urban/output/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/${FREQ}/${VAR}"
     else
-    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/${FREQ}/${VAR}"
+    DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/ERA5-CSAM-3/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/${FREQ}/${VAR}"
     fi
 
     echo
@@ -62,6 +59,8 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "Mask files"
+    CDO remapdis,grid_ctrl_sp.txt ${VAR}_${DOMAIN}_${MODEL}_1hr_${YR}.nc ${VAR}_SP_${DOMAIN}_${MODEL}_1hr_${YR}.nc
+    CDO remapdis,grid_ctrl_ba.txt ${VAR}_${DOMAIN}_${MODEL}_1hr_${YR}.nc ${VAR}_BA_${DOMAIN}_${MODEL}_1hr_${YR}.nc
     CDO remapdis,grid_ctrl_sp.txt ${VAR}_${DOMAIN}_${MODEL}_day_${YR}.nc ${VAR}_SP_${DOMAIN}_${MODEL}_day_${YR}.nc
     CDO remapdis,grid_ctrl_ba.txt ${VAR}_${DOMAIN}_${MODEL}_day_${YR}.nc ${VAR}_BA_${DOMAIN}_${MODEL}_day_${YR}.nc
     CDO remapdis,grid_ctrl_sp.txt ${VAR}_${DOMAIN}_${MODEL}_mon_${YR}.nc ${VAR}_SP_${DOMAIN}_${MODEL}_mon_${YR}.nc

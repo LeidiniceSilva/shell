@@ -31,7 +31,7 @@ SEASON_LIST="DJF MAM JJA SON"
 
 VAR_LIST="pr tas tasmax tasmin cll clm clh clt"
 
-DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/rcm_urb"
+DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/evaluate/urb"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo

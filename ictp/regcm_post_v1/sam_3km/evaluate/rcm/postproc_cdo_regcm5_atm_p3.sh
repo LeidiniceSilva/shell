@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A ICT25_ESP
+#SBATCH -A CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -15,7 +15,6 @@
 #__description__ = 'Postprocessing the RegCM5 output with CDO'
 
 {
-source /leonardo/home/userexternal/ggiulian/modules_gfortran
 set -eo pipefail
 
 CDO(){
@@ -30,7 +29,7 @@ SEASON_LIST="DJF MAM JJA SON"
 EXP="SAM-3km"
 VAR_LIST="cll clm clh hus ua va"
 
-DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/test/output"
+DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/SAM-3km/output"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/evaluate/rcm"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 

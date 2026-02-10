@@ -21,7 +21,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-INST="RegCM5-Nor_USP" # RegCM5-Nor_USP
+INST="RegCM5-MPI_ICTP" # RegCM5-ERA5_ICTP RegCM5-ECEarth_ICTP RegCM5-MPI_ICTP RegCM5-Nor_USP
 EXP="SAM-12"
 
 YR="1971-1972"
@@ -44,21 +44,25 @@ echo "Select variables"
 VAR_LIST="pr tas"
 for VAR in ${VAR_LIST[@]}; do
 
-    if [ ${INST} == 'RegCM5-Nor_USP' ]; then
-    DIR_IN="/leonardo/home/userexternal/mdasilva/reg-nor"
-    else
+    if [ ${INST} == 'RegCM5-ERA5_ICTP' ]; then
     DIR_IN="/leonardo_work/ICT25_ESP/nzazulie/CORDEX/CORDEX-CMIP6/DD/SAM-12/ICTP/ERA5/evaluation/r0i0p0f0/RegCM5-0/v1-r1/day/${VAR}"
+    elif [ ${INST} == 'RegCM5-ECEarth_ICTP' ]; then
+    DIR_IN="/leonardo_work/ICT25_ESP/nzazulie/SAM-12/ECEarth/NoTo-SouthAmerica"
+    elif [ ${INST} == 'RegCM5-MPI_ICTP' ]; then
+    DIR_IN="/leonardo_work/ICT25_ESP/nzazulie/SAM-12/MPI/NoTo-SouthAmerica"
+    else
+    DIR_IN="/leonardo/home/userexternal/mdasilva/reg-nor"
     fi
 
-    if [ ${INST} = "RegCM5-Nor_USP" ]; then
+    if [ ${INST} = "RegCM5-ERA5_ICTP" ]; then
+    CDO mergetime ${DIR_IN}/${VAR}_${EXP}_*01.nc ${VAR}_${EXP}_${INST}_${YR}.nc
+    else
     for YEAR in `seq -w ${IYR} ${FYR}`; do
         for MON in `seq -w 01 12`; do
             CDO selname,${VAR} ${DIR_IN}/${EXP}_STS.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}01.nc 
 	done
     done
-    CDO mergetime ${VAR}_${EXP}_*01.nc ${VAR}_${EXP}_${INST}_${YR}.nc
-    else
-    CDO mergetime ${DIR_IN}/${VAR}_${EXP}_*_${IYR}*.nc ${DIR_IN}/${VAR}_${EXP}_*_${FYR}*.nc ${VAR}_${EXP}_${INST}_${YR}.nc 
+    CDO mergetime ${VAR}_${EXP}_*01.nc ${VAR}_${EXP}_${INST}_${YR}.nc 
     fi
 
     if [ ${VAR} == 'pr' ]
@@ -75,6 +79,11 @@ for VAR in ${VAR_LIST[@]}; do
     done
 
 done
+
+echo 
+echo "Delete files"
+rm *01.nc
+rm *${YR}.nc 
 
 echo
 echo "--------------- THE END POSTPROCESSING MODEL ----------------"
