@@ -26,7 +26,7 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 EXP="SAM-3km"
-VAR_LIST="hfss hfls rsnl rsns"
+VAR_LIST="hus ua va wa"
 #VAR_LIST="pr tas tasmax tasmin mrsos hfss hfls rsnl rsns hus ua va wa"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/SAM-3km/output"
@@ -75,7 +75,7 @@ for VAR in ${VAR_LIST[@]}; do
     CDO monmean ${VAR}_${EXP}_RegCM5_${YR}_lonlat.nc ${VAR}_${EXP}_RegCM5_mon_${YR}_lonlat.nc
     else
     CDO daymean ${VAR}_${EXP}_RegCM5_${YR}_lonlat.nc ${VAR}_${EXP}_RegCM5_day_${YR}_lonlat.nc
-    CDO monmean ${VAR}_${EXP}_RegCM5_day_${YR}_lonlat.nc ${VAR}_${EXP}_RegCM5_mon_${YR}.nc
+    CDO monmean ${VAR}_${EXP}_RegCM5_day_${YR}_lonlat.nc ${VAR}_${EXP}_RegCM5_mon_${YR}_lonlat.nc
     fi
   
     echo 

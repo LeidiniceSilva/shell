@@ -5,7 +5,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -J rotate_wind
+#SBATCH -J sigma2p
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -17,14 +17,14 @@
 {
 set -eo pipefail
 
-YR="2018-2020"
+YR="2021-2021"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 EXP="SAM-3km"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/SAM-3km/output"
-WIND="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm"
+BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
 cd ${DIR_IN}
@@ -38,8 +38,9 @@ echo "1. Convert to sigma to pressure"
 for YEAR in `seq -w ${IYR} ${FYR}`; do
     for MON in `seq -w 01 12`; do
 
-	python3 ${WIND}/rotatewinds.py ${EXP}_ATM.${YEAR}${MON}0100_pressure.nc
-
+	${BIN}/./sigma2pCLM45 ${EXP}_ATM.${YEAR}${MON}0100.nc
+	${BIN}/./sigma2pCLM45 ${EXP}_RAD.${YEAR}${MON}0100.nc
+	    
     done
 done
     
