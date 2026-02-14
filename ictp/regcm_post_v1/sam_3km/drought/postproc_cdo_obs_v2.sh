@@ -26,8 +26,8 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
 EXP="SAM-3km"
-VAR_LIST="avg_snswrf"
-#VAR_LIST="avg_slhtf avg_sshtf avg_snlwrf avg_snswrf mn2t mx2t"
+VAR_LIST="avg_ishf"
+#VAR_LIST="avg_slhtf avg_ishf avg_snlwrf avg_snswrf mn2t mx2t"
 
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/SAM-3km/postproc/drought/obs"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
