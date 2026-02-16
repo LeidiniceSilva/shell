@@ -10,7 +10,7 @@
  &dimparam 
  iy     = 1074, ! This is number of points in the N/S direction
  jx     = 1074, ! This is number of points in the E/W direction
- kz     = 41,   ! Number of vertical levels
+ kz     = 51,   ! Number of vertical levels
  dsmin  = 0.01, ! Minimum sigma spacing (only used if kz is not 14, 18, 23, 41)
  dsmax  = 0.05, ! Maximum sigma spacing (only used if kz is not 14, 18, 23, 41)
  nsg    = 1,    ! For subgridding, number of points to decompose. If nsg=1,
@@ -80,7 +80,7 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_mp/wdm7/input',  ! Output directory for terrain files
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_mp/noto/input',  ! Output directory for terrain files
  inpter = '/leonardo_work/ICT25_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
@@ -132,7 +132,7 @@
  gdate1 = 2023101900,        ! Start date for ICBC data generation
  gdate2 = 2023102700,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_mp/wdm7/input', ! Path for ICBC produced input files
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_mp/noto/input', ! Path for ICBC produced input files
  inpglob = '/leonardo_work/ICT25_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
@@ -184,7 +184,7 @@
 ! All values except dt can be zero. Convenient values are chosen by the model.
 !
  &timeparam
- dt     =   30.,        ! time step in seconds
+ dt     =   45.,        ! time step in seconds
  /
  
 !
