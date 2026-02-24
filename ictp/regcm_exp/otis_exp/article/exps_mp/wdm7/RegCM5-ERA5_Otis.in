@@ -81,7 +81,7 @@
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
  dirter = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_mp/noto/input',  ! Output directory for terrain files
- inpter = '/leonardo_work/ICT25_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
+ inpter = '/leonardo_work/ICT26_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
                               ! when lsmoist option is True
@@ -133,7 +133,7 @@
  gdate2 = 2023102700,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_mp/noto/input', ! Path for ICBC produced input files
- inpglob = '/leonardo_work/ICT25_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
+ inpglob = '/leonardo_work/ICT26_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
                              ! ICBC controlled by the perturbparam stanza
@@ -307,7 +307,7 @@
  islab_ocean =      0,  ! Activate the SLAB ocean model
  itweak =           0,  ! Enable tweak scenario
  iclimaaer =        3,  ! x Aerosol
- radclimpath = '/leonardo_work/ICT25_ESP/RCMDATA/MERRA2/OPPMONTH', 
+ radclimpath = '/leonardo_work/ICT26_ESP/RCMDATA/MERRA2/OPPMONTH', 
  /
 
  &microparam
