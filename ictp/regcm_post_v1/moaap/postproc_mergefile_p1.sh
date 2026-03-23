@@ -45,7 +45,7 @@ echo
 echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 CDO mergetime ${DIR_I}/pr_* pr_${DOMAIN}_${EXP}_1hr_2000-2009.nc
-CDO mergetime /Tb/Tb_* Tb_${DOMAIN}_${EXP}_1hr_2000-2009.nc
+CDO mergetime /leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/EURR-3/input/Tb/Tb_* Tb_${DOMAIN}_${EXP}_1hr_2000-2009.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

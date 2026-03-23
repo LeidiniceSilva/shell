@@ -21,7 +21,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DOMAIN="CSAM-3"
+DOMAIN="EURR-3"
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/${DOMAIN}/input"
 

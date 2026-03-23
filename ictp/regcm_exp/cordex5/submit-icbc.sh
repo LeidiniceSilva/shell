@@ -36,7 +36,7 @@ ter=true
 sst=true 
 icb=false
 
-mkdir -p $base/ERA5/icbc
+mkdir -p $base/ECEarth/icbc
 
 if [ $cL = true ]; then
   ter=false

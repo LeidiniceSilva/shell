@@ -1,17 +1,18 @@
 #!/bin/bash
 
-#SBATCH -A CMPNS_ictpclim
+#SBATCH -A ICT26_ESP
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 1 
-#SBATCH --ntasks-per-node=112
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=108
 #SBATCH -o logs/icbc_SLURM.out
 #SBATCH -e logs/icbc_SLURM.err
 #SBATCH -J icbc
-#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=mda_silv@ictp.it
 
+
 {
-source /leonardo/home/userexternal/ggiulian/modules
+source /leonardo/home/userexternal/ggiulian/modules_new
 set -eo pipefail
 
 nl=$1
@@ -33,9 +34,9 @@ cp $nl $nnl
 sed -i "s/startTarget/${startDate}/g" $nnl
 sed -i "s/endTarget/${endTarget}/g" $nnl
 
-[[ $ter = true ]] && ./bin/terrainCLM45 $nnl
-[[ $ter = true ]] && ./bin/mksurfdataCLM45 $nnl
-[[ $sst = true ]] && ./bin/sstCLM45 $nnl
-[[ $icb = true ]] && ./bin/icbcCLM45 $nnl
+[[ $ter = true ]] && ./bin/terrainCLM45_cordex $nnl
+[[ $ter = true ]] && ./bin/mksurfdataCLM45_cordex $nnl
+[[ $sst = true ]] && ./bin/sstCLM45_cordex $nnl
+[[ $icb = true ]] && ./bin/icbcCLM45_cordex $nnl
 echo "icbc script complete"
 }
