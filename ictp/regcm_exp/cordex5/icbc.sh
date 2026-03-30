@@ -3,10 +3,10 @@
 #SBATCH -A ICT26_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
-#SBATCH --ntasks-per-node=108
+#SBATCH --ntasks-per-node=112
 #SBATCH -o logs/icbc_SLURM.out
 #SBATCH -e logs/icbc_SLURM.err
-#SBATCH -J icbc
+#SBATCH -J ICBC
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=mda_silv@ictp.it
 

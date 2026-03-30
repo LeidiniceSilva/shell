@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5
+base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth
 
 {
 set -eo pipefail
@@ -36,7 +36,7 @@ ter=true
 sst=true 
 icb=false
 
-mkdir -p $base/ECEarth/icbc
+mkdir -p $base/icbc
 
 if [ $cL = true ]; then
   ter=false

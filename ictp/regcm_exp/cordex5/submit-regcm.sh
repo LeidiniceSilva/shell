@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5
+base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth
 
 {
 set -eo pipefail

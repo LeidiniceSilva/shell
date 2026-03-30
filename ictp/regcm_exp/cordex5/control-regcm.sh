@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #SBATCH -N 1 
-#SBATCH -A CMPNS_ictpclim
+#SBATCH -A ICT26_ESP
 #SBATCH -p dcgp_usr_prod
-#SBATCH --ntasks-per-node=108
+#SBATCH --ntasks-per-node=112
 #SBATCH -t 00:01:00
 #SBATCH -o logs/control.o
 #SBATCH -e logs/control.e

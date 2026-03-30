@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A CMPNS_ictpclim
+#SBATCH -A ICT26_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 16
 #SBATCH --ntasks-per-node=112
@@ -12,7 +12,7 @@
 #SBATCH --mail-user=mda_silv@ictp.it
 
 {
-source /leonardo/home/userexternal/ggiulian/modules
+source /leonardo/home/userexternal/ggiulian/modules_news
 set -eo pipefail
 
 nl=$1
