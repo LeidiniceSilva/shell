@@ -56,7 +56,7 @@ fi
 dompath=$( cat $colog | grep DOMAIN | head -1 )
 simnm=$( echo $cjn | cut -d_ -f1 )
 svdir=$( dirname $( dirname $dompath ) )/$simnm
-lastsave=$( ls $svdir/*SAV.$( echo $restartdate | cut -c1-6 )*.nc | tail -1 )
+lastsave=$( ls /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ECEarth-CSAM/*SAV.$( echo $restartdate | cut -c1-6 )*.nc | tail -1 )
 restartdate=$( basename $lastsave .nc | cut -d. -f2 )
 echo "Last Save is $restartdate"
 

@@ -12,7 +12,7 @@
 #SBATCH --mail-user=mda_silv@ictp.it
 
 {
-source /leonardo/home/userexternal/ggiulian/modules_news
+source /leonardo/home/userexternal/ggiulian/modules_new
 set -eo pipefail
 
 nl=$1

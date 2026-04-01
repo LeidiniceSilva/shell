@@ -1,1 +1,5 @@
 /var/spool/slurmd/job38679065/slurm_script: line 15: /leonardo/home/userexternal/ggiulian/modules_news: No such file or directory
+slurmstepd: error: *** JOB 38679065 ON lrdn3622 CANCELLED AT 2026-03-31T12:53:19 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 38679065.0 ON lrdn3622 CANCELLED AT 2026-03-31T12:53:19 DUE TO TIME LIMIT ***
+ERROR: Simulation ended abruptly!!!
+Unknown ERROR Detected at 1999-02-27 17!
