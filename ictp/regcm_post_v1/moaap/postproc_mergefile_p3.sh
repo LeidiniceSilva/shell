@@ -21,20 +21,9 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DOMAIN="CAR-4"
-EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
-
-if [ ${DOMAIN} = 'CAR-3'  ]; then
-	DIR_I="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CAR-4/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/pr/v20260308"
-elif [ ${DOMAIN} = 'CSAM-3'  ]; then
-	DIR_I="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/pr"
-elif [ ${DOMAIN} = 'EURR-3'  ]; then
-	DIR_I="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EURR-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/pr/v20251218"
-else
-	echo "Error: Unknown DOMAIN = ${DOMAIN}"
-	exit 1
-fi	
-
+DOMAIN="EURR-3"
+EXP="ERA5_reanalysis"
+DIR_I="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/ERA5/1hr"
 DIR_II="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/${DOMAIN}/input"
 
 echo
@@ -42,13 +31,12 @@ cd ${DIR_II}
 echo ${DIR_II}
 
 echo
-echo "--------------- INIT POSPROCESSING MODEL ----------------"
+echo "--------------- INIT POSPROCESSING ----------------"
 
-CDO mergetime ${DIR_I}/pr_* pr_${DOMAIN}_${EXP}_1hr_2000-2009.nc
-CDO mergetime ${DIR_II}/Tb/Tb_* Tb_${DOMAIN}_${EXP}_1hr_2000-2009.nc
+CDO mergetime ${DIR_I}/Tb_* ${DIR_I}/Tb_${DOMAIN}_${EXP}_1hr_2000-2009.nc
 
-FILE_IN_I=pr_${DOMAIN}_${EXP}_1hr_2000-2009.nc
-FILE_IN_II=Tb_${DOMAIN}_${EXP}_1hr_2000-2009.nc
+FILE_IN_I=${DIR_I}/pr_${DOMAIN}_${EXP}_1hr_2000-2009.nc
+FILE_IN_II=${DIR_I}/Tb_${DOMAIN}_${EXP}_1hr_2000-2009.nc
 
 YEARS=$(seq 2000 2009)
 for YEAR in $YEARS; do
@@ -64,10 +52,15 @@ for YEAR in $YEARS; do
         cdo seldate,${YEAR}-${MON}-01,${YEAR}-${MON}-31 $FILE_IN_II $FILE_OUT_II
         cdo merge $FILE_OUT_I $FILE_OUT_II $FILE_OUT_III
 
-	echo "Processed $FILE_OUT_III"
+	echo "Processed $DIR_OUT_III"
 
     done
 done
+
+echo
+echo "--------------- THE END POSPROCESSING MODEL ----------------"
+
+}
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

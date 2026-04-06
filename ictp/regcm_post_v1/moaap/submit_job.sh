@@ -20,7 +20,7 @@ set -eo pipefail
 echo
 echo "--------------- INIT ----------------"
 
-python3 /leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/moaap/compute_Tb.py
+python3 /leonardo/home/userexternal/mdasilva/github_projects/pypostdoc/moaap/compute_Tb_OBS.py
 
 echo
 echo "--------------- THE END ----------------"
