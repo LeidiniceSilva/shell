@@ -21,46 +21,44 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DOMAIN="EURR-3"
 EXP="ERA5_reanalysis"
-DIR_I="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/ERA5/1hr"
-DIR_II="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/${DOMAIN}/input"
-
-echo
-cd ${DIR_II}
-echo ${DIR_II}
 
 echo
 echo "--------------- INIT POSPROCESSING ----------------"
 
-CDO mergetime ${DIR_I}/Tb_* ${DIR_I}/Tb_${DOMAIN}_${EXP}_1hr_2000-2009.nc
-
-FILE_IN_I=${DIR_I}/pr_${DOMAIN}_${EXP}_1hr_2000-2009.nc
-FILE_IN_II=${DIR_I}/Tb_${DOMAIN}_${EXP}_1hr_2000-2009.nc
-
+DOMAINS=("CAR-4" "EURR-3")   
 YEARS=$(seq 2000 2009)
-for YEAR in $YEARS; do
-    for MON in $(seq -w 1 12); do
 
-	echo "Processing ${YEAR} ${MON}"
+for DOMAIN in "${DOMAINS[@]}"; do
 
-        FILE_OUT_I=pr_${DOMAIN}_${EXP}_1hr_${YEAR}${MON}0100.nc
-        FILE_OUT_II=Tb_${DOMAIN}_${EXP}_1hr_${YEAR}${MON}0100.nc
-        FILE_OUT_III=${DOMAIN}_${EXP}_1hr_${YEAR}${MON}0100.nc
+    DIR_I="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/ERA5/${DOMAIN}"
+    DIR_II="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/ERA5/${DOMAIN}/input"
 
-        cdo seldate,${YEAR}-${MON}-01,${YEAR}-${MON}-31 $FILE_IN_I $FILE_OUT_I
-        cdo seldate,${YEAR}-${MON}-01,${YEAR}-${MON}-31 $FILE_IN_II $FILE_OUT_II
-        cdo merge $FILE_OUT_I $FILE_OUT_II $FILE_OUT_III
+    echo
+    cd ${DIR_II}
+    echo ${DIR_II}
 
-	echo "Processed $DIR_OUT_III"
+    FILE_IN_I=${DIR_I}/tp_${DOMAIN}_${EXP}_1hr_2000-2009.nc 
+    FILE_IN_II=${DIR_I}/Tb_${DOMAIN}_${EXP}_1hr_2000-2009.nc
 
+    for YEAR in $YEARS; do
+        for MON in $(seq -w 1 12); do
+
+	    echo "Processing ${YEAR} ${MON}"
+
+            FILE_OUT_I=tp_${DOMAIN}_${EXP}_1hr_${YEAR}${MON}0100.nc
+            FILE_OUT_II=Tb_${DOMAIN}_${EXP}_1hr_${YEAR}${MON}0100.nc
+            FILE_OUT_III=${DOMAIN}_${EXP}_1hr_${YEAR}${MON}0100.nc
+
+            CDO seldate,${YEAR}-${MON}-01,${YEAR}-${MON}-31 $FILE_IN_I $FILE_OUT_I
+            CDO seldate,${YEAR}-${MON}-01,${YEAR}-${MON}-31 $FILE_IN_II $FILE_OUT_II
+            CDO merge $FILE_OUT_I $FILE_OUT_II $FILE_OUT_III
+
+	    echo "Processed $DIR_OUT_III"
+
+        done
     done
 done
-
-echo
-echo "--------------- THE END POSPROCESSING MODEL ----------------"
-
-}
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"
