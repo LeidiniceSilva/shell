@@ -11,8 +11,8 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = 'Nov 20, 2023'
-#__description__ = 'Posprocessing the RegCM5 output with CDO'
+#__date__        = 'Jan 20, 2026'
+#__description__ = 'Posprocessing the RegCM with CDO'
 
 {
 set -eo pipefail
@@ -21,7 +21,7 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DOMAIN="EURR-3"
+DOMAIN="CAR-4"  # CSAM-3 EURR-3
 EXP="ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 
 if [ ${DOMAIN} = 'CAR-3'  ]; then

@@ -11,7 +11,7 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = 'Nov 20, 2023'
+#__date__        = 'Jan 20, 2026'
 #__description__ = 'Posprocessing the OBS with CDO'
 
 {
@@ -32,8 +32,16 @@ echo ${DIR_II}
 echo
 echo "--------------- INIT POSPROCESSING ----------------"
 
+CDO merge avg_tnlwrf_${EXP}_*.nc avg_tnlwrf_${EXP}_1hr_2000-2009.nc
 CDO mulc,-1 avg_tnlwrf_${EXP}_1hr_2000-2009.nc avg_tnlwrf_${EXP}_reanalysis_1hr_2000-2009.nc
+CDO sellonlatbox,-119.0219,-58.01409,9.064618,35.89941 avg_tnlwrf_${EXP}_reanalysis_1hr_2000-2009.nc avg_tnlwrf_CAR-4_${EXP}_reanalysis_1hr_2000-2009.nc
 CDO sellonlatbox,-78.81965,-35.32753,-36.70233,-12.24439 avg_tnlwrf_${EXP}_reanalysis_1hr_2000-2009.nc avg_tnlwrf_CSAM-3_${EXP}_reanalysis_1hr_2000-2009.nc
+CDO sellonlatbox,-25.28493,38.42932,33.25481,64.97 avg_tnlwrf_${EXP}_reanalysis_1hr_2000-2009.nc avg_tnlwrf_EURR-3_${EXP}_reanalysis_1hr_2000-2009.nc
+
+CDO mulc,1000 tp_${EXP}_1hr_2000-2009.nc tp_${EXP}_reanalysis_1hr_2000-2009.nc
+CDO sellonlatbox,-119.0219,-58.01409,9.064618,35.89941 tp_${EXP}_reanalysis_1hr_2000-2009.nc tp_CAR-4_${EXP}_reanalysis_1hr_2000-2009.nc
+CDO sellonlatbox,-78.81965,-35.32753,-36.70233,-12.24439 tp_${EXP}_reanalysis_1hr_2000-2009.nc tp_CSAM-3_${EXP}_reanalysis_1hr_2000-2009.nc
+CDO sellonlatbox,-25.28493,38.42932,33.25481,64.97 tp_${EXP}_reanalysis_1hr_2000-2009.nc tp_EURR-3_${EXP}_reanalysis_1hr_2000-2009.nc
 
 echo
 echo "--------------- THE END POSPROCESSING MODEL ----------------"

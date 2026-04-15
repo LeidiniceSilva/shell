@@ -11,8 +11,8 @@
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
-#__date__        = 'Nov 20, 2023'
-#__description__ = 'Posprocessing the RegCM5 output with CDO'
+#__date__        = 'Jan 20, 2026'
+#__description__ = 'Posprocessing the OBS with CDO'
 
 {
 set -eo pipefail
@@ -26,7 +26,7 @@ EXP="ERA5_reanalysis"
 echo
 echo "--------------- INIT POSPROCESSING ----------------"
 
-DOMAINS=("CAR-4" "EURR-3")   
+DOMAINS=("CSAM-3")   
 YEARS=$(seq 2000 2009)
 
 for DOMAIN in "${DOMAINS[@]}"; do
