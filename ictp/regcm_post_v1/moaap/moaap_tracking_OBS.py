@@ -6,6 +6,7 @@ __date__        = "March 03, 2026"
 __description__ = "This script track MCSs"
 
 import glob
+import argparse
 import xarray as xr
 import netCDF4
 import cartopy
@@ -18,7 +19,11 @@ warnings.filterwarnings("ignore")
 from tqdm import tqdm
 from Tracking_Functions import moaap
 
-domain='CSAM-3'
+parser = argparse.ArgumentParser()
+parser.add_argument('--domain', required=True, help='Domain')
+args = parser.parse_args()
+
+domain=args.domain
 exp = 'ERA5_reanalysis'
 
 path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/ERA5'.format(domain)

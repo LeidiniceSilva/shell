@@ -5,7 +5,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -J TRACKING
+#SBATCH -J Tracking
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -20,7 +20,9 @@ set -eo pipefail
 echo
 echo "--------------- INIT TRACKING ----------------"
 
-python3 moaap_tracking_OBS.py
+#python3 moaap_tracking_OBS.py --domain CAR-4
+#python3 moaap_tracking_OBS.py --domain CSAM-3
+python3 moaap_tracking_OBS.py --domain EURR-3
 
 echo
 echo "--------------- THE END TRACKING ----------------"
