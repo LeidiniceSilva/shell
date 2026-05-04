@@ -24,9 +24,7 @@ parser.add_argument('--domain', required=True, help='Domain')
 args = parser.parse_args()
 
 domain=args.domain
-exp = 'ERA5_reanalysis'
-
-path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/ERA5'.format(domain)
+path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/ERA5'
 
 files = sorted(glob.glob(f'{path}/{domain}/input/{domain}_ERA5_reanalysis_1hr_*.nc'))
 for f in files:

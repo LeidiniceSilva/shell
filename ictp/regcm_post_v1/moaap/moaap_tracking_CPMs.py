@@ -6,6 +6,7 @@ __date__        = "March 03, 2026"
 __description__ = "This script track MCSs"
 
 import glob
+import argparse
 import xarray as xr
 import netCDF4
 import cartopy
@@ -18,34 +19,34 @@ warnings.filterwarnings("ignore")
 from tqdm import tqdm
 from Tracking_Functions import moaap
 
-domain='CSAM-3'
-exp = 'ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1'
-path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/CPMs'.format(domain)
+parser = argparse.ArgumentParser()
+parser.add_argument('--domain', required=True, help='Domain')
+args = parser.parse_args()
 
-files = sorted(glob.glob(f'{path}/{domain}/input/{domain}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_1hr_20000101.nc'))
+domain=args.domain
+
+path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/CPMs'
+
+files = sorted(glob.glob(f'{path}/{domain}/input/{domain}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_1hr_*.nc'))
 for f in files:
     print(f)
 
     data_vars = xr.open_dataset(f)
-    lon = np.array(data_vars['lon'])
-    lat = np.array(data_vars['lat'])
-    lon = lon[:, :-1]
-    lat = lat[:, :-1]
+    lon = data_vars['rlon']
+    lat = data_vars['rlat']
 
-    Mask = np.copy(lon); Mask[:]=1
+    lon2d, lat2d = np.meshgrid(lon, lat)
+    Mask = np.copy(lon2d); Mask[:]=1
 
     time_datetime = pd.to_datetime(np.array(data_vars['time'].values, dtype='datetime64'))
     dT = 1 
 
-    print(lon.shape)
-    print(lat.shape)
-
-    DataName = 'RegCM5_ERA5'
+    DataName = 'RegCM5_ERA5_evaluation'
     OutputFolder = f'{path}/{domain}/output/'
 
     object_split = moaap(
-                      lon,
-                      lat,
+                      lon2d,
+                      lat2d,
                       time_datetime,
                       dT,
                       Mask,
