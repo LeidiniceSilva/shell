@@ -27,7 +27,7 @@ domain=args.domain
 
 path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/CPMs'
 
-files = sorted(glob.glob(f'{path}/{domain}/input/{domain}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_1hr_*.nc'))
+files = sorted(glob.glob(f'{path}/{domain}/input/{domain}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_1hr_2005*.nc'))
 for f in files:
     print(f)
 
