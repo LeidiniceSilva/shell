@@ -31,10 +31,11 @@ for f in files:
     print(f)
 
     data_vars = xr.open_dataset(f)
+
     lon = data_vars['longitude']
     lat = data_vars['latitude']
-
     lon2d, lat2d = np.meshgrid(lon, lat)
+
     Mask = np.copy(lon2d); Mask[:]=1
 
     time_datetime = pd.to_datetime(np.array(data_vars['time'].values, dtype='datetime64'))

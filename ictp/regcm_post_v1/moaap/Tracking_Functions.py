@@ -4748,7 +4748,7 @@ MOAAP_DEFAULTS = {
     # mesoscale convective systems (MCS)
     "MCS_Minsize": 5000,    # MCS minimum precipitation area [km^2]
     "MCS_minPR": 15,        # MCS precipitation threshold [mm/h]
-    "CL_MaxT": 225,         # MCS max cloud brightness temp [K]
+    "CL_MaxT": 235,         # MCS max cloud brightness temp [K]
     "CL_Area": 40000,       # MCS minimum cloud area [km^2]
     "MCS_minTime": 4,       # MCS minimum lifetime [h]
 

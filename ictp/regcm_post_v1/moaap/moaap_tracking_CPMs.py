@@ -27,15 +27,16 @@ domain=args.domain
 
 path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/CPMs'
 
-files = sorted(glob.glob(f'{path}/{domain}/input/{domain}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_1hr_2005*.nc'))
+files = sorted(glob.glob(f'{path}/{domain}/input/{domain}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_1hr_*_regrid.nc'))
 for f in files:
     print(f)
 
     data_vars = xr.open_dataset(f)
-    lon = data_vars['rlon']
-    lat = data_vars['rlat']
 
+    lon = data_vars['longitude']
+    lat = data_vars['latitude']
     lon2d, lat2d = np.meshgrid(lon, lat)
+
     Mask = np.copy(lon2d); Mask[:]=1
 
     time_datetime = pd.to_datetime(np.array(data_vars['time'].values, dtype='datetime64'))
