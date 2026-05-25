@@ -1,48 +1,17 @@
 #!/usr/bin/env python
-from dateutil import rrule
-import datetime
-import glob
-from netCDF4 import Dataset
-import sys, traceback
-import dateutil.parser as dparser
-import string
-from pdb import set_trace as stop
-import numpy as np
-import numpy.ma as ma
+
+__author__      = "Leidinice Silva"
+__email__       = "leidinicesilva@gmail.com"
+__date__        = "May 25, 2026"
+__description__ = "This script download GPM MERGIR"
+
 import os
-# from mpl_toolkits import basemap
-import pickle
+import datetime
 import subprocess
 import pandas as pd
-from scipy import stats
-import copy
-import matplotlib.pyplot as plt
-import matplotlib.colors as colors
-import matplotlib as mpl
-import pylab as plt
-import random
-import scipy.ndimage as ndimage
-import scipy
-import shapefile
-import matplotlib.path as mplPath
-from matplotlib.patches import Polygon as Polygon2
-# Cluster specific modules
-from scipy.cluster.hierarchy import dendrogram, linkage
-from scipy.cluster.hierarchy import cophenet
-from scipy.spatial.distance import pdist
-from scipy.cluster.hierarchy import fcluster
-from scipy.cluster.vq import kmeans2,vq, whiten
-from scipy.ndimage import gaussian_filter
-#import seaborn as sns
-# import metpy.calc as mpcalc
-import shapefile as shp
-import sys
-from calendar import monthrange
-#import h5py
-
 
 dStartDayPR=datetime.datetime(2000, 1, 1,0) # (2000, 11, 01,0)
-dStopDayPR=datetime.datetime(2000, 12, 31,23,59)
+dStopDayPR=datetime.datetime(2001, 12, 31,23,59)
 rgdTime = pd.date_range(dStartDayPR, end=dStopDayPR, freq='h')
 
 TargetDir='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/GPM_MERGIR'
