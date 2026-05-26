@@ -1,19 +1,33 @@
 #!/bin/bash
 
+#SBATCH -A ICT26_ESP
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Postproc
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+
+#__author__      = 'Leidinice Silva'
+#__email__       = 'leidinicesilva@gmail.com'
+#__date__        = 'Jan 20, 2026'
+#__description__ = 'Download GPM-IMERG'
+
 base_url="https://dap.ceda.ac.uk/badc/gpm/data/GPM-IMERG-v7"
 type="HHR"
 ver="V07B"
-dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/GPM_IMERG"
 
+dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/GPM_IMERG"
 cd "$dir"
-echo "Working directory: $dir"
 
 is_leap_year() {
     year=$1
     (( (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) ))
 }
 
-for year in $(seq -w 2001 2001); do
+for year in $(seq 2002 2002); do
+
   for mon in $(seq -w 01 12); do
 
     case $mon in
@@ -24,8 +38,8 @@ for year in $(seq -w 2001 2001); do
 
     for day in $(seq -w 01 $days); do
 
-      doy=$(date -d "${year}${mon}${day}" +%j)
-      folder=$(printf "%03d" "$doy")
+      doy=$(python3 -c "import datetime; print(datetime.date(${year},${mon#0},${day#0}).timetuple().tm_yday)")
+      doy=$(printf "%03d" $doy)
 
       for counter in $(seq 0 30 1410); do
 
@@ -41,12 +55,12 @@ for year in $(seq -w 2001 2001); do
         mins=$(printf "%04d" "$counter")
 
         file="3B-${type}.MS.MRG.3IMERG.${year}${mon}${day}-S${start}00-E${end}59.${mins}.${ver}.HDF5"
-        url="${base_url}/${year}/${folder}/${file}"
+        url="${base_url}/${year}/${doy}/${file}"
+
         echo "Path $url"
 
-        if [ ! -f "$dir/$file" ]; then
-          echo "Downloading $file"
-          wget -q --show-progress "$url" -O "$dir/$file"
+        if [ ! -f "$dir/${year}/$file" ]; then
+          wget -q --show-progress "$url" -O "$dir/${year}/$file"
         fi
 
       done
