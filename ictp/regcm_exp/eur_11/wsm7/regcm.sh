@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#SBATCH -A ICT26_ESP
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 16
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -o logs/rcm_SLURM.out
+#SBATCH -e logs/rcm_SLURM.err
+#SBATCH -J EUR-11
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
+
+{
+source /leonardo/home/userexternal/ggiulian/modules_new
+set -eo pipefail
+
+nl=$1
+mpirun ./bin/regcmMPICLM45 $nl
+}

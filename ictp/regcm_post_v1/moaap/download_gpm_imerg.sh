@@ -26,7 +26,7 @@ is_leap_year() {
     (( (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) ))
 }
 
-for year in $(seq 2002 2002); do
+for year in $(seq 2003 2009); do
 
   for mon in $(seq -w 01 12); do
 

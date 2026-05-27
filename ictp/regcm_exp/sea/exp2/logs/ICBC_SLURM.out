@@ -113,3 +113,119 @@
  Created special categories informations...
  Created pft informations...
  Computing weights, R =     117.94408035 .......... Done.
+ Created lai/sai informations...
+ Computing weights, R =      29.48606300 .......... Done.
+ Computing weights, R =      11.79478669 .......... Done.
+ Computing weights, R =      19.65767813 .......... Done.
+ Created soil texture/color informations...
+ Computing weights, R =     117.94408035 .......... Done.
+ Computing weights, R =     117.94408035 .......... Done.
+ Computing weights, R =     117.94408035 .......... Done.
+ Created human population informations...
+ Computing weights, R =     117.94408035 .......... Done.
+ Computing weights, R =      19.65767670 .......... Done.
+ Created VOC/horganic informations...
+ Computing weights, R =      11.79694390 .......... Done.
+ Computing weights, R =      11.79442692 .......... Done.
+ Created LAKE/URBAN informations...
+ Successfully completed CLM preprocessing.
+
+  This is sst part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
+
+ : this run start at    : 2026-05-26 23:30:57+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : lrdn4312.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sea/e
+ xp2
+                       
+ Opened /leonardo_work/ICT26_ESP/RCMDATA//ERA5/SSTD/sst_2025_11.nc
+ Computing weights, R =      39.31469345 .......... Done.
+ GLOBIDATE1 :  2025-11-18 00:00:00 UTC        
+ GLOBIDATE2 :  2025-11-29 00:00:00 UTC        
+ NSTEPS =           12
+ WRITEN OUT SST DATA :  2025-11-18 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-19 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-20 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-21 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-22 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-23 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-24 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-25 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-26 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-27 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-28 00:00:00 UTC        
+ WRITEN OUT SST DATA :  2025-11-29 00:00:00 UTC        
+ Input ready at : Tue May 26 23:31:00 2026
+ Successfully generated SST
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : Aug 07 2025  time: 12:17:06
+
+ : this run start at    : 2026-05-26 23:31:00+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : lrdn4312.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/sea/e
+ xp2
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2025-11-18 00:00:00 UTC        
+ GLOBIDATE2 :  2025-11-29 00:00:00 UTC        
+ NSTEPS     :           45
+ Computing weights, R =      39.31469345 .......... Done.
+ Computing weights, R =      39.31469345 .......... Done.
+ Computing weights, R =      39.31469345 .......... Done.
+      131072 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2025/tatm_2025_11.nc
+      196608 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2025/geop_2025_11.nc
+      262144 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2025/qhum_2025_11.nc
+      327680 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2025/uwnd_2025_11.nc
+      393216 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2025/vwnd_2025_11.nc
+ READ IN fields at DATE: 2025-11-18 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-18 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-18 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-18 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-19 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-19 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-19 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-19 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-20 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-20 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-20 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-20 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-21 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-21 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-21 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-21 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-22 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-22 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-22 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-22 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-23 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-23 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-23 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-23 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-24 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-24 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-24 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-24 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-25 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-25 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-25 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-25 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-26 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-26 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-26 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-26 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-27 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-27 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-27 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-27 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-28 00:00:00 UTC        
+ READ IN fields at DATE: 2025-11-28 06:00:00 UTC        
+ READ IN fields at DATE: 2025-11-28 12:00:00 UTC        
+ READ IN fields at DATE: 2025-11-28 18:00:00 UTC        
+ READ IN fields at DATE: 2025-11-29 00:00:00 UTC        
+ Input ready at : Tue May 26 23:41:26 2026
+ Successfully completed ICBC
