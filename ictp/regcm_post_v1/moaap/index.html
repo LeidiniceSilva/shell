@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='en' ng-app="uuiApp" class="theme-gesdisc bg-deep-blue">
+  <head>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WNP7MLF');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+    <!-- End Google reCAPTCHA -->
+
+    <base href="/"/>
+
+    <link rel="stylesheet" href="css/vendor.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Dynamic Titling and <meta tags>-->
+    <title ng-bind='title'>GES DISC</title>
+    <meta name="description" content="Unified User Interface at NASA, UUI, data, GES DISC, datasets" />
+
+    <!-- Components library for the Dashboard and future UUI development-->
+    <script type="module" src="lib/ges-disc-components/dist/ges-disc-components/ges-disc-components.esm.js"></script>
+    <!-- grab the turf library; this should be installed via npm or bower, but it doesn't seem to be straightforward -->
+    <script type="module" src='https://unpkg.com/@turf/turf@6/turf.min.js' async="async" defer="defer"></script>
+       
+    <!-- metrics and tophat -->
+    <script src="https://cdn.earthdata.nasa.gov/tophat2/tophat2.js" id="earthdata-tophat-script" data-show-status="false" data-status-api-url="https://status.earthdata.nasa.gov/api/v1/notifications" async="async" defer="defer"></script>
+    <meta name="fragment" content="!" />
+    <script> window.prerenderReady = false; </script>
+  </head>
+  <body ng-model-options="{ timezone: 'UTC' }">
+    <!-- <div ng-controller="introCtrl"> -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNP7MLF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <spinner></spinner>
+    <div ui-view></div>
+    <status-list></status-list>
+    <back-to-top show-offset="300" fade-offset="1200"></back-to-top>
+    <!-- </div> -->
+    <!-- manual include due to being difficult to concatenate and minify due to dependencies -->
+    <script src="lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+    <script src="scripts/vendor.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&sub-agency=GSFC&sp=data,find,giovanni,visualize,GESDISC&dclink=true" defer></script>
+  </body>
+</html>

@@ -10,8 +10,8 @@ import datetime
 import subprocess
 import pandas as pd
 
-dStartDayPR=datetime.datetime(2002, 1, 1,0) # (2000, 11, 01,0)
-dStopDayPR=datetime.datetime(2009, 12, 31,23,59)
+dStartDayPR=datetime.datetime(2006, 1, 1,0) # (2000, 11, 01,0)
+dStopDayPR=datetime.datetime(2010, 12, 31,23,59)
 rgdTime = pd.date_range(dStartDayPR, end=dStopDayPR, freq='h')
 
 TargetDir='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/GPM_MERGIR'

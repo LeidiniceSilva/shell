@@ -6998,3 +6998,27 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Closing local history file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ECEarth-CSAM
  //CSAM-3.clm.regcm.h1.20070901_03600.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ECEarth-CSAM
+ /CSAM-3.clm.regcm.r.2007100100.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ECEarth-CSAM
+ //CSAM-3.clm.regcm.rh0.2007100100.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ECEarth-CSAM
+ //CSAM-3.clm.regcm.rh1.2007100100.nc
+ Successfully wrote out restart data for CLM 4.5
+ At  2007-10-01 00:00:00 UTC        
+ JDay    273.00000 solar declination angle =  -2.51566766 degrees
+                   solar TSI irradiance    =    1355.8077 W/m^2
+ ATM variables written at  2007-10-01 00:00:00 UTC        
+ SRF variables written at  2007-10-01 00:00:00 UTC        
+ STS variables written at  2007-10-01 00:00:00 UTC        
+ RAD variables written at  2007-10-01 00:00:00 UTC        
+ SAV variables written at  2007-10-01 00:00:00 UTC        
+ Final time  2007-10-01 00:00:00 UTC reached.
+ Elapsed seconds of run for this final timeslice :    730.0195    
+ : this run stops at  : 2026-05-27 17:55:46+0200
+ : Run has been completed using         1792  processors.
+ : Total elapsed seconds of run :    21265.0986290493     
+ RegCM V5 simulation successfully reached end
