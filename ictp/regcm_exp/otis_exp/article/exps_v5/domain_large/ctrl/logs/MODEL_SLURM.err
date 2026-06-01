@@ -1,0 +1,8 @@
+ -------------- FATAL CALLED ---------------
+  Fatal in file: mod_params.F90 at line:      705
+ Runtime increments must be modulus 24 hours
+ -------------------------------------------
+ mod_params.F90 :      705:            1
+ Abort called by computing node            0 at 2026-06-01 16:49:36.603 +0200
+ Execution terminated because of runtime error
+Abort(1) on node 0 (rank 0 in comm 496): application called MPI_Abort(comm=0x84000003, 1) - process 0

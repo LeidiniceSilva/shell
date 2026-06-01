@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A CMPNS_ictpclim
+#SBATCH -A ICT26_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 4
 #SBATCH --ntasks-per-node=112
@@ -23,7 +23,7 @@ CDO(){
 
 EXP="EUR-11"
 
-YR="2000-2009"
+YR=$1
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"

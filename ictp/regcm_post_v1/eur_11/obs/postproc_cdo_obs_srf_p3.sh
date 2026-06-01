@@ -1,14 +1,5 @@
 #!/bin/bash
 
-#SBATCH -A ICT25_ESP
-#SBATCH -p dcgp_usr_prod
-#SBATCH -N 1
-#SBATCH --ntasks-per-node=112
-#SBATCH -t 1-00:00:00
-#SBATCH -J Postproc
-#SBATCH --mail-type=FAIL,END
-#SBATCH --mail-user=mda_silv@ictp.it
-
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Mar 12, 2024'
@@ -16,6 +7,7 @@
 
 {
 set -eo pipefail
+
 CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
@@ -23,7 +15,7 @@ CDO(){
 DATASET=$1
 EXP="EUR-11"
 
-YR="2000-2009"
+YR=$2
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
@@ -61,7 +53,7 @@ VAR_LIST="tp"
 for VAR in ${VAR_LIST[@]}; do
     echo
     echo "1. Select date"
-    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/tp_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
+    CDO selyear,${IYR}/${FYR} ${DIR_IN}/${DATASET}/1hr/tp_ERA5_1hr_2000-2009.nc ${VAR}_${DATASET}_${YR}.nc
     echo
     echo "2. Monthly avg"
     CDO -b f32 mulc,1000 ${VAR}_${DATASET}_${YR}.nc ${VAR}_${DATASET}_${EXP}_1hr_${YR}.nc

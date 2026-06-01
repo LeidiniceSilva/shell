@@ -1,14 +1,5 @@
 #!/bin/bash
 
-#SBATCH -A CMPNS_ictpclim
-#SBATCH -p dcgp_usr_prod
-#SBATCH -N 1
-#SBATCH --ntasks-per-node=112
-#SBATCH -t 1-00:00:00
-#SBATCH -J Postproc
-#SBATCH --mail-type=FAIL,END
-#SBATCH --mail-user=mda_silv@ictp.it
-
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Mar 12, 2024'
@@ -23,7 +14,7 @@ CDO(){
 
 EXP="EUR-11"
 
-YR="2000-2009"
+YR=$1
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="DJF MAM JJA SON"

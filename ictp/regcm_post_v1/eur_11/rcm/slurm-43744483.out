@@ -1,0 +1,228 @@
+
+--------------- INIT POSTPROCESSING MODEL ----------------
+
+/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/NoTo-EUR
+
+1. Convert to sigma to pressure
+
+/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/WSM5-EUR
+
+1. Convert to sigma to pressure
+
+/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/WSM7-EUR
+
+1. Convert to sigma to pressure
+
+/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/WDM7-EUR
+
+1. Convert to sigma to pressure
+
+--------------- THE END POSTPROCESSING MODEL ----------------
+
+--------------- INIT POSTPROCESSING MODEL ----------------
+
+/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/NoTo-EUR
+
+1. Convert to sigma to pressure
+Rotating vectors in EUR-11_ATM.2000010100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000020100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000030100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000040100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000050100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000060100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000070100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000080100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000090100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000100100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000110100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000120100_pressure.nc.....
+
+/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/WSM5-EUR
+
+1. Convert to sigma to pressure
+Rotating vectors in EUR-11_ATM.2000010100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000020100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000030100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000040100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000050100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000060100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000070100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000080100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000090100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000100100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000110100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000120100_pressure.nc.....
+
+/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/WSM7-EUR
+
+1. Convert to sigma to pressure
+Rotating vectors in EUR-11_ATM.2000010100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000020100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000030100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000040100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000050100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000060100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000070100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000080100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000090100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000100100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000110100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000120100_pressure.nc.....
+
+/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/WDM7-EUR
+
+1. Convert to sigma to pressure
+Rotating vectors in EUR-11_ATM.2000010100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000020100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000030100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000040100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000050100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000060100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000070100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000080100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000090100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000100100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000110100_pressure.nc.....
+Rotating vectors in EUR-11_ATM.2000120100_pressure.nc.....
+
+--------------- THE END POSTPROCESSING MODEL ----------------
+
+--------------- INIT POSTPROCESSING MODEL ----------------
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/rcm
+
+1. Select variable
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+4. Delete files
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/rcm
+
+1. Select variable
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+4. Delete files
+
+/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/rcm
+
+1. Select variable
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
+
+3. Seasonal avg and Regrid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+cdo    remapbil: Bilinear weights from curvilinear (424x412) to lonlat (949x461) grid
+
+2. Concatenate data
