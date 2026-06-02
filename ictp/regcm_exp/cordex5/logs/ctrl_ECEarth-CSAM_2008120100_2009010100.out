@@ -1,0 +1,15 @@
+Last Save is 2009010100
+2
+
+    #### SUBMITTING NEW SIMULATION ####
+sim-id    : ECEarth-CSAM
+startTarg : 1999010100
+startDate : 2009010100
+endDate   : 2009020100
+restLogic : .true.
+dependency: 
+
+SUBMIT command:
+sbatch -J ECEarth-CSAM_2009010100_2009020100 -o logs/ECEarth-CSAM_2009010100_2009020100.out -e logs/ECEarth-CSAM_2009010100_2009020100.err  regcm.sh .ECEarth-CSAM/.ECEarth-CSAM_2009010100_2009020100.in
+Submitted simulation with job i.d. 43846291 !!!
+Submitted control with job i.d. 43846292 !!!
