@@ -26,7 +26,7 @@ EXP="ERA5_reanalysis"
 echo
 echo "--------------- INIT POSPROCESSING ----------------"
 
-DOMAINS=("CSAM-3")   
+DOMAINS=("CAR-4" "CSAM-3" "EURR-3")   
 YEARS=$(seq 2000 2009)
 
 for DOMAIN in "${DOMAINS[@]}"; do

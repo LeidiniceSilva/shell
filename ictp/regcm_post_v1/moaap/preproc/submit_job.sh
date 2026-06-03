@@ -5,7 +5,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -J Comp Tb
+#SBATCH -J Comp_Tb
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -20,8 +20,17 @@ set -eo pipefail
 echo
 echo "--------------- INIT ----------------"
 
-python3 compute_Tb_OBS.py
-python3 compute_Tb_CPMs.py
+#python3 compute_Tb_OBS.py --domain CAR-4
+#python3 compute_Tb_OBS.py --domain CSAM-3
+#python3 compute_Tb_OBS.py --domain EURR-3
+
+python3 compute_Tb_CPMs_hist.py --domain CAR-4
+#python3 compute_Tb_CPMs_hist.py --domain CSAM-3
+#python3 compute_Tb_CPMs_hist.py --domain EURR-3
+
+#python3 compute_Tb_CPMs_proj.py --domain CAR-4
+#python3 compute_Tb_CPMs_proj.py --domain CSAM-3
+#python3 compute_Tb_CPMs_proj.py --domain EURR-3
 
 echo
 echo "--------------- THE END ----------------"

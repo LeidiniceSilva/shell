@@ -7,6 +7,7 @@ __description__ = "This script compute Tb"
 
 import os
 import glob
+import argparse
 import numpy as np
 import xarray as xr
 import metpy.xarray    
@@ -14,19 +15,22 @@ import metpy.xarray
 from metpy.units import units
 
 # Domain name
-domain = 'CAR-4'
+parser = argparse.ArgumentParser()
+parser.add_argument('--domain', required=True, help='Years')
+args = parser.parse_args()
+domain = args.domain
 
 if domain == 'CAR-4':
-    path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CAR-4/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20260308'
+    path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EURR-3/ICTP/EC-Earth3-Veg/historical/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20250725'
 elif domain == 'CSAM-3':
-    path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut'
+    path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EURR-3/ICTP/EC-Earth3-Veg/historical/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20250725'
 elif domain == 'EURR-3':
-    path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CAR-4/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20260308'
+    path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EURR-3/ICTP/EC-Earth3-Veg/historical/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20250725'
 else:
     raise ValueError('Unknown domain: {0}'.format(domain))
 
 # Output path
-path_out = '/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/{0}/input/Tb'.format(domain)
+path_out = '/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/CPMs/projection/{0}/preproc/Tb'.format(domain)
 
 # File list
 files = sorted(glob.glob(path_in + '/rlut_*.nc'))
