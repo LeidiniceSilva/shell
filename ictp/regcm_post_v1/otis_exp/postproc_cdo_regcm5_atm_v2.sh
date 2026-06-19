@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A CMPNS_ictpclim
+#SBATCH -A ICT26_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -21,9 +21,10 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-DOMAIN_LIST="small large"
+DOMAIN_LIST="large"
 EXP_LIST="ctrl holt_r2 holt_r3 uw_r2 uw_r3"
 VAR_LIST="hus ta ua va wa"
+DATE="2023102000" # 2023101200 2023101900 2023102000
 
 DIR_WIND="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm"
 DIR_NAMELIST="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/tcyclone"
@@ -36,8 +37,8 @@ echo "1. Rotate wind"
 for DOMAIN in ${DOMAIN_LIST[@]}; do
 	for EXP in ${EXP_LIST[@]}; do
 
-		DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/domain_${DOMAIN}/${EXP}/output"
-		DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/domain_${DOMAIN}/${EXP}"
+		DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_v5/domain_${DOMAIN}/${EXP}/output"
+		DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v5/domain_${DOMAIN}/${EXP}"
 
 		echo
 		cd ${DIR_IN}
@@ -48,7 +49,7 @@ for DOMAIN in ${DOMAIN_LIST[@]}; do
     		echo
     		echo "2. Select variable"
     		for VAR in ${VAR_LIST[@]}; do
-        		CDO selname,${VAR} Otis_exp_ATM.2023101900_pressure.nc ${DIR_OUT}/${VAR}_${EXP}_2023101900.nc
+        		CDO selname,${VAR} Otis_exp_ATM.${DATE}_pressure.nc ${DIR_OUT}/${VAR}_${EXP}_${DATE}.nc
     		done
 	done    
 done 

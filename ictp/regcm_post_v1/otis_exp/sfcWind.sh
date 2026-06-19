@@ -1,7 +1,7 @@
-pw#!/bin/bash
+#!/bin/bash
 
 DOMAIN="large"
-INROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps_v2/domain_${DOMAIN}"
+INROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v4/domain_${DOMAIN}"
 
 # Loop through all experiment subfolders
 for EXPDIR in "$INROOT"/*/; do

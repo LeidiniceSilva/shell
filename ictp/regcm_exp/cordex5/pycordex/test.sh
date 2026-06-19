@@ -11,7 +11,7 @@
 
 source $HOME/modules_new
 
-datadir=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-3
+datadir=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/CSAM-3
 idates_list=`ls $datadir/CSAM-3_SRF.${1}* | cut -d "." -f 2`
 
 run_year=1999
@@ -30,9 +30,9 @@ pycordex=/leonardo/home/userexternal/ggiulian/RegCM-CORDEX5/Tools/Scripts/pycord
 mail=mda_silv@ictp.it
 domain=CSAM-3
 global=EC-Earth3-Veg
-experiment=ssp370
+experiment=historical
 ensemble=r1i1p1f1
-notes="Regular production"
+notes="None"
 output="/leonardo_work/ICT26_ESP"
 proc=20
 regcm_model=RegCM

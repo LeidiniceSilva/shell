@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A CMPNS_ictpclim
+#SBATCH -A ICT26_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
@@ -15,10 +15,9 @@
 #__description__ = 'Posprocessing the RegCM5 output with CDO'
 
 {
-source /leonardo/home/userexternal/ggiulian/modules
 set -eo pipefail
 
-DOMAIN_LIST="small large"
+DOMAIN_LIST="large"
 EXP_LIST="ctrl holt_r2 holt_r3 uw_r2 uw_r3"
 
 DIR_BIN="/leonardo/home/userexternal/ggiulian/binaries_CORDEX5"
@@ -32,8 +31,8 @@ echo "1. Convert sigma2p"
 for DOMAIN in ${DOMAIN_LIST[@]}; do
 	for EXP in ${EXP_LIST[@]}; do
 
-		DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/domain_${DOMAIN}/${EXP}/output"
-		DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/domain_${DOMAIN}/${EXP}"
+		DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_v5/domain_${DOMAIN}/${EXP}/output"
+		DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v5/domain_${DOMAIN}/${EXP}"
 
 		echo
 		cd ${DIR_IN}
