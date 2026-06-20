@@ -10,9 +10,9 @@
 
 DOMAIN="large"
 
-INROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps_v4/domain_${DOMAIN}"
-OUTROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps_v4/domain_${DOMAIN}_regridded"
-GRIDFILE="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps_v4/domain_${DOMAIN}/grid"
+INROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v2/domain_${DOMAIN}"
+OUTROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v2/domain_${DOMAIN}_regridded"
+GRIDFILE="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v2/domain_${DOMAIN}/grid"
 
 # Create output root folder if it doesn't exist
 if [ ! -d "$OUTROOT" ]; then

@@ -7,7 +7,7 @@
 #SBATCH -t 1-00:00:00
 #SBATCH -o logs/rcm_SLURM.out
 #SBATCH -e logs/rcm_SLURM.err
-#SBATCH -J EUR-11
+#SBATCH -J WSM7
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 

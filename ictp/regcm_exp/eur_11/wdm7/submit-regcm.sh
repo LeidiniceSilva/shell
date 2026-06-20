@@ -26,7 +26,7 @@ dpath=$( echo $nl | cut -d. -f1 )
 nnod=12
 dmon=12
 
-#driv=$( echo $nl | cut -d- -f1 )
+driv=$( echo $nl | cut -d- -f1 )
 tdir=$base/$dpath
 mkdir -p $tdir
 
