@@ -68,7 +68,7 @@
  ifshf   = .true. ,           ! Output SHF (pr hourly)
  ifsrf   = .true. ,           ! Output SRF ?
  srffrq  =     1.,            ! Frequency in hours to write to SRF
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/WDM7-EUR/',       
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/WDM7-EUR',       
  lsync   = .true.,            ! If sync of output files at every timestep is
  do_parallel_netcdf_in  = .true.,  ! This enables paralell input
  do_parallel_netcdf_out = .false., ! This enables paralell output if the

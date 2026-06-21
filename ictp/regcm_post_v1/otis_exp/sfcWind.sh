@@ -1,7 +1,22 @@
 #!/bin/bash
 
-DOMAIN="large"
-INROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v4/domain_${DOMAIN}"
+#SBATCH -A ICT26_ESP
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -J Regrid
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=mda_silv@ictp.it
+
+#__author__      = 'Leidinice Silva'
+#__email__       = 'leidinicesilva@gmail.com'
+#__date__        = 'Sept 24, 2025'
+#__description__ = 'Posprocessing the RegCM5 output with CDO'
+
+EXP=$1
+DOMAIN=$2
+DATE=$3
+INROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/${EXP}/domain_${DOMAIN}"
 
 # Loop through all experiment subfolders
 for EXPDIR in "$INROOT"/*/; do
@@ -11,11 +26,11 @@ for EXPDIR in "$INROOT"/*/; do
     echo "-------- Computing surface wind for: $EXPNAME --------"
     
     # Define input file paths
-    UAS_FILE="${EXPDIR}uas_${EXPNAME}_2023101900.nc"
-    VAS_FILE="${EXPDIR}vas_${EXPNAME}_2023101900.nc"
+    UAS_FILE="${EXPDIR}uas_${EXPNAME}_${DATE}.nc"
+    VAS_FILE="${EXPDIR}vas_${EXPNAME}_${DATE}.nc"
     
     # Define output file path (same directory as input)
-    OUTPUT_FILE="${EXPDIR}sfcWind_${EXPNAME}_2023101900.nc"
+    OUTPUT_FILE="${EXPDIR}sfcWind_${EXPNAME}_${DATE}.nc"
     
     # Check if input files exist
     if [ -f "$UAS_FILE" ] && [ -f "$VAS_FILE" ]; then

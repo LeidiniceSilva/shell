@@ -8,11 +8,17 @@
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=mda_silv@ictp.it
 
-DOMAIN="large"
+#__author__      = 'Leidinice Silva'
+#__email__       = 'leidinicesilva@gmail.com'
+#__date__        = 'Sept 24, 2025'
+#__description__ = 'Posprocessing the RegCM5 output with CDO'
 
-INROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v2/domain_${DOMAIN}"
-OUTROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v2/domain_${DOMAIN}_regridded"
-GRIDFILE="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v2/domain_${DOMAIN}/grid"
+EXPS=$1
+DOMAIN=$2
+
+INROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/${EXPS}/domain_${DOMAIN}"
+OUTROOT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/${EXPS}/domain_${DOMAIN}_regridded"
+GRIDFILE="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/${EXPS}/domain_${DOMAIN}/grid"
 
 # Create output root folder if it doesn't exist
 if [ ! -d "$OUTROOT" ]; then

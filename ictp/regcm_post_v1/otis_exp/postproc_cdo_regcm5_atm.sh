@@ -17,10 +17,15 @@
 {
 set -eo pipefail
 
-DOMAIN_LIST="large"
-EXP_LIST="ctrl holt_r2 holt_r3 uw_r2 uw_r3"
-VAR_LIST="hus ta ua va wa"
-DATE="2023101200" # 2023101200 2023102000 
+CDO(){
+  cdo -O -L -f nc4 -z zip $@
+}
+
+EXPS=$1
+DATE=$2
+DOMAIN_LIST="large small"
+EXP_LIST="ctrl holt_r2 holt_r3 uw_r2 uw_r3" # ctrl holt_r2 holt_r3 uw_r2 uw_r3
+VAR_LIST="hus ta ua va wa" # hus ta ua va wa
 
 DIR_BIN="/leonardo/home/userexternal/ggiulian/binaries_CORDEX5"
 DIR_NAMELIST="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v1/otis_exp"
@@ -34,8 +39,8 @@ echo "1. Convert sigma2p & rotate wind"
 for DOMAIN in ${DOMAIN_LIST[@]}; do
 	for EXP in ${EXP_LIST[@]}; do
 
-		DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_v4/domain_${DOMAIN}/${EXP}/output"
-		DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/exps_v4/domain_${DOMAIN}/${EXP}"
+		DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/${EXPS}/domain_${DOMAIN}/${EXP}/output"
+		DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/Otis_exp/exps/${EXPS}/domain_${DOMAIN}/${EXP}"
 
 		echo
 		cd ${DIR_IN}
@@ -49,8 +54,6 @@ for DOMAIN in ${DOMAIN_LIST[@]}; do
     		for VAR in ${VAR_LIST[@]}; do
         		CDO selname,${VAR} Otis_exp_ATM.${DATE}_pressure.nc ${DIR_OUT}/${VAR}_${EXP}_${DATE}.nc
     		done
-
-
 	done    
 done 
 
