@@ -2,12 +2,12 @@
   This is Terrain part of RegCM package version 5
    GIT Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:11
 
- : this run start at  : 2025-09-24 08:30:14+0200
+ : this run start at  : 2026-06-21 17:36:45+0200
  : it is submitted by : mdasilva
- : it is running on   : lrdn4200.leonardo.local
+ : it is running on   : lrdn4525.leonardo.local
  : in directory       : 
- /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
- one/article/domain_small/ctrl
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/otis_
+ exp/article/exps_v1/domain_small/ctrl
                       
  Using non hydrostatic Moloch dynamic
  
@@ -101,12 +101,12 @@
   This is mksurfdata part of RegCM package version 5
    GIT Revision: 5.0.1 compiled at: data : Jan 27 2025  time: 11:58:15
 
- : this run start at  : 2025-09-24 08:30:17+0200
+ : this run start at  : 2026-06-21 17:36:49+0200
  : it is submitted by : mdasilva
- : it is running on   : lrdn4200.leonardo.local
+ : it is running on   : lrdn4525.leonardo.local
  : in directory       : 
- /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
- one/article/domain_small/ctrl
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/otis_
+ exp/article/exps_v1/domain_small/ctrl
                       
  Created topographic informations...
  Computing weights, R =      39.25419903 .......... Done.
@@ -118,7 +118,7 @@
  Computing weights, R =     117.83413696 .......... Done.
  Created lai/sai informations...
  Computing weights, R =      29.43809795 .......... Done.
- Computing weights, R =     117.83413696 .......... Done.
+ Computing weights, R =      11.77371097 .......... Done.
  Computing weights, R =      19.62391090 .......... Done.
  Created soil texture/color informations...
  Computing weights, R =     117.83413696 .......... Done.
@@ -136,14 +136,14 @@
   This is sst part of the RegCM version 5
    SVN Revision: 5.0.1 compiled at: data : Dec 03 2024  time: 16:32:23
 
- : this run start at    : 2025-09-24 08:34:15+0200
+ : this run start at    : 2026-06-21 17:40:46+0200
  : it is submitted by   : mdasilva
- : it is running on     : lrdn4200.leonardo.local
+ : it is running on     : lrdn4525.leonardo.local
  : in directory         : 
- /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
- one/article/domain_small/ctrl
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/otis_
+ exp/article/exps_v1/domain_small/ctrl
                        
- Opened /leonardo_work/ICT25_ESP/RCMDATA/ERA5/SSTD/sst_2023_10.nc
+ Opened /leonardo_work/ICT26_ESP/RCMDATA/ERA5/SSTD/sst_2023_10.nc
  Fill Value   =  -32767
  Add offset   =    289.042056362288     
  Scale factor =   6.040722982600369E-004
@@ -160,18 +160,18 @@
  WRITEN OUT SST DATA :  2023-10-25 00:00:00 UTC        
  WRITEN OUT SST DATA :  2023-10-26 00:00:00 UTC        
  WRITEN OUT SST DATA :  2023-10-27 00:00:00 UTC        
- Input ready at : Wed Sep 24 08:34:17 2025
+ Input ready at : Sun Jun 21 17:40:48 2026
  Successfully generated SST
 
   This is icbc part of the RegCM version 5
    SVN Revision: 5.0.1 compiled at: data : Aug 07 2025  time: 12:17:06
 
- : this run start at    : 2025-09-24 08:34:17+0200
+ : this run start at    : 2026-06-21 17:40:48+0200
  : it is submitted by   : mdasilva
- : it is running on     : lrdn4200.leonardo.local
+ : it is running on     : lrdn4525.leonardo.local
  : in directory         : 
- /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcycl
- one/article/domain_small/ctrl
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/otis_
+ exp/article/exps_v1/domain_small/ctrl
                        
  Using Moloch non-hydrostatic dynamical core
  GLOBIDATE1 :  2023-10-19 00:00:00 UTC        
@@ -180,15 +180,15 @@
  Computing weights, R =      39.25750351 .......... Done.
  Computing weights, R =      39.25750351 .......... Done.
  Computing weights, R =      39.25750351 .......... Done.
-      131072 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2023/tatm_2023_10.nc
+      131072 /leonardo_work/ICT26_ESP/RCMDATA/ERA5/2023/tatm_2023_10.nc
   2.061811361603481E-003   251.632628457112     
-      196608 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2023/geop_2023_10.nc
+      196608 /leonardo_work/ICT26_ESP/RCMDATA/ERA5/2023/geop_2023_10.nc
    7.38400786626585        235635.714246067     
-      262144 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2023/qhum_2023_10.nc
+      262144 /leonardo_work/ICT26_ESP/RCMDATA/ERA5/2023/qhum_2023_10.nc
   4.024191313448453E-007  1.308834570112860E-002
-      327680 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2023/uwnd_2023_10.nc
+      327680 /leonardo_work/ICT26_ESP/RCMDATA/ERA5/2023/uwnd_2023_10.nc
   3.369716814086629E-003   25.2393048266516     
-      393216 /leonardo_work/ICT25_ESP/RCMDATA/ERA5/2023/vwnd_2023_10.nc
+      393216 /leonardo_work/ICT26_ESP/RCMDATA/ERA5/2023/vwnd_2023_10.nc
   2.907983430849009E-003   4.57844102781583     
  READ IN fields at DATE: 2023-10-19 00:00:00 UTC        
  READ IN fields at DATE: 2023-10-19 06:00:00 UTC        
@@ -223,5 +223,5 @@
  READ IN fields at DATE: 2023-10-26 12:00:00 UTC        
  READ IN fields at DATE: 2023-10-26 18:00:00 UTC        
  READ IN fields at DATE: 2023-10-27 00:00:00 UTC        
- Input ready at : Wed Sep 24 08:36:56 2025
+ Input ready at : Sun Jun 21 17:43:34 2026
  Successfully completed ICBC

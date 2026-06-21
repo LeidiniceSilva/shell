@@ -1,0 +1,8 @@
+ Cannot send after transport endpoint shutdown                                  
+  
+ mod_clm_nchelper.F90 : 
+      343:Error open NetCDF /leonardo_work/ICT26_ESP/RCMDATA/CLM45/snicardata/sn
+ icar_optics_5bnd_c090915.nc in read:          108
+ Abort called by computing node            0 at 2026-06-21 18:09:25.425 +0200
+ Execution terminated because of runtime error
+Abort(1) on node 0 (rank 0 in comm 496): application called MPI_Abort(comm=0x84000003, 1) - process 0
