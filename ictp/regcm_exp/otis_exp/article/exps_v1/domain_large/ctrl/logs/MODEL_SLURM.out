@@ -1726,3 +1726,857 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  SRF variables written at  2023-10-19 10:00:00 UTC        
  CLM History variables written
  SRF variables written at  2023-10-19 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-19 12:00:00 UTC        
+ SRF variables written at  2023-10-19 12:00:00 UTC        
+ RAD variables written at  2023-10-19 12:00:00 UTC        
+ SEARCH BC data for 2023101918 , step =      960
+ READY  BC from     2023101912  to 2023101918 
+ $$$  2023-10-19 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.50  601.68
+ CLM History variables written
+ SRF variables written at  2023-10-19 13:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-19 14:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-19 15:00:00 UTC        
+ $$$  2023-10-19 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.35  601.33
+ CLM History variables written
+ SRF variables written at  2023-10-19 16:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-19 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-19 18:00:00 UTC        
+ SRF variables written at  2023-10-19 18:00:00 UTC        
+ RAD variables written at  2023-10-19 18:00:00 UTC        
+ SEARCH BC data for 2023102000 , step =     1440
+ READY  BC from     2023101918  to 2023102000 
+ $$$  2023-10-19 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.13  601.42
+ CLM History variables written
+ SRF variables written at  2023-10-19 19:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-19 20:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-19 21:00:00 UTC        
+ $$$  2023-10-19 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.60  600.75
+ CLM History variables written
+ SRF variables written at  2023-10-19 22:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-19 23:00:00 UTC        
+ CLM History variables written
+ At  2023-10-20 00:00:00 UTC        
+ JDay    292.00000 solar declination angle =  -9.70915201 degrees
+                   solar TSI irradiance    =    1356.8508 W/m^2
+ ATM variables written at  2023-10-20 00:00:00 UTC        
+ SRF variables written at  2023-10-20 00:00:00 UTC        
+ STS variables written at  2023-10-20 00:00:00 UTC        
+ RAD variables written at  2023-10-20 00:00:00 UTC        
+ SEARCH BC data for 2023102006 , step =     1920
+ READY  BC from     2023102000  to 2023102006 
+ $$$  2023-10-20 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.33  601.09
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.750E-33  0.549E-21  0.383E-17  0.103E-14  0.503E-13  0.927E-12  0.909E-11
+    0.576E-10  0.265E-09  0.957E-09  0.285E-08  0.728E-08  0.164E-07  0.332E-07
+    0.616E-07  0.106E-06  0.170E-06  0.258E-06  0.372E-06  0.513E-06  0.679E-06
+    0.868E-06  0.107E-05  0.129E-05  0.151E-05  0.173E-05  0.193E-05  0.211E-05
+    0.227E-05  0.239E-05  0.248E-05  0.252E-05  0.253E-05  0.250E-05  0.242E-05
+    0.232E-05  0.217E-05  0.200E-05  0.179E-05  0.156E-05  0.130E-05  0.102E-05
+    0.102E-05  0.703E-06  0.320E-06
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00       1.00    
+    0.902E-01  0.157      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312    
+ CLM History variables written
+ SRF variables written at  2023-10-20 01:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 02:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 03:00:00 UTC        
+ $$$  2023-10-20 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.07  599.83
+ CLM History variables written
+ SRF variables written at  2023-10-20 04:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-20 06:00:00 UTC        
+ SRF variables written at  2023-10-20 06:00:00 UTC        
+ RAD variables written at  2023-10-20 06:00:00 UTC        
+ SEARCH BC data for 2023102012 , step =     2400
+ READY  BC from     2023102006  to 2023102012 
+ $$$  2023-10-20 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1017.95  600.61
+ CLM History variables written
+ SRF variables written at  2023-10-20 07:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 08:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 09:00:00 UTC        
+ $$$  2023-10-20 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1016.49  600.56
+ CLM History variables written
+ SRF variables written at  2023-10-20 10:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-20 12:00:00 UTC        
+ SRF variables written at  2023-10-20 12:00:00 UTC        
+ RAD variables written at  2023-10-20 12:00:00 UTC        
+ SEARCH BC data for 2023102018 , step =     2880
+ READY  BC from     2023102012  to 2023102018 
+ $$$  2023-10-20 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1016.87  601.51
+ CLM History variables written
+ SRF variables written at  2023-10-20 13:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 14:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 15:00:00 UTC        
+ $$$  2023-10-20 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1017.19  601.47
+ CLM History variables written
+ SRF variables written at  2023-10-20 16:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-20 18:00:00 UTC        
+ SRF variables written at  2023-10-20 18:00:00 UTC        
+ RAD variables written at  2023-10-20 18:00:00 UTC        
+ SEARCH BC data for 2023102100 , step =     3360
+ READY  BC from     2023102018  to 2023102100 
+ $$$  2023-10-20 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1016.47  601.49
+ CLM History variables written
+ SRF variables written at  2023-10-20 19:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 20:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 21:00:00 UTC        
+ $$$  2023-10-20 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1015.69  601.78
+ CLM History variables written
+ SRF variables written at  2023-10-20 22:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-20 23:00:00 UTC        
+ CLM History variables written
+ At  2023-10-21 00:00:00 UTC        
+ JDay    293.00000 solar declination angle = -10.07053114 degrees
+                   solar TSI irradiance    =    1356.8508 W/m^2
+ ATM variables written at  2023-10-21 00:00:00 UTC        
+ SRF variables written at  2023-10-21 00:00:00 UTC        
+ STS variables written at  2023-10-21 00:00:00 UTC        
+ RAD variables written at  2023-10-21 00:00:00 UTC        
+ SEARCH BC data for 2023102106 , step =     3840
+ READY  BC from     2023102100  to 2023102106 
+ $$$  2023-10-21 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1014.58  601.68
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.750E-33  0.549E-21  0.383E-17  0.103E-14  0.503E-13  0.927E-12  0.909E-11
+    0.576E-10  0.265E-09  0.957E-09  0.285E-08  0.728E-08  0.164E-07  0.332E-07
+    0.616E-07  0.106E-06  0.170E-06  0.258E-06  0.372E-06  0.513E-06  0.679E-06
+    0.868E-06  0.107E-05  0.129E-05  0.151E-05  0.173E-05  0.193E-05  0.211E-05
+    0.227E-05  0.239E-05  0.248E-05  0.252E-05  0.253E-05  0.250E-05  0.242E-05
+    0.232E-05  0.217E-05  0.200E-05  0.179E-05  0.156E-05  0.130E-05  0.102E-05
+    0.102E-05  0.703E-06  0.320E-06
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00       1.00    
+    0.902E-01  0.157      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312    
+ CLM History variables written
+ SRF variables written at  2023-10-21 01:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 02:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 03:00:00 UTC        
+ $$$  2023-10-21 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1014.20  601.42
+ CLM History variables written
+ SRF variables written at  2023-10-21 04:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-21 06:00:00 UTC        
+ SRF variables written at  2023-10-21 06:00:00 UTC        
+ RAD variables written at  2023-10-21 06:00:00 UTC        
+ SEARCH BC data for 2023102112 , step =     4320
+ READY  BC from     2023102106  to 2023102112 
+ $$$  2023-10-21 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1015.07  601.52
+ CLM History variables written
+ SRF variables written at  2023-10-21 07:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 08:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 09:00:00 UTC        
+ $$$  2023-10-21 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1015.41  601.65
+ CLM History variables written
+ SRF variables written at  2023-10-21 10:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-21 12:00:00 UTC        
+ SRF variables written at  2023-10-21 12:00:00 UTC        
+ RAD variables written at  2023-10-21 12:00:00 UTC        
+ SEARCH BC data for 2023102118 , step =     4800
+ READY  BC from     2023102112  to 2023102118 
+ $$$  2023-10-21 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1015.31  601.70
+ CLM History variables written
+ SRF variables written at  2023-10-21 13:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 14:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 15:00:00 UTC        
+ $$$  2023-10-21 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1015.11  601.21
+ CLM History variables written
+ SRF variables written at  2023-10-21 16:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-21 18:00:00 UTC        
+ SRF variables written at  2023-10-21 18:00:00 UTC        
+ RAD variables written at  2023-10-21 18:00:00 UTC        
+ SEARCH BC data for 2023102200 , step =     5280
+ READY  BC from     2023102118  to 2023102200 
+ $$$  2023-10-21 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1014.88  600.50
+ CLM History variables written
+ SRF variables written at  2023-10-21 19:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 20:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 21:00:00 UTC        
+ $$$  2023-10-21 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1015.15  600.08
+ CLM History variables written
+ SRF variables written at  2023-10-21 22:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-21 23:00:00 UTC        
+ CLM History variables written
+ At  2023-10-22 00:00:00 UTC        
+ JDay    294.00000 solar declination angle = -10.42946031 degrees
+                   solar TSI irradiance    =    1356.8508 W/m^2
+ ATM variables written at  2023-10-22 00:00:00 UTC        
+ SRF variables written at  2023-10-22 00:00:00 UTC        
+ STS variables written at  2023-10-22 00:00:00 UTC        
+ RAD variables written at  2023-10-22 00:00:00 UTC        
+ SEARCH BC data for 2023102206 , step =     5760
+ READY  BC from     2023102200  to 2023102206 
+ $$$  2023-10-22 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1014.89  600.27
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.750E-33  0.549E-21  0.383E-17  0.103E-14  0.503E-13  0.927E-12  0.909E-11
+    0.576E-10  0.265E-09  0.957E-09  0.285E-08  0.728E-08  0.164E-07  0.332E-07
+    0.616E-07  0.106E-06  0.170E-06  0.258E-06  0.372E-06  0.513E-06  0.679E-06
+    0.868E-06  0.107E-05  0.129E-05  0.151E-05  0.173E-05  0.193E-05  0.211E-05
+    0.227E-05  0.239E-05  0.248E-05  0.252E-05  0.253E-05  0.250E-05  0.242E-05
+    0.232E-05  0.217E-05  0.200E-05  0.179E-05  0.156E-05  0.130E-05  0.102E-05
+    0.102E-05  0.703E-06  0.320E-06
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00       1.00    
+    0.902E-01  0.157      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312    
+ CLM History variables written
+ SRF variables written at  2023-10-22 01:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 02:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 03:00:00 UTC        
+ $$$  2023-10-22 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1014.86  601.20
+ CLM History variables written
+ SRF variables written at  2023-10-22 04:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-22 06:00:00 UTC        
+ SRF variables written at  2023-10-22 06:00:00 UTC        
+ RAD variables written at  2023-10-22 06:00:00 UTC        
+ SEARCH BC data for 2023102212 , step =     6240
+ READY  BC from     2023102206  to 2023102212 
+ $$$  2023-10-22 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1014.78  601.25
+ CLM History variables written
+ SRF variables written at  2023-10-22 07:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 08:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 09:00:00 UTC        
+ $$$  2023-10-22 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1015.59  601.66
+ CLM History variables written
+ SRF variables written at  2023-10-22 10:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-22 12:00:00 UTC        
+ SRF variables written at  2023-10-22 12:00:00 UTC        
+ RAD variables written at  2023-10-22 12:00:00 UTC        
+ SEARCH BC data for 2023102218 , step =     6720
+ READY  BC from     2023102212  to 2023102218 
+ $$$  2023-10-22 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1016.34  601.92
+ CLM History variables written
+ SRF variables written at  2023-10-22 13:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 14:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 15:00:00 UTC        
+ $$$  2023-10-22 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1016.20  601.73
+ CLM History variables written
+ SRF variables written at  2023-10-22 16:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-22 18:00:00 UTC        
+ SRF variables written at  2023-10-22 18:00:00 UTC        
+ RAD variables written at  2023-10-22 18:00:00 UTC        
+ SEARCH BC data for 2023102300 , step =     7200
+ READY  BC from     2023102218  to 2023102300 
+ $$$  2023-10-22 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1015.97  600.48
+ CLM History variables written
+ SRF variables written at  2023-10-22 19:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 20:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 21:00:00 UTC        
+ $$$  2023-10-22 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1016.03  600.57
+ CLM History variables written
+ SRF variables written at  2023-10-22 22:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-22 23:00:00 UTC        
+ CLM History variables written
+ At  2023-10-23 00:00:00 UTC        
+ JDay    295.00000 solar declination angle = -10.78583142 degrees
+                   solar TSI irradiance    =    1356.8508 W/m^2
+ ATM variables written at  2023-10-23 00:00:00 UTC        
+ SRF variables written at  2023-10-23 00:00:00 UTC        
+ STS variables written at  2023-10-23 00:00:00 UTC        
+ RAD variables written at  2023-10-23 00:00:00 UTC        
+ SEARCH BC data for 2023102306 , step =     7680
+ READY  BC from     2023102300  to 2023102306 
+ $$$  2023-10-23 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1015.92  600.01
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.577E-33  0.523E-21  0.370E-17  0.988E-15  0.485E-13  0.892E-12  0.875E-11
+    0.554E-10  0.255E-09  0.921E-09  0.274E-08  0.701E-08  0.158E-07  0.320E-07
+    0.593E-07  0.102E-06  0.164E-06  0.249E-06  0.359E-06  0.495E-06  0.656E-06
+    0.838E-06  0.104E-05  0.125E-05  0.146E-05  0.166E-05  0.186E-05  0.203E-05
+    0.218E-05  0.230E-05  0.238E-05  0.243E-05  0.244E-05  0.240E-05  0.233E-05
+    0.223E-05  0.209E-05  0.192E-05  0.172E-05  0.150E-05  0.125E-05  0.982E-06
+    0.982E-06  0.677E-06  0.308E-06
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00       1.00    
+    0.902E-01  0.159      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312    
+ CLM History variables written
+ SRF variables written at  2023-10-23 01:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 02:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 03:00:00 UTC        
+ $$$  2023-10-23 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1015.99  601.12
+ CLM History variables written
+ SRF variables written at  2023-10-23 04:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-23 06:00:00 UTC        
+ SRF variables written at  2023-10-23 06:00:00 UTC        
+ RAD variables written at  2023-10-23 06:00:00 UTC        
+ SEARCH BC data for 2023102312 , step =     8160
+ READY  BC from     2023102306  to 2023102312 
+ $$$  2023-10-23 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1017.98  601.57
+ CLM History variables written
+ SRF variables written at  2023-10-23 07:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 08:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 09:00:00 UTC        
+ $$$  2023-10-23 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.46  601.80
+ CLM History variables written
+ SRF variables written at  2023-10-23 10:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-23 12:00:00 UTC        
+ SRF variables written at  2023-10-23 12:00:00 UTC        
+ RAD variables written at  2023-10-23 12:00:00 UTC        
+ SEARCH BC data for 2023102318 , step =     8640
+ READY  BC from     2023102312  to 2023102318 
+ $$$  2023-10-23 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.72  602.29
+ CLM History variables written
+ SRF variables written at  2023-10-23 13:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 14:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 15:00:00 UTC        
+ $$$  2023-10-23 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.05  602.08
+ CLM History variables written
+ SRF variables written at  2023-10-23 16:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-23 18:00:00 UTC        
+ SRF variables written at  2023-10-23 18:00:00 UTC        
+ RAD variables written at  2023-10-23 18:00:00 UTC        
+ SEARCH BC data for 2023102400 , step =     9120
+ READY  BC from     2023102318  to 2023102400 
+ $$$  2023-10-23 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.27  600.99
+ CLM History variables written
+ SRF variables written at  2023-10-23 19:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 20:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 21:00:00 UTC        
+ $$$  2023-10-23 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.28  601.77
+ CLM History variables written
+ SRF variables written at  2023-10-23 22:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-23 23:00:00 UTC        
+ CLM History variables written
+ At  2023-10-24 00:00:00 UTC        
+ JDay    296.00000 solar declination angle = -11.13953585 degrees
+                   solar TSI irradiance    =    1356.8508 W/m^2
+ ATM variables written at  2023-10-24 00:00:00 UTC        
+ SRF variables written at  2023-10-24 00:00:00 UTC        
+ STS variables written at  2023-10-24 00:00:00 UTC        
+ RAD variables written at  2023-10-24 00:00:00 UTC        
+ SEARCH BC data for 2023102406 , step =     9600
+ READY  BC from     2023102400  to 2023102406 
+ $$$  2023-10-24 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.02  600.66
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.577E-33  0.523E-21  0.370E-17  0.988E-15  0.485E-13  0.892E-12  0.875E-11
+    0.554E-10  0.255E-09  0.921E-09  0.274E-08  0.701E-08  0.158E-07  0.320E-07
+    0.593E-07  0.102E-06  0.164E-06  0.249E-06  0.359E-06  0.495E-06  0.656E-06
+    0.838E-06  0.104E-05  0.125E-05  0.146E-05  0.166E-05  0.186E-05  0.203E-05
+    0.218E-05  0.230E-05  0.238E-05  0.243E-05  0.244E-05  0.240E-05  0.233E-05
+    0.223E-05  0.209E-05  0.192E-05  0.172E-05  0.150E-05  0.125E-05  0.982E-06
+    0.982E-06  0.677E-06  0.308E-06
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00       1.00    
+    0.902E-01  0.159      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312    
+ CLM History variables written
+ SRF variables written at  2023-10-24 01:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 02:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 03:00:00 UTC        
+ $$$  2023-10-24 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.53  600.06
+ CLM History variables written
+ SRF variables written at  2023-10-24 04:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-24 06:00:00 UTC        
+ SRF variables written at  2023-10-24 06:00:00 UTC        
+ RAD variables written at  2023-10-24 06:00:00 UTC        
+ SEARCH BC data for 2023102412 , step =    10080
+ READY  BC from     2023102406  to 2023102412 
+ $$$  2023-10-24 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.27  601.07
+ CLM History variables written
+ SRF variables written at  2023-10-24 07:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 08:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 09:00:00 UTC        
+ $$$  2023-10-24 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.00  601.53
+ CLM History variables written
+ SRF variables written at  2023-10-24 10:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-24 12:00:00 UTC        
+ SRF variables written at  2023-10-24 12:00:00 UTC        
+ RAD variables written at  2023-10-24 12:00:00 UTC        
+ SEARCH BC data for 2023102418 , step =    10560
+ READY  BC from     2023102412  to 2023102418 
+ $$$  2023-10-24 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.47  601.87
+ CLM History variables written
+ SRF variables written at  2023-10-24 13:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 14:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 15:00:00 UTC        
+ $$$  2023-10-24 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.44  602.08
+ CLM History variables written
+ SRF variables written at  2023-10-24 16:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-24 18:00:00 UTC        
+ SRF variables written at  2023-10-24 18:00:00 UTC        
+ RAD variables written at  2023-10-24 18:00:00 UTC        
+ SEARCH BC data for 2023102500 , step =    11040
+ READY  BC from     2023102418  to 2023102500 
+ $$$  2023-10-24 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.97  601.52
+ CLM History variables written
+ SRF variables written at  2023-10-24 19:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 20:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 21:00:00 UTC        
+ $$$  2023-10-24 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.12  599.96
+ CLM History variables written
+ SRF variables written at  2023-10-24 22:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-24 23:00:00 UTC        
+ CLM History variables written
+ At  2023-10-25 00:00:00 UTC        
+ JDay    297.00000 solar declination angle = -11.49046450 degrees
+                   solar TSI irradiance    =    1356.8508 W/m^2
+ ATM variables written at  2023-10-25 00:00:00 UTC        
+ SRF variables written at  2023-10-25 00:00:00 UTC        
+ STS variables written at  2023-10-25 00:00:00 UTC        
+ RAD variables written at  2023-10-25 00:00:00 UTC        
+ SEARCH BC data for 2023102506 , step =    11520
+ READY  BC from     2023102500  to 2023102506 
+ $$$  2023-10-25 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.32  600.54
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.577E-33  0.523E-21  0.370E-17  0.988E-15  0.485E-13  0.892E-12  0.875E-11
+    0.554E-10  0.255E-09  0.921E-09  0.274E-08  0.701E-08  0.158E-07  0.320E-07
+    0.593E-07  0.102E-06  0.164E-06  0.249E-06  0.359E-06  0.495E-06  0.656E-06
+    0.838E-06  0.104E-05  0.125E-05  0.146E-05  0.166E-05  0.186E-05  0.203E-05
+    0.218E-05  0.230E-05  0.238E-05  0.243E-05  0.244E-05  0.240E-05  0.233E-05
+    0.223E-05  0.209E-05  0.192E-05  0.172E-05  0.150E-05  0.125E-05  0.982E-06
+    0.982E-06  0.677E-06  0.308E-06
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00       1.00    
+    0.902E-01  0.159      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312    
+ CLM History variables written
+ SRF variables written at  2023-10-25 01:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 02:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 03:00:00 UTC        
+ $$$  2023-10-25 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.14  600.17
+ CLM History variables written
+ SRF variables written at  2023-10-25 04:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-25 06:00:00 UTC        
+ SRF variables written at  2023-10-25 06:00:00 UTC        
+ RAD variables written at  2023-10-25 06:00:00 UTC        
+ SEARCH BC data for 2023102512 , step =    12000
+ READY  BC from     2023102506  to 2023102512 
+ $$$  2023-10-25 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.15  600.80
+ CLM History variables written
+ SRF variables written at  2023-10-25 07:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 08:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 09:00:00 UTC        
+ $$$  2023-10-25 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.53  600.00
+ CLM History variables written
+ SRF variables written at  2023-10-25 10:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-25 12:00:00 UTC        
+ SRF variables written at  2023-10-25 12:00:00 UTC        
+ RAD variables written at  2023-10-25 12:00:00 UTC        
+ SEARCH BC data for 2023102518 , step =    12480
+ READY  BC from     2023102512  to 2023102518 
+ $$$  2023-10-25 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.02  601.20
+ CLM History variables written
+ SRF variables written at  2023-10-25 13:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 14:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 15:00:00 UTC        
+ $$$  2023-10-25 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.49  601.59
+ CLM History variables written
+ SRF variables written at  2023-10-25 16:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-25 18:00:00 UTC        
+ SRF variables written at  2023-10-25 18:00:00 UTC        
+ RAD variables written at  2023-10-25 18:00:00 UTC        
+ SEARCH BC data for 2023102600 , step =    12960
+ READY  BC from     2023102518  to 2023102600 
+ $$$  2023-10-25 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.18  601.08
+ CLM History variables written
+ SRF variables written at  2023-10-25 19:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 20:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 21:00:00 UTC        
+ $$$  2023-10-25 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.47  599.14
+ CLM History variables written
+ SRF variables written at  2023-10-25 22:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-25 23:00:00 UTC        
+ CLM History variables written
+ At  2023-10-26 00:00:00 UTC        
+ JDay    298.00000 solar declination angle = -11.83850782 degrees
+                   solar TSI irradiance    =    1356.8508 W/m^2
+ ATM variables written at  2023-10-26 00:00:00 UTC        
+ SRF variables written at  2023-10-26 00:00:00 UTC        
+ STS variables written at  2023-10-26 00:00:00 UTC        
+ RAD variables written at  2023-10-26 00:00:00 UTC        
+ SEARCH BC data for 2023102606 , step =    13440
+ READY  BC from     2023102600  to 2023102606 
+ $$$  2023-10-26 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.89  599.39
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.577E-33  0.523E-21  0.370E-17  0.988E-15  0.485E-13  0.892E-12  0.875E-11
+    0.554E-10  0.255E-09  0.921E-09  0.274E-08  0.701E-08  0.158E-07  0.320E-07
+    0.593E-07  0.102E-06  0.164E-06  0.249E-06  0.359E-06  0.495E-06  0.656E-06
+    0.838E-06  0.104E-05  0.125E-05  0.146E-05  0.166E-05  0.186E-05  0.203E-05
+    0.218E-05  0.230E-05  0.238E-05  0.243E-05  0.244E-05  0.240E-05  0.233E-05
+    0.223E-05  0.209E-05  0.192E-05  0.172E-05  0.150E-05  0.125E-05  0.982E-06
+    0.982E-06  0.677E-06  0.308E-06
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00       1.00    
+    0.902E-01  0.159      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312    
+ CLM History variables written
+ SRF variables written at  2023-10-26 01:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 02:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 03:00:00 UTC        
+ $$$  2023-10-26 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.00  599.93
+ CLM History variables written
+ SRF variables written at  2023-10-26 04:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-26 06:00:00 UTC        
+ SRF variables written at  2023-10-26 06:00:00 UTC        
+ RAD variables written at  2023-10-26 06:00:00 UTC        
+ SEARCH BC data for 2023102612 , step =    13920
+ READY  BC from     2023102606  to 2023102612 
+ $$$  2023-10-26 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.16  600.42
+ CLM History variables written
+ SRF variables written at  2023-10-26 07:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 08:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 09:00:00 UTC        
+ $$$  2023-10-26 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.44  600.68
+ CLM History variables written
+ SRF variables written at  2023-10-26 10:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-26 12:00:00 UTC        
+ SRF variables written at  2023-10-26 12:00:00 UTC        
+ RAD variables written at  2023-10-26 12:00:00 UTC        
+ SEARCH BC data for 2023102618 , step =    14400
+ READY  BC from     2023102612  to 2023102618 
+ $$$  2023-10-26 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.53  600.84
+ CLM History variables written
+ SRF variables written at  2023-10-26 13:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 14:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 15:00:00 UTC        
+ $$$  2023-10-26 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.66  600.71
+ CLM History variables written
+ SRF variables written at  2023-10-26 16:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2023-10-26 18:00:00 UTC        
+ SRF variables written at  2023-10-26 18:00:00 UTC        
+ RAD variables written at  2023-10-26 18:00:00 UTC        
+ SEARCH BC data for 2023102700 , step =    14880
+ READY  BC from     2023102618  to 2023102700 
+ $$$  2023-10-26 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.01  600.48
+ CLM History variables written
+ SRF variables written at  2023-10-26 19:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 20:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 21:00:00 UTC        
+ $$$  2023-10-26 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.08  600.15
+ CLM History variables written
+ SRF variables written at  2023-10-26 22:00:00 UTC        
+ CLM History variables written
+ SRF variables written at  2023-10-26 23:00:00 UTC        
+ Write restart file for CLM at  2023-10-27 00:00:00 UTC        
+ CLM History variables written
+ history tape            1 : no open file to close
+ Closing local history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_v1/domain_l
+ arge/ctrl/output//Otis_exp.clm.regcm.h1.20231019_03600.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_v1/domain_l
+ arge/ctrl/output/Otis_exp.clm.regcm.r.2023102700.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_v1/domain_l
+ arge/ctrl/output//Otis_exp.clm.regcm.rh0.2023102700.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_v1/domain_l
+ arge/ctrl/output//Otis_exp.clm.regcm.rh1.2023102700.nc
+ Successfully wrote out restart data for CLM 4.5
+ At  2023-10-27 00:00:00 UTC        
+ JDay    299.00000 solar declination angle = -12.18355581 degrees
+                   solar TSI irradiance    =    1356.8508 W/m^2
+ ATM variables written at  2023-10-27 00:00:00 UTC        
+ SRF variables written at  2023-10-27 00:00:00 UTC        
+ STS variables written at  2023-10-27 00:00:00 UTC        
+ RAD variables written at  2023-10-27 00:00:00 UTC        
+ SAV variables written at  2023-10-27 00:00:00 UTC        
+ Final time  2023-10-27 00:00:00 UTC reached.
+ Elapsed seconds of run for this final timeslice :    7681.921    
+ : this run stops at  : 2026-06-21 23:20:28+0200
+ : Run has been completed using         1344  processors.
+ : Total elapsed seconds of run :    7682.95548901703     
+ RegCM V5 simulation successfully reached end
