@@ -15,8 +15,8 @@ datadir=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/CSAM-3
 idates_list=`ls $datadir/CSAM-3_SRF.${1}* | cut -d "." -f 2`
 
 run_year=2005
-month1=09
-month2=10
+month1=11
+month2=12
 
 idates=$(for d in $idates_list; do
     year=${d:0:4}
@@ -48,8 +48,8 @@ srfvars=$srfvars,ts,prhmax,prsn,tauu,tauv,zmla,prw,rsus,rlus,hfss,hfls
 srfvars=$srfvars,ua50m,ua100m,ua150m,va50m,va100m,va150m,ta50m,hus50m
 srfvars=$srfvars,mrros,mrro,cape,cin,li,evspsblpot,z0,hfso,snw,snm
 stsvars=prmean,psmean,tasmean,tasmax,tasmin,sfcWindmax,sundmean,wsgsmax
-radvars=clwvi,clivi,rlut,rsut,rsdt,clh,clm,cll,cld
-atmvars=ua,va,ta,hus,zg,wa,mrsol,mrso,tsl,cli,clw
+radvars=clwvi,clivi,rlut,rsut,rsdt,clh,clm,cll
+atmvars=ua,va,ta,hus,zg,wa,mrsol,mrso,tsl
 
 for idate in $idates
 do
