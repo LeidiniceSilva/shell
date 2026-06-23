@@ -36,18 +36,14 @@ for yr in $(seq ${yinit} ${yfinal}); do
   tp_out="${path_out}/tp_ERA5_${yr}.nc"
 
   mn2t_in="${path_in}/mn2t_ERA5_${yr}.nc"
-  mn2t_out="${path_out}/mn2t_ERA5_${yr}.nc"
 
   # RX1day (max 1-day prec)
   CDO mulc,1000 ${tp_in} ${tp_out}
   CDO eca_rx1day ${tp_out} ${path_out}/RX1day_eca_ERA5_${yr}.nc
+  rm -f ${tp_out}
 
   # TN20 (mn2t > 20°C)
-  CDO subc,273.15 ${mn2t_in} ${mn2t_out}
-  CDO eca_tr,20 ${mn2t_out} ${path_out}/TN20_eca_ERA5_${yr}.nc
-
-  # Remove converted files
-  rm -f ${tp_out} ${mn2t_out}
+  CDO eca_tr,20 ${mn2t_in} ${path_out}/TN20_eca_ERA5_${yr}.nc
 
 done
 
