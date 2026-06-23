@@ -1,14 +1,15 @@
 #!/bin/bash
 
-#SBATCH --account            ICT26_ESP
-#SBATCH --job-name           MERGE
-#SBATCH --mail-type          FAIL
-#SBATCH --mail-user          mda_silv@ictp.it
-#SBATCH --nodes              1
-#SBATCH --ntasks-per-node    1
-#SBATCH --partition          dcgp_usr_prod
-#SBATCH --time               12:00:00
+#SBATCH -A ICT26_ESP
+#SBATCH -p dcgp_usr_prod
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=112
+#SBATCH -t 1-00:00:00
+#SBATCH -J Merge_files
+#SBATCH --mail-type=FAIL,END
+#SBATCH --mail-user=mda_silv@ictp.it
 
+# Path
 base_path="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1"
 
 # Info

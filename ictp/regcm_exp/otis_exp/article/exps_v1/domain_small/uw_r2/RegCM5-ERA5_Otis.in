@@ -80,8 +80,8 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/domain_small/ctrl/input',  ! Output directory for terrain files
- inpter = '/leonardo_work/ICT25_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_v1/domain_small/ctrl/input',  ! Output directory for terrain files
+ inpter = '/leonardo_work/ICT26_ESP/RCMDATA',                                  ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
                               ! when lsmoist option is True
@@ -132,8 +132,8 @@
  gdate1 = 2023101900,        ! Start date for ICBC data generation
  gdate2 = 2023102700,        ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/domain_small/ctrl/input', ! Path for ICBC produced input files
- inpglob = '/leonardo_work/ICT25_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_v1/domain_small/ctrl/input', ! Path for ICBC produced input files
+ inpglob = '/leonardo_work/ICT26_ESP/RCMDATA',                                 ! Path for ICBC global input datasets.
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
                              ! ICBC controlled by the perturbparam stanza
@@ -208,7 +208,7 @@
  ifchem  = .false.,           ! Output CHE ?
  ifopt   = .false.,           ! Output OPT ?
  chemfrq =      6.,           ! Frequency in hours to write to CHE
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/domain_small/uw_r2/output', ! Path where all output will be placed
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/Otis_exp/exps_v1/domain_small/uw_r2/output', ! Path where all output will be placed
  lsync   = .true.,                 ! If sync of output files at every timestep is requested.
                                    ! Note, it has a performance impact.
                                    ! Enabled by default if debug_level > 2
@@ -307,7 +307,7 @@
  islab_ocean =      0,  ! Activate the SLAB ocean model
  itweak =           0,  ! Enable tweak scenario
  iclimaaer =        3,  ! x Aerosol
- radclimpath = '/leonardo_work/ICT25_ESP/RCMDATA/MERRA2/OPPMONTH', 
+ radclimpath = '/leonardo_work/ICT26_ESP/RCMDATA/MERRA2/OPPMONTH', 
  /
 
  &microparam

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -A CMPNS_ictpclim
+#SBATCH -A ICT26_ESP
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 8
 #SBATCH --ntasks-per-node=112
@@ -16,9 +16,9 @@ set -eo pipefail
 
 # load required modules
 # module purge
-source /leonardo/home/userexternal/ggiulian/modules
+source /leonardo/home/userexternal/ggiulian/modules_new
 
-NAMELIST=/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/tcyclone/article/domain_small/holt_r2/RegCM5-ERA5_Otis.in
+NAMELIST=RegCM5-ERA5_Otis.in
 BINARIES=/leonardo/home/userexternal/ggiulian/binaries_CORDEX5
 EXTENSION=CLM45
 

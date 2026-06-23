@@ -5,7 +5,7 @@
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
-#SBATCH -J postproc
+#SBATCH -J Postproc
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
 
@@ -23,7 +23,7 @@ CDO(){
 
 EXPS=$1
 DATE=$2
-DOMAIN_LIST="large small" # large small
+DOMAIN_LIST="small" # large small
 EXP_LIST="ctrl holt_r2 holt_r3 uw_r2 uw_r3" # ctrl holt_r2 holt_r3 uw_r2 uw_r3
 VAR_LIST="pr psl uas vas"
 
