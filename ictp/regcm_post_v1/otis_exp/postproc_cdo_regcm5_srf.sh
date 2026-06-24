@@ -23,7 +23,7 @@ CDO(){
 
 EXPS=$1
 DATE=$2
-DOMAIN_LIST="small" # large small
+DOMAIN_LIST="large" # large small
 EXP_LIST="ctrl holt_r2 holt_r3 uw_r2 uw_r3" # ctrl holt_r2 holt_r3 uw_r2 uw_r3
 VAR_LIST="pr psl uas vas"
 

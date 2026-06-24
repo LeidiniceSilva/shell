@@ -2,7 +2,7 @@
 
 #SBATCH -A ICT26_ESP
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 1
+#SBATCH -N 8
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
 #SBATCH -J Merge_files
