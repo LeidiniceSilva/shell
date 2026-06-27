@@ -16,6 +16,12 @@ base_path="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/
 base="CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 version="v20260622"
 
+# Clean outputs
+#echo "Removing old $version and tmp files..."
+#find "$base_path" -type d -name "$version" -exec rm -rf {} \;
+#find "$base_path" -type f -name "*_tmp_*.nc" -delete
+#echo "Cleanup done"
+
 year=$1
 next_year=$((year + 1))
 
@@ -32,6 +38,7 @@ do
 
     # Match files 
     files=$(ls ${var}_${base}_${f}_${year}* 2>/dev/null)
+    echo "Files: $files"
 
     if [ ! -z "$files" ]; then
 
