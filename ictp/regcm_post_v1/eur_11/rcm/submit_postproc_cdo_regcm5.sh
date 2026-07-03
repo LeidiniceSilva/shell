@@ -17,12 +17,11 @@
 {
 set -eo pipefail
 
-#bash postproc_cdo_regcm5_srf_p1.sh
-#bash postproc_cdo_regcm5_srf_p2.sh
-#bash postproc_cdo_regcm5_srf_p99.sh
-#bash postproc_cdo_regcm5_srf_freq_int.sh
-bash postproc_cdo_regcm5_atm_p1.sh 2000-2000
-bash postproc_cdo_regcm5_atm_p2.sh 2000-2000
-bash postproc_cdo_regcm5_atm_p3.sh 2000-2000
+bash postproc_cdo_regcm5_srf_p1.sh
+bash postproc_cdo_regcm5_srf_p2.sh
+bash postproc_cdo_regcm5_srf_p99.sh
+bash postproc_cdo_regcm5_srf_freq_int.sh
+#bash postproc_cdo_regcm5_atm_p1.sh 2000-2000
+#bash postproc_cdo_regcm5_atm_p2.sh 2000-2000
 
 }

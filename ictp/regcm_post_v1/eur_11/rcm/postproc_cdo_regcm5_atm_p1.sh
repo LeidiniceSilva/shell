@@ -23,7 +23,7 @@ YR=$1
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
+FOLDER_LIST="NoTo-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -32,6 +32,7 @@ for FOLDER in ${FOLDER_LIST[@]}; do
 
     DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/${FOLDER}"
     BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
+    WIND="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm"
  
     echo
     cd ${DIR_IN}
@@ -42,8 +43,9 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     for YEAR in `seq -w ${IYR} ${FYR}`; do
 	for MON in `seq -w 01 12`; do
 
-	    ${BIN}/./sigma2pCLM45 ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100.nc
-            ${BIN}/./sigma2pCLM45 ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100.nc
+	    ${BIN}/./sigma2pCLM45 ${EXP}_ATM.${YEAR}${MON}0100.nc
+            ${BIN}/./sigma2pCLM45 ${EXP}_RAD.${YEAR}${MON}0100.nc
+	    python3 ${WIND}/rotatewinds.py ${EXP}_ATM.${YEAR}${MON}0100_pressure.nc
 	    
 	done
     done
