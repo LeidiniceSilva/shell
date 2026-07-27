@@ -128,8 +128,8 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = startTarget,       ! Start date for ICBC data generation
- gdate2 = endTarget,         ! End data for ICBC data generation
+ gdate1 = 2006010100,       ! Start date for ICBC data generation
+ gdate2 = 2007010100,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
  dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/icbc',  ! Path for ICBC produced input files
  inpglob = '/leonardo_work/ICT26_ESP/RCMDATA/',                                                   ! Path for ICBC global input datasets
@@ -152,8 +152,8 @@
 ! Nesting control
 !
  &fnestparam
- coarse_outdir = '/leonardo/home/userexternal/mdasilva/NoTo-SouthAmerica', ! Coarse domain output dir if FNEST
- coarse_domname = 'SAM-12',                                                                        ! Coarse domain domname
+ coarse_outdir = '/leonardo_work/ICT26_ESP/nzazulie/SAM-12/ECEarth/NoTo-SouthAmerica', ! Coarse domain output dir if FNEST
+ coarse_domname = 'SAM-12',                                                            ! Coarse domain domname
  /
  
 !
@@ -181,7 +181,7 @@
 !
  &restartparam
  ifrest  = restLogic,   ! If a restart
- mdate0  = startTarget, ! Global start (is globidate1)
+ mdate0  = 2006010100, ! Global start (is globidate1)
  mdate1  = startDate,   ! Start date of this run
  mdate2  = endDate,     ! End date for this run 
  /

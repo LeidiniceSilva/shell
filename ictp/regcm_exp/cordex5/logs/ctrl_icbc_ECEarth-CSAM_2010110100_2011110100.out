@@ -1,0 +1,28 @@
+### Checking icbc for icbc_ECEarth-CSAM_2010110100_2011110100 
+### previous icbc ended with an error
+### printing tail of output
+ : it is running on     : lrdn3825.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/corde
+ x5
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2010-11-01 00:00:00 UTC        
+ GLOBIDATE2 :  2011-11-01 00:00:00 UTC        
+ NSTEPS     :         1461
+icbc script complete
+### printing tail of error
+ Permission denied                                                              
+  
+ mod_nest.F90 : 
+      122:Error opening /leonardo/home/userexternal/mdasilva/NoTo-SouthAmerica/S
+ AM-12_ATM.2010110100.nc:           13
+ Execution terminated because of runtime error
+WARNING: unsupported restart date 0100!
+WARNING - potential infinity loop detected
+  previous start = 2010110100
+       new start = 2010110100
+submitting: bash submit-icbc.sh ECEarth-CSAM.in 2010110100 true
+3
+Submitted icbc with job i.d. 50409696 !!!
+Submitted control with job i.d. 50409698 !!!

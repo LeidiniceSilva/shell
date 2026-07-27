@@ -23,7 +23,7 @@ YR=$1
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-FOLDER_LIST="NoTo-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
+FOLDER_LIST="WSM5-EUR WSM7-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"

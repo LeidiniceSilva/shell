@@ -7,7 +7,8 @@ __description__ = "This script convert GPM IMERG"
 
 import xarray as xr
 
-file = "3B-HHR.MS.MRG.3IMERG.20000601-S000000-E002959.0000.V07B.HDF5"
+path = "/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/GPM_IMERG/2000"
+file = "{0}/3B-HHR.MS.MRG.3IMERG.20000601-S000000-E002959.0000.V07B.HDF5".format(path)
 
 ds = xr.open_dataset(file, group="Grid", engine="netcdf4")
 
@@ -47,5 +48,5 @@ ds.attrs = {
 }
 
 # Save NetCDF
-ds.to_netcdf("3B-HHR.MS.MRG.3IMERG.20000601-S000000-E002959.0000.V07B.nc")
+ds.to_netcdf("{0}/3B-HHR.MS.MRG.3IMERG.20000601-S000000-E002959.0000.V07B.nc".format(path))
 
