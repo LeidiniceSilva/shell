@@ -80,8 +80,8 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/icbc', ! Output directory for terrain files
- inpter = '/leonardo_work/ICT26_ESP/RCMDATA/',                                       ! Input directory for SURFACE dataset
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/icbc', ! Output directory for terrain files
+ inpter = '/leonardo_work/ICT26_ESP/RCMDATA/',                                    ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
                               ! when lsmoist option is True
@@ -112,13 +112,14 @@
 !
  &globdatparam
  ibdyfrq =     6,            ! boundary condition interval (hours)
- ssttyp = 'CMIP6',           ! Type of Sea Surface Temperature used
+ ssttyp = 'ERA5D',           ! Type of Sea Surface Temperature used
                              !  One in: GISST, OISST, OI2ST, OI_WK, OI2WK,
                              !          FV_A2, FV_B2, EH5A2, EH5B1, EHA1B,
                              !          EIN75, EIN15, CCSST,
                              !          CA_XX, HA_XX, EC_XX, IP_XX, GF_XX,
                              !          CN_XX, MP_XX
- dattyp = 'FNEST',           ! Type of global analysis datasets used
+ dattyp = 'ERA5',            ! Type of global analysis datasets used
+! dattyp = 'FNEST',          ! Type of global analysis datasets used
                              !  One in: ECMWF, ERA40, EIN75, EIN15, EIN25,
                              !          ERAHI, NNRP1, NNRP2, NRP2W, GFS11,
                              !          FVGCM, FNEST, EH5A2, EH5B1, EHA1B,
@@ -131,29 +132,21 @@
  gdate1 = 1994010100,       ! Start date for ICBC data generation
  gdate2 = 2015010100,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/icbc',  ! Path for ICBC produced input files
- inpglob = '/leonardo_work/ICT26_ESP/RCMDATA/',                                                   ! Path for ICBC global input datasets
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/icbc',   ! Path for ICBC produced input files
+ inpglob = '/leonardo_work/ICT26_ESP/RCMDATA/',                                      ! Path for ICBC global input datasets
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
                              ! ICBC controlled by the perturbparam stanza
                              ! Look http://users.ictp.it/~pubregcm/RegCM4/globedat.htm
                              ! on how to download them.
  /
-
-&cmip6param
- cmip6_model = 'EC-Earth3-Veg'
- cmip6_inp = '/leonardo_work/ICT26_ESP/RCMDATA/cmip6'
- cmip6_experiment = 'ssp370'
- cmip6_variant = 'r1i1p1f1'
- cmip6_grid = 'gr'
-/
  
 !
 ! Nesting control
 !
  &fnestparam
- coarse_outdir = '/leonardo/home/userexternal/mdasilva/NoTo-SouthAmerica', ! Coarse domain output dir if FNEST
- coarse_domname = 'SAM-12',                                                                        ! Coarse domain domname
+ coarse_outdir = '/home/netapp-clima/users/jciarlo/RegCM5-tests/EUR11-R5/1999/', ! Coarse domain output dir if FNEST
+ coarse_domname = 'EUR-11',                                                      ! Coarse domain domname
  /
  
 !
@@ -180,10 +173,10 @@
 ! Model start/restart control
 !
  &restartparam
- ifrest  = .true.,   ! If a restart
+ ifrest  = restLogic,   ! If a restart
  mdate0  = 1994010100, ! Global start (is globidate1)
- mdate1  = 2010010100,   ! Start date of this run
- mdate2  = 2010020100,     ! End date for this run 
+ mdate1  = startDate,   ! Start date of this run
+ mdate2  = endDate,     ! End date for this run 
  /
  
 !
@@ -217,7 +210,7 @@
  ! ifchem  = .false.,           ! Output CHE ?
  ! ifopt   = .false.,           ! Output OPT ?
  ! chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/CSAM-3', ! Path where all output will be placed
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/CSAM-3', ! Path where all output will be placed
  lsync   = .true.,                 ! If sync of output files at every timestep is requested. 
                                    ! Note, it has a performance impact.
                                    ! Enabled by default if debug_level > 2
@@ -285,7 +278,7 @@
                         !   1 => 2.67*(re**d_rfour) - 2.57
                         !   2 => min(4.0e-4, 2.0e-4*re**(-3.3))
                         !   3 => COARE formulation as in bulk flux above
- scenario =   'SSP370', ! IPCC Scenario 
+ scenario =   'SSP585', ! IPCC Scenario 
  ipgf    =          0,  ! Pressure gradient force scheme
                         !   0 => Use full fields
                         !   1 => Hydrostatic deduction with pert. temperature

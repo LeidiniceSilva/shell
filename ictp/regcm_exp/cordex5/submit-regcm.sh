@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical
+base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/CSAM-3
 
 {
 set -eo pipefail
@@ -27,7 +27,8 @@ nnod=16
 dmon=1
 
 driv=$( echo $nl | cut -d- -f1 )
-tdir=$base/$dpath
+tdir=$base
+
 mkdir -p $tdir
 
 startTarget=1994010100

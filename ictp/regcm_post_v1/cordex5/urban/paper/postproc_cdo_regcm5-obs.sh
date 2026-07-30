@@ -29,7 +29,7 @@ CDO(){
 EXP=$1
 DOMAIN="CSAM-3"
 
-VAR_LIST="tasmax tasmin"
+VAR_LIST="pr tasmax tasmin"
 
 FREQ="day"
 YR="2000-2009"

@@ -51,7 +51,7 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "Merge files"
-    CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_${FREQ}_200*.nc ${VAR}_${DOMAIN}_${FREQ}_${YR}.nc
+    CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_${FREQ}_200[0-8]*.nc ${VAR}_${DOMAIN}_${FREQ}_${YR}.nc
 
     echo
     echo "Convert unit"
@@ -64,6 +64,9 @@ for VAR in ${VAR_LIST[@]}; do
     else
     mv ${VAR}_${DOMAIN}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${FREQ}_${YR}.nc
     fi
+
+    rm ${VAR}_${DOMAIN}_${FREQ}_${YR}.nc
+    rm ${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${FREQ}_${YR}_TMP.nc
  
 done
 
