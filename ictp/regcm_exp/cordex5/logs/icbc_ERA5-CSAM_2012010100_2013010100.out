@@ -1,0 +1,594 @@
+
+  This is icbc part of the RegCM version 5
+   SVN Revision: 5.0.1 compiled at: data : Oct 10 2025  time: 16:26:26
+
+ : this run start at    : 2026-08-11 08:12:14+0200
+ : it is submitted by   : mdasilva
+ : it is running on     : lrdn4788.leonardo.local
+ : in directory         : 
+ /leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_exp/corde
+ x5
+                       
+ Using Moloch non-hydrostatic dynamical core
+ GLOBIDATE1 :  2012-01-01 00:00:00 UTC        
+ GLOBIDATE2 :  2013-01-01 00:00:00 UTC        
+ NSTEPS     :         1465
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+ Computing weights, R =      38.89632416 .......... Done.
+      131072 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/tatm_2012_01.nc
+  2.242412156464825E-003   248.822716074195     
+      196608 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/geop_2012_01.nc
+   7.64767935381792        244867.428113448     
+      262144 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/qhum_2012_01.nc
+  3.818339920461434E-007  1.247840136469943E-002
+      327680 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/uwnd_2012_01.nc
+  4.447598576885882E-003   5.85998933547718     
+      393216 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/vwnd_2012_01.nc
+  4.316747353194192E-003  -2.29689714320785     
+ READ IN fields at DATE: 2012-01-01 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-01 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-01 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-01 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-02 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-02 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-02 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-02 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-03 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-03 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-03 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-03 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-04 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-04 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-04 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-04 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-05 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-05 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-05 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-05 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-06 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-06 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-06 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-06 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-07 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-07 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-07 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-07 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-08 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-08 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-08 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-08 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-09 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-09 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-09 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-09 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-10 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-10 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-10 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-10 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-11 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-11 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-11 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-11 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-12 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-12 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-12 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-12 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-13 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-13 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-13 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-13 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-14 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-14 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-14 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-14 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-15 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-15 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-15 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-15 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-16 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-16 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-16 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-16 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-17 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-17 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-17 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-17 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-18 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-18 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-18 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-18 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-19 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-19 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-19 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-19 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-20 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-20 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-20 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-20 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-21 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-21 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-21 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-21 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-22 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-22 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-22 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-22 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-23 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-23 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-23 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-23 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-24 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-24 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-24 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-24 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-25 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-25 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-25 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-25 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-26 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-26 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-26 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-26 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-27 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-27 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-27 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-27 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-28 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-28 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-28 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-28 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-29 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-29 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-29 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-29 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-30 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-30 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-30 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-30 18:00:00 UTC        
+ READ IN fields at DATE: 2012-01-31 00:00:00 UTC        
+ READ IN fields at DATE: 2012-01-31 06:00:00 UTC        
+ READ IN fields at DATE: 2012-01-31 12:00:00 UTC        
+ READ IN fields at DATE: 2012-01-31 18:00:00 UTC        
+      131072 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/tatm_2012_02.nc
+  2.092944572131717E-003   248.466047949101     
+      196608 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/geop_2012_02.nc
+   7.52638937634474        241534.736805312     
+      262144 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/qhum_2012_02.nc
+  3.746938657787474E-007  1.221045314184163E-002
+      327680 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/uwnd_2012_02.nc
+  3.520767719275260E-003   33.0926610028591     
+      393216 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/vwnd_2012_02.nc
+  2.852446589111116E-003  -3.21619367934924     
+ READ IN fields at DATE: 2012-02-01 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-01 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-01 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-01 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-02 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-02 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-02 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-02 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-03 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-03 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-03 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-03 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-04 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-04 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-04 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-04 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-05 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-05 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-05 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-05 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-06 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-06 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-06 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-06 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-07 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-07 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-07 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-07 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-08 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-08 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-08 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-08 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-09 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-09 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-09 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-09 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-10 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-10 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-10 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-10 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-11 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-11 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-11 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-11 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-12 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-12 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-12 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-12 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-13 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-13 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-13 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-13 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-14 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-14 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-14 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-14 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-15 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-15 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-15 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-15 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-16 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-16 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-16 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-16 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-17 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-17 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-17 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-17 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-18 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-18 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-18 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-18 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-19 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-19 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-19 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-19 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-20 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-20 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-20 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-20 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-21 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-21 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-21 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-21 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-22 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-22 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-22 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-22 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-23 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-23 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-23 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-23 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-24 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-24 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-24 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-24 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-25 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-25 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-25 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-25 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-26 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-26 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-26 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-26 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-27 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-27 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-27 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-27 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-28 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-28 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-28 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-28 18:00:00 UTC        
+ READ IN fields at DATE: 2012-02-29 00:00:00 UTC        
+ READ IN fields at DATE: 2012-02-29 06:00:00 UTC        
+ READ IN fields at DATE: 2012-02-29 12:00:00 UTC        
+ READ IN fields at DATE: 2012-02-29 18:00:00 UTC        
+      131072 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/tatm_2012_03.nc
+  2.088010897777646E-003   249.799996643965     
+      196608 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/geop_2012_03.nc
+   7.31433280751682        234756.569396096     
+      262144 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/qhum_2012_03.nc
+  3.785914474432317E-007  1.231099676229012E-002
+      327680 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/uwnd_2012_03.nc
+  3.729735802835022E-003   25.1937680666689     
+      393216 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/vwnd_2012_03.nc
+  3.045638743076008E-003  -1.16888121780904     
+ READ IN fields at DATE: 2012-03-01 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-01 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-01 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-01 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-02 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-02 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-02 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-02 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-03 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-03 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-03 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-03 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-04 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-04 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-04 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-04 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-05 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-05 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-05 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-05 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-06 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-06 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-06 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-06 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-07 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-07 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-07 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-07 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-08 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-08 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-08 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-08 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-09 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-09 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-09 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-09 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-10 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-10 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-10 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-10 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-11 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-11 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-11 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-11 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-12 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-12 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-12 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-12 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-13 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-13 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-13 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-13 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-14 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-14 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-14 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-14 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-15 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-15 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-15 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-15 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-16 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-16 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-16 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-16 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-17 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-17 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-17 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-17 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-18 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-18 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-18 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-18 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-19 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-19 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-19 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-19 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-20 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-20 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-20 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-20 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-21 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-21 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-21 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-21 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-22 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-22 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-22 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-22 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-23 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-23 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-23 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-23 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-24 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-24 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-24 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-24 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-25 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-25 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-25 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-25 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-26 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-26 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-26 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-26 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-27 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-27 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-27 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-27 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-28 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-28 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-28 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-28 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-29 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-29 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-29 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-29 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-30 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-30 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-30 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-30 18:00:00 UTC        
+ READ IN fields at DATE: 2012-03-31 00:00:00 UTC        
+ READ IN fields at DATE: 2012-03-31 06:00:00 UTC        
+ READ IN fields at DATE: 2012-03-31 12:00:00 UTC        
+ READ IN fields at DATE: 2012-03-31 18:00:00 UTC        
+      131072 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/tatm_2012_04.nc
+  2.084678705900677E-003   250.087191608401     
+      196608 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/geop_2012_04.nc
+   7.33781262875193        234897.143593686     
+      262144 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/qhum_2012_04.nc
+  3.676095763906369E-007  1.198501637190760E-002
+      327680 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/uwnd_2012_04.nc
+  2.797416875729594E-003   21.6417592505465     
+      393216 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/vwnd_2012_04.nc
+  2.747018143009176E-003   1.89620186934646     
+ READ IN fields at DATE: 2012-04-01 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-01 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-01 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-01 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-02 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-02 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-02 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-02 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-03 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-03 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-03 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-03 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-04 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-04 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-04 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-04 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-05 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-05 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-05 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-05 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-06 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-06 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-06 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-06 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-07 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-07 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-07 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-07 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-08 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-08 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-08 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-08 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-09 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-09 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-09 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-09 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-10 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-10 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-10 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-10 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-11 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-11 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-11 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-11 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-12 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-12 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-12 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-12 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-13 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-13 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-13 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-13 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-14 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-14 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-14 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-14 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-15 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-15 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-15 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-15 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-16 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-16 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-16 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-16 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-17 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-17 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-17 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-17 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-18 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-18 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-18 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-18 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-19 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-19 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-19 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-19 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-20 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-20 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-20 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-20 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-21 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-21 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-21 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-21 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-22 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-22 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-22 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-22 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-23 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-23 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-23 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-23 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-24 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-24 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-24 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-24 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-25 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-25 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-25 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-25 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-26 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-26 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-26 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-26 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-27 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-27 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-27 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-27 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-28 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-28 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-28 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-28 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-29 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-29 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-29 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-29 18:00:00 UTC        
+ READ IN fields at DATE: 2012-04-30 00:00:00 UTC        
+ READ IN fields at DATE: 2012-04-30 06:00:00 UTC        
+ READ IN fields at DATE: 2012-04-30 12:00:00 UTC        
+ READ IN fields at DATE: 2012-04-30 18:00:00 UTC        
+      131072 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/tatm_2012_05.nc
+  2.140278181948885E-003   250.608594777901     
+      196608 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/geop_2012_05.nc
+   7.50809134329269        240632.745954328     
+      262144 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/qhum_2012_05.nc
+  3.981451474435387E-007  1.300313874061469E-002
+      327680 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/uwnd_2012_05.nc
+  3.274973222505145E-003   52.8755521496192     
+      393216 /leonardo_work/ICT26_ESP/RCMDATA//ERA5/2012/vwnd_2012_05.nc
+  2.389108463618163E-003  0.939700526334597     
+ READ IN fields at DATE: 2012-05-01 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-01 06:00:00 UTC        
+ READ IN fields at DATE: 2012-05-01 12:00:00 UTC        
+ READ IN fields at DATE: 2012-05-01 18:00:00 UTC        
+ READ IN fields at DATE: 2012-05-02 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-02 06:00:00 UTC        
+ READ IN fields at DATE: 2012-05-02 12:00:00 UTC        
+ READ IN fields at DATE: 2012-05-02 18:00:00 UTC        
+ READ IN fields at DATE: 2012-05-03 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-03 06:00:00 UTC        
+ READ IN fields at DATE: 2012-05-03 12:00:00 UTC        
+ READ IN fields at DATE: 2012-05-03 18:00:00 UTC        
+ READ IN fields at DATE: 2012-05-04 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-04 06:00:00 UTC        
+ READ IN fields at DATE: 2012-05-04 12:00:00 UTC        
+ READ IN fields at DATE: 2012-05-04 18:00:00 UTC        
+ READ IN fields at DATE: 2012-05-05 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-05 06:00:00 UTC        
+ READ IN fields at DATE: 2012-05-05 12:00:00 UTC        
+ READ IN fields at DATE: 2012-05-05 18:00:00 UTC        
+ READ IN fields at DATE: 2012-05-06 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-06 06:00:00 UTC        
+ READ IN fields at DATE: 2012-05-06 12:00:00 UTC        
+ READ IN fields at DATE: 2012-05-06 18:00:00 UTC        
+ READ IN fields at DATE: 2012-05-07 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-07 06:00:00 UTC        
+ READ IN fields at DATE: 2012-05-07 12:00:00 UTC        
+ READ IN fields at DATE: 2012-05-07 18:00:00 UTC        
+ READ IN fields at DATE: 2012-05-08 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-08 06:00:00 UTC        
+ READ IN fields at DATE: 2012-05-08 12:00:00 UTC        
+ READ IN fields at DATE: 2012-05-08 18:00:00 UTC        
+ READ IN fields at DATE: 2012-05-09 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-09 06:00:00 UTC        
+ READ IN fields at DATE: 2012-05-09 12:00:00 UTC        
+ READ IN fields at DATE: 2012-05-09 18:00:00 UTC        
+ READ IN fields at DATE: 2012-05-10 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-10 06:00:00 UTC        
+ READ IN fields at DATE: 2012-05-10 12:00:00 UTC        
+ READ IN fields at DATE: 2012-05-10 18:00:00 UTC        
+ READ IN fields at DATE: 2012-05-11 00:00:00 UTC        
+ READ IN fields at DATE: 2012-05-11 06:00:00 UTC        

@@ -35,7 +35,7 @@ FREQ="day"
 YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
-SEASON_LIST="DJF MAM JJA SON"
+SEASON_LIST="ANN DJF MAM JJA SON"
 
 GRIDDES="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm"
 
@@ -71,57 +71,62 @@ for VAR in ${VAR_LIST[@]}; do
         exit 1
     fi
 
-    for SEAS in ${SEASON_LIST[@]}; do
-        [[ ${SEAS} = DJF ]] && MONS="12,01,02" 
-        [[ ${SEAS} = MAM ]] && MONS="03,04,05"
-        [[ ${SEAS} = JJA ]] && MONS="06,07,08" 
-        [[ ${SEAS} = SON ]] && MONS="09,10,11"
+for SEAS in ${SEASON_LIST[@]}; do
+        
+        # Postproc RegCM & CPC based on season/ANN
+        REGCM_FILE_AVG="${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${SEAS}_${YR}.nc"
+        CPC_FILE_AVG="${VAR_CPC}_CPC_${SEAS}_${YR}.nc"
 
-	# Postproc RegCM
-    	REGCM_FILE_AVG="${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${SEAS}_${YR}.nc"
-   	CDO timmean -selmonth,${MONS} ${REGCM_FILE} ${REGCM_FILE_AVG}
+        if [ ${SEAS} == "ANN" ]; then
+            CDO timmean ${REGCM_FILE} ${REGCM_FILE_AVG}
+            CDO timmean ${CPC_FILE} ${CPC_FILE_AVG}
+        else
+            [[ ${SEAS} = DJF ]] && MONS="12,01,02" 
+            [[ ${SEAS} = MAM ]] && MONS="03,04,05"
+            [[ ${SEAS} = JJA ]] && MONS="06,07,08" 
+            [[ ${SEAS} = SON ]] && MONS="09,10,11"
 
-	# Postproc CPC
-    	CPC_FILE_AVG="${VAR_CPC}_CPC_${SEAS}_${YR}.nc"
-	CDO timmean -selmonth,${MONS} ${CPC_FILE} ${CPC_FILE_AVG}
+            CDO timmean -selmonth,${MONS} ${REGCM_FILE} ${REGCM_FILE_AVG}
+            CDO timmean -selmonth,${MONS} ${CPC_FILE} ${CPC_FILE_AVG}
+        fi
 
         RES_CPC="0.25"
-	REGCM_FILE_REGRID="${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${SEAS}_${YR}_${RES_CPC}.nc"
-    	CPC_FILE_REGRID="${VAR_CPC}_${DOMAIN}_CPC_${SEAS}_${YR}_${RES_CPC}.nc"
+        REGCM_FILE_REGRID="${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${SEAS}_${YR}_${RES_CPC}.nc"
+        CPC_FILE_REGRID="${VAR_CPC}_${DOMAIN}_CPC_${SEAS}_${YR}_${RES_CPC}.nc"
 
-	# Create grid
-	GRID=${DOMAIN}_CPC.grid
-	if [ ! -f ${GRID} ]; then
-	      python3 ${GRIDDES}/griddes_ll.py ${REGCM_FILE_AVG} ${RES_CPC} > ${GRID}
-	fi
+        # Create grid
+        GRID=${DOMAIN}_CPC.grid
+        if [ ! -f ${GRID} ]; then
+            python3 ${GRIDDES}/griddes_ll.py ${REGCM_FILE_AVG} ${RES_CPC} > ${GRID}
+        fi
 
-	CDO remapbil,${GRID} ${REGCM_FILE_AVG} ${REGCM_FILE_REGRID}
-	CDO remapbil,${GRID} ${CPC_FILE_AVG} ${CPC_FILE_REGRID}
+        CDO remapbil,${GRID} ${REGCM_FILE_AVG} ${REGCM_FILE_REGRID}
+        CDO remapbil,${GRID} ${CPC_FILE_AVG} ${CPC_FILE_REGRID}
 
-	# Apply CPC land mask to RegCM
+        # Apply CPC land mask to RegCM
         CPC_MASK="${VAR_CPC}_CPC_landmask.nc"
         CPC_MASK_REGRID="${VAR_CPC}_CPC_landmask_${RES_CPC}.nc"
 
-	if [ ! -f ${CPC_MASK} ]; then
+        if [ ! -f ${CPC_MASK} ]; then
             CDO setmisstoc,0 -gtc,0 ${CPC_FILE_AVG} ${CPC_MASK}
-	fi
+        fi
 
-	REGCM_FILE_MASKED="${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${SEAS}_${YR}_${RES_CPC}_land.nc"
-	CDO remapbil,${GRID} ${CPC_MASK} ${CPC_MASK_REGRID}
-	CDO ifthen ${CPC_MASK_REGRID} ${REGCM_FILE_REGRID} ${REGCM_FILE_MASKED}
+        REGCM_FILE_MASKED="${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${SEAS}_${YR}_${RES_CPC}_land.nc"
+        CDO remapbil,${GRID} ${CPC_MASK} ${CPC_MASK_REGRID}
+        CDO ifthen ${CPC_MASK_REGRID} ${REGCM_FILE_REGRID} ${REGCM_FILE_MASKED}
 
-	# Select box
-	REGCM_FILE_BOX="${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${SEAS}_${YR}_${RES_CPC}_box.nc"
-	CPC_FILE_BOX="${VAR_CPC}_${DOMAIN}_CPC_${SEAS}_${YR}_${RES_CPC}_box.nc"
-	CDO sellonlatbox,-63,-39.5,-35.25,-14.5 ${REGCM_FILE_MASKED} ${REGCM_FILE_BOX} 
-	CDO sellonlatbox,-63,-39.5,-35.25,-14.5 ${CPC_FILE_REGRID} ${CPC_FILE_BOX} 
+        # Select box
+        REGCM_FILE_BOX="${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${SEAS}_${YR}_${RES_CPC}_box.nc"
+        CPC_FILE_BOX="${VAR_CPC}_${DOMAIN}_CPC_${SEAS}_${YR}_${RES_CPC}_box.nc"
+        CDO sellonlatbox,-63,-39.5,-35.25,-14.5 ${REGCM_FILE_MASKED} ${REGCM_FILE_BOX} 
+        CDO sellonlatbox,-63,-39.5,-35.25,-14.5 ${CPC_FILE_REGRID} ${CPC_FILE_BOX} 
 
-	# Delete files
-	rm ${REGCM_FILE_AVG}
-	rm ${CPC_FILE_AVG}
-	rm ${CPC_FILE_REGRID}
-	rm ${REGCM_FILE_REGRID}
-	rm ${REGCM_FILE_MASKED}
+        # Delete intermediate files
+        rm ${REGCM_FILE_AVG}
+        rm ${CPC_FILE_AVG}
+        rm ${CPC_FILE_REGRID}
+        rm ${REGCM_FILE_REGRID}
+        rm ${REGCM_FILE_MASKED}
 
     done
 done
