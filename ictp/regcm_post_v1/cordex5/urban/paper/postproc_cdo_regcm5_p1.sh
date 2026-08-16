@@ -27,7 +27,7 @@ DOMAIN="CSAM-3"
 FREQ="day"
 YR="2000-2009"
 
-VAR_LIST="pr tasmax tasmin"
+VAR_LIST="hfls hfss" # hfls hfss pr tas tasmax tasmin sfcWind
 
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/urban/paper"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
@@ -58,16 +58,13 @@ for VAR in ${VAR_LIST[@]}; do
     if [ ${VAR} == 'pr' ]; then
     CDO -b f32 mulc,86400 ${VAR}_${DOMAIN}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${FREQ}_${YR}_TMP.nc
     ncatted -O -a units,${VAR},m,c,mm/day ${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${FREQ}_${YR}_TMP.nc ${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${FREQ}_${YR}.nc 
-    elif [ ${VAR} = 'tasmax' ] || [ ${VAR} = 'tasmin' ]; then
+    elif [ ${VAR} = 'tas' ] || [ ${VAR} = 'tasmax' ] || [ ${VAR} = 'tasmin' ]; then
     CDO -b f32 subc,273.15 ${VAR}_${DOMAIN}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${FREQ}_${YR}_TMP.nc
     ncatted -O -a units,${VAR},m,c,Celsius ${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${FREQ}_${YR}_TMP.nc ${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${FREQ}_${YR}.nc 
     else
     mv ${VAR}_${DOMAIN}_${FREQ}_${YR}.nc ${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${FREQ}_${YR}.nc
     fi
 
-    rm ${VAR}_${DOMAIN}_${FREQ}_${YR}.nc
-    rm ${VAR}_${DOMAIN}_RegCM5-ERA5_${EXP}_${FREQ}_${YR}_TMP.nc
- 
 done
 
 echo
