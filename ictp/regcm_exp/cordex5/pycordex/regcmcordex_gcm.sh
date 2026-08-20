@@ -4,7 +4,7 @@
 #SBATCH --job-name            Pycordexer
 #SBATCH --mail-type           END,FAIL
 #SBATCH --mail-user           mda_silv@ictp.it
-#SBATCH --nodes               1
+#SBATCH --nodes               8
 #SBATCH --ntasks-per-node     112
 #SBATCH --partition           dcgp_usr_prod
 #SBATCH --time                1-00:00:00
@@ -15,8 +15,8 @@ datadir=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/histo
 idates_list=`ls $datadir/CSAM-3_SRF.${1}* | cut -d "." -f 2`
 
 run_year=2003
-month1=05
-month2=06
+month1=11
+month2=12
 
 idates=$(for d in $idates_list; do
     year=${d:0:4}

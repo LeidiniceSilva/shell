@@ -11,16 +11,13 @@
 
 # Path
 base_path="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1"
+#base_path="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/ICTP/EC-Earth3-Veg/historical/r1i1p1f1/RegCM5-0/v1-r1"
 
 # Info
 base="CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
-version="v20260622"
+#base="CSAM-3_EC-Earth3-Veg_historical_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 
-# Clean outputs
-#echo "Removing old $version and tmp files..."
-#find "$base_path" -type d -name "$version" -exec rm -rf {} \;
-#find "$base_path" -type f -name "*_tmp_*.nc" -delete
-#echo "Cleanup done"
+version="v20260622"
 
 year=$1
 next_year=$((year + 1))
@@ -33,7 +30,7 @@ do
   do
     [ -d "$var" ] || continue
     cd "$var" || continue
-
+    
     mkdir -p "$version"
 
     # Match files 
@@ -58,7 +55,7 @@ do
         mv $tmp "$version/$out"
 
         # Delete the original files 
-        # rm -f $files
+        rm -f $files
 
       else
         rm -f $tmp

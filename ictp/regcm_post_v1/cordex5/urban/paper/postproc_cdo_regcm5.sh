@@ -27,7 +27,7 @@ DOMAIN="CSAM-3"
 FREQ="day"
 YR="2000-2009"
 
-VAR_LIST="hfls hfss" # hfls hfss pr tas tasmax tasmin sfcWind
+VAR_LIST="hfls hfss huss pr tasmax tasmin sfcWind"
 
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/urban/paper"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
@@ -51,7 +51,7 @@ for VAR in ${VAR_LIST[@]}; do
 
     echo
     echo "Merge files"
-    CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_${FREQ}_200[0-8]*.nc ${VAR}_${DOMAIN}_${FREQ}_${YR}.nc
+    CDO mergetime ${DIR_IN}/${VAR}_${DOMAIN}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_${FREQ}_200[0-9]*.nc ${VAR}_${DOMAIN}_${FREQ}_${YR}.nc
 
     echo
     echo "Convert unit"

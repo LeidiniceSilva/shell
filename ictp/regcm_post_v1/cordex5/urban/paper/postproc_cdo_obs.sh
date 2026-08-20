@@ -21,14 +21,12 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-FREQ="day"
 YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-VAR_LIST="precip tmax tmin"
-
-DIR_OBS="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/CPC"
+DATASET="ERA5"
+DIR_OBS="/leonardo/home/userexternal/mdasilva/leonardo_work/OBS/${DATASET}"
 
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/urban/paper"
 
@@ -39,17 +37,35 @@ echo ${DIR_OUT}
 echo
 echo "--------------- INIT POSPROCESSING ----------------"
 
+if [ ${DATASET} == 'CPC' ]
+then
+VAR_LIST="precip tmax tmin"
 for VAR in ${VAR_LIST[@]}; do
 
     # Input files
-    CPC_FILE="${DIR_OBS}/${VAR}.cpc.${FREQ}.1979-2024.nc"
+    FILE="${DIR_OBS}/${VAR}.cpc.day.1979-2024.nc"
 
     # Output files
-    CPC_FILE_="${VAR}_CPC_${FREQ}_${YR}.nc"
+    FILE_="${VAR}_${DATASET}_day_${YR}.nc"
 
-    CDO selyear,${IYR}/${FYR} ${CPC_FILE} ${CPC_FILE_}
+    CDO selyear,${IYR}/${FYR} ${FILE} ${FILE_}
 
 done
+
+else
+VAR_LIST="huss mslhf msshf si10"
+for VAR in ${VAR_LIST[@]}; do
+
+    # Input files
+    FILE="${DIR_OBS}/mon/${VAR}_${DATASET}_${YR}.nc"
+
+    # Output files
+    FILE_="${VAR}_${DATASET}_${YR}.nc"
+
+    cp ${FILE} ${FILE_}
+
+done
+fi
 
 echo
 echo "--------------- THE END POSPROCESSING ----------------"
