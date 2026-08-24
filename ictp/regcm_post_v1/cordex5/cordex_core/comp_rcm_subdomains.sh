@@ -16,7 +16,9 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-domains=(SAM-11)
+domains=(WAS-12)
+gcm=(WAS-Nor)
+gcm_=(Nor)
 
 indices=(TN20 RX1day)
 
@@ -28,28 +30,28 @@ for dom in "${domains[@]}"; do
 
 echo "==== DOMAIN $dom ===="
 
-[[ $dom = NAM-22 ]] && subregs="NWN NEN WNA CNA ENA"   #NCA
-[[ $dom = CAM-22 ]] && subregs="NCA SCA CAR"
-[[ $dom = SAM-11 ]] && subregs="NWS NSA SAM NES SES SWS SSA"
-[[ $dom = AFR-22 ]] && subregs="SAH WAF CAF NEAF SEAF ARP WSAF ESAF MDG"
-[[ $dom = WAS-22 ]] && subregs="WCA ECA SAS" #TIB ARP
-[[ $dom = EAS-22 ]] && subregs="ESB RFE ECA TIB EAS"
-[[ $dom = SEA-22 ]] && subregs="SEA"
-[[ $dom = AUS-22 ]] && subregs="NAU CAU EAU SAU NZ"
-[[ $dom = EUR-11 ]] && subregs="MED NEU WCE"
+[[ $dom = NAM-12 ]] && subregs="NWN NEN WNA CNA ENA"   #NCA
+[[ $dom = CAM-12 ]] && subregs="NCA SCA CAR"
+[[ $dom = SAM-12 ]] && subregs="NWS NSA SAM NES SES SWS SSA"
+[[ $dom = AFR-12 ]] && subregs="SAH WAF CAF NEAF SEAF ARP WSAF ESAF MDG"
+[[ $dom = WAS-12 ]] && subregs="WCA ECA SAS" #TIB ARP
+[[ $dom = EAS-12 ]] && subregs="ESB RFE ECA TIB EAS"
+[[ $dom = SEA-12 ]] && subregs="SEA"
+[[ $dom = AUS-12 ]] && subregs="NAU CAU EAU SAU NZ"
+[[ $dom = EUR-12 ]] && subregs="MED NEU WCE"
 
 for idx in "${indices[@]}"; do
 
-indir=${basedir}/${dom}/${idx}
-outts=${outdir}/${dom}/${idx}_ts
-maskstore=${outdir}/${dom}/AR6_masks
-tmpdir=${outdir}/${dom}/${idx}_tmp
+indir=${basedir}/${gcm}/${dom}/${idx}
+outts=${outdir}/${gcm}/${dom}/${idx}_ts
+maskstore=${outdir}/${gcm}/${dom}/AR6_masks
+tmpdir=${outdir}/${gcm}/${dom}/${idx}_tmp
 
 mkdir -p "$outts"
 mkdir -p "$maskstore"
 mkdir -p "$tmpdir"
 
-for infile in ${indir}/${idx}_RegCM_Nor_1970-2024.nc; do
+for infile in ${indir}/${idx}_RegCM_${gcm_}_1970-2024.nc; do
 
 file=$(basename "$infile")
 member=${file#${idx}_}
@@ -88,8 +90,7 @@ for reg in $subregs; do
 
 	echo "Processing: $idx | $member | $reg"
 
-	#cdo -O fldmean -selyear,1970/2020 -setctomiss,1e20 -ifthen $mask_rcm $infile $outfile
-	#create masked field
+	# create masked field
 	CDO -O -setctomiss,1e20 -ifthen $mask_rcm $infile $tmpfile
 
 	# compute regional mean

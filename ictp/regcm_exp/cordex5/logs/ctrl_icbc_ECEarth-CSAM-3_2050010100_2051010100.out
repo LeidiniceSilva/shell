@@ -1,0 +1,21 @@
+### Checking icbc for icbc_ECEarth-CSAM-3_2050010100_2051010100 
+### previous icbc ended with an error
+### printing tail of output
+ READ IN fields at DATE: 2050-02-27 00:00:00 UTC
+ READ IN fields at DATE: 2050-02-27 06:00:00 UTC
+ READ IN fields at DATE: 2050-02-27 12:00:00 UTC
+ READ IN fields at DATE: 2050-02-27 18:00:00 UTC
+ READ IN fields at DATE: 2050-02-28 00:00:00 UTC
+ READ IN fields at DATE: 2050-02-28 06:00:00 UTC
+ READ IN fields at DATE: 2050-02-28 12:00:00 UTC
+ READ IN fields at DATE: 2050-02-28 18:00:00 UTC
+ READ IN fields at DATE: 2050-03-01 00:00:00 UTC
+icbc script complete
+### printing tail of error
+ Error : time  2050-03-01 06:00:00 UTC not in file
+ get_nest
+ Execution terminated because of runtime error
+submitting: bash submit-icbc.sh ECEarth-CSAM-3.in 2050030100 true
+3
+Submitted icbc with job i.d. 53433872 !!!
+Submitted control with job i.d. 53433874 !!!

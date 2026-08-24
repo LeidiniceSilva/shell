@@ -18,7 +18,7 @@ base_url="https://dap.ceda.ac.uk/badc/gpm/data/GPM-IMERG-v7"
 type="HHR"
 ver="V07B"
 
-dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/GPM_IMERG"
+dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/GPM_IMERG"
 cd "$dir"
 
 is_leap_year() {
@@ -26,9 +26,11 @@ is_leap_year() {
     (( (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) ))
 }
 
-for year in $(seq 2000 2000); do
+for year in $(seq 2004 2004); do
 
-  for mon in $(seq -w 11 12); do
+  mkdir -p "$dir/${year}"
+
+  for mon in $(seq -w 01 12); do
 
     case $mon in
       01|03|05|07|08|10|12) days=31 ;;
@@ -57,10 +59,45 @@ for year in $(seq 2000 2000); do
         file="3B-${type}.MS.MRG.3IMERG.${year}${mon}${day}-S${start}00-E${end}59.${mins}.${ver}.HDF5"
         url="${base_url}/${year}/${doy}/${file}"
 
+        outfile="$dir/${year}/$file"
+        tmpfile="$dir/${year}/${file}.part"
+
         echo "Path $url"
 
-        if [ ! -f "$dir/${year}/$file" ]; then
-          wget -q --show-progress "$url" -O "$dir/${year}/$file"
+        # Skip file if it already exists and is not empty
+        if [ -s "$outfile" ]; then
+          echo "File already exists: $file"
+          continue
+        fi
+
+        # Remove empty or incomplete file
+        if [ -f "$outfile" ]; then
+          echo "Removing empty/incomplete file: $file"
+          rm -f "$outfile"
+        fi
+
+        # Remove previous temporary file
+        if [ -f "$tmpfile" ]; then
+          rm -f "$tmpfile"
+        fi
+
+        # Download file
+        echo "Downloading: $file"
+
+        if wget -q --show-progress "$url" -O "$tmpfile"; then
+
+          # Check that downloaded file is not empty
+          if [ -s "$tmpfile" ]; then
+            mv "$tmpfile" "$outfile"
+            echo "Downloaded: $file"
+          else
+            echo "ERROR: Empty file downloaded: $file"
+            rm -f "$tmpfile"
+          fi
+
+        else
+          echo "ERROR: Download failed: $file"
+          rm -f "$tmpfile"
         fi
 
       done
