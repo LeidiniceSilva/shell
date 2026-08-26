@@ -80,7 +80,7 @@
  fudge_tex_s = .false.,       ! Fudging Control flag, for texture of subgrid
  fudge_lak   = .false.,       ! Fudging Control flag, for lake of grid
  fudge_lak_s = .false.,       ! Fudging Control flag, for lake of subgrid
- dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/icbc', ! Output directory for terrain files
+ dirter = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/icbc', ! Output directory for terrain files
  inpter = '/leonardo_work/ICT26_ESP/RCMDATA/',                                       ! Input directory for SURFACE dataset
  tersrc = 'GMTED',            ! Select GMTED or GTOPO DEM data
  smsrc  = 'ESACCI',           ! Select ESACCI or CPC surface soil moisture
@@ -128,10 +128,10 @@
  chemtyp = 'MZ6HR',          ! Type of Global Chemistry boundary conditions
                              ! One in : MZ6HR, 6 hours MOZART output
                              !        : MZCLM, MOZART climatology 1999-2009
- gdate1 = startTarget,       ! Start date for ICBC data generation
- gdate2 = endTarget,         ! End data for ICBC data generation
+ gdate1 = 1994010100,       ! Start date for ICBC data generation
+ gdate2 = 2015010100,         ! End data for ICBC data generation
  calendar = 'gregorian',     ! Calendar type : gregorian, noleap, 360_day
- dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/icbc',  ! Path for ICBC produced input files
+ dirglob = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/icbc',  ! Path for ICBC produced input files
  inpglob = '/leonardo_work/ICT26_ESP/RCMDATA/',                                                   ! Path for ICBC global input datasets
  ensemble_run = .false.,     ! If this is a member of a perturbed ensemble
                              ! run. Activate random noise added to input
@@ -180,10 +180,10 @@
 ! Model start/restart control
 !
  &restartparam
- ifrest  = restLogic,   ! If a restart
- mdate0  = startTarget, ! Global start (is globidate1)
- mdate1  = startDate,   ! Start date of this run
- mdate2  = endDate,     ! End date for this run 
+ ifrest  = .true.,   ! If a restart
+ mdate0  = 1994010100, ! Global start (is globidate1)
+ mdate1  = 2014120100,   ! Start date of this run
+ mdate2  = 2015010100,     ! End date for this run 
  /
  
 !
@@ -217,7 +217,7 @@
  ! ifchem  = .false.,           ! Output CHE ?
  ! ifopt   = .false.,           ! Output OPT ?
  ! chemfrq =     6.,            ! Frequency in hours to write to CHE
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-3', ! Path where all output will be placed
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/CSAM-3', ! Path where all output will be placed
  lsync   = .true.,                 ! If sync of output files at every timestep is requested. 
                                    ! Note, it has a performance impact.
                                    ! Enabled by default if debug_level > 2

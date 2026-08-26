@@ -12,6 +12,6 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Jan 20, 2026'
-#__description__ = 'Convert GPM-IMERG'
+#__description__ = 'Submit jobs GPM files'
 
-python3 convert_gpm_imerg.py
+python3 gpm_imerg_convert_hdf5-nc.py

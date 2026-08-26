@@ -10,7 +10,7 @@ if [ $# -lt 1 ]
 then
   echo $0: Not enough arguments.
   echo $0: Need at least namelist file.
-  echo $0: START DATE : YYYYMMDD00 - default 1994010100
+  echo $0: START DATE : YYYYMMDD00 - default 2015010100
   echo $0: DEPENDENCY : -d afterany:JOBID
   echo $0: Example:
   echo $0 namelist.in [YYYYMMDD00] [dep]
@@ -18,7 +18,7 @@ then
 fi
 
 nl=$1 #namelist
-startDate="${2:-1994010100}" #start Date
+startDate="${2:-2015010100}" #start Date
 dep=$3
 
 dpath=$( echo $nl | cut -d. -f1 )
@@ -31,8 +31,8 @@ tdir=$base
 
 mkdir -p $tdir
 
-startTarget=1994010100
-  endTarget=2015010100
+startTarget=2015010100
+  endTarget=2087010100
 [[ $startDate -eq $startTarget ]] && newsim=true || newsim=false
 if [ $startDate -lt $startTarget ]; then
   echo "ERROR! startDate < startTarget"

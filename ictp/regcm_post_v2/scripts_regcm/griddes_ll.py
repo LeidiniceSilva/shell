@@ -16,8 +16,11 @@ try:
 except:
     res = 0.5
 
-lat = ds.variables['lat']
-lon = ds.variables['lon']
+lat = ds.variables['xlat'] if 'xlat' in ds.variables else ds.variables['lat']
+lon = ds.variables['xlon'] if 'xlon' in ds.variables else ds.variables['lon']
+
+#lat = ds.variables['lat']
+#lon = ds.variables['lon']
 
 la1 = res*floor(min(lat[1,:])/res)
 la2 = res*ceil(max(lat[-1,:])/res)

@@ -55,7 +55,7 @@ do
         mv $tmp "$version/$out"
 
         # Delete the original files 
-        rm -f $files
+        # rm -f $files
 
       else
         rm -f $tmp

@@ -15745,3 +15745,1043 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  $$$ max, min of ps (mb) =  1023.75  496.59
  CLM History variables written
  ATM variables written at  2014-11-24 13:00:00 UTC        
+ SRF variables written at  2014-11-24 13:00:00 UTC        
+ RAD variables written at  2014-11-24 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-24 14:00:00 UTC        
+ SRF variables written at  2014-11-24 14:00:00 UTC        
+ RAD variables written at  2014-11-24 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-24 15:00:00 UTC        
+ SRF variables written at  2014-11-24 15:00:00 UTC        
+ RAD variables written at  2014-11-24 15:00:00 UTC        
+ $$$  2014-11-24 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.66  496.66
+ CLM History variables written
+ ATM variables written at  2014-11-24 16:00:00 UTC        
+ SRF variables written at  2014-11-24 16:00:00 UTC        
+ RAD variables written at  2014-11-24 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-24 17:00:00 UTC        
+ SRF variables written at  2014-11-24 17:00:00 UTC        
+ RAD variables written at  2014-11-24 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-24 18:00:00 UTC        
+ SRF variables written at  2014-11-24 18:00:00 UTC        
+ RAD variables written at  2014-11-24 18:00:00 UTC        
+ SEARCH BC data for 2014112500 , step = 14654880
+ READY  BC from     2014112418  to 2014112500 
+ $$$  2014-11-24 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.46  496.88
+ CLM History variables written
+ ATM variables written at  2014-11-24 19:00:00 UTC        
+ SRF variables written at  2014-11-24 19:00:00 UTC        
+ RAD variables written at  2014-11-24 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-24 20:00:00 UTC        
+ SRF variables written at  2014-11-24 20:00:00 UTC        
+ RAD variables written at  2014-11-24 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-24 21:00:00 UTC        
+ SRF variables written at  2014-11-24 21:00:00 UTC        
+ RAD variables written at  2014-11-24 21:00:00 UTC        
+ $$$  2014-11-24 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.05  497.31
+ CLM History variables written
+ ATM variables written at  2014-11-24 22:00:00 UTC        
+ SRF variables written at  2014-11-24 22:00:00 UTC        
+ RAD variables written at  2014-11-24 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-24 23:00:00 UTC        
+ SRF variables written at  2014-11-24 23:00:00 UTC        
+ RAD variables written at  2014-11-24 23:00:00 UTC        
+ CLM History variables written
+ At  2014-11-25 00:00:00 UTC        
+ JDay    328.00000 solar declination angle = -20.43932597 degrees
+                   solar TSI irradiance    =    1356.6907 W/m^2
+ ATM variables written at  2014-11-25 00:00:00 UTC        
+ SRF variables written at  2014-11-25 00:00:00 UTC        
+ STS variables written at  2014-11-25 00:00:00 UTC        
+ RAD variables written at  2014-11-25 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_ATM.2014112500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_SRF.2014112500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_STS.2014112500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_RAD.2014112500.nc
+ Elapsed seconds of run for this period :    776.9023    
+ SEARCH BC data for 2014112506 , step = 14655360
+ READY  BC from     2014112500  to 2014112506 
+ $$$  2014-11-25 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.81  497.39
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.675E-16
+    0.949E-13  0.228E-11  0.164E-10  0.650E-10  0.182E-09  0.405E-09  0.764E-09
+    0.128E-08  0.194E-08  0.274E-08  0.364E-08  0.460E-08  0.558E-08  0.653E-08
+    0.741E-08  0.820E-08  0.886E-08  0.938E-08  0.976E-08  0.100E-07  0.101E-07
+    0.100E-07  0.988E-08  0.960E-08  0.923E-08  0.878E-08  0.826E-08  0.768E-08
+    0.768E-08  0.706E-08  0.639E-08  0.567E-08  0.488E-08  0.398E-08  0.271E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2014-11-25 01:00:00 UTC        
+ SRF variables written at  2014-11-25 01:00:00 UTC        
+ RAD variables written at  2014-11-25 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 02:00:00 UTC        
+ SRF variables written at  2014-11-25 02:00:00 UTC        
+ RAD variables written at  2014-11-25 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 03:00:00 UTC        
+ SRF variables written at  2014-11-25 03:00:00 UTC        
+ RAD variables written at  2014-11-25 03:00:00 UTC        
+ $$$  2014-11-25 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.07  496.91
+ CLM History variables written
+ ATM variables written at  2014-11-25 04:00:00 UTC        
+ SRF variables written at  2014-11-25 04:00:00 UTC        
+ RAD variables written at  2014-11-25 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 05:00:00 UTC        
+ SRF variables written at  2014-11-25 05:00:00 UTC        
+ RAD variables written at  2014-11-25 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 06:00:00 UTC        
+ SRF variables written at  2014-11-25 06:00:00 UTC        
+ RAD variables written at  2014-11-25 06:00:00 UTC        
+ SEARCH BC data for 2014112512 , step = 14655840
+ READY  BC from     2014112506  to 2014112512 
+ $$$  2014-11-25 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.42  496.67
+ CLM History variables written
+ ATM variables written at  2014-11-25 07:00:00 UTC        
+ SRF variables written at  2014-11-25 07:00:00 UTC        
+ RAD variables written at  2014-11-25 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 08:00:00 UTC        
+ SRF variables written at  2014-11-25 08:00:00 UTC        
+ RAD variables written at  2014-11-25 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 09:00:00 UTC        
+ SRF variables written at  2014-11-25 09:00:00 UTC        
+ RAD variables written at  2014-11-25 09:00:00 UTC        
+ $$$  2014-11-25 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.57  497.07
+ CLM History variables written
+ ATM variables written at  2014-11-25 10:00:00 UTC        
+ SRF variables written at  2014-11-25 10:00:00 UTC        
+ RAD variables written at  2014-11-25 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 11:00:00 UTC        
+ SRF variables written at  2014-11-25 11:00:00 UTC        
+ RAD variables written at  2014-11-25 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 12:00:00 UTC        
+ SRF variables written at  2014-11-25 12:00:00 UTC        
+ RAD variables written at  2014-11-25 12:00:00 UTC        
+ SEARCH BC data for 2014112518 , step = 14656320
+ READY  BC from     2014112512  to 2014112518 
+ $$$  2014-11-25 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.58  497.22
+ CLM History variables written
+ ATM variables written at  2014-11-25 13:00:00 UTC        
+ SRF variables written at  2014-11-25 13:00:00 UTC        
+ RAD variables written at  2014-11-25 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 14:00:00 UTC        
+ SRF variables written at  2014-11-25 14:00:00 UTC        
+ RAD variables written at  2014-11-25 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 15:00:00 UTC        
+ SRF variables written at  2014-11-25 15:00:00 UTC        
+ RAD variables written at  2014-11-25 15:00:00 UTC        
+ $$$  2014-11-25 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.53  497.16
+ CLM History variables written
+ ATM variables written at  2014-11-25 16:00:00 UTC        
+ SRF variables written at  2014-11-25 16:00:00 UTC        
+ RAD variables written at  2014-11-25 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 17:00:00 UTC        
+ SRF variables written at  2014-11-25 17:00:00 UTC        
+ RAD variables written at  2014-11-25 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 18:00:00 UTC        
+ SRF variables written at  2014-11-25 18:00:00 UTC        
+ RAD variables written at  2014-11-25 18:00:00 UTC        
+ SEARCH BC data for 2014112600 , step = 14656800
+ READY  BC from     2014112518  to 2014112600 
+ $$$  2014-11-25 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.24  497.70
+ CLM History variables written
+ ATM variables written at  2014-11-25 19:00:00 UTC        
+ SRF variables written at  2014-11-25 19:00:00 UTC        
+ RAD variables written at  2014-11-25 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 20:00:00 UTC        
+ SRF variables written at  2014-11-25 20:00:00 UTC        
+ RAD variables written at  2014-11-25 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 21:00:00 UTC        
+ SRF variables written at  2014-11-25 21:00:00 UTC        
+ RAD variables written at  2014-11-25 21:00:00 UTC        
+ $$$  2014-11-25 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.13  498.19
+ CLM History variables written
+ ATM variables written at  2014-11-25 22:00:00 UTC        
+ SRF variables written at  2014-11-25 22:00:00 UTC        
+ RAD variables written at  2014-11-25 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-25 23:00:00 UTC        
+ SRF variables written at  2014-11-25 23:00:00 UTC        
+ RAD variables written at  2014-11-25 23:00:00 UTC        
+ CLM History variables written
+ At  2014-11-26 00:00:00 UTC        
+ JDay    329.00000 solar declination angle = -20.64142933 degrees
+                   solar TSI irradiance    =    1356.6907 W/m^2
+ ATM variables written at  2014-11-26 00:00:00 UTC        
+ SRF variables written at  2014-11-26 00:00:00 UTC        
+ STS variables written at  2014-11-26 00:00:00 UTC        
+ RAD variables written at  2014-11-26 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_ATM.2014112600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_SRF.2014112600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_STS.2014112600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_RAD.2014112600.nc
+ Elapsed seconds of run for this period :    712.5781    
+ SEARCH BC data for 2014112606 , step = 14657280
+ READY  BC from     2014112600  to 2014112606 
+ $$$  2014-11-26 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.10  498.41
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.675E-16
+    0.949E-13  0.228E-11  0.164E-10  0.650E-10  0.182E-09  0.405E-09  0.764E-09
+    0.128E-08  0.194E-08  0.274E-08  0.364E-08  0.460E-08  0.558E-08  0.653E-08
+    0.741E-08  0.820E-08  0.886E-08  0.938E-08  0.976E-08  0.100E-07  0.101E-07
+    0.100E-07  0.988E-08  0.960E-08  0.923E-08  0.878E-08  0.826E-08  0.768E-08
+    0.768E-08  0.706E-08  0.639E-08  0.567E-08  0.488E-08  0.398E-08  0.271E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2014-11-26 01:00:00 UTC        
+ SRF variables written at  2014-11-26 01:00:00 UTC        
+ RAD variables written at  2014-11-26 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 02:00:00 UTC        
+ SRF variables written at  2014-11-26 02:00:00 UTC        
+ RAD variables written at  2014-11-26 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 03:00:00 UTC        
+ SRF variables written at  2014-11-26 03:00:00 UTC        
+ RAD variables written at  2014-11-26 03:00:00 UTC        
+ $$$  2014-11-26 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.58  497.91
+ CLM History variables written
+ ATM variables written at  2014-11-26 04:00:00 UTC        
+ SRF variables written at  2014-11-26 04:00:00 UTC        
+ RAD variables written at  2014-11-26 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 05:00:00 UTC        
+ SRF variables written at  2014-11-26 05:00:00 UTC        
+ RAD variables written at  2014-11-26 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 06:00:00 UTC        
+ SRF variables written at  2014-11-26 06:00:00 UTC        
+ RAD variables written at  2014-11-26 06:00:00 UTC        
+ SEARCH BC data for 2014112612 , step = 14657760
+ READY  BC from     2014112606  to 2014112612 
+ $$$  2014-11-26 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.23  497.63
+ CLM History variables written
+ ATM variables written at  2014-11-26 07:00:00 UTC        
+ SRF variables written at  2014-11-26 07:00:00 UTC        
+ RAD variables written at  2014-11-26 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 08:00:00 UTC        
+ SRF variables written at  2014-11-26 08:00:00 UTC        
+ RAD variables written at  2014-11-26 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 09:00:00 UTC        
+ SRF variables written at  2014-11-26 09:00:00 UTC        
+ RAD variables written at  2014-11-26 09:00:00 UTC        
+ $$$  2014-11-26 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.98  497.77
+ CLM History variables written
+ ATM variables written at  2014-11-26 10:00:00 UTC        
+ SRF variables written at  2014-11-26 10:00:00 UTC        
+ RAD variables written at  2014-11-26 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 11:00:00 UTC        
+ SRF variables written at  2014-11-26 11:00:00 UTC        
+ RAD variables written at  2014-11-26 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 12:00:00 UTC        
+ SRF variables written at  2014-11-26 12:00:00 UTC        
+ RAD variables written at  2014-11-26 12:00:00 UTC        
+ SEARCH BC data for 2014112618 , step = 14658240
+ READY  BC from     2014112612  to 2014112618 
+ $$$  2014-11-26 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.26  497.93
+ CLM History variables written
+ ATM variables written at  2014-11-26 13:00:00 UTC        
+ SRF variables written at  2014-11-26 13:00:00 UTC        
+ RAD variables written at  2014-11-26 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 14:00:00 UTC        
+ SRF variables written at  2014-11-26 14:00:00 UTC        
+ RAD variables written at  2014-11-26 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 15:00:00 UTC        
+ SRF variables written at  2014-11-26 15:00:00 UTC        
+ RAD variables written at  2014-11-26 15:00:00 UTC        
+ $$$  2014-11-26 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.93  497.78
+ CLM History variables written
+ ATM variables written at  2014-11-26 16:00:00 UTC        
+ SRF variables written at  2014-11-26 16:00:00 UTC        
+ RAD variables written at  2014-11-26 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 17:00:00 UTC        
+ SRF variables written at  2014-11-26 17:00:00 UTC        
+ RAD variables written at  2014-11-26 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 18:00:00 UTC        
+ SRF variables written at  2014-11-26 18:00:00 UTC        
+ RAD variables written at  2014-11-26 18:00:00 UTC        
+ SEARCH BC data for 2014112700 , step = 14658720
+ READY  BC from     2014112618  to 2014112700 
+ $$$  2014-11-26 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.63  498.00
+ CLM History variables written
+ ATM variables written at  2014-11-26 19:00:00 UTC        
+ SRF variables written at  2014-11-26 19:00:00 UTC        
+ RAD variables written at  2014-11-26 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 20:00:00 UTC        
+ SRF variables written at  2014-11-26 20:00:00 UTC        
+ RAD variables written at  2014-11-26 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 21:00:00 UTC        
+ SRF variables written at  2014-11-26 21:00:00 UTC        
+ RAD variables written at  2014-11-26 21:00:00 UTC        
+ $$$  2014-11-26 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.66  498.38
+ CLM History variables written
+ ATM variables written at  2014-11-26 22:00:00 UTC        
+ SRF variables written at  2014-11-26 22:00:00 UTC        
+ RAD variables written at  2014-11-26 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-26 23:00:00 UTC        
+ SRF variables written at  2014-11-26 23:00:00 UTC        
+ RAD variables written at  2014-11-26 23:00:00 UTC        
+ CLM History variables written
+ At  2014-11-27 00:00:00 UTC        
+ JDay    330.00000 solar declination angle = -20.83715532 degrees
+                   solar TSI irradiance    =    1356.6907 W/m^2
+ ATM variables written at  2014-11-27 00:00:00 UTC        
+ SRF variables written at  2014-11-27 00:00:00 UTC        
+ STS variables written at  2014-11-27 00:00:00 UTC        
+ RAD variables written at  2014-11-27 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_ATM.2014112700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_SRF.2014112700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_STS.2014112700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_RAD.2014112700.nc
+ Elapsed seconds of run for this period :    779.5273    
+ SEARCH BC data for 2014112706 , step = 14659200
+ READY  BC from     2014112700  to 2014112706 
+ $$$  2014-11-27 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.97  498.27
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.669E-16
+    0.939E-13  0.226E-11  0.162E-10  0.644E-10  0.180E-09  0.401E-09  0.757E-09
+    0.126E-08  0.192E-08  0.271E-08  0.360E-08  0.455E-08  0.552E-08  0.646E-08
+    0.734E-08  0.812E-08  0.877E-08  0.929E-08  0.967E-08  0.990E-08  0.999E-08
+    0.995E-08  0.978E-08  0.951E-08  0.914E-08  0.870E-08  0.818E-08  0.761E-08
+    0.761E-08  0.699E-08  0.632E-08  0.561E-08  0.483E-08  0.394E-08  0.268E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2014-11-27 01:00:00 UTC        
+ SRF variables written at  2014-11-27 01:00:00 UTC        
+ RAD variables written at  2014-11-27 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 02:00:00 UTC        
+ SRF variables written at  2014-11-27 02:00:00 UTC        
+ RAD variables written at  2014-11-27 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 03:00:00 UTC        
+ SRF variables written at  2014-11-27 03:00:00 UTC        
+ RAD variables written at  2014-11-27 03:00:00 UTC        
+ $$$  2014-11-27 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.88  497.54
+ CLM History variables written
+ ATM variables written at  2014-11-27 04:00:00 UTC        
+ SRF variables written at  2014-11-27 04:00:00 UTC        
+ RAD variables written at  2014-11-27 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 05:00:00 UTC        
+ SRF variables written at  2014-11-27 05:00:00 UTC        
+ RAD variables written at  2014-11-27 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 06:00:00 UTC        
+ SRF variables written at  2014-11-27 06:00:00 UTC        
+ RAD variables written at  2014-11-27 06:00:00 UTC        
+ SEARCH BC data for 2014112712 , step = 14659680
+ READY  BC from     2014112706  to 2014112712 
+ $$$  2014-11-27 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.08  497.06
+ CLM History variables written
+ ATM variables written at  2014-11-27 07:00:00 UTC        
+ SRF variables written at  2014-11-27 07:00:00 UTC        
+ RAD variables written at  2014-11-27 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 08:00:00 UTC        
+ SRF variables written at  2014-11-27 08:00:00 UTC        
+ RAD variables written at  2014-11-27 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 09:00:00 UTC        
+ SRF variables written at  2014-11-27 09:00:00 UTC        
+ RAD variables written at  2014-11-27 09:00:00 UTC        
+ $$$  2014-11-27 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.95  497.33
+ CLM History variables written
+ ATM variables written at  2014-11-27 10:00:00 UTC        
+ SRF variables written at  2014-11-27 10:00:00 UTC        
+ RAD variables written at  2014-11-27 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 11:00:00 UTC        
+ SRF variables written at  2014-11-27 11:00:00 UTC        
+ RAD variables written at  2014-11-27 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 12:00:00 UTC        
+ SRF variables written at  2014-11-27 12:00:00 UTC        
+ RAD variables written at  2014-11-27 12:00:00 UTC        
+ SEARCH BC data for 2014112718 , step = 14660160
+ READY  BC from     2014112712  to 2014112718 
+ $$$  2014-11-27 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.12  497.09
+ CLM History variables written
+ ATM variables written at  2014-11-27 13:00:00 UTC        
+ SRF variables written at  2014-11-27 13:00:00 UTC        
+ RAD variables written at  2014-11-27 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 14:00:00 UTC        
+ SRF variables written at  2014-11-27 14:00:00 UTC        
+ RAD variables written at  2014-11-27 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 15:00:00 UTC        
+ SRF variables written at  2014-11-27 15:00:00 UTC        
+ RAD variables written at  2014-11-27 15:00:00 UTC        
+ $$$  2014-11-27 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.36  496.87
+ CLM History variables written
+ ATM variables written at  2014-11-27 16:00:00 UTC        
+ SRF variables written at  2014-11-27 16:00:00 UTC        
+ RAD variables written at  2014-11-27 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 17:00:00 UTC        
+ SRF variables written at  2014-11-27 17:00:00 UTC        
+ RAD variables written at  2014-11-27 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 18:00:00 UTC        
+ SRF variables written at  2014-11-27 18:00:00 UTC        
+ RAD variables written at  2014-11-27 18:00:00 UTC        
+ SEARCH BC data for 2014112800 , step = 14660640
+ READY  BC from     2014112718  to 2014112800 
+ $$$  2014-11-27 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.81  497.04
+ CLM History variables written
+ ATM variables written at  2014-11-27 19:00:00 UTC        
+ SRF variables written at  2014-11-27 19:00:00 UTC        
+ RAD variables written at  2014-11-27 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 20:00:00 UTC        
+ SRF variables written at  2014-11-27 20:00:00 UTC        
+ RAD variables written at  2014-11-27 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 21:00:00 UTC        
+ SRF variables written at  2014-11-27 21:00:00 UTC        
+ RAD variables written at  2014-11-27 21:00:00 UTC        
+ $$$  2014-11-27 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.72  497.43
+ CLM History variables written
+ ATM variables written at  2014-11-27 22:00:00 UTC        
+ SRF variables written at  2014-11-27 22:00:00 UTC        
+ RAD variables written at  2014-11-27 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-27 23:00:00 UTC        
+ SRF variables written at  2014-11-27 23:00:00 UTC        
+ RAD variables written at  2014-11-27 23:00:00 UTC        
+ CLM History variables written
+ At  2014-11-28 00:00:00 UTC        
+ JDay    331.00000 solar declination angle = -21.02641129 degrees
+                   solar TSI irradiance    =    1356.6907 W/m^2
+ ATM variables written at  2014-11-28 00:00:00 UTC        
+ SRF variables written at  2014-11-28 00:00:00 UTC        
+ STS variables written at  2014-11-28 00:00:00 UTC        
+ RAD variables written at  2014-11-28 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_ATM.2014112800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_SRF.2014112800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_STS.2014112800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_RAD.2014112800.nc
+ Elapsed seconds of run for this period :    729.2148    
+ SEARCH BC data for 2014112806 , step = 14661120
+ READY  BC from     2014112800  to 2014112806 
+ $$$  2014-11-28 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.17  497.14
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.669E-16
+    0.939E-13  0.226E-11  0.162E-10  0.644E-10  0.180E-09  0.401E-09  0.757E-09
+    0.126E-08  0.192E-08  0.271E-08  0.360E-08  0.455E-08  0.552E-08  0.646E-08
+    0.734E-08  0.812E-08  0.877E-08  0.929E-08  0.967E-08  0.990E-08  0.999E-08
+    0.995E-08  0.978E-08  0.951E-08  0.914E-08  0.870E-08  0.818E-08  0.761E-08
+    0.761E-08  0.699E-08  0.632E-08  0.561E-08  0.483E-08  0.394E-08  0.268E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2014-11-28 01:00:00 UTC        
+ SRF variables written at  2014-11-28 01:00:00 UTC        
+ RAD variables written at  2014-11-28 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 02:00:00 UTC        
+ SRF variables written at  2014-11-28 02:00:00 UTC        
+ RAD variables written at  2014-11-28 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 03:00:00 UTC        
+ SRF variables written at  2014-11-28 03:00:00 UTC        
+ RAD variables written at  2014-11-28 03:00:00 UTC        
+ $$$  2014-11-28 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.30  496.27
+ CLM History variables written
+ ATM variables written at  2014-11-28 04:00:00 UTC        
+ SRF variables written at  2014-11-28 04:00:00 UTC        
+ RAD variables written at  2014-11-28 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 05:00:00 UTC        
+ SRF variables written at  2014-11-28 05:00:00 UTC        
+ RAD variables written at  2014-11-28 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 06:00:00 UTC        
+ SRF variables written at  2014-11-28 06:00:00 UTC        
+ RAD variables written at  2014-11-28 06:00:00 UTC        
+ SEARCH BC data for 2014112812 , step = 14661600
+ READY  BC from     2014112806  to 2014112812 
+ $$$  2014-11-28 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.38  495.59
+ CLM History variables written
+ ATM variables written at  2014-11-28 07:00:00 UTC        
+ SRF variables written at  2014-11-28 07:00:00 UTC        
+ RAD variables written at  2014-11-28 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 08:00:00 UTC        
+ SRF variables written at  2014-11-28 08:00:00 UTC        
+ RAD variables written at  2014-11-28 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 09:00:00 UTC        
+ SRF variables written at  2014-11-28 09:00:00 UTC        
+ RAD variables written at  2014-11-28 09:00:00 UTC        
+ $$$  2014-11-28 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.71  495.66
+ CLM History variables written
+ ATM variables written at  2014-11-28 10:00:00 UTC        
+ SRF variables written at  2014-11-28 10:00:00 UTC        
+ RAD variables written at  2014-11-28 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 11:00:00 UTC        
+ SRF variables written at  2014-11-28 11:00:00 UTC        
+ RAD variables written at  2014-11-28 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 12:00:00 UTC        
+ SRF variables written at  2014-11-28 12:00:00 UTC        
+ RAD variables written at  2014-11-28 12:00:00 UTC        
+ SEARCH BC data for 2014112818 , step = 14662080
+ READY  BC from     2014112812  to 2014112818 
+ $$$  2014-11-28 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.10  495.47
+ CLM History variables written
+ ATM variables written at  2014-11-28 13:00:00 UTC        
+ SRF variables written at  2014-11-28 13:00:00 UTC        
+ RAD variables written at  2014-11-28 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 14:00:00 UTC        
+ SRF variables written at  2014-11-28 14:00:00 UTC        
+ RAD variables written at  2014-11-28 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 15:00:00 UTC        
+ SRF variables written at  2014-11-28 15:00:00 UTC        
+ RAD variables written at  2014-11-28 15:00:00 UTC        
+ $$$  2014-11-28 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.64  495.30
+ CLM History variables written
+ ATM variables written at  2014-11-28 16:00:00 UTC        
+ SRF variables written at  2014-11-28 16:00:00 UTC        
+ RAD variables written at  2014-11-28 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 17:00:00 UTC        
+ SRF variables written at  2014-11-28 17:00:00 UTC        
+ RAD variables written at  2014-11-28 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 18:00:00 UTC        
+ SRF variables written at  2014-11-28 18:00:00 UTC        
+ RAD variables written at  2014-11-28 18:00:00 UTC        
+ SEARCH BC data for 2014112900 , step = 14662560
+ READY  BC from     2014112818  to 2014112900 
+ $$$  2014-11-28 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.73  495.63
+ CLM History variables written
+ ATM variables written at  2014-11-28 19:00:00 UTC        
+ SRF variables written at  2014-11-28 19:00:00 UTC        
+ RAD variables written at  2014-11-28 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 20:00:00 UTC        
+ SRF variables written at  2014-11-28 20:00:00 UTC        
+ RAD variables written at  2014-11-28 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 21:00:00 UTC        
+ SRF variables written at  2014-11-28 21:00:00 UTC        
+ RAD variables written at  2014-11-28 21:00:00 UTC        
+ $$$  2014-11-28 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.24  496.03
+ CLM History variables written
+ ATM variables written at  2014-11-28 22:00:00 UTC        
+ SRF variables written at  2014-11-28 22:00:00 UTC        
+ RAD variables written at  2014-11-28 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-28 23:00:00 UTC        
+ SRF variables written at  2014-11-28 23:00:00 UTC        
+ RAD variables written at  2014-11-28 23:00:00 UTC        
+ CLM History variables written
+ At  2014-11-29 00:00:00 UTC        
+ JDay    332.00000 solar declination angle = -21.20910671 degrees
+                   solar TSI irradiance    =    1356.6907 W/m^2
+ ATM variables written at  2014-11-29 00:00:00 UTC        
+ SRF variables written at  2014-11-29 00:00:00 UTC        
+ STS variables written at  2014-11-29 00:00:00 UTC        
+ RAD variables written at  2014-11-29 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_ATM.2014112900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_SRF.2014112900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_STS.2014112900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_RAD.2014112900.nc
+ Elapsed seconds of run for this period :    706.0977    
+ SEARCH BC data for 2014112906 , step = 14663040
+ READY  BC from     2014112900  to 2014112906 
+ $$$  2014-11-29 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.13  496.09
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.669E-16
+    0.939E-13  0.226E-11  0.162E-10  0.644E-10  0.180E-09  0.401E-09  0.757E-09
+    0.126E-08  0.192E-08  0.271E-08  0.360E-08  0.455E-08  0.552E-08  0.646E-08
+    0.734E-08  0.812E-08  0.877E-08  0.929E-08  0.967E-08  0.990E-08  0.999E-08
+    0.995E-08  0.978E-08  0.951E-08  0.914E-08  0.870E-08  0.818E-08  0.761E-08
+    0.761E-08  0.699E-08  0.632E-08  0.561E-08  0.483E-08  0.394E-08  0.268E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2014-11-29 01:00:00 UTC        
+ SRF variables written at  2014-11-29 01:00:00 UTC        
+ RAD variables written at  2014-11-29 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 02:00:00 UTC        
+ SRF variables written at  2014-11-29 02:00:00 UTC        
+ RAD variables written at  2014-11-29 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 03:00:00 UTC        
+ SRF variables written at  2014-11-29 03:00:00 UTC        
+ RAD variables written at  2014-11-29 03:00:00 UTC        
+ $$$  2014-11-29 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.88  495.20
+ CLM History variables written
+ ATM variables written at  2014-11-29 04:00:00 UTC        
+ SRF variables written at  2014-11-29 04:00:00 UTC        
+ RAD variables written at  2014-11-29 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 05:00:00 UTC        
+ SRF variables written at  2014-11-29 05:00:00 UTC        
+ RAD variables written at  2014-11-29 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 06:00:00 UTC        
+ SRF variables written at  2014-11-29 06:00:00 UTC        
+ RAD variables written at  2014-11-29 06:00:00 UTC        
+ SEARCH BC data for 2014112912 , step = 14663520
+ READY  BC from     2014112906  to 2014112912 
+ $$$  2014-11-29 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.75  494.57
+ CLM History variables written
+ ATM variables written at  2014-11-29 07:00:00 UTC        
+ SRF variables written at  2014-11-29 07:00:00 UTC        
+ RAD variables written at  2014-11-29 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 08:00:00 UTC        
+ SRF variables written at  2014-11-29 08:00:00 UTC        
+ RAD variables written at  2014-11-29 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 09:00:00 UTC        
+ SRF variables written at  2014-11-29 09:00:00 UTC        
+ RAD variables written at  2014-11-29 09:00:00 UTC        
+ $$$  2014-11-29 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.99  494.60
+ CLM History variables written
+ ATM variables written at  2014-11-29 10:00:00 UTC        
+ SRF variables written at  2014-11-29 10:00:00 UTC        
+ RAD variables written at  2014-11-29 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 11:00:00 UTC        
+ SRF variables written at  2014-11-29 11:00:00 UTC        
+ RAD variables written at  2014-11-29 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 12:00:00 UTC        
+ SRF variables written at  2014-11-29 12:00:00 UTC        
+ RAD variables written at  2014-11-29 12:00:00 UTC        
+ SEARCH BC data for 2014112918 , step = 14664000
+ READY  BC from     2014112912  to 2014112918 
+ $$$  2014-11-29 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.18  494.33
+ CLM History variables written
+ ATM variables written at  2014-11-29 13:00:00 UTC        
+ SRF variables written at  2014-11-29 13:00:00 UTC        
+ RAD variables written at  2014-11-29 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 14:00:00 UTC        
+ SRF variables written at  2014-11-29 14:00:00 UTC        
+ RAD variables written at  2014-11-29 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 15:00:00 UTC        
+ SRF variables written at  2014-11-29 15:00:00 UTC        
+ RAD variables written at  2014-11-29 15:00:00 UTC        
+ $$$  2014-11-29 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.92  494.08
+ CLM History variables written
+ ATM variables written at  2014-11-29 16:00:00 UTC        
+ SRF variables written at  2014-11-29 16:00:00 UTC        
+ RAD variables written at  2014-11-29 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 17:00:00 UTC        
+ SRF variables written at  2014-11-29 17:00:00 UTC        
+ RAD variables written at  2014-11-29 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 18:00:00 UTC        
+ SRF variables written at  2014-11-29 18:00:00 UTC        
+ RAD variables written at  2014-11-29 18:00:00 UTC        
+ SEARCH BC data for 2014113000 , step = 14664480
+ READY  BC from     2014112918  to 2014113000 
+ $$$  2014-11-29 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.59  494.18
+ CLM History variables written
+ ATM variables written at  2014-11-29 19:00:00 UTC        
+ SRF variables written at  2014-11-29 19:00:00 UTC        
+ RAD variables written at  2014-11-29 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 20:00:00 UTC        
+ SRF variables written at  2014-11-29 20:00:00 UTC        
+ RAD variables written at  2014-11-29 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 21:00:00 UTC        
+ SRF variables written at  2014-11-29 21:00:00 UTC        
+ RAD variables written at  2014-11-29 21:00:00 UTC        
+ $$$  2014-11-29 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.09  494.59
+ CLM History variables written
+ ATM variables written at  2014-11-29 22:00:00 UTC        
+ SRF variables written at  2014-11-29 22:00:00 UTC        
+ RAD variables written at  2014-11-29 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-29 23:00:00 UTC        
+ SRF variables written at  2014-11-29 23:00:00 UTC        
+ RAD variables written at  2014-11-29 23:00:00 UTC        
+ CLM History variables written
+ At  2014-11-30 00:00:00 UTC        
+ JDay    333.00000 solar declination angle = -21.38515322 degrees
+                   solar TSI irradiance    =    1356.6907 W/m^2
+ ATM variables written at  2014-11-30 00:00:00 UTC        
+ SRF variables written at  2014-11-30 00:00:00 UTC        
+ STS variables written at  2014-11-30 00:00:00 UTC        
+ RAD variables written at  2014-11-30 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_ATM.2014113000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_SRF.2014113000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_STS.2014113000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3_RAD.2014113000.nc
+ Elapsed seconds of run for this period :    675.0195    
+ SEARCH BC data for 2014113006 , step = 14664960
+ READY  BC from     2014113000  to 2014113006 
+ $$$  2014-11-30 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.96  494.85
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.669E-16
+    0.939E-13  0.226E-11  0.162E-10  0.644E-10  0.180E-09  0.401E-09  0.757E-09
+    0.126E-08  0.192E-08  0.271E-08  0.360E-08  0.455E-08  0.552E-08  0.646E-08
+    0.734E-08  0.812E-08  0.877E-08  0.929E-08  0.967E-08  0.990E-08  0.999E-08
+    0.995E-08  0.978E-08  0.951E-08  0.914E-08  0.870E-08  0.818E-08  0.761E-08
+    0.761E-08  0.699E-08  0.632E-08  0.561E-08  0.483E-08  0.394E-08  0.268E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+    0.164      0.164      0.164      0.164      0.164      0.164      0.164    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2014-11-30 01:00:00 UTC        
+ SRF variables written at  2014-11-30 01:00:00 UTC        
+ RAD variables written at  2014-11-30 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 02:00:00 UTC        
+ SRF variables written at  2014-11-30 02:00:00 UTC        
+ RAD variables written at  2014-11-30 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 03:00:00 UTC        
+ SRF variables written at  2014-11-30 03:00:00 UTC        
+ RAD variables written at  2014-11-30 03:00:00 UTC        
+ $$$  2014-11-30 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.12  494.32
+ CLM History variables written
+ ATM variables written at  2014-11-30 04:00:00 UTC        
+ SRF variables written at  2014-11-30 04:00:00 UTC        
+ RAD variables written at  2014-11-30 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 05:00:00 UTC        
+ SRF variables written at  2014-11-30 05:00:00 UTC        
+ RAD variables written at  2014-11-30 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 06:00:00 UTC        
+ SRF variables written at  2014-11-30 06:00:00 UTC        
+ RAD variables written at  2014-11-30 06:00:00 UTC        
+ SEARCH BC data for 2014113012 , step = 14665440
+ READY  BC from     2014113006  to 2014113012 
+ $$$  2014-11-30 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.95  493.79
+ CLM History variables written
+ ATM variables written at  2014-11-30 07:00:00 UTC        
+ SRF variables written at  2014-11-30 07:00:00 UTC        
+ RAD variables written at  2014-11-30 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 08:00:00 UTC        
+ SRF variables written at  2014-11-30 08:00:00 UTC        
+ RAD variables written at  2014-11-30 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 09:00:00 UTC        
+ SRF variables written at  2014-11-30 09:00:00 UTC        
+ RAD variables written at  2014-11-30 09:00:00 UTC        
+ $$$  2014-11-30 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.92  494.11
+ CLM History variables written
+ ATM variables written at  2014-11-30 10:00:00 UTC        
+ SRF variables written at  2014-11-30 10:00:00 UTC        
+ RAD variables written at  2014-11-30 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 11:00:00 UTC        
+ SRF variables written at  2014-11-30 11:00:00 UTC        
+ RAD variables written at  2014-11-30 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 12:00:00 UTC        
+ SRF variables written at  2014-11-30 12:00:00 UTC        
+ RAD variables written at  2014-11-30 12:00:00 UTC        
+ SEARCH BC data for 2014113018 , step = 14665920
+ READY  BC from     2014113012  to 2014113018 
+ $$$  2014-11-30 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.69  494.41
+ CLM History variables written
+ ATM variables written at  2014-11-30 13:00:00 UTC        
+ SRF variables written at  2014-11-30 13:00:00 UTC        
+ RAD variables written at  2014-11-30 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 14:00:00 UTC        
+ SRF variables written at  2014-11-30 14:00:00 UTC        
+ RAD variables written at  2014-11-30 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 15:00:00 UTC        
+ SRF variables written at  2014-11-30 15:00:00 UTC        
+ RAD variables written at  2014-11-30 15:00:00 UTC        
+ $$$  2014-11-30 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.33  494.37
+ CLM History variables written
+ ATM variables written at  2014-11-30 16:00:00 UTC        
+ SRF variables written at  2014-11-30 16:00:00 UTC        
+ RAD variables written at  2014-11-30 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 17:00:00 UTC        
+ SRF variables written at  2014-11-30 17:00:00 UTC        
+ RAD variables written at  2014-11-30 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 18:00:00 UTC        
+ SRF variables written at  2014-11-30 18:00:00 UTC        
+ RAD variables written at  2014-11-30 18:00:00 UTC        
+ SEARCH BC data for 2014120100 , step = 14666400
+ READY  BC from     2014113018  to 2014120100 
+ $$$  2014-11-30 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.77  494.75
+ CLM History variables written
+ ATM variables written at  2014-11-30 19:00:00 UTC        
+ SRF variables written at  2014-11-30 19:00:00 UTC        
+ RAD variables written at  2014-11-30 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 20:00:00 UTC        
+ SRF variables written at  2014-11-30 20:00:00 UTC        
+ RAD variables written at  2014-11-30 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 21:00:00 UTC        
+ SRF variables written at  2014-11-30 21:00:00 UTC        
+ RAD variables written at  2014-11-30 21:00:00 UTC        
+ $$$  2014-11-30 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1019.21  494.87
+ CLM History variables written
+ ATM variables written at  2014-11-30 22:00:00 UTC        
+ SRF variables written at  2014-11-30 22:00:00 UTC        
+ RAD variables written at  2014-11-30 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2014-11-30 23:00:00 UTC        
+ SRF variables written at  2014-11-30 23:00:00 UTC        
+ RAD variables written at  2014-11-30 23:00:00 UTC        
+ Write restart file for CLM at  2014-12-01 00:00:00 UTC        
+ Creating history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3.clm.regcm.h0.201412.nc
+ CLM History variables written
+ CLM History variables written
+ Closing local history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3.clm.regcm.h0.201412.nc
+ Closing local history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3.clm.regcm.h1.20141101_03600.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3/CSAM-3.clm.regcm.r.2014120100.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3.clm.regcm.rh0.2014120100.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/historical/C
+ SAM-3//CSAM-3.clm.regcm.rh1.2014120100.nc
+ Successfully wrote out restart data for CLM 4.5
+ At  2014-12-01 00:00:00 UTC        
+ JDay    334.00000 solar declination angle = -21.55446479 degrees
+                   solar TSI irradiance    =    1356.6053 W/m^2
+ ATM variables written at  2014-12-01 00:00:00 UTC        
+ SRF variables written at  2014-12-01 00:00:00 UTC        
+ STS variables written at  2014-12-01 00:00:00 UTC        
+ RAD variables written at  2014-12-01 00:00:00 UTC        
+ SAV variables written at  2014-12-01 00:00:00 UTC        
+ Final time  2014-12-01 00:00:00 UTC reached.
+ Elapsed seconds of run for this final timeslice :    733.5156    
+ : this run stops at  : 2026-08-24 19:35:43+0200
+ : Run has been completed using         1792  processors.
+ : Total elapsed seconds of run :    65505.2881420336     
+ RegCM V5 simulation successfully reached end

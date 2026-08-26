@@ -9,7 +9,7 @@ import os
 import glob
 import xarray as xr
 
-year=2000
+year=2007
 base_path = f"/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/GPM_IMERG/{year}"
 
 def process_file(hdf_path):

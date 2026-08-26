@@ -23,12 +23,12 @@ out_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/MERG
 
 mkdir -p "$out_dir"
 
-for year in $(seq 2000 2000); do
+for year in $(seq 2004 2004); do
 
   dir="${base_dir}/${year}"
   cd "$dir" || continue
 
-  for mon in $(seq -w 02 12); do
+  for mon in $(seq -w 03 12); do
 
     tmp="${out_dir}/tmp_${year}${mon}.nc"
     output="${out_dir}/merg_${year}${mon}_4km-pixel_1hr.nc"

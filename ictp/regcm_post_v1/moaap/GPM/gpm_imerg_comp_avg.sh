@@ -20,13 +20,13 @@ CDO(){
 
 base_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/GPM_IMERG"
 out_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/MERGE/IMERG"
-
 mkdir -p "$out_dir"
 
-for year in $(seq 2001 2009); do
+for year in $(seq 2005 2005); do
 
   dir="${base_dir}/${year}"
   cd "$dir" || continue
+  echo "$dir"
 
   for mon in $(seq -w 01 12); do
 
