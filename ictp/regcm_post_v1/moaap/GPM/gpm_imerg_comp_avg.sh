@@ -2,7 +2,7 @@
 
 #SBATCH -A ICT26_ESP
 #SBATCH -p dcgp_usr_prod
-#SBATCH -N 1
+#SBATCH -N 8
 #SBATCH --ntasks-per-node=112
 #SBATCH -t 1-00:00:00
 #SBATCH -J Merge_files
@@ -22,7 +22,7 @@ base_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/GPM
 out_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/MERGE/IMERG"
 mkdir -p "$out_dir"
 
-for year in $(seq 2005 2005); do
+for year in $(seq 2007 2009); do
 
   dir="${base_dir}/${year}"
   cd "$dir" || continue
