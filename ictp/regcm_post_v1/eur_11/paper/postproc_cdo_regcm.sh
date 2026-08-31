@@ -27,8 +27,8 @@ YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-VAR_LIST="pr tas clt"
-FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
+VAR_LIST="cli clw" # pr tas clt cl
+FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -45,7 +45,15 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     for VAR in ${VAR_LIST[@]}; do
         for YEAR in `seq -w ${IYR} ${FYR}`; do
             for MON in `seq -w 01 12`; do
-                CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+        	if [ ${VAR} = 'pr' ] || [ ${VAR} = 'tas' ] || [ ${VAR} = 'clt' ]
+        	then
+		CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+        	elif [ ${VAR} = 'cl' ]
+        	then
+                CDO selname,${VAR} ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+        	else
+		CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+        	fi
             done
         done
     
@@ -64,9 +72,13 @@ for FOLDER in ${FOLDER_LIST[@]}; do
         then
         CDO -b f32 subc,273.15 ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_1hr_${YR}.nc
 	CDO daymean ${VAR}_RegCM5_${FOLDER}_1hr_${YR}.nc ${VAR}_RegCM5_${FOLDER}_day_${YR}.nc
-	else
+        elif [ ${VAR} = 'clt' ]
+        then
         CDO -b f32 divc,100 ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_1hr_${YR}.nc
 	CDO daymean ${VAR}_RegCM5_${FOLDER}_1hr_${YR}.nc ${VAR}_RegCM5_${FOLDER}_day_${YR}.nc
+        else
+	cp ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_6hr_${YR}.nc
+        CDO daymean ${VAR}_RegCM5_${FOLDER}_6hr_${YR}.nc ${VAR}_RegCM5_${FOLDER}_day_${YR}.nc
         fi
 
     done

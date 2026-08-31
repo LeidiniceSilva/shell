@@ -23,12 +23,12 @@ out_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/MERG
 
 mkdir -p "$out_dir"
 
-for year in $(seq 2006 2009); do
+for year in $(seq 2009 2009); do
 
   dir="${base_dir}/${year}"
   cd "$dir" || continue
 
-  for mon in $(seq -w 03 12); do
+  for mon in $(seq -w 11 12); do
 
     tmp="${out_dir}/tmp_${year}${mon}.nc"
     output="${out_dir}/merg_${year}${mon}_4km-pixel_1hr.nc"
@@ -54,13 +54,6 @@ for year in $(seq 2006 2009); do
 
     echo "Expected files: $expected"
     echo "Found files:    $actual"
-
-    # Check if all files are available
-    if [ "$actual" -ne "$expected" ]; then
-      echo "WARNING: Missing files for ${year}-${mon}"
-      echo "Skipping ${year}-${mon}"
-      continue
-    fi
 
     # Merge hourly files and calculate hourly mean across the 2 internal timesteps
     echo "Merging ${year}-${mon}..."
