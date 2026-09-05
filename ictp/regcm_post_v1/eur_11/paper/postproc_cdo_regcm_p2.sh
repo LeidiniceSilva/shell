@@ -25,7 +25,7 @@ EXP="EUR-11"
 
 YR="2006"
 
-VAR_LIST="pr uas vas psl cli clw wa hus rh clwp clwvi clivi" 
+VAR_LIST="ta" # pr uas vas psl cli clw wa hus rh ta clwp clwvi clivi 
 FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
 
 echo
@@ -47,7 +47,7 @@ for FOLDER in ${FOLDER_LIST[@]}; do
         	then
 		CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
 		mv ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${FOLDER}_1hr_${YR}09.nc
-        	elif [ ${VAR} = 'cli' ] || [ ${VAR} = 'clw' ] || [ ${VAR} = 'wa' ] || [ ${VAR} = 'hus' ] || [ ${VAR} = 'rh' ]
+        	elif [ ${VAR} = 'ta' ] || [ ${VAR} = 'cli' ] || [ ${VAR} = 'clw' ] || [ ${VAR} = 'wa' ] || [ ${VAR} = 'hus' ] || [ ${VAR} = 'rh' ]
         	then
                 CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
 		mv ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${FOLDER}_1hr_${YR}09.nc
