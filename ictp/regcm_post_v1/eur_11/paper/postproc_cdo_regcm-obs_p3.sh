@@ -21,11 +21,11 @@ CDO(){
   cdo -O -L -f nc4 -z zip "$@"
 }
 
-EXP_LIST="WDM7-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
-VAR_LIST="cl" # cli clw
+EXP_LIST="NoTo-EUR WSM5-EUR WSM7-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
+VAR_LIST="cli clw" # cli clw
 
 YR="2000-2009"
-SEASON_LIST="SON ANN"
+SEASON_LIST="DJF MAM JJA SON ANN"
 
 DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/paper"
 DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/paper/vert"

@@ -1,9 +1,0 @@
---------------- INIT POSTPROCESSING MODEL ----------------
-EXPERIMENT : NoTo-EUR
-FREQUENCY : 1hr
-cdi  warning (set_coordinates_varids): Coordinates variable number can't be assigned!
-cdi  warning (set_coordinates_varids): Coordinates variable expver can't be assigned!
-cdo    remapnn: Nearest neighbor weights from lonlat (1440x721) to curvilinear (424x412) grid
-cdo    ifthen: Filling up stream1 >era5_mask_box.nc< by copying the first timestep.
-EXPERIMENT : WSM5-EUR
-FREQUENCY : 1hr

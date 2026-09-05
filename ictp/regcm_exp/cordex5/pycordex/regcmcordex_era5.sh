@@ -15,8 +15,8 @@ datadir=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ERA5/CSAM-3
 idates_list=`ls $datadir/CSAM-3_SRF.${1}* | cut -d "." -f 2`
 
 run_year=2004
-month1=07
-month2=08
+month1=11
+month2=12
 
 idates=$(for d in $idates_list; do
     year=${d:0:4}
