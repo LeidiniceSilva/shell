@@ -18,20 +18,20 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-base_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/GPM_MERGIR"
-out_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/MERGE/MERGIR"
+base_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/GPM/globe/MERGIR"
+out_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/GPM/globe/GPM/MERGIR"
 
 mkdir -p "$out_dir"
 
-for year in $(seq 2009 2009); do
+for year in $(seq 2000 2009); do
 
   dir="${base_dir}/${year}"
   cd "$dir" || continue
 
-  for mon in $(seq -w 11 12); do
+  for mon in $(seq -w 01 12); do
 
     tmp="${out_dir}/tmp_${year}${mon}.nc"
-    output="${out_dir}/merg_${year}${mon}_4km-pixel_1hr.nc"
+    output="${out_dir}/mergir_${year}${mon}_4km-pixel_1hr.nc"
 
     echo "Year:   $year"
     echo "Month:  $mon"
@@ -60,6 +60,7 @@ for year in $(seq 2009 2009); do
 
     CDO mergetime merg_${year}${mon}*_4km-pixel.nc4 "$tmp"
     CDO timselmean,2 "$tmp" "$output"
+
     rm -f "$tmp"
 
     if [ $? -eq 0 ]; then
