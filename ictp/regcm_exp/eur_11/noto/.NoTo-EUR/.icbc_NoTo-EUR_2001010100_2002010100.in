@@ -27,11 +27,11 @@
  /
 
  &boundaryparam
- nspgx  = 40, ! nspgx-1 represent the number of cross point slices on
- nspgd  = 40, ! nspgd-1 represent the number of dot point slices on
- high_nudge =    8.0D0, ! Nudge value high range
- medium_nudge =  4.0D0, ! Nudge value medium range
- low_nudge =     2.0D0  ! Nudge value low range
+ nspgx  = 18, ! nspgx-1 represent the number of cross point slices on
+ nspgd  = 18, ! nspgd-1 represent the number of dot point slices on
+ high_nudge =    3.0D0, ! Nudge value high range
+ medium_nudge =  2.0D0, ! Nudge value medium range
+ low_nudge =     1.0D0  ! Nudge value low range
  /
 
  &globdatparam
@@ -68,8 +68,9 @@
  ifshf   = .true. ,           ! Output SHF (pr hourly)
  ifsrf   = .true. ,           ! Output SRF ?
  srffrq  =     1.,            ! Frequency in hours to write to SRF
- dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/dpath/',       
+ dirout  = '/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/dpath',       
  lsync   = .true.,            ! If sync of output files at every timestep is
+ icosp = 1,                   ! Enable COSP needed fields in output in the ATM
  do_parallel_netcdf_in  = .true.,  ! This enables paralell input
  do_parallel_netcdf_out = .false., ! This enables paralell output if the
  /
