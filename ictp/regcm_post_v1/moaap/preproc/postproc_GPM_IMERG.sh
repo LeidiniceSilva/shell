@@ -22,9 +22,9 @@ CDO(){
 }
 
 EXP="GPM"
-DOMAIN_LIST=("CAR-4" "CSAM-3" "EURR-3")
+DOMAIN_LIST=("EURR-3") # CAR-4 CSAM-3 EURR-3
 
-DIR_I="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/globe/MERGE"
+DIR_I="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/GPM/globe/GPM"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -32,13 +32,13 @@ echo "--------------- INIT POSPROCESSING ----------------"
 
 for DOMAIN in "${DOMAIN_LIST[@]}"; do
 
-    DIR_II="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM/${DOMAIN}/preproc"
+    DIR_II="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/GPM/${DOMAIN}/preproc"
 
     echo
     cd ${DIR_II}
     echo ${DIR_II}
 
-    for YEAR in $(seq 2000 2009); do
+    for YEAR in $(seq 2001 2009); do
 
         if [ ${YEAR} -eq 2000 ]; then
             START_MON=6
@@ -56,10 +56,11 @@ for DOMAIN in "${DOMAIN_LIST[@]}"; do
             elif [ ${DOMAIN} == "CSAM-3" ]; then
 		${BIN}/regrid "${IN_FILE}" -36.70233,-12.24439,0.25 -78.81965,-35.32753,0.25 bil
             else
-		${BIN}/regrid "${IN_FILE}" -22,36,0.25 36,58,0.25 bil
+		${BIN}/regrid "${IN_FILE}" 36,58,0.25 -22,36,0.25 bil
             fi
 
             CDO chname,PR,pr imerg_${YEAR}${MON}_1hr_v07b_lonlat.nc pr_${EXP}_IMERG_${DOMAIN}_1hr_${YEAR}${MON}.nc
+	    rm imerg_${YEAR}${MON}_1hr_v07b_lonlat.nc
 
         done
     done

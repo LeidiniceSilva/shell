@@ -16,15 +16,15 @@ CDO(){
   cdo -O -L -f nc4 -z zip $@
 }
 
-domains=(WAS-12)
-gcm=(WAS-Nor)
-gcm_=(Nor)
+domains=(CAM-12)
+gcm=(CAM-MPI)
+gcm_=(MPI)
 
 indices=(TN20 RX1day)
 
-basedir=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/cordex_core/RegCM
+basedir=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX-CORE2/RegCM
 maskdir=/leonardo/home/userexternal/mdasilva/leonardo_work/Mask/IPCC
-outdir=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/cordex_core/RegCM
+outdir=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX-CORE2/RegCM
 
 for dom in "${domains[@]}"; do
 
@@ -42,10 +42,10 @@ echo "==== DOMAIN $dom ===="
 
 for idx in "${indices[@]}"; do
 
-indir=${basedir}/${gcm}/${dom}/${idx}
-outts=${outdir}/${gcm}/${dom}/${idx}_ts
-maskstore=${outdir}/${gcm}/${dom}/AR6_masks
-tmpdir=${outdir}/${gcm}/${dom}/${idx}_tmp
+indir=${basedir}/${dom}/${gcm}/${idx}
+outts=${outdir}/${dom}/${gcm}/${idx}_ts
+maskstore=${outdir}/${dom}/${gcm}/AR6_masks
+tmpdir=${outdir}/${dom}/${gcm}/${idx}_tmp
 
 mkdir -p "$outts"
 mkdir -p "$maskstore"

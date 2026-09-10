@@ -12,13 +12,13 @@
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
 #__date__        = 'Nov 20, 2023'
-#__description__ = 'Compute ETCCDI indies using CDO-ECA'
+#__description__ = 'Compute ETCCDI indices using CDO-ECA'
 
 {
 set -eo pipefail
 
 CDO(){
-  cdo -O -L -f nc4 -z zip $@
+    cdo -O -L -f nc4 -z zip "$@"
 }
 
 DOMAIN="CAM"
@@ -26,66 +26,71 @@ GCM="MPI"
 
 # Input files
 INPUT="/leonardo_work/ICT26_ESP/CORDEX-CMIP6_OLCF/${DOMAIN}-${GCM}"
-OUTPUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/postproc/cordex_core/RegCM/${DOMAIN}-12/${DOMAIN}-${GCM}"
+
+# Output
+OUTPUT="/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX-CORE2/RegCM/${DOMAIN}-12/${DOMAIN}-${GCM}"
 TMP="${OUTPUT}/tmp"
 
-# Variaveis regcm
+# Variables
 VAR_LIST="pr tasmin"
 
-# Create temporary directory
-mkdir -p ${TMP}
-mkdir -p ${OUTPUT}
+# Years
+START_YEAR=1970
+END_YEAR=2024
 
-# Loop para processar ano a ano
-for YEAR in {2020..2020}; do
+# Create directories
+mkdir -p "${TMP}"
+mkdir -p "${OUTPUT}"
+mkdir -p "${OUTPUT}/RX1day"
+mkdir -p "${OUTPUT}/TN20"
 
-  echo "Processing year ${year}"
+# Merge daily files
+for VAR in ${VAR_LIST}; do
+    for YEAR in $(seq ${START_YEAR} ${END_YEAR}); do
+        FILES=$(ls ${INPUT}/${DOMAIN}-12_${GCM}_${VAR}_daily.${YEAR}*.nc 2>/dev/null || true)
 
-  # Merge monthly files into one annual file
-  for VAR in ${VAR_LIST}; do
+        if [ -z "${FILES}" ]; then
+            echo "WARNING: No files found for ${VAR} in ${YEAR}"
+            continue
+        fi
 
-    echo "Merging ${VAR} files for ${YEAR}"
+        CDO mergetime ${FILES} ${TMP}/RegCM_${GCM}_${VAR}_day_${YEAR}.nc
 
-    FILES=$(ls ${INPUT}/${DOMAIN}-12_${GCM}_${VAR}_daily.${YEAR}*.nc 2>/dev/null)
+    done
 
-    if [ -z "${FILES}" ]; then
-      echo "WARNING: No files found for ${VAR} in ${YEAR}"
-      continue
-    fi
+    # Merge annual files
+    CDO mergetime ${TMP}/RegCM_${GCM}_${VAR}_day_[0-9][0-9][0-9][0-9].nc ${TMP}/RegCM_${GCM}_${VAR}_day_${START_YEAR}-${END_YEAR}.nc
 
-    CDO mergetime ${FILES} ${TMP}/RegCM_${GCM}_${VAR}_${YEAR}.nc
-
-  done
-
-  # RX1day (max 1-day prec)
-  CDO mulc,86400 \
-    ${TMP}/RegCM_${GCM}_pr_${YEAR}.nc \
-    ${TMP}/RegCM_${GCM}_pr_mmday_${YEAR}.nc
-
-  CDO eca_rx1day \
-    ${TMP}/RegCM_${GCM}_pr_mmday_${YEAR}.nc \
-    ${OUTPUT}/RegCM_${GCM}_rx1day_${YEAR}.nc
-
-  # TN20 (mn2t > 20°C)
-  CDO eca_tr,20 \
-    ${TMP}/RegCM_${GCM}_tasmin_${YEAR}.nc \
-    ${OUTPUT}/RegCM_${GCM}_tn20_${YEAR}.nc
-
-  # Delete
-  rm -f ${TMP}/RegCM_${GCM}_pr_${YEAR}.nc
-  rm -f ${TMP}/RegCM_${GCM}_tasmin_${YEAR}.nc
-  rm -f ${TMP}/RegCM_${GCM}_pr_mmday_${YEAR}.nc
+    # Select years again
+    for YEAR in $(seq ${START_YEAR} ${END_YEAR}); do
+        CDO selyear,${YEAR} ${TMP}/RegCM_${GCM}_${VAR}_day_${START_YEAR}-${END_YEAR}.nc ${TMP}/RegCM_${GCM}_${VAR}_${YEAR}_selyear.nc
+    done
 
 done
 
-# Merge years
+# Convert kg m-2 s-1 to mm/day
+for YEAR in $(seq ${START_YEAR} ${END_YEAR}); do
+    CDO mulc,86400 ${TMP}/RegCM_${GCM}_pr_${YEAR}_selyear.nc ${TMP}/RegCM_${GCM}_pr_mmday_${YEAR}.nc
+done
 
-CDO mergetime \
-  ${OUTPUT}/RegCM_${GCM}_rx1day_[0-9][0-9][0-9][0-9].nc \
-  ${OUTPUT}/RX1day_RegCM_${GCM}_1970-2024.nc
+# Calculate RX1DAY
+for YEAR in $(seq ${START_YEAR} ${END_YEAR}); do
+    echo "RX1day ${YEAR}"
+    CDO eca_rx1day ${TMP}/RegCM_${GCM}_pr_mmday_${YEAR}.nc ${OUTPUT}/RegCM_${GCM}_rx1day_${YEAR}.nc
+done
 
-CDO mergetime \
-  ${OUTPUT}/RegCM_${GCM}_tn20_[0-9][0-9][0-9][0-9].nc \
-  ${OUTPUT}/TN20_RegCM_${GCM}_1970-2024.nc
+# Calculate TN20
+for YEAR in $(seq ${START_YEAR} ${END_YEAR}); do
+    echo "TN20 ${YEAR}"
+    CDO eca_tr,20 ${TMP}/RegCM_${GCM}_tasmin_${YEAR}_selyear.nc ${OUTPUT}/RegCM_${GCM}_tn20_${YEAR}.nc
+done
+
+# Merge RX1DAY 
+CDO mergetime ${OUTPUT}/RegCM_${GCM}_rx1day_[0-9][0-9][0-9][0-9].nc ${OUTPUT}/RX1day/RX1day_RegCM_${GCM}_${START_YEAR}-${END_YEAR}.nc
+
+# Merge TN20 
+CDO mergetime ${OUTPUT}/RegCM_${GCM}_tn20_[0-9][0-9][0-9][0-9].nc ${OUTPUT}/TN20/TN20_RegCM_${GCM}_${START_YEAR}-${END_YEAR}.nc
+
+echo "Done"
 
 }

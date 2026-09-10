@@ -23,7 +23,7 @@ out_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/
 
 mkdir -p "$out_dir"
 
-for year in $(seq 2000 2009); do
+for year in $(seq 2003 2009); do
 
   dir="${base_dir}/${year}"
   cd "$dir" || continue

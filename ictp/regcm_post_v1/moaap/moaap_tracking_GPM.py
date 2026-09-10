@@ -24,9 +24,9 @@ parser.add_argument('--domain', required=True, help='Domain')
 args = parser.parse_args()
 
 domain=args.domain
-path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/GPM'
+path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/GPM'
 
-files = sorted(glob.glob(f'{path}/{domain}/input/CAR-4_GPM_MERGIR_1hr_*.nc'))
+files = sorted(glob.glob(f'{path}/{domain}/input/{domain}_GPM_1hr_*.nc'))
 for f in files:
     print(f)
 
@@ -39,7 +39,7 @@ for f in files:
     time_datetime = pd.to_datetime(np.array(data_vars['time'].values, dtype='datetime64'))
     dT = 1 
 
-    DataName = 'GPM_MERGIR'
+    DataName = 'GPM'
     OutputFolder = f'{path}/{domain}/output/'
 
     object_split = moaap(

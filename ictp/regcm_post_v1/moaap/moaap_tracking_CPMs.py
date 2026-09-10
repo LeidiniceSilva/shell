@@ -25,29 +25,27 @@ args = parser.parse_args()
 
 domain=args.domain
 
-path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/CPMs'
+path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/CPMs'
 
-files = sorted(glob.glob(f'{path}/{domain}/input/{domain}_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1_1hr_*_regrid.nc'))
+files = sorted(glob.glob(f'{path}/ICTP/{domain}/historical/ERA5/input/{domain}_ERA5_evaluation_1hr_*.nc'))
 for f in files:
     print(f)
 
     data_vars = xr.open_dataset(f)
 
-    lon = data_vars['longitude']
-    lat = data_vars['latitude']
-    lon2d, lat2d = np.meshgrid(lon, lat)
-
-    Mask = np.copy(lon2d); Mask[:]=1
+    lon = data_vars['lon']
+    lat = data_vars['lat']
+    Mask = np.copy(lon); Mask[:]=1
 
     time_datetime = pd.to_datetime(np.array(data_vars['time'].values, dtype='datetime64'))
     dT = 1 
 
-    DataName = 'RegCM5_ERA5_evaluation'
-    OutputFolder = f'{path}/{domain}/output/'
+    DataName = 'ERA5_evaluation'
+    OutputFolder = f'{path}/ICTP/{domain}/historical/ERA5/output/'
 
     object_split = moaap(
-                      lon2d,
-                      lat2d,
+                      lon,
+                      lat,
                       time_datetime,
                       dT,
                       Mask,
