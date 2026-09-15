@@ -24,28 +24,32 @@ parser.add_argument('--domain', required=True, help='Domain')
 args = parser.parse_args()
 
 domain=args.domain
+#DataName='ERA5_evaluation'
+DataName='EC-Earth3-Veg_historical'
 
 path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/CPMs'
 
-files = sorted(glob.glob(f'{path}/ICTP/{domain}/historical/ERA5/input/{domain}_ERA5_evaluation_1hr_*.nc'))
+#files = sorted(glob.glob(f'{path}/ICTP/{domain}/historical/ERA5/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
+files = sorted(glob.glob(f'{path}/ICTP/{domain}/historical/ECEarth/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
+
 for f in files:
     print(f)
 
     data_vars = xr.open_dataset(f)
-
     lon = data_vars['lon']
     lat = data_vars['lat']
-    Mask = np.copy(lon); Mask[:]=1
+    lon2d, lat2d = np.meshgrid(lon, lat)
+    Mask = np.copy(lon2d); Mask[:]=1
 
     time_datetime = pd.to_datetime(np.array(data_vars['time'].values, dtype='datetime64'))
     dT = 1 
 
-    DataName = 'ERA5_evaluation'
-    OutputFolder = f'{path}/ICTP/{domain}/historical/ERA5/output/'
+    #OutputFolder = f'{path}/ICTP/{domain}/historical/ERA5/output/'
+    OutputFolder = f'{path}/ICTP/{domain}/historical/ECEarth/output/'
 
     object_split = moaap(
-                      lon,
-                      lat,
+                      lon2d,
+                      lat2d,
                       time_datetime,
                       dT,
                       Mask,

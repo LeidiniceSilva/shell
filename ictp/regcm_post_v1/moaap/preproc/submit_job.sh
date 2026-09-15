@@ -17,7 +17,8 @@
 {
 set -eo pipefail
 
-python3 comp_Tb_CPMs.py --domain CAR-4
-python3 comp_Tb_CPMs.py --domain CSAM-3
+dataset="RCMs"
+
+python3 comp_Tb_${dataset}.py --domain EUR-12
 
 }

@@ -1,0 +1,115 @@
+[lrdn4862:3080488:0:3080488] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn4862:3080488:0:3080488] ib_mlx5_log.c:177  DCI QP 0x9bf8 wqe[847]: SEND s-e [rqpn 0x18af7 rlid 15902] [va 0x148cc0f75a80 len 522 lkey 0x332e48] 
+[lrdn4862:3080584:0:3080584] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn4862:3080584:0:3080584] ib_mlx5_log.c:177  DCI QP 0x9ce5 wqe[47542]: SEND s-e [rqpn 0x18af7 rlid 15902] [va 0x14ffc9669900 len 2058 lkey 0x37a7bd] 
+[lrdn4862:3080520:0:3080520] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn4862:3080520:0:3080520] ib_mlx5_log.c:177  DCI QP 0x9cda wqe[37786]: SEND s-e [rqpn 0x18af7 rlid 15902] [va 0x15118fcd1000 len 1034 lkey 0x360a90] 
+forrtl: error (76): Abort trap signal
+Image              PC                Routine            Line        Source             
+libpthread-2.28.s  000014FFD4AD3CF0  Unknown               Unknown  Unknown
+libc-2.28.so       000014FFD3BC5ACF  gsignal               Unknown  Unknown
+libc-2.28.so       000014FFD3B98EA5  abort                 Unknown  Unknown
+libucs.so.0.0.0    000014FFCB61F216  Unknown               Unknown  Unknown
+libucs.so.0.0.0    000014FFCB623C1E  ucs_log_default_h     Unknown  Unknown
+libucs.so.0.0.0    000014FFCB623F7C  ucs_log_dispatch      Unknown  Unknown
+libuct_ib.so.0.0.  000014FFCB172E92  uct_ib_mlx5_compl     Unknown  Unknown
+libuct_ib.so.0.0.  000014FFCB1A1A6B  uct_dc_mlx5_ep_ha     Unknown  Unknown
+libuct_ib.so.0.0.  000014FFCB174BDD  uct_ib_mlx5_check     Unknown  Unknown
+libuct_ib.so.0.0.  000014FFCB1A3FF7  Unknown               Unknown  Unknown
+libucp.so.0.0.0    000014FFCBADDEAA  ucp_worker_progre     Unknown  Unknown
+libmlx-fi.so       000014FFCBD77BB1  Unknown               Unknown  Unknown
+libmlx-fi.so       000014FFCBD92ACD  Unknown               Unknown  Unknown
+libmlx-fi.so       000014FFCBD91CA2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   000014FFD5709D46  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   000014FFD551AA27  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   000014FFD5228C00  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   000014FFD5227B84  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   000014FFD5485075  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   000014FFD535A410  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   000014FFD535A7B9  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   000014FFD5475120  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   000014FFD5257879  MPI_Gatherv           Unknown  Unknown
+libmpifort.so.12.  000014FFD6981717  Unknown               Unknown  Unknown
+libmpifort.so.12.  000014FFD6953F2F  mpi_gatherv_f08ts     Unknown  Unknown
+regcmMPICLM45      0000000000EC4A43  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000EE702F  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000C6B603  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000437743  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000007E42E1  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000007FE84E  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004162ED  Unknown               Unknown  Unknown
+libc-2.28.so       000014FFD3BB1D85  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      000000000041620E  Unknown               Unknown  Unknown
+forrtl: error (76): Abort trap signal
+Image              PC                Routine            Line        Source             
+libpthread-2.28.s  0000148CCE0DECF0  Unknown               Unknown  Unknown
+libc-2.28.so       0000148CCD1D0ACF  gsignal               Unknown  Unknown
+libc-2.28.so       0000148CCD1A3EA5  abort                 Unknown  Unknown
+libucs.so.0.0.0    0000148CC4C24216  Unknown               Unknown  Unknown
+libucs.so.0.0.0    0000148CC4C28C1E  ucs_log_default_h     Unknown  Unknown
+libucs.so.0.0.0    0000148CC4C28F7C  ucs_log_dispatch      Unknown  Unknown
+libuct_ib.so.0.0.  0000148CC4777E92  uct_ib_mlx5_compl     Unknown  Unknown
+libuct_ib.so.0.0.  0000148CC47A6A6B  uct_dc_mlx5_ep_ha     Unknown  Unknown
+libuct_ib.so.0.0.  0000148CC4779BDD  uct_ib_mlx5_check     Unknown  Unknown
+libuct_ib.so.0.0.  0000148CC47A8FF7  Unknown               Unknown  Unknown
+libucp.so.0.0.0    0000148CC50E2EAA  ucp_worker_progre     Unknown  Unknown
+libmlx-fi.so       0000148CC537CBB1  Unknown               Unknown  Unknown
+libmlx-fi.so       0000148CC5397ACD  Unknown               Unknown  Unknown
+libmlx-fi.so       0000148CC5396CA2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000148CCED14D46  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000148CCEB25A27  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000148CCE833C00  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000148CCE832B84  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000148CCEA90075  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000148CCE965410  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000148CCE9657B9  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000148CCEA80120  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   0000148CCE862879  MPI_Gatherv           Unknown  Unknown
+libmpifort.so.12.  0000148CCFF8C717  Unknown               Unknown  Unknown
+libmpifort.so.12.  0000148CCFF5EF2F  mpi_gatherv_f08ts     Unknown  Unknown
+regcmMPICLM45      0000000000EC4A43  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000EE702F  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000C6B603  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000437743  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000007E42E1  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000007FE84E  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004162ED  Unknown               Unknown  Unknown
+libc-2.28.so       0000148CCD1BCD85  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      000000000041620E  Unknown               Unknown  Unknown
+forrtl: error (76): Abort trap signal
+Image              PC                Routine            Line        Source             
+libpthread-2.28.s  00001515F6AEECF0  Unknown               Unknown  Unknown
+libc-2.28.so       00001515F5BE0ACF  gsignal               Unknown  Unknown
+libc-2.28.so       00001515F5BB3EA5  abort                 Unknown  Unknown
+libucs.so.0.0.0    00001515ED63A216  Unknown               Unknown  Unknown
+libucs.so.0.0.0    00001515ED63EC1E  ucs_log_default_h     Unknown  Unknown
+libucs.so.0.0.0    00001515ED63EF7C  ucs_log_dispatch      Unknown  Unknown
+libuct_ib.so.0.0.  00001515ED18DE92  uct_ib_mlx5_compl     Unknown  Unknown
+libuct_ib.so.0.0.  00001515ED1BCA6B  uct_dc_mlx5_ep_ha     Unknown  Unknown
+libuct_ib.so.0.0.  00001515ED18FBDD  uct_ib_mlx5_check     Unknown  Unknown
+libuct_ib.so.0.0.  00001515ED1BEFF7  Unknown               Unknown  Unknown
+libucp.so.0.0.0    00001515EDAF8EAA  ucp_worker_progre     Unknown  Unknown
+libmlx-fi.so       00001515EDD92BB1  Unknown               Unknown  Unknown
+libmlx-fi.so       00001515EDDADACD  Unknown               Unknown  Unknown
+libmlx-fi.so       00001515EDDACCA2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001515F7724D46  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001515F7535A27  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001515F7243C00  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001515F7242B84  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001515F74A0075  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001515F7375410  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001515F73757B9  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001515F7490120  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001515F7272879  MPI_Gatherv           Unknown  Unknown
+libmpifort.so.12.  00001515F899C717  Unknown               Unknown  Unknown
+libmpifort.so.12.  00001515F896EF2F  mpi_gatherv_f08ts     Unknown  Unknown
+regcmMPICLM45      0000000000EC4A43  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000EE702F  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000C6B603  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000437743  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000007E42E1  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000007FE84E  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004162ED  Unknown               Unknown  Unknown
+libc-2.28.so       00001515F5BCCD85  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      000000000041620E  Unknown               Unknown  Unknown
+ERROR: Simulation ended abruptly!!!

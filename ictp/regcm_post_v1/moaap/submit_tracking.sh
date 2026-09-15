@@ -20,11 +20,14 @@ set -eo pipefail
 echo
 echo "--------------- INIT TRACKING ----------------"
 
-DATASET="CPMs"
+#DATASET="GPM"
+#DATASET="CPMs"
+DATASET="RCMs"
 
-python3 moaap_tracking_${DATASET}.py --domain EURR-3
-python3 moaap_tracking_${DATASET}.py --domain CAR-4
-python3 moaap_tracking_${DATASET}.py --domain CSAM-3
+#python3 moaap_tracking_${DATASET}.py --domain CAR-4
+#python3 moaap_tracking_${DATASET}.py --domain CSAM-3
+##python3 moaap_tracking_${DATASET}.py --domain EURR-3
+python3 moaap_tracking_${DATASET}.py --domain EUR-12
 
 echo
 echo "--------------- THE END TRACKING ----------------"

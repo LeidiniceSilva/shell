@@ -22,9 +22,9 @@ CDO(){
 }
 
 EXP="GPM"
-DOMAIN_LIST=("CSAM-3") # CAR-4 CSAM-3 EURR-3
+DOMAIN_LIST=("EURR-3") # CAR-4 CSAM-3 EURR-3
 
-DIR_I="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/GPM/globe/GPM"
+DIR_I="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/GPM/globe/AVG_1hr"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -38,8 +38,8 @@ for DOMAIN in "${DOMAIN_LIST[@]}"; do
     cd ${DIR_II}
     echo ${DIR_II}
 
-    for YEAR in $(seq 2000 2009); do
-        for MON in $(seq -w 06 06); do
+    for YEAR in $(seq 2005 2009); do
+        for MON in $(seq -w 01 12); do
 	    echo "Processing ${DOMAIN} ${YEAR} ${MON}"
 
             IN_FILE="${DIR_I}/MERGIR/mergir_${YEAR}${MON}_4km-pixel_1hr.nc"

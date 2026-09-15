@@ -23,29 +23,31 @@ domain = args.domain
 if domain == 'CAR-4':
     path_in = '/leonardo_work/ICT26_ESP/jdeleeuw/CAR-4/ERA5/high_soil_moisture_OCN/ERA5/CAR-4/postproc/CORDEX-CMIP6/DD/CAR-4/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut'
 elif domain == 'CSAM-3':
-    path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut'
+    path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20260622'
 elif domain == 'EURR-3':
-    path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EURR-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20251218'
+    #path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EURR-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20251218'
     #path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EURR-3/ICTP/EC-Earth3-Veg/historical/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20250725'
+    path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EURR-3/ICTP/EC-Earth3-Veg/ssp370/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20260112'
 else:
     raise ValueError('Unknown domain: {0}'.format(domain))
 
 # Output path
-path_out = '/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/CPMs/ICTP/{0}/historical/ERA5/preproc'.format(domain)
+path_out = '/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/CPMs/ICTP/{0}/evaluation/ERA5/preproc'.format(domain)
 #path_out = '/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/CPMs/ICTP/{0}/historical/ECEarth/preproc'.format(domain)
+#path_out = '/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/CPMs/ICTP/{0}/ssp370/ECEarth/preproc'.format(domain)
 
 # All files
 all_files = sorted(glob.glob(path_in + '/rlut_*.nc'))
 
-# Filter files where start year is between 2000 and 2009
+# Filter files 
 files = []
 for f in all_files:
     fname = os.path.basename(f)
-    # Start year from: ..._1hr_YYYYMMDDHHMM-YYYYMMDDHHMM.nc
     start_time_str = fname.split('_')[-1].split('-')[0]
     start_year = int(start_time_str[:4])
-    
+
     if 2000 <= start_year <= 2009:
+    #if 2023 <= start_year <= 2042:
         files.append(f)
 
 # Constants

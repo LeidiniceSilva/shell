@@ -1,0 +1,79 @@
+[lrdn4735:2112611:0:2112611] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn4735:2112611:0:2112611] ib_mlx5_log.c:177  DCI QP 0xff25 wqe[27076]: SEND s-e [rqpn 0x1f5f5 rlid 13912] [inl len 18] 
+[lrdn4735:2112675:0:2112675] ib_mlx5_log.c:177  Transport retry count exceeded on mlx5_0:1/IB (synd 0x15 vend 0x81 hw_synd 0/0)
+[lrdn4735:2112675:0:2112675] ib_mlx5_log.c:177  DCI QP 0x1002c wqe[54404]: SEND s-e [rqpn 0x1f776 rlid 13912] [inl len 18] 
+forrtl: error (76): Abort trap signal
+Image              PC                Routine            Line        Source             
+libpthread-2.28.s  00001545FDDA1CF0  Unknown               Unknown  Unknown
+libc-2.28.so       00001545FCE93ACF  gsignal               Unknown  Unknown
+libc-2.28.so       00001545FCE66EA5  abort                 Unknown  Unknown
+libucs.so.0.0.0    00001545F48ED216  Unknown               Unknown  Unknown
+libucs.so.0.0.0    00001545F48F1C1E  ucs_log_default_h     Unknown  Unknown
+libucs.so.0.0.0    00001545F48F1F7C  ucs_log_dispatch      Unknown  Unknown
+libuct_ib.so.0.0.  00001545F4440E92  uct_ib_mlx5_compl     Unknown  Unknown
+libuct_ib.so.0.0.  00001545F446FA6B  uct_dc_mlx5_ep_ha     Unknown  Unknown
+libuct_ib.so.0.0.  00001545F4442BDD  uct_ib_mlx5_check     Unknown  Unknown
+libuct_ib.so.0.0.  00001545F4471FF7  Unknown               Unknown  Unknown
+libucp.so.0.0.0    00001545F4DABEAA  ucp_worker_progre     Unknown  Unknown
+libmlx-fi.so       00001545F5045BB1  Unknown               Unknown  Unknown
+libmlx-fi.so       00001545F5060ACD  Unknown               Unknown  Unknown
+libmlx-fi.so       00001545F505FCA2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE9D7D46  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE6F3397  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE6F3641  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FEA7C5E0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE7E4965  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE7E7EFB  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE4F6C00  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE4F5B84  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE753075  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE628410  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE6287B9  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE743120  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001545FE525879  MPI_Gatherv           Unknown  Unknown
+libmpifort.so.12.  00001545FFC4F717  Unknown               Unknown  Unknown
+libmpifort.so.12.  00001545FFC21F2F  mpi_gatherv_f08ts     Unknown  Unknown
+regcmMPICLM45      0000000000EE7CEE  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000043C235  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000007E42E1  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000007FE84E  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004162ED  Unknown               Unknown  Unknown
+libc-2.28.so       00001545FCE7FD85  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      000000000041620E  Unknown               Unknown  Unknown
+forrtl: error (76): Abort trap signal
+Image              PC                Routine            Line        Source             
+libpthread-2.28.s  00001550F958FCF0  Unknown               Unknown  Unknown
+libc-2.28.so       00001550F8681ACF  gsignal               Unknown  Unknown
+libc-2.28.so       00001550F8654EA5  abort                 Unknown  Unknown
+libucs.so.0.0.0    00001550F00DB216  Unknown               Unknown  Unknown
+libucs.so.0.0.0    00001550F00DFC1E  ucs_log_default_h     Unknown  Unknown
+libucs.so.0.0.0    00001550F00DFF7C  ucs_log_dispatch      Unknown  Unknown
+libuct_ib.so.0.0.  00001550EFC2EE92  uct_ib_mlx5_compl     Unknown  Unknown
+libuct_ib.so.0.0.  00001550EFC5DA6B  uct_dc_mlx5_ep_ha     Unknown  Unknown
+libuct_ib.so.0.0.  00001550EFC30BDD  uct_ib_mlx5_check     Unknown  Unknown
+libuct_ib.so.0.0.  00001550EFC5FFF7  Unknown               Unknown  Unknown
+libucp.so.0.0.0    00001550F0599EAA  ucp_worker_progre     Unknown  Unknown
+libmlx-fi.so       00001550F0833BB1  Unknown               Unknown  Unknown
+libmlx-fi.so       00001550F084EACD  Unknown               Unknown  Unknown
+libmlx-fi.so       00001550F084DCA2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550FA1C5D46  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550F9EE1397  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550F9EE1641  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550FA268608  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550FA268B53  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550F9FE6B58  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550FA20BA44  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550F9E2AA04  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550F9E167C9  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550F9F3406D  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00001550F9D58642  MPI_Scatterv          Unknown  Unknown
+libmpifort.so.12.  00001550FB47160F  mpi_scatterv_f08t     Unknown  Unknown
+regcmMPICLM45      0000000000EC01A2  Unknown               Unknown  Unknown
+regcmMPICLM45      0000000000EE7DDC  Unknown               Unknown  Unknown
+regcmMPICLM45      000000000043C226  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000007E42E1  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000007FE84E  Unknown               Unknown  Unknown
+regcmMPICLM45      00000000004162ED  Unknown               Unknown  Unknown
+libc-2.28.so       00001550F866DD85  __libc_start_main     Unknown  Unknown
+regcmMPICLM45      000000000041620E  Unknown               Unknown  Unknown
+ERROR: Simulation ended abruptly!!!

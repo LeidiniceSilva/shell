@@ -23,12 +23,12 @@ out_dir="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/
 
 mkdir -p "$out_dir"
 
-for year in $(seq 2003 2009); do
+for year in $(seq 2006 2006); do
 
   dir="${base_dir}/${year}"
   cd "$dir" || continue
 
-  for mon in $(seq -w 01 12); do
+  for mon in $(seq -w 02 12); do
 
     tmp="${out_dir}/tmp_${year}${mon}.nc"
     output="${out_dir}/mergir_${year}${mon}_4km-pixel_1hr.nc"
