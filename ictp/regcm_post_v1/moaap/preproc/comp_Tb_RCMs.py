@@ -22,10 +22,12 @@ domain = args.domain
 
 dataset='EC-Earth3-Veg'
 dataset_='ECEarth'
-exp='historical'
+#exp='evaluation'
+#exp='historical'
+exp='ssp370'
 
-yinit, yfinal = 1995, 2014
-#yinit, yfinal = 2015, 2042
+#yinit, yfinal = 1995, 2014
+yinit, yfinal = 2015, 2042
 
 if domain == 'SAM-12':
     path_in = '/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/{0}/ICTP/{1}/{2}/r1i1p1f1/RegCM5-0/v1-r1/1hr/rlut/v20260101'.format(domain, dataset, exp)

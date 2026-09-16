@@ -22,17 +22,20 @@ CDO(){
 }
 
 DOMAIN=$1  
-YR_I=1995
-YR_F=1999
+YR_I=2015
+YR_F=2042
 #EXP="ERA5_evaluation"
-EXP="EC-Earth3-Veg_historical"
+#EXP="EC-Earth3-Veg_historical"
+EXP="EC-Earth3-Veg_ssp370"
+
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 if [ ${DOMAIN} = 'SAM-12'  ]; then
 	DIR_I="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/SAM-12/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/pr/v20260622"
 elif [ ${DOMAIN} = 'EUR-12'  ]; then
 	#DIR_I="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EUR-12/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1/1hr/pr/v20250415"
-	DIR_I="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EUR-12/ICTP/EC-Earth3-Veg/historical/r1i1p1f1/RegCM5-0/v1-r1/1hr/pr/v20250415"
+	#DIR_I="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EUR-12/ICTP/EC-Earth3-Veg/historical/r1i1p1f1/RegCM5-0/v1-r1/1hr/pr/v20250415"
+	DIR_I="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/EUR-12/ICTP/EC-Earth3-Veg/ssp370/r1i1p1f1/RegCM5-0/v1-r1/1hr/pr/v20250415"
 else
 	echo "Error: Unknown DOMAIN = ${DOMAIN}"
 	exit 1
@@ -43,7 +46,8 @@ echo "--------------- INIT POSPROCESSING MODEL ----------------"
 
 # Part I
 #DIR_II="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/RCMs/ICTP/EUR-12/evaluation/ERA5/preproc"
-DIR_II="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/RCMs/ICTP/EUR-12/historical/ECEarth/preproc"
+#DIR_II="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/RCMs/ICTP/EUR-12/historical/ECEarth/preproc"
+DIR_II="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/RCMs/ICTP/EUR-12/ssp370/ECEarth/preproc"
 
 # Loop year by year 
 for FILE in "${DIR_I}"/pr_*.nc; do
@@ -51,17 +55,16 @@ for FILE in "${DIR_I}"/pr_*.nc; do
 
     BASENAME=$(basename "${FILE}")
     YEAR=$(echo "${BASENAME}" | sed -E 's/.*_1hr_([0-9]{4})[0-9]{8}-.*/\1/')
-
     if [ "${YEAR}" -ge ${YR_I} ] && [ "${YEAR}" -le ${YR_F} ]; then
         CDO mulc,3600 "${FILE}" "${DIR_II}/${BASENAME}"
     fi
 
 done
-exit
 
 # Part II
 #DIR_III="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/RCMs/ICTP/EUR-12/evaluation/ERA5/input"
-DIR_III="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/RCMs/ICTP/EUR-12/historical/ECEarth/input"
+#DIR_III="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/RCMs/ICTP/EUR-12/historical/ECEarth/input"
+DIR_III="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/RCMs/ICTP/EUR-12/ssp370/ECEarth/input"
 
 for YEAR in $(seq ${YR_I} ${YR_F}); do
     for MONTH in $(seq -w 01 12); do

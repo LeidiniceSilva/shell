@@ -25,12 +25,14 @@ args = parser.parse_args()
 
 domain=args.domain
 #DataName='ERA5_evaluation'
-DataName='EC-Earth3-Veg_historical'
+#DataName='EC-Earth3-Veg_historical'
+DataName='EC-Earth3-Veg_ssp370'
 
 path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/CPMs'
 
-#files = sorted(glob.glob(f'{path}/ICTP/{domain}/historical/ERA5/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
-files = sorted(glob.glob(f'{path}/ICTP/{domain}/historical/ECEarth/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
+#files = sorted(glob.glob(f'{path}/ICTP/{domain}/evaluation/ERA5/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
+#files = sorted(glob.glob(f'{path}/ICTP/{domain}/historical/ECEarth/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
+files = sorted(glob.glob(f'{path}/ICTP/{domain}/ssp370/ECEarth/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
 
 for f in files:
     print(f)
@@ -44,8 +46,9 @@ for f in files:
     time_datetime = pd.to_datetime(np.array(data_vars['time'].values, dtype='datetime64'))
     dT = 1 
 
-    #OutputFolder = f'{path}/ICTP/{domain}/historical/ERA5/output/'
-    OutputFolder = f'{path}/ICTP/{domain}/historical/ECEarth/output/'
+    #OutputFolder = f'{path}/ICTP/{domain}/evaluation/ERA5/output/'
+    #OutputFolder = f'{path}/ICTP/{domain}/historical/ECEarth/output/'
+    OutputFolder = f'{path}/ICTP/{domain}/ssp370/ECEarth/output/'
 
     object_split = moaap(
                       lon2d,
