@@ -1,0 +1,17 @@
+ In File mod_ncstream.F90 at line:         3384
+ NetCDF: HDF error                                                              
+  
+ In file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2019090200.nc
+ Cannot write variable ps
+ Bounds :           1           1          21        1228         780
+           1
+ nc_stream : 
+ Cannot write variable ps in file /leonardo/home/userexternal/mdasilva/leonardo_
+ work/CORDEX5/ECEarth/ssp370/CSAM-3//CSAM-3_ATM.2019090200.nc:            1
+ Abort called by computing node            0 at 2026-09-19 16:54:23.413 +0200
+ Execution terminated because of runtime error
+Abort(1) on node 0 (rank 0 in comm 496): application called MPI_Abort(comm=0x84000003, 1) - process 0
+ERROR: Simulation ended abruptly!!!
+Unknown ERROR Detected at 2019-09-02 20!

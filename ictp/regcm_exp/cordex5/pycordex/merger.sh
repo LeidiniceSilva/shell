@@ -10,12 +10,12 @@
 #SBATCH --mail-user=mda_silv@ictp.it
 
 # Path
-base_path="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1"
-#base_path="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/ICTP/EC-Earth3-Veg/historical/r1i1p1f1/RegCM5-0/v1-r1"
+#base_path="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1"
+base_path="/leonardo_work/ICT26_ESP/CORDEX-CMIP6/DD/CSAM-3/ICTP/EC-Earth3-Veg/historical/r1i1p1f1/RegCM5-0/v1-r1"
 
 # Info
-base="CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
-#base="CSAM-3_EC-Earth3-Veg_historical_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
+#base="CSAM-3_ERA5_evaluation_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
+base="CSAM-3_EC-Earth3-Veg_historical_r1i1p1f1_ICTP_RegCM5-0_v1-r1"
 
 version="v20260622"
 
