@@ -36,7 +36,7 @@ do
 
       echo "Files to be removed in $var:"
       echo "$files"
-      #rm -f $files
+      rm -f $files
       #rm *"tmp"*
 
     fi

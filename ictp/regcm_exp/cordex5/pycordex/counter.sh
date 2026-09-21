@@ -8,7 +8,8 @@
 base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5
 
 # pycordexer output directory
-wdir=${base}/pycordexer/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1
+#wdir=${base}/pycordexer/ICTP/ERA5/evaluation/r1i1p1f1/RegCM5-0/v1-r1
+wdir=${base}/pycordexer/ICTP/EC-Earth3-Veg/historical/r1i1p1f1/RegCM5-0/v1-r1
 
 # Frequencies
 frequencies=("1hr" "3hr" "6hr" "day")
@@ -29,6 +30,7 @@ echo
 
 total_ok=0
 total_missing=0
+year=$1
 
 for freq in "${frequencies[@]}"; do
 
@@ -55,7 +57,7 @@ for freq in "${frequencies[@]}"; do
         var=$(basename "${var_dir}")
 
         # Find NetCDF files
-        files=( "${var_dir}"/*.nc )
+        files=( "${var_dir}"/*CSAM-3_EC-Earth3-Veg_historical_r1i1p1f1_ICTP_RegCM5-0_v1-r1_*_${year}*.nc )
 
         # No files
         if [[ ! -e "${files[0]}" ]]; then
