@@ -27,8 +27,8 @@ YR="2000-2009"
 IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 
-VAR_LIST="cli clw" # pr tas clt cl
-FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
+VAR_LIST="clr cls gra hail ncn ncc ncr"
+FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR"
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -42,24 +42,35 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     cd ${DIR_OUT}
     echo ${DIR_OUT}
 
+    echo
+    echo "1. Select variables"
     for VAR in ${VAR_LIST[@]}; do
+
+        if [[ "${VAR}" == "hail" || "${VAR}" == "gra" ]] && [[ "${FOLDER}" != "WSM7-EUR" && "${FOLDER}" != "WDM7-EUR" ]]; then
+            continue
+        fi
+
+        if [[ "${VAR}" == "ncc" || "${VAR}" == "ncn" || "${VAR}" == "ncr" ]] && [[ "${FOLDER}" != "WDM7-EUR" ]]; then
+            continue
+        fi
+
         for YEAR in `seq -w ${IYR} ${FYR}`; do
             for MON in `seq -w 01 12`; do
-        	if [ ${VAR} = 'pr' ] || [ ${VAR} = 'tas' ] || [ ${VAR} = 'clt' ]
-        	then
-		CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-        	elif [ ${VAR} = 'cl' ]
-        	then
+            if [ ${VAR} = 'pr' ] || [ ${VAR} = 'tas' ] \vert{}\vert{} [${VAR} = 'clt' ]
+            then
+                CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+            elif [ ${VAR} = 'cl' ]
+            then
                 CDO selname,${VAR} ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-        	else
-		CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-        	fi
+            else
+                CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
+            fi
             done
         done
     
         echo 
         echo "2. Concatenate data"
-        CDO mergetime ${VAR}_${EXP}_*0100.nc ${VAR}_${FOLDER}_${YR}.nc
+        CDO mergetime ${VAR}_${EXP}_*0100.nc${VAR}_${FOLDER}_${YR}.nc
         rm ${VAR}_${EXP}_*0100.nc
 
         echo
@@ -71,13 +82,13 @@ for FOLDER in ${FOLDER_LIST[@]}; do
         elif [ ${VAR} = 'tas' ]
         then
         CDO -b f32 subc,273.15 ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_1hr_${YR}.nc
-	CDO daymean ${VAR}_RegCM5_${FOLDER}_1hr_${YR}.nc ${VAR}_RegCM5_${FOLDER}_day_${YR}.nc
+        CDO daymean ${VAR}_RegCM5_${FOLDER}_1hr_${YR}.nc ${VAR}_RegCM5_${FOLDER}_day_${YR}.nc
         elif [ ${VAR} = 'clt' ]
         then
         CDO -b f32 divc,100 ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_1hr_${YR}.nc
-	CDO daymean ${VAR}_RegCM5_${FOLDER}_1hr_${YR}.nc ${VAR}_RegCM5_${FOLDER}_day_${YR}.nc
+        CDO daymean ${VAR}_RegCM5_${FOLDER}_1hr_${YR}.nc ${VAR}_RegCM5_${FOLDER}_day_${YR}.nc
         else
-	cp ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_6hr_${YR}.nc
+        cp ${VAR}_${FOLDER}_${YR}.nc ${VAR}_RegCM5_${FOLDER}_6hr_${YR}.nc
         CDO daymean ${VAR}_RegCM5_${FOLDER}_6hr_${YR}.nc ${VAR}_RegCM5_${FOLDER}_day_${YR}.nc
         fi
 
@@ -85,7 +96,7 @@ for FOLDER in ${FOLDER_LIST[@]}; do
     
     echo 
     echo "4. Delete files"
-    rm *_${FOLDER}_${YR}.nc
+    rm -f *_${FOLDER}_${YR}.nc
 
 done
 

@@ -25,8 +25,8 @@ EXP="EUR-11"
 
 YR="2006"
 
-VAR_LIST="ua va" # ua va pr uas vas psl cli clw wa hus rh ta clwp clwvi clivi 
-FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
+VAR_LIST="pr uas vas psl clwp clwvi clivi ta ua va wa hus rh cli clw clr cls gra hail ncn ncc ncr"
+FOLDER_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR" 
 
 echo
 echo "--------------- INIT POSTPROCESSING MODEL ----------------"
@@ -34,27 +34,33 @@ echo "--------------- INIT POSTPROCESSING MODEL ----------------"
 for FOLDER in ${FOLDER_LIST[@]}; do
 
     DIR_IN="/leonardo/home/userexternal/mdasilva/leonardo_scratch/EUR-11/${FOLDER}"
-    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/paper/cyc"
+    DIR_OUT="/leonardo/home/userexternal/mdasilva/leonardo_work/EUR-11/postproc/paper/cyc/RegCM5"
 
     echo
     cd ${DIR_OUT}
     echo ${DIR_OUT}
 
     for VAR in ${VAR_LIST[@]}; do
+
+        if [[ "${VAR}" == "hail" || "${VAR}" == "gra" ]] && [[ "${FOLDER}" != "WSM7-EUR" && "${FOLDER}" != "WDM7-EUR" ]]; then
+            continue
+        fi
+
+        if [[ "${VAR}" == "ncc" || "${VAR}" == "ncn" || "${VAR}" == "ncr" ]] && [[ "${FOLDER}" != "WDM7-EUR" ]]; then
+            continue
+        fi
+
         for YEAR in `seq -w 2006 2006`; do
             for MON in `seq -w 09 09`; do
-        	if [ ${VAR} = 'pr' ] || [ ${VAR} = 'uas' ] || [ ${VAR} = 'vas' ] || [ ${VAR} = 'psl' ]
-        	then
-		CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-		mv ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${FOLDER}_1hr_${YR}09.nc
-        	elif [ ${VAR} = 'ta' ] || [ ${VAR} = 'ua' ] || [ ${VAR} = 'va' ] || [ ${VAR} = 'cli' ] || [ ${VAR} = 'clw' ] || [ ${VAR} = 'wa' ] || [ ${VAR} = 'hus' ] || [ ${VAR} = 'rh' ]
-        	then
-                CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-		mv ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${FOLDER}_1hr_${YR}09.nc
-        	else
-		CDO selname,${VAR} ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100_pressure.nc ${VAR}_${EXP}_${YEAR}${MON}0100.nc
-		mv ${VAR}_${EXP}_${YEAR}${MON}0100.nc ${VAR}_${FOLDER}_6hr_${YR}09.nc
-        	fi
+                if [ ${VAR} = 'pr' ] || [ ${VAR} = 'uas' ] || [ ${VAR} = 'vas' ] || [ ${VAR} = 'psl' ]
+                then
+                    CDO selname,${VAR} ${DIR_IN}/${EXP}_SRF.${YEAR}${MON}0100.nc ${VAR}_${FOLDER}_1hr_${YR}${MON}.nc
+                elif [ ${VAR} = 'clwp' ] || [ ${VAR} = 'clwvi' ] || [ ${VAR} = 'clivi' ]
+                then
+                    CDO selname,${VAR} ${DIR_IN}/${EXP}_RAD.${YEAR}${MON}0100_pressure.nc ${VAR}_${FOLDER}_6hr_${YR}${MON}.nc
+                else
+                    CDO selname,${VAR} ${DIR_IN}/${EXP}_ATM.${YEAR}${MON}0100_pressure.nc ${VAR}_${FOLDER}_1hr_${YR}${MON}.nc
+                fi
             done
         done
     done
@@ -64,3 +70,4 @@ echo
 echo "--------------- THE END POSTPROCESSING MODEL ----------------"
 
 }
+

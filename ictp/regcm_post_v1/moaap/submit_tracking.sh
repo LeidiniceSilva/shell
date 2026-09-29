@@ -20,10 +20,15 @@ set -eo pipefail
 echo
 echo "--------------- INIT TRACKING ----------------"
 
-#python3 moaap_tracking_CPMs.py --domain CAR-4
-#python3 moaap_tracking_CPMs.py --domain CSAM-3
-#python3 moaap_tracking_CPMs.py --domain EURR-3
-python3 moaap_tracking_RCMs.py --domain EUR-12
+#python3 moaap_tracking_GPM.py --domain CAR-4
+#python3 moaap_tracking_GPM.py --domain CSAM-3
+#python3 moaap_tracking_GPM.py --domain EURR-3
+
+python3 moaap_tracking_CPMs.py --exp historical --domain EURR-3 --dataset ECEarth --DataName EC-Earth3-Veg_historical 
+python3 moaap_tracking_CPMs.py --exp ssp370 --domain EURR-3 --dataset ECEarth --DataName EC-Earth3-Veg_ssp370 
+
+python3 moaap_tracking_RCMs.py --exp historical --domain EUR-12 --dataset ECEarth --DataName EC-Earth3-Veg_historical
+python3 moaap_tracking_RCMs.py --exp ssp370 --domain EUR-12 --dataset ECEarth --DataName EC-Earth3-Veg_ssp370
 
 echo
 echo "--------------- THE END TRACKING ----------------"

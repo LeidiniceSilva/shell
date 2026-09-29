@@ -20,19 +20,19 @@ from tqdm import tqdm
 from Tracking_Functions import moaap
 
 parser = argparse.ArgumentParser()
+parser.add_argument('--exp', required=True, help='Experiment')
 parser.add_argument('--domain', required=True, help='Domain')
+parser.add_argument('--dataset', required=True, help='Dataset')
+parser.add_argument('--DataName', required=True, help='Name')
 args = parser.parse_args()
 
+exp=args.exp
 domain=args.domain
-#DataName='ERA5_evaluation'
-#DataName='EC-Earth3-Veg_historical'
-DataName='EC-Earth3-Veg_ssp370'
+dataset=args.dataset
+DataName=args.DataName
 
 path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/CPMs'
-
-#files = sorted(glob.glob(f'{path}/ICTP/{domain}/evaluation/ERA5/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
-#files = sorted(glob.glob(f'{path}/ICTP/{domain}/historical/ECEarth/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
-files = sorted(glob.glob(f'{path}/ICTP/{domain}/ssp370/ECEarth/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
+files = sorted(glob.glob(f'{path}/ICTP/{domain}/{exp}/{dataset}/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
 
 for f in files:
     print(f)
@@ -46,9 +46,7 @@ for f in files:
     time_datetime = pd.to_datetime(np.array(data_vars['time'].values, dtype='datetime64'))
     dT = 1 
 
-    #OutputFolder = f'{path}/ICTP/{domain}/evaluation/ERA5/output/'
-    #OutputFolder = f'{path}/ICTP/{domain}/historical/ECEarth/output/'
-    OutputFolder = f'{path}/ICTP/{domain}/ssp370/ECEarth/output/'
+    OutputFolder = f'{path}/ICTP/{domain}/{exp}/{dataset}/output/'
 
     object_split = moaap(
                       lon2d,

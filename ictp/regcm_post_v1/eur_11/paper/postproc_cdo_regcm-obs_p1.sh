@@ -26,8 +26,8 @@ IYR=$( echo $YR | cut -d- -f1 )
 FYR=$( echo $YR | cut -d- -f2 )
 SEASON_LIST="ANN DJF MAM JJA SON AC"
 
-VAR_LIST="clt" # pr tas clt
-EXP_LIST="WDM7-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
+VAR_LIST="pr tas clt" # pr tas clt
+EXP_LIST="NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR" # NoTo-EUR WSM5-EUR WSM7-EUR WDM7-EUR
 
 RES_CPC="0.25"
 GRIDDES="/leonardo/home/userexternal/mdasilva/github_projects/shell/ictp/regcm_post_v2/scripts_regcm"
