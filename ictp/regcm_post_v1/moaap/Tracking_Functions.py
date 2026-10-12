@@ -57,11 +57,14 @@ def calc_grid_distance_area(lon,lat):
         area: area of grid cell (m2)
         grid_distance: average grid distance over the domain (m)
     """
+    lon = np.array(lon)
+    lat = np.array(lat)
+
     dy = np.zeros(lon.shape)
     dx = np.zeros(lat.shape)
 
-    dx[:,1:]=haversine(lon[:,1:],lat[:,1:],lon[:,:-1],lat[:,:-1])
-    dy[1:,:]=haversine(lon[1:,:],lat[1:,:],lon[:-1,:],lat[:-1,:])
+    dx[:,1:] = haversine(lon[:,1:],lat[:,1:],lon[:,:-1],lat[:,:-1])
+    dy[1:,:] = haversine(lon[1:,:],lat[1:,:],lon[:-1,:],lat[:-1,:])
 
     dx[:,0] = dx[:,1]
     dy[0,:] = dy[1,:]
