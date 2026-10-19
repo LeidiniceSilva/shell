@@ -13583,3 +13583,3364 @@ MPI startup(): Warning: I_MPI_PMI_LIBRARY will be ignored since the hydra proces
  Opening new output file 
  /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
  3//CSAM-3_RAD.2024091000.nc
+ Elapsed seconds of run for this period :    807.1719    
+ SEARCH BC data for 2024091006 , step =  6796800
+ READY  BC from     2024091000  to 2024091006 
+ $$$  2024-09-10 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.61  489.42
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.101E-15
+    0.144E-12  0.350E-11  0.254E-10  0.102E-09  0.287E-09  0.644E-09  0.122E-08
+    0.206E-08  0.315E-08  0.447E-08  0.598E-08  0.759E-08  0.926E-08  0.109E-07
+    0.124E-07  0.138E-07  0.150E-07  0.159E-07  0.166E-07  0.171E-07  0.173E-07
+    0.173E-07  0.171E-07  0.167E-07  0.161E-07  0.154E-07  0.145E-07  0.136E-07
+    0.136E-07  0.125E-07  0.114E-07  0.102E-07  0.882E-08  0.726E-08  0.506E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.162      0.161      0.160      0.160      0.159    
+    0.159      0.158      0.158      0.158      0.157      0.157      0.157    
+    0.156      0.156      0.156      0.155      0.155      0.155      0.155    
+    0.154      0.154      0.154      0.154      0.153      0.153      0.153    
+    0.153      0.153      0.152      0.152      0.151      0.151      0.149    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-10 01:00:00 UTC        
+ SRF variables written at  2024-09-10 01:00:00 UTC        
+ RAD variables written at  2024-09-10 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 02:00:00 UTC        
+ SRF variables written at  2024-09-10 02:00:00 UTC        
+ RAD variables written at  2024-09-10 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 03:00:00 UTC        
+ SRF variables written at  2024-09-10 03:00:00 UTC        
+ RAD variables written at  2024-09-10 03:00:00 UTC        
+ $$$  2024-09-10 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.31  488.96
+ CLM History variables written
+ ATM variables written at  2024-09-10 04:00:00 UTC        
+ SRF variables written at  2024-09-10 04:00:00 UTC        
+ RAD variables written at  2024-09-10 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 05:00:00 UTC        
+ SRF variables written at  2024-09-10 05:00:00 UTC        
+ RAD variables written at  2024-09-10 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 06:00:00 UTC        
+ SRF variables written at  2024-09-10 06:00:00 UTC        
+ RAD variables written at  2024-09-10 06:00:00 UTC        
+ SEARCH BC data for 2024091012 , step =  6797280
+ READY  BC from     2024091006  to 2024091012 
+ $$$  2024-09-10 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.00  488.75
+ CLM History variables written
+ ATM variables written at  2024-09-10 07:00:00 UTC        
+ SRF variables written at  2024-09-10 07:00:00 UTC        
+ RAD variables written at  2024-09-10 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 08:00:00 UTC        
+ SRF variables written at  2024-09-10 08:00:00 UTC        
+ RAD variables written at  2024-09-10 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 09:00:00 UTC        
+ SRF variables written at  2024-09-10 09:00:00 UTC        
+ RAD variables written at  2024-09-10 09:00:00 UTC        
+ $$$  2024-09-10 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.02  489.58
+ CLM History variables written
+ ATM variables written at  2024-09-10 10:00:00 UTC        
+ SRF variables written at  2024-09-10 10:00:00 UTC        
+ RAD variables written at  2024-09-10 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 11:00:00 UTC        
+ SRF variables written at  2024-09-10 11:00:00 UTC        
+ RAD variables written at  2024-09-10 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 12:00:00 UTC        
+ SRF variables written at  2024-09-10 12:00:00 UTC        
+ RAD variables written at  2024-09-10 12:00:00 UTC        
+ SEARCH BC data for 2024091018 , step =  6797760
+ READY  BC from     2024091012  to 2024091018 
+ $$$  2024-09-10 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.36  489.99
+ CLM History variables written
+ ATM variables written at  2024-09-10 13:00:00 UTC        
+ SRF variables written at  2024-09-10 13:00:00 UTC        
+ RAD variables written at  2024-09-10 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 14:00:00 UTC        
+ SRF variables written at  2024-09-10 14:00:00 UTC        
+ RAD variables written at  2024-09-10 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 15:00:00 UTC        
+ SRF variables written at  2024-09-10 15:00:00 UTC        
+ RAD variables written at  2024-09-10 15:00:00 UTC        
+ $$$  2024-09-10 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.83  490.23
+ CLM History variables written
+ ATM variables written at  2024-09-10 16:00:00 UTC        
+ SRF variables written at  2024-09-10 16:00:00 UTC        
+ RAD variables written at  2024-09-10 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 17:00:00 UTC        
+ SRF variables written at  2024-09-10 17:00:00 UTC        
+ RAD variables written at  2024-09-10 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 18:00:00 UTC        
+ SRF variables written at  2024-09-10 18:00:00 UTC        
+ RAD variables written at  2024-09-10 18:00:00 UTC        
+ SEARCH BC data for 2024091100 , step =  6798240
+ READY  BC from     2024091018  to 2024091100 
+ $$$  2024-09-10 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.47  491.25
+ CLM History variables written
+ ATM variables written at  2024-09-10 19:00:00 UTC        
+ SRF variables written at  2024-09-10 19:00:00 UTC        
+ RAD variables written at  2024-09-10 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 20:00:00 UTC        
+ SRF variables written at  2024-09-10 20:00:00 UTC        
+ RAD variables written at  2024-09-10 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 21:00:00 UTC        
+ SRF variables written at  2024-09-10 21:00:00 UTC        
+ RAD variables written at  2024-09-10 21:00:00 UTC        
+ $$$  2024-09-10 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.56  492.97
+ CLM History variables written
+ ATM variables written at  2024-09-10 22:00:00 UTC        
+ SRF variables written at  2024-09-10 22:00:00 UTC        
+ RAD variables written at  2024-09-10 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-10 23:00:00 UTC        
+ SRF variables written at  2024-09-10 23:00:00 UTC        
+ RAD variables written at  2024-09-10 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-11 00:00:00 UTC        
+ JDay    254.00000 solar declination angle =   4.91940342 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-11 00:00:00 UTC        
+ SRF variables written at  2024-09-11 00:00:00 UTC        
+ STS variables written at  2024-09-11 00:00:00 UTC        
+ RAD variables written at  2024-09-11 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024091100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024091100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024091100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024091100.nc
+ Elapsed seconds of run for this period :    813.3789    
+ SEARCH BC data for 2024091106 , step =  6798720
+ READY  BC from     2024091100  to 2024091106 
+ $$$  2024-09-11 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.65  494.26
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.101E-15
+    0.143E-12  0.349E-11  0.253E-10  0.102E-09  0.288E-09  0.645E-09  0.123E-08
+    0.207E-08  0.317E-08  0.450E-08  0.603E-08  0.767E-08  0.935E-08  0.110E-07
+    0.126E-07  0.140E-07  0.152E-07  0.162E-07  0.169E-07  0.174E-07  0.176E-07
+    0.176E-07  0.174E-07  0.170E-07  0.164E-07  0.157E-07  0.148E-07  0.139E-07
+    0.139E-07  0.128E-07  0.116E-07  0.104E-07  0.904E-08  0.746E-08  0.521E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.156      0.155    
+    0.155      0.154      0.154      0.154      0.154      0.153      0.153    
+    0.153      0.152      0.152      0.152      0.152      0.151      0.151    
+    0.151      0.151      0.150      0.150      0.149      0.149      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-11 01:00:00 UTC        
+ SRF variables written at  2024-09-11 01:00:00 UTC        
+ RAD variables written at  2024-09-11 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 02:00:00 UTC        
+ SRF variables written at  2024-09-11 02:00:00 UTC        
+ RAD variables written at  2024-09-11 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 03:00:00 UTC        
+ SRF variables written at  2024-09-11 03:00:00 UTC        
+ RAD variables written at  2024-09-11 03:00:00 UTC        
+ $$$  2024-09-11 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.26  494.60
+ CLM History variables written
+ ATM variables written at  2024-09-11 04:00:00 UTC        
+ SRF variables written at  2024-09-11 04:00:00 UTC        
+ RAD variables written at  2024-09-11 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 05:00:00 UTC        
+ SRF variables written at  2024-09-11 05:00:00 UTC        
+ RAD variables written at  2024-09-11 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 06:00:00 UTC        
+ SRF variables written at  2024-09-11 06:00:00 UTC        
+ RAD variables written at  2024-09-11 06:00:00 UTC        
+ SEARCH BC data for 2024091112 , step =  6799200
+ READY  BC from     2024091106  to 2024091112 
+ $$$  2024-09-11 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.80  495.01
+ CLM History variables written
+ ATM variables written at  2024-09-11 07:00:00 UTC        
+ SRF variables written at  2024-09-11 07:00:00 UTC        
+ RAD variables written at  2024-09-11 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 08:00:00 UTC        
+ SRF variables written at  2024-09-11 08:00:00 UTC        
+ RAD variables written at  2024-09-11 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 09:00:00 UTC        
+ SRF variables written at  2024-09-11 09:00:00 UTC        
+ RAD variables written at  2024-09-11 09:00:00 UTC        
+ $$$  2024-09-11 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.75  496.08
+ CLM History variables written
+ ATM variables written at  2024-09-11 10:00:00 UTC        
+ SRF variables written at  2024-09-11 10:00:00 UTC        
+ RAD variables written at  2024-09-11 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 11:00:00 UTC        
+ SRF variables written at  2024-09-11 11:00:00 UTC        
+ RAD variables written at  2024-09-11 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 12:00:00 UTC        
+ SRF variables written at  2024-09-11 12:00:00 UTC        
+ RAD variables written at  2024-09-11 12:00:00 UTC        
+ SEARCH BC data for 2024091118 , step =  6799680
+ READY  BC from     2024091112  to 2024091118 
+ $$$  2024-09-11 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.58  496.77
+ CLM History variables written
+ ATM variables written at  2024-09-11 13:00:00 UTC        
+ SRF variables written at  2024-09-11 13:00:00 UTC        
+ RAD variables written at  2024-09-11 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 14:00:00 UTC        
+ SRF variables written at  2024-09-11 14:00:00 UTC        
+ RAD variables written at  2024-09-11 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 15:00:00 UTC        
+ SRF variables written at  2024-09-11 15:00:00 UTC        
+ RAD variables written at  2024-09-11 15:00:00 UTC        
+ $$$  2024-09-11 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.96  496.93
+ CLM History variables written
+ ATM variables written at  2024-09-11 16:00:00 UTC        
+ SRF variables written at  2024-09-11 16:00:00 UTC        
+ RAD variables written at  2024-09-11 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 17:00:00 UTC        
+ SRF variables written at  2024-09-11 17:00:00 UTC        
+ RAD variables written at  2024-09-11 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 18:00:00 UTC        
+ SRF variables written at  2024-09-11 18:00:00 UTC        
+ RAD variables written at  2024-09-11 18:00:00 UTC        
+ SEARCH BC data for 2024091200 , step =  6800160
+ READY  BC from     2024091118  to 2024091200 
+ $$$  2024-09-11 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.84  497.38
+ CLM History variables written
+ ATM variables written at  2024-09-11 19:00:00 UTC        
+ SRF variables written at  2024-09-11 19:00:00 UTC        
+ RAD variables written at  2024-09-11 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 20:00:00 UTC        
+ SRF variables written at  2024-09-11 20:00:00 UTC        
+ RAD variables written at  2024-09-11 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 21:00:00 UTC        
+ SRF variables written at  2024-09-11 21:00:00 UTC        
+ RAD variables written at  2024-09-11 21:00:00 UTC        
+ $$$  2024-09-11 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.42  497.99
+ CLM History variables written
+ ATM variables written at  2024-09-11 22:00:00 UTC        
+ SRF variables written at  2024-09-11 22:00:00 UTC        
+ RAD variables written at  2024-09-11 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-11 23:00:00 UTC        
+ SRF variables written at  2024-09-11 23:00:00 UTC        
+ RAD variables written at  2024-09-11 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-12 00:00:00 UTC        
+ JDay    255.00000 solar declination angle =   4.54015489 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-12 00:00:00 UTC        
+ SRF variables written at  2024-09-12 00:00:00 UTC        
+ STS variables written at  2024-09-12 00:00:00 UTC        
+ RAD variables written at  2024-09-12 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024091200.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024091200.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024091200.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024091200.nc
+ Elapsed seconds of run for this period :    1000.781    
+ SEARCH BC data for 2024091206 , step =  6800640
+ READY  BC from     2024091200  to 2024091206 
+ $$$  2024-09-12 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.60  498.32
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.101E-15
+    0.143E-12  0.349E-11  0.253E-10  0.102E-09  0.288E-09  0.645E-09  0.123E-08
+    0.207E-08  0.317E-08  0.450E-08  0.603E-08  0.767E-08  0.935E-08  0.110E-07
+    0.126E-07  0.140E-07  0.152E-07  0.162E-07  0.169E-07  0.174E-07  0.176E-07
+    0.176E-07  0.174E-07  0.170E-07  0.164E-07  0.157E-07  0.148E-07  0.139E-07
+    0.139E-07  0.128E-07  0.116E-07  0.104E-07  0.904E-08  0.746E-08  0.521E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.156      0.155    
+    0.155      0.154      0.154      0.154      0.154      0.153      0.153    
+    0.153      0.152      0.152      0.152      0.152      0.151      0.151    
+    0.151      0.151      0.150      0.150      0.149      0.149      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-12 01:00:00 UTC        
+ SRF variables written at  2024-09-12 01:00:00 UTC        
+ RAD variables written at  2024-09-12 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 02:00:00 UTC        
+ SRF variables written at  2024-09-12 02:00:00 UTC        
+ RAD variables written at  2024-09-12 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 03:00:00 UTC        
+ SRF variables written at  2024-09-12 03:00:00 UTC        
+ RAD variables written at  2024-09-12 03:00:00 UTC        
+ $$$  2024-09-12 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.93  498.07
+ CLM History variables written
+ ATM variables written at  2024-09-12 04:00:00 UTC        
+ SRF variables written at  2024-09-12 04:00:00 UTC        
+ RAD variables written at  2024-09-12 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 05:00:00 UTC        
+ SRF variables written at  2024-09-12 05:00:00 UTC        
+ RAD variables written at  2024-09-12 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 06:00:00 UTC        
+ SRF variables written at  2024-09-12 06:00:00 UTC        
+ RAD variables written at  2024-09-12 06:00:00 UTC        
+ SEARCH BC data for 2024091212 , step =  6801120
+ READY  BC from     2024091206  to 2024091212 
+ $$$  2024-09-12 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.22  497.86
+ CLM History variables written
+ ATM variables written at  2024-09-12 07:00:00 UTC        
+ SRF variables written at  2024-09-12 07:00:00 UTC        
+ RAD variables written at  2024-09-12 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 08:00:00 UTC        
+ SRF variables written at  2024-09-12 08:00:00 UTC        
+ RAD variables written at  2024-09-12 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 09:00:00 UTC        
+ SRF variables written at  2024-09-12 09:00:00 UTC        
+ RAD variables written at  2024-09-12 09:00:00 UTC        
+ $$$  2024-09-12 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.30  498.10
+ CLM History variables written
+ ATM variables written at  2024-09-12 10:00:00 UTC        
+ SRF variables written at  2024-09-12 10:00:00 UTC        
+ RAD variables written at  2024-09-12 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 11:00:00 UTC        
+ SRF variables written at  2024-09-12 11:00:00 UTC        
+ RAD variables written at  2024-09-12 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 12:00:00 UTC        
+ SRF variables written at  2024-09-12 12:00:00 UTC        
+ RAD variables written at  2024-09-12 12:00:00 UTC        
+ SEARCH BC data for 2024091218 , step =  6801600
+ READY  BC from     2024091212  to 2024091218 
+ $$$  2024-09-12 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.52  498.31
+ CLM History variables written
+ ATM variables written at  2024-09-12 13:00:00 UTC        
+ SRF variables written at  2024-09-12 13:00:00 UTC        
+ RAD variables written at  2024-09-12 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 14:00:00 UTC        
+ SRF variables written at  2024-09-12 14:00:00 UTC        
+ RAD variables written at  2024-09-12 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 15:00:00 UTC        
+ SRF variables written at  2024-09-12 15:00:00 UTC        
+ RAD variables written at  2024-09-12 15:00:00 UTC        
+ $$$  2024-09-12 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.66  498.03
+ CLM History variables written
+ ATM variables written at  2024-09-12 16:00:00 UTC        
+ SRF variables written at  2024-09-12 16:00:00 UTC        
+ RAD variables written at  2024-09-12 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 17:00:00 UTC        
+ SRF variables written at  2024-09-12 17:00:00 UTC        
+ RAD variables written at  2024-09-12 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 18:00:00 UTC        
+ SRF variables written at  2024-09-12 18:00:00 UTC        
+ RAD variables written at  2024-09-12 18:00:00 UTC        
+ SEARCH BC data for 2024091300 , step =  6802080
+ READY  BC from     2024091218  to 2024091300 
+ $$$  2024-09-12 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.60  498.16
+ CLM History variables written
+ ATM variables written at  2024-09-12 19:00:00 UTC        
+ SRF variables written at  2024-09-12 19:00:00 UTC        
+ RAD variables written at  2024-09-12 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 20:00:00 UTC        
+ SRF variables written at  2024-09-12 20:00:00 UTC        
+ RAD variables written at  2024-09-12 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 21:00:00 UTC        
+ SRF variables written at  2024-09-12 21:00:00 UTC        
+ RAD variables written at  2024-09-12 21:00:00 UTC        
+ $$$  2024-09-12 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.62  498.74
+ CLM History variables written
+ ATM variables written at  2024-09-12 22:00:00 UTC        
+ SRF variables written at  2024-09-12 22:00:00 UTC        
+ RAD variables written at  2024-09-12 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-12 23:00:00 UTC        
+ SRF variables written at  2024-09-12 23:00:00 UTC        
+ RAD variables written at  2024-09-12 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-13 00:00:00 UTC        
+ JDay    256.00000 solar declination angle =   4.15960133 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-13 00:00:00 UTC        
+ SRF variables written at  2024-09-13 00:00:00 UTC        
+ STS variables written at  2024-09-13 00:00:00 UTC        
+ RAD variables written at  2024-09-13 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024091300.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024091300.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024091300.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024091300.nc
+ Elapsed seconds of run for this period :    1079.996    
+ SEARCH BC data for 2024091306 , step =  6802560
+ READY  BC from     2024091300  to 2024091306 
+ $$$  2024-09-13 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.89  499.14
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.101E-15
+    0.143E-12  0.349E-11  0.253E-10  0.102E-09  0.288E-09  0.645E-09  0.123E-08
+    0.207E-08  0.317E-08  0.450E-08  0.603E-08  0.767E-08  0.935E-08  0.110E-07
+    0.126E-07  0.140E-07  0.152E-07  0.162E-07  0.169E-07  0.174E-07  0.176E-07
+    0.176E-07  0.174E-07  0.170E-07  0.164E-07  0.157E-07  0.148E-07  0.139E-07
+    0.139E-07  0.128E-07  0.116E-07  0.104E-07  0.904E-08  0.746E-08  0.521E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.156      0.155    
+    0.155      0.154      0.154      0.154      0.154      0.153      0.153    
+    0.153      0.152      0.152      0.152      0.152      0.151      0.151    
+    0.151      0.151      0.150      0.150      0.149      0.149      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-13 01:00:00 UTC        
+ SRF variables written at  2024-09-13 01:00:00 UTC        
+ RAD variables written at  2024-09-13 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 02:00:00 UTC        
+ SRF variables written at  2024-09-13 02:00:00 UTC        
+ RAD variables written at  2024-09-13 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 03:00:00 UTC        
+ SRF variables written at  2024-09-13 03:00:00 UTC        
+ RAD variables written at  2024-09-13 03:00:00 UTC        
+ $$$  2024-09-13 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.25  498.97
+ CLM History variables written
+ ATM variables written at  2024-09-13 04:00:00 UTC        
+ SRF variables written at  2024-09-13 04:00:00 UTC        
+ RAD variables written at  2024-09-13 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 05:00:00 UTC        
+ SRF variables written at  2024-09-13 05:00:00 UTC        
+ RAD variables written at  2024-09-13 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 06:00:00 UTC        
+ SRF variables written at  2024-09-13 06:00:00 UTC        
+ RAD variables written at  2024-09-13 06:00:00 UTC        
+ SEARCH BC data for 2024091312 , step =  6803040
+ READY  BC from     2024091306  to 2024091312 
+ $$$  2024-09-13 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.18  498.93
+ CLM History variables written
+ ATM variables written at  2024-09-13 07:00:00 UTC        
+ SRF variables written at  2024-09-13 07:00:00 UTC        
+ RAD variables written at  2024-09-13 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 08:00:00 UTC        
+ SRF variables written at  2024-09-13 08:00:00 UTC        
+ RAD variables written at  2024-09-13 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 09:00:00 UTC        
+ SRF variables written at  2024-09-13 09:00:00 UTC        
+ RAD variables written at  2024-09-13 09:00:00 UTC        
+ $$$  2024-09-13 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.57  499.41
+ CLM History variables written
+ ATM variables written at  2024-09-13 10:00:00 UTC        
+ SRF variables written at  2024-09-13 10:00:00 UTC        
+ RAD variables written at  2024-09-13 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 11:00:00 UTC        
+ SRF variables written at  2024-09-13 11:00:00 UTC        
+ RAD variables written at  2024-09-13 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 12:00:00 UTC        
+ SRF variables written at  2024-09-13 12:00:00 UTC        
+ RAD variables written at  2024-09-13 12:00:00 UTC        
+ SEARCH BC data for 2024091318 , step =  6803520
+ READY  BC from     2024091312  to 2024091318 
+ $$$  2024-09-13 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.83  499.69
+ CLM History variables written
+ ATM variables written at  2024-09-13 13:00:00 UTC        
+ SRF variables written at  2024-09-13 13:00:00 UTC        
+ RAD variables written at  2024-09-13 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 14:00:00 UTC        
+ SRF variables written at  2024-09-13 14:00:00 UTC        
+ RAD variables written at  2024-09-13 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 15:00:00 UTC        
+ SRF variables written at  2024-09-13 15:00:00 UTC        
+ RAD variables written at  2024-09-13 15:00:00 UTC        
+ $$$  2024-09-13 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.22  499.47
+ CLM History variables written
+ ATM variables written at  2024-09-13 16:00:00 UTC        
+ SRF variables written at  2024-09-13 16:00:00 UTC        
+ RAD variables written at  2024-09-13 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 17:00:00 UTC        
+ SRF variables written at  2024-09-13 17:00:00 UTC        
+ RAD variables written at  2024-09-13 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 18:00:00 UTC        
+ SRF variables written at  2024-09-13 18:00:00 UTC        
+ RAD variables written at  2024-09-13 18:00:00 UTC        
+ SEARCH BC data for 2024091400 , step =  6804000
+ READY  BC from     2024091318  to 2024091400 
+ $$$  2024-09-13 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.35  499.64
+ CLM History variables written
+ ATM variables written at  2024-09-13 19:00:00 UTC        
+ SRF variables written at  2024-09-13 19:00:00 UTC        
+ RAD variables written at  2024-09-13 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 20:00:00 UTC        
+ SRF variables written at  2024-09-13 20:00:00 UTC        
+ RAD variables written at  2024-09-13 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 21:00:00 UTC        
+ SRF variables written at  2024-09-13 21:00:00 UTC        
+ RAD variables written at  2024-09-13 21:00:00 UTC        
+ $$$  2024-09-13 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.89  500.04
+ CLM History variables written
+ ATM variables written at  2024-09-13 22:00:00 UTC        
+ SRF variables written at  2024-09-13 22:00:00 UTC        
+ RAD variables written at  2024-09-13 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-13 23:00:00 UTC        
+ SRF variables written at  2024-09-13 23:00:00 UTC        
+ RAD variables written at  2024-09-13 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-14 00:00:00 UTC        
+ JDay    257.00000 solar declination angle =   3.77783374 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-14 00:00:00 UTC        
+ SRF variables written at  2024-09-14 00:00:00 UTC        
+ STS variables written at  2024-09-14 00:00:00 UTC        
+ RAD variables written at  2024-09-14 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024091400.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024091400.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024091400.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024091400.nc
+ Elapsed seconds of run for this period :    837.2734    
+ SEARCH BC data for 2024091406 , step =  6804480
+ READY  BC from     2024091400  to 2024091406 
+ $$$  2024-09-14 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.36  500.18
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.101E-15
+    0.143E-12  0.349E-11  0.253E-10  0.102E-09  0.288E-09  0.645E-09  0.123E-08
+    0.207E-08  0.317E-08  0.450E-08  0.603E-08  0.767E-08  0.935E-08  0.110E-07
+    0.126E-07  0.140E-07  0.152E-07  0.162E-07  0.169E-07  0.174E-07  0.176E-07
+    0.176E-07  0.174E-07  0.170E-07  0.164E-07  0.157E-07  0.148E-07  0.139E-07
+    0.139E-07  0.128E-07  0.116E-07  0.104E-07  0.904E-08  0.746E-08  0.521E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.156      0.155    
+    0.155      0.154      0.154      0.154      0.154      0.153      0.153    
+    0.153      0.152      0.152      0.152      0.152      0.151      0.151    
+    0.151      0.151      0.150      0.150      0.149      0.149      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-14 01:00:00 UTC        
+ SRF variables written at  2024-09-14 01:00:00 UTC        
+ RAD variables written at  2024-09-14 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 02:00:00 UTC        
+ SRF variables written at  2024-09-14 02:00:00 UTC        
+ RAD variables written at  2024-09-14 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 03:00:00 UTC        
+ SRF variables written at  2024-09-14 03:00:00 UTC        
+ RAD variables written at  2024-09-14 03:00:00 UTC        
+ $$$  2024-09-14 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.95  499.75
+ CLM History variables written
+ ATM variables written at  2024-09-14 04:00:00 UTC        
+ SRF variables written at  2024-09-14 04:00:00 UTC        
+ RAD variables written at  2024-09-14 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 05:00:00 UTC        
+ SRF variables written at  2024-09-14 05:00:00 UTC        
+ RAD variables written at  2024-09-14 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 06:00:00 UTC        
+ SRF variables written at  2024-09-14 06:00:00 UTC        
+ RAD variables written at  2024-09-14 06:00:00 UTC        
+ SEARCH BC data for 2024091412 , step =  6804960
+ READY  BC from     2024091406  to 2024091412 
+ $$$  2024-09-14 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.23  499.51
+ CLM History variables written
+ ATM variables written at  2024-09-14 07:00:00 UTC        
+ SRF variables written at  2024-09-14 07:00:00 UTC        
+ RAD variables written at  2024-09-14 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 08:00:00 UTC        
+ SRF variables written at  2024-09-14 08:00:00 UTC        
+ RAD variables written at  2024-09-14 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 09:00:00 UTC        
+ SRF variables written at  2024-09-14 09:00:00 UTC        
+ RAD variables written at  2024-09-14 09:00:00 UTC        
+ $$$  2024-09-14 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.00  499.82
+ CLM History variables written
+ ATM variables written at  2024-09-14 10:00:00 UTC        
+ SRF variables written at  2024-09-14 10:00:00 UTC        
+ RAD variables written at  2024-09-14 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 11:00:00 UTC        
+ SRF variables written at  2024-09-14 11:00:00 UTC        
+ RAD variables written at  2024-09-14 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 12:00:00 UTC        
+ SRF variables written at  2024-09-14 12:00:00 UTC        
+ RAD variables written at  2024-09-14 12:00:00 UTC        
+ SEARCH BC data for 2024091418 , step =  6805440
+ READY  BC from     2024091412  to 2024091418 
+ $$$  2024-09-14 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.21  499.87
+ CLM History variables written
+ ATM variables written at  2024-09-14 13:00:00 UTC        
+ SRF variables written at  2024-09-14 13:00:00 UTC        
+ RAD variables written at  2024-09-14 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 14:00:00 UTC        
+ SRF variables written at  2024-09-14 14:00:00 UTC        
+ RAD variables written at  2024-09-14 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 15:00:00 UTC        
+ SRF variables written at  2024-09-14 15:00:00 UTC        
+ RAD variables written at  2024-09-14 15:00:00 UTC        
+ $$$  2024-09-14 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.00  499.46
+ CLM History variables written
+ ATM variables written at  2024-09-14 16:00:00 UTC        
+ SRF variables written at  2024-09-14 16:00:00 UTC        
+ RAD variables written at  2024-09-14 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 17:00:00 UTC        
+ SRF variables written at  2024-09-14 17:00:00 UTC        
+ RAD variables written at  2024-09-14 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 18:00:00 UTC        
+ SRF variables written at  2024-09-14 18:00:00 UTC        
+ RAD variables written at  2024-09-14 18:00:00 UTC        
+ SEARCH BC data for 2024091500 , step =  6805920
+ READY  BC from     2024091418  to 2024091500 
+ $$$  2024-09-14 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.96  499.49
+ CLM History variables written
+ ATM variables written at  2024-09-14 19:00:00 UTC        
+ SRF variables written at  2024-09-14 19:00:00 UTC        
+ RAD variables written at  2024-09-14 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 20:00:00 UTC        
+ SRF variables written at  2024-09-14 20:00:00 UTC        
+ RAD variables written at  2024-09-14 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 21:00:00 UTC        
+ SRF variables written at  2024-09-14 21:00:00 UTC        
+ RAD variables written at  2024-09-14 21:00:00 UTC        
+ $$$  2024-09-14 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.25  499.86
+ CLM History variables written
+ ATM variables written at  2024-09-14 22:00:00 UTC        
+ SRF variables written at  2024-09-14 22:00:00 UTC        
+ RAD variables written at  2024-09-14 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-14 23:00:00 UTC        
+ SRF variables written at  2024-09-14 23:00:00 UTC        
+ RAD variables written at  2024-09-14 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-15 00:00:00 UTC        
+ JDay    258.00000 solar declination angle =   3.39494335 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-15 00:00:00 UTC        
+ SRF variables written at  2024-09-15 00:00:00 UTC        
+ STS variables written at  2024-09-15 00:00:00 UTC        
+ RAD variables written at  2024-09-15 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024091500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024091500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024091500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024091500.nc
+ Elapsed seconds of run for this period :    807.9180    
+ SEARCH BC data for 2024091506 , step =  6806400
+ READY  BC from     2024091500  to 2024091506 
+ $$$  2024-09-15 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.67  499.93
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.101E-15
+    0.143E-12  0.349E-11  0.253E-10  0.102E-09  0.288E-09  0.645E-09  0.123E-08
+    0.207E-08  0.317E-08  0.450E-08  0.603E-08  0.767E-08  0.935E-08  0.110E-07
+    0.126E-07  0.140E-07  0.152E-07  0.162E-07  0.169E-07  0.174E-07  0.176E-07
+    0.176E-07  0.174E-07  0.170E-07  0.164E-07  0.157E-07  0.148E-07  0.139E-07
+    0.139E-07  0.128E-07  0.116E-07  0.104E-07  0.904E-08  0.746E-08  0.521E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.156      0.155    
+    0.155      0.154      0.154      0.154      0.154      0.153      0.153    
+    0.153      0.152      0.152      0.152      0.152      0.151      0.151    
+    0.151      0.151      0.150      0.150      0.149      0.149      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-15 01:00:00 UTC        
+ SRF variables written at  2024-09-15 01:00:00 UTC        
+ RAD variables written at  2024-09-15 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 02:00:00 UTC        
+ SRF variables written at  2024-09-15 02:00:00 UTC        
+ RAD variables written at  2024-09-15 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 03:00:00 UTC        
+ SRF variables written at  2024-09-15 03:00:00 UTC        
+ RAD variables written at  2024-09-15 03:00:00 UTC        
+ $$$  2024-09-15 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.30  499.32
+ CLM History variables written
+ ATM variables written at  2024-09-15 04:00:00 UTC        
+ SRF variables written at  2024-09-15 04:00:00 UTC        
+ RAD variables written at  2024-09-15 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 05:00:00 UTC        
+ SRF variables written at  2024-09-15 05:00:00 UTC        
+ RAD variables written at  2024-09-15 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 06:00:00 UTC        
+ SRF variables written at  2024-09-15 06:00:00 UTC        
+ RAD variables written at  2024-09-15 06:00:00 UTC        
+ SEARCH BC data for 2024091512 , step =  6806880
+ READY  BC from     2024091506  to 2024091512 
+ $$$  2024-09-15 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.01  498.90
+ CLM History variables written
+ ATM variables written at  2024-09-15 07:00:00 UTC        
+ SRF variables written at  2024-09-15 07:00:00 UTC        
+ RAD variables written at  2024-09-15 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 08:00:00 UTC        
+ SRF variables written at  2024-09-15 08:00:00 UTC        
+ RAD variables written at  2024-09-15 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 09:00:00 UTC        
+ SRF variables written at  2024-09-15 09:00:00 UTC        
+ RAD variables written at  2024-09-15 09:00:00 UTC        
+ $$$  2024-09-15 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.45  499.02
+ CLM History variables written
+ ATM variables written at  2024-09-15 10:00:00 UTC        
+ SRF variables written at  2024-09-15 10:00:00 UTC        
+ RAD variables written at  2024-09-15 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 11:00:00 UTC        
+ SRF variables written at  2024-09-15 11:00:00 UTC        
+ RAD variables written at  2024-09-15 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 12:00:00 UTC        
+ SRF variables written at  2024-09-15 12:00:00 UTC        
+ RAD variables written at  2024-09-15 12:00:00 UTC        
+ SEARCH BC data for 2024091518 , step =  6807360
+ READY  BC from     2024091512  to 2024091518 
+ $$$  2024-09-15 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.09  498.87
+ CLM History variables written
+ ATM variables written at  2024-09-15 13:00:00 UTC        
+ SRF variables written at  2024-09-15 13:00:00 UTC        
+ RAD variables written at  2024-09-15 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 14:00:00 UTC        
+ SRF variables written at  2024-09-15 14:00:00 UTC        
+ RAD variables written at  2024-09-15 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 15:00:00 UTC        
+ SRF variables written at  2024-09-15 15:00:00 UTC        
+ RAD variables written at  2024-09-15 15:00:00 UTC        
+ $$$  2024-09-15 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.73  498.36
+ CLM History variables written
+ ATM variables written at  2024-09-15 16:00:00 UTC        
+ SRF variables written at  2024-09-15 16:00:00 UTC        
+ RAD variables written at  2024-09-15 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 17:00:00 UTC        
+ SRF variables written at  2024-09-15 17:00:00 UTC        
+ RAD variables written at  2024-09-15 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 18:00:00 UTC        
+ SRF variables written at  2024-09-15 18:00:00 UTC        
+ RAD variables written at  2024-09-15 18:00:00 UTC        
+ SEARCH BC data for 2024091600 , step =  6807840
+ READY  BC from     2024091518  to 2024091600 
+ $$$  2024-09-15 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.41  498.32
+ CLM History variables written
+ ATM variables written at  2024-09-15 19:00:00 UTC        
+ SRF variables written at  2024-09-15 19:00:00 UTC        
+ RAD variables written at  2024-09-15 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 20:00:00 UTC        
+ SRF variables written at  2024-09-15 20:00:00 UTC        
+ RAD variables written at  2024-09-15 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 21:00:00 UTC        
+ SRF variables written at  2024-09-15 21:00:00 UTC        
+ RAD variables written at  2024-09-15 21:00:00 UTC        
+ $$$  2024-09-15 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.49  498.76
+ CLM History variables written
+ ATM variables written at  2024-09-15 22:00:00 UTC        
+ SRF variables written at  2024-09-15 22:00:00 UTC        
+ RAD variables written at  2024-09-15 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-15 23:00:00 UTC        
+ SRF variables written at  2024-09-15 23:00:00 UTC        
+ RAD variables written at  2024-09-15 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-16 00:00:00 UTC        
+ JDay    259.00000 solar declination angle =   3.01102159 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-16 00:00:00 UTC        
+ SRF variables written at  2024-09-16 00:00:00 UTC        
+ STS variables written at  2024-09-16 00:00:00 UTC        
+ RAD variables written at  2024-09-16 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024091600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024091600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024091600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024091600.nc
+ Elapsed seconds of run for this period :    808.8242    
+ SEARCH BC data for 2024091606 , step =  6808320
+ READY  BC from     2024091600  to 2024091606 
+ $$$  2024-09-16 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.70  498.89
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.101E-15
+    0.143E-12  0.349E-11  0.253E-10  0.102E-09  0.288E-09  0.645E-09  0.123E-08
+    0.207E-08  0.317E-08  0.450E-08  0.603E-08  0.767E-08  0.935E-08  0.110E-07
+    0.126E-07  0.140E-07  0.152E-07  0.162E-07  0.169E-07  0.174E-07  0.176E-07
+    0.176E-07  0.174E-07  0.170E-07  0.164E-07  0.157E-07  0.148E-07  0.139E-07
+    0.139E-07  0.128E-07  0.116E-07  0.104E-07  0.904E-08  0.746E-08  0.521E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.156      0.155    
+    0.155      0.154      0.154      0.154      0.154      0.153      0.153    
+    0.153      0.152      0.152      0.152      0.152      0.151      0.151    
+    0.151      0.151      0.150      0.150      0.149      0.149      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ Attempting to read monthly vegetation data .....
+ At  2024-09-16 00:22:30 UTC
+ Month =            9  Day =           16
+ Reading months :            9          10
+ Successfully read monthly vegetation data for
+ month           10
+ CLM History variables written
+ ATM variables written at  2024-09-16 01:00:00 UTC        
+ SRF variables written at  2024-09-16 01:00:00 UTC        
+ RAD variables written at  2024-09-16 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 02:00:00 UTC        
+ SRF variables written at  2024-09-16 02:00:00 UTC        
+ RAD variables written at  2024-09-16 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 03:00:00 UTC        
+ SRF variables written at  2024-09-16 03:00:00 UTC        
+ RAD variables written at  2024-09-16 03:00:00 UTC        
+ $$$  2024-09-16 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.25  498.23
+ CLM History variables written
+ ATM variables written at  2024-09-16 04:00:00 UTC        
+ SRF variables written at  2024-09-16 04:00:00 UTC        
+ RAD variables written at  2024-09-16 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 05:00:00 UTC        
+ SRF variables written at  2024-09-16 05:00:00 UTC        
+ RAD variables written at  2024-09-16 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 06:00:00 UTC        
+ SRF variables written at  2024-09-16 06:00:00 UTC        
+ RAD variables written at  2024-09-16 06:00:00 UTC        
+ SEARCH BC data for 2024091612 , step =  6808800
+ READY  BC from     2024091606  to 2024091612 
+ $$$  2024-09-16 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.83  497.69
+ CLM History variables written
+ ATM variables written at  2024-09-16 07:00:00 UTC        
+ SRF variables written at  2024-09-16 07:00:00 UTC        
+ RAD variables written at  2024-09-16 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 08:00:00 UTC        
+ SRF variables written at  2024-09-16 08:00:00 UTC        
+ RAD variables written at  2024-09-16 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 09:00:00 UTC        
+ SRF variables written at  2024-09-16 09:00:00 UTC        
+ RAD variables written at  2024-09-16 09:00:00 UTC        
+ $$$  2024-09-16 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.69  497.82
+ CLM History variables written
+ ATM variables written at  2024-09-16 10:00:00 UTC        
+ SRF variables written at  2024-09-16 10:00:00 UTC        
+ RAD variables written at  2024-09-16 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 11:00:00 UTC        
+ SRF variables written at  2024-09-16 11:00:00 UTC        
+ RAD variables written at  2024-09-16 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 12:00:00 UTC        
+ SRF variables written at  2024-09-16 12:00:00 UTC        
+ RAD variables written at  2024-09-16 12:00:00 UTC        
+ SEARCH BC data for 2024091618 , step =  6809280
+ READY  BC from     2024091612  to 2024091618 
+ $$$  2024-09-16 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.14  497.81
+ CLM History variables written
+ ATM variables written at  2024-09-16 13:00:00 UTC        
+ SRF variables written at  2024-09-16 13:00:00 UTC        
+ RAD variables written at  2024-09-16 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 14:00:00 UTC        
+ SRF variables written at  2024-09-16 14:00:00 UTC        
+ RAD variables written at  2024-09-16 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 15:00:00 UTC        
+ SRF variables written at  2024-09-16 15:00:00 UTC        
+ RAD variables written at  2024-09-16 15:00:00 UTC        
+ $$$  2024-09-16 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.42  497.48
+ CLM History variables written
+ ATM variables written at  2024-09-16 16:00:00 UTC        
+ SRF variables written at  2024-09-16 16:00:00 UTC        
+ RAD variables written at  2024-09-16 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 17:00:00 UTC        
+ SRF variables written at  2024-09-16 17:00:00 UTC        
+ RAD variables written at  2024-09-16 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 18:00:00 UTC        
+ SRF variables written at  2024-09-16 18:00:00 UTC        
+ RAD variables written at  2024-09-16 18:00:00 UTC        
+ SEARCH BC data for 2024091700 , step =  6809760
+ READY  BC from     2024091618  to 2024091700 
+ $$$  2024-09-16 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.85  497.63
+ CLM History variables written
+ ATM variables written at  2024-09-16 19:00:00 UTC        
+ SRF variables written at  2024-09-16 19:00:00 UTC        
+ RAD variables written at  2024-09-16 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 20:00:00 UTC        
+ SRF variables written at  2024-09-16 20:00:00 UTC        
+ RAD variables written at  2024-09-16 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 21:00:00 UTC        
+ SRF variables written at  2024-09-16 21:00:00 UTC        
+ RAD variables written at  2024-09-16 21:00:00 UTC        
+ $$$  2024-09-16 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.56  497.97
+ CLM History variables written
+ ATM variables written at  2024-09-16 22:00:00 UTC        
+ SRF variables written at  2024-09-16 22:00:00 UTC        
+ RAD variables written at  2024-09-16 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-16 23:00:00 UTC        
+ SRF variables written at  2024-09-16 23:00:00 UTC        
+ RAD variables written at  2024-09-16 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-17 00:00:00 UTC        
+ JDay    260.00000 solar declination angle =   2.62616016 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-17 00:00:00 UTC        
+ SRF variables written at  2024-09-17 00:00:00 UTC        
+ STS variables written at  2024-09-17 00:00:00 UTC        
+ RAD variables written at  2024-09-17 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024091700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024091700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024091700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024091700.nc
+ Elapsed seconds of run for this period :    818.4492    
+ SEARCH BC data for 2024091706 , step =  6810240
+ READY  BC from     2024091700  to 2024091706 
+ $$$  2024-09-17 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.74  497.83
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.101E-15
+    0.143E-12  0.349E-11  0.253E-10  0.102E-09  0.288E-09  0.645E-09  0.123E-08
+    0.207E-08  0.317E-08  0.450E-08  0.603E-08  0.767E-08  0.935E-08  0.110E-07
+    0.126E-07  0.140E-07  0.152E-07  0.162E-07  0.169E-07  0.174E-07  0.176E-07
+    0.176E-07  0.174E-07  0.170E-07  0.164E-07  0.157E-07  0.148E-07  0.139E-07
+    0.139E-07  0.128E-07  0.116E-07  0.104E-07  0.904E-08  0.746E-08  0.521E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.160      0.160      0.159      0.158    
+    0.158      0.157      0.157      0.156      0.156      0.156      0.155    
+    0.155      0.154      0.154      0.154      0.154      0.153      0.153    
+    0.153      0.152      0.152      0.152      0.152      0.151      0.151    
+    0.151      0.151      0.150      0.150      0.149      0.149      0.147    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-17 01:00:00 UTC        
+ SRF variables written at  2024-09-17 01:00:00 UTC        
+ RAD variables written at  2024-09-17 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 02:00:00 UTC        
+ SRF variables written at  2024-09-17 02:00:00 UTC        
+ RAD variables written at  2024-09-17 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 03:00:00 UTC        
+ SRF variables written at  2024-09-17 03:00:00 UTC        
+ RAD variables written at  2024-09-17 03:00:00 UTC        
+ $$$  2024-09-17 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.08  496.74
+ CLM History variables written
+ ATM variables written at  2024-09-17 04:00:00 UTC        
+ SRF variables written at  2024-09-17 04:00:00 UTC        
+ RAD variables written at  2024-09-17 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 05:00:00 UTC        
+ SRF variables written at  2024-09-17 05:00:00 UTC        
+ RAD variables written at  2024-09-17 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 06:00:00 UTC        
+ SRF variables written at  2024-09-17 06:00:00 UTC        
+ RAD variables written at  2024-09-17 06:00:00 UTC        
+ SEARCH BC data for 2024091712 , step =  6810720
+ READY  BC from     2024091706  to 2024091712 
+ $$$  2024-09-17 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.45  495.71
+ CLM History variables written
+ ATM variables written at  2024-09-17 07:00:00 UTC        
+ SRF variables written at  2024-09-17 07:00:00 UTC        
+ RAD variables written at  2024-09-17 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 08:00:00 UTC        
+ SRF variables written at  2024-09-17 08:00:00 UTC        
+ RAD variables written at  2024-09-17 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 09:00:00 UTC        
+ SRF variables written at  2024-09-17 09:00:00 UTC        
+ RAD variables written at  2024-09-17 09:00:00 UTC        
+ $$$  2024-09-17 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.74  495.19
+ CLM History variables written
+ ATM variables written at  2024-09-17 10:00:00 UTC        
+ SRF variables written at  2024-09-17 10:00:00 UTC        
+ RAD variables written at  2024-09-17 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 11:00:00 UTC        
+ SRF variables written at  2024-09-17 11:00:00 UTC        
+ RAD variables written at  2024-09-17 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 12:00:00 UTC        
+ SRF variables written at  2024-09-17 12:00:00 UTC        
+ RAD variables written at  2024-09-17 12:00:00 UTC        
+ SEARCH BC data for 2024091718 , step =  6811200
+ READY  BC from     2024091712  to 2024091718 
+ $$$  2024-09-17 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.37  494.46
+ CLM History variables written
+ ATM variables written at  2024-09-17 13:00:00 UTC        
+ SRF variables written at  2024-09-17 13:00:00 UTC        
+ RAD variables written at  2024-09-17 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 14:00:00 UTC        
+ SRF variables written at  2024-09-17 14:00:00 UTC        
+ RAD variables written at  2024-09-17 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 15:00:00 UTC        
+ SRF variables written at  2024-09-17 15:00:00 UTC        
+ RAD variables written at  2024-09-17 15:00:00 UTC        
+ $$$  2024-09-17 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.96  493.30
+ CLM History variables written
+ ATM variables written at  2024-09-17 16:00:00 UTC        
+ SRF variables written at  2024-09-17 16:00:00 UTC        
+ RAD variables written at  2024-09-17 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 17:00:00 UTC        
+ SRF variables written at  2024-09-17 17:00:00 UTC        
+ RAD variables written at  2024-09-17 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 18:00:00 UTC        
+ SRF variables written at  2024-09-17 18:00:00 UTC        
+ RAD variables written at  2024-09-17 18:00:00 UTC        
+ SEARCH BC data for 2024091800 , step =  6811680
+ READY  BC from     2024091718  to 2024091800 
+ $$$  2024-09-17 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.76  492.40
+ CLM History variables written
+ ATM variables written at  2024-09-17 19:00:00 UTC        
+ SRF variables written at  2024-09-17 19:00:00 UTC        
+ RAD variables written at  2024-09-17 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 20:00:00 UTC        
+ SRF variables written at  2024-09-17 20:00:00 UTC        
+ RAD variables written at  2024-09-17 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 21:00:00 UTC        
+ SRF variables written at  2024-09-17 21:00:00 UTC        
+ RAD variables written at  2024-09-17 21:00:00 UTC        
+ $$$  2024-09-17 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.32  491.86
+ CLM History variables written
+ ATM variables written at  2024-09-17 22:00:00 UTC        
+ SRF variables written at  2024-09-17 22:00:00 UTC        
+ RAD variables written at  2024-09-17 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-17 23:00:00 UTC        
+ SRF variables written at  2024-09-17 23:00:00 UTC        
+ RAD variables written at  2024-09-17 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-18 00:00:00 UTC        
+ JDay    261.00000 solar declination angle =   2.24045102 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-18 00:00:00 UTC        
+ SRF variables written at  2024-09-18 00:00:00 UTC        
+ STS variables written at  2024-09-18 00:00:00 UTC        
+ RAD variables written at  2024-09-18 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024091800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024091800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024091800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024091800.nc
+ Elapsed seconds of run for this period :    814.6328    
+ SEARCH BC data for 2024091806 , step =  6812160
+ READY  BC from     2024091800  to 2024091806 
+ $$$  2024-09-18 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.14  490.87
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.995E-16
+    0.141E-12  0.344E-11  0.250E-10  0.100E-09  0.283E-09  0.634E-09  0.121E-08
+    0.203E-08  0.311E-08  0.442E-08  0.590E-08  0.751E-08  0.916E-08  0.108E-07
+    0.123E-07  0.137E-07  0.148E-07  0.158E-07  0.165E-07  0.170E-07  0.172E-07
+    0.172E-07  0.170E-07  0.166E-07  0.160E-07  0.153E-07  0.144E-07  0.135E-07
+    0.135E-07  0.124E-07  0.113E-07  0.101E-07  0.878E-08  0.724E-08  0.505E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.161      0.160      0.160      0.159    
+    0.158      0.158      0.157      0.157      0.157      0.156      0.156    
+    0.156      0.155      0.155      0.155      0.154      0.154      0.154    
+    0.154      0.153      0.153      0.153      0.152      0.152      0.152    
+    0.152      0.152      0.151      0.151      0.150      0.150      0.148    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-18 01:00:00 UTC        
+ SRF variables written at  2024-09-18 01:00:00 UTC        
+ RAD variables written at  2024-09-18 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 02:00:00 UTC        
+ SRF variables written at  2024-09-18 02:00:00 UTC        
+ RAD variables written at  2024-09-18 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 03:00:00 UTC        
+ SRF variables written at  2024-09-18 03:00:00 UTC        
+ RAD variables written at  2024-09-18 03:00:00 UTC        
+ $$$  2024-09-18 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.20  489.16
+ CLM History variables written
+ ATM variables written at  2024-09-18 04:00:00 UTC        
+ SRF variables written at  2024-09-18 04:00:00 UTC        
+ RAD variables written at  2024-09-18 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 05:00:00 UTC        
+ SRF variables written at  2024-09-18 05:00:00 UTC        
+ RAD variables written at  2024-09-18 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 06:00:00 UTC        
+ SRF variables written at  2024-09-18 06:00:00 UTC        
+ RAD variables written at  2024-09-18 06:00:00 UTC        
+ SEARCH BC data for 2024091812 , step =  6812640
+ READY  BC from     2024091806  to 2024091812 
+ $$$  2024-09-18 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.32  487.55
+ CLM History variables written
+ ATM variables written at  2024-09-18 07:00:00 UTC        
+ SRF variables written at  2024-09-18 07:00:00 UTC        
+ RAD variables written at  2024-09-18 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 08:00:00 UTC        
+ SRF variables written at  2024-09-18 08:00:00 UTC        
+ RAD variables written at  2024-09-18 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 09:00:00 UTC        
+ SRF variables written at  2024-09-18 09:00:00 UTC        
+ RAD variables written at  2024-09-18 09:00:00 UTC        
+ $$$  2024-09-18 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.58  486.27
+ CLM History variables written
+ ATM variables written at  2024-09-18 10:00:00 UTC        
+ SRF variables written at  2024-09-18 10:00:00 UTC        
+ RAD variables written at  2024-09-18 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 11:00:00 UTC        
+ SRF variables written at  2024-09-18 11:00:00 UTC        
+ RAD variables written at  2024-09-18 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 12:00:00 UTC        
+ SRF variables written at  2024-09-18 12:00:00 UTC        
+ RAD variables written at  2024-09-18 12:00:00 UTC        
+ SEARCH BC data for 2024091818 , step =  6813120
+ READY  BC from     2024091812  to 2024091818 
+ $$$  2024-09-18 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.89  485.07
+ CLM History variables written
+ ATM variables written at  2024-09-18 13:00:00 UTC        
+ SRF variables written at  2024-09-18 13:00:00 UTC        
+ RAD variables written at  2024-09-18 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 14:00:00 UTC        
+ SRF variables written at  2024-09-18 14:00:00 UTC        
+ RAD variables written at  2024-09-18 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 15:00:00 UTC        
+ SRF variables written at  2024-09-18 15:00:00 UTC        
+ RAD variables written at  2024-09-18 15:00:00 UTC        
+ $$$  2024-09-18 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.41  484.03
+ CLM History variables written
+ ATM variables written at  2024-09-18 16:00:00 UTC        
+ SRF variables written at  2024-09-18 16:00:00 UTC        
+ RAD variables written at  2024-09-18 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 17:00:00 UTC        
+ SRF variables written at  2024-09-18 17:00:00 UTC        
+ RAD variables written at  2024-09-18 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 18:00:00 UTC        
+ SRF variables written at  2024-09-18 18:00:00 UTC        
+ RAD variables written at  2024-09-18 18:00:00 UTC        
+ SEARCH BC data for 2024091900 , step =  6813600
+ READY  BC from     2024091818  to 2024091900 
+ $$$  2024-09-18 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.67  483.89
+ CLM History variables written
+ ATM variables written at  2024-09-18 19:00:00 UTC        
+ SRF variables written at  2024-09-18 19:00:00 UTC        
+ RAD variables written at  2024-09-18 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 20:00:00 UTC        
+ SRF variables written at  2024-09-18 20:00:00 UTC        
+ RAD variables written at  2024-09-18 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 21:00:00 UTC        
+ SRF variables written at  2024-09-18 21:00:00 UTC        
+ RAD variables written at  2024-09-18 21:00:00 UTC        
+ $$$  2024-09-18 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.62  484.29
+ CLM History variables written
+ ATM variables written at  2024-09-18 22:00:00 UTC        
+ SRF variables written at  2024-09-18 22:00:00 UTC        
+ RAD variables written at  2024-09-18 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-18 23:00:00 UTC        
+ SRF variables written at  2024-09-18 23:00:00 UTC        
+ RAD variables written at  2024-09-18 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-19 00:00:00 UTC        
+ JDay    262.00000 solar declination angle =   1.85398640 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-19 00:00:00 UTC        
+ SRF variables written at  2024-09-19 00:00:00 UTC        
+ STS variables written at  2024-09-19 00:00:00 UTC        
+ RAD variables written at  2024-09-19 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024091900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024091900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024091900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024091900.nc
+ Elapsed seconds of run for this period :    816.1250    
+ SEARCH BC data for 2024091906 , step =  6814080
+ READY  BC from     2024091900  to 2024091906 
+ $$$  2024-09-19 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.61  484.10
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.995E-16
+    0.141E-12  0.344E-11  0.250E-10  0.100E-09  0.283E-09  0.634E-09  0.121E-08
+    0.203E-08  0.311E-08  0.442E-08  0.590E-08  0.751E-08  0.916E-08  0.108E-07
+    0.123E-07  0.137E-07  0.148E-07  0.158E-07  0.165E-07  0.170E-07  0.172E-07
+    0.172E-07  0.170E-07  0.166E-07  0.160E-07  0.153E-07  0.144E-07  0.135E-07
+    0.135E-07  0.124E-07  0.113E-07  0.101E-07  0.878E-08  0.724E-08  0.505E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.161      0.160      0.160      0.159    
+    0.158      0.158      0.157      0.157      0.157      0.156      0.156    
+    0.156      0.155      0.155      0.155      0.154      0.154      0.154    
+    0.154      0.153      0.153      0.153      0.152      0.152      0.152    
+    0.152      0.152      0.151      0.151      0.150      0.150      0.148    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-19 01:00:00 UTC        
+ SRF variables written at  2024-09-19 01:00:00 UTC        
+ RAD variables written at  2024-09-19 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 02:00:00 UTC        
+ SRF variables written at  2024-09-19 02:00:00 UTC        
+ RAD variables written at  2024-09-19 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 03:00:00 UTC        
+ SRF variables written at  2024-09-19 03:00:00 UTC        
+ RAD variables written at  2024-09-19 03:00:00 UTC        
+ $$$  2024-09-19 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.77  482.93
+ CLM History variables written
+ ATM variables written at  2024-09-19 04:00:00 UTC        
+ SRF variables written at  2024-09-19 04:00:00 UTC        
+ RAD variables written at  2024-09-19 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 05:00:00 UTC        
+ SRF variables written at  2024-09-19 05:00:00 UTC        
+ RAD variables written at  2024-09-19 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 06:00:00 UTC        
+ SRF variables written at  2024-09-19 06:00:00 UTC        
+ RAD variables written at  2024-09-19 06:00:00 UTC        
+ SEARCH BC data for 2024091912 , step =  6814560
+ READY  BC from     2024091906  to 2024091912 
+ $$$  2024-09-19 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.75  481.66
+ CLM History variables written
+ ATM variables written at  2024-09-19 07:00:00 UTC        
+ SRF variables written at  2024-09-19 07:00:00 UTC        
+ RAD variables written at  2024-09-19 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 08:00:00 UTC        
+ SRF variables written at  2024-09-19 08:00:00 UTC        
+ RAD variables written at  2024-09-19 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 09:00:00 UTC        
+ SRF variables written at  2024-09-19 09:00:00 UTC        
+ RAD variables written at  2024-09-19 09:00:00 UTC        
+ $$$  2024-09-19 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.12  481.61
+ CLM History variables written
+ ATM variables written at  2024-09-19 10:00:00 UTC        
+ SRF variables written at  2024-09-19 10:00:00 UTC        
+ RAD variables written at  2024-09-19 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 11:00:00 UTC        
+ SRF variables written at  2024-09-19 11:00:00 UTC        
+ RAD variables written at  2024-09-19 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 12:00:00 UTC        
+ SRF variables written at  2024-09-19 12:00:00 UTC        
+ RAD variables written at  2024-09-19 12:00:00 UTC        
+ SEARCH BC data for 2024091918 , step =  6815040
+ READY  BC from     2024091912  to 2024091918 
+ $$$  2024-09-19 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.31  481.50
+ CLM History variables written
+ ATM variables written at  2024-09-19 13:00:00 UTC        
+ SRF variables written at  2024-09-19 13:00:00 UTC        
+ RAD variables written at  2024-09-19 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 14:00:00 UTC        
+ SRF variables written at  2024-09-19 14:00:00 UTC        
+ RAD variables written at  2024-09-19 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 15:00:00 UTC        
+ SRF variables written at  2024-09-19 15:00:00 UTC        
+ RAD variables written at  2024-09-19 15:00:00 UTC        
+ $$$  2024-09-19 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.16  481.94
+ CLM History variables written
+ ATM variables written at  2024-09-19 16:00:00 UTC        
+ SRF variables written at  2024-09-19 16:00:00 UTC        
+ RAD variables written at  2024-09-19 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 17:00:00 UTC        
+ SRF variables written at  2024-09-19 17:00:00 UTC        
+ RAD variables written at  2024-09-19 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 18:00:00 UTC        
+ SRF variables written at  2024-09-19 18:00:00 UTC        
+ RAD variables written at  2024-09-19 18:00:00 UTC        
+ SEARCH BC data for 2024092000 , step =  6815520
+ READY  BC from     2024091918  to 2024092000 
+ $$$  2024-09-19 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.95  482.84
+ CLM History variables written
+ ATM variables written at  2024-09-19 19:00:00 UTC        
+ SRF variables written at  2024-09-19 19:00:00 UTC        
+ RAD variables written at  2024-09-19 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 20:00:00 UTC        
+ SRF variables written at  2024-09-19 20:00:00 UTC        
+ RAD variables written at  2024-09-19 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 21:00:00 UTC        
+ SRF variables written at  2024-09-19 21:00:00 UTC        
+ RAD variables written at  2024-09-19 21:00:00 UTC        
+ $$$  2024-09-19 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.33  483.35
+ CLM History variables written
+ ATM variables written at  2024-09-19 22:00:00 UTC        
+ SRF variables written at  2024-09-19 22:00:00 UTC        
+ RAD variables written at  2024-09-19 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-19 23:00:00 UTC        
+ SRF variables written at  2024-09-19 23:00:00 UTC        
+ RAD variables written at  2024-09-19 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-20 00:00:00 UTC        
+ JDay    263.00000 solar declination angle =   1.46685881 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-20 00:00:00 UTC        
+ SRF variables written at  2024-09-20 00:00:00 UTC        
+ STS variables written at  2024-09-20 00:00:00 UTC        
+ RAD variables written at  2024-09-20 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024092000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024092000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024092000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024092000.nc
+ Elapsed seconds of run for this period :    815.5469    
+ SEARCH BC data for 2024092006 , step =  6816000
+ READY  BC from     2024092000  to 2024092006 
+ $$$  2024-09-20 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.77  483.09
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.995E-16
+    0.141E-12  0.344E-11  0.250E-10  0.100E-09  0.283E-09  0.634E-09  0.121E-08
+    0.203E-08  0.311E-08  0.442E-08  0.590E-08  0.751E-08  0.916E-08  0.108E-07
+    0.123E-07  0.137E-07  0.148E-07  0.158E-07  0.165E-07  0.170E-07  0.172E-07
+    0.172E-07  0.170E-07  0.166E-07  0.160E-07  0.153E-07  0.144E-07  0.135E-07
+    0.135E-07  0.124E-07  0.113E-07  0.101E-07  0.878E-08  0.724E-08  0.505E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.161      0.160      0.160      0.159    
+    0.158      0.158      0.157      0.157      0.157      0.156      0.156    
+    0.156      0.155      0.155      0.155      0.154      0.154      0.154    
+    0.154      0.153      0.153      0.153      0.152      0.152      0.152    
+    0.152      0.152      0.151      0.151      0.150      0.150      0.148    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-20 01:00:00 UTC        
+ SRF variables written at  2024-09-20 01:00:00 UTC        
+ RAD variables written at  2024-09-20 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 02:00:00 UTC        
+ SRF variables written at  2024-09-20 02:00:00 UTC        
+ RAD variables written at  2024-09-20 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 03:00:00 UTC        
+ SRF variables written at  2024-09-20 03:00:00 UTC        
+ RAD variables written at  2024-09-20 03:00:00 UTC        
+ $$$  2024-09-20 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.70  481.65
+ CLM History variables written
+ ATM variables written at  2024-09-20 04:00:00 UTC        
+ SRF variables written at  2024-09-20 04:00:00 UTC        
+ RAD variables written at  2024-09-20 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 05:00:00 UTC        
+ SRF variables written at  2024-09-20 05:00:00 UTC        
+ RAD variables written at  2024-09-20 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 06:00:00 UTC        
+ SRF variables written at  2024-09-20 06:00:00 UTC        
+ RAD variables written at  2024-09-20 06:00:00 UTC        
+ SEARCH BC data for 2024092012 , step =  6816480
+ READY  BC from     2024092006  to 2024092012 
+ $$$  2024-09-20 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.84  480.53
+ CLM History variables written
+ ATM variables written at  2024-09-20 07:00:00 UTC        
+ SRF variables written at  2024-09-20 07:00:00 UTC        
+ RAD variables written at  2024-09-20 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 08:00:00 UTC        
+ SRF variables written at  2024-09-20 08:00:00 UTC        
+ RAD variables written at  2024-09-20 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 09:00:00 UTC        
+ SRF variables written at  2024-09-20 09:00:00 UTC        
+ RAD variables written at  2024-09-20 09:00:00 UTC        
+ $$$  2024-09-20 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.40  480.29
+ CLM History variables written
+ ATM variables written at  2024-09-20 10:00:00 UTC        
+ SRF variables written at  2024-09-20 10:00:00 UTC        
+ RAD variables written at  2024-09-20 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 11:00:00 UTC        
+ SRF variables written at  2024-09-20 11:00:00 UTC        
+ RAD variables written at  2024-09-20 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 12:00:00 UTC        
+ SRF variables written at  2024-09-20 12:00:00 UTC        
+ RAD variables written at  2024-09-20 12:00:00 UTC        
+ SEARCH BC data for 2024092018 , step =  6816960
+ READY  BC from     2024092012  to 2024092018 
+ $$$  2024-09-20 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.29  479.91
+ CLM History variables written
+ ATM variables written at  2024-09-20 13:00:00 UTC        
+ SRF variables written at  2024-09-20 13:00:00 UTC        
+ RAD variables written at  2024-09-20 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 14:00:00 UTC        
+ SRF variables written at  2024-09-20 14:00:00 UTC        
+ RAD variables written at  2024-09-20 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 15:00:00 UTC        
+ SRF variables written at  2024-09-20 15:00:00 UTC        
+ RAD variables written at  2024-09-20 15:00:00 UTC        
+ $$$  2024-09-20 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.70  479.50
+ CLM History variables written
+ ATM variables written at  2024-09-20 16:00:00 UTC        
+ SRF variables written at  2024-09-20 16:00:00 UTC        
+ RAD variables written at  2024-09-20 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 17:00:00 UTC        
+ SRF variables written at  2024-09-20 17:00:00 UTC        
+ RAD variables written at  2024-09-20 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 18:00:00 UTC        
+ SRF variables written at  2024-09-20 18:00:00 UTC        
+ RAD variables written at  2024-09-20 18:00:00 UTC        
+ SEARCH BC data for 2024092100 , step =  6817440
+ READY  BC from     2024092018  to 2024092100 
+ $$$  2024-09-20 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.04  480.05
+ CLM History variables written
+ ATM variables written at  2024-09-20 19:00:00 UTC        
+ SRF variables written at  2024-09-20 19:00:00 UTC        
+ RAD variables written at  2024-09-20 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 20:00:00 UTC        
+ SRF variables written at  2024-09-20 20:00:00 UTC        
+ RAD variables written at  2024-09-20 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 21:00:00 UTC        
+ SRF variables written at  2024-09-20 21:00:00 UTC        
+ RAD variables written at  2024-09-20 21:00:00 UTC        
+ $$$  2024-09-20 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.82  480.94
+ CLM History variables written
+ ATM variables written at  2024-09-20 22:00:00 UTC        
+ SRF variables written at  2024-09-20 22:00:00 UTC        
+ RAD variables written at  2024-09-20 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-20 23:00:00 UTC        
+ SRF variables written at  2024-09-20 23:00:00 UTC        
+ RAD variables written at  2024-09-20 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-21 00:00:00 UTC        
+ JDay    264.00000 solar declination angle =   1.07916108 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-21 00:00:00 UTC        
+ SRF variables written at  2024-09-21 00:00:00 UTC        
+ STS variables written at  2024-09-21 00:00:00 UTC        
+ RAD variables written at  2024-09-21 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024092100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024092100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024092100.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024092100.nc
+ Elapsed seconds of run for this period :    809.3672    
+ SEARCH BC data for 2024092106 , step =  6817920
+ READY  BC from     2024092100  to 2024092106 
+ $$$  2024-09-21 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.85  481.92
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.995E-16
+    0.141E-12  0.344E-11  0.250E-10  0.100E-09  0.283E-09  0.634E-09  0.121E-08
+    0.203E-08  0.311E-08  0.442E-08  0.590E-08  0.751E-08  0.916E-08  0.108E-07
+    0.123E-07  0.137E-07  0.148E-07  0.158E-07  0.165E-07  0.170E-07  0.172E-07
+    0.172E-07  0.170E-07  0.166E-07  0.160E-07  0.153E-07  0.144E-07  0.135E-07
+    0.135E-07  0.124E-07  0.113E-07  0.101E-07  0.878E-08  0.724E-08  0.505E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.161      0.160      0.160      0.159    
+    0.158      0.158      0.157      0.157      0.157      0.156      0.156    
+    0.156      0.155      0.155      0.155      0.154      0.154      0.154    
+    0.154      0.153      0.153      0.153      0.152      0.152      0.152    
+    0.152      0.152      0.151      0.151      0.150      0.150      0.148    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-21 01:00:00 UTC        
+ SRF variables written at  2024-09-21 01:00:00 UTC        
+ RAD variables written at  2024-09-21 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 02:00:00 UTC        
+ SRF variables written at  2024-09-21 02:00:00 UTC        
+ RAD variables written at  2024-09-21 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 03:00:00 UTC        
+ SRF variables written at  2024-09-21 03:00:00 UTC        
+ RAD variables written at  2024-09-21 03:00:00 UTC        
+ $$$  2024-09-21 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.91  481.83
+ CLM History variables written
+ ATM variables written at  2024-09-21 04:00:00 UTC        
+ SRF variables written at  2024-09-21 04:00:00 UTC        
+ RAD variables written at  2024-09-21 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 05:00:00 UTC        
+ SRF variables written at  2024-09-21 05:00:00 UTC        
+ RAD variables written at  2024-09-21 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 06:00:00 UTC        
+ SRF variables written at  2024-09-21 06:00:00 UTC        
+ RAD variables written at  2024-09-21 06:00:00 UTC        
+ SEARCH BC data for 2024092112 , step =  6818400
+ READY  BC from     2024092106  to 2024092112 
+ $$$  2024-09-21 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.17  482.28
+ CLM History variables written
+ ATM variables written at  2024-09-21 07:00:00 UTC        
+ SRF variables written at  2024-09-21 07:00:00 UTC        
+ RAD variables written at  2024-09-21 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 08:00:00 UTC        
+ SRF variables written at  2024-09-21 08:00:00 UTC        
+ RAD variables written at  2024-09-21 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 09:00:00 UTC        
+ SRF variables written at  2024-09-21 09:00:00 UTC        
+ RAD variables written at  2024-09-21 09:00:00 UTC        
+ $$$  2024-09-21 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.41  483.74
+ CLM History variables written
+ ATM variables written at  2024-09-21 10:00:00 UTC        
+ SRF variables written at  2024-09-21 10:00:00 UTC        
+ RAD variables written at  2024-09-21 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 11:00:00 UTC        
+ SRF variables written at  2024-09-21 11:00:00 UTC        
+ RAD variables written at  2024-09-21 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 12:00:00 UTC        
+ SRF variables written at  2024-09-21 12:00:00 UTC        
+ RAD variables written at  2024-09-21 12:00:00 UTC        
+ SEARCH BC data for 2024092118 , step =  6818880
+ READY  BC from     2024092112  to 2024092118 
+ $$$  2024-09-21 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.27  485.12
+ CLM History variables written
+ ATM variables written at  2024-09-21 13:00:00 UTC        
+ SRF variables written at  2024-09-21 13:00:00 UTC        
+ RAD variables written at  2024-09-21 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 14:00:00 UTC        
+ SRF variables written at  2024-09-21 14:00:00 UTC        
+ RAD variables written at  2024-09-21 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 15:00:00 UTC        
+ SRF variables written at  2024-09-21 15:00:00 UTC        
+ RAD variables written at  2024-09-21 15:00:00 UTC        
+ $$$  2024-09-21 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.24  486.16
+ CLM History variables written
+ ATM variables written at  2024-09-21 16:00:00 UTC        
+ SRF variables written at  2024-09-21 16:00:00 UTC        
+ RAD variables written at  2024-09-21 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 17:00:00 UTC        
+ SRF variables written at  2024-09-21 17:00:00 UTC        
+ RAD variables written at  2024-09-21 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 18:00:00 UTC        
+ SRF variables written at  2024-09-21 18:00:00 UTC        
+ RAD variables written at  2024-09-21 18:00:00 UTC        
+ SEARCH BC data for 2024092200 , step =  6819360
+ READY  BC from     2024092118  to 2024092200 
+ $$$  2024-09-21 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.78  487.54
+ CLM History variables written
+ ATM variables written at  2024-09-21 19:00:00 UTC        
+ SRF variables written at  2024-09-21 19:00:00 UTC        
+ RAD variables written at  2024-09-21 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 20:00:00 UTC        
+ SRF variables written at  2024-09-21 20:00:00 UTC        
+ RAD variables written at  2024-09-21 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 21:00:00 UTC        
+ SRF variables written at  2024-09-21 21:00:00 UTC        
+ RAD variables written at  2024-09-21 21:00:00 UTC        
+ $$$  2024-09-21 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.73  488.97
+ CLM History variables written
+ ATM variables written at  2024-09-21 22:00:00 UTC        
+ SRF variables written at  2024-09-21 22:00:00 UTC        
+ RAD variables written at  2024-09-21 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-21 23:00:00 UTC        
+ SRF variables written at  2024-09-21 23:00:00 UTC        
+ RAD variables written at  2024-09-21 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-22 00:00:00 UTC        
+ JDay    265.00000 solar declination angle =   0.69098635 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-22 00:00:00 UTC        
+ SRF variables written at  2024-09-22 00:00:00 UTC        
+ STS variables written at  2024-09-22 00:00:00 UTC        
+ RAD variables written at  2024-09-22 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024092200.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024092200.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024092200.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024092200.nc
+ Elapsed seconds of run for this period :    814.8203    
+ SEARCH BC data for 2024092206 , step =  6819840
+ READY  BC from     2024092200  to 2024092206 
+ $$$  2024-09-22 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.77  490.00
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.995E-16
+    0.141E-12  0.344E-11  0.250E-10  0.100E-09  0.283E-09  0.634E-09  0.121E-08
+    0.203E-08  0.311E-08  0.442E-08  0.590E-08  0.751E-08  0.916E-08  0.108E-07
+    0.123E-07  0.137E-07  0.148E-07  0.158E-07  0.165E-07  0.170E-07  0.172E-07
+    0.172E-07  0.170E-07  0.166E-07  0.160E-07  0.153E-07  0.144E-07  0.135E-07
+    0.135E-07  0.124E-07  0.113E-07  0.101E-07  0.878E-08  0.724E-08  0.505E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.161      0.160      0.160      0.159    
+    0.158      0.158      0.157      0.157      0.157      0.156      0.156    
+    0.156      0.155      0.155      0.155      0.154      0.154      0.154    
+    0.154      0.153      0.153      0.153      0.152      0.152      0.152    
+    0.152      0.152      0.151      0.151      0.150      0.150      0.148    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-22 01:00:00 UTC        
+ SRF variables written at  2024-09-22 01:00:00 UTC        
+ RAD variables written at  2024-09-22 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 02:00:00 UTC        
+ SRF variables written at  2024-09-22 02:00:00 UTC        
+ RAD variables written at  2024-09-22 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 03:00:00 UTC        
+ SRF variables written at  2024-09-22 03:00:00 UTC        
+ RAD variables written at  2024-09-22 03:00:00 UTC        
+ $$$  2024-09-22 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.97  490.20
+ CLM History variables written
+ ATM variables written at  2024-09-22 04:00:00 UTC        
+ SRF variables written at  2024-09-22 04:00:00 UTC        
+ RAD variables written at  2024-09-22 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 05:00:00 UTC        
+ SRF variables written at  2024-09-22 05:00:00 UTC        
+ RAD variables written at  2024-09-22 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 06:00:00 UTC        
+ SRF variables written at  2024-09-22 06:00:00 UTC        
+ RAD variables written at  2024-09-22 06:00:00 UTC        
+ SEARCH BC data for 2024092212 , step =  6820320
+ READY  BC from     2024092206  to 2024092212 
+ $$$  2024-09-22 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.18  490.24
+ CLM History variables written
+ ATM variables written at  2024-09-22 07:00:00 UTC        
+ SRF variables written at  2024-09-22 07:00:00 UTC        
+ RAD variables written at  2024-09-22 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 08:00:00 UTC        
+ SRF variables written at  2024-09-22 08:00:00 UTC        
+ RAD variables written at  2024-09-22 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 09:00:00 UTC        
+ SRF variables written at  2024-09-22 09:00:00 UTC        
+ RAD variables written at  2024-09-22 09:00:00 UTC        
+ $$$  2024-09-22 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.92  490.59
+ CLM History variables written
+ ATM variables written at  2024-09-22 10:00:00 UTC        
+ SRF variables written at  2024-09-22 10:00:00 UTC        
+ RAD variables written at  2024-09-22 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 11:00:00 UTC        
+ SRF variables written at  2024-09-22 11:00:00 UTC        
+ RAD variables written at  2024-09-22 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 12:00:00 UTC        
+ SRF variables written at  2024-09-22 12:00:00 UTC        
+ RAD variables written at  2024-09-22 12:00:00 UTC        
+ SEARCH BC data for 2024092218 , step =  6820800
+ READY  BC from     2024092212  to 2024092218 
+ $$$  2024-09-22 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.74  490.99
+ CLM History variables written
+ ATM variables written at  2024-09-22 13:00:00 UTC        
+ SRF variables written at  2024-09-22 13:00:00 UTC        
+ RAD variables written at  2024-09-22 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 14:00:00 UTC        
+ SRF variables written at  2024-09-22 14:00:00 UTC        
+ RAD variables written at  2024-09-22 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 15:00:00 UTC        
+ SRF variables written at  2024-09-22 15:00:00 UTC        
+ RAD variables written at  2024-09-22 15:00:00 UTC        
+ $$$  2024-09-22 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.12  490.89
+ CLM History variables written
+ ATM variables written at  2024-09-22 16:00:00 UTC        
+ SRF variables written at  2024-09-22 16:00:00 UTC        
+ RAD variables written at  2024-09-22 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 17:00:00 UTC        
+ SRF variables written at  2024-09-22 17:00:00 UTC        
+ RAD variables written at  2024-09-22 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 18:00:00 UTC        
+ SRF variables written at  2024-09-22 18:00:00 UTC        
+ RAD variables written at  2024-09-22 18:00:00 UTC        
+ SEARCH BC data for 2024092300 , step =  6821280
+ READY  BC from     2024092218  to 2024092300 
+ $$$  2024-09-22 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.43  491.01
+ CLM History variables written
+ ATM variables written at  2024-09-22 19:00:00 UTC        
+ SRF variables written at  2024-09-22 19:00:00 UTC        
+ RAD variables written at  2024-09-22 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 20:00:00 UTC        
+ SRF variables written at  2024-09-22 20:00:00 UTC        
+ RAD variables written at  2024-09-22 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 21:00:00 UTC        
+ SRF variables written at  2024-09-22 21:00:00 UTC        
+ RAD variables written at  2024-09-22 21:00:00 UTC        
+ $$$  2024-09-22 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.35  491.63
+ CLM History variables written
+ ATM variables written at  2024-09-22 22:00:00 UTC        
+ SRF variables written at  2024-09-22 22:00:00 UTC        
+ RAD variables written at  2024-09-22 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-22 23:00:00 UTC        
+ SRF variables written at  2024-09-22 23:00:00 UTC        
+ RAD variables written at  2024-09-22 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-23 00:00:00 UTC        
+ JDay    266.00000 solar declination angle =   0.30242810 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-23 00:00:00 UTC        
+ SRF variables written at  2024-09-23 00:00:00 UTC        
+ STS variables written at  2024-09-23 00:00:00 UTC        
+ RAD variables written at  2024-09-23 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024092300.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024092300.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024092300.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024092300.nc
+ Elapsed seconds of run for this period :    811.4531    
+ SEARCH BC data for 2024092306 , step =  6821760
+ READY  BC from     2024092300  to 2024092306 
+ $$$  2024-09-23 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.32  491.94
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.995E-16
+    0.141E-12  0.344E-11  0.250E-10  0.100E-09  0.283E-09  0.634E-09  0.121E-08
+    0.203E-08  0.311E-08  0.442E-08  0.590E-08  0.751E-08  0.916E-08  0.108E-07
+    0.123E-07  0.137E-07  0.148E-07  0.158E-07  0.165E-07  0.170E-07  0.172E-07
+    0.172E-07  0.170E-07  0.166E-07  0.160E-07  0.153E-07  0.144E-07  0.135E-07
+    0.135E-07  0.124E-07  0.113E-07  0.101E-07  0.878E-08  0.724E-08  0.505E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.161      0.160      0.160      0.159    
+    0.158      0.158      0.157      0.157      0.157      0.156      0.156    
+    0.156      0.155      0.155      0.155      0.154      0.154      0.154    
+    0.154      0.153      0.153      0.153      0.152      0.152      0.152    
+    0.152      0.152      0.151      0.151      0.150      0.150      0.148    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-23 01:00:00 UTC        
+ SRF variables written at  2024-09-23 01:00:00 UTC        
+ RAD variables written at  2024-09-23 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 02:00:00 UTC        
+ SRF variables written at  2024-09-23 02:00:00 UTC        
+ RAD variables written at  2024-09-23 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 03:00:00 UTC        
+ SRF variables written at  2024-09-23 03:00:00 UTC        
+ RAD variables written at  2024-09-23 03:00:00 UTC        
+ $$$  2024-09-23 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.67  491.59
+ CLM History variables written
+ ATM variables written at  2024-09-23 04:00:00 UTC        
+ SRF variables written at  2024-09-23 04:00:00 UTC        
+ RAD variables written at  2024-09-23 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 05:00:00 UTC        
+ SRF variables written at  2024-09-23 05:00:00 UTC        
+ RAD variables written at  2024-09-23 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 06:00:00 UTC        
+ SRF variables written at  2024-09-23 06:00:00 UTC        
+ RAD variables written at  2024-09-23 06:00:00 UTC        
+ SEARCH BC data for 2024092312 , step =  6822240
+ READY  BC from     2024092306  to 2024092312 
+ $$$  2024-09-23 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.03  491.35
+ CLM History variables written
+ ATM variables written at  2024-09-23 07:00:00 UTC        
+ SRF variables written at  2024-09-23 07:00:00 UTC        
+ RAD variables written at  2024-09-23 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 08:00:00 UTC        
+ SRF variables written at  2024-09-23 08:00:00 UTC        
+ RAD variables written at  2024-09-23 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 09:00:00 UTC        
+ SRF variables written at  2024-09-23 09:00:00 UTC        
+ RAD variables written at  2024-09-23 09:00:00 UTC        
+ $$$  2024-09-23 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.79  491.87
+ CLM History variables written
+ ATM variables written at  2024-09-23 10:00:00 UTC        
+ SRF variables written at  2024-09-23 10:00:00 UTC        
+ RAD variables written at  2024-09-23 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 11:00:00 UTC        
+ SRF variables written at  2024-09-23 11:00:00 UTC        
+ RAD variables written at  2024-09-23 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 12:00:00 UTC        
+ SRF variables written at  2024-09-23 12:00:00 UTC        
+ RAD variables written at  2024-09-23 12:00:00 UTC        
+ SEARCH BC data for 2024092318 , step =  6822720
+ READY  BC from     2024092312  to 2024092318 
+ $$$  2024-09-23 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.04  492.40
+ CLM History variables written
+ ATM variables written at  2024-09-23 13:00:00 UTC        
+ SRF variables written at  2024-09-23 13:00:00 UTC        
+ RAD variables written at  2024-09-23 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 14:00:00 UTC        
+ SRF variables written at  2024-09-23 14:00:00 UTC        
+ RAD variables written at  2024-09-23 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 15:00:00 UTC        
+ SRF variables written at  2024-09-23 15:00:00 UTC        
+ RAD variables written at  2024-09-23 15:00:00 UTC        
+ $$$  2024-09-23 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.52  492.44
+ CLM History variables written
+ ATM variables written at  2024-09-23 16:00:00 UTC        
+ SRF variables written at  2024-09-23 16:00:00 UTC        
+ RAD variables written at  2024-09-23 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 17:00:00 UTC        
+ SRF variables written at  2024-09-23 17:00:00 UTC        
+ RAD variables written at  2024-09-23 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 18:00:00 UTC        
+ SRF variables written at  2024-09-23 18:00:00 UTC        
+ RAD variables written at  2024-09-23 18:00:00 UTC        
+ SEARCH BC data for 2024092400 , step =  6823200
+ READY  BC from     2024092318  to 2024092400 
+ $$$  2024-09-23 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.41  492.77
+ CLM History variables written
+ ATM variables written at  2024-09-23 19:00:00 UTC        
+ SRF variables written at  2024-09-23 19:00:00 UTC        
+ RAD variables written at  2024-09-23 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 20:00:00 UTC        
+ SRF variables written at  2024-09-23 20:00:00 UTC        
+ RAD variables written at  2024-09-23 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 21:00:00 UTC        
+ SRF variables written at  2024-09-23 21:00:00 UTC        
+ RAD variables written at  2024-09-23 21:00:00 UTC        
+ $$$  2024-09-23 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.10  493.33
+ CLM History variables written
+ ATM variables written at  2024-09-23 22:00:00 UTC        
+ SRF variables written at  2024-09-23 22:00:00 UTC        
+ RAD variables written at  2024-09-23 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-23 23:00:00 UTC        
+ SRF variables written at  2024-09-23 23:00:00 UTC        
+ RAD variables written at  2024-09-23 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-24 00:00:00 UTC        
+ JDay    267.00000 solar declination angle =  -0.08641983 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-24 00:00:00 UTC        
+ SRF variables written at  2024-09-24 00:00:00 UTC        
+ STS variables written at  2024-09-24 00:00:00 UTC        
+ RAD variables written at  2024-09-24 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024092400.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024092400.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024092400.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024092400.nc
+ Elapsed seconds of run for this period :    1129.016    
+ SEARCH BC data for 2024092406 , step =  6823680
+ READY  BC from     2024092400  to 2024092406 
+ $$$  2024-09-24 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.44  493.39
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.995E-16
+    0.141E-12  0.344E-11  0.250E-10  0.100E-09  0.283E-09  0.634E-09  0.121E-08
+    0.203E-08  0.311E-08  0.442E-08  0.590E-08  0.751E-08  0.916E-08  0.108E-07
+    0.123E-07  0.137E-07  0.148E-07  0.158E-07  0.165E-07  0.170E-07  0.172E-07
+    0.172E-07  0.170E-07  0.166E-07  0.160E-07  0.153E-07  0.144E-07  0.135E-07
+    0.135E-07  0.124E-07  0.113E-07  0.101E-07  0.878E-08  0.724E-08  0.505E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.162      0.161      0.161      0.160      0.160      0.159    
+    0.158      0.158      0.157      0.157      0.157      0.156      0.156    
+    0.156      0.155      0.155      0.155      0.154      0.154      0.154    
+    0.154      0.153      0.153      0.153      0.152      0.152      0.152    
+    0.152      0.152      0.151      0.151      0.150      0.150      0.148    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-24 01:00:00 UTC        
+ SRF variables written at  2024-09-24 01:00:00 UTC        
+ RAD variables written at  2024-09-24 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 02:00:00 UTC        
+ SRF variables written at  2024-09-24 02:00:00 UTC        
+ RAD variables written at  2024-09-24 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 03:00:00 UTC        
+ SRF variables written at  2024-09-24 03:00:00 UTC        
+ RAD variables written at  2024-09-24 03:00:00 UTC        
+ $$$  2024-09-24 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.15  492.59
+ CLM History variables written
+ ATM variables written at  2024-09-24 04:00:00 UTC        
+ SRF variables written at  2024-09-24 04:00:00 UTC        
+ RAD variables written at  2024-09-24 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 05:00:00 UTC        
+ SRF variables written at  2024-09-24 05:00:00 UTC        
+ RAD variables written at  2024-09-24 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 06:00:00 UTC        
+ SRF variables written at  2024-09-24 06:00:00 UTC        
+ RAD variables written at  2024-09-24 06:00:00 UTC        
+ SEARCH BC data for 2024092412 , step =  6824160
+ READY  BC from     2024092406  to 2024092412 
+ $$$  2024-09-24 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.73  491.68
+ CLM History variables written
+ ATM variables written at  2024-09-24 07:00:00 UTC        
+ SRF variables written at  2024-09-24 07:00:00 UTC        
+ RAD variables written at  2024-09-24 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 08:00:00 UTC        
+ SRF variables written at  2024-09-24 08:00:00 UTC        
+ RAD variables written at  2024-09-24 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 09:00:00 UTC        
+ SRF variables written at  2024-09-24 09:00:00 UTC        
+ RAD variables written at  2024-09-24 09:00:00 UTC        
+ $$$  2024-09-24 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.79  491.38
+ CLM History variables written
+ ATM variables written at  2024-09-24 10:00:00 UTC        
+ SRF variables written at  2024-09-24 10:00:00 UTC        
+ RAD variables written at  2024-09-24 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 11:00:00 UTC        
+ SRF variables written at  2024-09-24 11:00:00 UTC        
+ RAD variables written at  2024-09-24 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 12:00:00 UTC        
+ SRF variables written at  2024-09-24 12:00:00 UTC        
+ RAD variables written at  2024-09-24 12:00:00 UTC        
+ SEARCH BC data for 2024092418 , step =  6824640
+ READY  BC from     2024092412  to 2024092418 
+ $$$  2024-09-24 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.37  490.86
+ CLM History variables written
+ ATM variables written at  2024-09-24 13:00:00 UTC        
+ SRF variables written at  2024-09-24 13:00:00 UTC        
+ RAD variables written at  2024-09-24 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 14:00:00 UTC        
+ SRF variables written at  2024-09-24 14:00:00 UTC        
+ RAD variables written at  2024-09-24 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 15:00:00 UTC        
+ SRF variables written at  2024-09-24 15:00:00 UTC        
+ RAD variables written at  2024-09-24 15:00:00 UTC        
+ $$$  2024-09-24 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.03  490.01
+ CLM History variables written
+ ATM variables written at  2024-09-24 16:00:00 UTC        
+ SRF variables written at  2024-09-24 16:00:00 UTC        
+ RAD variables written at  2024-09-24 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 17:00:00 UTC        
+ SRF variables written at  2024-09-24 17:00:00 UTC        
+ RAD variables written at  2024-09-24 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 18:00:00 UTC        
+ SRF variables written at  2024-09-24 18:00:00 UTC        
+ RAD variables written at  2024-09-24 18:00:00 UTC        
+ SEARCH BC data for 2024092500 , step =  6825120
+ READY  BC from     2024092418  to 2024092500 
+ $$$  2024-09-24 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.65  489.69
+ CLM History variables written
+ ATM variables written at  2024-09-24 19:00:00 UTC        
+ SRF variables written at  2024-09-24 19:00:00 UTC        
+ RAD variables written at  2024-09-24 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 20:00:00 UTC        
+ SRF variables written at  2024-09-24 20:00:00 UTC        
+ RAD variables written at  2024-09-24 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 21:00:00 UTC        
+ SRF variables written at  2024-09-24 21:00:00 UTC        
+ RAD variables written at  2024-09-24 21:00:00 UTC        
+ $$$  2024-09-24 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.13  489.99
+ CLM History variables written
+ ATM variables written at  2024-09-24 22:00:00 UTC        
+ SRF variables written at  2024-09-24 22:00:00 UTC        
+ RAD variables written at  2024-09-24 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-24 23:00:00 UTC        
+ SRF variables written at  2024-09-24 23:00:00 UTC        
+ RAD variables written at  2024-09-24 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-25 00:00:00 UTC        
+ JDay    268.00000 solar declination angle =  -0.47546324 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-25 00:00:00 UTC        
+ SRF variables written at  2024-09-25 00:00:00 UTC        
+ STS variables written at  2024-09-25 00:00:00 UTC        
+ RAD variables written at  2024-09-25 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024092500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024092500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024092500.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024092500.nc
+ Elapsed seconds of run for this period :    1001.594    
+ SEARCH BC data for 2024092506 , step =  6825600
+ READY  BC from     2024092500  to 2024092506 
+ $$$  2024-09-25 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.70  489.52
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.983E-16
+    0.140E-12  0.339E-11  0.245E-10  0.983E-10  0.278E-09  0.621E-09  0.118E-08
+    0.198E-08  0.304E-08  0.431E-08  0.576E-08  0.732E-08  0.891E-08  0.105E-07
+    0.120E-07  0.133E-07  0.144E-07  0.153E-07  0.160E-07  0.164E-07  0.167E-07
+    0.166E-07  0.164E-07  0.160E-07  0.155E-07  0.148E-07  0.139E-07  0.130E-07
+    0.130E-07  0.120E-07  0.109E-07  0.975E-08  0.845E-08  0.696E-08  0.484E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.163      0.162      0.161      0.161      0.160      0.160    
+    0.159      0.159      0.158      0.158      0.158      0.157      0.157    
+    0.157      0.156      0.156      0.156      0.156      0.155      0.155    
+    0.155      0.155      0.154      0.154      0.154      0.154      0.153    
+    0.153      0.153      0.153      0.152      0.152      0.151      0.150    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-25 01:00:00 UTC        
+ SRF variables written at  2024-09-25 01:00:00 UTC        
+ RAD variables written at  2024-09-25 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 02:00:00 UTC        
+ SRF variables written at  2024-09-25 02:00:00 UTC        
+ RAD variables written at  2024-09-25 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 03:00:00 UTC        
+ SRF variables written at  2024-09-25 03:00:00 UTC        
+ RAD variables written at  2024-09-25 03:00:00 UTC        
+ $$$  2024-09-25 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.86  488.75
+ CLM History variables written
+ ATM variables written at  2024-09-25 04:00:00 UTC        
+ SRF variables written at  2024-09-25 04:00:00 UTC        
+ RAD variables written at  2024-09-25 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 05:00:00 UTC        
+ SRF variables written at  2024-09-25 05:00:00 UTC        
+ RAD variables written at  2024-09-25 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 06:00:00 UTC        
+ SRF variables written at  2024-09-25 06:00:00 UTC        
+ RAD variables written at  2024-09-25 06:00:00 UTC        
+ SEARCH BC data for 2024092512 , step =  6826080
+ READY  BC from     2024092506  to 2024092512 
+ $$$  2024-09-25 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.44  488.69
+ CLM History variables written
+ ATM variables written at  2024-09-25 07:00:00 UTC        
+ SRF variables written at  2024-09-25 07:00:00 UTC        
+ RAD variables written at  2024-09-25 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 08:00:00 UTC        
+ SRF variables written at  2024-09-25 08:00:00 UTC        
+ RAD variables written at  2024-09-25 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 09:00:00 UTC        
+ SRF variables written at  2024-09-25 09:00:00 UTC        
+ RAD variables written at  2024-09-25 09:00:00 UTC        
+ $$$  2024-09-25 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.61  490.03
+ CLM History variables written
+ ATM variables written at  2024-09-25 10:00:00 UTC        
+ SRF variables written at  2024-09-25 10:00:00 UTC        
+ RAD variables written at  2024-09-25 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 11:00:00 UTC        
+ SRF variables written at  2024-09-25 11:00:00 UTC        
+ RAD variables written at  2024-09-25 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 12:00:00 UTC        
+ SRF variables written at  2024-09-25 12:00:00 UTC        
+ RAD variables written at  2024-09-25 12:00:00 UTC        
+ SEARCH BC data for 2024092518 , step =  6826560
+ READY  BC from     2024092512  to 2024092518 
+ $$$  2024-09-25 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1023.68  491.26
+ CLM History variables written
+ ATM variables written at  2024-09-25 13:00:00 UTC        
+ SRF variables written at  2024-09-25 13:00:00 UTC        
+ RAD variables written at  2024-09-25 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 14:00:00 UTC        
+ SRF variables written at  2024-09-25 14:00:00 UTC        
+ RAD variables written at  2024-09-25 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 15:00:00 UTC        
+ SRF variables written at  2024-09-25 15:00:00 UTC        
+ RAD variables written at  2024-09-25 15:00:00 UTC        
+ $$$  2024-09-25 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.87  492.10
+ CLM History variables written
+ ATM variables written at  2024-09-25 16:00:00 UTC        
+ SRF variables written at  2024-09-25 16:00:00 UTC        
+ RAD variables written at  2024-09-25 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 17:00:00 UTC        
+ SRF variables written at  2024-09-25 17:00:00 UTC        
+ RAD variables written at  2024-09-25 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 18:00:00 UTC        
+ SRF variables written at  2024-09-25 18:00:00 UTC        
+ RAD variables written at  2024-09-25 18:00:00 UTC        
+ SEARCH BC data for 2024092600 , step =  6827040
+ READY  BC from     2024092518  to 2024092600 
+ $$$  2024-09-25 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1020.17  493.27
+ CLM History variables written
+ ATM variables written at  2024-09-25 19:00:00 UTC        
+ SRF variables written at  2024-09-25 19:00:00 UTC        
+ RAD variables written at  2024-09-25 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 20:00:00 UTC        
+ SRF variables written at  2024-09-25 20:00:00 UTC        
+ RAD variables written at  2024-09-25 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 21:00:00 UTC        
+ SRF variables written at  2024-09-25 21:00:00 UTC        
+ RAD variables written at  2024-09-25 21:00:00 UTC        
+ $$$  2024-09-25 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.17  494.59
+ CLM History variables written
+ ATM variables written at  2024-09-25 22:00:00 UTC        
+ SRF variables written at  2024-09-25 22:00:00 UTC        
+ RAD variables written at  2024-09-25 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-25 23:00:00 UTC        
+ SRF variables written at  2024-09-25 23:00:00 UTC        
+ RAD variables written at  2024-09-25 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-26 00:00:00 UTC        
+ JDay    269.00000 solar declination angle =  -0.86460757 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-26 00:00:00 UTC        
+ SRF variables written at  2024-09-26 00:00:00 UTC        
+ STS variables written at  2024-09-26 00:00:00 UTC        
+ RAD variables written at  2024-09-26 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024092600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024092600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024092600.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024092600.nc
+ Elapsed seconds of run for this period :    806.0703    
+ SEARCH BC data for 2024092606 , step =  6827520
+ READY  BC from     2024092600  to 2024092606 
+ $$$  2024-09-26 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.53  495.24
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.983E-16
+    0.140E-12  0.339E-11  0.245E-10  0.983E-10  0.278E-09  0.621E-09  0.118E-08
+    0.198E-08  0.304E-08  0.431E-08  0.576E-08  0.732E-08  0.891E-08  0.105E-07
+    0.120E-07  0.133E-07  0.144E-07  0.153E-07  0.160E-07  0.164E-07  0.167E-07
+    0.166E-07  0.164E-07  0.160E-07  0.155E-07  0.148E-07  0.139E-07  0.130E-07
+    0.130E-07  0.120E-07  0.109E-07  0.975E-08  0.845E-08  0.696E-08  0.484E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.163      0.162      0.161      0.161      0.160      0.160    
+    0.159      0.159      0.158      0.158      0.158      0.157      0.157    
+    0.157      0.156      0.156      0.156      0.156      0.155      0.155    
+    0.155      0.155      0.154      0.154      0.154      0.154      0.153    
+    0.153      0.153      0.153      0.152      0.152      0.151      0.150    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-26 01:00:00 UTC        
+ SRF variables written at  2024-09-26 01:00:00 UTC        
+ RAD variables written at  2024-09-26 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 02:00:00 UTC        
+ SRF variables written at  2024-09-26 02:00:00 UTC        
+ RAD variables written at  2024-09-26 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 03:00:00 UTC        
+ SRF variables written at  2024-09-26 03:00:00 UTC        
+ RAD variables written at  2024-09-26 03:00:00 UTC        
+ $$$  2024-09-26 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.26  494.99
+ CLM History variables written
+ ATM variables written at  2024-09-26 04:00:00 UTC        
+ SRF variables written at  2024-09-26 04:00:00 UTC        
+ RAD variables written at  2024-09-26 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 05:00:00 UTC        
+ SRF variables written at  2024-09-26 05:00:00 UTC        
+ RAD variables written at  2024-09-26 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 06:00:00 UTC        
+ SRF variables written at  2024-09-26 06:00:00 UTC        
+ RAD variables written at  2024-09-26 06:00:00 UTC        
+ SEARCH BC data for 2024092612 , step =  6828000
+ READY  BC from     2024092606  to 2024092612 
+ $$$  2024-09-26 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1021.35  494.95
+ CLM History variables written
+ ATM variables written at  2024-09-26 07:00:00 UTC        
+ SRF variables written at  2024-09-26 07:00:00 UTC        
+ RAD variables written at  2024-09-26 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 08:00:00 UTC        
+ SRF variables written at  2024-09-26 08:00:00 UTC        
+ RAD variables written at  2024-09-26 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 09:00:00 UTC        
+ SRF variables written at  2024-09-26 09:00:00 UTC        
+ RAD variables written at  2024-09-26 09:00:00 UTC        
+ $$$  2024-09-26 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1022.85  495.77
+ CLM History variables written
+ ATM variables written at  2024-09-26 10:00:00 UTC        
+ SRF variables written at  2024-09-26 10:00:00 UTC        
+ RAD variables written at  2024-09-26 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 11:00:00 UTC        
+ SRF variables written at  2024-09-26 11:00:00 UTC        
+ RAD variables written at  2024-09-26 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 12:00:00 UTC        
+ SRF variables written at  2024-09-26 12:00:00 UTC        
+ RAD variables written at  2024-09-26 12:00:00 UTC        
+ SEARCH BC data for 2024092618 , step =  6828480
+ READY  BC from     2024092612  to 2024092618 
+ $$$  2024-09-26 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1025.54  496.20
+ CLM History variables written
+ ATM variables written at  2024-09-26 13:00:00 UTC        
+ SRF variables written at  2024-09-26 13:00:00 UTC        
+ RAD variables written at  2024-09-26 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 14:00:00 UTC        
+ SRF variables written at  2024-09-26 14:00:00 UTC        
+ RAD variables written at  2024-09-26 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 15:00:00 UTC        
+ SRF variables written at  2024-09-26 15:00:00 UTC        
+ RAD variables written at  2024-09-26 15:00:00 UTC        
+ $$$  2024-09-26 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.45  496.30
+ CLM History variables written
+ ATM variables written at  2024-09-26 16:00:00 UTC        
+ SRF variables written at  2024-09-26 16:00:00 UTC        
+ RAD variables written at  2024-09-26 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 17:00:00 UTC        
+ SRF variables written at  2024-09-26 17:00:00 UTC        
+ RAD variables written at  2024-09-26 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 18:00:00 UTC        
+ SRF variables written at  2024-09-26 18:00:00 UTC        
+ RAD variables written at  2024-09-26 18:00:00 UTC        
+ SEARCH BC data for 2024092700 , step =  6828960
+ READY  BC from     2024092618  to 2024092700 
+ $$$  2024-09-26 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1024.52  496.92
+ CLM History variables written
+ ATM variables written at  2024-09-26 19:00:00 UTC        
+ SRF variables written at  2024-09-26 19:00:00 UTC        
+ RAD variables written at  2024-09-26 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 20:00:00 UTC        
+ SRF variables written at  2024-09-26 20:00:00 UTC        
+ RAD variables written at  2024-09-26 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 21:00:00 UTC        
+ SRF variables written at  2024-09-26 21:00:00 UTC        
+ RAD variables written at  2024-09-26 21:00:00 UTC        
+ $$$  2024-09-26 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.18  497.67
+ CLM History variables written
+ ATM variables written at  2024-09-26 22:00:00 UTC        
+ SRF variables written at  2024-09-26 22:00:00 UTC        
+ RAD variables written at  2024-09-26 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-26 23:00:00 UTC        
+ SRF variables written at  2024-09-26 23:00:00 UTC        
+ RAD variables written at  2024-09-26 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-27 00:00:00 UTC        
+ JDay    270.00000 solar declination angle =  -1.25375783 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-27 00:00:00 UTC        
+ SRF variables written at  2024-09-27 00:00:00 UTC        
+ STS variables written at  2024-09-27 00:00:00 UTC        
+ RAD variables written at  2024-09-27 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024092700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024092700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024092700.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024092700.nc
+ Elapsed seconds of run for this period :    806.9844    
+ SEARCH BC data for 2024092706 , step =  6829440
+ READY  BC from     2024092700  to 2024092706 
+ $$$  2024-09-27 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.70  498.12
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.983E-16
+    0.140E-12  0.339E-11  0.245E-10  0.983E-10  0.278E-09  0.621E-09  0.118E-08
+    0.198E-08  0.304E-08  0.431E-08  0.576E-08  0.732E-08  0.891E-08  0.105E-07
+    0.120E-07  0.133E-07  0.144E-07  0.153E-07  0.160E-07  0.164E-07  0.167E-07
+    0.166E-07  0.164E-07  0.160E-07  0.155E-07  0.148E-07  0.139E-07  0.130E-07
+    0.130E-07  0.120E-07  0.109E-07  0.975E-08  0.845E-08  0.696E-08  0.484E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.163      0.162      0.161      0.161      0.160      0.160    
+    0.159      0.159      0.158      0.158      0.158      0.157      0.157    
+    0.157      0.156      0.156      0.156      0.156      0.155      0.155    
+    0.155      0.155      0.154      0.154      0.154      0.154      0.153    
+    0.153      0.153      0.153      0.152      0.152      0.151      0.150    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-27 01:00:00 UTC        
+ SRF variables written at  2024-09-27 01:00:00 UTC        
+ RAD variables written at  2024-09-27 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 02:00:00 UTC        
+ SRF variables written at  2024-09-27 02:00:00 UTC        
+ RAD variables written at  2024-09-27 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 03:00:00 UTC        
+ SRF variables written at  2024-09-27 03:00:00 UTC        
+ RAD variables written at  2024-09-27 03:00:00 UTC        
+ $$$  2024-09-27 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.77  497.78
+ CLM History variables written
+ ATM variables written at  2024-09-27 04:00:00 UTC        
+ SRF variables written at  2024-09-27 04:00:00 UTC        
+ RAD variables written at  2024-09-27 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 05:00:00 UTC        
+ SRF variables written at  2024-09-27 05:00:00 UTC        
+ RAD variables written at  2024-09-27 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 06:00:00 UTC        
+ SRF variables written at  2024-09-27 06:00:00 UTC        
+ RAD variables written at  2024-09-27 06:00:00 UTC        
+ SEARCH BC data for 2024092712 , step =  6829920
+ READY  BC from     2024092706  to 2024092712 
+ $$$  2024-09-27 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.31  497.59
+ CLM History variables written
+ ATM variables written at  2024-09-27 07:00:00 UTC        
+ SRF variables written at  2024-09-27 07:00:00 UTC        
+ RAD variables written at  2024-09-27 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 08:00:00 UTC        
+ SRF variables written at  2024-09-27 08:00:00 UTC        
+ RAD variables written at  2024-09-27 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 09:00:00 UTC        
+ SRF variables written at  2024-09-27 09:00:00 UTC        
+ RAD variables written at  2024-09-27 09:00:00 UTC        
+ $$$  2024-09-27 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1031.11  497.83
+ CLM History variables written
+ ATM variables written at  2024-09-27 10:00:00 UTC        
+ SRF variables written at  2024-09-27 10:00:00 UTC        
+ RAD variables written at  2024-09-27 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 11:00:00 UTC        
+ SRF variables written at  2024-09-27 11:00:00 UTC        
+ RAD variables written at  2024-09-27 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 12:00:00 UTC        
+ SRF variables written at  2024-09-27 12:00:00 UTC        
+ RAD variables written at  2024-09-27 12:00:00 UTC        
+ SEARCH BC data for 2024092718 , step =  6830400
+ READY  BC from     2024092712  to 2024092718 
+ $$$  2024-09-27 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1033.29  497.81
+ CLM History variables written
+ ATM variables written at  2024-09-27 13:00:00 UTC        
+ SRF variables written at  2024-09-27 13:00:00 UTC        
+ RAD variables written at  2024-09-27 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 14:00:00 UTC        
+ SRF variables written at  2024-09-27 14:00:00 UTC        
+ RAD variables written at  2024-09-27 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 15:00:00 UTC        
+ SRF variables written at  2024-09-27 15:00:00 UTC        
+ RAD variables written at  2024-09-27 15:00:00 UTC        
+ $$$  2024-09-27 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1032.81  497.47
+ CLM History variables written
+ ATM variables written at  2024-09-27 16:00:00 UTC        
+ SRF variables written at  2024-09-27 16:00:00 UTC        
+ RAD variables written at  2024-09-27 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 17:00:00 UTC        
+ SRF variables written at  2024-09-27 17:00:00 UTC        
+ RAD variables written at  2024-09-27 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 18:00:00 UTC        
+ SRF variables written at  2024-09-27 18:00:00 UTC        
+ RAD variables written at  2024-09-27 18:00:00 UTC        
+ SEARCH BC data for 2024092800 , step =  6830880
+ READY  BC from     2024092718  to 2024092800 
+ $$$  2024-09-27 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1032.24  497.37
+ CLM History variables written
+ ATM variables written at  2024-09-27 19:00:00 UTC        
+ SRF variables written at  2024-09-27 19:00:00 UTC        
+ RAD variables written at  2024-09-27 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 20:00:00 UTC        
+ SRF variables written at  2024-09-27 20:00:00 UTC        
+ RAD variables written at  2024-09-27 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 21:00:00 UTC        
+ SRF variables written at  2024-09-27 21:00:00 UTC        
+ RAD variables written at  2024-09-27 21:00:00 UTC        
+ $$$  2024-09-27 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1033.78  497.64
+ CLM History variables written
+ ATM variables written at  2024-09-27 22:00:00 UTC        
+ SRF variables written at  2024-09-27 22:00:00 UTC        
+ RAD variables written at  2024-09-27 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-27 23:00:00 UTC        
+ SRF variables written at  2024-09-27 23:00:00 UTC        
+ RAD variables written at  2024-09-27 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-28 00:00:00 UTC        
+ JDay    271.00000 solar declination angle =  -1.64281862 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-28 00:00:00 UTC        
+ SRF variables written at  2024-09-28 00:00:00 UTC        
+ STS variables written at  2024-09-28 00:00:00 UTC        
+ RAD variables written at  2024-09-28 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024092800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024092800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024092800.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024092800.nc
+ Elapsed seconds of run for this period :    807.5703    
+ SEARCH BC data for 2024092806 , step =  6831360
+ READY  BC from     2024092800  to 2024092806 
+ $$$  2024-09-28 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1035.34  497.62
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.983E-16
+    0.140E-12  0.339E-11  0.245E-10  0.983E-10  0.278E-09  0.621E-09  0.118E-08
+    0.198E-08  0.304E-08  0.431E-08  0.576E-08  0.732E-08  0.891E-08  0.105E-07
+    0.120E-07  0.133E-07  0.144E-07  0.153E-07  0.160E-07  0.164E-07  0.167E-07
+    0.166E-07  0.164E-07  0.160E-07  0.155E-07  0.148E-07  0.139E-07  0.130E-07
+    0.130E-07  0.120E-07  0.109E-07  0.975E-08  0.845E-08  0.696E-08  0.484E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.163      0.162      0.161      0.161      0.160      0.160    
+    0.159      0.159      0.158      0.158      0.158      0.157      0.157    
+    0.157      0.156      0.156      0.156      0.156      0.155      0.155    
+    0.155      0.155      0.154      0.154      0.154      0.154      0.153    
+    0.153      0.153      0.153      0.152      0.152      0.151      0.150    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-28 01:00:00 UTC        
+ SRF variables written at  2024-09-28 01:00:00 UTC        
+ RAD variables written at  2024-09-28 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 02:00:00 UTC        
+ SRF variables written at  2024-09-28 02:00:00 UTC        
+ RAD variables written at  2024-09-28 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 03:00:00 UTC        
+ SRF variables written at  2024-09-28 03:00:00 UTC        
+ RAD variables written at  2024-09-28 03:00:00 UTC        
+ $$$  2024-09-28 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1034.40  496.50
+ CLM History variables written
+ ATM variables written at  2024-09-28 04:00:00 UTC        
+ SRF variables written at  2024-09-28 04:00:00 UTC        
+ RAD variables written at  2024-09-28 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 05:00:00 UTC        
+ SRF variables written at  2024-09-28 05:00:00 UTC        
+ RAD variables written at  2024-09-28 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 06:00:00 UTC        
+ SRF variables written at  2024-09-28 06:00:00 UTC        
+ RAD variables written at  2024-09-28 06:00:00 UTC        
+ SEARCH BC data for 2024092812 , step =  6831840
+ READY  BC from     2024092806  to 2024092812 
+ $$$  2024-09-28 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1033.51  495.89
+ CLM History variables written
+ ATM variables written at  2024-09-28 07:00:00 UTC        
+ SRF variables written at  2024-09-28 07:00:00 UTC        
+ RAD variables written at  2024-09-28 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 08:00:00 UTC        
+ SRF variables written at  2024-09-28 08:00:00 UTC        
+ RAD variables written at  2024-09-28 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 09:00:00 UTC        
+ SRF variables written at  2024-09-28 09:00:00 UTC        
+ RAD variables written at  2024-09-28 09:00:00 UTC        
+ $$$  2024-09-28 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1034.56  496.41
+ CLM History variables written
+ ATM variables written at  2024-09-28 10:00:00 UTC        
+ SRF variables written at  2024-09-28 10:00:00 UTC        
+ RAD variables written at  2024-09-28 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 11:00:00 UTC        
+ SRF variables written at  2024-09-28 11:00:00 UTC        
+ RAD variables written at  2024-09-28 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 12:00:00 UTC        
+ SRF variables written at  2024-09-28 12:00:00 UTC        
+ RAD variables written at  2024-09-28 12:00:00 UTC        
+ SEARCH BC data for 2024092818 , step =  6832320
+ READY  BC from     2024092812  to 2024092818 
+ $$$  2024-09-28 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1035.70  496.44
+ CLM History variables written
+ ATM variables written at  2024-09-28 13:00:00 UTC        
+ SRF variables written at  2024-09-28 13:00:00 UTC        
+ RAD variables written at  2024-09-28 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 14:00:00 UTC        
+ SRF variables written at  2024-09-28 14:00:00 UTC        
+ RAD variables written at  2024-09-28 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 15:00:00 UTC        
+ SRF variables written at  2024-09-28 15:00:00 UTC        
+ RAD variables written at  2024-09-28 15:00:00 UTC        
+ $$$  2024-09-28 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1034.07  495.93
+ CLM History variables written
+ ATM variables written at  2024-09-28 16:00:00 UTC        
+ SRF variables written at  2024-09-28 16:00:00 UTC        
+ RAD variables written at  2024-09-28 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 17:00:00 UTC        
+ SRF variables written at  2024-09-28 17:00:00 UTC        
+ RAD variables written at  2024-09-28 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 18:00:00 UTC        
+ SRF variables written at  2024-09-28 18:00:00 UTC        
+ RAD variables written at  2024-09-28 18:00:00 UTC        
+ SEARCH BC data for 2024092900 , step =  6832800
+ READY  BC from     2024092818  to 2024092900 
+ $$$  2024-09-28 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1032.51  495.97
+ CLM History variables written
+ ATM variables written at  2024-09-28 19:00:00 UTC        
+ SRF variables written at  2024-09-28 19:00:00 UTC        
+ RAD variables written at  2024-09-28 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 20:00:00 UTC        
+ SRF variables written at  2024-09-28 20:00:00 UTC        
+ RAD variables written at  2024-09-28 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 21:00:00 UTC        
+ SRF variables written at  2024-09-28 21:00:00 UTC        
+ RAD variables written at  2024-09-28 21:00:00 UTC        
+ $$$  2024-09-28 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1033.35  496.28
+ CLM History variables written
+ ATM variables written at  2024-09-28 22:00:00 UTC        
+ SRF variables written at  2024-09-28 22:00:00 UTC        
+ RAD variables written at  2024-09-28 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-28 23:00:00 UTC        
+ SRF variables written at  2024-09-28 23:00:00 UTC        
+ RAD variables written at  2024-09-28 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-29 00:00:00 UTC        
+ JDay    272.00000 solar declination angle =  -2.03169415 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-29 00:00:00 UTC        
+ SRF variables written at  2024-09-29 00:00:00 UTC        
+ STS variables written at  2024-09-29 00:00:00 UTC        
+ RAD variables written at  2024-09-29 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024092900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024092900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024092900.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024092900.nc
+ Elapsed seconds of run for this period :    814.3359    
+ SEARCH BC data for 2024092906 , step =  6833280
+ READY  BC from     2024092900  to 2024092906 
+ $$$  2024-09-29 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1034.10  496.26
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.983E-16
+    0.140E-12  0.339E-11  0.245E-10  0.983E-10  0.278E-09  0.621E-09  0.118E-08
+    0.198E-08  0.304E-08  0.431E-08  0.576E-08  0.732E-08  0.891E-08  0.105E-07
+    0.120E-07  0.133E-07  0.144E-07  0.153E-07  0.160E-07  0.164E-07  0.167E-07
+    0.166E-07  0.164E-07  0.160E-07  0.155E-07  0.148E-07  0.139E-07  0.130E-07
+    0.130E-07  0.120E-07  0.109E-07  0.975E-08  0.845E-08  0.696E-08  0.484E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.163      0.162      0.161      0.161      0.160      0.160    
+    0.159      0.159      0.158      0.158      0.158      0.157      0.157    
+    0.157      0.156      0.156      0.156      0.156      0.155      0.155    
+    0.155      0.155      0.154      0.154      0.154      0.154      0.153    
+    0.153      0.153      0.153      0.152      0.152      0.151      0.150    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-29 01:00:00 UTC        
+ SRF variables written at  2024-09-29 01:00:00 UTC        
+ RAD variables written at  2024-09-29 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 02:00:00 UTC        
+ SRF variables written at  2024-09-29 02:00:00 UTC        
+ RAD variables written at  2024-09-29 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 03:00:00 UTC        
+ SRF variables written at  2024-09-29 03:00:00 UTC        
+ RAD variables written at  2024-09-29 03:00:00 UTC        
+ $$$  2024-09-29 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1032.05  495.16
+ CLM History variables written
+ ATM variables written at  2024-09-29 04:00:00 UTC        
+ SRF variables written at  2024-09-29 04:00:00 UTC        
+ RAD variables written at  2024-09-29 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 05:00:00 UTC        
+ SRF variables written at  2024-09-29 05:00:00 UTC        
+ RAD variables written at  2024-09-29 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 06:00:00 UTC        
+ SRF variables written at  2024-09-29 06:00:00 UTC        
+ RAD variables written at  2024-09-29 06:00:00 UTC        
+ SEARCH BC data for 2024092912 , step =  6833760
+ READY  BC from     2024092906  to 2024092912 
+ $$$  2024-09-29 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.08  494.09
+ CLM History variables written
+ ATM variables written at  2024-09-29 07:00:00 UTC        
+ SRF variables written at  2024-09-29 07:00:00 UTC        
+ RAD variables written at  2024-09-29 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 08:00:00 UTC        
+ SRF variables written at  2024-09-29 08:00:00 UTC        
+ RAD variables written at  2024-09-29 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 09:00:00 UTC        
+ SRF variables written at  2024-09-29 09:00:00 UTC        
+ RAD variables written at  2024-09-29 09:00:00 UTC        
+ $$$  2024-09-29 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1031.04  493.98
+ CLM History variables written
+ ATM variables written at  2024-09-29 10:00:00 UTC        
+ SRF variables written at  2024-09-29 10:00:00 UTC        
+ RAD variables written at  2024-09-29 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 11:00:00 UTC        
+ SRF variables written at  2024-09-29 11:00:00 UTC        
+ RAD variables written at  2024-09-29 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 12:00:00 UTC        
+ SRF variables written at  2024-09-29 12:00:00 UTC        
+ RAD variables written at  2024-09-29 12:00:00 UTC        
+ SEARCH BC data for 2024092918 , step =  6834240
+ READY  BC from     2024092912  to 2024092918 
+ $$$  2024-09-29 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1031.92  493.97
+ CLM History variables written
+ ATM variables written at  2024-09-29 13:00:00 UTC        
+ SRF variables written at  2024-09-29 13:00:00 UTC        
+ RAD variables written at  2024-09-29 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 14:00:00 UTC        
+ SRF variables written at  2024-09-29 14:00:00 UTC        
+ RAD variables written at  2024-09-29 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 15:00:00 UTC        
+ SRF variables written at  2024-09-29 15:00:00 UTC        
+ RAD variables written at  2024-09-29 15:00:00 UTC        
+ $$$  2024-09-29 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1030.34  493.66
+ CLM History variables written
+ ATM variables written at  2024-09-29 16:00:00 UTC        
+ SRF variables written at  2024-09-29 16:00:00 UTC        
+ RAD variables written at  2024-09-29 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 17:00:00 UTC        
+ SRF variables written at  2024-09-29 17:00:00 UTC        
+ RAD variables written at  2024-09-29 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 18:00:00 UTC        
+ SRF variables written at  2024-09-29 18:00:00 UTC        
+ RAD variables written at  2024-09-29 18:00:00 UTC        
+ SEARCH BC data for 2024093000 , step =  6834720
+ READY  BC from     2024092918  to 2024093000 
+ $$$  2024-09-29 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.64  493.83
+ CLM History variables written
+ ATM variables written at  2024-09-29 19:00:00 UTC        
+ SRF variables written at  2024-09-29 19:00:00 UTC        
+ RAD variables written at  2024-09-29 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 20:00:00 UTC        
+ SRF variables written at  2024-09-29 20:00:00 UTC        
+ RAD variables written at  2024-09-29 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 21:00:00 UTC        
+ SRF variables written at  2024-09-29 21:00:00 UTC        
+ RAD variables written at  2024-09-29 21:00:00 UTC        
+ $$$  2024-09-29 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.31  494.58
+ CLM History variables written
+ ATM variables written at  2024-09-29 22:00:00 UTC        
+ SRF variables written at  2024-09-29 22:00:00 UTC        
+ RAD variables written at  2024-09-29 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-29 23:00:00 UTC        
+ SRF variables written at  2024-09-29 23:00:00 UTC        
+ RAD variables written at  2024-09-29 23:00:00 UTC        
+ CLM History variables written
+ At  2024-09-30 00:00:00 UTC        
+ JDay    273.00000 solar declination angle =  -2.42028814 degrees
+                   solar TSI irradiance    =    1356.9959 W/m^2
+ ATM variables written at  2024-09-30 00:00:00 UTC        
+ SRF variables written at  2024-09-30 00:00:00 UTC        
+ STS variables written at  2024-09-30 00:00:00 UTC        
+ RAD variables written at  2024-09-30 00:00:00 UTC        
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_ATM.2024093000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_SRF.2024093000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_STS.2024093000.nc
+ Opening new output file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3_RAD.2024093000.nc
+ Elapsed seconds of run for this period :    812.5938    
+ SEARCH BC data for 2024093006 , step =  6835200
+ READY  BC from     2024093000  to 2024093006 
+ $$$  2024-09-30 00:00:00 UTC        
+ $$$ max, min of ps (mb) =  1029.91  494.81
+ Updating aerosol optical properties...
+  # Updated VIS ext profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.983E-16
+    0.140E-12  0.339E-11  0.245E-10  0.983E-10  0.278E-09  0.621E-09  0.118E-08
+    0.198E-08  0.304E-08  0.431E-08  0.576E-08  0.732E-08  0.891E-08  0.105E-07
+    0.120E-07  0.133E-07  0.144E-07  0.153E-07  0.160E-07  0.164E-07  0.167E-07
+    0.166E-07  0.164E-07  0.160E-07  0.155E-07  0.148E-07  0.139E-07  0.130E-07
+    0.130E-07  0.120E-07  0.109E-07  0.975E-08  0.845E-08  0.696E-08  0.484E-08
+  # Updated VIS ssa profile #
+     1.00       1.00       1.00       1.00       1.00       1.00      0.164    
+    0.163      0.163      0.162      0.161      0.161      0.160      0.160    
+    0.159      0.159      0.158      0.158      0.158      0.157      0.157    
+    0.157      0.156      0.156      0.156      0.156      0.155      0.155    
+    0.155      0.155      0.154      0.154      0.154      0.154      0.153    
+    0.153      0.153      0.153      0.152      0.152      0.151      0.150    
+  # Updated VIS asy profile #
+     0.00       0.00       0.00       0.00       0.00       0.00      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+    0.312      0.312      0.312      0.312      0.312      0.312      0.312    
+ CLM History variables written
+ ATM variables written at  2024-09-30 01:00:00 UTC        
+ SRF variables written at  2024-09-30 01:00:00 UTC        
+ RAD variables written at  2024-09-30 01:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 02:00:00 UTC        
+ SRF variables written at  2024-09-30 02:00:00 UTC        
+ RAD variables written at  2024-09-30 02:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 03:00:00 UTC        
+ SRF variables written at  2024-09-30 03:00:00 UTC        
+ RAD variables written at  2024-09-30 03:00:00 UTC        
+ $$$  2024-09-30 03:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.99  493.79
+ CLM History variables written
+ ATM variables written at  2024-09-30 04:00:00 UTC        
+ SRF variables written at  2024-09-30 04:00:00 UTC        
+ RAD variables written at  2024-09-30 04:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 05:00:00 UTC        
+ SRF variables written at  2024-09-30 05:00:00 UTC        
+ RAD variables written at  2024-09-30 05:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 06:00:00 UTC        
+ SRF variables written at  2024-09-30 06:00:00 UTC        
+ RAD variables written at  2024-09-30 06:00:00 UTC        
+ SEARCH BC data for 2024093012 , step =  6835680
+ READY  BC from     2024093006  to 2024093012 
+ $$$  2024-09-30 06:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.40  493.01
+ CLM History variables written
+ ATM variables written at  2024-09-30 07:00:00 UTC        
+ SRF variables written at  2024-09-30 07:00:00 UTC        
+ RAD variables written at  2024-09-30 07:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 08:00:00 UTC        
+ SRF variables written at  2024-09-30 08:00:00 UTC        
+ RAD variables written at  2024-09-30 08:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 09:00:00 UTC        
+ SRF variables written at  2024-09-30 09:00:00 UTC        
+ RAD variables written at  2024-09-30 09:00:00 UTC        
+ $$$  2024-09-30 09:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.16  493.28
+ CLM History variables written
+ ATM variables written at  2024-09-30 10:00:00 UTC        
+ SRF variables written at  2024-09-30 10:00:00 UTC        
+ RAD variables written at  2024-09-30 10:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 11:00:00 UTC        
+ SRF variables written at  2024-09-30 11:00:00 UTC        
+ RAD variables written at  2024-09-30 11:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 12:00:00 UTC        
+ SRF variables written at  2024-09-30 12:00:00 UTC        
+ RAD variables written at  2024-09-30 12:00:00 UTC        
+ SEARCH BC data for 2024093018 , step =  6836160
+ READY  BC from     2024093012  to 2024093018 
+ $$$  2024-09-30 12:00:00 UTC        
+ $$$ max, min of ps (mb) =  1028.51  493.37
+ CLM History variables written
+ ATM variables written at  2024-09-30 13:00:00 UTC        
+ SRF variables written at  2024-09-30 13:00:00 UTC        
+ RAD variables written at  2024-09-30 13:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 14:00:00 UTC        
+ SRF variables written at  2024-09-30 14:00:00 UTC        
+ RAD variables written at  2024-09-30 14:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 15:00:00 UTC        
+ SRF variables written at  2024-09-30 15:00:00 UTC        
+ RAD variables written at  2024-09-30 15:00:00 UTC        
+ $$$  2024-09-30 15:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.18  493.20
+ CLM History variables written
+ ATM variables written at  2024-09-30 16:00:00 UTC        
+ SRF variables written at  2024-09-30 16:00:00 UTC        
+ RAD variables written at  2024-09-30 16:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 17:00:00 UTC        
+ SRF variables written at  2024-09-30 17:00:00 UTC        
+ RAD variables written at  2024-09-30 17:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 18:00:00 UTC        
+ SRF variables written at  2024-09-30 18:00:00 UTC        
+ RAD variables written at  2024-09-30 18:00:00 UTC        
+ SEARCH BC data for 2024100100 , step =  6836640
+ READY  BC from     2024093018  to 2024100100 
+ $$$  2024-09-30 18:00:00 UTC        
+ $$$ max, min of ps (mb) =  1026.27  493.26
+ CLM History variables written
+ ATM variables written at  2024-09-30 19:00:00 UTC        
+ SRF variables written at  2024-09-30 19:00:00 UTC        
+ RAD variables written at  2024-09-30 19:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 20:00:00 UTC        
+ SRF variables written at  2024-09-30 20:00:00 UTC        
+ RAD variables written at  2024-09-30 20:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 21:00:00 UTC        
+ SRF variables written at  2024-09-30 21:00:00 UTC        
+ RAD variables written at  2024-09-30 21:00:00 UTC        
+ $$$  2024-09-30 21:00:00 UTC        
+ $$$ max, min of ps (mb) =  1027.89  493.81
+ CLM History variables written
+ ATM variables written at  2024-09-30 22:00:00 UTC        
+ SRF variables written at  2024-09-30 22:00:00 UTC        
+ RAD variables written at  2024-09-30 22:00:00 UTC        
+ CLM History variables written
+ ATM variables written at  2024-09-30 23:00:00 UTC        
+ SRF variables written at  2024-09-30 23:00:00 UTC        
+ RAD variables written at  2024-09-30 23:00:00 UTC        
+ Write restart file for CLM at  2024-10-01 00:00:00 UTC        
+ Creating history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3.clm.regcm.h0.202410.nc
+ CLM History variables written
+ CLM History variables written
+ Closing local history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3.clm.regcm.h0.202410.nc
+ Closing local history file 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3.clm.regcm.h1.20240901_03600.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3/CSAM-3.clm.regcm.r.2024100100.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3.clm.regcm.rh0.2024100100.nc
+ Writing restart dataset on 
+ /leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370/CSAM-
+ 3//CSAM-3.clm.regcm.rh1.2024100100.nc
+ Successfully wrote out restart data for CLM 4.5
+ At  2024-10-01 00:00:00 UTC        
+ JDay    274.00000 solar declination angle =  -2.80850388 degrees
+                   solar TSI irradiance    =    1356.4904 W/m^2
+ ATM variables written at  2024-10-01 00:00:00 UTC        
+ SRF variables written at  2024-10-01 00:00:00 UTC        
+ STS variables written at  2024-10-01 00:00:00 UTC        
+ RAD variables written at  2024-10-01 00:00:00 UTC        
+ SAV variables written at  2024-10-01 00:00:00 UTC        
+ Final time  2024-10-01 00:00:00 UTC reached.
+ Elapsed seconds of run for this final timeslice :    872.7969    
+ : this run stops at  : 2026-10-13 03:13:47+0200
+ : Run has been completed using         1792  processors.
+ : Total elapsed seconds of run :    76314.7758501015     
+ RegCM V5 simulation successfully reached end

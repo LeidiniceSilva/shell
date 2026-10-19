@@ -22,9 +22,9 @@ CDO(){
 }
 
 EXP="GPM"
-DOMAIN_LIST=("EURR-3") # CAR-4 CSAM-3 EURR-3
+DOMAIN_LIST=("CSAM-3" "CAR-4" "EURR-3") # CAR-4 CSAM-3 EURR-3
 
-DIR_I="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/GPM/globe/GPM"
+DIR_I="/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/GPM/globe/AVG_1hr"
 BIN="/leonardo/home/userexternal/mdasilva/RegCM/bin"
 
 echo
@@ -38,7 +38,7 @@ for DOMAIN in "${DOMAIN_LIST[@]}"; do
     cd ${DIR_II}
     echo ${DIR_II}
 
-    for YEAR in $(seq 2001 2009); do
+    for YEAR in $(seq 2000 2009); do
 
         if [ ${YEAR} -eq 2000 ]; then
             START_MON=6
@@ -52,11 +52,11 @@ for DOMAIN in "${DOMAIN_LIST[@]}"; do
             IN_FILE="${DIR_I}/IMERG/imerg_${YEAR}${MON}_1hr_v07b.nc"
 
             if [ ${DOMAIN} == "CAR-4" ]; then
-		${BIN}/regrid "${IN_FILE}" 9.064618,35.89941,0.25 -119.0219,-58.01409,0.25 bil
+		${BIN}/regrid "${IN_FILE}" 9.064618,35.89941,0.1 -119.0219,-58.01409,0.1 bil
             elif [ ${DOMAIN} == "CSAM-3" ]; then
-		${BIN}/regrid "${IN_FILE}" -36.70233,-12.24439,0.25 -78.81965,-35.32753,0.25 bil
+		${BIN}/regrid "${IN_FILE}" -36.70233,-12.24439,0.1 -78.81965,-35.32753,0.1 bil
             else
-		${BIN}/regrid "${IN_FILE}" 36,58,0.25 -22,36,0.25 bil
+		${BIN}/regrid "${IN_FILE}" 36,58,0.1 -22,36,0.1 bil
             fi
 
             CDO chname,PR,pr imerg_${YEAR}${MON}_1hr_v07b_lonlat.nc pr_${EXP}_IMERG_${DOMAIN}_1hr_${YEAR}${MON}.nc

@@ -19,6 +19,6 @@ set -eo pipefail
 
 dataset="CPMs"
 
-bash postproc_moaap_${dataset}_p2.sh CNRM ALPX-3 ERA5 evaluation 2000 2009
+bash postproc_moaap_${dataset}_p2.sh CNRM ALPX-3 ERA5 evaluation 2002 2009
 
 }

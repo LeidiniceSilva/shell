@@ -38,7 +38,7 @@ for DOMAIN in "${DOMAIN_LIST[@]}"; do
     cd ${DIR_II}
     echo ${DIR_II}
 
-    for YEAR in $(seq 2005 2009); do
+    for YEAR in $(seq 2003 2009); do
         for MON in $(seq -w 01 12); do
 	    echo "Processing ${DOMAIN} ${YEAR} ${MON}"
 
@@ -46,11 +46,11 @@ for DOMAIN in "${DOMAIN_LIST[@]}"; do
             OUT_FILE="Tb_${EXP}_MERGIR_${DOMAIN}_1hr_${YEAR}${MON}.nc"
 
             if [ ${DOMAIN} == "CAR-4" ]; then
-		${BIN}/regrid "${IN_FILE}" 9.064618,35.89941,0.25 -119.0219,-58.01409,0.25 bil
+		${BIN}/regrid "${IN_FILE}" 9.064618,35.89941,0.1 -119.0219,-58.01409,0.1 bil
             elif [ ${DOMAIN} == "CSAM-3" ]; then
-		${BIN}/regrid "${IN_FILE}" -36.70233,-12.24439,0.25 -78.81965,-35.32753,0.25 bil
+		${BIN}/regrid "${IN_FILE}" -36.70233,-12.24439,0.1 -78.81965,-35.32753,0.1 bil
             else
-		${BIN}/regrid "${IN_FILE}" 36,58,0.25 -22,36,0.25 bil
+		${BIN}/regrid "${IN_FILE}" 36,58,0.1 -22,36,0.1 bil
             fi
 
             mv "mergir_${YEAR}${MON}_4km-pixel_1hr_lonlat.nc" "${OUT_FILE}"
