@@ -67,7 +67,7 @@ for f in files:
                       v200 = None,
                       u200 = None,
                       pr   = np.array(data_vars['pr']),
-                      tb   = np.array(data_vars['ismet6']), # Tb or ismet6
+                      tb   = np.array(data_vars['Tb']), # Tb or ismet6
                       DataName = DataName,
                       OutputFolder = OutputFolder,
                       js_min_anomaly = 12,

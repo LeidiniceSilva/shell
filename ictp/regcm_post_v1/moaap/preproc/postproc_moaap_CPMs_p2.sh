@@ -22,7 +22,7 @@ CDO(){
 }
 
 INST=$1 # ICTP
-DOMAIN=$2 # CSAM-3
+DOMAIN=$2 # EURR-3
 DATASET=$3 # ERA5
 EXP=$4 # evaluation
 YR_I=$5 # 2000
@@ -46,9 +46,9 @@ for YEAR in $(seq ${YR_I} ${YR_F}); do
     for MONTH in $(seq -w 01 12); do
 
         PR_FILE=$(ls "${DIR_I}"/pr_*_1hr_${YEAR}*.nc 2>/dev/null | head -n 1)
-        TB_FILE=$(ls "${DIR_I}"/ismet6_*_1hr_${YEAR}*.nc 2>/dev/null | head -n 1) # or Tb
+        TB_FILE=$(ls "${DIR_I}"/Tb_*_1hr_${YEAR}*.nc 2>/dev/null | head -n 1) # ismet6 or Tb
         [ -f "${PR_FILE}" ] || PR_FILE=$(ls "${DIR_I}"/pr_*.nc 2>/dev/null | grep "_1hr_${YEAR}" | head -n 1)
-        [ -f "${TB_FILE}" ] || TB_FILE=$(ls "${DIR_I}"/ismet6_*.nc 2>/dev/null | grep "_1hr_${YEAR}" | head -n 1) # or Tb
+        [ -f "${TB_FILE}" ] || TB_FILE=$(ls "${DIR_I}"/Tb_*.nc 2>/dev/null | grep "_1hr_${YEAR}" | head -n 1) # ismet6 or Tb
 
         if [ ! -f "${PR_FILE}" ] || [ ! -f "${TB_FILE}" ]; then
             echo "Not found ${YEAR}-${MONTH}"
@@ -63,7 +63,7 @@ for YEAR in $(seq ${YR_I} ${YR_F}); do
         CDO selyear,${YEAR} -selmon,${MONTH} "${TB_FILE}" "${TMP_TB}"
         CDO merge "${TMP_PR}" "${TMP_TB}" "${OUT_FILE}"
 
-        #rm -f "${TMP_PR}" "${TMP_TB}" 
+        rm -f "${TMP_PR}" "${TMP_TB}" 
     
     done
 done

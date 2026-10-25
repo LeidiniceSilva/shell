@@ -20,19 +20,21 @@ from tqdm import tqdm
 from Tracking_Functions import moaap
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--exp', required=True, help='Experiment')
+parser.add_argument('--inst', required=True, help='Institution')
 parser.add_argument('--domain', required=True, help='Domain')
 parser.add_argument('--dataset', required=True, help='Dataset')
+parser.add_argument('--exp', required=True, help='Experiment')
 parser.add_argument('--DataName', required=True, help='Name')
 args = parser.parse_args()
 
-exp=args.exp
+inst=args.inst
 domain=args.domain
 dataset=args.dataset
+exp=args.exp
 DataName=args.DataName
 
 path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/RCMs'
-files = sorted(glob.glob(f'{path}/ICTP/{domain}/{exp}/{dataset}/input/{domain}_{DataName}_1hr_*0100_lonlat.nc'))
+files = sorted(glob.glob(f'{path}/{inst}/{domain}/{exp}/{dataset}/input/{domain}_{DataName}_1hr_*0100.nc'))
 
 for f in files:
     print(f)
@@ -40,17 +42,16 @@ for f in files:
     data_vars = xr.open_dataset(f)
     lon = data_vars['lon']
     lat = data_vars['lat']
-    lon2d, lat2d = np.meshgrid(lon, lat)
-    Mask = np.copy(lon2d); Mask[:]=1
+    Mask = np.copy(lon); Mask[:]=1
 
     time_datetime = pd.to_datetime(np.array(data_vars['time'].values, dtype='datetime64'))
     dT = 1 
 
-    OutputFolder = f'{path}/ICTP/{domain}/{exp}/{dataset}/output/'
+    OutputFolder = f'{path}/{inst}/{domain}/{exp}/{dataset}/output/'
 
     object_split = moaap(
-                      lon2d,
-                      lat2d,
+                      lon,
+                      lat,
                       time_datetime,
                       dT,
                       Mask,
