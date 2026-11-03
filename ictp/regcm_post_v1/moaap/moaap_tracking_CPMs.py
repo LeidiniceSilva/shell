@@ -34,7 +34,7 @@ exp=args.exp
 DataName=args.DataName
 
 path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/CPMs'
-files = sorted(glob.glob(f'{path}/{inst}/{domain}/{exp}/{dataset}/input/{domain}_{DataName}_1hr_*0100.nc'))
+files = sorted(glob.glob(f'{path}/{inst}/{domain}/{exp}/{dataset}/input/{domain}_{DataName}_1hr_2003*0100.nc'))
 
 for f in files:
     print(f)

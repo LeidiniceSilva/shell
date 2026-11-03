@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=/leonardo/home/userexternal/mdasilva/leonardo_work/CORDEX5/ECEarth/ssp370
+base=/leonardo/home/userexternal/mdasilva/leonardo_scratch/CORDEX5/ECEarth/ssp370
 
 {
 set -eo pipefail
@@ -27,7 +27,7 @@ dep=$4
 dmon=12
 p=USR
 pp=""
-[[ $p = USR ]] && pp="-p dcgp_usr_prod -t 24:00:00"
+[[ $p = USR ]] && pp="-p dcgp_usr_prod -t 12:00:00"
 [[ $p = BDW ]] && pp="-p bdw_all_serial -t 4:00:00"
 [[ $p = SKL ]] && pp="-p skl_usr_prod -t 24:00:00"
 

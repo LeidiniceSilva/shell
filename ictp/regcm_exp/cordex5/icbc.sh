@@ -1,15 +1,14 @@
 #!/bin/bash
 
-#SBATCH -A ICT26_ESP
+#SBATCH --account CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
-#SBATCH --ntasks-per-node=112
-#SBATCH -o logs/icbc_SLURM.out
-#SBATCH -e logs/icbc_SLURM.err
+#SBATCH -t 12:00:00
 #SBATCH -J ICBC
-#SBATCH --mail-type=END,FAIL
+#SBATCH --ntasks-per-node=108
+#SBATCH --mail-type=FAIL
 #SBATCH --mail-user=mda_silv@ictp.it
-
+#SBATCH --qos=qos_lowprio
 
 {
 source /leonardo/home/userexternal/ggiulian/modules_new

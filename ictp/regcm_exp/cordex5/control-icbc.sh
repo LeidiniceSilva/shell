@@ -1,12 +1,13 @@
 #!/bin/bash
 
-#SBATCH -N 1 
-#SBATCH -A ICT26_ESP
+#SBATCH -N 1
+#SBATCH -t 0:01:00
+#SBATCH --account CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
-#SBATCH --ntasks-per-node=112
-#SBATCH -t 00:01:00
+#SBATCH --ntasks-per-node=108
 #SBATCH -o logs/control.o
 #SBATCH -e logs/control.e
+#SBATCH --qos=qos_lowprio
 
 {
 set -eo pipefail
