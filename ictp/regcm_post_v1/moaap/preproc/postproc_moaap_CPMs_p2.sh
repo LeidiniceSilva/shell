@@ -1,13 +1,14 @@
 #!/bin/bash
 
-#SBATCH -A ICT26_ESP
+#SBATCH --account CMPNS_ictpclim
 #SBATCH -p dcgp_usr_prod
 #SBATCH -N 1
-#SBATCH --ntasks-per-node=112
-#SBATCH -t 1-00:00:00
+#SBATCH -t 12:00:00
 #SBATCH -J Postproc
+#SBATCH --ntasks-per-node=108
 #SBATCH --mail-type=FAIL,END
 #SBATCH --mail-user=mda_silv@ictp.it
+#SBATCH --qos=qos_lowprio
 
 #__author__      = 'Leidinice Silva'
 #__email__       = 'leidinicesilva@gmail.com'
@@ -32,7 +33,9 @@ echo "INST=${INST}, DOMAIN=${DOMAIN}, DATASET=${DATASET}, EXP=${EXP}, YR_I=${YR_
 
 if [ "${DATASET}" == "ERA5" ]; then
     DATASET_="ERA5"
-else
+elif [ "${DATASET}" == "CNRM-ESM2-1" ]; then
+    DATASET_="CNRM"
+elif [ "${DATASET}" == "EC-Earth3-Veg" ]; then
     DATASET_="ECEarth"
 fi
 
@@ -46,9 +49,9 @@ for YEAR in $(seq ${YR_I} ${YR_F}); do
     for MONTH in $(seq -w 01 12); do
 
         PR_FILE=$(ls "${DIR_I}"/pr_*_1hr_${YEAR}*.nc 2>/dev/null | head -n 1)
-        TB_FILE=$(ls "${DIR_I}"/Tb_*_1hr_${YEAR}*.nc 2>/dev/null | head -n 1) # ismet6 or Tb
+        TB_FILE=$(ls "${DIR_I}"/ismet6_*_1hr_${YEAR}*.nc 2>/dev/null | head -n 1) # ismet6 or Tb
         [ -f "${PR_FILE}" ] || PR_FILE=$(ls "${DIR_I}"/pr_*.nc 2>/dev/null | grep "_1hr_${YEAR}" | head -n 1)
-        [ -f "${TB_FILE}" ] || TB_FILE=$(ls "${DIR_I}"/Tb_*.nc 2>/dev/null | grep "_1hr_${YEAR}" | head -n 1) # ismet6 or Tb
+        [ -f "${TB_FILE}" ] || TB_FILE=$(ls "${DIR_I}"/ismet6_*.nc 2>/dev/null | grep "_1hr_${YEAR}" | head -n 1) # ismet6 or Tb
 
         if [ ! -f "${PR_FILE}" ] || [ ! -f "${TB_FILE}" ]; then
             echo "Not found ${YEAR}-${MONTH}"

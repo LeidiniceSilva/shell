@@ -25,6 +25,7 @@ parser.add_argument('--domain', required=True, help='Domain')
 parser.add_argument('--dataset', required=True, help='Dataset')
 parser.add_argument('--exp', required=True, help='Experiment')
 parser.add_argument('--DataName', required=True, help='Name')
+parser.add_argument('--year', type=int, required=True, help='Year to process')
 args = parser.parse_args()
 
 inst=args.inst
@@ -32,9 +33,10 @@ domain=args.domain
 dataset=args.dataset
 exp=args.exp
 DataName=args.DataName
+year=args.year
 
 path='/leonardo/home/userexternal/mdasilva/leonardo_work/MOAAP/paper/dataset/CPMs'
-files = sorted(glob.glob(f'{path}/{inst}/{domain}/{exp}/{dataset}/input/{domain}_{DataName}_1hr_2003*0100.nc'))
+files = sorted(glob.glob(f'{path}/{inst}/{domain}/{exp}/{dataset}/input/{domain}_{DataName}_1hr_{year}*0100.nc'))
 
 for f in files:
     print(f)
@@ -67,7 +69,7 @@ for f in files:
                       v200 = None,
                       u200 = None,
                       pr   = np.array(data_vars['pr']),
-                      tb   = np.array(data_vars['Tb']), # Tb or ismet6
+                      tb   = np.array(data_vars['ismet6']), # Tb or ismet6
                       DataName = DataName,
                       OutputFolder = OutputFolder,
                       js_min_anomaly = 12,
